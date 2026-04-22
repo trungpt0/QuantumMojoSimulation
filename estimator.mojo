@@ -97,14 +97,7 @@ struct Estimator:
             exp_val += prob * sign
         return op.coeff * exp_val 
 
-    def run(self, qc: QuantumCircuit, op: PauliOp) -> EstimatorResult:
-        var res = EstimatorResult()
-        var rotated = self._rotate_to_z(qc.psi, op)
-        var exp_val = self._expectation_pauli(rotated, op)
-        res.add(op.__str__(), exp_val)
-        return res^
-
-    def run_hamiltonian(self, qc: QuantumCircuit, *ops: PauliOp) -> EstimatorResult:
+    def run(self, qc: QuantumCircuit, *ops: PauliOp) -> EstimatorResult:
         var res = EstimatorResult()
         var total: Float64 = 0.0
         var label: String = ""

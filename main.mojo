@@ -13,5 +13,3 @@ def main() raises:
     var estimator = Estimator()
     var esimator_res = estimator.run(qc, PauliOp("ZZ", -1.0))
     esimator_res.print_results()
-    var esimator_res1 = estimator.run_hamiltonian(qc, PauliOp("ZZ", 1.0), PauliOp("XY", 1.0))
-    esimator_res1.print_results()
