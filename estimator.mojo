@@ -1,7 +1,7 @@
 from circuit import QuantumCircuit
 from qmath import Complex, inv
 
-struct PauliOp:
+struct SparsePauliOp(Copyable, Movable):
     var pauli: List[String]
     var coeff: Float64
 
@@ -16,6 +16,16 @@ struct PauliOp:
             elif b == 89: self.pauli.append("Y")
             elif b == 90: self.pauli.append("Z")
     
+    def __copy__(self) -> Self:
+        var new_op = SparsePauliOp.__new__(SparsePauliOp)
+        new_op.pauli = self.pauli
+        new_op.coeff = self.coeff
+        return new_op
+
+    def __moveinit__(out self, owned other: Self):
+        self.pauli = other.pauli^
+        self.coeff = other.coeff
+
     def __str__(self) -> String:
         var s: String = String(self.coeff) + "*"
         for i in range(len(self.pauli)):
@@ -69,7 +79,7 @@ struct Estimator:
                 new_psi[i] = Complex(psi[i].im, -psi[i].re)
         return new_psi^
 
-    def _rotate_to_z(self, rotate_psi: List[Complex], op: PauliOp) -> List[Complex]:
+    def _rotate_to_z(self, rotate_psi: List[Complex], op: SparsePauliOp) -> List[Complex]:
         var n = op.pauli_length()
         var psi = rotate_psi.copy()
         for q in range(n):
@@ -81,7 +91,7 @@ struct Estimator:
                 psi = self._apply_H(psi, q, n)
         return psi^
 
-    def _expectation_pauli(self, rotate_psi: List[Complex], op: PauliOp) -> Float64:
+    def _expectation_pauli(self, rotate_psi: List[Complex], op: SparsePauliOp) -> Float64:
         var n = op.pauli_length()
         var exp_val: Float64 = 0.0
         for i in range(len(rotate_psi)):
@@ -97,7 +107,21 @@ struct Estimator:
             exp_val += prob * sign
         return op.coeff * exp_val 
 
-    def run(self, qc: QuantumCircuit, *ops: PauliOp) -> EstimatorResult:
+    def run(self, qc: QuantumCircuit, *ops: SparsePauliOp) -> EstimatorResult:
+        var res = EstimatorResult()
+        var total: Float64 = 0.0
+        var label: String = ""
+        for i in range(len(ops)):
+            var rotated = self._rotate_to_z(qc.psi, ops[i])
+            var val = self._expectation_pauli(rotated, ops[i])
+            total += val
+            if i > 0:
+                label += " + "
+            label += ops[i].__str__()
+        res.add(label, total)
+        return res^
+
+    def run(self, qc: QuantumCircuit, ops: List[SparsePauliOp]) -> EstimatorResult:
         var res = EstimatorResult()
         var total: Float64 = 0.0
         var label: String = ""
