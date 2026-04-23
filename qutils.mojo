@@ -31,3 +31,11 @@ def assert_equal(
     if all_passed:
         print("PASS:", gate_name)
 
+def round6(x: Float64) -> Float64:
+    return Float64(Int(x * 1000000.0 + 0.5)) / 1000000.0
+
+def evaluate_estimator(name: String, actual: Float64, expected: Float64):
+    if approx_equal(actual, expected):
+        print("PASS:", name, "->", round6(actual))
+    else:
+        print("FAIL:", name, "-> got", round6(actual), "expected", round6(expected))

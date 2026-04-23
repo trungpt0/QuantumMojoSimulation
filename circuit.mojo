@@ -30,6 +30,9 @@ struct QuantumCircuit:
     def S(mut self, w: Int):
         self.psi = S(self.psi, w)
 
+    def Sdg(mut self, w: Int):
+        self.psi = Sdg(self.psi, w)
+
     def T(mut self, w: Int):
         self.psi = T(self.psi, w)
 

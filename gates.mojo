@@ -54,6 +54,16 @@ def S(psi: List[Complex], w: Int) -> List[Complex]:
         Complex(0.0, 1.0)
     )
 
+def Sdg(psi: List[Complex], w: Int) -> List[Complex]:
+    return apply_single_qubit_gate(
+        psi,
+        w,
+        Complex(1.0, 0.0),
+        Complex(0.0, 0.0),
+        Complex(0.0, 0.0),
+        Complex(0.0, -1.0)
+    )
+
 def T(psi: List[Complex], w: Int) -> List[Complex]:
     var inv = inv()
     return apply_single_qubit_gate(

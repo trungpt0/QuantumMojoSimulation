@@ -12,7 +12,7 @@ def main() raises:
     sampler_res.print_results()
 
     var estimator = Estimator()
-    var esimator_res = estimator.run(qc, SparsePauliOp("ZZ", -1.0), SparsePauliOp("XY", 1.0)).print_results()
+    var esimator_res = estimator.run(qc, SparsePauliOp("ZZ", -1.0), SparsePauliOp("XY", 1.0))
     esimator_res.print_results()
 
     var H = List[SparsePauliOp]()
