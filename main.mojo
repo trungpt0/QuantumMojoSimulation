@@ -1,7 +1,7 @@
 from circuit import QuantumCircuit
 from qmath import random_int
-from sampler import Sampler
-from estimator import Estimator, SparsePauliOp
+from primitives.sampler import Sampler
+from primitives.estimator import Estimator, SparsePauliOp
 
 def main() raises:
     var qc = QuantumCircuit(2)

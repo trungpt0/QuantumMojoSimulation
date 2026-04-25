@@ -1,5 +1,5 @@
 from circuit import QuantumCircuit
-from estimator import Estimator, SparsePauliOp
+from primitives.estimator import Estimator, SparsePauliOp
 from qutils import evaluate_estimator
 
 def test_single_z() raises:
