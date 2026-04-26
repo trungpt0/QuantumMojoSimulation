@@ -5,7 +5,7 @@ state = []
 time = []
 memory = []
 
-with open("benchmark/benchmark.txt", "r") as f:
+with open("benchmark/circuit_benchmark.txt", "r") as f:
     for line in f:
         a, b, c, d = line.split()
         a = int(a)
