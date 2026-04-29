@@ -1,5 +1,4 @@
 from circuit import QuantumCircuit
-from qmath import random_int
 from primitives.sampler import Sampler
 from primitives.estimator import Estimator, SparsePauliOp
 

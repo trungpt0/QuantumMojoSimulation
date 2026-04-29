@@ -1,40 +1,7 @@
 from std.time import monotonic
 from qmath import PI, random_int
 from circuit import QuantumCircuit
-
-def apply_random_single_qubit_gate(mut qc: QuantumCircuit, n: Int):
-    var gate_random = random_int(0, 11)
-    var w_random = random_int(0, n)
-    var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
-    if gate_random == 0:
-        qc.X(w_random)
-    elif gate_random == 1:
-        qc.Y(w_random)
-    elif gate_random == 2:
-        qc.Z(w_random)
-    elif gate_random == 3:
-        qc.H(w_random)
-    elif gate_random == 4:
-        qc.S(w_random)
-    elif gate_random == 5:
-        qc.T(w_random)
-    elif gate_random == 6:
-        qc.RX(w_random, theta_random)
-    elif gate_random == 7:
-        qc.RY(w_random, theta_random)
-    elif gate_random == 8:
-        qc.RZ(w_random, theta_random)
-    elif gate_random == 9:
-        qc.P(w_random, theta_random)
-    else:
-        qc.IP(w_random, theta_random)
-
-def apply_random_cx_gate(mut qc: QuantumCircuit, n: Int):
-    var c_random = random_int(0, n)
-    var t_random = random_int(0, n)
-    if c_random == t_random:
-        t_random = (t_random + 1) % n
-    qc.CX(c_random, t_random)
+from qrandom import apply_random_single_qubit_gate, apply_random_cx_gate
 
 def random_circuit(mut qc: QuantumCircuit, n: Int) -> None:
     var steps = n * n

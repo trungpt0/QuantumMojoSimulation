@@ -1,0 +1,201 @@
+Qubits: 1
+Gate Y 0
+Observable X 3.0
+Expected_value 0.0
+Qubits: 5
+Gate Z 1
+Gate H 0
+Gate CX 3 4
+Gate CX 4 0
+Gate X 4
+Gate CX 1 4
+Gate X 3
+Gate CX 3 2
+Gate CX 3 1
+Gate Z 4
+Gate X 0
+Gate Z 4
+Gate CX 0 1
+Gate CX 3 1
+Gate X 4
+Gate Z 4
+Gate Y 3
+Gate CX 3 1
+Gate X 0
+Gate X 2
+Gate CX 0 2
+Gate Y 0
+Gate Y 0
+Gate X 0
+Gate CX 0 1
+Observable IIZZX 3.0
+Expected_value 0.0
+Qubits: 5
+Gate Y 1
+Gate X 1
+Gate CX 0 1
+Gate X 1
+Gate Z 2
+Gate CX 0 3
+Gate CX 3 1
+Gate CX 1 2
+Gate CX 0 2
+Gate CX 4 2
+Gate CX 2 4
+Gate CX 0 1
+Gate H 4
+Gate CX 1 3
+Gate CX 1 0
+Gate CX 0 1
+Gate CX 0 1
+Gate X 2
+Gate CX 4 0
+Gate X 2
+Gate CX 1 0
+Gate Y 3
+Gate CX 3 1
+Gate Z 0
+Gate Z 1
+Observable ZIIYX 3.0
+Observable XIZZY 1.0
+Expected_value 0.0
+Qubits: 4
+Gate Y 1
+Gate H 0
+Gate CX 3 1
+Gate CX 3 0
+Gate Y 2
+Gate CX 1 2
+Gate CX 1 2
+Gate Z 0
+Gate CX 1 2
+Gate Y 2
+Gate X 1
+Gate CX 3 1
+Gate H 2
+Gate H 1
+Gate CX 0 1
+Gate Z 3
+Observable ZIIZ 3.0
+Observable ZXXI -1.0
+Observable YXZZ 2.0
+Observable IYXY -1.0
+Expected_value 0.9999999999999992
+Qubits: 5
+Gate CX 0 3
+Gate CX 3 4
+Gate CX 2 0
+Gate Z 3
+Gate CX 1 0
+Gate Z 4
+Gate CX 3 2
+Gate Z 2
+Gate Y 4
+Gate Y 2
+Gate X 1
+Gate CX 0 1
+Gate X 2
+Gate CX 4 0
+Gate Y 1
+Gate Z 3
+Gate Z 1
+Gate CX 4 1
+Gate Y 1
+Gate CX 3 4
+Gate Z 2
+Gate Y 4
+Gate CX 2 3
+Gate X 3
+Gate CX 2 1
+Observable XYYIY 3.0
+Observable ZZIXI 2.0
+Observable YIXYI -3.0
+Expected_value 0.0
+Qubits: 4
+Gate CX 1 0
+Gate Z 1
+Gate X 1
+Gate CX 2 3
+Gate Y 3
+Gate Y 1
+Gate CX 0 3
+Gate CX 3 0
+Gate X 0
+Gate Y 2
+Gate H 2
+Gate CX 2 0
+Gate CX 1 2
+Gate Z 1
+Gate H 2
+Gate CX 2 3
+Observable IXZI 3.0
+Observable XZXI 2.0
+Expected_value 0.0
+Qubits: 5
+Gate H 4
+Gate CX 0 2
+Gate H 1
+Gate CX 0 3
+Gate CX 4 3
+Gate CX 1 4
+Gate CX 1 2
+Gate Z 1
+Gate H 1
+Gate CX 3 2
+Gate CX 4 1
+Gate Y 4
+Gate H 2
+Gate H 1
+Gate H 3
+Gate CX 2 0
+Gate Z 1
+Gate Z 3
+Gate CX 3 1
+Gate CX 2 3
+Gate X 3
+Gate CX 3 4
+Gate Y 1
+Gate Z 1
+Gate Y 1
+Observable ZZIXZ 3.0
+Observable IYIIY 1.0
+Expected_value 0.0
+Qubits: 4
+Gate CX 3 0
+Gate CX 2 1
+Gate Z 1
+Gate Z 3
+Gate CX 2 3
+Gate CX 3 0
+Gate CX 0 3
+Gate Z 0
+Gate CX 0 2
+Gate Z 1
+Gate CX 3 2
+Gate CX 0 1
+Gate Z 1
+Gate H 1
+Gate Y 3
+Gate CX 0 1
+Observable YXXX 3.0
+Observable IYXZ 3.0
+Observable ZIYY -1.0
+Observable IIXY -3.0
+Expected_value 0.0
+Qubits: 2
+Gate CX 0 1
+Gate H 1
+Gate H 0
+Gate H 1
+Observable XY 3.0
+Observable ZI 3.0
+Observable ZY 1.0
+Expected_value 2.9999999999999987
+Qubits: 2
+Gate CX 1 0
+Gate CX 0 1
+Gate CX 0 1
+Gate CX 1 0
+Observable IY 3.0
+Observable YX -1.0
+Expected_value 0.0

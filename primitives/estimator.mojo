@@ -60,7 +60,7 @@ struct Estimator:
     def _apply_H(self, psi: List[Complex], w: Int, n: Int) -> List[Complex]:
         var inv = inv()
         var new_psi = psi.copy()
-        var pairs = len(psi) >> 1
+        # var pairs = len(psi) >> 1
         for i in range(len(psi)):
             if (i >> w) & 1 == 0:
                 var j = i | (1 << w)

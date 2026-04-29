@@ -23,7 +23,7 @@ def apply_single_qubit_gate(
     var n = log2_int(N)
     var cut = 1 << (n - w - 1)
     var new_psi = List[Complex]()
-    for i in range(N):
+    for _ in range(N):
         new_psi.append(Complex(0.0, 0.0))
     for j in range(N):
         var bit = (j >> (n - w - 1)) & 1
@@ -45,7 +45,7 @@ def apply_cx_gate(
     var n = log2_int(N)
     var cut = 1 << (n - w1 - 1)
     var new_psi = List[Complex]()
-    for i in range(N):
+    for _ in range(N):
         new_psi.append(Complex(0.0, 0.0))
     for j in range(N):
         var control_bit = (j >> (n - w0 - 1)) & 1

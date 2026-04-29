@@ -91,5 +91,6 @@ struct QuantumCircuit:
         CX_test(self.psi)
 
     def print_psi(self):
+        print("Num Qubits:", self.n)
         for amp in range(len(self.psi)):
             print("psi[", amp, "] = ", self.psi[amp].re, " + ", self.psi[amp].im, "i")
