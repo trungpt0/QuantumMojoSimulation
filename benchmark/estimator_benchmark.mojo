@@ -37,7 +37,7 @@ def estimator_benchmark(nq: Int, ng: Int) raises:
     var expected_value = Estimator().run(qc, H).expectation[0]
     var out: String = ""
     var f = open("benchmark/estimator_benchmark.txt", "a")
-    out += "Qubits: " + String(nq) + "\n"
+    out += "Qubits " + String(nq) + "\n"
     for i in range(len(gate_log)):
         var g = gate_log[i].copy()
         if g.gate_name == "CX":
