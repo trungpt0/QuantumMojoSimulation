@@ -4,9 +4,7 @@ from qrandom import apply_random_single_qubit_gate_with_log, apply_random_cx_gat
 from primitives.estimator import SparsePauliOp, Estimator
 from std.time import monotonic
 
-def estimator_benchmark(nq: Int, ng: Int) raises:
-    var H_TERMS: Int = 5
-    var PAULI_COEFF_RANGE: Float64 = 3.0
+def estimator_benchmark(nq: Int, ng: Int, h_terms: Int, pauli_coeff_range: Float64) raises:
     var qc = QuantumCircuit(nq)
     var seed = Int(monotonic())
     var gate_log = List[ApplyGateLog]()
@@ -24,12 +22,12 @@ def estimator_benchmark(nq: Int, ng: Int) raises:
     var H = List[SparsePauliOp]()
     var O_paulis = List[String]()
     var O_coeffs = List[Float64]()
-    var O_terms = random_int(1, H_TERMS)
+    var O_terms = random_int(1, h_terms + 1)
     for _ in range(O_terms):
         var pauli: String = ""
         for _ in range(nq):
             pauli += random_pauli()
-        var coeff = random_pauli_coeff(seed, PAULI_COEFF_RANGE)
+        var coeff = random_pauli_coeff(seed, pauli_coeff_range)
         # print("Pauli:", pauli, "Coeff:", coeff)
         H.append(SparsePauliOp(pauli, coeff))
         O_paulis.append(pauli)
@@ -54,8 +52,10 @@ def main() raises:
     var MIN_QUBITS: Int = 1
     var MAX_QUBITS: Int = 5
     var NUM_TRIALS: Int = 10
+    var H_TERMS: Int = 5
+    var PAULI_COEFF_RANGE: Float64 = 3.0
     var f = open("benchmark/estimator_benchmark.txt", "w")
     f.close()
     for _ in range(NUM_TRIALS):
         var n = random_int(MIN_QUBITS, MAX_QUBITS + 1)
-        estimator_benchmark(n, n * n)
+        estimator_benchmark(n, n * n, H_TERMS, PAULI_COEFF_RANGE)

@@ -91,7 +91,7 @@ def estimator_evaluation(path: str, tol: float):
         diff = abs(qval - tc.expected_value)
         ok = diff <= tol
         tag = f"{G}PASS{RST}" if ok else f"{R}FAIL{RST}"
-        print(f"{i+1:>4} {tc.n:>6} {len(tc.gates):>6} {obs_str:<32.32} {tc.expected_value:>12.6f} {qval:>12.6f} {diff:>12.1e} {tag:>8}")
+        print(f"{i+1:>4} {tc.n:>6} {len(tc.gates):>6} {obs_str:<32} {tc.expected_value:>12.6f} {qval:>12.6f} {diff:>12.1e} {tag:>8}")
         if not ok:
             failed += 1
             gs = " ".join(f"{g.name}({g.q0},{g.q1})" if g.q1 >= 0 else f"{g.name}({g.q0})" for g in tc.gates)
