@@ -3,6 +3,56 @@ from std.math import cos, sin
 from apply_gate import apply_single_qubit_gate, apply_cx_gate
 from qutils import assert_equal
 
+struct GateOp(Copyable, Movable):
+    var name: String
+    var qubit: List[Int]
+    var theta: List[Float64]
+
+    def __init__(out self, name: String, qubit: List[Int]):
+        self.name = name
+        self.qubit = qubit.copy()
+        self.theta = List[Float64]()
+
+    def __init__(out self, name: String, qubit: List[Int], theta: List[Float64]):
+        self.name = name
+        self.qubit = qubit.copy()
+        self.theta = theta.copy()
+
+    def __copy__(self) -> Self:
+        var gateop = GateOp.__new__(GateOp)
+        gateop.name = self.name
+        gateop.qubit = self.qubit.copy()
+        gateop.theta = self.theta.copy()
+        return gateop^
+
+    def __moveinit__(out self, owned other: Self):
+        self.name = other.name^
+        self.qubit = other.qubit^
+        self.theta = other.theta^
+
+    def __str__(self) -> String:
+        var s = self.name + "("
+        for i in range(len(self.qubit)):
+            if i > 0: s += ","
+            s += String(self.qubit[i])
+        if len(self.theta) > 0:
+            s += "|"
+            for i in range(len(self.theta)):
+                if i > 0: s += ","
+                s += String(self.theta[i])
+        s += ")"
+        return s
+    
+    def _q(self, q: Int) -> List[Int]:
+        var qubit = List[Int]()
+        qubit.append(q)
+        return qubit^
+
+    def _t(self, t: Float64) -> List[Float64]:
+        var theta = List[Float64]()
+        theta.append(t)
+        return theta^
+
 def X(psi: List[Complex], w: Int) -> List[Complex]:
     return apply_single_qubit_gate(
         psi,

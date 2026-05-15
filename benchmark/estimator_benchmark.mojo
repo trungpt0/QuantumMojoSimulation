@@ -50,8 +50,8 @@ def estimator_benchmark(nq: Int, ng: Int, h_terms: Int, pauli_coeff_range: Float
 
 def main() raises:
     var MIN_QUBITS: Int = 1
-    var MAX_QUBITS: Int = 5
-    var NUM_TRIALS: Int = 10
+    var MAX_QUBITS: Int = 10
+    var NUM_TRIALS: Int = 100
     var H_TERMS: Int = 5
     var PAULI_COEFF_RANGE: Float64 = 3.0
     var f = open("benchmark/estimator_benchmark.txt", "w")

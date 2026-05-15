@@ -1,58 +1,89 @@
-from qmath import *
+from qmath import Complex
 from gates import *
 
 struct QuantumCircuit:
     var n: Int
     var psi: List[Complex]
+    var gates: List[GateOp]
 
     def __init__(out self, n: Int):
         self.n = n
         var N = 1 << n
         self.psi = List[Complex]()
+        self.gates = List[GateOp]()
         for i in range(N):
             if i == 0:
                 self.psi.append(Complex(1.0, 0.0))
             else:
                 self.psi.append(Complex(0.0, 0.0))
 
+    def _q1(self, q: Int) -> List[Int]:
+        var qubit = List[Int]()
+        qubit.append(q)
+        return qubit^
+
+    def _q2(self, q1: Int, q2: Int) -> List[Int]:
+        var qubit = List[Int]()
+        qubit.append(q1)
+        qubit.append(q2)
+        return qubit^
+
+    def _t(self, t: Float64) -> List[Float64]:
+        var theta = List[Float64]()
+        theta.append(t)
+        return theta^
+
     def X(mut self, w: Int):
         self.psi = X(self.psi, w)
+        self.gates.append(GateOp("X", self._q1(w)))
 
     def Y(mut self, w: Int):
         self.psi = Y(self.psi, w)
+        self.gates.append(GateOp("Y", self._q1(w)))
 
     def Z(mut self, w: Int):
         self.psi = Z(self.psi, w)
+        self.gates.append(GateOp("Z", self._q1(w)))
 
     def H(mut self, w: Int):
         self.psi = H(self.psi, w)
+        self.gates.append(GateOp("H", self._q1(w)))
 
     def S(mut self, w: Int):
         self.psi = S(self.psi, w)
+        self.gates.append(GateOp("S", self._q1(w)))
 
     def Sdg(mut self, w: Int):
         self.psi = Sdg(self.psi, w)
+        self.gates.append(GateOp("SDG", self._q1(w)))
 
     def T(mut self, w: Int):
         self.psi = T(self.psi, w)
+        self.gates.append(GateOp("T", self._q1(w)))
 
     def RX(mut self, w: Int, theta: Float64):
         self.psi = RX(self.psi, w, theta)
+        self.gates.append(GateOp("RX", self._q1(w), self._t(theta)))
 
     def RY(mut self, w: Int, theta: Float64):
         self.psi = RY(self.psi, w, theta)
+        self.gates.append(GateOp("RY", self._q1(w), self._t(theta)))
 
     def RZ(mut self, w: Int, theta: Float64):
         self.psi = RZ(self.psi, w, theta)
+        self.gates.append(GateOp("RZ", self._q1(w), self._t(theta)))
 
     def P(mut self, w: Int, theta: Float64):
         self.psi = P(self.psi, w, theta)
+        self.gates.append(GateOp("P", self._q1(w), self._t(theta)))
 
     def IP(mut self, w: Int, theta: Float64):
         self.psi = IP(self.psi, w, theta)
+        self.gates.append(GateOp("IP", self._q1(w), self._t(theta)))
         
     def CX(mut self, c: Int, t: Int):
         self.psi = CX(self.psi, c, t)
+        self.gates.append(GateOp("CX", self._q2(c, t)))
 
     def X_test(self):
         X_test(self.psi)
