@@ -1,19 +1,19 @@
 from gates import GateOp
 
-struct DAGNode(Copyable, Moveable):
+struct DAGNode(Copyable, Movable):
     var id: Int
     var gate: GateOp
     var type: String
 
     def __init__(out self, id: Int, gate: GateOp, type: String = "gate"):
         self.id = id
-        self.gate = gate
+        self.gate = gate.copy()
         self.type = type
 
     def __copy__(self) -> Self:
         var node = DAGNode.__new__(DAGNode)
         node.id = self.id
-        node.gate = self.gate
+        node.gate = self.gate.copy()
         node.type = self.type
         return node^
 
@@ -23,9 +23,9 @@ struct DAGNode(Copyable, Moveable):
         self.type = other.type^
 
     def __str__(self) -> String:
-        return self.type + "(" + String(self.id) + "): " + str(self.gate)
+        return "Type: " + self.type + " | Gate: " + self.gate.__str__()
 
-struct DAGEdge(Copyable, Moveable):
+struct DAGEdge(Copyable, Movable):
     var src: Int
     var dst: Int
     var qubit: Int
@@ -40,7 +40,7 @@ struct DAGEdge(Copyable, Moveable):
         edge.src = self.src
         edge.dst = self.dst
         edge.qubit = self.qubit
-        return edge^
+        return edge
 
     def __moveinit__(out self, owned other: Self):
         self.src = other.src

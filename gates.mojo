@@ -53,6 +53,16 @@ struct GateOp(Copyable, Movable):
         theta.append(t)
         return theta^
 
+def I(psi: List[Complex], w: Int) -> List[Complex]:
+    return apply_single_qubit_gate(
+        psi,
+        w,
+        Complex(1.0, 0.0),
+        Complex(0.0, 0.0),
+        Complex(0.0, 0.0),
+        Complex(1.0, 0.0)
+    )
+
 def X(psi: List[Complex], w: Int) -> List[Complex]:
     return apply_single_qubit_gate(
         psi,
@@ -123,6 +133,17 @@ def T(psi: List[Complex], w: Int) -> List[Complex]:
         Complex(0.0, 0.0),
         Complex(0.0, 0.0),
         Complex(inv, inv)
+    )
+
+def Tdg(psi: List[Complex], w: Int) -> List[Complex]:
+    var inv = inv()
+    return apply_single_qubit_gate(
+        psi,
+        w,
+        Complex(1.0, 0.0),
+        Complex(0.0, 0.0),
+        Complex(0.0, 0.0),
+        Complex(inv, -inv)
     )
 
 def RX(psi: List[Complex], w: Int, theta: Float64) -> List[Complex]:

@@ -1,7 +1,7 @@
-from qmath import Complex
+from qmath import Complex, random_int, sqrt
 from gates import *
 
-struct QuantumCircuit:
+struct QuantumCircuit(Copyable, Movable):
     var n: Int
     var psi: List[Complex]
     var gates: List[GateOp]
@@ -16,6 +16,16 @@ struct QuantumCircuit:
                 self.psi.append(Complex(1.0, 0.0))
             else:
                 self.psi.append(Complex(0.0, 0.0))
+
+    def __copyinit__(out self, other: Self):
+        self.n = other.n
+        self.psi = other.psi.copy()
+        self.gates = other.gates.copy()
+
+    def __moveinit__(out self, owned other: Self):
+        self.n = other.n
+        self.psi = other.psi^
+        self.gates = other.gates^
 
     def _q1(self, q: Int) -> List[Int]:
         var qubit = List[Int]()
@@ -32,6 +42,10 @@ struct QuantumCircuit:
         var theta = List[Float64]()
         theta.append(t)
         return theta^
+
+    def I(mut self, w: Int):
+        self.psi = I(self.psi, w)
+        self.gates.append(GateOp("I", self._q1(w)))
 
     def X(mut self, w: Int):
         self.psi = X(self.psi, w)
@@ -61,6 +75,10 @@ struct QuantumCircuit:
         self.psi = T(self.psi, w)
         self.gates.append(GateOp("T", self._q1(w)))
 
+    def Tdg(mut self, w: Int):
+        self.psi = Tdg(self.psi, w)
+        self.gates.append(GateOp("TDG", self._q1(w)))
+
     def RX(mut self, w: Int, theta: Float64):
         self.psi = RX(self.psi, w, theta)
         self.gates.append(GateOp("RX", self._q1(w), self._t(theta)))
@@ -84,6 +102,42 @@ struct QuantumCircuit:
     def CX(mut self, c: Int, t: Int):
         self.psi = CX(self.psi, c, t)
         self.gates.append(GateOp("CX", self._q2(c, t)))
+
+    def measure(mut self, w: Int) -> Int:
+        var n = self.n
+        var N = 1 << n
+        var p0: Float64 = 0.0
+        var p1: Float64 = 0.0
+        for i in range(N):
+            var bit = (i >> (n - w - 1)) & 1
+            var p = self.psi[i].re * self.psi[i].re + self.psi[i].im * self.psi[i].im
+            if bit == 0:
+                p0 += p
+            else:
+                p1 += p
+        var r = Float64(random_int(0, 2147483648)) / Float64(2147483647)
+        var out: Int = 0
+        if r >= p0:
+            out = 1
+        var new_psi = List[Complex]()
+        var norm: Float64 = 0.0
+        if out == 0:
+            norm = p0
+        else:
+            norm = p1
+        var inv_norm = 1.0 / sqrt(norm) if norm > 1e-15 else 0.0
+        for i in range(N):
+            var bit = (i >> (n - w - 1)) & 1
+            if bit == out:
+                new_psi.append(Complex(
+                    self.psi[i].re * inv_norm,
+                    self.psi[i].im * inv_norm
+                ))
+            else:
+                new_psi.append(Complex(0.0, 0.0))
+        self.psi = new_psi^
+        self.gates.append(GateOp("MEASURE", self._q1(w)))
+        return out
 
     def X_test(self):
         X_test(self.psi)

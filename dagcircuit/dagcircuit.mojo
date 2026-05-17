@@ -1,7 +1,8 @@
 from .dagnode import DAGNode, DAGEdge
 from circuit import QuantumCircuit
+from gates import GateOp
 
-struct DAGCircuit(Movable):
+struct DAGCircuit(Copyable, Movable):
     var qubits: Int
     var nodes: List[DAGNode]
     var edges: List[DAGEdge]
@@ -23,14 +24,14 @@ struct DAGCircuit(Movable):
             var inode = DAGNode(len(self.nodes), GateOp("INPUT", dqubits), "input")
             self.input_nodes.append(inode.id)
             self.frontier.append(inode.id)
-            self.nodes.append(inode)
+            self.nodes.append(inode^)
 
         for q in range(qubits):
             var dqubits = List[Int]()
             dqubits.append(q)
             var onode = DAGNode(len(self.nodes), GateOp("OUTPUT", dqubits), "output")
             self.output_nodes.append(onode.id)
-            self.nodes.append(onode)
+            self.nodes.append(onode^)
 
     def __moveinit__(out self, owned other: Self):
         self.qubits = other.qubits
@@ -40,7 +41,15 @@ struct DAGCircuit(Movable):
         self.output_nodes = other.output_nodes^
         self.frontier = other.frontier^
 
-    def add_operation(inout self, gate: GateOp):
+    def __copyinit__(out self, other: Self):
+        self.qubits = other.qubits
+        self.nodes = other.nodes
+        self.edges = other.edges
+        self.input_nodes = other.input_nodes
+        self.output_nodes = other.output_nodes
+        self.frontier = other.frontier
+
+    def add_operation(mut self, gate: GateOp):
         var node_id = len(self.nodes)
         self.nodes.append(DAGNode(node_id, gate, "gate"))
         for i in range(len(gate.qubit)):
@@ -49,32 +58,32 @@ struct DAGCircuit(Movable):
             self.edges.append(DAGEdge(prev_node_id, node_id, q))
             self.frontier[q] = node_id
 
-    def finalize_operation(inout self):
+    def finalize_operation(mut self):
         for q in range(self.qubits):
             var onode_id = self.output_nodes[q]
             var prev_node_id = self.frontier[q]
             if prev_node_id != onode_id:
                 self.edges.append(DAGEdge(prev_node_id, onode_id, q))
 
-    def remove_operation(inout self, node_id: Int):
+    def remove_operation(mut self, node_id: Int):
         var in_edges = List[DAGEdge]()
         var out_edges = List[DAGEdge]()
         var keep_edges = List[DAGEdge]()
         for i in range(len(self.edges)):
-            var edge = self.edges[i]
+            var edge = self.edges[i].copy()
             if edge.dst == node_id:
-                in_edges.append(edge)
+                in_edges.append(edge.copy())
             elif edge.src == node_id:
-                out_edges.append(edge)
+                out_edges.append(edge.copy())
             else:
-                keep_edges.append(edge)
+                keep_edges.append(edge.copy())
         for i in range(len(in_edges)):
-            var iedge = in_edges[i]
+            var iedge = in_edges[i].copy()
             for j in range(len(out_edges)):
-                var oedge = out_edges[j]
+                var oedge = out_edges[j].copy()
                 if iedge.qubit == oedge.qubit:
                     keep_edges.append(DAGEdge(iedge.src, oedge.dst, iedge.qubit))
-        self.edges = keep_edges
+        self.edges = keep_edges.copy()
         self.nodes[node_id] = DAGNode(node_id, GateOp("REMOVED", List[Int]()), "removed")
 
     def predecessors(self, node_id: Int) -> List[Int]:
@@ -150,14 +159,14 @@ struct DAGCircuit(Movable):
             dag.add_operation(qc.gates[i])
         dag.finalize_operation()
         return dag^
-
+    
     def to_circuit(self) -> QuantumCircuit:
         var qc = QuantumCircuit(self.qubits)
         var N = 1 << self.qubits
         var topo = self.topological_sort()
         for i in range(len(topo)):
-            var node = self.nodes[topo[i]]
-            var gate = node.gate
+            var node = self.nodes[topo[i]].copy()
+            var gate = node.gate.copy()
             if gate.name == "X": qc.X(gate.qubit[0])
             elif gate.name == "Y": qc.Y(gate.qubit[0])
             elif gate.name == "Z": qc.Z(gate.qubit[0])
@@ -170,7 +179,8 @@ struct DAGCircuit(Movable):
             elif gate.name == "RZ": qc.RZ(gate.qubit[0], gate.theta[0])
             elif gate.name == "P": qc.P(gate.qubit[0], gate.theta[0])
             elif gate.name == "IP": qc.IP(gate.qubit[0], gate.theta[0])
-            elif gate.name == "CX": qc.RZ(gate.qubit[0], gate.qubit[1])
+            elif gate.name == "CX": qc.CX(gate.qubit[0], gate.qubit[1])
+            elif gate.name == "MEASURE": qc.measure(gate.qubit[0])
         return qc^
 
     def print_dag(self):
@@ -178,11 +188,11 @@ struct DAGCircuit(Movable):
         print("Qubits:", self.qubits)
         print("Nodes:", len(self.nodes))
         for i in range(len(self.nodes)):
-            var node = self.nodes[i]
+            var node = self.nodes[i].copy()
             if node.type != "removed":
                 var preds = self.predecessors(node.id)
-                var succs = self successors(node.id)
-                print("[", node.id, "]", node.__str__(), "preds:", preds, "succs", succs)
+                var succs = self.successors(node.id)
+                print("[ Node", node.id, "]", node.__str__(), "| PREDS:", preds, "| SUCCS:", succs)
         print("Edges:", len(self.edges))
         print("Operations:", self.count_operation())
         print("Depth:", self.depth())

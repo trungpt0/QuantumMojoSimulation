@@ -48,10 +48,12 @@ def parse(path: str) -> list:
     return tests
 
 GATE = {
+    "I": lambda qc, q0, q1: qc.id(q0),
     "X": lambda qc, q0, q1: qc.x(q0),
     "Y": lambda qc, q0, q1: qc.y(q0),
     "Z": lambda qc, q0, q1: qc.z(q0),
     "H": lambda qc, q0, q1: qc.h(q0),
+    "S": lambda qc, q0, q1: qc.s(q0),
     "CX": lambda qc, q0, q1: qc.cx(q0, q1),
 }
 

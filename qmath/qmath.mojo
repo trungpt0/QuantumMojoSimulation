@@ -129,3 +129,16 @@ struct Complex(Copyable):
 
 def abs2(c: Complex) -> Float64:
     return c.re * c.re + c.im * c.im
+
+def sqrt(x: Float64) -> Float64:
+    """
+    Newton-Raphson
+    """
+    if x < 0.0:
+        print("Negative number")
+    if x == 0.0:
+        return 0.0
+    var guess = x
+    for _ in range(20):
+        guess = 0.5 * (guess + x / guess)
+    return guess

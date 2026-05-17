@@ -45,13 +45,15 @@ def apply_random_single_qubit_gate(mut qc: QuantumCircuit, n: Int):
     # else: qc.IP(w_random, theta_random)
 
 def apply_random_single_qubit_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
-    var gate_random = random_int(0, 4)
+    var gate_random = random_int(0, 6)
     var w_random = random_int(0, n)
     var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
-    if gate_random == 0: qc.X(w_random); return ApplyGateLog("X", w_random)
-    elif gate_random == 1: qc.Y(w_random); return ApplyGateLog("Y", w_random)
-    elif gate_random == 2: qc.Z(w_random); return ApplyGateLog("Z", w_random)
-    else: qc.H(w_random); return ApplyGateLog("H", w_random)
+    if gate_random == 0: qc.I(w_random); return ApplyGateLog("I", w_random)
+    elif gate_random == 1: qc.X(w_random); return ApplyGateLog("X", w_random)
+    elif gate_random == 2: qc.Y(w_random); return ApplyGateLog("Y", w_random)
+    elif gate_random == 3: qc.Z(w_random); return ApplyGateLog("Z", w_random)
+    elif gate_random == 4: qc.H(w_random); return ApplyGateLog("H", w_random)
+    else: qc.S(w_random); return ApplyGateLog("S", w_random)
     # elif gate_random == 3: qc.H(w_random); return ApplyGateLog("H", w_random)
     # elif gate_random == 4: qc.S(w_random); return ApplyGateLog("S", w_random)
     # elif gate_random == 5: qc.T(w_random); return ApplyGateLog("T", w_random)
@@ -87,8 +89,13 @@ def random_pauli() -> String:
     else:
         return "I"
 
-def random_pauli_coeff(mut seed: Int, range: Float64) -> Float64:
+def random_pauli_coeff_round(mut seed: Int, range: Float64) -> Float64:
     var v: Float64 = 0.0
     while abs(v) < 0.05:
         v = round(random_float64(seed, -range, range))
+    return v
+
+def random_pauli_coeff(mut seed: Int, range: Float64) -> Float64:
+    var v: Float64 = 0.0
+    v = random_float64(seed, -range, range)
     return v

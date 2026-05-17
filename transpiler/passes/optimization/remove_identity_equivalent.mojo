@@ -12,15 +12,16 @@ struct RemoveIdentityEquivalent:
         if gate.name == "I" or gate.name == "REMOVED": return True
         if gate.name == "RZ" and len(gate.theta) > 0:
             var tol = 1e-10 * self.approximation_degree
-            if abs(gate.theta[0] < tol): return True
+            if abs(gate.theta[0]) < tol: return True
             if abs(gate.theta[0] - 2 * PI) < tol: return True
         return False
-
-    def run(self, owned dag: DAGCircuit) -> DAGCircuit:
-        var topo = dag.topological_sort()
+    
+    def run(self, dag: DAGCircuit) -> DAGCircuit:
+        var result = dag.copy()
+        var topo = result.topological_sort()
         for i in range(len(topo)):
             var nid = topo[i]
-            if dag.nodes[nid].type == "removed": continue
-            if self._is_identity(dag.nodes[nid].gate)
-                dag.remove_operation(nid)
-        return dag^
+            if result.nodes[nid].type == "removed": continue
+            if self._is_identity(dag.nodes[nid].gate):
+                result.remove_operation(nid)
+        return result^

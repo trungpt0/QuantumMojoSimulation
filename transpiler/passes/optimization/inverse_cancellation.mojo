@@ -1,7 +1,7 @@
 from dagcircuit import DAGCircuit
 from gates import GateOp
 
-struct InverseCancellation:oat64
+struct InverseCancellation:
 
     def __init__(out self):
         pass
