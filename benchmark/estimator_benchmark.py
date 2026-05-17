@@ -15,6 +15,7 @@ class Gate:
     name: str
     q0: int
     q1: int = -1
+    theta: float = 0.0
 
 @dataclass
 class TestCase:
@@ -37,6 +38,8 @@ def parse(path: str) -> list:
             elif p[0] == "Gate" and cur is not None:
                 if p[1] == "CX":
                     cur.gates.append(Gate("CX", int(p[2]), int(p[3])))
+                elif p[1] == "RX" or p[1] == "RY" or p[1] == "RZ" or p[1] == "P" or p[1] == "IP":
+                    cur.gates.append(Gate(p[1], int(p[2]), -1, float(p[3])))
                 else:
                     cur.gates.append(Gate(p[1], int(p[2])))
             elif p[0] == "Observable" and cur is not None:
@@ -48,13 +51,21 @@ def parse(path: str) -> list:
     return tests
 
 GATE = {
-    "I": lambda qc, q0, q1: qc.id(q0),
-    "X": lambda qc, q0, q1: qc.x(q0),
-    "Y": lambda qc, q0, q1: qc.y(q0),
-    "Z": lambda qc, q0, q1: qc.z(q0),
-    "H": lambda qc, q0, q1: qc.h(q0),
-    "S": lambda qc, q0, q1: qc.s(q0),
-    "CX": lambda qc, q0, q1: qc.cx(q0, q1),
+    "I": lambda qc, q0, q1, theta: qc.id(q0),
+    "X": lambda qc, q0, q1, theta: qc.x(q0),
+    "Y": lambda qc, q0, q1, theta: qc.y(q0),
+    "Z": lambda qc, q0, q1, theta: qc.z(q0),
+    "H": lambda qc, q0, q1, theta: qc.h(q0),
+    "S": lambda qc, q0, q1, theta: qc.s(q0),
+    "SDG": lambda qc, q0, q1, theta: qc.sdg(q0),
+    "T": lambda qc, q0, q1, theta: qc.t(q0),
+    "TDG": lambda qc, q0, q1, theta: qc.tdg(q0),
+    "RX": lambda qc, q0, q1, theta: qc.rx(theta, q0),
+    "RY": lambda qc, q0, q1, theta: qc.ry(theta, q0),
+    "RZ": lambda qc, q0, q1, theta: qc.rz(theta, q0),
+    "P": lambda qc, q0, q1, theta: qc.p(theta, q0),
+    "IP": lambda qc, q0, q1, theta: qc.p(-theta, q0),
+    "CX": lambda qc, q0, q1, theta: qc.cx(q0, q1),
 }
 
 def run_qiskit(tc: TestCase) -> float:
@@ -62,7 +73,7 @@ def run_qiskit(tc: TestCase) -> float:
     for g in tc.gates:
         if g.name == "CX" and g.q0 == g.q1:
             continue
-        GATE[g.name](qc, g.q0, g.q1)
+        GATE[g.name](qc, g.q0, g.q1, g.theta)
     cm = defaultdict(float)
     for p, c in tc.obs:
         cm[p] += c

@@ -40,6 +40,8 @@ def estimator_benchmark(nq: Int, ng: Int, h_terms: Int, pauli_coeff_range: Float
         var g = gate_log[i].copy()
         if g.gate_name == "CX":
             out += "Gate " + g.gate_name + " " + String(g.q0) + " " + String(g.q1) + "\n"
+        elif g.gate_name == "RX" or g.gate_name == "RY" or g.gate_name == "RZ" or g.gate_name == "P" or g.gate_name == "IP":
+            out += "Gate " + g.gate_name + " " + String(g.q0) + " " + String(g.theta) + "\n"
         else:
             out += "Gate " + g.gate_name + " " + String(g.q0) + "\n"
     for i in range(len(O_paulis)):
