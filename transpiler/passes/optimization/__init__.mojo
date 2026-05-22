@@ -1,1 +1,3 @@
 from .remove_identity_equivalent import RemoveIdentityEquivalent
+from .remove_diagonal_gates_before_measure import RemoveDiagonalGatesBeforeMeasure
+from .inverse_cancellation import InverseCancellation

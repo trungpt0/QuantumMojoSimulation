@@ -139,6 +139,12 @@ struct QuantumCircuit(Copyable, Movable):
         self.gates.append(GateOp("MEASURE", self._q1(w)))
         return out
 
+    def measure_all(mut self) -> List[Int]:
+        var res = List[Int]()
+        for q in range(self.n):
+            res.append(self.measure(q))
+        return res^
+
     def X_test(self):
         X_test(self.psi)
 

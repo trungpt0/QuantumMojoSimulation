@@ -17,11 +17,11 @@ struct RemoveIdentityEquivalent:
         return False
     
     def run(self, dag: DAGCircuit) -> DAGCircuit:
-        var result = dag.copy()
-        var topo = result.topological_sort()
+        var dagc = dag.copy()
+        var topo = dagc.topological_sort()
         for i in range(len(topo)):
             var nid = topo[i]
-            if result.nodes[nid].type == "removed": continue
-            if self._is_identity(dag.nodes[nid].gate):
-                result.remove_operation(nid)
-        return result^
+            if dagc.nodes[nid].type == "removed": continue
+            if self._is_identity(dagc.nodes[nid].gate):
+                dagc.remove_operation(nid)
+        return dagc^

@@ -21,23 +21,24 @@ struct InverseCancellation:
         if g1.name == "TDG" and g2.name == "T": return True
         return False
 
-    def run(self, owned dag: DAGCircuit) -> DAGCircuit:
+    def run(self, dag: DAGCircuit) -> DAGCircuit:
+        var dagc = dag.copy()
         var changed = True
         while changed:
             changed = False
-            var topo = topological_sort()
+            var topo = dagc.topological_sort()
             for i in range(len(topo)):
                 var nid = topo[i]
-                if dag.nodes[nid].type == "removed": continue
-                var succs = dag.successors(nid)
+                if dagc.nodes[nid].type == "removed": continue
+                var succs = dagc.successors(nid)
                 for j in range(len(succs)):
                     var sid = succs[j]
-                    if dag.nodes[sid].type != "gate": continue
-                    if self._are_inverse(dag.nodes[nid].gate, dag.nodes[sid].gate):
-                        dag.remove_operation(nid)
-                        dag.remove_operation(sid)
+                    if dagc.nodes[sid].type != "gate": continue
+                    if self._are_inverses(dagc.nodes[nid].gate, dagc.nodes[sid].gate):
+                        dagc.remove_operation(nid)
+                        dagc.remove_operation(sid)
                         changed = True
                         break
                 if changed: break
-        return dag^
-            
+        return dagc^
+        

@@ -9,21 +9,22 @@ struct RemoveDiagonalGatesBeforeMeasure:
         return (name == "RZ" or name == "Z" or
                 name == "S" or name == "SDG" or
                 name == "T" or name == "TDG" or
-                name == "P")
+                name == "P" or name == "IP")
 
-    def run(self, owned dag: DAGCircuit) -> DAGCircuit:
-        var topo = dag.topological_sort()
+    def run(self, dag: DAGCircuit) -> DAGCircuit:
+        dagc = dag.copy()
+        var topo = dagc.topological_sort()
         for i in range(len(topo)):
             var nid = topo[i]
-            if dag.nodes[nid].type == "removed": continue
-            var gate = dag.nodes[nid].gate
+            if dagc.nodes[nid].type == "removed": continue
+            var gate = dagc.nodes[nid].gate.copy()
             if gate.name == "MEASURE" and len(gate.qubit) > 0:
-                var preds = dag.predecessors(nid)
+                var preds = dagc.predecessors(nid)
                 for j in range(len(preds)):
                     var pid = preds[j]
-                    if dag.nodes[pid].type == "gate":
-                        if self._is_diagonal(dag.nodes[pid].gate.name):
-                            var pred_succs = dag.successors(pid)
-                            if len(pred_succs == 1):
-                                dag.remove_node(pid)
-        return dag^
+                    if dagc.nodes[pid].type == "gate":
+                        if self._is_diagonal(dagc.nodes[pid].gate.name):
+                            var pred_succs = dagc.successors(pid)
+                            if len(pred_succs) == 1:
+                                dagc.remove_operation(pid)
+        return dagc^
