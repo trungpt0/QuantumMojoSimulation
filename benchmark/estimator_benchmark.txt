@@ -1,4578 +1,4331 @@
-Qubits 4
-Gate S 0
-Gate CX 1 0
-Gate CX 2 0
-Gate X 2
-Gate CX 1 2
-Gate IP 3 2.1299998191338796
-Gate CX 0 1
-Gate CX 2 1
-Gate CX 0 2
-Gate CX 2 3
-Gate IP 2 2.302787415081318
-Gate X 3
-Gate SDG 1
-Gate CX 2 3
-Gate Y 2
-Gate Y 3
-Observable IZIZ 2.0543086838837787
-Observable IIIY -1.6520318033616754
-Observable ZYZY 1.0669765672160725
-Observable YXYY 0.5656435001795455
-Observable ZZIX 0.8818964125895541
-Expected_value 2.0543086838837787
-Qubits 4
-Gate RX 3 2.214822820780804
-Gate CX 2 3
+Qubits 2
 Gate TDG 1
-Gate T 1
-Gate CX 0 1
-Gate IP 3 2.2273891913951633
-Gate CX 0 1
-Gate I 0
-Gate Y 0
-Gate Z 1
-Gate S 3
-Gate S 1
-Gate CX 2 0
-Gate CX 2 3
-Gate CX 1 2
-Gate CX 2 3
-Observable IYIY 2.0543740276811273
-Observable IXII 0.8357459361534563
-Observable IXYI -1.1671014832414266
-Expected_value 0.0
-Qubits 1
-Gate CX 0 0
-Observable Y 2.047220948802343
-Observable Y 1.2874301180373529
-Expected_value 0.0
-Qubits 2
-Gate S 1
-Gate S 1
-Gate CX 0 1
-Gate IP 0 2.0828759293300325
-Observable YZ 2.0471548862650373
-Observable IY -0.4841431591264813
-Expected_value 0.0
-Qubits 3
-Gate CX 1 2
-Gate H 0
-Gate Y 0
-Gate CX 1 2
-Gate CX 2 0
+Gate T 0
 Gate CX 1 0
-Gate CX 2 0
-Gate Z 2
 Gate CX 0 1
-Observable ZIX 2.047194352658164
-Observable ZYZ 0.645057636064919
-Observable XXY 1.5311988383291117
-Observable XZI -1.547836291870626
-Expected_value 0.0
-Qubits 9
-Gate Z 1
-Gate CX 8 5
-Gate CX 1 4
-Gate TDG 4
-Gate CX 2 6
-Gate CX 7 0
-Gate T 7
-Gate CX 8 4
-Gate CX 5 3
-Gate CX 7 0
-Gate IP 2 2.792875869041326
-Gate CX 4 7
-Gate CX 4 3
-Gate CX 6 0
-Gate H 8
-Gate H 7
-Gate SDG 8
-Gate CX 5 3
-Gate CX 1 0
-Gate CX 6 0
-Gate CX 5 6
-Gate CX 2 6
-Gate X 7
-Gate X 2
-Gate Y 0
-Gate IP 7 2.6954864967800427
-Gate RX 4 2.7960174616949156
-Gate CX 2 7
-Gate CX 3 7
-Gate RX 7 0.35499996985564664
-Gate CX 0 5
-Gate CX 5 3
-Gate CX 5 6
-Gate T 7
-Gate CX 2 5
-Gate RY 1 0.20734511513692636
-Gate CX 1 0
-Gate CX 7 8
-Gate H 8
-Gate Y 5
-Gate CX 2 1
-Gate CX 5 3
-Gate CX 3 6
-Gate RX 7 1.1498229112138643
-Gate CX 7 6
-Gate CX 8 5
-Gate SDG 0
-Gate CX 8 7
-Gate S 4
-Gate RX 0 1.1655308744818134
-Gate Z 7
-Gate CX 6 7
-Gate RY 3 0.5215043804959058
-Gate CX 8 7
-Gate CX 0 2
-Gate CX 8 5
-Gate CX 8 5
-Gate CX 8 2
-Gate CX 5 8
-Gate CX 6 7
-Gate IP 7 0.22305307840487532
-Gate S 7
-Gate RX 6 0.38641589639154456
-Gate CX 8 7
-Gate CX 8 6
-Gate CX 6 5
-Gate CX 4 5
-Gate TDG 0
-Gate CX 2 5
-Gate CX 4 7
-Gate I 2
-Gate I 4
-Gate RX 2 1.0115928344559133
-Gate IP 7 1.6179202165987436
-Gate I 3
-Gate CX 2 0
-Gate CX 0 6
-Gate CX 3 1
-Gate Y 1
-Gate CX 2 0
-Gate CX 1 7
-Observable YIZZXZIYI 2.0474644669556734
-Observable XIXXZXYIZ -2.7573703477012437
-Expected_value 0.0
-Qubits 2
-Gate CX 0 1
-Gate TDG 0
-Gate IP 0 2.249380339970292
-Gate IP 0 3.006504169485432
-Observable YY 2.0467185293522903
-Observable ZX -2.3356371080055327
-Expected_value 0.0
-Qubits 8
-Gate CX 0 5
-Gate IP 1 0.5120796025351363
-Gate S 3
-Gate IP 7 2.6954864967800427
-Gate IP 2 1.9289378893041331
-Gate CX 1 6
-Gate CX 3 7
-Gate CX 4 0
-Gate CX 0 5
-Gate T 6
-Gate I 2
-Gate CX 4 7
-Gate CX 4 5
-Gate CX 6 7
-Gate IP 7 1.731017552127976
-Gate CX 3 6
-Gate IP 4 1.093274243449248
-Gate Z 2
-Gate I 3
-Gate CX 5 1
-Gate CX 5 6
-Gate CX 7 0
-Gate CX 5 0
-Gate H 6
-Gate Z 5
-Gate IP 6 2.3530528975387552
-Gate SDG 4
-Gate IP 0 1.6022122533307945
-Gate H 3
-Gate CX 0 1
-Gate IP 7 1.1592476891746337
-Gate RX 5 1.731017552127976
-Gate CX 4 3
-Gate IP 6 0.0439822971502571
-Gate X 7
-Gate CX 6 1
-Gate T 2
-Gate CX 6 5
-Gate Y 0
-Gate CX 6 0
-Gate SDG 0
-Gate CX 5 2
-Gate CX 2 0
-Gate H 4
-Gate H 4
-Gate I 1
-Gate IP 4 1.8409732950036186
-Gate CX 1 5
-Gate RY 0 0.44924774946334045
-Gate CX 6 3
-Gate CX 5 3
-Gate CX 1 7
-Gate CX 5 3
-Gate CX 7 4
-Gate CX 2 7
-Gate CX 1 5
-Gate CX 4 3
-Gate S 3
-Gate CX 0 7
-Gate CX 1 4
-Gate Y 1
-Gate X 3
-Gate CX 6 3
-Gate S 4
-Observable ZYXZIIIY 2.046642152931401
-Observable XIIXZZZI -2.7399295937849684
-Expected_value 3.1065634159120892e-18
-Qubits 7
-Gate CX 2 3
-Gate RY 0 1.5079644737231006
-Gate RY 2 2.459867047760808
-Gate CX 3 5
-Gate IP 0 1.6524777357882312
-Gate CX 4 3
-Gate I 4
-Gate RX 0 0.8482300164692441
-Gate CX 3 4
-Gate Z 3
-Gate IP 1 2.321636971002857
-Gate IP 1 1.9383626672649024
-Gate CX 6 5
-Gate IP 4 0.6848671984825748
-Gate X 0
-Gate CX 2 0
-Gate CX 1 5
-Gate IP 3 2.522698900832604
-Gate IP 5 3.003362576831842
-Gate Z 0
-Gate Y 3
-Gate CX 3 4
-Gate CX 5 0
-Gate Z 5
-Gate CX 3 2
-Gate S 4
-Gate CX 1 2
-Gate RX 1 2.808583832309275
-Gate CX 3 4
-Gate CX 4 0
-Gate CX 0 4
-Gate SDG 4
-Gate CX 2 1
-Gate CX 4 6
-Gate CX 2 3
-Gate IP 3 1.7247343668207964
-Gate CX 2 5
-Gate H 5
-Gate CX 1 5
-Gate CX 0 5
-Gate IP 6 2.111150263212341
-Gate CX 1 5
-Gate H 0
-Gate CX 2 0
-Gate I 4
-Gate CX 2 3
-Gate CX 2 3
-Gate CX 6 2
-Gate S 2
-Observable YIZYIYX 2.0457230057375
-Expected_value 0.0
-Qubits 10
-Gate CX 7 5
-Gate SDG 9
-Gate CX 1 5
-Gate CX 0 1
-Gate CX 2 1
-Gate Y 7
-Gate S 3
-Gate CX 9 6
-Gate CX 0 9
-Gate RX 4 1.2095131716320704
-Gate SDG 2
-Gate CX 4 1
-Gate IP 0 2.5886723465579893
-Gate S 4
-Gate CX 7 6
-Gate Z 3
-Gate IP 1 2.990796206217483
-Gate CX 7 4
-Gate CX 0 5
-Gate IP 7 1.8692476288859268
-Gate S 8
-Gate SDG 6
-Gate CX 9 5
-Gate H 6
-Gate S 0
-Gate SDG 2
-Gate IP 2 2.7174776453551712
-Gate SDG 4
-Gate CX 8 4
-Gate CX 6 0
-Gate T 7
-Gate TDG 7
-Gate SDG 4
-Gate Y 4
-Gate CX 0 5
-Gate CX 6 5
-Gate Y 0
-Gate H 0
-Gate CX 1 9
-Gate H 8
-Gate CX 1 7
-Gate Z 2
-Gate TDG 6
-Gate CX 4 5
-Gate S 0
-Gate CX 2 0
-Gate Z 8
-Gate T 1
-Gate SDG 8
-Gate SDG 4
-Gate X 6
-Gate CX 4 5
-Gate T 1
-Gate CX 0 1
-Gate Z 3
-Gate RY 4 0.031415926535897934
-Gate RX 9 1.4514158059584845
-Gate CX 3 5
-Gate CX 4 1
-Gate CX 1 0
-Gate IP 4 0.9236282401553992
-Gate RY 7 1.9226547039969535
-Gate X 4
-Gate CX 5 7
-Gate CX 5 4
-Gate RY 1 0.8607963870836034
-Gate CX 6 2
-Gate CX 3 6
-Gate RY 7 2.2745130811990104
-Gate X 1
-Gate CX 9 5
-Gate CX 8 3
-Gate CX 6 0
-Gate Y 6
-Gate Z 9
-Gate IP 2 2.6043803098259386
-Gate CX 6 8
-Gate CX 4 5
-Gate H 0
-Gate CX 8 7
-Gate CX 1 6
-Gate CX 9 6
-Gate CX 9 7
-Gate RX 6 2.761459942505428
-Gate RY 9 2.2336723767023425
-Gate CX 2 3
-Gate SDG 1
-Gate CX 9 4
-Gate IP 0 0.5874778262212914
-Gate CX 9 4
-Gate SDG 3
-Gate CX 5 4
-Gate CX 4 9
-Gate CX 1 9
-Gate IP 4 0.1445132620651305
-Gate SDG 6
-Gate CX 5 0
-Gate RY 9 0.7539822368615503
-Gate CX 2 8
-Gate Y 2
-Observable YZIXZXYXZZ 2.0461594664395664
-Expected_value 1.863498452563069e-17
-Qubits 7
-Gate CX 4 6
-Gate RX 3 2.4347343065320897
-Gate CX 0 3
-Gate IP 3 0.08482300164692441
-Gate CX 3 0
-Gate Y 4
-Gate CX 5 1
-Gate CX 2 5
-Gate Y 1
-Gate RX 2 0.18849555921538758
-Gate IP 0 2.4535838624536286
-Gate CX 2 6
-Gate S 5
-Gate SDG 1
-Gate TDG 4
-Gate IP 6 2.9750882429495342
-Gate CX 6 1
-Gate CX 4 6
-Gate H 4
-Gate CX 5 3
-Gate Y 5
-Gate CX 2 4
-Gate CX 0 5
-Gate X 3
-Gate CX 0 2
-Gate CX 1 2
-Gate Z 5
-Gate CX 0 6
-Gate IP 4 1.5362388076054088
-Gate SDG 0
-Gate CX 0 5
-Gate CX 0 3
-Gate CX 5 1
-Gate CX 4 5
-Gate CX 1 2
-Gate CX 4 5
-Gate CX 0 5
-Gate X 0
-Gate RY 2 2.1299998191338796
-Gate IP 6 2.7111944600479916
-Gate CX 1 0
-Gate CX 4 5
-Gate CX 1 3
-Gate X 2
-Gate IP 1 2.048318410140545
-Gate CX 5 2
-Gate CX 6 0
-Gate TDG 2
-Gate CX 0 5
-Observable YZYZZIX 2.0505767464280478
-Expected_value 1.3895248520784668e-17
-Qubits 4
-Gate CX 2 3
-Gate CX 3 0
-Gate CX 1 0
-Gate X 1
-Gate CX 1 3
-Gate CX 1 2
-Gate CX 0 1
-Gate IP 3 0.16336281798666927
-Gate IP 0 1.2377875055143783
-Gate RX 3 3.0819023931715868
-Gate CX 2 3
-Gate CX 1 2
-Gate CX 3 0
-Gate RY 0 1.0649999095669398
-Gate CX 1 2
-Gate CX 1 2
-Observable IZXI 2.0507762261281357
-Observable ZZYI -1.5528972772387644
-Observable YXZI -1.8721716237330277
-Observable ZYII 0.8188147027783872
-Expected_value 0.0
-Qubits 10
-Gate CX 6 5
-Gate S 2
-Gate CX 4 5
-Gate IP 5 2.7991590543485056
-Gate CX 8 4
-Gate CX 0 8
-Gate I 5
-Gate TDG 6
-Gate CX 1 6
-Gate CX 2 6
-Gate CX 9 5
-Gate CX 7 9
-Gate CX 2 4
-Gate CX 9 0
-Gate CX 2 9
-Gate CX 6 1
-Gate Y 9
-Gate S 9
-Gate IP 8 2.3907520093818326
-Gate CX 8 0
-Gate CX 5 2
-Gate Y 7
-Gate CX 9 1
-Gate I 8
-Gate S 3
-Gate T 7
-Gate CX 4 9
-Gate S 5
-Gate T 2
-Gate CX 4 0
-Gate RX 3 1.5865042900628454
-Gate Z 4
-Gate RY 5 3.0504864666356895
-Gate CX 5 0
-Gate IP 9 1.3980087308474578
-Gate T 8
-Gate Y 8
-Gate S 0
-Gate IP 6 0.07225663103256524
-Gate H 5
-Gate CX 2 3
-Gate CX 9 8
-Gate S 5
-Gate H 0
-Gate RX 5 0.8984954989266809
-Gate CX 0 8
-Gate T 5
-Gate CX 2 3
-Gate CX 7 9
-Gate I 9
-Gate X 5
-Gate X 6
-Gate CX 3 9
-Gate CX 4 7
-Gate S 1
-Gate CX 2 9
-Gate CX 3 6
-Gate T 2
-Gate TDG 2
-Gate H 6
-Gate IP 4 0.4303981935418017
-Gate Z 2
-Gate CX 0 4
-Gate CX 8 2
-Gate CX 3 7
-Gate CX 7 8
-Gate T 9
-Gate TDG 4
-Gate CX 4 1
-Gate CX 1 9
-Gate S 1
-Gate CX 6 5
-Gate CX 3 1
-Gate T 3
-Gate CX 5 1
-Gate TDG 4
-Gate T 6
-Gate CX 8 3
-Gate CX 2 6
-Gate CX 0 7
-Gate CX 4 3
-Gate CX 3 4
-Gate CX 7 8
-Gate I 3
-Gate CX 9 0
-Gate IP 4 0.1288052987971815
-Gate IP 9 1.4168582867689967
-Gate H 9
-Gate Z 8
-Gate CX 7 5
-Gate IP 7 0.4649557127312894
-Gate IP 3 2.2745130811990104
-Gate CX 3 7
-Gate RX 6 1.7592918860102842
-Gate CX 6 0
-Gate CX 3 7
-Gate I 2
-Gate CX 6 9
-Gate CX 9 1
-Gate CX 8 5
-Observable XYXIYIIZZI 2.0506658970899387
-Observable YXXZZZXYYY 2.7125777431931857
-Observable IZXXIYZYZY -0.9803696769755575
-Expected_value -3.0612065288135375e-17
-Qubits 8
-Gate RX 0 2.0106192982974678
-Gate CX 1 5
-Gate CX 5 6
-Gate CX 6 7
-Gate CX 2 0
-Gate CX 2 3
-Gate IP 0 0.18535396656179778
-Gate CX 7 4
-Gate CX 2 6
-Gate CX 3 1
-Gate CX 1 0
-Gate X 6
-Gate CX 1 2
-Gate H 2
-Gate RY 2 2.642079421669016
-Gate CX 0 7
-Gate Y 7
-Gate CX 6 0
-Gate T 4
-Gate CX 7 5
-Gate CX 2 4
-Gate CX 3 2
-Gate IP 3 2.6326546437082468
-Gate IP 6 0.3895574890451343
-Gate CX 4 5
-Gate RY 6 1.4105751014618173
-Gate CX 2 0
-Gate H 7
-Gate CX 1 4
-Gate CX 2 1
-Gate CX 1 3
-Gate CX 4 5
-Gate CX 0 5
-Gate CX 2 1
-Gate CX 3 5
-Gate IP 4 0.8513716091228339
-Gate CX 2 7
-Gate IP 7 1.2063715789784806
-Gate CX 5 2
-Gate CX 4 5
-Gate CX 7 3
-Gate SDG 0
-Gate CX 3 2
-Gate RX 3 1.3288936924684824
-Gate X 5
-Gate CX 2 5
-Gate SDG 0
-Gate RY 0 3.0002209841782523
-Gate CX 7 2
-Gate CX 4 3
-Gate SDG 1
-Gate I 6
-Gate I 6
-Gate IP 7 1.8598228509251575
-Gate CX 1 7
-Gate CX 0 3
-Gate CX 3 5
-Gate S 7
-Gate IP 3 0.5969026041820608
-Gate CX 4 5
-Gate I 0
-Gate CX 6 7
-Gate CX 1 3
-Gate X 0
-Observable IZXXXZYZ 2.0490906683656913
-Observable IZXXZIXI -2.8708024907936474
-Observable IZYXZYXZ 2.082482621686661
-Observable ZIXXXZII 1.2649772635070622
-Observable YIYYXZYI 2.978637175860797
-Expected_value -0.003821797559834846
-Qubits 9
-Gate CX 2 7
-Gate X 8
-Gate CX 1 2
-Gate CX 5 4
-Gate S 7
-Gate CX 0 4
-Gate IP 6 2.3970351946890123
-Gate CX 0 1
-Gate TDG 2
-Gate CX 0 1
-Gate CX 7 6
-Gate CX 0 7
-Gate Z 4
-Gate IP 4 1.6493361431346414
-Gate CX 0 7
-Gate Z 0
-Gate Z 4
-Gate SDG 2
-Gate CX 4 0
-Gate I 8
-Gate CX 5 8
-Gate H 6
-Gate CX 7 8
-Gate CX 4 1
-Gate CX 8 5
-Gate H 5
-Gate H 3
-Gate CX 4 1
-Gate CX 4 5
-Gate CX 6 1
-Gate RY 2 3.0190705400997913
-Gate CX 4 5
-Gate CX 5 8
-Gate RY 4 1.0681415022205296
-Gate T 2
-Gate CX 3 4
-Gate CX 0 6
-Gate T 1
-Gate Y 1
-Gate T 4
-Gate CX 4 5
-Gate CX 4 6
-Gate S 3
-Gate S 3
-Gate TDG 6
-Gate CX 2 5
-Gate CX 3 5
-Gate CX 1 2
-Gate CX 6 5
-Gate CX 3 6
-Gate CX 3 0
-Gate Y 2
-Gate CX 5 3
-Gate CX 7 1
-Gate RX 4 0.6785840131753953
-Gate CX 3 2
-Gate CX 3 6
-Gate H 4
-Gate CX 7 6
-Gate CX 4 5
-Gate Z 7
-Gate CX 6 1
-Gate CX 5 7
-Gate CX 2 0
-Gate CX 6 5
-Gate X 0
-Gate IP 8 3.03477850336774
-Gate IP 0 1.3885839528866886
-Gate TDG 5
-Gate IP 8 1.2692034320502765
-Gate T 8
-Gate IP 7 1.1184069846779665
-Gate RY 6 1.275486617357456
-Gate IP 7 2.865132500073891
-Gate CX 7 0
-Gate CX 3 6
-Gate X 1
-Gate RY 8 2.1834068942449063
-Gate CX 0 6
-Gate CX 4 6
-Gate X 0
-Observable IXXIXIYYZ 2.0480148173623425
-Observable ZXIZXIYZZ 0.7770023296188928
-Observable IIIYZYZII -2.1484586174504487
-Expected_value -0.0005481903154898016
+Observable ZZ 1.0909710638617096
+Observable YZ -2.981668753183228
+Observable IY -1.592292022935837
+Observable YI -0.5435746974566042
+Observable YY 0.8490103641485518
+Expected_value 1.0909710638617096
 Qubits 5
-Gate CX 0 1
-Gate CX 3 1
-Gate CX 1 3
-Gate RY 3 0.9016370915802706
-Gate CX 4 3
-Gate CX 0 3
-Gate IP 4 3.003362576831842
-Gate CX 2 1
-Gate CX 2 4
-Gate CX 2 3
-Gate CX 3 2
-Gate IP 4 1.168672467135403
-Gate CX 2 0
-Gate CX 1 2
-Gate CX 2 3
-Gate X 0
-Gate I 4
-Gate CX 4 0
-Gate S 1
-Gate CX 1 2
-Gate CX 3 2
-Gate CX 1 2
-Gate SDG 2
-Gate CX 2 1
-Gate CX 3 4
-Observable YYIZY 2.048572782499092
-Observable ZYIXZ 0.13883113211217957
-Observable YXZXI -0.8318368680827347
-Observable IZYZY -2.531187995618828
-Expected_value 0.0
-Qubits 1
-Gate CX 0 0
-Observable I 2.048475464435475
-Observable Y -2.4446489605022275
-Observable I -0.3942903785692511
-Observable X 1.3870734430541507
-Observable Z -0.22075862935555213
-Expected_value 1.4334264565106716
-Qubits 3
+Gate H 4
 Gate T 0
-Gate IP 1 0.10681415022205297
-Gate IP 1 0.3581415625092364
-Gate IP 1 3.0473448739820994
-Gate RY 2 1.2534954687823274
-Gate IP 1 1.8849555921538759
-Gate CX 1 0
-Gate CX 0 1
-Gate Z 1
-Observable YXI 2.0414178128337195
-Observable XIX 0.8848028702108948
-Observable XXX -2.233894457912684
-Observable IZI -0.6890778943676011
-Expected_value -0.689077894367601
-Qubits 10
-Gate Z 7
-Gate CX 8 1
-Gate CX 1 6
-Gate CX 7 4
-Gate IP 7 1.124690169985146
-Gate CX 7 6
-Gate X 5
-Gate S 6
-Gate Z 0
-Gate IP 1 0.5560618996853934
-Gate CX 0 3
-Gate CX 6 7
-Gate TDG 9
-Gate CX 2 8
-Gate CX 8 2
-Gate RX 7 0.31730085801256913
-Gate IP 8 2.054601595447725
-Gate S 2
-Gate CX 9 0
-Gate IP 4 1.1718140597889928
-Gate CX 0 9
-Gate IP 3 1.944645852572082
-Gate CX 3 4
-Gate TDG 8
-Gate T 8
-Gate CX 8 1
-Gate SDG 2
-Gate CX 8 7
-Gate Z 7
-Gate CX 3 7
-Gate I 2
-Gate CX 7 3
-Gate CX 8 9
-Gate RY 5 0.9676105373056563
-Gate IP 5 1.4576989912656642
-Gate Y 1
-Gate I 1
-Gate I 6
-Gate CX 0 4
-Gate CX 1 6
-Gate X 7
-Gate T 1
-Gate S 5
-Gate CX 0 1
-Gate CX 5 6
-Gate RX 1 2.563539605329271
-Gate CX 0 5
-Gate X 5
-Gate RX 7 2.195973264859265
-Gate CX 3 6
-Gate RY 2 1.2472122834751478
-Gate CX 7 5
-Gate IP 8 0.10681415022205297
-Gate CX 4 5
-Gate CX 7 6
-Gate SDG 9
-Gate SDG 5
-Gate CX 4 3
-Gate CX 7 0
-Gate S 4
-Gate I 1
-Gate CX 3 5
-Gate IP 5 1.3634512116579702
-Gate CX 2 6
-Gate SDG 8
-Gate CX 9 4
-Gate CX 4 5
-Gate CX 0 1
-Gate CX 7 8
-Gate CX 5 7
-Gate S 4
-Gate CX 3 1
-Gate IP 3 3.0724776152108175
-Gate H 6
-Gate IP 7 0.4429645641561608
-Gate X 1
-Gate CX 2 6
-Gate X 9
-Gate CX 1 0
-Gate CX 1 9
-Gate Y 9
-Gate CX 4 0
-Gate IP 6 0.3675663404700058
-Gate CX 3 7
-Gate CX 3 7
-Gate TDG 7
-Gate CX 0 3
-Gate TDG 0
-Gate CX 9 4
-Gate CX 8 7
-Gate Y 3
-Gate CX 0 7
-Gate CX 2 7
-Gate CX 0 5
-Gate RX 6 2.6923449041264527
-Gate CX 3 6
-Gate IP 7 2.7174776453551712
-Gate Z 5
-Gate S 0
-Gate CX 7 9
-Observable ZXIXYYIZXY 2.04134836554855
-Observable IIXXIXXIXZ -2.7869343934463453
-Expected_value -3.702848130608279e-18
-Qubits 6
-Gate CX 5 2
-Gate TDG 0
-Gate CX 1 5
-Gate CX 4 1
-Gate CX 1 3
-Gate TDG 4
-Gate CX 3 1
-Gate TDG 0
-Gate Y 1
-Gate X 2
-Gate CX 5 3
-Gate S 3
-Gate I 3
-Gate CX 2 1
-Gate T 1
-Gate CX 4 5
-Gate SDG 5
-Gate CX 4 5
-Gate CX 3 5
-Gate CX 0 2
-Gate H 1
-Gate S 4
-Gate CX 5 4
-Gate H 2
-Gate RY 1 0.19792033717615698
-Gate RY 0 1.897521962768235
-Gate X 0
-Gate X 1
-Gate TDG 3
-Gate CX 5 4
-Gate H 2
-Gate IP 1 0.4649557127312894
-Gate IP 4 2.064026373408494
-Gate CX 4 0
-Gate SDG 2
-Gate IP 3 2.038893632179776
-Observable XIXXYZ 2.040954251937179
-Observable XIIXXI -1.0491341152172917
-Expected_value 0.0
-Qubits 5
-Gate CX 3 1
-Gate CX 0 2
-Gate TDG 0
-Gate CX 1 2
-Gate I 2
-Gate CX 4 2
-Gate CX 4 1
-Gate H 1
-Gate RY 4 0.5937610115284709
-Gate RY 3 2.28079626650619
-Gate I 1
-Gate IP 3 1.8126989611213107
-Gate CX 0 2
-Gate CX 0 1
-Gate CX 3 2
-Gate CX 1 2
-Gate CX 0 4
-Gate S 0
-Gate SDG 0
-Gate CX 0 1
-Gate X 3
-Gate S 2
-Gate T 0
-Gate S 4
-Gate CX 3 1
-Observable ZYIZX 2.0411785296764284
-Observable YYZIY 0.026214471227740566
-Observable IIZZX -1.4346964823886186
-Expected_value -3.41862118526128e-17
-Qubits 2
-Gate RY 0 3.006504169485432
-Gate CX 1 0
-Gate CX 1 0
-Gate CX 0 1
-Observable YZ 2.0411188776436786
-Observable ZI -1.2884700027508798
-Observable ZZ 1.2140845739205903
-Expected_value 2.490815865343344
-Qubits 9
-Gate Y 0
-Gate CX 1 8
-Gate CX 8 5
-Gate CX 0 3
-Gate CX 8 5
-Gate CX 4 6
-Gate IP 4 0.21048670779051615
-Gate CX 4 5
-Gate CX 3 4
-Gate CX 2 3
-Gate TDG 4
-Gate IP 4 2.4096015653033716
-Gate CX 8 5
-Gate CX 6 2
-Gate CX 0 1
-Gate RY 4 0.05654866776461628
-Gate CX 4 8
-Gate CX 0 3
-Gate CX 0 3
-Gate H 4
-Gate Y 3
-Gate H 4
-Gate CX 0 7
-Gate X 0
-Gate H 4
-Gate SDG 1
-Gate CX 0 1
-Gate CX 7 8
-Gate IP 5 2.642079421669016
-Gate CX 6 7
-Gate CX 2 0
-Gate I 2
-Gate CX 5 6
-Gate H 0
-Gate CX 0 3
-Gate CX 6 3
-Gate CX 3 1
-Gate CX 1 4
-Gate H 1
-Gate RX 8 2.839999758845173
-Gate CX 3 0
-Gate CX 5 6
-Gate CX 1 2
-Gate CX 5 0
-Gate CX 5 4
-Gate Y 0
-Gate CX 8 3
-Gate SDG 7
-Gate T 4
-Gate RY 0 1.121548577331556
-Gate CX 6 4
-Gate SDG 7
-Gate CX 0 1
-Gate CX 7 8
-Gate IP 4 2.472433418375167
-Gate Y 8
-Gate TDG 4
-Gate IP 0 1.5990706606772047
-Gate SDG 3
-Gate Y 4
-Gate RY 1 0.11938052083641214
 Gate Z 3
-Gate RX 3 1.5519467708733579
-Gate CX 3 8
-Gate CX 8 1
-Gate CX 0 1
-Gate CX 8 2
-Gate S 3
-Gate CX 1 5
-Gate Y 4
-Gate CX 6 1
-Gate I 1
-Gate CX 0 1
-Gate RY 4 0.7162831250184728
-Gate X 7
-Gate CX 3 1
-Gate Z 8
-Gate X 4
-Gate CX 5 8
-Gate CX 4 1
-Gate CX 8 6
-Observable ZYYYXYXZI 2.0399625658201224
-Observable ZIXIIZYIZ -2.671982105780747
-Observable ZZIIYXXZZ 0.5457583807488358
-Observable XIIZZZIXY -2.1765517971557626
-Expected_value -6.340450633361555e-17
-Qubits 1
+Gate IP 3 2.045176817486955
+Gate Y 0
+Gate T 3
+Gate X 3
 Gate SDG 0
-Observable X 2.0404905623857457
+Gate Y 4
+Gate CX 1 3
+Gate CX 2 4
+Gate TDG 2
+Gate CX 1 4
+Gate CX 1 4
+Gate H 2
+Gate Y 3
+Gate SDG 1
+Gate Z 1
+Gate CX 4 1
+Gate CX 0 1
+Gate CX 0 1
+Gate CX 1 0
+Gate CX 3 2
+Gate Y 0
+Gate X 2
+Observable ZXZIY 1.09154165161344
 Expected_value 0.0
 Qubits 8
-Gate Z 7
-Gate RX 5 2.708052867394402
-Gate SDG 1
-Gate SDG 6
-Gate Z 6
-Gate CX 0 5
-Gate CX 3 1
-Gate Y 0
-Gate S 5
-Gate Z 6
-Gate CX 5 4
-Gate CX 0 1
-Gate IP 2 0.6817256058289851
-Gate IP 4 0.48066367599923837
-Gate CX 5 4
-Gate CX 5 3
-Gate IP 2 2.598097124518759
-Gate CX 7 0
-Gate CX 4 0
-Gate CX 6 1
-Gate IP 0 1.36659280431156
-Gate CX 1 0
-Gate CX 5 0
-Gate CX 2 1
-Gate CX 3 0
-Gate CX 2 5
-Gate CX 0 5
-Gate IP 4 2.0074777056438777
-Gate TDG 4
-Gate S 7
-Gate RX 7 0.8230972752405259
-Gate T 3
-Gate RY 3 1.4482742133048947
-Gate CX 4 5
-Gate CX 0 3
-Gate CX 1 5
-Gate RX 1 1.913229926036184
-Gate H 1
-Gate RX 1 0.7225663103256524
-Gate CX 1 2
-Gate S 6
-Gate CX 3 7
-Gate I 4
-Gate S 6
-Gate T 7
-Gate IP 0 2.7803094984269667
-Gate H 5
-Gate TDG 1
-Gate CX 2 1
-Gate CX 1 7
-Gate Y 7
-Gate Z 3
-Gate CX 5 2
-Gate SDG 4
-Gate S 7
-Gate CX 7 6
-Gate S 0
-Gate RY 1 2.7300440159695305
-Gate S 0
-Gate CX 1 7
-Gate Z 0
-Gate CX 0 1
-Gate I 4
-Gate CX 4 1
-Observable ZZIXIZYY 2.0404538612927383
-Observable IIYIZYXY 2.395065497481068
-Expected_value -2.0157926762577113e-17
-Qubits 3
-Gate CX 1 0
-Gate CX 0 2
-Gate CX 0 1
-Gate IP 0 2.761459942505428
-Gate CX 2 0
-Gate CX 0 1
-Gate CX 0 2
-Gate Y 1
-Gate RX 2 1.2095131716320704
-Observable YYI 2.04450130434265
-Observable YZZ 0.5106697326504424
-Observable XIX 2.350156563998623
-Observable YZZ 2.8074997158502626
-Expected_value 3.103961803882016
-Qubits 10
-Gate CX 1 3
-Gate CX 6 7
-Gate RX 3 1.9415042599184922
-Gate RY 0 2.7174776453551712
-Gate CX 8 4
-Gate H 4
-Gate X 1
-Gate CX 5 6
-Gate RX 4 0.5309291584566751
-Gate IP 5 2.9530970943744057
-Gate Z 1
-Gate Y 6
-Gate SDG 2
-Gate Y 0
-Gate CX 2 4
-Gate T 4
-Gate X 6
-Gate Y 7
-Gate IP 3 0.03769911184307752
-Gate IP 3 1.8598228509251575
-Gate X 9
-Gate CX 2 4
-Gate CX 0 1
-Gate RY 9 1.3885839528866886
-Gate CX 0 6
-Gate SDG 8
-Gate IP 6 1.275486617357456
-Gate Y 6
-Gate X 3
-Gate T 0
-Gate Z 7
-Gate Y 9
-Gate CX 2 1
-Gate CX 3 6
-Gate TDG 3
-Gate Z 4
-Gate Z 1
-Gate IP 0 1.6838936623241292
-Gate RX 0 0.7476990515543708
-Gate Y 9
-Gate CX 6 1
-Gate RY 7 0.08168140899333463
-Gate CX 9 0
-Gate X 5
-Gate S 9
-Gate H 0
-Gate CX 1 9
-Gate IP 6 0.09110618695410401
-Gate I 6
-Gate S 0
-Gate Y 4
-Gate CX 8 3
-Gate H 5
-Gate X 6
-Gate SDG 3
-Gate SDG 1
-Gate CX 8 9
-Gate TDG 8
-Gate H 0
-Gate SDG 5
-Gate CX 7 8
-Gate RY 0 0.7885397560510381
-Gate Y 2
-Gate X 1
-Gate CX 3 8
-Gate CX 7 1
-Gate I 3
-Gate T 7
-Gate CX 9 3
-Gate CX 0 1
-Gate RY 0 0.6974335690969341
-Gate Y 7
-Gate CX 1 2
-Gate TDG 7
-Gate S 7
-Gate CX 9 6
-Gate CX 2 4
-Gate H 7
-Gate I 9
-Gate T 4
-Gate Z 4
-Gate S 5
-Gate CX 5 3
-Gate CX 0 8
-Gate T 6
-Gate CX 8 6
-Gate CX 5 4
-Gate X 8
-Gate RX 2 1.105840614063607
-Gate H 4
-Gate IP 5 1.2472122834751478
-Gate I 7
-Gate CX 4 2
-Gate IP 9 1.3320352851220723
-Gate H 8
-Gate CX 7 3
-Gate IP 6 2.8965484266097894
-Gate CX 0 1
-Gate CX 7 2
-Gate CX 9 8
-Observable ZIXIXYYYYY 2.0449057934512673
-Expected_value 0.030765240380370564
-Qubits 9
-Gate IP 2 1.5111060663766904
-Gate S 3
-Gate CX 2 6
-Gate CX 3 8
-Gate RY 7 0.053407075111026485
-Gate TDG 1
-Gate IP 5 2.384468824074653
-Gate CX 2 6
-Gate TDG 5
-Gate CX 7 6
-Gate CX 2 8
-Gate H 5
-Gate IP 8 2.2745130811990104
-Gate CX 4 0
-Gate CX 8 3
-Gate T 4
-Gate Z 4
-Gate SDG 7
-Gate Z 4
-Gate CX 8 1
-Gate Z 6
-Gate RX 1 3.1196015050146646
-Gate CX 4 1
-Gate I 0
-Gate IP 0 1.5676547341413067
-Gate CX 6 0
-Gate IP 0 2.016902483604647
-Gate IP 1 0.6283185307179586
-Gate TDG 8
-Gate CX 0 4
-Gate T 2
-Gate Z 0
-Gate CX 3 0
-Gate CX 3 4
-Gate CX 8 7
-Gate SDG 3
-Gate CX 4 5
-Gate CX 6 8
-Gate RY 6 1.0869910581420683
-Gate CX 2 0
-Gate IP 5 1.8032741831605412
-Gate TDG 0
-Gate CX 3 7
-Gate CX 8 3
-Gate CX 2 0
-Gate CX 8 6
-Gate Z 2
-Gate CX 1 4
-Gate CX 6 0
-Gate I 3
-Gate T 0
-Gate CX 1 4
-Gate CX 3 6
-Gate Y 7
-Gate CX 6 1
-Gate IP 7 1.1466813185602747
-Gate CX 1 4
-Gate CX 0 2
-Gate CX 2 4
-Gate CX 8 0
-Gate IP 6 1.077566280181299
-Gate CX 0 1
-Gate CX 8 7
-Gate CX 8 7
-Gate CX 6 8
-Gate CX 0 5
-Gate RY 1 2.2745130811990104
-Gate CX 5 2
-Gate IP 4 0.9958848711879644
-Gate H 7
-Gate TDG 3
-Gate X 5
-Gate Z 0
-Gate X 1
-Gate T 2
-Gate CX 1 2
-Gate RY 8 2.092300707290802
-Gate IP 4 1.9352210746113125
-Gate RX 6 0.23876104167282428
-Gate CX 7 8
-Gate IP 4 1.275486617357456
-Observable ZXXIXZYYY 2.0423308576768853
-Observable ZIYZIXYII 0.9439696255200953
-Observable ZZYXYZXYI -0.5352034844570902
-Observable IIZIXZIXZ -1.6796641178149472
-Observable IYIXIIXYZ -2.464526204450429
-Expected_value 0.00016249089389139016
-Qubits 7
 Gate I 2
-Gate SDG 5
-Gate CX 2 6
-Gate IP 0 2.1582741530161877
-Gate I 6
-Gate H 0
-Gate CX 6 2
-Gate CX 0 4
-Gate Y 6
-Gate CX 0 5
-Gate CX 0 3
-Gate CX 3 5
-Gate TDG 2
-Gate Z 1
-Gate Y 3
-Gate IP 0 2.8431413514987627
-Gate RY 1 3.1353094682826135
-Gate RY 1 2.808583832309275
-Gate SDG 5
-Gate CX 5 0
-Gate CX 0 2
-Gate T 3
-Gate CX 4 5
-Gate X 0
+Gate IP 5 1.5299556222982291
+Gate RY 1 1.3006193585861743
+Gate CX 7 1
+Gate CX 6 4
+Gate X 5
+Gate CX 7 6
+Gate CX 3 2
+Gate H 5
+Gate T 6
+Gate CX 1 6
+Gate CX 1 0
+Gate CX 4 3
+Gate CX 2 4
+Gate CX 1 6
+Gate CX 3 1
+Gate IP 7 2.315353785695678
+Gate RX 5 0.09738937226128358
 Gate CX 1 2
-Gate T 4
-Gate Z 2
-Gate CX 3 1
-Gate CX 3 4
-Gate RX 1 1.4828317324943823
-Gate CX 0 6
-Gate Z 4
-Gate H 6
-Gate S 3
-Gate CX 3 2
-Gate Z 3
-Gate CX 0 2
-Gate CX 5 6
-Gate CX 5 4
-Gate RX 0 0.9613273519984767
-Gate T 0
-Gate CX 3 2
-Gate CX 5 6
-Gate CX 0 1
-Gate RX 0 1.8598228509251575
-Gate S 3
-Gate TDG 1
-Gate T 0
-Gate CX 4 1
-Observable YYXXXZI 2.0355259082019734
-Observable IIXIXZI -0.5913040845452675
-Observable YYYYYIY 1.052891452908618
-Expected_value 0.008370276276775643
-Qubits 10
-Gate CX 2 3
-Gate CX 5 1
-Gate CX 4 9
-Gate Y 8
-Gate CX 8 9
-Gate CX 0 6
-Gate CX 3 1
-Gate Z 9
-Gate SDG 2
-Gate CX 0 9
-Gate IP 3 2.3342033416172163
-Gate S 2
-Gate CX 9 4
-Gate CX 9 1
-Gate CX 3 7
-Gate CX 2 7
-Gate CX 2 0
-Gate T 5
-Gate S 8
-Gate RY 8 0.7005751617505239
-Gate RX 7 1.3917255455402784
-Gate CX 3 4
-Gate IP 4 1.1278317626387357
-Gate CX 0 1
-Gate S 0
-Gate CX 7 9
-Gate RY 1 0.6251769380643689
-Gate RY 5 1.6524777357882312
-Gate I 6
+Gate IP 5 1.9195131113433637
 Gate I 5
-Gate IP 3 1.2126547642856602
-Gate CX 5 3
-Gate S 4
-Gate Z 0
-Gate IP 0 0.06283185307179587
-Gate CX 9 0
-Gate H 4
-Gate RY 5 1.1875220230569419
-Gate CX 6 0
-Gate S 3
-Gate CX 0 1
-Gate RX 3 2.6452210143226056
-Gate CX 4 5
+Gate Z 4
+Gate TDG 4
+Gate SDG 3
+Gate CX 6 2
+Gate CX 4 0
+Gate CX 7 4
+Gate CX 0 5
+Gate TDG 5
+Gate Z 5
+Gate TDG 2
 Gate H 3
-Gate SDG 7
-Gate Z 1
-Gate X 8
-Gate RY 8 2.0734511513692633
-Gate RY 5 2.9153979825313283
-Gate H 9
-Gate T 4
-Gate CX 7 3
-Gate CX 3 0
-Gate CX 9 8
-Gate CX 5 6
-Gate CX 2 3
-Gate CX 2 3
-Gate IP 8 2.660928977590555
-Gate SDG 6
-Gate TDG 8
-Gate I 1
-Gate CX 8 3
-Gate CX 5 0
-Gate S 0
-Gate IP 6 2.1299998191338796
-Gate I 4
-Gate Y 3
-Gate Y 5
-Gate IP 9 1.4042919161546374
-Gate CX 8 5
-Gate CX 1 7
-Gate SDG 8
-Gate Y 4
-Gate CX 6 2
-Gate CX 4 9
-Gate CX 8 0
-Gate Y 5
-Gate H 0
-Gate IP 4 1.3854423602330987
-Gate Y 6
-Gate CX 1 8
-Gate CX 4 5
-Gate CX 5 4
-Gate CX 2 8
-Gate CX 1 0
-Gate CX 4 2
-Gate SDG 9
-Gate H 4
-Gate T 5
-Gate CX 1 4
-Gate CX 8 9
-Gate CX 2 8
-Gate CX 7 0
-Gate CX 7 4
-Gate X 8
-Gate I 0
-Gate CX 0 4
-Gate CX 0 8
-Gate S 1
-Gate CX 1 7
-Observable ZXXYYZXIYY 2.0359388454403646
-Observable ZZYXXYIYXI -1.8605789764537581
-Observable YIIIYIZZII 1.4131537160265284
-Observable YYYXXIIXXX -1.9137091065464626
-Expected_value 1.8458975899186959e-16
-Qubits 3
-Gate CX 2 0
-Gate I 0
-Gate CX 0 2
-Gate X 2
-Gate RY 0 1.9226547039969535
-Gate CX 2 1
-Gate CX 1 2
-Gate CX 0 2
-Gate T 1
-Observable XII 2.033497006577253
-Expected_value 0.0
-Qubits 6
-Gate X 5
-Gate CX 0 3
-Gate CX 0 4
-Gate RY 2 3.088185578478767
-Gate IP 2 1.5676547341413067
-Gate IP 5 1.2189379495928396
-Gate CX 2 3
-Gate CX 1 0
-Gate T 5
-Gate CX 4 5
-Gate S 1
-Gate T 0
-Gate CX 4 3
-Gate RY 2 2.337344934270806
-Gate CX 0 5
-Gate T 5
-Gate X 0
-Gate IP 5 0.6063273821428301
-Gate CX 3 4
-Gate CX 5 4
-Gate CX 4 0
-Gate TDG 5
-Gate T 5
-Gate IP 3 0.9958848711879644
-Gate RX 2 1.1184069846779665
-Gate CX 4 5
-Gate Z 3
-Gate CX 0 2
-Gate CX 4 2
-Gate IP 3 0.1350884841043611
-Gate IP 4 2.6326546437082468
-Gate RX 5 1.6430529578274617
-Gate IP 5 1.9226547039969535
-Gate CX 2 4
-Gate Y 0
-Gate CX 1 2
-Observable ZXZIIX 2.033261029185045
-Expected_value 0.0
-Qubits 7
-Gate H 0
-Gate CX 2 6
-Gate CX 2 4
-Gate T 4
-Gate CX 1 2
-Gate Z 1
-Gate CX 6 2
-Gate I 4
-Gate SDG 1
-Gate CX 4 1
-Gate T 5
-Gate SDG 6
-Gate CX 2 3
-Gate S 6
-Gate CX 0 3
-Gate X 0
-Gate CX 5 6
-Gate T 1
-Gate IP 5 1.0618583169133502
-Gate RY 4 1.9697785938008003
-Gate CX 3 4
-Gate CX 0 4
-Gate H 0
-Gate CX 5 6
-Gate CX 3 4
-Gate CX 6 1
-Gate I 0
-Gate H 1
-Gate H 0
-Gate IP 6 2.7897342763877364
-Gate RY 6 1.108982206717197
-Gate CX 1 2
-Gate CX 6 3
-Gate I 5
-Gate IP 5 0.6094689747964198
-Gate CX 3 0
-Gate Z 6
-Gate RY 4 0.2670353755551324
-Gate RX 3 2.626371458401067
-Gate CX 0 2
-Gate CX 1 0
-Gate IP 6 1.1026990214100174
-Gate CX 5 4
-Gate I 0
-Gate CX 0 1
-Gate RY 4 1.3634512116579702
-Gate X 3
-Gate CX 1 2
-Gate S 0
-Observable ZXIYYZX 2.0337587969346105
-Observable IYZIXXY -0.4195708743979789
-Observable ZIYIXYI 1.223440460767904
-Expected_value 4.367036673925742e-18
-Qubits 8
-Gate CX 1 2
-Gate CX 5 6
-Gate IP 4 1.2629202467430969
-Gate CX 4 5
-Gate CX 6 7
-Gate S 4
-Gate Y 4
-Gate SDG 3
-Gate RX 2 0.5843362335677015
-Gate S 5
-Gate SDG 5
-Gate CX 6 7
-Gate CX 2 6
-Gate Y 1
-Gate CX 0 1
-Gate CX 4 5
-Gate CX 0 6
-Gate CX 4 7
-Gate CX 3 1
-Gate X 7
-Gate IP 7 0.21048670779051615
-Gate Z 6
-Gate Y 4
-Gate CX 4 5
-Gate CX 0 7
-Gate CX 5 1
-Gate CX 4 5
-Gate CX 4 2
-Gate IP 2 2.774026313119787
-Gate Z 5
-Gate CX 3 0
-Gate I 6
-Gate CX 5 6
-Gate CX 3 1
-Gate I 4
-Gate T 0
-Gate Z 1
-Gate CX 4 2
-Gate Y 1
-Gate T 0
-Gate CX 0 2
-Gate I 6
-Gate CX 5 3
-Gate CX 5 2
-Gate RX 3 2.1017254852515714
-Gate IP 2 2.2556635252774715
-Gate IP 7 2.321636971002857
-Gate RX 5 2.1676989309769574
-Gate CX 2 3
-Gate CX 2 1
-Gate CX 7 1
-Gate CX 6 3
-Gate CX 4 3
-Gate CX 1 4
-Gate I 4
-Gate CX 2 7
-Gate CX 1 0
-Gate CX 4 5
-Gate RX 1 1.4105751014618173
-Gate CX 4 5
-Gate CX 0 7
-Gate CX 2 4
-Gate CX 5 0
-Gate CX 5 3
-Observable ZZYIIYII 2.033712104129976
-Expected_value 0.0
-Qubits 4
-Gate IP 0 0.11309733552923255
-Gate I 2
-Gate CX 0 1
-Gate H 2
-Gate Z 2
-Gate CX 0 1
-Gate IP 3 0.3675663404700058
-Gate CX 1 2
-Gate RY 3 0.7979645340118074
-Gate H 2
-Gate CX 0 3
-Gate S 3
-Gate X 2
-Gate IP 2 1.1906636157105315
-Gate CX 2 1
-Gate RX 2 2.111150263212341
-Observable ZYIZ 2.0383789785779403
-Observable ZIYY -0.17166193967403354
-Observable ZXIX 1.945957793998621
-Expected_value -1.2203682345663636
-Qubits 9
-Gate CX 2 4
-Gate CX 7 0
-Gate CX 7 4
-Gate T 4
-Gate Z 1
-Gate RX 8 0.6911503837897546
-Gate TDG 1
-Gate IP 3 1.5613715488341273
-Gate CX 1 2
-Gate CX 8 3
-Gate CX 3 5
-Gate Y 6
-Gate T 8
-Gate I 6
+Gate IP 6 1.925796296650543
 Gate Z 4
-Gate CX 7 2
-Gate IP 3 0.9330530181161686
-Gate CX 0 4
-Gate I 8
-Gate SDG 2
-Gate I 1
-Gate T 3
-Gate CX 1 2
-Gate CX 8 2
-Gate RY 2 0.6534512719466771
-Gate IP 2 0.31730085801256913
+Gate H 7
+Gate CX 0 1
+Gate IP 2 1.8158405537749005
+Gate H 0
+Gate CX 1 7
+Gate T 1
+Gate CX 5 4
 Gate CX 1 5
-Gate T 0
-Gate CX 0 1
-Gate CX 4 5
-Gate CX 8 0
-Gate RY 5 2.4692918257215775
-Gate CX 4 5
-Gate S 5
-Gate CX 6 2
-Gate CX 3 6
-Gate RY 2 2.7300440159695305
-Gate CX 6 5
-Gate CX 3 4
-Gate CX 0 5
-Gate S 1
-Gate Y 6
-Gate CX 1 7
-Gate H 4
-Gate CX 2 0
-Gate CX 2 3
-Gate CX 7 6
-Gate IP 0 0.07539822368615504
-Gate TDG 8
-Gate CX 6 7
-Gate CX 8 3
-Gate IP 8 1.5739379194484864
-Gate RX 4 0.18849555921538758
-Gate CX 2 7
-Gate CX 2 5
-Gate CX 4 2
-Gate IP 3 3.1101767270538954
-Gate CX 3 1
-Gate CX 1 8
-Gate CX 6 7
-Gate T 7
-Gate CX 6 0
-Gate I 3
-Gate IP 2 2.1331414117874696
-Gate CX 0 2
-Gate CX 7 8
-Gate IP 3 0.05026548245743669
-Gate Y 4
-Gate X 4
-Gate CX 6 7
-Gate Y 1
-Gate RY 0 1.8912387774610555
-Gate Y 1
-Gate X 5
-Gate TDG 1
-Gate SDG 6
-Gate Z 0
-Gate CX 4 7
-Gate CX 8 4
-Gate TDG 7
-Gate CX 0 3
-Observable IIYXIYZXZ 2.0384490260762176
-Observable YYZIXYYYI -0.7712834540344939
-Observable XYIZYXYXZ -2.4023155450025415
-Observable YYXIYYXIZ -0.5843238216266272
-Expected_value 0.0
-Qubits 7
-Gate S 5
-Gate CX 2 0
-Gate IP 6 0.9707521299592461
-Gate S 1
-Gate RY 5 0.28588493147667116
-Gate CX 0 5
-Gate CX 2 6
-Gate CX 4 3
-Gate RY 2 1.5676547341413067
-Gate CX 1 2
-Gate IP 6 1.3854423602330987
-Gate CX 4 5
-Gate CX 3 6
-Gate Y 3
-Gate TDG 3
-Gate CX 5 3
-Gate CX 0 1
-Gate CX 2 5
-Gate CX 0 1
-Gate IP 1 1.9038051480754146
-Gate CX 0 3
-Gate CX 1 0
-Gate S 3
-Gate CX 0 4
-Gate T 6
-Gate CX 4 5
-Gate Y 5
-Gate CX 4 0
-Gate IP 1 2.9468139090672256
-Gate CX 6 4
-Gate CX 2 0
-Gate Z 2
-Gate CX 6 0
-Gate CX 3 2
-Gate IP 5 3.015928947446201
-Gate CX 0 1
-Gate CX 3 4
-Gate CX 2 3
-Gate IP 6 0.7162831250184728
-Gate IP 3 1.0681415022205296
-Gate CX 1 0
-Gate CX 0 1
-Gate CX 3 5
-Gate S 3
-Gate CX 2 3
-Gate CX 0 2
-Gate CX 2 4
-Gate IP 3 1.4451326206513049
-Gate CX 2 6
-Observable IYZXIYY 2.0377638969959944
-Observable IIZZYXZ 2.5906219885515527
-Expected_value 0.0
-Qubits 8
-Gate TDG 6
-Gate CX 1 0
-Gate RX 1 0.7728317927830891
-Gate CX 4 6
-Gate CX 3 0
-Gate CX 3 5
-Gate TDG 2
-Gate H 6
-Gate Z 1
-Gate CX 7 2
-Gate RY 3 1.5770795121020762
-Gate CX 2 4
-Gate IP 4 1.3885839528866886
-Gate RX 4 0.91106186954104
-Gate Z 6
-Gate CX 4 5
-Gate CX 4 2
-Gate CX 6 5
-Gate TDG 7
-Gate CX 7 2
-Gate H 0
-Gate Y 0
-Gate IP 5 0.3612831551628262
-Gate SDG 1
-Gate CX 5 2
-Gate CX 4 0
-Gate CX 3 1
-Gate TDG 0
-Gate H 1
-Gate CX 6 5
-Gate TDG 6
-Gate CX 7 3
-Gate CX 1 6
-Gate CX 1 3
-Gate X 2
-Gate CX 2 3
-Gate CX 3 4
-Gate TDG 3
-Gate RY 2 2.6389378290154264
-Gate CX 2 4
-Gate CX 1 2
-Gate CX 3 4
-Gate X 1
-Gate X 0
-Gate CX 7 5
-Gate CX 2 3
-Gate X 7
-Gate T 7
-Gate CX 4 5
-Gate I 6
-Gate Z 4
-Gate IP 2 1.5550883635269477
-Gate CX 2 3
-Gate CX 4 2
-Gate CX 2 6
-Gate IP 2 0.44924774946334045
-Gate CX 6 5
-Gate CX 0 5
-Gate S 0
-Gate CX 3 4
-Gate CX 0 3
-Gate CX 3 4
-Gate IP 0 0.9581857593448869
-Gate X 2
-Observable XYZIYIYZ 2.0380156002618657
-Observable ZZZZXXZI 2.3453340599538235
-Observable ZXXXZXIX 1.9362026863737314
-Observable IIZIZYYX 2.884337491483681
-Expected_value -0.0017926014452947965
-Qubits 7
-Gate CX 5 2
-Gate CX 3 4
-Gate RY 2 1.7215927741672068
-Gate CX 2 5
-Gate T 3
-Gate X 2
-Gate CX 4 6
-Gate Y 2
-Gate CX 3 0
-Gate Y 1
-Gate CX 1 0
-Gate X 2
-Gate CX 2 3
-Gate CX 0 2
-Gate CX 3 5
-Gate IP 0 2.217964413434394
-Gate TDG 5
-Gate S 5
-Gate Y 5
-Gate SDG 6
-Gate CX 2 3
-Gate CX 6 2
-Gate CX 5 3
-Gate CX 3 2
-Gate IP 6 2.752035164544659
-Gate CX 2 3
-Gate CX 1 2
-Gate H 5
-Gate RX 5 0.5497787143782138
-Gate S 3
-Gate RX 1 0.9299114254625788
-Gate CX 6 1
-Gate IP 3 1.231504320207199
-Gate S 4
-Gate SDG 0
-Gate RX 4 3.1353094682826135
-Gate CX 1 2
-Gate IP 5 1.379159174925919
-Gate CX 5 1
-Gate X 1
-Gate CX 0 1
-Gate CX 3 1
-Gate IP 5 2.7111944600479916
-Gate CX 1 6
-Gate T 0
-Gate CX 5 0
-Gate CX 6 0
-Gate T 2
-Gate TDG 3
-Observable ZXYZZZI 2.037427837102721
-Observable XXIZIII 2.2003335835622453
-Observable ZXZIIII 1.0315250385008483
-Observable IXIIYXY 1.3845093710220457
-Expected_value -9.606963634487304e-18
-Qubits 10
-Gate CX 7 3
-Gate RX 4 2.0703095587156737
-Gate CX 1 9
-Gate S 9
-Gate Y 2
-Gate SDG 1
-Gate CX 9 8
-Gate CX 4 3
-Gate CX 6 4
-Gate CX 0 9
-Gate CX 0 5
-Gate CX 4 6
-Gate X 4
-Gate CX 3 9
-Gate CX 4 3
-Gate CX 6 7
-Gate CX 2 6
-Gate CX 5 0
-Gate CX 3 0
-Gate RX 2 1.774999849278233
-Gate CX 5 6
-Gate CX 6 5
-Gate RX 5 0.49637163926718736
-Gate CX 0 2
-Gate CX 8 0
-Gate CX 2 0
-Gate SDG 0
-Gate SDG 9
-Gate Y 4
-Gate CX 5 3
-Gate CX 0 4
-Gate T 4
-Gate X 4
-Gate T 7
-Gate IP 0 2.1645573383233674
 Gate CX 0 7
-Gate CX 0 1
+Gate CX 5 4
+Gate CX 3 0
+Gate X 6
+Gate T 3
+Gate S 6
+Gate H 0
+Gate SDG 2
+Gate CX 1 4
+Gate CX 4 2
+Gate CX 1 3
+Gate S 5
+Gate X 6
+Gate IP 0 1.4576989912656642
+Gate CX 3 1
+Gate CX 1 2
+Gate CX 3 5
+Gate CX 6 5
+Gate RY 6 0.5560618996853934
+Gate CX 0 4
+Gate CX 1 2
+Gate CX 0 6
+Observable YXXXZXZZ 1.091379038296512
+Observable IXYXXYZY -0.26996601165936596
+Observable YIIXZZXZ -2.824200343704511
+Observable XXIYZZXI 1.8110481261832123
+Observable IZIXYIZI -1.9687452318560563
+Expected_value -3.5731838546375074e-17
+Qubits 10
+Gate CX 8 4
 Gate CX 8 9
-Gate CX 8 3
-Gate CX 8 0
-Gate RX 4 2.155132560362598
-Gate CX 0 5
-Gate RX 8 0.7225663103256524
-Gate SDG 4
-Gate H 6
-Gate X 0
-Gate CX 6 9
-Gate CX 5 8
+Gate CX 7 6
+Gate CX 0 7
 Gate TDG 6
-Gate IP 8 1.2723450247038661
-Gate S 7
-Gate TDG 5
-Gate CX 6 7
-Gate CX 0 1
-Gate CX 8 1
-Gate H 4
-Gate IP 8 0.9707521299592461
-Gate CX 2 6
-Gate SDG 5
-Gate CX 7 5
-Gate IP 9 2.824291795577224
-Gate SDG 4
-Gate Y 7
-Gate CX 1 7
-Gate CX 9 5
-Gate CX 8 2
-Gate CX 2 5
-Gate Z 1
+Gate H 0
 Gate CX 2 9
-Gate Y 1
-Gate IP 7 1.655619328441821
-Gate CX 4 9
-Gate CX 9 4
-Gate X 0
-Gate Z 2
-Gate CX 5 4
-Gate IP 3 2.456725455107218
-Gate H 3
-Gate CX 0 4
-Gate Z 8
-Gate CX 3 2
-Gate T 9
-Gate IP 9 1.6838936623241292
-Gate SDG 6
-Gate Y 2
-Gate T 8
-Gate CX 7 3
-Gate CX 6 3
-Gate CX 1 0
-Gate H 3
-Gate CX 5 0
-Gate CX 2 5
-Gate CX 2 1
-Gate CX 5 4
-Gate CX 9 5
-Gate TDG 4
-Gate IP 9 3.113318319707485
-Gate CX 8 9
-Gate TDG 7
-Gate CX 7 5
-Observable YYXXXXYIYI 2.0373927354538113
-Observable ZZZIYZXIZI 2.19947509218804
-Expected_value -8.283546112444526e-19
-Qubits 1
-Gate CX 0 0
-Observable X 2.03018417548118
-Expected_value 0.0
-Qubits 10
-Gate CX 3 6
-Gate IP 6 2.205398042820035
-Gate X 5
-Gate T 5
-Gate RY 4 3.1196015050146646
-Gate CX 9 8
-Gate CX 4 3
-Gate CX 4 3
-Gate I 5
-Gate Z 3
-Gate Z 2
-Gate CX 8 6
-Gate CX 8 0
-Gate CX 3 1
-Gate CX 9 7
-Gate CX 9 5
-Gate IP 4 1.4105751014618173
-Gate CX 4 9
-Gate IP 5 1.9069467407290044
-Gate X 1
-Gate CX 0 6
-Gate IP 8 0.32358404331974866
-Gate IP 4 0.17278759594743864
-Gate CX 4 5
-Gate H 8
-Gate CX 5 0
-Gate IP 6 3.1070351344003053
-Gate IP 5 2.2713714885454204
-Gate TDG 6
-Gate IP 3 1.9572122231864413
-Gate IP 1 0.34871678454846705
-Gate IP 1 2.767743127812608
-Gate X 1
-Gate RX 5 2.4033183799961915
-Gate CX 1 9
-Gate Y 2
-Gate Y 1
-Gate H 7
-Gate CX 1 7
-Gate CX 7 3
-Gate RY 0 2.111150263212341
-Gate H 0
-Gate CX 0 3
-Gate RX 9 1.3163273218541234
-Gate CX 0 1
-Gate CX 7 8
-Gate CX 2 7
-Gate CX 8 3
-Gate CX 5 6
-Gate CX 7 1
-Gate CX 6 0
-Gate CX 9 4
-Gate RY 4 0.3361504139341079
-Gate CX 0 1
-Gate CX 1 3
-Gate RX 0 1.1938052083641215
-Gate Y 3
+Gate CX 6 1
 Gate Y 4
-Gate S 1
-Gate CX 7 8
-Gate RX 9 1.9792033717615698
-Gate IP 6 1.1435397259066846
-Gate CX 4 5
-Gate CX 4 9
-Gate CX 0 9
-Gate IP 5 1.5833626974092558
-Gate SDG 8
-Gate RY 4 0.24818581963359368
-Gate IP 0 1.0241592050702726
-Gate CX 4 7
-Gate RY 6 0.5089380098815465
-Gate IP 9 0.4366813788489812
-Gate CX 4 8
-Gate CX 2 5
-Gate CX 0 9
-Gate CX 5 3
-Gate CX 5 7
-Gate CX 4 6
-Gate RX 4 2.079734336676443
-Gate CX 5 8
-Gate IP 0 0.2607521902479529
-Gate CX 5 9
-Gate CX 8 4
-Gate CX 4 2
-Gate CX 2 8
-Gate CX 6 7
+Gate CX 9 0
+Gate Y 7
+Gate TDG 2
+Gate CX 1 8
+Gate CX 0 3
+Gate CX 3 8
+Gate CX 2 9
+Gate RY 1 2.466150233067988
+Gate H 0
+Gate CX 2 9
+Gate CX 1 9
+Gate H 1
+Gate CX 8 1
+Gate Z 7
+Gate CX 0 1
+Gate IP 7 1.564513141487717
+Gate T 4
+Gate Z 4
+Gate RY 3 0.15079644737231007
+Gate CX 0 3
+Gate IP 4 0.5057964172279567
+Gate CX 3 6
+Gate CX 0 1
 Gate CX 8 5
+Gate Z 8
+Gate CX 6 5
+Gate CX 7 8
+Gate Z 9
+Gate IP 4 0.053407075111026485
+Gate Z 4
+Gate CX 0 8
+Gate CX 6 9
+Gate Z 4
+Gate CX 0 7
+Gate I 3
+Gate H 8
+Gate CX 0 4
+Gate CX 2 3
+Gate CX 4 5
+Gate Z 7
+Gate CX 1 5
+Gate CX 1 8
+Gate CX 1 3
+Gate I 4
+Gate IP 9 1.6493361431346414
+Gate SDG 2
+Gate CX 6 9
+Gate S 1
+Gate H 6
+Gate CX 3 0
+Gate CX 6 5
+Gate SDG 2
+Gate S 0
+Gate CX 2 5
+Gate IP 7 1.7027432182456679
+Gate IP 3 2.6515041996297857
+Gate CX 5 0
+Gate IP 9 2.3938936020354222
+Gate RX 5 1.2660618393966865
+Gate CX 5 4
+Gate T 9
+Gate T 6
+Gate IP 1 0.43982297150257105
+Gate CX 3 9
+Gate I 4
+Gate RX 5 0.7634070148223198
+Gate CX 0 3
+Gate CX 6 7
+Gate IP 9 0.8042477193189871
+Gate Y 6
+Gate CX 2 5
+Gate CX 3 4
+Gate IP 6 1.184380430403352
+Gate X 7
+Gate CX 0 1
+Gate IP 5 0.27646015351590175
+Gate CX 3 4
+Gate CX 8 1
+Gate CX 2 4
+Gate CX 0 5
+Gate RX 9 0.41154863762026295
+Gate S 5
+Gate IP 4 1.8723892215395168
+Gate TDG 1
+Gate CX 3 1
+Gate CX 0 1
+Gate TDG 8
+Gate CX 3 4
+Gate SDG 5
+Gate CX 1 9
+Gate CX 5 3
+Observable IYYXYIYZXZ 1.0922171376511691
+Observable IXZYYYIZZY -1.0705183147920039
+Observable IIIIYYYIIY -2.515229693614557
+Observable IXZYXZIXZZ -2.7593250169463004
+Observable XZYXYYXZIZ 1.5005813785518232
+Expected_value 2.48613726195245e-17
+Qubits 5
+Gate Y 4
+Gate CX 0 1
+Gate CX 1 4
+Gate CX 0 4
+Gate Y 2
+Gate CX 3 4
+Gate Z 0
+Gate CX 4 2
+Gate T 0
+Gate SDG 3
+Gate TDG 0
+Gate CX 1 2
+Gate RY 4 2.5541148273685015
+Gate CX 4 1
+Gate H 4
+Gate TDG 0
+Gate IP 1 0.31730085801256913
+Gate T 3
+Gate CX 3 1
+Gate Z 2
+Gate CX 2 3
+Gate CX 4 3
+Gate SDG 3
+Gate CX 0 1
+Gate RY 1 3.1227430976682546
+Observable XIYYZ 1.0943211968077144
+Observable XIYYY 2.9187235855827955
+Observable IIZXI -2.39096619887387
+Expected_value -0.037510277082044845
+Qubits 3
+Gate X 1
+Gate S 0
+Gate RY 0 1.6807520696705394
+Gate CX 0 1
+Gate T 1
+Gate CX 1 2
+Gate CX 0 1
+Gate T 1
+Gate S 1
+Observable IIY 1.0947191743132039
+Observable ZYX 1.8941049142474442
+Observable YZZ -1.9436810204547457
+Expected_value 3.038456082052898e-17
+Qubits 7
+Gate S 2
+Gate TDG 0
+Gate S 2
+Gate RY 3 0.1759291886010284
+Gate CX 5 3
+Gate CX 2 1
+Gate T 2
+Gate CX 1 6
+Gate CX 5 1
+Gate CX 5 3
+Gate CX 0 4
+Gate CX 2 1
+Gate T 4
+Gate CX 5 0
+Gate CX 5 0
+Gate IP 5 0.9990264638415542
+Gate CX 4 3
+Gate S 2
+Gate CX 3 4
+Gate Y 1
+Gate X 0
+Gate H 1
+Gate T 2
+Gate Y 0
+Gate CX 1 2
+Gate CX 2 0
+Gate SDG 6
+Gate CX 6 5
+Gate RX 5 2.1048670779051615
+Gate IP 1 1.2189379495928396
+Gate Y 0
+Gate CX 6 1
+Gate CX 5 4
 Gate IP 6 1.3980087308474578
-Gate CX 3 2
-Gate CX 3 4
-Gate CX 0 3
-Gate H 3
-Gate S 6
-Gate IP 5 1.7247343668207964
-Gate CX 6 8
-Gate CX 2 8
-Gate CX 5 3
-Gate CX 5 0
-Gate I 0
-Gate CX 7 0
-Observable XXIIXZIYII 2.029932290774358
-Expected_value 1.4960669339068098e-17
-Qubits 8
-Gate CX 6 7
-Gate Y 6
-Gate CX 6 0
-Gate H 0
-Gate T 0
-Gate RX 2 1.5865042900628454
-Gate CX 2 6
-Gate CX 7 2
-Gate Z 0
-Gate IP 1 3.1007519490931257
-Gate X 2
-Gate CX 4 0
-Gate CX 1 2
-Gate CX 6 5
-Gate CX 7 4
-Gate RY 2 0.8325220532012952
-Gate CX 2 6
-Gate CX 1 7
+Gate IP 3 0.9990264638415542
 Gate CX 2 3
-Gate I 0
-Gate Z 7
-Gate CX 2 6
-Gate H 5
-Gate CX 2 7
-Gate CX 6 7
-Gate IP 4 0.49637163926718736
-Gate Z 5
-Gate CX 5 7
-Gate T 3
-Gate I 6
-Gate SDG 6
-Gate Z 1
-Gate CX 2 3
-Gate CX 1 6
-Gate TDG 5
-Gate CX 5 2
+Gate SDG 4
+Gate S 1
 Gate CX 3 6
-Gate CX 5 1
-Gate CX 6 0
-Gate CX 2 7
-Gate IP 2 0.5560618996853934
-Gate CX 0 4
-Gate RY 7 0.8230972752405259
-Gate RY 4 1.5519467708733579
-Gate IP 3 2.6012387171723486
-Gate SDG 6
-Gate RY 7 0.06283185307179587
-Gate RX 1 0.20106192982974677
-Gate CX 0 7
+Gate CX 0 2
+Gate CX 3 0
+Gate RY 5 2.6357962363618364
+Gate H 3
+Gate TDG 2
+Gate T 4
+Gate SDG 0
+Gate CX 3 6
+Gate CX 2 6
+Gate H 2
+Observable ZXYIYZZ 1.0946097545234217
+Observable YXIXZYX 2.913376618936927
+Observable YIZXYIX 1.4782857290970144
+Observable IZZXZZX -2.5910947432534486
+Expected_value -2.3823117853063102e-17
+Qubits 8
+Gate CX 4 1
+Gate SDG 0
+Gate CX 5 0
+Gate RY 4 1.6367697725202823
+Gate IP 0 2.7363272012767097
+Gate CX 1 3
+Gate CX 4 2
+Gate CX 5 7
+Gate SDG 3
 Gate S 0
+Gate CX 3 2
+Gate CX 1 3
+Gate CX 7 6
+Gate CX 1 0
+Gate Z 6
+Gate SDG 4
+Gate SDG 6
+Gate CX 3 5
+Gate T 3
+Gate CX 4 2
+Gate IP 6 2.786592683734147
+Gate RX 1 0.6723008278682158
+Gate CX 2 3
+Gate CX 3 7
+Gate SDG 5
+Gate CX 2 3
+Gate CX 2 3
+Gate SDG 4
+Gate IP 7 1.900663555421825
+Gate CX 2 3
+Gate Y 2
+Gate X 5
+Gate RY 2 1.9823449644151594
+Gate I 5
+Gate CX 4 1
+Gate IP 5 0.9330530181161686
+Gate S 7
 Gate CX 6 3
-Gate I 4
-Gate I 2
-Gate Z 2
-Gate CX 0 3
-Gate IP 2 1.9352210746113125
-Gate CX 6 7
-Gate CX 4 6
-Gate T 1
+Gate SDG 0
+Gate CX 4 7
+Gate CX 1 0
+Gate IP 2 0.4680973053848792
+Gate Z 4
+Gate CX 5 2
+Gate CX 5 7
+Gate CX 5 7
+Gate CX 2 1
+Gate X 4
+Gate RY 6 1.6084954386379742
+Gate CX 3 1
+Gate CX 0 4
+Gate Y 0
+Gate CX 2 4
+Gate CX 1 3
+Gate CX 4 2
+Gate IP 6 0.3424335992412874
+Gate Z 4
+Gate X 0
+Gate Y 2
+Gate RY 5 1.9477874452256718
+Gate CX 0 7
+Gate CX 7 4
+Gate CX 0 5
+Gate I 3
+Observable XZXZXIXZ 1.0949959650175551
+Expected_value 0.0
+Qubits 3
+Gate CX 1 2
+Gate Y 1
+Gate T 2
+Gate CX 0 2
+Gate Y 0
+Gate CX 1 2
+Gate CX 2 1
+Gate RX 1 2.346769712231575
+Gate CX 0 1
+Observable XXZ 1.0953382001690526
+Observable XXY -1.556006258214563
+Observable ZXI -0.7095910753683661
+Observable ZXY 0.5305886916924185
+Observable YZY -1.3344701333139752
+Expected_value 0.0
+Qubits 6
+Gate IP 5 1.1812388377497622
+Gate Y 2
+Gate RY 3 2.004336112990288
+Gate CX 5 0
+Gate IP 5 0.8953539062730911
+Gate CX 4 5
+Gate S 5
+Gate CX 5 3
+Gate CX 2 4
+Gate SDG 3
 Gate CX 1 5
-Gate IP 4 1.6147786239451536
+Gate T 1
+Gate IP 4 0.3738495257771854
+Gate CX 5 4
+Gate CX 3 4
+Gate CX 4 5
+Gate H 1
+Gate H 1
+Gate RX 1 2.519557308179014
+Gate Z 1
+Gate CX 3 4
+Gate H 1
+Gate CX 4 3
+Gate Y 0
+Gate CX 4 2
+Gate S 0
+Gate CX 5 4
+Gate Z 1
+Gate CX 5 3
+Gate IP 4 0.8953539062730911
+Gate RY 1 0.3832743037379548
+Gate RY 4 2.5603980126756816
+Gate CX 3 4
+Gate X 5
+Gate CX 0 2
+Gate CX 1 2
+Observable IXZXYI 1.107495612688733
+Observable XXIYZI -2.281644867342394
+Observable ZZZYII 2.1518766768501827
+Observable IYXZZI 2.3795238428787804
+Observable XIXIIZ -1.0558463589014646
+Expected_value -0.1488360922480632
+Qubits 9
+Gate RY 1 1.1372565405995052
+Gate CX 7 6
+Gate CX 7 3
+Gate IP 7 1.4608405839192538
+Gate CX 0 4
+Gate S 8
+Gate CX 5 7
+Gate S 0
+Gate CX 8 2
+Gate CX 3 1
+Gate IP 5 2.686061718819273
+Gate CX 7 8
+Gate CX 0 4
+Gate IP 4 0.34871678454846705
+Gate CX 1 6
+Gate CX 0 7
+Gate I 5
+Gate CX 1 3
+Gate Z 5
+Gate CX 2 0
+Gate CX 8 1
+Gate CX 7 1
+Gate S 1
+Gate S 2
+Gate RY 2 1.303760951239764
+Gate SDG 1
+Gate IP 7 1.4702653618800232
+Gate S 5
+Gate CX 3 5
+Gate CX 1 2
+Gate I 1
+Gate CX 7 0
+Gate IP 5 0.24818581963359368
+Gate RY 2 3.129026282975434
+Gate CX 2 8
+Gate SDG 2
+Gate S 4
+Gate IP 4 3.113318319707485
+Gate SDG 8
+Gate IP 2 0.744557458900781
+Gate CX 8 0
+Gate IP 1 1.2440706908215582
+Gate CX 4 5
+Gate CX 7 1
+Gate RX 0 2.6515041996297857
+Gate H 2
+Gate CX 2 4
+Gate Z 4
+Gate CX 6 8
+Gate IP 0 0.5654866776461628
+Gate H 5
+Gate I 7
+Gate CX 8 0
+Gate CX 4 6
+Gate CX 8 4
+Gate IP 2 1.9320794819577227
+Gate S 3
+Gate CX 7 8
+Gate Z 4
+Gate CX 7 4
+Gate CX 3 4
+Gate CX 1 2
+Gate RX 5 2.384468824074653
+Gate RX 2 1.5896458827164355
+Gate Z 4
+Gate RY 8 1.5205308443374599
+Gate IP 4 0.16336281798666927
+Gate SDG 5
+Gate CX 2 3
+Gate IP 3 3.022212132753381
+Gate SDG 2
+Gate CX 8 1
+Gate IP 6 1.168672467135403
+Gate I 1
+Gate H 2
+Gate CX 4 5
+Gate Y 1
+Gate IP 7 1.338318470429252
+Gate CX 7 1
+Gate CX 4 7
+Gate TDG 7
+Observable YZXIZYXXI 1.1077031465302736
+Expected_value 1.3571007984689814e-17
+Qubits 2
+Gate CX 0 1
+Gate IP 0 1.5990706606772047
+Gate TDG 1
+Gate Y 1
+Observable XY 1.1085847634471937
+Observable IY -1.3290366510613958
+Observable ZY 2.0082666268139273
+Expected_value 0.0
+Qubits 3
+Gate TDG 1
+Gate H 2
+Gate CX 2 0
+Gate IP 1 1.687035254977719
+Gate SDG 1
+Gate SDG 2
+Gate SDG 1
+Gate CX 2 0
+Gate IP 2 0.07225663103256524
+Observable ZYX 1.1085565910513475
+Observable ZXZ 2.663367758695215
+Observable XZI 2.529504347111587
+Expected_value -0.18261445981207766
+Qubits 8
+Gate CX 6 3
+Gate CX 0 5
+Gate CX 7 2
+Gate S 7
+Gate CX 3 2
+Gate CX 2 3
+Gate H 6
+Gate CX 2 7
+Gate S 7
+Gate IP 3 2.6295130510546567
+Gate I 3
+Gate CX 6 2
+Gate RY 1 2.2525219326238815
+Gate CX 1 2
+Gate CX 3 4
+Gate Z 2
+Gate CX 6 7
+Gate CX 1 7
+Gate CX 5 3
+Gate Y 3
+Gate T 2
+Gate IP 0 2.1048670779051615
+Gate X 1
+Gate CX 6 3
+Gate CX 7 3
+Gate CX 5 6
+Gate CX 3 2
+Gate CX 3 2
+Gate TDG 2
+Gate CX 3 4
+Gate S 5
+Gate RX 7 0.3832743037379548
+Gate CX 0 4
+Gate CX 0 6
+Gate RX 2 3.015928947446201
+Gate I 3
+Gate CX 1 5
+Gate CX 7 2
+Gate IP 1 1.4734069545336128
+Gate CX 3 2
+Gate CX 7 1
+Gate CX 0 1
+Gate CX 2 3
+Gate IP 4 1.9477874452256718
+Gate CX 1 2
+Gate TDG 7
+Gate S 2
+Gate IP 1 3.0002209841782523
+Gate CX 3 4
+Gate CX 0 2
+Gate CX 6 4
+Gate CX 0 7
+Gate X 7
+Gate T 5
+Gate CX 7 6
+Gate CX 7 0
+Gate CX 2 3
+Gate X 3
+Gate TDG 4
+Gate I 7
+Gate CX 6 7
+Gate X 4
+Gate CX 2 6
+Gate IP 4 1.3100441365469437
+Observable XZYIYYZZ 1.1086524277378795
+Observable YXIYYXZY -1.3201338399357692
+Observable XZXXXZYI 0.6309744900120065
+Observable XXXXIZXX 0.6189031742006808
+Observable XZIIXYYY -0.21851785141476332
+Expected_value 1.2319711519999055e-18
+Qubits 3
+Gate CX 2 1
+Gate SDG 0
+Gate CX 1 2
+Gate CX 1 2
+Gate CX 2 1
+Gate X 1
+Gate Z 0
+Gate CX 0 2
+Gate SDG 0
+Observable IYX 1.1093378069149744
+Observable YZX 1.1280417798605622
+Observable IXZ 0.6770074332063698
+Expected_value 0.0
+Qubits 6
+Gate CX 0 5
+Gate IP 5 2.761459942505428
+Gate Z 4
+Gate H 0
+Gate CX 2 4
+Gate H 3
+Gate IP 4 2.5666811979828608
+Gate CX 2 3
+Gate X 2
+Gate CX 3 5
+Gate CX 3 4
+Gate CX 3 4
+Gate CX 3 2
+Gate CX 5 0
+Gate CX 1 5
+Gate S 5
+Gate CX 1 5
+Gate CX 5 0
 Gate CX 4 1
 Gate CX 2 1
+Gate RY 2 1.3414600630828417
+Gate CX 0 2
+Gate CX 5 0
+Gate RX 5 2.4441590844928593
+Gate CX 1 4
+Gate CX 0 1
+Gate CX 2 0
+Gate CX 0 1
+Gate CX 2 4
+Gate TDG 3
+Gate IP 4 1.8818139995002863
+Gate CX 5 1
+Gate CX 5 3
+Gate TDG 3
+Gate Z 4
+Gate CX 1 2
+Observable IYZXIZ 1.109418116835435
+Observable XZYXZZ 1.1908690218786506
+Expected_value 1.5396269215587273e-17
+Qubits 3
+Gate IP 1 2.205398042820035
+Gate CX 0 1
+Gate IP 2 1.489114917801562
+Gate CX 2 0
+Gate CX 0 1
+Gate S 2
+Gate TDG 1
+Gate CX 0 2
+Gate CX 1 2
+Observable YXZ 1.1095858557636902
+Observable XXI 1.3392661904730123
+Observable YXY 0.4104597392921172
+Observable IZY -0.72234279831044
+Observable ZZZ 1.0904698206522943
+Expected_value 1.0904698206522943
+Qubits 4
+Gate CX 1 2
+Gate Z 0
+Gate H 3
+Gate S 2
+Gate CX 1 3
+Gate CX 0 2
+Gate TDG 3
+Gate CX 0 1
+Gate CX 2 0
+Gate T 2
+Gate CX 1 2
+Gate IP 2 0.2293362637120549
+Gate CX 3 0
+Gate IP 0 2.6452210143226056
+Gate IP 2 2.968805057642354
+Gate Z 2
+Observable ZXXI 1.1096838053962383
+Expected_value 0.0
+Qubits 7
+Gate SDG 5
+Gate RX 2 0.6974335690969341
+Gate RY 3 1.4828317324943823
+Gate CX 0 3
+Gate SDG 3
+Gate I 6
+Gate IP 2 2.6515041996297857
+Gate CX 4 3
+Gate CX 4 3
+Gate CX 2 1
+Gate CX 0 1
+Gate S 0
+Gate RX 0 1.5362388076054088
+Gate S 4
+Gate CX 2 5
+Gate Y 4
+Gate CX 0 6
+Gate CX 3 2
+Gate SDG 5
+Gate CX 2 4
+Gate CX 4 6
+Gate H 4
+Gate CX 4 2
+Gate CX 6 4
+Gate RX 1 0.6565928646002668
+Gate CX 5 0
+Gate I 4
+Gate IP 6 1.6461945504810518
+Gate CX 3 2
+Gate RY 5 1.350884841043611
+Gate CX 0 3
+Gate I 0
+Gate IP 6 0.18535396656179778
+Gate CX 2 1
 Gate CX 5 6
-Observable YIZYIXII 2.0286727813298273
-Observable ZYYYZIZI -1.475590672585096
-Observable ZYYXZZIX -2.9779942172302545
-Expected_value -6.721294152530198e-17
+Gate H 3
+Gate IP 1 0.3832743037379548
+Gate CX 3 0
+Gate CX 2 6
+Gate I 3
+Gate RX 1 2.1299998191338796
+Gate CX 6 2
+Gate CX 3 2
+Gate CX 3 1
+Gate I 1
+Gate CX 6 4
+Gate S 2
+Gate CX 1 4
+Gate CX 4 0
+Observable XYIZZIX 1.109784942114214
+Observable XZXIXYY 2.7220675293809533
+Observable ZIZIXXZ 0.9216256185782619
+Observable YYYIXYZ 1.1947410822055797
+Observable XZIIXIX 1.5509803177851318
+Expected_value 0.02690903663657528
+Qubits 7
+Gate CX 2 3
+Gate CX 3 1
+Gate RX 0 0.6126105674500096
+Gate H 5
+Gate CX 0 1
+Gate CX 3 0
+Gate CX 6 1
+Gate CX 3 5
+Gate Y 4
+Gate CX 0 2
+Gate CX 0 3
+Gate CX 0 3
+Gate CX 5 6
+Gate CX 5 0
+Gate CX 2 0
+Gate CX 5 1
+Gate I 3
+Gate CX 2 6
+Gate CX 6 5
+Gate CX 3 4
+Gate Z 3
+Gate CX 4 6
+Gate SDG 3
+Gate CX 4 2
+Gate RX 5 3.113318319707485
+Gate Z 3
+Gate CX 0 1
+Gate RY 0 0.4303981935418017
+Gate Z 0
+Gate CX 0 2
+Gate CX 1 2
+Gate S 4
+Gate RY 6 2.1299998191338796
+Gate RY 3 2.9153979825313283
+Gate CX 2 4
+Gate CX 4 1
+Gate IP 6 3.0127873547926116
+Gate H 4
+Gate Z 1
+Gate IP 3 0.7476990515543708
+Gate CX 5 4
+Gate CX 1 2
+Gate CX 0 2
+Gate CX 0 4
+Gate T 1
+Gate X 0
+Gate RY 5 1.2692034320502765
+Gate T 0
+Gate CX 5 4
+Observable XYYZXXY 1.1101435226266123
+Observable ZIZYYIY 2.4699256361879858
+Expected_value 0.11561421520016231
+Qubits 5
+Gate I 2
+Gate IP 4 0.7476990515543708
+Gate CX 0 4
+Gate IP 1 0.7728317927830891
+Gate SDG 2
+Gate H 2
+Gate RY 1 0.16650441064025903
+Gate IP 4 3.078760800517997
+Gate T 0
+Gate CX 1 3
+Gate I 3
+Gate CX 3 1
+Gate IP 4 2.086017521983623
+Gate IP 2 2.7049112747408115
+Gate CX 1 2
+Gate TDG 1
+Gate CX 4 1
+Gate CX 4 0
+Gate H 3
+Gate CX 1 0
+Gate IP 4 2.459867047760808
+Gate TDG 0
+Gate S 2
+Gate CX 0 1
+Gate CX 2 4
+Observable IXYXI 1.1104273527226445
+Observable IXYII 0.9560618493604205
+Observable ZIZXY -0.8658588546866858
+Observable XIZXY -0.2419934648273736
+Observable YYZIY -1.8224665992320441
+Expected_value -5.97463004560911e-18
+Qubits 7
+Gate IP 1 2.108008670558751
+Gate TDG 1
+Gate CX 4 6
+Gate CX 6 1
+Gate CX 3 6
+Gate CX 3 0
+Gate CX 6 2
+Gate RX 4 0.7099999397112933
+Gate CX 6 2
+Gate H 1
+Gate TDG 5
+Gate SDG 3
+Gate CX 0 1
+Gate T 2
+Gate S 6
+Gate IP 2 0.6848671984825748
+Gate Y 6
+Gate CX 3 0
+Gate IP 6 1.354026433697201
+Gate IP 2 2.5949555318651694
+Gate CX 3 0
+Gate CX 2 0
+Gate Z 6
+Gate CX 6 5
+Gate S 6
+Gate CX 2 4
+Gate CX 5 3
+Gate Y 5
+Gate IP 4 3.0630528372500483
+Gate CX 0 3
+Gate X 4
+Gate CX 0 5
+Gate CX 5 4
+Gate RY 4 3.0410616886749198
+Gate Y 1
+Gate CX 2 6
+Gate CX 0 2
+Gate IP 4 2.060884780754904
+Gate Z 1
+Gate CX 4 6
+Gate CX 0 4
+Gate I 6
+Gate CX 3 4
+Gate X 4
+Gate CX 0 6
+Gate CX 1 2
+Gate X 6
+Gate Y 3
+Gate IP 6 2.5038493449110653
+Observable XZIZIYY 1.110557645893283
+Observable ZZYYYZX -1.5359177744165815
+Observable IIIYZII -2.301643041321646
+Observable XXIIZYZ -0.5258159915271342
+Expected_value -1.397256240305939e-17
+Qubits 7
+Gate RX 6 0.19477874452256716
+Gate CX 4 3
+Gate CX 6 0
+Gate Z 3
+Gate CX 3 2
+Gate CX 2 5
+Gate CX 4 3
+Gate IP 1 1.1906636157105315
+Gate I 2
+Gate CX 4 0
+Gate CX 3 5
+Gate TDG 4
+Gate CX 4 6
+Gate SDG 5
+Gate CX 2 4
+Gate SDG 3
+Gate CX 4 2
+Gate CX 2 1
+Gate H 2
+Gate IP 3 1.5519467708733579
+Gate CX 1 0
+Gate IP 6 1.4545573986120741
+Gate CX 2 1
+Gate IP 1 1.4985396957623314
+Gate CX 4 6
+Gate SDG 3
+Gate T 0
+Gate SDG 1
+Gate CX 5 2
+Gate CX 2 5
+Gate I 6
+Gate RX 5 2.616946680440298
+Gate RY 4 3.0002209841782523
+Gate IP 2 2.808583832309275
+Gate IP 3 0.05026548245743669
+Gate CX 2 5
+Gate IP 5 0.5874778262212914
+Gate IP 1 1.0901326507956584
+Gate CX 5 3
+Gate CX 4 1
+Gate CX 5 6
+Gate S 2
+Gate IP 4 0.3424335992412874
+Gate T 5
+Gate IP 3 2.538406864100553
+Gate RY 0 0.7916813487046279
+Gate IP 5 0.562345084992573
+Gate SDG 3
+Gate CX 4 1
+Observable IYZZXZX 1.1110831310923408
+Observable ZXZZIZZ -1.2960313913022548
+Observable ZXYIYZX -0.8389991806488406
+Observable XZXXZZY 1.612819363620879
+Expected_value 1.1191182450332453e-17
+Qubits 3
+Gate CX 1 0
+Gate SDG 0
+Gate CX 1 2
+Gate H 0
+Gate Y 1
+Gate TDG 1
+Gate H 2
+Gate Z 2
+Gate CX 1 2
+Observable XYY 1.1114263053292264
+Observable XYY -1.967532125374745
+Observable YXI -1.3981746441556608
+Observable ZII -0.9299801279807497
+Observable YZI -2.3071257501535225
+Expected_value 0.0
+Qubits 1
+Gate IP 0 1.5990706606772047
+Observable X 1.1114712068655448
+Expected_value 0.0
+Qubits 6
+Gate CX 1 2
+Gate CX 3 1
+Gate CX 4 0
+Gate RY 4 2.2650883032382407
+Gate S 2
+Gate CX 5 1
+Gate IP 5 1.8818139995002863
+Gate CX 5 2
+Gate RX 4 2.4347343065320897
+Gate CX 4 0
+Gate IP 1 2.9530970943744057
+Gate CX 3 2
+Gate RY 5 1.1372565405995052
+Gate I 2
+Gate SDG 2
+Gate S 3
+Gate Y 0
+Gate CX 2 1
+Gate H 2
+Gate CX 0 5
+Gate X 1
+Gate RX 0 2.3970351946890123
+Gate X 1
+Gate CX 0 1
+Gate TDG 4
+Gate S 2
+Gate I 1
+Gate T 0
+Gate H 5
+Gate CX 4 5
+Gate T 3
+Gate CX 3 1
+Gate CX 5 2
+Gate Y 2
+Gate CX 4 2
+Gate CX 4 1
+Observable ZXIYYY 1.1115885053775023
+Observable XZYYZX -0.006595893826698895
+Expected_value -8.677344041569461e-18
+Qubits 6
+Gate H 3
+Gate CX 2 3
+Gate CX 1 5
+Gate CX 3 4
+Gate SDG 2
+Gate CX 5 0
+Gate IP 4 3.1101767270538954
+Gate CX 5 4
+Gate CX 2 5
+Gate IP 1 1.4074335088082273
+Gate CX 4 2
+Gate H 4
+Gate CX 0 4
+Gate CX 2 3
+Gate CX 0 5
+Gate CX 2 4
+Gate H 0
+Gate CX 1 2
+Gate CX 5 1
+Gate CX 5 4
+Gate CX 2 5
+Gate IP 3 2.1928316722056755
+Gate Y 3
+Gate CX 0 5
+Gate SDG 4
+Gate CX 5 3
+Gate CX 2 1
+Gate CX 4 1
+Gate CX 1 4
+Gate Z 4
+Gate RY 1 0.25446900494077324
+Gate CX 4 2
+Gate RY 0 0.8827875356587318
+Gate CX 2 1
+Gate TDG 5
+Gate S 2
+Observable YXYXIY 1.111903234416476
+Expected_value -3.857689287513608e-18
+Qubits 6
+Gate CX 0 1
+Gate CX 0 1
+Gate CX 0 5
+Gate CX 0 2
+Gate IP 3 0.7634070148223198
+Gate CX 3 0
+Gate CX 3 0
+Gate CX 2 5
+Gate T 1
+Gate H 4
+Gate IP 0 2.28079626650619
+Gate Z 0
+Gate TDG 0
+Gate CX 1 3
+Gate IP 2 1.2503538761287378
+Gate CX 4 0
+Gate X 2
+Gate CX 2 5
+Gate CX 3 5
+Gate TDG 2
+Gate SDG 5
+Gate H 5
+Gate CX 0 5
+Gate S 5
+Gate CX 5 2
+Gate CX 4 1
+Gate CX 4 5
+Gate CX 0 2
+Gate I 1
+Gate CX 5 0
+Gate SDG 4
+Gate CX 3 5
+Gate IP 0 2.9311059457992767
+Gate RX 3 1.5393804002589986
+Gate CX 4 0
+Gate IP 3 2.261946710584651
+Observable IIIZYX 1.1120433527702052
+Observable ZYZXYY 1.5260134415439597
+Observable YIIIXI 1.1154423842330317
+Observable ZZYIXX 1.4268687245827814
+Observable XIXZXI -2.2743436429349138
+Expected_value -1.4922768194306045e-17
+Qubits 6
+Gate CX 4 2
+Gate CX 3 1
+Gate T 5
+Gate RX 4 0.3738495257771854
+Gate CX 3 4
+Gate CX 0 1
+Gate CX 0 3
+Gate Y 0
+Gate CX 1 0
+Gate TDG 4
+Gate SDG 5
+Gate S 3
+Gate IP 1 2.064026373408494
+Gate H 3
+Gate CX 2 0
+Gate CX 4 5
+Gate CX 1 5
+Gate CX 5 0
+Gate CX 1 5
+Gate SDG 1
+Gate I 1
+Gate CX 3 4
+Gate CX 2 4
+Gate TDG 3
+Gate CX 4 5
+Gate T 2
+Gate CX 2 3
+Gate CX 2 0
+Gate CX 0 3
+Gate CX 2 3
+Gate CX 5 4
+Gate CX 0 2
+Gate CX 4 3
+Gate CX 2 4
+Gate CX 1 4
+Gate S 3
+Observable IIXXIY 1.1123263298046493
+Observable YZIIZI 0.8870541289571814
+Observable IYZIIX 2.5248660234324922
+Expected_value 0.0
+Qubits 1
+Gate X 0
+Observable Z 1.1125469342614194
+Observable Z 1.7430390653325274
+Expected_value -2.8555859995939468
+Qubits 9
+Gate CX 8 5
+Gate I 2
+Gate TDG 3
+Gate IP 0 0.3675663404700058
+Gate CX 7 8
+Gate CX 4 7
+Gate CX 0 6
+Gate Y 6
+Gate CX 7 8
+Gate CX 0 2
+Gate CX 6 8
+Gate CX 2 3
+Gate CX 1 5
+Gate H 6
+Gate S 0
+Gate CX 3 1
+Gate RX 7 0.03769911184307752
+Gate CX 5 2
+Gate Z 1
+Gate IP 6 0.09738937226128358
+Gate Z 3
+Gate CX 8 7
+Gate X 3
+Gate CX 0 3
+Gate IP 2 3.0756192078644076
+Gate CX 4 2
+Gate S 4
+Gate Y 1
+Gate CX 5 6
+Gate SDG 1
+Gate IP 8 1.6650441064025905
+Gate SDG 2
+Gate CX 1 0
+Gate Z 4
+Gate CX 8 5
+Gate IP 6 2.412743157956961
+Gate TDG 2
+Gate CX 8 1
+Gate CX 8 0
+Gate SDG 3
+Gate TDG 1
+Gate Y 1
+Gate IP 4 0.27646015351590175
+Gate S 1
+Gate CX 7 4
+Gate Z 6
+Gate CX 1 8
+Gate CX 0 7
+Gate CX 0 3
+Gate CX 2 0
+Gate CX 3 0
+Gate TDG 0
+Gate SDG 8
+Gate H 2
+Gate RX 3 2.5007077522574757
+Gate CX 4 6
+Gate CX 5 3
+Gate CX 8 0
+Gate RX 2 2.340486526924396
+Gate CX 8 7
+Gate CX 6 1
+Gate CX 3 5
+Gate CX 8 5
+Gate CX 0 3
+Gate CX 0 2
+Gate IP 4 2.230530784048753
+Gate CX 4 5
+Gate CX 8 6
+Gate CX 8 0
+Gate IP 4 0.06911503837897544
+Gate CX 8 7
+Gate IP 2 0.8796459430051421
+Gate I 6
+Gate CX 6 7
+Gate T 6
+Gate CX 0 1
+Gate X 0
+Gate S 2
+Gate CX 6 4
+Gate Z 2
+Gate CX 6 5
+Observable XYIZXYIYY 1.1126271871518731
+Observable ZYZYXIYZI 0.2112185403512763
+Observable XZIXYIYYX 2.7681437843818655
+Observable XIYIXZYZZ 0.3914349125795089
+Observable IIXXIZIXZ 1.100046080806905
+Expected_value -0.0024490415623872525
+Qubits 6
+Gate X 2
+Gate SDG 3
+Gate CX 4 1
+Gate IP 0 1.97606177910798
+Gate CX 2 0
+Gate RX 0 0.05026548245743669
+Gate CX 1 0
+Gate CX 2 0
+Gate T 4
+Gate IP 4 1.1121237993707869
+Gate IP 3 2.6515041996297857
+Gate CX 4 0
+Gate IP 0 0.41154863762026295
+Gate X 1
+Gate RX 3 1.4953981031087415
+Gate T 0
+Gate Y 4
+Gate RY 1 0.31101767270538955
+Gate X 5
+Gate CX 1 0
+Gate SDG 3
+Gate Y 2
+Gate CX 5 3
+Gate IP 1 0.47438049069205873
+Gate S 3
+Gate CX 4 2
+Gate IP 2 0.09738937226128358
+Gate CX 3 4
+Gate CX 3 4
+Gate X 5
+Gate CX 2 3
+Gate TDG 2
+Gate CX 4 1
+Gate IP 3 1.6210618092523332
+Gate CX 0 4
+Gate CX 5 2
+Observable XIXIIX 1.1020871749377124
+Observable XZIZXI -1.7289947076781145
+Observable IXXZXX -2.562098212474193
+Observable YIZZYI -2.435534826327717
+Observable YYYYIX -2.771689159727675
+Expected_value -0.6946322095483626
+Qubits 8
+Gate Z 5
+Gate CX 1 0
+Gate CX 5 4
+Gate CX 4 1
+Gate CX 4 2
+Gate RY 6 2.0074777056438777
+Gate CX 6 7
+Gate CX 7 0
+Gate CX 2 1
+Gate RX 1 3.0567696519428686
+Gate CX 6 7
+Gate SDG 2
+Gate CX 6 1
+Gate T 1
+Gate X 2
+Gate Y 4
+Gate IP 5 2.532123678793373
+Gate Z 6
+Gate I 3
+Gate CX 0 2
+Gate CX 0 2
+Gate IP 2 1.0115928344559133
+Gate H 4
+Gate CX 3 1
+Gate CX 0 2
+Gate CX 5 2
+Gate RY 6 2.5761059759436304
+Gate Z 4
+Gate RY 2 2.532123678793373
+Gate Y 0
+Gate TDG 6
+Gate S 3
+Gate T 5
+Gate I 4
+Gate CX 2 6
+Gate CX 5 1
+Gate CX 5 4
+Gate CX 7 1
+Gate CX 1 4
+Gate CX 4 0
+Gate CX 4 2
+Gate CX 4 3
+Gate CX 3 6
+Gate H 1
+Gate RX 6 1.2189379495928396
+Gate CX 6 2
+Gate RX 2 3.1164599123610746
+Gate CX 2 4
+Gate I 5
+Gate IP 0 2.195973264859265
+Gate CX 2 0
+Gate CX 0 3
+Gate RY 4 1.2440706908215582
+Gate SDG 6
+Gate H 7
+Gate CX 7 0
+Gate CX 7 2
+Gate Y 4
+Gate T 1
+Gate H 1
+Gate RY 7 2.506990937564655
+Gate RX 3 2.6138050877867083
+Gate X 3
+Gate CX 2 3
+Observable XZXIYZYZ 1.1023438791268565
+Observable YZIYYXXZ 1.5739788036474334
+Observable YZXIZZZZ 1.8650065953447261
+Observable IIZYXZXX -1.719700113678928
+Expected_value 1.1054560302222509e-16
+Qubits 6
+Gate T 5
+Gate Z 2
+Gate CX 3 5
+Gate S 4
+Gate CX 5 0
+Gate CX 4 0
+Gate CX 2 0
+Gate S 1
+Gate X 3
+Gate CX 1 0
+Gate RY 5 2.5258404934861938
+Gate X 3
+Gate CX 3 1
+Gate Z 0
+Gate I 5
+Gate CX 1 5
+Gate CX 2 3
+Gate CX 2 3
+Gate CX 0 2
+Gate CX 4 5
+Gate CX 3 1
+Gate TDG 5
+Gate I 2
+Gate SDG 0
+Gate CX 5 4
+Gate CX 3 0
+Gate X 4
+Gate CX 0 4
+Gate CX 5 0
+Gate CX 4 3
+Gate CX 5 4
+Gate CX 1 4
+Gate CX 1 2
+Gate CX 2 5
+Gate CX 2 1
+Gate CX 2 3
+Observable YYYZYY 1.102830383889692
+Observable XYYZYY 0.5688218234045308
+Observable IXXZZZ -2.4201107503843486
+Observable YXZZXZ -2.715177129895801
+Observable XYIXYY 1.4405627388408044
+Expected_value 0.0
+Qubits 7
+Gate Y 6
+Gate CX 4 5
+Gate Y 1
+Gate IP 4 1.580221104755666
+Gate CX 3 6
+Gate CX 2 3
+Gate CX 1 0
+Gate RY 4 1.837831702350029
+Gate CX 3 0
+Gate RY 4 2.5541148273685015
+Gate RX 5 0.9896016858807849
+Gate CX 1 0
+Gate CX 0 5
+Gate Z 1
+Gate X 3
+Gate CX 4 2
+Gate X 0
+Gate S 3
+Gate T 1
+Gate IP 6 1.426283064729766
+Gate CX 0 4
+Gate I 5
+Gate CX 5 1
+Gate H 1
+Gate CX 0 6
+Gate CX 6 0
+Gate CX 6 3
+Gate CX 3 2
+Gate RY 6 1.5236724369910497
+Gate CX 0 3
+Gate CX 4 3
+Gate CX 1 0
+Gate I 0
+Gate IP 6 0.7225663103256524
+Gate TDG 2
+Gate CX 1 5
+Gate CX 0 2
+Gate CX 6 1
+Gate IP 3 2.086017521983623
+Gate CX 6 1
+Gate H 3
+Gate SDG 0
+Gate CX 1 3
+Gate CX 1 2
+Gate Y 5
+Gate IP 1 1.2032299863248908
+Gate CX 2 4
+Gate RY 6 2.6043803098259386
+Gate CX 3 5
+Observable ZXZYYYI 1.1030798420558665
+Observable IIXZIYX 1.1277007266594457
+Observable IXIYIZY -1.0192974112263733
+Expected_value 1.999367244793305e-17
+Qubits 6
+Gate H 1
+Gate CX 3 2
+Gate IP 0 1.1435397259066846
+Gate CX 4 1
+Gate Z 1
+Gate H 1
+Gate CX 1 2
+Gate RX 2 0.744557458900781
+Gate CX 5 2
+Gate CX 4 5
+Gate CX 2 5
+Gate RY 4 0.3455751918948773
+Gate CX 4 5
+Gate H 2
+Gate RX 0 0.6660176425610361
+Gate RY 2 1.093274243449248
+Gate CX 3 1
+Gate CX 1 3
+Gate CX 5 0
+Gate CX 4 0
+Gate CX 0 1
+Gate TDG 4
+Gate CX 1 2
+Gate CX 2 5
+Gate SDG 3
+Gate Y 5
+Gate CX 3 0
+Gate T 5
+Gate CX 3 0
+Gate CX 3 5
+Gate CX 2 4
+Gate CX 4 5
+Gate CX 1 3
+Gate CX 2 0
+Gate CX 4 0
+Gate CX 0 4
+Observable IZZXZI 1.103407499968436
+Observable YXIXXZ -1.9395672214465969
+Observable XYXXYI 1.0822329504260557
+Expected_value -3.754749811159446e-18
 Qubits 2
 Gate CX 1 0
 Gate Y 0
-Gate IP 1 0.4303981935418017
-Gate Z 0
-Observable ZZ 2.027589933225709
-Observable XI -2.5859915288343966
-Observable XX 1.575166975697288
-Observable IY 2.7253979980177148
-Expected_value -2.027589933225709
-Qubits 1
-Gate CX 0 0
-Observable Y 2.027705870883132
-Expected_value 0.0
-Qubits 7
-Gate CX 3 4
-Gate T 1
-Gate IP 6 3.0756192078644076
-Gate SDG 2
-Gate CX 4 3
-Gate SDG 2
-Gate X 0
-Gate SDG 5
-Gate CX 6 0
-Gate CX 1 2
-Gate TDG 6
-Gate CX 5 4
-Gate CX 5 0
-Gate CX 4 5
-Gate CX 1 3
-Gate CX 6 5
-Gate IP 4 1.6430529578274617
-Gate CX 2 6
-Gate CX 3 0
-Gate IP 1 0.33929200658769765
-Gate I 6
-Gate TDG 1
-Gate CX 2 1
-Gate SDG 0
-Gate RX 0 0.00942477796076938
-Gate RX 5 1.093274243449248
-Gate CX 2 6
-Gate SDG 2
-Gate H 3
-Gate SDG 3
-Gate S 3
-Gate H 6
-Gate S 5
-Gate Z 5
+Gate X 1
+Gate CX 1 0
+Observable YI 1.1036544946675302
+Observable IZ 1.3044561224142361
+Observable IY -0.10126386280558164
+Observable XZ 1.1046849173827837
+Observable IZ -0.010846076905843272
+Expected_value 1.2936100455083928
+Qubits 2
+Gate CX 1 0
+Gate I 0
+Gate CX 1 0
+Gate CX 1 0
+Observable ZX 1.1037348772760402
+Observable YY 1.2828095734507634
+Observable ZX -1.4048430956752131
+Observable IZ 0.018694874410317253
+Expected_value 0.018694874410317253
+Qubits 3
 Gate CX 0 1
+Gate CX 2 1
+Gate CX 0 1
+Gate CX 2 0
+Gate CX 1 2
+Gate I 1
+Gate RY 0 1.5425219929125886
+Gate TDG 0
+Gate CX 1 0
+Observable XXZ 1.1038158031197145
+Observable YYI 2.6863940188952933
+Observable YIY 2.1158004939241377
+Expected_value 0.0
+Qubits 5
+Gate CX 0 3
 Gate CX 3 0
-Gate CX 6 2
+Gate X 1
+Gate CX 1 0
+Gate H 2
+Gate CX 3 4
+Gate X 4
+Gate T 1
+Gate Z 3
+Gate Z 4
+Gate Z 4
+Gate TDG 4
+Gate IP 0 1.379159174925919
+Gate CX 0 2
+Gate CX 1 2
+Gate CX 1 0
+Gate CX 1 0
+Gate Y 2
+Gate IP 1 1.3477432483900214
+Gate IP 0 1.6053538459843841
+Gate RY 3 0.4586725274241098
+Gate RY 4 2.7646015351590183
+Gate IP 0 2.934247538452867
+Gate CX 4 0
+Gate CX 0 1
+Observable ZZIYX 1.1038947320979797
+Expected_value 3.509748158203125e-17
+Qubits 7
+Gate Z 0
+Gate RY 3 1.2534954687823274
+Gate CX 1 2
+Gate IP 0 1.7373007374351555
+Gate RX 0 2.4535838624536286
+Gate SDG 1
+Gate IP 6 1.8001325905069514
+Gate CX 4 0
+Gate CX 4 6
+Gate CX 1 4
+Gate CX 0 1
+Gate I 1
+Gate CX 5 6
+Gate CX 3 4
+Gate RX 1 0.6188937527571892
+Gate CX 5 2
+Gate SDG 5
+Gate CX 3 6
+Gate Z 5
+Gate H 5
+Gate Z 3
+Gate IP 2 0.7665486074759096
+Gate IP 6 1.4325662500369456
+Gate H 5
+Gate S 5
+Gate X 4
+Gate I 1
+Gate RY 1 1.2126547642856602
+Gate IP 6 2.1802653015913167
+Gate CX 3 2
+Gate CX 0 1
+Gate CX 2 3
+Gate CX 2 3
+Gate T 3
+Gate CX 1 5
+Gate CX 0 3
+Gate CX 6 1
+Gate I 2
+Gate SDG 0
+Gate S 5
+Gate CX 0 4
+Gate CX 2 6
+Gate H 2
+Gate CX 5 0
+Gate CX 0 2
+Gate CX 2 4
+Gate I 5
+Gate CX 0 3
+Gate RX 2 3.0504864666356895
+Observable ZXIZXZX 1.1040529234946157
+Expected_value 7.660906100427742e-18
+Qubits 8
+Gate Z 1
+Gate CX 2 5
+Gate Z 1
+Gate CX 1 6
+Gate CX 1 2
+Gate S 4
+Gate CX 6 4
+Gate CX 7 4
+Gate IP 4 2.934247538452867
+Gate CX 1 7
+Gate Y 0
+Gate I 2
+Gate IP 0 1.9634954084936207
+Gate CX 5 0
+Gate CX 1 5
+Gate IP 1 0.9236282401553992
+Gate CX 3 6
+Gate Z 1
+Gate CX 4 6
+Gate CX 4 1
+Gate CX 5 6
+Gate TDG 2
+Gate SDG 7
+Gate H 1
+Gate X 3
+Gate X 1
+Gate CX 4 0
+Gate RY 4 1.5362388076054088
+Gate CX 0 2
+Gate RY 5 0.5874778262212914
+Gate CX 4 0
+Gate RX 2 1.3163273218541234
+Gate IP 5 0.2607521902479529
+Gate IP 0 1.228362727553609
+Gate CX 7 2
+Gate RY 3 0.4586725274241098
+Gate CX 2 1
+Gate CX 2 1
 Gate CX 4 3
-Gate RY 3 1.3760175822723295
+Gate IP 6 2.337344934270806
+Gate CX 4 5
+Gate CX 0 4
+Gate CX 5 6
+Gate CX 3 5
+Gate CX 1 3
+Gate IP 7 2.3090706003884978
+Gate CX 7 0
+Gate X 4
+Gate IP 4 2.852566129459532
+Gate IP 1 1.3257520998148928
+Gate Y 6
+Gate IP 2 0.35499996985564664
+Gate CX 1 3
+Gate CX 1 5
+Gate I 5
+Gate CX 3 0
+Gate IP 0 2.538406864100553
+Gate CX 3 6
+Gate CX 2 1
+Gate TDG 2
+Gate CX 0 5
+Gate CX 5 6
+Gate CX 6 7
+Gate CX 1 2
+Observable ZZZYZXZZ 1.1043358012798736
+Expected_value 7.603002795622361e-18
+Qubits 5
+Gate RY 0 2.4064599726497815
+Gate X 2
+Gate CX 0 2
+Gate IP 4 0.11623892818282235
+Gate IP 0 0.9676105373056563
+Gate Y 4
+Gate CX 4 3
+Gate CX 2 1
+Gate CX 0 3
+Gate CX 1 2
+Gate H 3
+Gate Y 0
+Gate RY 1 1.4765485471872029
+Gate CX 4 0
+Gate CX 2 3
+Gate Y 4
+Gate CX 4 1
+Gate CX 0 2
+Gate CX 2 3
+Gate CX 3 4
+Gate CX 1 4
+Gate CX 0 2
+Gate SDG 4
+Gate I 3
+Gate Z 1
+Observable IYZIZ 1.1048106105853426
+Observable XXYXZ -0.34941768674797
+Observable XXYZX -2.8525040059646036
+Observable YIXIY -1.1746288592341387
+Expected_value -3.958644531571747e-17
+Qubits 2
+Gate CX 1 0
+Gate RY 0 0.16022122533307945
+Gate TDG 1
+Gate Y 0
+Observable ZZ 1.1049191087604089
+Observable YY -0.43823498123260196
+Observable YY -1.9858515433906656
+Observable ZZ 2.10796838098196
+Observable XZ 0.49032684522060443
+Expected_value -3.1717368717375276
+Qubits 9
+Gate S 5
+Gate Z 6
+Gate Y 5
+Gate CX 3 4
+Gate CX 7 5
+Gate CX 3 8
+Gate RY 0 2.4692918257215775
+Gate IP 8 1.7592918860102842
+Gate CX 0 1
+Gate X 3
+Gate Y 1
+Gate H 3
+Gate IP 7 0.26389378290154264
+Gate S 2
+Gate IP 3 1.1278317626387357
+Gate SDG 4
+Gate CX 4 8
+Gate IP 2 1.2849113953182254
+Gate CX 3 4
+Gate CX 4 8
+Gate IP 7 0.24190263432641407
+Gate Z 8
+Gate CX 0 1
+Gate CX 8 0
+Gate CX 3 8
+Gate CX 4 1
+Gate CX 0 6
+Gate CX 4 8
+Gate CX 8 5
+Gate CX 5 2
+Gate CX 7 4
+Gate CX 8 0
+Gate Z 6
+Gate RY 6 1.5362388076054088
+Gate CX 2 8
+Gate H 2
+Gate CX 6 2
+Gate Y 0
+Gate IP 7 1.7247343668207964
+Gate I 5
+Gate SDG 3
+Gate H 5
+Gate CX 0 3
+Gate H 6
+Gate I 3
+Gate IP 7 1.2723450247038661
+Gate X 5
+Gate CX 5 4
+Gate CX 7 1
+Gate IP 2 1.9038051480754146
+Gate CX 1 0
+Gate CX 1 2
+Gate S 3
+Gate IP 1 0.3675663404700058
+Gate CX 3 6
+Gate TDG 1
+Gate Y 8
+Gate CX 0 7
+Gate CX 7 5
+Gate CX 3 6
+Gate IP 4 2.3624776754995245
+Gate IP 2 2.532123678793373
+Gate I 5
+Gate Z 7
+Gate CX 5 6
+Gate RY 6 2.7646015351590183
+Gate Y 0
+Gate SDG 4
+Gate CX 4 6
+Gate T 2
+Gate CX 5 2
+Gate RX 2 1.002168056495144
+Gate CX 0 1
+Gate S 4
+Gate CX 5 8
+Gate SDG 1
+Gate CX 8 0
+Gate CX 8 5
+Gate RX 5 3.078760800517997
+Gate CX 1 2
+Gate X 6
+Observable IIXXXXZYZ 1.1049965240552702
+Observable YIXXXIYII 2.36698643082753
+Expected_value 9.584317055757239e-19
+Qubits 10
+Gate CX 2 0
+Gate IP 8 2.1739821162841366
+Gate CX 4 9
+Gate IP 5 0.8890707209659116
+Gate IP 9 2.290221044466959
+Gate Y 5
+Gate RX 0 0.8262388678941156
+Gate TDG 1
+Gate X 9
+Gate RY 9 2.5446900494077322
+Gate CX 8 5
+Gate CX 1 7
+Gate CX 5 6
+Gate RX 2 2.827433388230814
+Gate TDG 9
+Gate Z 5
+Gate CX 9 2
+Gate RY 3 0.07225663103256524
+Gate CX 0 7
 Gate CX 0 5
 Gate CX 2 3
-Gate IP 2 2.020044076258237
-Gate CX 2 6
-Gate CX 2 0
-Gate CX 2 0
+Gate S 2
 Gate CX 4 0
-Gate RX 1 2.3530528975387552
-Gate Z 2
-Gate CX 2 5
-Observable YYZZXXX 2.0276581145377945
-Observable XIZYYZI 1.0640279286157561
-Observable XIIXZXZ 2.548424810454726
-Observable YXXZYYZ -0.45607497914172446
-Observable YIXZXIY -1.2250142312367267
-Expected_value 0.0
-Qubits 1
-Gate CX 0 0
-Observable X 2.0279205904474953
-Observable I 0.11104726641109952
-Observable Y -2.8436546839179386
-Observable Y 2.784207148958501
-Expected_value 0.11104726641109952
-Qubits 8
-Gate CX 5 4
-Gate CX 4 5
-Gate CX 7 6
-Gate CX 3 2
-Gate CX 4 1
-Gate CX 4 2
-Gate CX 4 7
-Gate CX 5 3
-Gate CX 3 1
-Gate H 5
-Gate RX 2 1.2063715789784806
-Gate IP 5 2.151990967709008
-Gate CX 6 1
+Gate CX 9 2
+Gate CX 2 9
+Gate CX 8 6
+Gate IP 2 2.419026343264141
+Gate RX 8 1.3446016557364315
 Gate SDG 4
-Gate TDG 5
-Gate TDG 2
-Gate IP 3 0.578053048260522
-Gate RX 1 3.0127873547926116
 Gate CX 7 2
-Gate CX 5 2
-Gate CX 6 3
-Gate TDG 1
-Gate IP 2 2.139424597094649
-Gate SDG 3
-Gate H 4
-Gate IP 1 1.897521962768235
-Gate CX 0 7
-Gate CX 3 7
-Gate CX 6 7
-Gate CX 2 3
-Gate CX 4 0
-Gate CX 1 6
-Gate CX 3 4
-Gate CX 5 6
-Gate X 2
-Gate H 3
-Gate CX 1 2
-Gate RX 0 1.6084954386379742
-Gate CX 5 7
-Gate RY 0 1.0555751316061706
-Gate CX 6 3
-Gate I 7
-Gate CX 0 4
-Gate X 2
-Gate CX 0 1
-Gate RX 4 1.6461945504810518
-Gate CX 2 3
-Gate Y 2
-Gate CX 6 7
-Gate CX 6 2
-Gate CX 1 7
-Gate RX 0 2.4158847506105507
-Gate S 0
-Gate CX 5 0
-Gate CX 4 2
-Gate IP 4 1.3257520998148928
-Gate IP 1 1.592787475370025
-Gate CX 0 3
-Gate SDG 0
-Gate H 0
-Gate IP 2 0.3738495257771854
-Gate H 7
-Gate CX 3 4
-Gate IP 6 2.532123678793373
-Observable YIXXXZYI 2.0280392081523244
-Expected_value -2.1988045153645325e-18
-Qubits 9
-Gate CX 1 3
-Gate CX 7 8
-Gate CX 4 6
-Gate CX 6 3
-Gate CX 7 8
-Gate CX 8 0
-Gate CX 7 6
-Gate CX 4 2
-Gate Y 3
-Gate CX 3 8
-Gate CX 4 5
-Gate T 6
-Gate CX 6 3
-Gate RY 7 2.4158847506105507
-Gate CX 3 8
-Gate CX 5 8
-Gate CX 1 7
-Gate RX 7 1.5299556222982291
-Gate Y 2
-Gate Z 5
-Gate Z 8
-Gate S 4
-Gate CX 7 5
-Gate TDG 4
-Gate X 8
-Gate IP 8 0.20106192982974677
-Gate CX 6 3
-Gate CX 7 2
-Gate CX 7 8
-Gate CX 7 3
-Gate S 4
-Gate CX 2 4
-Gate CX 5 7
-Gate CX 6 7
-Gate RX 5 2.195973264859265
-Gate CX 7 1
-Gate IP 8 2.8337165735379934
-Gate Z 0
-Gate CX 0 4
-Gate RX 7 1.3854423602330987
-Gate RY 1 1.5299556222982291
-Gate TDG 0
-Gate X 3
-Gate RX 5 1.5425219929125886
-Gate CX 5 6
-Gate CX 2 3
-Gate T 3
-Gate Z 6
-Gate IP 2 1.105840614063607
-Gate TDG 8
-Gate X 5
-Gate IP 2 1.049291946298991
-Gate TDG 1
-Gate CX 0 7
-Gate CX 0 3
-Gate SDG 5
-Gate Z 3
-Gate CX 6 7
-Gate CX 3 1
-Gate TDG 1
-Gate CX 2 3
-Gate CX 2 4
-Gate X 7
-Gate I 8
-Gate CX 7 5
-Gate CX 0 1
-Gate CX 2 0
-Gate H 4
-Gate IP 8 2.1676989309769574
-Gate CX 0 3
-Gate CX 8 1
-Gate Z 3
-Gate CX 3 8
-Gate I 6
-Gate SDG 2
-Gate SDG 8
-Gate CX 5 6
-Gate CX 6 2
-Gate CX 7 8
-Gate CX 2 8
-Gate T 2
-Observable YYIXZXXIZ 2.0331476588403454
-Observable YIYXIZZYX 0.28935598825834763
-Expected_value 0.0
-Qubits 7
-Gate CX 6 1
-Gate I 6
-Gate IP 2 0.053407075111026485
-Gate I 0
-Gate CX 5 1
-Gate RY 1 2.004336112990288
-Gate CX 6 0
-Gate H 3
-Gate CX 5 2
-Gate CX 4 3
-Gate IP 1 1.1278317626387357
-Gate I 1
-Gate CX 4 5
-Gate IP 2 1.6053538459843841
-Gate CX 1 6
-Gate CX 0 1
-Gate Y 1
-Gate CX 6 3
-Gate CX 0 1
-Gate TDG 1
-Gate CX 6 2
-Gate T 5
-Gate SDG 1
-Gate CX 2 3
-Gate CX 6 1
-Gate SDG 4
-Gate CX 5 4
-Gate CX 5 6
-Gate CX 5 4
-Gate RY 2 0.8230972752405259
-Gate CX 4 5
-Gate RY 3 1.4734069545336128
-Gate CX 4 3
-Gate CX 2 1
-Gate CX 0 4
-Gate RX 0 1.8535396656179781
-Gate CX 0 1
-Gate CX 4 2
-Gate IP 2 1.5739379194484864
-Gate IP 1 1.9069467407290044
-Gate Y 6
-Gate SDG 6
-Gate Y 1
-Gate CX 4 6
-Gate TDG 3
-Gate CX 6 3
-Gate I 4
-Gate CX 5 2
-Gate CX 4 0
-Observable ZIIIZXY 2.0321845860096186
-Observable YZXYIII -0.07175645188718327
-Expected_value 0.43769338204135455
-Qubits 1
-Gate CX 0 0
-Observable Y 2.0322219441582163
-Observable X -2.054945050596286
-Expected_value 0.0
-Qubits 8
-Gate SDG 2
-Gate CX 7 3
-Gate IP 2 0.16336281798666927
-Gate CX 1 5
-Gate CX 6 3
-Gate S 0
-Gate Y 3
-Gate H 5
-Gate CX 6 2
-Gate H 7
-Gate IP 6 2.045176817486955
-Gate CX 1 3
-Gate TDG 2
-Gate CX 6 5
-Gate CX 5 3
-Gate CX 3 4
-Gate I 5
-Gate IP 4 1.5236724369910497
-Gate CX 6 3
-Gate CX 0 1
-Gate IP 7 0.17278759594743864
-Gate CX 5 6
-Gate I 0
-Gate SDG 1
-Gate CX 6 4
-Gate RY 0 1.5330972149518192
-Gate S 3
-Gate I 1
-Gate CX 1 7
-Gate CX 3 6
-Gate CX 7 0
-Gate CX 5 4
-Gate CX 5 4
-Gate CX 3 0
-Gate RX 2 3.129026282975434
-Gate CX 5 1
-Gate CX 1 7
-Gate CX 7 4
-Gate S 5
-Gate CX 4 7
-Gate CX 6 3
-Gate H 1
-Gate RX 7 1.9069467407290044
-Gate T 5
-Gate CX 5 3
+Gate IP 0 2.5855307539043997
+Gate RY 0 1.7907078125461822
 Gate S 6
-Gate CX 4 7
+Gate IP 7 0.6063273821428301
+Gate CX 1 3
+Gate CX 7 8
+Gate I 6
+Gate IP 6 1.9854865570687494
+Gate X 5
+Gate IP 3 2.9468139090672256
+Gate CX 5 8
+Gate Z 9
+Gate CX 8 9
+Gate CX 9 7
+Gate CX 3 4
+Gate Y 0
+Gate CX 8 9
+Gate TDG 9
+Gate CX 4 2
+Gate CX 8 3
+Gate IP 6 1.8095573684677209
+Gate CX 6 5
+Gate CX 1 5
+Gate H 8
+Gate CX 9 6
+Gate CX 9 8
+Gate I 5
+Gate CX 4 1
+Gate CX 2 5
+Gate CX 7 9
+Gate SDG 8
+Gate CX 3 1
+Gate T 6
+Gate S 6
+Gate RX 4 0.5843362335677015
+Gate H 4
+Gate CX 7 4
+Gate CX 8 5
+Gate TDG 2
+Gate CX 2 1
+Gate CX 9 3
+Gate RY 5 0.16964600329384882
+Gate Z 4
+Gate RX 0 0.3989822670059037
+Gate CX 8 1
+Gate RX 5 1.4325662500369456
+Gate IP 9 0.5403539364174444
 Gate CX 5 4
-Gate IP 4 1.7969909978533618
-Gate CX 0 6
-Gate S 5
-Gate T 3
-Gate CX 5 3
-Gate CX 7 5
-Gate H 7
-Gate CX 5 2
-Gate CX 6 3
-Gate CX 2 7
-Gate T 0
-Gate S 3
+Gate CX 2 6
+Gate RY 7 0.819955682586936
+Gate CX 7 6
+Gate RY 5 0.21991148575128552
 Gate CX 2 3
-Gate Z 6
-Gate CX 0 2
+Gate CX 3 5
+Gate CX 8 0
+Gate S 8
+Gate H 2
+Gate CX 6 7
+Gate CX 6 3
+Gate RX 7 2.0420352248333655
+Gate IP 1 0.09424777960769379
+Gate CX 0 3
+Gate CX 7 6
+Gate CX 1 6
+Gate SDG 9
+Gate X 8
+Gate SDG 5
+Gate CX 5 6
+Gate T 7
+Gate CX 2 3
+Observable ZZZXYIIZYZ 1.1058053891052555
+Expected_value -1.1269816089012508e-17
+Qubits 1
+Gate RY 0 1.8346901096964392
+Observable X 1.1071383633119745
+Observable Y -2.7652025103356066
+Observable X 0.5818252957338734
+Expected_value 1.6304945050995232
+Qubits 7
+Gate IP 3 0.4523893421169302
+Gate CX 0 1
+Gate RX 1 2.001194520336698
+Gate CX 4 0
+Gate S 6
+Gate I 0
+Gate X 3
+Gate CX 5 0
+Gate CX 5 6
+Gate CX 2 5
+Gate CX 5 1
+Gate CX 6 1
+Gate CX 3 4
+Gate RY 5 2.686061718819273
+Gate CX 5 6
+Gate IP 0 1.913229926036184
+Gate CX 2 5
+Gate RY 4 0.5434955290710342
+Gate I 6
+Gate CX 0 4
+Gate CX 2 1
+Gate T 5
+Gate X 4
+Gate CX 0 3
+Gate CX 5 2
+Gate CX 3 5
+Gate CX 6 0
+Gate CX 3 4
+Gate Z 3
+Gate RY 4 1.441991027997715
+Gate X 3
+Gate TDG 5
+Gate CX 4 6
+Gate I 2
+Gate CX 3 0
+Gate CX 4 1
+Gate CX 5 3
+Gate CX 3 5
 Gate S 5
-Observable ZXZZZIYI 2.031252377218199
+Gate CX 5 2
+Gate SDG 5
+Gate TDG 4
+Gate CX 0 2
+Gate CX 4 1
+Gate CX 2 0
+Gate CX 3 6
+Gate CX 6 0
+Gate T 5
+Gate CX 3 4
+Observable YIZZZYX 1.1072253682754436
+Observable ZYIZXXY 2.012035996657862
+Observable IXXIYZY 2.0168772804522748
+Observable IZXYZIY -0.3549304995160699
+Expected_value 2.462825079402805e-18
+Qubits 6
+Gate IP 3 0.24504422698000386
+Gate Y 4
+Gate CX 2 4
+Gate T 2
+Gate CX 2 4
+Gate CX 3 1
+Gate CX 3 5
+Gate CX 3 1
+Gate CX 3 0
+Gate RX 4 0.031415926535897934
+Gate CX 3 0
+Gate CX 1 4
+Gate CX 0 1
+Gate SDG 4
+Gate CX 4 0
+Gate CX 1 0
+Gate CX 2 1
+Gate TDG 5
+Gate CX 2 4
+Gate IP 2 1.228362727553609
+Gate CX 0 3
+Gate H 5
+Gate CX 1 4
+Gate IP 5 1.7687166639710536
+Gate RY 0 0.6000441968356505
+Gate Z 3
+Gate IP 2 2.7551767571982486
+Gate CX 1 2
+Gate CX 0 4
+Gate CX 3 2
+Gate Z 1
+Gate TDG 3
+Gate CX 0 2
+Gate CX 2 3
+Gate SDG 4
+Gate SDG 5
+Observable XZYZZY 1.1191546167775106
+Observable YIYZIZ -0.18506034965724016
+Observable YYYXIX 0.055829331334873444
+Expected_value -0.020114473303684526
+Qubits 6
+Gate Y 4
+Gate I 3
+Gate TDG 5
+Gate CX 3 4
+Gate IP 0 0.031415926535897934
+Gate TDG 3
+Gate CX 0 4
+Gate TDG 5
+Gate IP 2 1.441991027997715
+Gate CX 1 0
+Gate I 2
+Gate CX 0 4
+Gate CX 1 5
+Gate RY 0 1.806415775814131
+Gate X 1
+Gate CX 5 4
+Gate CX 2 3
+Gate CX 5 4
+Gate S 4
+Gate CX 1 2
+Gate SDG 4
+Gate IP 1 2.170840523630547
+Gate CX 0 1
+Gate T 3
+Gate CX 2 3
+Gate CX 5 0
+Gate Y 1
+Gate S 2
+Gate T 4
+Gate CX 1 4
+Gate IP 1 1.429424657383356
+Gate S 2
+Gate CX 4 0
+Gate CX 1 0
+Gate T 5
+Gate CX 2 4
+Observable XIIYII 1.1193398676996242
+Observable ZIXZZZ -2.479264106826334
+Observable IXXYZX 2.501198903686186
+Expected_value 0.0
+Qubits 3
+Gate CX 1 0
+Gate Y 1
+Gate CX 1 2
+Gate TDG 1
+Gate RX 0 1.0869910581420683
+Gate CX 0 2
+Gate CX 1 2
+Gate IP 1 2.978229835603124
+Gate CX 0 1
+Observable XYY 1.1195131170906962
+Observable YYI -2.096850620348576
+Expected_value -6.214546194819849e-17
+Qubits 3
+Gate X 0
+Gate CX 1 0
+Gate SDG 1
+Gate S 0
+Gate CX 1 0
+Gate CX 2 1
+Gate I 2
+Gate Z 2
+Gate CX 2 0
+Observable YZY 1.1197959534075834
 Expected_value 0.0
 Qubits 10
-Gate CX 0 1
-Gate H 3
-Gate SDG 1
+Gate CX 0 9
+Gate I 9
+Gate RY 4 3.006504169485432
+Gate CX 6 7
+Gate RX 0 0.7476990515543708
+Gate TDG 8
+Gate CX 2 1
+Gate SDG 7
+Gate CX 2 4
+Gate CX 4 0
+Gate I 3
+Gate TDG 0
+Gate CX 1 9
+Gate CX 3 6
+Gate Z 4
+Gate IP 1 2.7960174616949156
+Gate SDG 6
+Gate TDG 9
+Gate SDG 8
+Gate CX 6 5
+Gate RY 5 0.9267698328089891
+Gate T 9
+Gate SDG 3
+Gate CX 3 2
+Gate H 9
+Gate CX 5 7
+Gate CX 4 8
+Gate CX 0 6
 Gate CX 2 3
-Gate X 1
-Gate CX 7 6
-Gate CX 5 4
-Gate S 3
-Gate RY 0 2.858849314766712
-Gate RX 3 1.5362388076054088
+Gate T 3
+Gate CX 2 3
+Gate Z 7
+Gate RY 4 1.2974777659325847
+Gate CX 3 1
+Gate CX 6 2
 Gate X 3
 Gate Y 4
-Gate TDG 1
-Gate CX 2 6
-Gate CX 4 9
-Gate CX 6 8
-Gate CX 9 8
-Gate CX 3 1
-Gate CX 4 8
-Gate CX 8 4
-Gate CX 1 7
-Gate IP 8 1.0210176124166828
-Gate SDG 0
-Gate RX 0 2.865132500073891
-Gate CX 9 3
-Gate RY 2 3.1070351344003053
-Gate CX 2 8
-Gate SDG 5
-Gate X 8
-Gate I 4
-Gate CX 1 5
-Gate H 6
-Gate X 5
-Gate CX 0 1
-Gate TDG 8
-Gate CX 9 6
-Gate H 2
-Gate IP 5 1.6336281798666923
-Gate CX 3 5
-Gate CX 9 7
-Gate H 0
-Gate CX 6 7
-Gate TDG 4
-Gate RX 0 1.3728759896187397
-Gate CX 9 3
-Gate T 0
-Gate CX 7 5
-Gate CX 2 4
-Gate X 7
-Gate CX 3 6
-Gate Y 2
-Gate IP 2 1.1812388377497622
-Gate TDG 5
-Gate CX 3 0
-Gate I 7
-Gate CX 1 6
-Gate CX 9 3
-Gate X 0
-Gate IP 4 2.321636971002857
-Gate IP 7 1.1906636157105315
-Gate RY 1 2.708052867394402
-Gate Z 9
-Gate IP 4 1.0147344271095031
-Gate H 0
-Gate CX 8 1
 Gate CX 7 8
-Gate CX 1 6
-Gate IP 7 1.4671237692264334
-Gate CX 1 2
-Gate X 4
-Gate CX 0 7
-Gate RY 6 2.9216811678385075
-Gate CX 8 0
-Gate IP 0 2.899690019263379
-Gate CX 0 2
-Gate Z 9
-Gate CX 5 7
-Gate CX 6 1
 Gate CX 4 1
-Gate CX 5 1
-Gate CX 5 6
-Gate CX 7 5
-Gate CX 5 6
-Gate CX 3 0
-Gate RY 4 1.9792033717615698
-Gate CX 1 2
-Gate CX 9 0
-Gate I 9
-Gate SDG 2
-Gate CX 7 4
-Gate CX 7 9
-Gate CX 9 7
-Gate CX 8 7
-Gate RX 5 1.6179202165987436
-Gate CX 9 5
-Gate CX 8 3
-Gate RX 5 0.2701769682087222
-Gate IP 8 0.8953539062730911
-Gate CX 1 3
-Gate CX 0 4
-Observable ZIIXIYIXZX 2.031087364941274
-Observable ZYZZIZXYXZ 0.7915541358402214
-Observable ZXZXZIYXIZ 0.5536042523574798
-Observable IIYXZZYZXZ -1.3265722292527777
-Observable ZYZXIXIIXZ -0.659560178998508
-Expected_value -4.724868852230563e-18
-Qubits 6
-Gate CX 4 5
-Gate CX 1 3
-Gate CX 4 5
-Gate CX 4 3
-Gate RY 5 0.8827875356587318
-Gate Y 5
-Gate I 0
-Gate H 5
-Gate CX 2 4
-Gate CX 5 2
-Gate Z 2
-Gate T 2
-Gate CX 1 4
-Gate CX 1 0
-Gate CX 3 2
-Gate CX 1 0
-Gate CX 4 3
-Gate TDG 1
-Gate RY 1 1.4608405839192538
-Gate IP 3 0.48694686130641796
-Gate CX 3 5
-Gate S 4
-Gate CX 3 5
-Gate CX 3 2
-Gate Z 4
-Gate IP 4 0.9424777960769379
-Gate RY 1 2.4849997889895263
-Gate CX 2 4
-Gate CX 0 2
-Gate IP 5 0.19477874452256716
-Gate IP 4 0.4366813788489812
-Gate CX 2 1
-Gate S 4
-Gate CX 5 1
-Gate CX 4 3
-Gate CX 2 3
-Observable ZYXIXI 2.024240375850897
-Observable XIXIXX 2.3179657496632338
-Observable XYIYXZ -0.9279195161483461
-Observable IZZXZX -0.10174686489070428
-Expected_value 0.06507772901954688
-Qubits 8
-Gate Z 6
-Gate RY 5 0.91106186954104
-Gate CX 7 5
-Gate CX 6 7
-Gate CX 2 0
-Gate Z 4
-Gate CX 2 3
-Gate S 3
-Gate CX 0 5
-Gate I 2
-Gate CX 2 0
-Gate X 2
-Gate CX 2 3
-Gate CX 0 6
-Gate CX 2 4
-Gate SDG 7
-Gate Z 4
-Gate X 0
-Gate H 4
-Gate CX 4 2
-Gate CX 2 4
-Gate IP 2 2.1331414117874696
-Gate CX 5 7
-Gate SDG 5
-Gate CX 5 7
-Gate RY 1 2.522698900832604
-Gate Y 0
-Gate SDG 1
-Gate CX 1 3
-Gate Y 3
-Gate RX 4 0.5717698629533423
-Gate CX 4 6
-Gate IP 2 2.4755750110287567
-Gate RY 6 0.33929200658769765
-Gate CX 5 1
-Gate H 1
-Gate CX 7 0
-Gate CX 6 0
-Gate CX 0 5
-Gate CX 6 1
-Gate CX 7 4
-Gate RY 0 1.2377875055143783
-Gate S 7
-Gate CX 6 1
-Gate X 7
-Gate RX 6 3.0567696519428686
-Gate TDG 2
+Gate IP 5 0.9361946107697584
+Gate CX 0 9
 Gate CX 3 4
-Gate Y 5
-Gate SDG 1
-Gate CX 2 0
-Gate CX 4 1
-Gate IP 3 0.5309291584566751
-Gate CX 5 2
-Gate CX 0 1
-Gate RY 6 2.1048670779051615
-Gate CX 5 6
-Gate S 1
-Gate CX 0 6
-Gate T 5
-Gate Z 4
+Gate IP 5 3.0724776152108175
 Gate CX 7 1
-Gate CX 2 7
-Gate CX 5 6
-Observable IIXYXXZZ 2.02416700426841
-Observable IXZZXIXY -1.8030853349593918
-Observable XIZIXYII 1.5410781015278212
-Expected_value -7.71716464309487e-17
-Qubits 9
-Gate CX 5 2
-Gate IP 3 0.16964600329384882
-Gate CX 7 6
-Gate CX 5 1
-Gate Z 4
-Gate CX 0 8
-Gate CX 0 4
-Gate CX 3 0
-Gate RY 6 1.9100883333825942
-Gate Y 0
-Gate CX 2 5
-Gate CX 5 6
-Gate TDG 6
-Gate IP 8 0.10367255756846318
-Gate CX 8 1
-Gate CX 0 2
-Gate CX 5 6
-Gate RY 6 1.9854865570687494
-Gate RX 2 2.7363272012767097
-Gate CX 1 5
-Gate RY 5 2.9813714282567134
-Gate CX 6 3
-Gate TDG 8
-Gate X 8
-Gate CX 1 2
-Gate IP 8 2.8305749808844034
-Gate SDG 4
-Gate CX 5 8
-Gate RX 4 0.2607521902479529
-Gate SDG 8
-Gate CX 1 0
-Gate CX 3 2
-Gate CX 5 6
-Gate CX 7 0
-Gate CX 6 3
-Gate CX 3 5
-Gate T 7
-Gate CX 7 1
-Gate CX 4 5
-Gate RY 7 1.21579635693925
-Gate IP 5 1.9917697423759289
-Gate CX 3 1
-Gate CX 5 7
-Gate CX 4 3
-Gate Y 7
-Gate CX 3 2
-Gate IP 0 2.230530784048753
-Gate CX 5 8
-Gate CX 3 8
-Gate CX 2 0
-Gate CX 3 7
-Gate Z 3
-Gate SDG 4
-Gate CX 6 8
-Gate H 2
-Gate CX 2 5
-Gate CX 0 3
-Gate T 8
-Gate CX 3 6
-Gate SDG 7
-Gate IP 2 2.6043803098259386
-Gate IP 2 0.2827433388230814
-Gate CX 1 3
-Gate RY 5 0.6188937527571892
-Gate CX 4 8
-Gate T 3
-Gate IP 1 2.626371458401067
-Gate Z 6
-Gate CX 1 5
-Gate T 1
-Gate CX 7 5
-Gate CX 5 0
-Gate I 4
-Gate CX 0 2
-Gate CX 6 7
-Gate CX 3 5
-Gate IP 8 0.9393362034233481
-Gate TDG 6
-Gate CX 7 1
-Gate Z 3
-Gate CX 7 8
-Observable IYIZXZYXX 2.0231571544912694
-Observable ZZXZZIZXX 0.6080620686249347
-Observable YXZIYXXZY 0.7109917003966943
-Observable ZIYIIIXYI 2.929855965785912
-Observable YXZXXIIYZ 1.6697796433616463
-Expected_value -0.23191329244858572
-Qubits 4
-Gate CX 2 3
-Gate Y 3
-Gate CX 0 2
-Gate CX 1 0
-Gate TDG 3
-Gate IP 3 0.07539822368615504
-Gate CX 0 3
-Gate S 3
-Gate TDG 3
-Gate CX 1 3
-Gate CX 2 3
-Gate H 3
-Gate Y 2
-Gate CX 1 0
-Gate IP 1 2.708052867394402
-Gate CX 1 2
-Observable XIXY 2.0234997586556065
-Expected_value 0.0
-Qubits 8
-Gate CX 4 3
-Gate CX 1 3
-Gate CX 1 5
-Gate CX 6 1
-Gate CX 6 4
-Gate CX 1 3
-Gate IP 5 1.2880529879718152
-Gate CX 5 0
-Gate Z 1
-Gate CX 3 1
-Gate Z 5
-Gate CX 6 5
-Gate Z 7
-Gate IP 2 2.598097124518759
-Gate TDG 6
-Gate S 0
-Gate CX 0 5
-Gate CX 2 7
-Gate I 4
-Gate CX 7 6
-Gate H 2
-Gate CX 2 4
-Gate CX 4 6
-Gate CX 3 5
-Gate X 0
-Gate CX 3 6
+Gate RX 5 0.4586725274241098
+Gate H 0
 Gate I 2
-Gate CX 2 5
-Gate CX 1 4
-Gate CX 1 7
-Gate IP 6 2.0106192982974678
-Gate Y 5
-Gate CX 6 7
-Gate CX 4 5
-Gate CX 5 0
-Gate CX 5 6
-Gate CX 5 7
-Gate IP 7 2.1142918558659307
-Gate SDG 6
-Gate CX 6 5
-Gate CX 4 2
-Gate CX 6 0
-Gate RY 4 3.0002209841782523
-Gate Y 7
-Gate CX 2 7
-Gate Z 3
-Gate CX 7 2
-Gate RY 2 1.7341591447815659
-Gate Y 2
-Gate CX 5 3
-Gate RY 5 1.4545573986120741
-Gate Z 2
-Gate S 3
-Gate CX 2 3
-Gate IP 1 2.598097124518759
-Gate RY 2 0.07853981633974483
-Gate Z 5
-Gate CX 3 1
-Gate Z 3
-Gate CX 7 1
-Gate IP 4 2.6200882730938875
-Gate TDG 4
-Gate S 6
-Gate CX 5 3
-Observable ZZXIXYZX 2.0235896811282026
-Observable XIIIYIII -2.7353617032983606
-Observable ZYZYXIZY -1.0501950619748774
-Observable IYXIIXYY -0.4329948237744511
-Observable IXIIXXYZ -2.505527585382105
-Expected_value -5.281480843910671e-18
-Qubits 1
-Gate CX 0 0
-Observable Y 2.023453241156435
-Observable Y -1.8266048211523547
-Observable Y 0.4410036050413808
-Expected_value 0.0
-Qubits 9
-Gate CX 3 0
-Gate RX 3 1.124690169985146
-Gate S 3
-Gate Z 3
-Gate CX 6 4
-Gate Z 7
-Gate CX 7 4
-Gate IP 4 1.2974777659325847
-Gate CX 4 3
-Gate CX 5 0
-Gate CX 7 8
-Gate Z 2
-Gate IP 1 2.3247785636564466
-Gate CX 5 0
-Gate CX 2 3
-Gate CX 4 5
-Gate TDG 5
+Gate SDG 9
 Gate SDG 7
-Gate T 2
-Gate CX 0 1
-Gate CX 4 7
-Gate CX 7 8
-Gate IP 4 1.501681288415921
-Gate TDG 4
-Gate CX 7 1
-Gate IP 5 1.4671237692264334
-Gate CX 8 2
-Gate IP 1 2.7834510910805568
-Gate CX 2 6
-Gate CX 6 1
-Gate CX 3 1
-Gate CX 6 8
-Gate CX 6 2
-Gate CX 0 1
-Gate CX 8 3
-Gate CX 8 0
-Gate TDG 3
-Gate CX 1 8
-Gate IP 1 0.7257079029792423
-Gate CX 3 8
-Gate Y 8
-Gate CX 0 1
-Gate RY 5 2.4535838624536286
-Gate CX 6 2
-Gate CX 4 3
-Gate CX 6 0
-Gate CX 7 5
-Gate CX 8 7
-Gate S 1
-Gate CX 6 7
-Gate T 0
-Gate IP 1 0.7696902001294993
-Gate SDG 3
-Gate SDG 8
-Gate RX 4 1.5362388076054088
-Gate CX 7 8
-Gate X 5
-Gate T 4
-Gate CX 0 8
-Gate CX 2 6
-Gate CX 6 7
-Gate RX 1 1.0869910581420683
-Gate Z 5
-Gate Y 1
-Gate CX 7 8
 Gate CX 1 6
-Gate CX 6 1
-Gate CX 5 1
-Gate SDG 2
-Gate T 3
-Gate CX 7 5
-Gate CX 1 0
-Gate CX 0 5
-Gate I 1
-Gate CX 1 5
-Gate CX 3 0
-Gate CX 3 8
-Gate CX 3 0
-Gate CX 8 4
-Gate RY 5 1.4545573986120741
-Gate S 8
-Observable YYIZYYYXY 2.0233548410380244
-Observable XYZXXYIXZ 2.219489399559067
-Observable YYYZZIIXI -0.20407033716693368
-Observable XYXXYYZIZ -0.4301985535916558
-Expected_value -1.9251001830483906e-18
-Qubits 3
-Gate CX 0 2
-Gate IP 2 3.0661944299036383
-Gate CX 1 2
-Gate RX 1 2.8619909074203016
-Gate CX 1 2
-Gate CX 2 0
-Gate CX 2 0
 Gate CX 0 1
-Gate CX 0 2
-Observable IYZ 2.0224720318310756
-Observable XIZ 2.9318620803212925
-Observable ZIX 2.185062142208115
-Observable ZYZ 2.677673267686163
-Expected_value 0.0
-Qubits 2
-Gate CX 0 1
-Gate T 1
-Gate CX 1 0
-Gate S 1
-Observable XI 2.0224559002124165
-Observable IX 2.4521174653159843
-Observable IZ 1.7966552648186187
-Expected_value 1.7966552648186187
-Qubits 1
-Gate X 0
-Observable Z 2.0224637045726928
-Observable Y -2.1047522943285677
-Observable Y -1.6605366440834128
-Expected_value -2.0224637045726928
-Qubits 10
-Gate CX 6 5
-Gate CX 0 7
-Gate CX 7 0
-Gate CX 3 8
-Gate CX 8 5
-Gate IP 6 1.0147344271095031
-Gate CX 8 0
-Gate RY 3 0.025132741228718346
-Gate SDG 9
-Gate Z 1
-Gate RY 8 0.8230972752405259
-Gate CX 7 9
-Gate SDG 6
-Gate CX 4 5
-Gate RY 6 0.4052654523130833
-Gate CX 0 4
-Gate T 5
-Gate S 0
-Gate T 0
-Gate CX 1 8
-Gate TDG 2
-Gate CX 3 5
-Gate IP 2 2.6200882730938875
-Gate CX 2 7
-Gate CX 6 9
-Gate IP 8 1.0964158361028378
-Gate TDG 5
-Gate IP 3 2.4755750110287567
-Gate I 8
-Gate CX 5 2
-Gate RX 2 1.504822881069511
-Gate CX 5 9
-Gate CX 8 9
-Gate CX 5 1
-Gate T 0
-Gate Z 6
-Gate H 6
-Gate IP 7 1.0053096491487339
-Gate IP 9 1.3697343969651496
-Gate RX 3 3.1101767270538954
-Gate IP 0 1.0524335389525807
-Gate CX 1 0
-Gate Y 0
-Gate T 8
-Gate Y 7
-Gate CX 7 8
-Gate S 0
-Gate RX 8 1.1466813185602747
-Gate Z 0
-Gate CX 2 5
-Gate CX 9 1
-Gate Z 5
-Gate CX 1 0
-Gate CX 8 7
-Gate IP 5 2.58238916125081
-Gate Y 0
-Gate CX 2 7
-Gate CX 2 4
-Gate X 6
-Gate CX 6 1
-Gate RY 1 0.40840704496667307
-Gate CX 4 1
-Gate T 3
-Gate IP 5 2.5541148273685015
-Gate IP 7 1.1026990214100174
-Gate CX 6 1
-Gate CX 7 9
-Gate H 9
-Gate CX 5 6
-Gate IP 8 1.0147344271095031
-Gate CX 4 5
-Gate S 2
-Gate CX 1 3
-Gate CX 2 3
-Gate I 6
-Gate TDG 9
-Gate CX 2 5
-Gate H 9
-Gate IP 2 2.9405307237600464
-Gate CX 5 1
-Gate CX 2 4
-Gate SDG 9
-Gate CX 0 1
-Gate TDG 9
-Gate X 1
-Gate IP 8 0.5215043804959058
-Gate IP 2 1.592787475370025
-Gate CX 1 2
-Gate RX 4 0.16650441064025903
+Gate CX 6 7
+Gate CX 5 8
+Gate CX 3 4
+Gate CX 4 6
 Gate CX 8 6
-Gate CX 6 7
-Gate RY 9 1.228362727553609
-Gate Z 8
-Gate SDG 7
-Gate Z 7
 Gate I 8
-Gate CX 8 1
-Gate Y 7
-Gate T 4
-Gate Z 4
-Observable XIZXXYIXZZ 2.022335595234214
-Observable ZYIXZIYYZX 0.7419712961848608
-Observable YZZZXIYZIZ -2.10653871844937
-Observable IZYYYYZXZY 1.3822745916290564
-Observable IXYIIZIXYY 1.0893307880340708
-Expected_value -0.007846483614618859
-Qubits 2
-Gate SDG 1
-Gate CX 1 0
-Gate CX 0 1
-Gate CX 1 0
-Observable ZX 2.022005835695463
-Observable XY 2.366734174913431
-Observable ZZ 2.5056829971224808
-Observable YY -2.9014808111453165
-Observable XZ -2.2369197329757182
-Expected_value 2.5056829971224808
-Qubits 3
-Gate RX 2 1.8880971848074657
-Gate X 2
-Gate CX 2 0
-Gate CX 1 2
-Gate H 2
-Gate CX 1 2
-Gate CX 1 0
-Gate H 2
-Gate TDG 1
-Observable YXZ 2.021941665222735
-Observable IYY -1.2472323438659885
-Observable ZZI 0.24101310076651905
-Observable YXY 0.7058284141173379
-Observable ZZZ 1.5175591149012828
-Expected_value 1.5927559968855334
-Qubits 5
-Gate Z 2
-Gate I 0
-Gate SDG 2
-Gate CX 2 0
-Gate CX 2 1
-Gate RY 1 2.5603980126756816
-Gate IP 0 0.6031857894892403
-Gate RY 1 0.669159235214626
-Gate TDG 0
-Gate CX 4 3
+Gate SDG 8
+Gate Z 7
+Gate CX 4 8
+Gate X 8
+Gate TDG 6
+Gate RX 5 1.7341591447815659
+Gate X 9
 Gate CX 4 1
-Gate Y 1
-Gate CX 3 0
-Gate CX 4 1
-Gate CX 1 4
-Gate CX 0 4
-Gate S 1
-Gate IP 3 1.8880971848074657
-Gate S 3
+Gate RX 7 1.6650441064025905
+Gate CX 8 9
+Gate CX 8 2
+Gate Z 8
+Gate Z 8
 Gate CX 0 2
-Gate CX 4 0
-Gate CX 2 3
-Gate CX 1 2
-Gate TDG 4
-Gate CX 1 2
-Observable IYZYX 2.0269131121395434
-Expected_value -7.087207108777879e-18
-Qubits 10
-Gate IP 9 1.639911365173872
-Gate TDG 9
-Gate CX 2 3
-Gate CX 6 1
-Gate CX 0 9
-Gate IP 0 1.5990706606772047
-Gate CX 0 3
-Gate H 9
-Gate TDG 9
-Gate RY 3 1.913229926036184
-Gate Z 9
-Gate CX 6 9
-Gate CX 0 4
-Gate IP 8 1.105840614063607
-Gate I 1
-Gate IP 1 1.9697785938008003
 Gate CX 7 8
-Gate SDG 9
-Gate I 7
-Gate CX 0 5
-Gate CX 7 1
-Gate CX 9 0
-Gate CX 4 5
-Gate SDG 2
-Gate CX 2 1
-Gate CX 0 2
-Gate CX 1 2
-Gate SDG 1
-Gate TDG 9
-Gate CX 4 5
-Gate TDG 1
-Gate RY 6 3.0002209841782523
-Gate CX 0 9
-Gate CX 9 2
-Gate CX 9 0
-Gate Z 1
-Gate T 1
-Gate CX 9 5
-Gate RY 6 1.1152653920243765
-Gate RY 1 0.8136724972797564
-Gate CX 9 3
-Gate TDG 2
-Gate CX 8 5
-Gate CX 0 6
-Gate CX 9 0
-Gate IP 5 2.2933626371205493
-Gate CX 7 1
-Gate CX 5 4
-Gate CX 4 3
-Gate CX 7 9
-Gate TDG 3
-Gate SDG 6
+Gate RY 5 1.580221104755666
+Gate CX 5 0
+Gate TDG 7
+Gate RY 9 2.111150263212341
+Gate CX 1 4
+Gate T 4
+Gate CX 5 8
 Gate Y 9
 Gate X 7
-Gate CX 4 8
-Gate CX 1 2
-Gate SDG 1
-Gate S 9
-Gate CX 4 7
-Gate CX 0 1
-Gate CX 7 5
-Gate CX 0 8
-Gate CX 8 9
-Gate CX 6 3
-Gate CX 8 3
-Gate RX 3 0.5246459731494955
-Gate SDG 0
-Gate X 1
-Gate Y 9
-Gate IP 2 0.03769911184307752
-Gate S 9
-Gate CX 7 3
-Gate H 2
-Gate CX 6 3
-Gate CX 9 5
+Gate CX 0 9
+Gate CX 8 6
+Gate CX 5 4
+Gate Z 7
+Gate CX 5 0
 Gate CX 1 5
-Gate CX 9 0
-Gate IP 0 1.046150353645401
-Gate TDG 3
-Gate SDG 1
-Gate RX 4 0.11623892818282235
-Gate T 9
-Gate CX 8 0
-Gate SDG 5
-Gate X 9
-Gate CX 7 3
-Gate S 0
-Gate TDG 4
-Gate IP 9 0.3204424506661589
-Gate CX 5 9
-Gate CX 2 1
-Gate Z 6
-Gate CX 9 2
-Gate TDG 9
-Gate CX 1 3
-Gate H 4
-Gate CX 8 1
-Gate TDG 1
-Gate CX 8 9
-Gate X 2
-Observable YXXXXZZYZY 2.0268016768340464
-Observable IZYYXZIYIZ -1.1474052049435484
-Observable XXYXXXXIZI 0.801088471164177
-Observable ZXZIYYXZZZ -2.901854472516939
-Observable YXXYIIXYYY 2.554746716447387
-Expected_value -6.830111049011288e-18
-Qubits 1
-Gate CX 0 0
-Observable Z 2.0263616849122075
-Observable X 1.4221802633017575
-Observable X -0.30640025543415206
-Observable I 2.427578148486628
-Observable X -2.2092107144329933
-Expected_value 4.453939833398835
-Qubits 5
-Gate CX 0 4
-Gate RY 3 0.32358404331974866
-Gate Z 4
-Gate IP 4 0.2827433388230814
-Gate CX 0 3
-Gate TDG 4
-Gate H 2
-Gate CX 4 0
 Gate Z 3
-Gate CX 4 3
-Gate CX 0 4
-Gate RY 0 1.7215927741672068
-Gate CX 3 4
-Gate Z 4
-Gate CX 0 4
-Gate S 2
-Gate SDG 0
-Gate SDG 2
-Gate CX 1 2
-Gate CX 2 4
-Gate CX 1 3
-Gate IP 4 2.670353755551324
-Gate CX 4 1
-Gate I 4
-Gate RY 4 3.0913271711323564
-Observable IYXXX 2.026264913536057
-Observable XIZYY -2.6958506199606593
-Expected_value -1.7426242945535996e-16
-Qubits 3
-Gate CX 0 2
-Gate CX 1 2
-Gate IP 0 1.4451326206513049
-Gate RX 2 1.8786724068466962
-Gate CX 1 0
-Gate I 1
-Gate IP 1 1.2692034320502765
-Gate CX 1 2
-Gate CX 2 0
-Observable ZZI 2.025430194527026
-Observable YYZ -0.6144169478025236
-Expected_value -0.6137767851208589
-Qubits 2
-Gate RY 0 2.9405307237600464
-Gate CX 0 1
-Gate CX 0 1
-Gate CX 0 1
-Observable IX 2.0254555175819426
-Observable XZ -0.08363658915645078
-Observable YX 2.03559274681702
-Observable ZY -0.8703624133951002
-Observable IZ 2.3731764930764685
-Expected_value -2.3253689769405064
+Gate S 4
+Gate S 9
+Gate CX 6 0
+Gate Y 9
+Gate Y 2
+Gate CX 3 0
+Gate CX 7 3
+Gate CX 4 7
+Gate CX 7 4
+Gate Z 5
+Gate CX 6 7
+Gate Z 8
+Observable ZIXXIZYZZX 1.1197428536803289
+Observable YIIIXIXZZI -1.4560617040959114
+Expected_value -3.252778630755501e-19
 Qubits 4
-Gate CX 0 3
-Gate CX 3 1
-Gate CX 1 3
-Gate CX 0 3
+Gate TDG 1
+Gate Z 2
+Gate IP 3 2.4221679359177304
+Gate RX 1 2.1142918558659307
+Gate IP 1 2.5855307539043997
+Gate IP 2 1.8786724068466962
+Gate CX 3 0
+Gate T 3
+Gate IP 0 0.5340707511102648
 Gate CX 0 1
-Gate IP 1 0.08168140899333463
+Gate CX 0 3
+Gate IP 1 2.607521902479528
+Gate Y 2
+Gate CX 0 3
+Gate CX 1 2
+Gate RY 0 1.200088393671301
+Observable XXYI 1.121288319176861
+Observable IXYZ -0.7183902861466698
+Expected_value 0.10299425445953288
+Qubits 6
+Gate CX 5 2
+Gate CX 5 3
+Gate CX 3 4
+Gate CX 0 1
+Gate RY 2 1.168672467135403
+Gate Y 5
+Gate CX 3 0
+Gate CX 0 4
+Gate CX 1 5
+Gate SDG 0
+Gate CX 2 3
+Gate CX 3 4
+Gate T 2
+Gate IP 2 2.2588051179310615
+Gate IP 3 2.1331414117874696
+Gate RX 3 0.9613273519984767
+Gate CX 2 0
+Gate Y 2
+Gate CX 3 5
+Gate CX 5 2
+Gate CX 2 0
+Gate H 0
+Gate CX 1 4
+Gate SDG 3
+Gate CX 0 1
+Gate X 4
+Gate CX 4 0
+Gate TDG 2
+Gate CX 3 0
+Gate X 2
+Gate CX 1 3
+Gate H 1
+Gate IP 4 2.506990937564655
+Gate CX 2 1
+Gate TDG 3
+Gate Z 0
+Observable XIZXXZ 1.1214505241836006
+Observable ZYXXYY -0.39861069566374674
+Observable ZYXXIX -1.999210185870845
+Observable IYYXIX -2.297602191107794
+Expected_value -6.167940051356299e-17
+Qubits 5
+Gate CX 2 4
+Gate IP 0 2.7708847204661975
+Gate CX 4 0
+Gate RY 4 0.3204424506661589
+Gate CX 2 1
+Gate I 0
+Gate CX 1 2
+Gate CX 3 1
+Gate CX 4 3
+Gate CX 1 4
+Gate X 1
+Gate CX 0 4
+Gate IP 2 2.902831611916969
+Gate CX 1 2
+Gate IP 0 2.189690079552086
+Gate CX 2 1
+Gate CX 2 3
+Gate RX 1 2.111150263212341
+Gate CX 2 3
+Gate SDG 1
+Gate RX 2 0.6974335690969341
+Gate CX 1 2
+Gate CX 3 4
+Gate CX 4 2
+Gate CX 1 3
+Observable YXIII 1.1216053579635819
+Observable XIXZX 0.5719639988130047
+Expected_value 0.0
+Qubits 2
+Gate CX 0 1
+Gate CX 0 1
+Gate CX 1 0
+Gate CX 0 1
+Observable XI 1.1217940537768798
+Expected_value 0.0
+Qubits 4
+Gate CX 2 3
+Gate IP 3 1.9949113350295187
+Gate CX 2 0
+Gate CX 3 1
+Gate T 0
+Gate CX 0 1
+Gate CX 2 3
+Gate H 2
+Gate CX 0 1
+Gate IP 1 3.1070351344003053
+Gate CX 3 0
+Gate RY 3 0.8325220532012952
+Gate CX 3 0
+Gate CX 2 1
+Gate X 0
+Gate T 0
+Observable ZXYI 1.1217395533776449
+Observable ZXZZ -0.7977401432313957
+Expected_value 0.0
+Qubits 10
+Gate CX 7 6
+Gate CX 7 2
+Gate CX 4 3
+Gate I 7
+Gate H 7
+Gate IP 3 1.4451326206513049
+Gate CX 4 5
+Gate CX 2 8
+Gate IP 9 2.151990967709008
+Gate X 1
+Gate T 0
+Gate CX 4 6
+Gate T 4
+Gate CX 2 1
+Gate IP 6 1.2346459128607887
+Gate CX 7 6
+Gate T 5
+Gate RY 4 2.2336723767023425
+Gate CX 3 6
+Gate CX 9 0
+Gate TDG 6
+Gate CX 1 6
+Gate TDG 5
+Gate CX 7 2
+Gate X 5
+Gate CX 2 3
+Gate X 7
+Gate I 5
+Gate CX 8 9
+Gate Z 1
+Gate Z 2
+Gate CX 2 1
+Gate CX 1 3
+Gate CX 5 4
+Gate Y 2
+Gate CX 3 5
+Gate CX 5 1
+Gate S 9
+Gate CX 2 6
+Gate CX 7 0
+Gate CX 7 0
+Gate T 5
+Gate CX 0 8
+Gate H 1
+Gate TDG 4
+Gate H 8
+Gate IP 7 2.855707722113122
+Gate CX 4 9
+Gate Z 2
+Gate Z 3
+Gate CX 7 3
+Gate IP 7 1.8346901096964392
+Gate CX 8 3
+Gate CX 4 9
+Gate CX 2 3
+Gate CX 8 4
+Gate CX 1 8
+Gate IP 3 0.3361504139341079
+Gate X 4
+Gate IP 3 1.8849555921538759
+Gate CX 0 3
+Gate CX 4 8
+Gate T 4
+Gate CX 4 5
+Gate CX 5 9
+Gate CX 7 3
+Gate I 6
+Gate RY 0 1.093274243449248
+Gate CX 5 7
+Gate TDG 3
+Gate SDG 3
+Gate CX 0 9
+Gate SDG 0
+Gate CX 3 5
+Gate CX 3 9
+Gate Y 6
+Gate CX 5 2
+Gate SDG 4
+Gate CX 6 7
+Gate TDG 1
+Gate IP 4 0.5874778262212914
+Gate CX 9 7
+Gate CX 2 9
+Gate I 3
+Gate Z 1
+Gate CX 9 4
+Gate CX 9 2
+Gate CX 5 8
+Gate CX 5 9
+Gate CX 3 0
+Gate CX 3 9
+Gate RY 5 1.6838936623241292
+Gate IP 8 0.9707521299592461
+Gate CX 7 3
+Gate CX 8 0
+Gate CX 4 9
+Gate CX 3 4
+Gate CX 2 8
+Gate SDG 3
+Gate CX 6 7
+Observable IIZYYXIXXI 1.1222477954021897
+Observable XXIZIYXIZX 2.4240715649682016
+Observable YIXYXYIIZX -2.913800802209689
+Observable IYZZZIYIZY -0.3484123675408717
+Expected_value 9.733947982736975e-19
+Qubits 3
+Gate RY 0 1.8284069243892596
+Gate CX 2 1
+Gate CX 2 1
+Gate CX 2 0
+Gate CX 0 1
+Gate CX 0 2
+Gate SDG 2
+Gate S 0
+Gate CX 2 0
+Observable IXY 1.1234384266201547
+Observable YYZ -0.6535150523599504
+Observable YYY -0.7985415360425681
+Observable XYZ -2.7363931151015444
+Observable ZIX -1.6808722153968265
+Expected_value 0.6319500279072175
+Qubits 6
+Gate CX 4 2
+Gate Z 0
+Gate IP 1 2.400176787342602
+Gate RY 5 2.708052867394402
+Gate Y 4
+Gate CX 5 2
+Gate T 5
+Gate IP 5 2.670353755551324
+Gate CX 3 2
+Gate CX 3 2
+Gate CX 1 3
+Gate CX 5 0
+Gate SDG 2
+Gate T 4
+Gate CX 0 5
+Gate RX 4 2.346769712231575
+Gate CX 5 0
+Gate CX 0 1
+Gate CX 5 3
+Gate CX 4 3
+Gate CX 2 0
+Gate IP 2 0.7351326809400116
+Gate IP 1 0.7853981633974483
+Gate H 2
+Gate Y 2
+Gate CX 2 0
+Gate Z 4
+Gate SDG 4
+Gate T 3
+Gate TDG 4
+Gate SDG 3
+Gate CX 0 3
+Gate Z 0
+Gate RY 3 1.4828317324943823
+Gate CX 2 1
+Gate SDG 1
+Observable XZXZZY 1.1236929748672866
+Observable IXYZXX 1.763631885565016
+Observable YXYZYI 0.44087842509382447
+Observable YXXYIX -0.9509870215547986
+Observable ZYYXZY 0.4431028424918797
+Expected_value -1.5297068174354375e-17
+Qubits 5
+Gate IP 2 2.865132500073891
+Gate IP 0 1.108982206717197
+Gate CX 4 2
+Gate CX 2 1
+Gate CX 1 4
+Gate CX 0 1
+Gate IP 4 1.8535396656179781
+Gate CX 1 2
+Gate CX 3 0
+Gate IP 2 1.900663555421825
+Gate CX 4 1
+Gate SDG 2
+Gate X 1
+Gate T 4
+Gate S 3
+Gate RX 4 1.5770795121020762
+Gate X 3
+Gate CX 4 0
+Gate CX 3 0
+Gate T 1
+Gate CX 2 0
+Gate I 1
+Gate CX 0 1
+Gate H 1
+Gate I 2
+Observable IXYIY 1.1240637728830432
+Observable XYZZX -2.3230343324131146
+Observable YYYYX 1.8857052800003418
+Observable IZZYI -2.045433469038958
+Observable XIIXX -1.1857276792628957
+Expected_value 0.0
+Qubits 9
+Gate X 0
+Gate RX 6 0.03455751918948772
+Gate CX 1 4
+Gate I 6
+Gate CX 5 6
+Gate IP 2 1.4734069545336128
+Gate CX 4 5
+Gate T 6
+Gate T 0
+Gate X 2
+Gate SDG 7
+Gate TDG 4
+Gate I 1
+Gate CX 1 3
+Gate IP 8 0.0031415926535897933
+Gate CX 0 6
+Gate CX 7 5
+Gate RY 6 2.7457519792374794
+Gate IP 8 1.988628149722339
+Gate RY 1 0.2827433388230814
+Gate CX 1 6
+Gate CX 3 0
+Gate CX 2 4
+Gate CX 5 4
+Gate CX 5 4
+Gate Z 4
+Gate CX 5 7
+Gate H 4
+Gate CX 4 8
+Gate Z 6
+Gate T 8
+Gate CX 3 6
+Gate S 6
+Gate RX 7 2.563539605329271
+Gate H 1
+Gate CX 7 5
+Gate CX 2 3
+Gate X 4
+Gate CX 6 8
+Gate CX 8 1
+Gate CX 0 1
+Gate IP 1 1.2095131716320704
+Gate CX 2 8
+Gate Y 1
+Gate RY 2 0.48380526865282814
+Gate CX 1 8
+Gate TDG 1
+Gate Z 2
+Gate H 6
+Gate I 5
+Gate CX 3 2
+Gate CX 3 6
+Gate CX 6 1
+Gate CX 8 6
+Gate SDG 2
+Gate CX 0 2
+Gate CX 1 4
+Gate CX 4 1
+Gate CX 3 4
+Gate SDG 6
+Gate CX 7 8
+Gate SDG 1
+Gate S 2
+Gate S 6
+Gate IP 7 2.0137608909510574
+Gate CX 5 8
+Gate CX 1 2
+Gate CX 6 4
+Gate CX 1 3
+Gate CX 8 0
+Gate IP 8 0.7665486074759096
+Gate Y 6
+Gate X 2
+Gate CX 4 2
+Gate CX 4 0
+Gate Y 5
+Gate Y 6
+Gate IP 6 1.3257520998148928
+Gate S 3
+Gate I 1
+Gate X 7
+Observable YZXXIZZZY 1.1239435407138798
+Expected_value -8.956577910158832e-18
+Qubits 1
+Gate I 0
+Observable Y 1.1247427164751278
+Expected_value 0.0
+Qubits 4
+Gate IP 3 0.37699111843077515
+Gate H 2
+Gate CX 2 3
+Gate CX 1 3
+Gate CX 2 1
+Gate CX 3 2
+Gate TDG 2
+Gate SDG 3
+Gate CX 0 1
 Gate H 1
 Gate CX 0 1
-Gate I 2
-Gate Y 1
-Gate H 2
-Gate CX 2 3
-Gate X 1
-Gate CX 0 1
-Gate CX 3 0
 Gate CX 1 2
-Observable YZZZ 2.025504496642636
-Observable XZYI 0.4803860736272647
+Gate CX 0 1
+Gate IP 1 2.2273891913951633
+Gate TDG 0
+Gate I 3
+Observable YZYZ 1.1249007567038642
+Observable ZYXI 2.1117040929334854
+Observable YIYY 1.0253400982527272
+Observable XYYX 2.365299460825999
+Expected_value -1.672631428228551
+Qubits 9
+Gate H 2
+Gate SDG 3
+Gate Z 3
+Gate H 2
+Gate CX 4 2
+Gate RY 8 2.993937798871073
+Gate CX 3 2
+Gate I 7
+Gate CX 4 3
+Gate S 2
+Gate IP 3 0.05969026041820607
+Gate CX 1 8
+Gate Z 8
+Gate CX 8 3
+Gate CX 0 3
+Gate IP 0 2.7803094984269667
+Gate CX 7 4
+Gate T 3
+Gate CX 5 6
+Gate X 6
+Gate TDG 1
+Gate CX 4 7
+Gate TDG 4
+Gate CX 3 8
+Gate Y 4
+Gate Y 1
+Gate TDG 5
+Gate CX 4 1
+Gate RX 6 2.6986280894336323
+Gate CX 8 6
+Gate RX 7 0.40212385965949354
+Gate CX 3 8
+Gate CX 3 1
+Gate T 8
+Gate I 6
+Gate CX 1 5
+Gate CX 6 7
+Gate IP 3 1.66818569905618
+Gate CX 5 4
+Gate RY 6 2.6326546437082468
+Gate CX 1 2
+Gate SDG 1
+Gate CX 7 3
+Gate CX 8 4
+Gate I 7
+Gate CX 1 0
+Gate IP 2 1.2346459128607887
+Gate CX 8 4
+Gate RY 7 1.2692034320502765
+Gate CX 7 5
+Gate CX 1 7
+Gate CX 8 0
+Gate Y 6
+Gate RY 4 3.1070351344003053
+Gate CX 6 4
+Gate CX 4 0
+Gate CX 8 0
+Gate I 4
+Gate X 2
+Gate IP 4 1.8849555921538759
+Gate S 6
+Gate CX 1 7
+Gate T 8
+Gate IP 2 0.0879645943005142
+Gate CX 3 0
+Gate X 1
+Gate CX 8 6
+Gate SDG 0
+Gate X 0
+Gate T 6
+Gate S 3
+Gate CX 5 8
+Gate IP 2 2.1928316722056755
+Gate H 8
+Gate CX 8 0
+Gate SDG 3
+Gate X 3
+Gate IP 8 1.077566280181299
+Gate CX 4 2
+Gate RY 3 0.49637163926718736
+Gate CX 6 1
+Observable ZXIXYXYXX 1.1134016761854524
+Observable XYXYXXYII 0.6186553294348309
+Observable XIIIZYIZZ 0.437164710240328
+Expected_value 0.1299335573080035
+Qubits 10
+Gate RY 6 1.231504320207199
+Gate IP 4 0.6942919764433443
+Gate CX 4 5
+Gate CX 5 0
+Gate SDG 6
+Gate CX 7 2
+Gate CX 4 6
+Gate TDG 0
+Gate H 2
+Gate CX 7 2
+Gate Y 1
+Gate CX 2 0
+Gate CX 4 8
+Gate H 5
+Gate T 4
+Gate CX 6 2
+Gate CX 4 9
+Gate Y 8
+Gate CX 4 1
+Gate S 9
+Gate CX 4 8
+Gate SDG 4
+Gate CX 4 8
+Gate CX 2 1
+Gate CX 9 5
+Gate Z 9
+Gate CX 4 1
+Gate CX 4 3
+Gate IP 6 1.5456635855661782
+Gate X 4
+Gate CX 8 9
+Gate CX 5 0
+Gate RX 9 1.67132729170977
+Gate SDG 9
+Gate H 3
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 6 9
+Gate H 3
+Gate CX 3 4
+Gate CX 1 8
+Gate CX 2 9
+Gate T 8
+Gate X 7
+Gate SDG 2
+Gate CX 5 2
+Gate IP 7 1.4796901398407927
+Gate Z 4
+Gate RY 2 0.6817256058289851
+Gate TDG 2
+Gate CX 4 9
+Gate CX 2 9
+Gate CX 5 6
+Gate IP 4 3.138451060936203
+Gate CX 1 0
+Gate CX 6 0
+Gate CX 2 0
+Gate CX 2 7
+Gate CX 1 2
+Gate IP 3 1.1278317626387357
+Gate Y 0
+Gate CX 1 6
+Gate SDG 7
+Gate T 7
+Gate X 3
+Gate CX 3 2
+Gate T 9
+Gate I 6
+Gate IP 0 1.156106096521044
+Gate CX 7 8
+Gate TDG 1
+Gate RY 3 0.4366813788489812
+Gate CX 3 8
+Gate Z 6
+Gate TDG 4
+Gate CX 7 1
+Gate SDG 4
+Gate CX 9 3
+Gate CX 6 3
+Gate IP 3 1.806415775814131
+Gate CX 7 1
+Gate CX 4 2
+Gate CX 3 7
+Gate CX 1 5
+Gate IP 8 2.6829201261656834
+Gate X 2
+Gate IP 6 2.9593802796815853
+Gate I 7
+Gate IP 2 1.0995574287564276
+Gate TDG 8
+Gate CX 0 8
+Gate CX 7 3
+Gate Z 2
+Gate S 5
+Gate IP 8 2.8965484266097894
+Gate CX 2 3
+Gate CX 9 0
+Gate RX 2 1.3634512116579702
+Gate TDG 4
+Gate S 5
+Observable XZYIXZZIYX 1.1140944186365471
+Expected_value 1.0146390147933644e-17
+Qubits 6
+Gate CX 0 5
+Gate CX 3 4
+Gate CX 0 2
+Gate CX 2 3
+Gate T 1
+Gate CX 0 4
+Gate TDG 5
+Gate T 2
+Gate CX 4 2
+Gate CX 3 5
+Gate CX 1 5
+Gate CX 1 0
+Gate IP 5 0.8890707209659116
+Gate IP 0 0.257610597594363
+Gate CX 4 2
+Gate SDG 2
+Gate CX 5 2
+Gate CX 5 1
+Gate Z 3
+Gate Z 5
+Gate S 3
+Gate CX 4 5
+Gate CX 0 2
+Gate CX 3 4
+Gate CX 0 1
+Gate I 2
+Gate CX 2 5
+Gate Y 5
+Gate X 0
+Gate X 2
+Gate Z 5
+Gate CX 1 2
+Gate CX 4 5
+Gate CX 3 4
+Gate Z 4
+Gate I 3
+Observable IYZYXZ 1.115556533240799
 Expected_value 0.0
+Qubits 10
+Gate CX 3 2
+Gate CX 3 8
+Gate H 1
+Gate RX 5 1.7027432182456679
+Gate CX 9 4
+Gate IP 1 0.713141532364883
+Gate CX 9 1
+Gate CX 2 4
+Gate H 3
+Gate H 4
+Gate I 1
+Gate CX 4 2
+Gate CX 7 3
+Gate CX 9 2
+Gate CX 5 0
+Gate CX 7 1
+Gate CX 5 4
+Gate I 2
+Gate CX 8 2
+Gate CX 1 2
+Gate CX 1 2
+Gate CX 8 9
+Gate X 7
+Gate RY 5 2.88398205599543
+Gate CX 4 0
+Gate CX 2 6
+Gate Z 0
+Gate CX 1 5
+Gate TDG 6
+Gate CX 2 6
+Gate CX 9 1
+Gate CX 4 6
+Gate H 4
+Gate CX 8 0
+Gate X 1
+Gate IP 4 0.031415926535897934
+Gate CX 8 0
+Gate CX 3 5
+Gate RX 2 1.5330972149518192
+Gate CX 2 3
+Gate SDG 4
+Gate RY 9 2.934247538452867
+Gate SDG 8
+Gate SDG 4
+Gate Z 5
+Gate CX 6 9
+Gate CX 6 7
+Gate IP 4 0.6471680866394973
+Gate CX 5 8
+Gate TDG 0
+Gate H 4
+Gate RX 0 2.0074777056438777
+Gate CX 4 5
+Gate CX 0 5
+Gate X 2
+Gate Z 3
+Gate CX 3 4
+Gate IP 6 2.569822790636451
+Gate CX 4 1
+Gate IP 9 1.1623892818282233
+Gate CX 4 0
+Gate CX 0 6
+Gate CX 0 6
+Gate CX 2 1
+Gate TDG 9
+Gate CX 9 2
+Gate CX 2 3
+Gate SDG 7
+Gate T 8
+Gate CX 0 6
+Gate CX 0 7
+Gate IP 8 0.6817256058289851
+Gate CX 3 0
+Gate CX 5 3
+Gate CX 5 7
+Gate X 0
+Gate RY 4 1.2220795422464297
+Gate CX 0 3
+Gate CX 3 1
+Gate H 2
+Gate CX 3 5
+Gate CX 6 5
+Gate CX 2 1
+Gate CX 4 5
+Gate CX 6 7
+Gate Z 2
+Gate CX 7 4
+Gate CX 4 5
+Gate IP 8 0.5277875658030853
+Gate CX 5 9
+Gate CX 4 1
+Gate CX 2 4
+Gate IP 2 3.0190705400997913
+Gate Z 1
+Gate CX 7 0
+Gate IP 8 2.3938936020354222
+Gate H 6
+Gate S 6
+Gate CX 9 8
+Gate H 4
+Observable XIXIIZIIXZ 1.115710931033516
+Observable ZZIIZIZYXX -1.9327890754094765
+Observable YYIYYXYZZX 0.9215124465092956
+Expected_value -3.161141494506309e-17
+Qubits 10
+Gate CX 4 0
+Gate IP 1 2.824291795577224
+Gate I 4
+Gate RX 8 0.4303981935418017
+Gate CX 8 9
+Gate CX 1 3
+Gate CX 3 2
+Gate S 6
+Gate IP 7 2.912256389877738
+Gate CX 2 3
+Gate CX 5 8
+Gate TDG 3
+Gate CX 1 5
+Gate CX 6 1
+Gate IP 4 1.9854865570687494
+Gate CX 9 0
+Gate CX 7 9
+Gate CX 8 9
+Gate CX 3 2
+Gate RY 1 1.4796901398407927
+Gate H 6
+Gate T 9
+Gate CX 9 2
+Gate S 0
+Gate H 1
+Gate CX 0 8
+Gate IP 7 2.302787415081318
+Gate CX 2 8
+Gate CX 7 2
+Gate CX 6 9
+Gate CX 1 0
+Gate T 6
+Gate IP 5 1.0744246875277093
+Gate S 1
+Gate S 3
+Gate CX 2 7
+Gate CX 1 9
+Gate SDG 0
+Gate CX 7 3
+Gate CX 9 4
+Gate CX 2 7
+Gate Z 6
+Gate CX 3 8
+Gate S 4
+Gate CX 0 9
+Gate CX 2 0
+Gate S 5
+Gate IP 3 2.5541148273685015
+Gate CX 8 0
+Gate TDG 6
+Gate T 0
+Gate RY 3 1.8818139995002863
+Gate CX 9 5
+Gate I 3
+Gate CX 1 0
+Gate SDG 6
+Gate S 8
+Gate CX 9 4
+Gate CX 5 8
+Gate CX 0 2
+Gate I 7
+Gate CX 0 4
+Gate CX 6 2
+Gate IP 4 2.610663495133118
+Gate CX 5 6
+Gate I 9
+Gate CX 0 8
+Gate CX 3 1
+Gate IP 3 3.0661944299036383
+Gate CX 8 7
+Gate CX 4 5
+Gate Z 8
+Gate CX 5 9
+Gate CX 2 6
+Gate IP 1 0.26389378290154264
+Gate CX 7 4
+Gate RX 6 2.8776988706882505
+Gate X 4
+Gate CX 1 2
+Gate Z 9
+Gate CX 7 5
+Gate CX 0 2
+Gate X 1
+Gate CX 6 4
+Gate CX 6 0
+Gate CX 6 2
+Gate IP 3 0.9801769079200154
+Gate CX 8 0
+Gate Y 9
+Gate CX 1 8
+Gate CX 4 9
+Gate X 1
+Gate CX 1 9
+Gate CX 1 0
+Gate CX 4 8
+Gate CX 9 3
+Gate CX 3 0
+Gate X 1
+Gate SDG 6
+Gate CX 1 9
+Observable YZXZZXZYXX 1.1172508870801319
+Observable IZXZYZXIXX -2.5680386633674446
+Observable YIZZIIXXXX 1.480444667759163
+Observable ZYYYZYIZXY -1.6467958205689497
+Observable IIZZXXYXZY -0.7881543018399414
+Expected_value 3.934192410105859e-18
+Qubits 9
+Gate CX 7 4
+Gate CX 4 8
+Gate CX 5 2
+Gate IP 0 2.142566189748239
+Gate H 2
+Gate IP 8 2.447300677146449
+Gate CX 1 8
+Gate Y 5
+Gate CX 1 7
+Gate IP 4 0.47123889803846897
+Gate CX 1 2
+Gate IP 3 0.01884955592153876
+Gate IP 8 1.489114917801562
+Gate I 3
+Gate S 6
+Gate Z 5
+Gate SDG 0
+Gate IP 7 1.82526533173567
+Gate S 2
+Gate CX 5 7
+Gate CX 8 6
+Gate Y 4
+Gate CX 3 0
+Gate X 4
+Gate CX 8 7
+Gate CX 7 5
+Gate CX 1 4
+Gate CX 7 4
+Gate IP 1 1.7655750713174636
+Gate I 7
+Gate CX 3 7
+Gate Y 3
+Gate RY 4 0.7037167544041136
+Gate CX 1 4
+Gate CX 0 7
+Gate RY 0 1.82212373908208
+Gate Y 1
+Gate RX 6 3.0850439858251772
+Gate S 5
+Gate CX 6 7
+Gate H 6
+Gate IP 0 0.9236282401553992
+Gate X 3
+Gate T 5
+Gate RX 4 2.1048670779051615
+Gate CX 0 5
+Gate CX 3 7
+Gate CX 2 1
+Gate CX 7 2
+Gate TDG 2
+Gate RX 0 0.7759733854366789
+Gate CX 4 8
+Gate S 5
+Gate X 8
+Gate I 8
+Gate CX 1 7
+Gate T 6
+Gate T 2
+Gate I 6
+Gate CX 6 0
+Gate CX 2 5
+Gate H 7
+Gate CX 3 7
+Gate RX 4 1.7812830345854127
+Gate CX 7 8
+Gate I 1
+Gate Z 7
+Gate CX 1 4
+Gate T 2
+Gate CX 3 4
+Gate CX 3 0
+Gate CX 8 6
+Gate X 7
+Gate CX 8 2
+Gate Y 1
+Gate SDG 6
+Gate Y 5
+Gate I 0
+Gate CX 8 6
+Gate CX 4 6
+Gate S 4
+Observable IYIYZIZII 1.1187087699635787
+Observable ZXIIZZYII -2.9040267533004505
+Observable ZIIYIYIII -1.8967831830838797
+Observable YXZZXIZYZ 0.4691254999614034
+Observable IIZXIXZYX -0.6617729299399885
+Expected_value -2.4516218424542545e-17
+Qubits 2
+Gate I 0
+Gate CX 1 0
+Gate T 1
+Gate RX 1 0.19477874452256716
+Observable XZ 1.0376078745044015
+Observable ZZ -2.6358805376330503
+Expected_value -2.586037400585223
+Qubits 5
+Gate TDG 3
+Gate Y 0
+Gate S 1
+Gate RY 1 0.4586725274241098
+Gate Y 4
+Gate CX 4 0
+Gate T 3
+Gate CX 2 1
+Gate X 4
+Gate IP 3 2.6829201261656834
+Gate X 1
+Gate IP 2 1.7027432182456679
+Gate RX 2 0.29530970943744056
+Gate CX 1 4
+Gate RY 0 1.9289378893041331
+Gate Y 1
+Gate CX 1 3
+Gate IP 2 2.095442299944392
+Gate CX 0 3
+Gate CX 4 0
+Gate IP 1 0.8922123136195013
+Gate CX 4 1
+Gate RY 2 1.105840614063607
+Gate CX 1 0
+Gate IP 1 2.42845112122491
+Observable XIXIY 1.0373083573669661
+Observable YZYZI -1.573097665740843
+Observable XXYXZ 0.07779497152188952
+Observable IXIZZ -0.9470531779898602
+Observable ZYZII 1.7081242142004125
+Expected_value 3.598886318702831e-18
+Qubits 2
+Gate IP 1 2.5132741228718345
+Gate CX 1 0
+Gate IP 1 1.413716694115407
+Gate CX 1 0
+Observable IZ 1.0372607181211673
+Observable YZ -1.1111902916194403
+Observable XY 1.161595472325087
+Observable IX 2.904471754843202
+Expected_value 1.0372607181211673
+Qubits 5
+Gate S 1
+Gate SDG 4
+Gate RY 2 1.8880971848074657
+Gate IP 3 1.228362727553609
+Gate CX 3 4
+Gate CX 2 3
+Gate IP 4 0.7791149780902686
+Gate CX 2 4
+Gate CX 4 0
+Gate I 1
+Gate CX 2 0
+Gate T 1
+Gate CX 2 1
+Gate CX 2 3
+Gate RY 2 1.9195131113433637
+Gate CX 4 2
+Gate CX 1 2
+Gate CX 4 2
+Gate Z 2
+Gate CX 4 1
+Gate CX 1 3
+Gate IP 0 1.7215927741672068
+Gate CX 0 1
+Gate SDG 3
+Gate CX 3 0
+Observable XXYZX 1.037224517579557
+Observable IYZIZ 0.5515521066481788
+Observable XXXII -2.8722158297707043
+Expected_value 0.0
+Qubits 9
+Gate CX 4 1
+Gate CX 5 6
+Gate CX 3 5
+Gate RY 3 2.1928316722056755
+Gate SDG 0
+Gate RY 8 0.39269908169872414
+Gate RY 2 1.0649999095669398
+Gate CX 3 2
+Gate CX 3 7
+Gate CX 0 8
+Gate IP 2 2.701769682087222
+Gate CX 0 1
+Gate CX 2 0
+Gate TDG 7
+Gate CX 4 0
+Gate CX 0 5
+Gate CX 2 5
+Gate I 2
+Gate X 5
+Gate CX 4 7
+Gate X 7
+Gate T 1
+Gate CX 7 8
+Gate CX 4 5
+Gate CX 7 4
+Gate RX 1 1.4671237692264334
+Gate CX 2 0
+Gate H 3
+Gate CX 7 4
+Gate IP 1 1.5079644737231006
+Gate Y 6
+Gate CX 6 7
+Gate CX 6 5
+Gate RY 0 2.6043803098259386
+Gate Z 7
+Gate CX 7 8
+Gate CX 1 2
+Gate RX 3 0.9927432785343747
+Gate RY 5 1.687035254977719
+Gate CX 6 7
+Gate IP 4 2.2776546738526
+Gate SDG 2
+Gate CX 1 2
+Gate SDG 6
+Gate T 3
+Gate CX 0 2
+Gate IP 2 2.9593802796815853
+Gate CX 6 1
+Gate CX 7 1
+Gate CX 7 1
+Gate CX 2 4
+Gate CX 2 0
+Gate S 4
+Gate T 1
+Gate CX 1 4
+Gate TDG 2
+Gate CX 1 7
+Gate IP 4 2.6829201261656834
+Gate CX 3 0
+Gate CX 6 1
+Gate CX 8 7
+Gate CX 4 8
+Gate H 7
+Gate CX 5 4
+Gate T 1
+Gate CX 4 2
+Gate CX 8 1
+Gate CX 6 7
+Gate T 8
+Gate CX 2 6
+Gate CX 1 3
+Gate IP 1 2.761459942505428
+Gate CX 7 5
+Gate IP 4 1.5299556222982291
+Gate X 8
+Gate CX 8 7
+Gate CX 4 7
+Gate CX 3 8
+Gate CX 4 0
+Gate CX 0 1
+Gate CX 7 0
+Observable IXYXZZIXZ 1.038508124331737
+Observable XZZYIXYZI 0.4206670046562644
+Observable YIZZXXZIX 0.9689836534949083
+Observable ZIIYZZXXI -2.091807636804805
+Expected_value 2.896165518837523e-17
+Qubits 8
+Gate CX 1 2
+Gate I 5
+Gate Z 2
+Gate CX 6 7
+Gate X 2
+Gate IP 7 2.58238916125081
+Gate CX 1 6
+Gate S 3
+Gate I 0
+Gate CX 5 7
+Gate CX 7 0
+Gate S 4
+Gate CX 4 5
+Gate RY 4 1.2692034320502765
+Gate CX 5 3
+Gate Y 1
+Gate CX 0 7
+Gate CX 3 6
+Gate CX 6 2
+Gate RY 4 1.2629202467430969
+Gate RY 3 2.3310617489636267
+Gate CX 6 3
+Gate CX 6 7
+Gate CX 2 7
+Gate Z 7
+Gate CX 7 4
+Gate TDG 2
+Gate Z 2
+Gate I 5
+Gate CX 2 3
+Gate CX 0 1
+Gate T 4
+Gate Y 3
+Gate CX 7 1
+Gate IP 6 0.3518583772020568
+Gate CX 1 0
+Gate CX 7 1
+Gate IP 0 2.4315927138785
+Gate CX 5 1
+Gate CX 6 5
+Gate CX 3 4
+Gate Z 3
+Gate IP 0 1.7121679962064373
+Gate CX 2 7
+Gate CX 6 0
+Gate CX 5 0
+Gate CX 4 0
+Gate T 5
+Gate CX 4 0
+Gate IP 1 1.8409732950036186
+Gate Y 4
+Gate I 0
+Gate IP 7 2.189690079552086
+Gate CX 4 7
+Gate CX 4 5
+Gate CX 2 3
+Gate CX 6 1
+Gate Z 0
+Gate RX 0 1.4105751014618173
+Gate T 3
+Gate CX 6 4
+Gate IP 6 1.4199998794225865
+Gate CX 3 1
+Gate CX 4 0
+Observable ZZYYYYZX 1.0390171396068406
+Observable IYZXXYXX 1.8403179887931829
+Observable YYYZYYYZ -0.05002773939303906
+Observable YIIIIZZZ 2.650966289626916
+Expected_value 0.0
+Qubits 1
+Gate TDG 0
+Observable Z 1.038734932937694
+Observable X 2.7150979629154435
+Expected_value 1.038734932937694
+Qubits 4
+Gate RX 0 1.3980087308474578
+Gate CX 1 2
+Gate SDG 1
+Gate CX 1 3
+Gate CX 1 0
+Gate H 2
+Gate CX 3 0
+Gate CX 3 1
+Gate CX 1 3
+Gate CX 3 0
+Gate CX 2 3
+Gate SDG 3
+Gate IP 2 2.2870794518133692
+Gate CX 3 1
+Gate H 1
+Gate IP 1 0.9738937226128359
+Observable XZZX 1.0387048437068205
+Observable XZZY -0.030880812814452874
+Observable IYZY -1.4652681156050715
+Observable ZYZX -2.3072691815471544
+Expected_value -2.0334679989923326e-17
+Qubits 2
+Gate CX 1 0
+Gate Z 1
+Gate Z 0
+Gate CX 0 1
+Observable YY 1.0400151440254424
+Observable ZI -1.1258842569583987
+Observable IZ 1.31481600311458
+Observable YI -0.2691201957184096
+Expected_value 0.18893174615618125
 Qubits 8
 Gate CX 5 6
-Gate CX 3 4
-Gate I 2
-Gate IP 7 0.11309733552923255
-Gate CX 6 7
-Gate IP 2 3.0850439858251772
-Gate CX 2 5
-Gate X 2
-Gate RY 0 2.243097154663112
-Gate CX 3 1
-Gate CX 4 5
-Gate CX 1 2
-Gate Z 1
-Gate S 6
-Gate CX 0 6
-Gate CX 4 0
-Gate RX 1 2.9468139090672256
-Gate CX 2 1
-Gate CX 0 1
-Gate CX 1 0
-Gate TDG 0
-Gate CX 3 2
-Gate CX 5 4
-Gate Z 7
-Gate CX 7 1
-Gate CX 4 5
-Gate CX 7 0
-Gate S 6
-Gate RX 1 0.6126105674500096
-Gate IP 0 0.6251769380643689
-Gate CX 3 4
-Gate IP 7 0.2261946710584651
-Gate CX 2 4
-Gate IP 0 2.2682298958918303
-Gate IP 2 2.962521872335175
-Gate CX 3 4
-Gate S 1
-Gate IP 1 0.7194247176720626
-Gate CX 7 1
-Gate CX 1 3
-Gate T 2
-Gate T 7
-Gate CX 7 6
-Gate TDG 5
-Gate CX 2 1
-Gate CX 7 6
-Gate CX 4 6
-Gate H 2
-Gate CX 7 5
-Gate X 4
-Gate RY 3 1.1498229112138643
-Gate X 1
-Gate CX 1 2
-Gate CX 4 5
-Gate IP 5 1.9226547039969535
-Gate CX 1 0
-Gate RY 7 1.5425219929125886
-Gate X 6
-Gate SDG 5
-Gate Y 7
-Gate IP 0 1.1906636157105315
-Gate CX 4 5
-Gate Y 0
-Gate X 1
-Observable XZZXYIXZ 2.0253921915035007
-Observable ZZYXYIII 2.647679293793862
-Observable XIXIIXYX 2.6878598188391996
-Observable XZXZZIIY 2.6266853014465434
-Observable YYZYXXXY 0.44076949278039823
-Expected_value 2.064719554244847e-17
-Qubits 1
-Gate RY 0 0.11938052083641214
-Observable Y 2.0257623279779313
-Observable Z -1.180213250372324
-Observable X -2.114320489566336
-Observable Y 1.002858728138888
-Observable Z 0.6092760570793254
-Expected_value -0.8186831733602773
-Qubits 5
-Gate S 4
-Gate TDG 0
-Gate Y 0
-Gate I 0
-Gate CX 1 4
-Gate TDG 1
-Gate CX 1 4
-Gate H 2
-Gate I 3
+Gate RY 5 2.016902483604647
 Gate TDG 4
-Gate CX 0 1
-Gate S 3
-Gate CX 2 4
-Gate CX 3 1
-Gate CX 1 2
-Gate RY 0 0.39269908169872414
-Gate CX 0 3
-Gate IP 3 0.2261946710584651
-Gate CX 0 1
-Gate X 0
-Gate T 1
-Gate IP 4 3.1070351344003053
-Gate CX 2 4
-Gate I 2
-Gate Z 0
-Observable XZZIY 2.025604524339423
-Observable YYZXZ 1.8804126345098477
-Expected_value 0.0
-Qubits 1
-Gate S 0
-Observable Z 2.0256483788268627
-Observable X -2.7324404756923806
-Observable X 0.8244659454584164
-Observable I 2.680839324462017
-Expected_value 4.70648770328888
-Qubits 2
-Gate CX 0 1
-Gate CX 0 1
-Gate CX 0 1
-Gate CX 0 1
-Observable XY 2.0256592813785574
-Observable ZZ 0.19059951571449463
-Observable IX -2.286458304673248
-Observable II -1.7651409020042867
-Expected_value -1.5745413862897921
-Qubits 9
-Gate CX 6 8
-Gate CX 5 4
-Gate CX 0 5
-Gate X 0
 Gate X 4
-Gate CX 7 1
-Gate H 0
+Gate I 3
+Gate S 0
+Gate RY 5 1.0838494654884787
+Gate CX 6 1
+Gate T 1
+Gate CX 2 1
+Gate CX 6 0
+Gate CX 7 5
+Gate CX 4 3
 Gate CX 5 6
-Gate X 2
 Gate S 1
-Gate RY 4 0.9644689446520666
-Gate CX 3 1
+Gate CX 1 7
+Gate CX 2 6
+Gate H 0
+Gate CX 2 0
+Gate CX 1 7
+Gate SDG 4
 Gate CX 3 5
+Gate CX 6 7
+Gate IP 3 0.5717698629533423
+Gate CX 5 0
+Gate CX 1 7
+Gate CX 2 0
+Gate IP 2 2.5918139392115793
+Gate T 2
+Gate I 6
+Gate RY 3 1.1749556524425828
+Gate CX 2 7
+Gate I 4
+Gate CX 0 4
+Gate CX 2 1
+Gate T 2
+Gate CX 7 5
+Gate Z 5
+Gate Z 0
+Gate H 2
+Gate H 1
+Gate CX 1 7
 Gate CX 0 6
-Gate TDG 8
-Gate RY 4 0.6000441968356505
-Gate X 8
-Gate T 8
-Gate X 6
-Gate CX 7 3
-Gate X 7
+Gate CX 7 1
+Gate CX 6 0
+Gate CX 6 3
+Gate Z 4
+Gate CX 0 3
+Gate RY 2 1.806415775814131
+Gate H 5
 Gate CX 1 6
 Gate T 5
-Gate CX 3 4
-Gate CX 6 1
-Gate CX 1 0
-Gate IP 1 2.048318410140545
-Gate Z 0
-Gate CX 5 2
-Gate CX 5 2
-Gate CX 5 0
-Gate IP 5 0.6817256058289851
-Gate Y 6
-Gate CX 2 6
-Gate CX 1 3
-Gate H 8
-Gate IP 5 0.34871678454846705
-Gate CX 1 7
-Gate RY 1 2.6797785335120934
-Gate CX 1 8
-Gate CX 4 0
-Gate CX 0 6
-Gate RX 5 2.2273891913951633
-Gate IP 1 0.546637121724624
-Gate CX 2 8
-Gate CX 1 5
-Gate X 4
-Gate X 0
-Gate CX 3 7
-Gate CX 6 0
-Gate CX 1 2
-Gate CX 2 7
-Gate CX 6 1
-Gate CX 7 3
-Gate I 5
-Gate CX 0 1
-Gate CX 0 2
-Gate CX 7 4
-Gate SDG 0
-Gate CX 5 6
-Gate CX 4 2
-Gate CX 8 2
-Gate RX 6 0.5874778262212914
-Gate IP 1 0.2984513020910304
-Gate IP 3 0.1350884841043611
-Gate T 1
-Gate CX 3 6
+Gate RY 3 0.1916371518689774
 Gate S 1
-Gate RY 4 2.6923449041264527
+Gate RY 7 2.4347343065320897
+Gate Y 4
+Gate Z 7
+Gate H 6
+Gate SDG 6
+Gate IP 0 2.261946710584651
+Gate Y 2
+Gate CX 3 7
+Gate CX 0 7
+Gate Z 5
+Observable XYZZIYXX 1.0396909143943283
+Observable XZXZZIIX -2.8273620508010056
+Observable XYXXIIZZ -0.7658245952640443
+Observable IYZYIZIZ -2.8820210051041357
+Observable ZZXIYIZX 0.543001465906503
+Expected_value -3.858472232646119e-17
+Qubits 10
+Gate I 4
+Gate CX 6 0
+Gate IP 3 1.1938052083641215
+Gate CX 5 7
+Gate CX 9 2
+Gate T 3
+Gate CX 8 1
+Gate CX 1 7
+Gate IP 1 0.34871678454846705
+Gate CX 1 0
+Gate CX 8 9
+Gate Y 7
+Gate H 6
+Gate CX 2 9
+Gate CX 0 8
+Gate RY 5 2.6923449041264527
+Gate CX 9 0
+Gate CX 2 8
+Gate CX 4 2
+Gate S 9
+Gate RY 6 1.0210176124166828
+Gate SDG 7
+Gate CX 6 9
+Gate SDG 7
+Gate CX 3 0
+Gate I 4
+Gate Z 1
+Gate CX 2 0
+Gate CX 0 7
+Gate S 8
+Gate SDG 2
 Gate Y 1
+Gate CX 8 6
+Gate CX 2 9
+Gate CX 8 9
+Gate CX 1 5
+Gate CX 5 1
+Gate CX 0 5
+Gate RY 0 0.5937610115284709
+Gate CX 7 2
+Gate S 9
+Gate CX 2 6
+Gate X 5
+Gate IP 5 1.2723450247038661
+Gate IP 3 0.11309733552923255
+Gate CX 9 2
+Gate CX 3 6
+Gate S 6
+Gate H 3
+Gate CX 6 3
+Gate CX 2 6
+Gate Y 4
+Gate IP 2 0.7759733854366789
+Gate CX 7 4
+Gate CX 2 9
+Gate CX 5 7
+Gate CX 0 2
+Gate CX 7 8
+Gate RY 4 2.670353755551324
+Gate Z 6
+Gate IP 7 1.156106096521044
+Gate CX 2 7
+Gate CX 2 3
+Gate CX 3 5
+Gate CX 4 7
+Gate TDG 6
+Gate H 7
+Gate X 5
+Gate CX 2 9
+Gate X 1
+Gate TDG 7
+Gate CX 4 6
+Gate T 1
+Gate Y 1
+Gate CX 4 1
+Gate Z 4
 Gate CX 6 5
+Gate RX 2 2.151990967709008
+Gate CX 3 1
+Gate TDG 6
+Gate SDG 6
+Gate CX 2 3
+Gate H 6
+Gate X 7
+Gate CX 6 0
+Gate RY 3 2.42845112122491
+Gate CX 6 2
+Gate CX 5 3
+Gate H 3
+Gate RY 2 0.05654866776461628
+Gate CX 9 0
+Gate CX 8 9
+Gate CX 9 4
+Gate CX 0 6
+Gate CX 9 6
+Gate T 7
+Gate TDG 0
+Gate I 3
+Gate I 0
+Gate H 3
+Observable ZIIIZIYZZY 1.040678645438034
+Expected_value -4.1223719259485116e-17
+Qubits 10
+Gate X 2
+Gate CX 6 0
+Gate Z 6
+Gate CX 2 7
+Gate IP 4 2.2556635252774715
+Gate CX 2 9
+Gate TDG 6
+Gate TDG 9
+Gate RY 4 1.7058848108992577
+Gate CX 8 0
+Gate IP 4 1.2692034320502765
+Gate CX 7 0
+Gate RX 9 2.871415685381071
+Gate T 9
+Gate CX 2 5
+Gate IP 0 1.1592476891746337
+Gate CX 3 2
+Gate CX 6 5
+Gate IP 5 0.6880087911361648
+Gate IP 4 0.5089380098815465
+Gate S 4
+Gate CX 4 8
+Gate IP 1 2.968805057642354
+Gate CX 0 9
+Gate RX 7 0.6534512719466771
+Gate H 8
+Gate CX 9 0
+Gate RX 2 0.9487609813841175
+Gate CX 1 9
+Gate SDG 2
+Gate X 8
+Gate CX 9 1
+Gate Y 9
+Gate CX 2 6
+Gate IP 9 3.0253537254069705
+Gate RY 7 0.5246459731494955
+Gate IP 5 2.4315927138785
+Gate CX 8 4
+Gate CX 9 0
+Gate H 2
+Gate RY 1 1.4765485471872029
+Gate X 2
+Gate CX 3 5
+Gate CX 1 2
+Gate I 0
+Gate CX 3 1
+Gate CX 1 0
+Gate Z 8
+Gate IP 8 0.4649557127312894
+Gate CX 3 7
+Gate CX 1 5
+Gate IP 1 0.21362830044410594
+Gate T 9
+Gate CX 5 7
+Gate CX 6 8
+Gate RY 4 1.3603096190043804
+Gate I 4
+Gate CX 9 0
+Gate S 6
+Gate CX 5 7
+Gate I 3
+Gate CX 0 1
+Gate CX 7 0
+Gate S 4
+Gate CX 1 8
+Gate IP 8 0.7696902001294993
+Gate CX 7 3
+Gate CX 2 5
+Gate IP 0 2.384468824074653
+Gate CX 2 5
+Gate CX 4 9
+Gate CX 4 5
+Gate RX 6 2.2022564501664452
+Gate CX 6 4
+Gate CX 7 8
+Gate CX 4 1
+Gate CX 1 2
+Gate H 7
+Gate CX 1 9
+Gate H 6
+Gate IP 1 3.0850439858251772
+Gate IP 3 0.031415926535897934
+Gate TDG 0
+Gate Z 2
+Gate RX 5 1.2817698026646356
+Gate Z 3
+Gate IP 9 0.15079644737231007
+Gate CX 0 1
+Gate RX 3 1.5236724369910497
+Gate SDG 8
+Gate CX 1 9
+Gate CX 2 3
+Gate T 0
+Gate TDG 0
+Gate SDG 9
+Gate CX 5 2
+Gate X 3
+Gate IP 4 2.990796206217483
+Gate H 3
+Gate CX 3 4
+Observable IZYZIZYXXI 1.0411082400237446
+Observable XIIYXYIIYI -1.6576240883290203
+Observable YXIXZIZYXI -0.5873177315668194
+Expected_value 3.029325275422675e-17
+Qubits 2
+Gate S 0
+Gate CX 1 0
+Gate IP 0 0.11623892818282235
+Gate CX 0 1
+Observable ZZ 1.0425800262813
+Observable XZ -2.601659789080474
+Observable XY -0.6808989271635659
+Observable YZ 0.7326953704462849
+Observable YY 0.15671571169845633
+Expected_value 1.0425800262813
+Qubits 10
+Gate S 6
+Gate CX 7 2
+Gate Z 1
+Gate S 0
+Gate T 5
+Gate CX 7 1
+Gate CX 2 1
+Gate CX 4 5
+Gate CX 0 4
+Gate CX 7 4
+Gate IP 4 0.7319910882864218
+Gate CX 1 5
+Gate CX 0 6
+Gate TDG 3
+Gate IP 9 2.73318560862312
+Gate T 7
+Gate CX 8 1
+Gate T 9
+Gate CX 0 5
+Gate CX 3 1
+Gate TDG 2
+Gate CX 2 7
+Gate SDG 3
+Gate Z 8
+Gate RX 6 2.1928316722056755
+Gate IP 2 2.095442299944392
+Gate RX 8 1.3823007675795091
+Gate CX 6 7
+Gate CX 0 2
+Gate CX 3 0
+Gate S 8
+Gate CX 8 4
+Gate S 5
+Gate CX 4 8
+Gate RX 4 2.6389378290154264
+Gate CX 4 7
+Gate RX 5 1.4231414720761764
+Gate CX 5 0
+Gate CX 3 4
+Gate CX 5 7
+Gate T 5
+Gate SDG 8
+Gate Y 2
+Gate RY 9 1.3603096190043804
+Gate CX 0 4
+Gate IP 8 0.09110618695410401
+Gate CX 4 1
+Gate CX 1 2
+Gate CX 3 4
+Gate T 4
+Gate CX 5 1
+Gate Z 2
+Gate CX 6 1
+Gate CX 9 1
+Gate Z 4
+Gate RY 9 1.6587609210954108
+Gate CX 5 0
+Gate RY 4 0.01884955592153876
+Gate CX 4 5
+Gate T 6
+Gate SDG 8
+Gate IP 9 1.8818139995002863
+Gate CX 2 8
+Gate TDG 3
+Gate IP 6 0.48694686130641796
+Gate CX 7 1
+Gate CX 3 7
+Gate I 3
+Gate CX 5 6
+Gate IP 1 1.1184069846779665
+Gate T 5
+Gate Y 8
+Gate CX 2 8
+Gate CX 6 2
+Gate CX 3 4
+Gate S 3
+Gate CX 2 8
+Gate T 7
+Gate IP 5 1.7215927741672068
+Gate RX 1 1.6304865872131027
+Gate RY 6 1.5362388076054088
+Gate IP 0 2.5258404934861938
+Gate S 2
+Gate CX 7 2
+Gate TDG 6
+Gate RX 3 0.7382742735936014
+Gate CX 2 3
+Gate IP 2 0.8765043503515523
+Gate CX 9 8
+Gate CX 2 7
+Gate IP 8 1.7341591447815659
+Gate CX 6 9
+Gate CX 6 3
+Gate H 6
+Gate RX 3 1.354026433697201
+Gate T 9
+Gate CX 5 4
+Gate IP 3 1.8849555921538759
+Gate IP 9 1.5770795121020762
+Gate X 2
+Observable YZZYZXZXXZ 1.0423151471061585
+Expected_value 8.136578497730725e-18
+Qubits 7
+Gate CX 3 1
+Gate S 4
+Gate CX 2 4
+Gate CX 0 4
+Gate CX 3 4
+Gate CX 5 4
+Gate RX 6 0.5874778262212914
+Gate CX 5 4
+Gate TDG 3
+Gate X 5
+Gate I 3
+Gate IP 4 2.2682298958918303
+Gate CX 2 3
+Gate IP 2 2.2462387473167023
+Gate CX 4 5
+Gate IP 2 1.7844246272390025
+Gate T 5
+Gate CX 6 2
+Gate Y 2
+Gate CX 4 3
+Gate CX 3 4
+Gate RY 6 2.447300677146449
+Gate SDG 3
+Gate T 3
+Gate IP 6 1.7153095888600272
+Gate IP 6 2.4849997889895263
+Gate CX 5 3
+Gate CX 3 4
+Gate IP 2 1.9917697423759289
+Gate TDG 5
+Gate CX 3 6
+Gate CX 6 5
+Gate CX 6 3
+Gate CX 0 1
+Gate RX 6 1.6776104770169495
+Gate I 4
+Gate H 1
+Gate IP 6 1.6210618092523332
+Gate CX 4 5
+Gate CX 2 5
+Gate RY 3 0.3832743037379548
+Gate CX 1 2
+Gate CX 0 1
+Gate S 3
+Gate CX 0 1
+Gate CX 6 5
+Gate X 0
+Gate CX 1 2
+Gate IP 6 0.6251769380643689
+Observable XZIIYZZ 1.0324904046165364
+Observable IXZXIXX -2.806860248051084
+Observable YXXYXXY 0.6708281440040227
+Observable YXIYXIY 1.238724224353542
+Expected_value 6.563550690055625e-17
+Qubits 9
+Gate CX 0 6
+Gate RY 7 2.4441590844928593
+Gate CX 7 4
+Gate Z 8
+Gate TDG 1
+Gate RY 8 2.3279201563100367
+Gate IP 0 0.5026548245743669
+Gate SDG 7
+Gate CX 0 4
+Gate CX 0 3
+Gate S 1
+Gate CX 2 8
+Gate X 3
+Gate T 5
+Gate CX 3 0
+Gate IP 0 2.6829201261656834
+Gate CX 6 7
+Gate CX 5 2
+Gate SDG 6
+Gate CX 3 0
+Gate IP 8 0.7351326809400116
+Gate CX 7 4
+Gate IP 7 2.6452210143226056
+Gate RY 4 2.2776546738526
+Gate CX 0 2
+Gate CX 6 4
+Gate CX 6 8
+Gate RX 6 2.657787384936965
+Gate IP 7 1.9038051480754146
+Gate Z 4
+Gate CX 5 6
+Gate CX 2 7
+Gate IP 2 1.489114917801562
+Gate CX 5 0
+Gate SDG 2
+Gate CX 1 4
+Gate CX 8 0
+Gate IP 2 0.3078760800517997
+Gate CX 3 5
+Gate IP 1 0.578053048260522
+Gate SDG 8
+Gate CX 0 5
+Gate I 3
+Gate CX 8 2
+Gate IP 4 1.9289378893041331
+Gate CX 6 1
+Gate CX 1 2
+Gate CX 5 6
+Gate Z 0
+Gate SDG 0
+Gate IP 5 2.9750882429495342
+Gate SDG 7
+Gate IP 7 2.4787166036823467
+Gate CX 4 2
+Gate CX 7 3
+Gate Y 8
+Gate CX 0 8
+Gate IP 1 0.835663645854885
+Gate Z 6
+Gate CX 0 2
+Gate TDG 3
+Gate CX 2 5
+Gate CX 7 4
+Gate CX 7 8
+Gate CX 6 1
+Gate CX 5 6
+Gate RY 4 2.7834510910805568
+Gate CX 0 7
+Gate CX 1 0
+Gate X 3
+Gate CX 1 2
+Gate RY 2 2.142566189748239
+Gate H 7
+Gate H 6
+Gate I 4
+Gate CX 3 1
+Gate CX 2 8
+Gate CX 4 8
+Gate CX 2 3
+Gate CX 3 1
+Gate CX 1 6
+Observable ZIYZYZXZI 1.0321016546338921
+Observable IZIXXZIZX -2.9810820826943516
+Observable XIZYYIXIZ 1.0616123143669451
+Observable YZYIYYIXZ -2.510272951550227
+Observable ZIIZIXXYZ -0.6457321563740663
+Expected_value 2.1207197189572756e-17
+Qubits 1
+Gate CX 0 0
+Observable I 1.0341441901399606
+Observable Z -1.6582499124396284
+Observable X 1.2954256960720734
+Expected_value -0.6241057222996678
+Qubits 7
+Gate CX 5 6
+Gate IP 4 3.1227430976682546
+Gate CX 5 3
+Gate Z 6
+Gate Z 5
+Gate CX 0 3
+Gate CX 6 4
+Gate CX 3 0
+Gate CX 3 2
+Gate CX 5 2
+Gate RY 3 0.04084070449666732
+Gate IP 0 2.1331414117874696
+Gate X 3
+Gate Y 3
+Gate CX 3 6
+Gate CX 4 6
+Gate IP 3 0.48380526865282814
+Gate CX 5 1
+Gate CX 0 2
+Gate CX 4 2
+Gate H 2
+Gate CX 6 0
+Gate Y 6
+Gate H 5
+Gate CX 4 3
+Gate X 6
+Gate CX 1 2
+Gate CX 1 2
+Gate T 1
+Gate IP 4 1.338318470429252
+Gate CX 4 5
+Gate CX 4 0
+Gate IP 5 2.004336112990288
+Gate Z 4
+Gate T 1
+Gate I 1
+Gate SDG 2
+Gate CX 5 2
+Gate IP 4 0.9707521299592461
+Gate CX 3 5
+Gate RX 6 1.3131857292005336
+Gate IP 0 2.777167905773377
+Gate T 5
+Gate T 6
+Gate Y 5
+Gate SDG 4
+Gate CX 0 3
+Gate H 2
+Gate IP 6 0.35499996985564664
+Observable IZYZIIX 1.0338444928141637
+Observable XIXZZYI -1.7694778964119036
+Observable XYIZZZY 0.5748410695670811
+Observable YXXXIXI 1.4654435556255268
+Observable XZYIXYY -0.6906198252687309
+Expected_value 2.8664140102656123e-18
+Qubits 2
+Gate CX 0 1
+Gate Y 0
+Gate Z 0
+Gate CX 1 0
+Observable ZI 1.0334633593550786
+Expected_value 1.0334633593550786
+Qubits 10
+Gate CX 1 2
+Gate CX 9 1
+Gate TDG 6
+Gate CX 2 3
+Gate RX 6 2.315353785695678
+Gate CX 7 6
+Gate CX 8 1
+Gate IP 0 1.4168582867689967
+Gate IP 3 1.699601625592078
+Gate CX 9 7
+Gate CX 0 9
+Gate CX 4 9
+Gate Y 6
+Gate Z 1
+Gate TDG 3
+Gate H 2
+Gate CX 2 4
+Gate IP 9 2.6986280894336323
+Gate CX 2 3
+Gate CX 5 7
+Gate CX 9 0
+Gate CX 9 0
+Gate CX 8 6
+Gate CX 8 5
+Gate CX 7 9
+Gate IP 6 0.515221195188726
+Gate CX 8 4
+Gate CX 7 5
+Gate CX 7 8
+Gate CX 3 4
+Gate I 4
+Gate CX 1 9
+Gate CX 8 9
+Gate CX 0 3
+Gate Y 4
+Gate CX 3 8
+Gate TDG 6
+Gate CX 0 6
+Gate CX 0 8
+Gate IP 5 2.3907520093818326
+Gate CX 9 4
+Gate CX 8 2
+Gate CX 5 3
+Gate CX 8 7
+Gate IP 5 2.463008640414398
+Gate CX 3 2
+Gate CX 9 0
+Gate CX 2 6
+Gate SDG 4
+Gate CX 6 8
 Gate CX 3 1
 Gate CX 3 4
-Gate Y 5
-Gate RX 5 0.5434955290710342
-Gate CX 4 7
-Gate IP 4 1.413716694115407
-Gate CX 0 3
-Gate T 2
-Gate Z 8
-Gate CX 6 3
-Observable XXZYYZXYI 2.0256666411376445
-Expected_value 5.622354363015293e-17
-Qubits 10
-Gate CX 3 9
-Gate CX 9 0
-Gate RX 9 2.5289820861397834
-Gate CX 3 4
-Gate CX 3 4
-Gate CX 2 6
-Gate Z 7
-Gate CX 5 4
+Gate CX 0 4
 Gate Z 3
-Gate CX 8 1
-Gate H 3
-Gate S 0
-Gate X 7
+Gate S 3
+Gate TDG 8
+Gate IP 0 0.11938052083641214
 Gate CX 6 8
+Gate CX 7 5
+Gate CX 8 6
+Gate I 7
+Gate CX 2 7
+Gate IP 7 1.897521962768235
+Gate Z 6
+Gate RX 8 1.36659280431156
+Gate CX 6 5
+Gate S 3
+Gate RX 2 2.937389131106457
+Gate X 3
+Gate S 6
+Gate IP 0 0.6974335690969341
+Gate CX 9 7
+Gate I 7
+Gate IP 1 1.1875220230569419
+Gate CX 7 8
+Gate Z 7
+Gate IP 3 1.0555751316061706
+Gate I 9
+Gate CX 2 7
+Gate CX 2 6
+Gate H 9
+Gate CX 3 4
+Gate CX 1 9
+Gate RY 0 1.6430529578274617
+Gate CX 2 5
+Gate Z 5
+Gate CX 3 1
+Gate CX 8 3
+Gate CX 3 8
+Gate S 7
+Gate CX 6 3
+Gate X 2
+Gate CX 1 9
+Gate CX 3 4
 Gate CX 5 4
 Gate CX 1 9
-Gate SDG 4
-Gate CX 3 2
-Gate I 3
-Gate CX 5 3
-Gate CX 0 6
-Gate CX 4 5
-Gate CX 2 8
-Gate RY 8 0.9267698328089891
-Gate CX 9 6
-Gate I 7
-Gate CX 4 0
-Gate CX 3 9
-Gate CX 1 0
-Gate I 4
-Gate CX 3 5
-Gate Y 7
-Gate SDG 9
-Gate CX 5 3
-Gate CX 5 3
-Gate RX 8 2.6295130510546567
-Gate IP 4 1.5833626974092558
-Gate CX 6 4
-Gate TDG 6
-Gate CX 7 8
-Gate CX 4 2
-Gate CX 6 2
-Gate CX 3 4
-Gate CX 7 8
-Gate IP 9 2.054601595447725
-Gate Z 4
-Gate CX 5 7
-Gate S 9
-Gate SDG 1
-Gate SDG 6
-Gate T 1
-Gate CX 3 0
-Gate CX 4 2
-Gate CX 2 4
-Gate IP 7 3.0127873547926116
-Gate SDG 4
-Gate CX 6 5
-Gate CX 6 2
-Gate RY 6 0.8419468311620646
-Gate CX 7 1
-Gate S 6
-Gate RX 0 2.88398205599543
-Gate CX 0 4
-Gate CX 1 5
-Gate T 1
-Gate X 5
-Gate S 1
-Gate CX 8 0
-Gate CX 5 9
-Gate CX 6 3
-Gate CX 8 9
-Gate CX 3 9
-Gate CX 7 5
-Gate Z 3
-Gate CX 6 8
-Gate CX 4 5
-Gate CX 5 2
-Gate TDG 4
-Gate CX 3 2
-Gate I 1
-Gate I 9
-Gate CX 7 0
-Gate T 8
-Gate Z 4
-Gate T 7
-Gate CX 9 0
-Gate CX 7 4
-Gate CX 7 2
-Gate CX 3 4
-Gate CX 9 7
-Gate IP 0 2.5132741228718345
-Gate RY 3 1.6933184402848986
-Gate T 5
-Gate TDG 0
-Gate IP 2 2.6515041996297857
-Gate IP 0 2.155132560362598
-Gate Y 2
-Gate CX 9 5
-Gate T 0
-Gate CX 3 8
-Observable IYZXIIZZZX 2.0247410219733206
-Observable XYXZXZIIIZ -1.423386703983641
-Observable XZYIXZZZZZ -2.437696119084651
-Observable ZZZIXYIIXX 1.5664397877621696
-Observable ZYIIXZYYZZ 2.546739406520524
-Expected_value -0.2178211328413225
-Qubits 8
-Gate CX 6 5
-Gate H 4
-Gate IP 1 0.8765043503515523
-Gate CX 1 6
-Gate CX 1 7
 Gate Z 5
-Gate X 3
-Gate CX 4 6
 Gate CX 5 6
-Gate CX 6 1
-Gate CX 1 2
-Gate RY 4 2.5038493449110653
-Gate CX 6 1
-Gate CX 0 3
-Gate IP 2 1.2534954687823274
-Gate RY 3 1.152964503867454
-Gate CX 0 1
-Gate CX 0 3
-Gate I 1
-Gate CX 3 2
-Gate CX 4 5
-Gate CX 2 3
+Gate CX 0 8
 Gate CX 7 4
-Gate CX 4 5
-Gate I 4
-Gate CX 7 0
-Gate CX 5 2
-Gate CX 0 7
-Gate IP 7 2.3184953783492674
-Gate T 2
-Gate CX 2 7
-Gate SDG 1
-Gate RX 1 0.5560618996853934
-Gate IP 1 0.7414158662471911
-Gate CX 0 1
-Gate IP 4 0.4649557127312894
-Gate CX 6 7
-Gate Z 1
-Gate Z 3
-Gate CX 1 0
-Gate IP 0 1.699601625592078
-Gate RX 1 1.2503538761287378
-Gate I 6
-Gate CX 1 3
-Gate CX 6 7
-Gate Z 6
-Gate X 0
-Gate Z 7
-Gate CX 4 7
-Gate CX 0 2
-Gate S 0
-Gate IP 2 1.8315485170428494
-Gate CX 4 7
-Gate CX 7 6
-Gate CX 7 2
-Gate CX 3 5
-Gate S 6
-Gate Y 4
-Gate RY 6 1.9163715186897738
-Gate CX 5 6
-Gate CX 0 2
-Gate TDG 6
-Gate CX 0 1
-Gate CX 0 5
-Observable YXXXYZYY 2.0178645311677412
-Expected_value 5.950742855047944e-17
+Observable YXYZZYXIZY 1.0335257224063177
+Expected_value 0.0
 Qubits 4
-Gate CX 0 1
-Gate IP 0 2.2776546738526
-Gate IP 3 3.138451060936203
-Gate SDG 3
-Gate CX 3 1
-Gate CX 1 2
-Gate CX 2 3
-Gate CX 2 3
-Gate CX 1 0
-Gate CX 0 3
-Gate CX 1 3
-Gate S 2
-Gate T 3
-Gate CX 1 3
-Gate CX 3 0
-Gate CX 2 3
-Observable IIXY 2.0183624112386216
-Observable ZZYY -1.9197236948172565
-Observable YYYX 1.9595711113658731
-Observable ZIXI -1.104154083142562
-Expected_value 0.0
-Qubits 1
-Gate CX 0 0
-Observable X 2.018304621428901
-Observable Z -2.677082025429141
-Expected_value -2.677082025429141
-Qubits 5
-Gate CX 2 4
-Gate CX 0 4
-Gate Y 3
-Gate CX 0 4
-Gate I 2
-Gate X 0
-Gate IP 3 1.731017552127976
-Gate SDG 0
-Gate CX 0 2
-Gate RY 0 0.6942919764433443
-Gate CX 0 1
-Gate IP 3 2.051460002794135
-Gate H 3
-Gate TDG 3
-Gate T 3
-Gate CX 1 4
-Gate CX 0 2
-Gate CX 1 0
-Gate CX 4 0
-Gate IP 3 1.6304865872131027
-Gate CX 2 3
-Gate CX 1 3
-Gate IP 0 0.05026548245743669
-Gate IP 1 0.20106192982974677
-Gate I 0
-Observable YZYXI 2.0182767140646884
-Expected_value 0.0
-Qubits 8
-Gate SDG 0
-Gate S 5
-Gate RX 4 3.0819023931715868
-Gate X 4
-Gate CX 4 3
-Gate CX 3 2
-Gate CX 5 6
-Gate I 7
-Gate H 6
-Gate CX 0 1
-Gate RX 6 1.5833626974092558
-Gate IP 4 2.686061718819273
-Gate Z 1
-Gate IP 0 0.7319910882864218
-Gate T 5
-Gate Z 0
-Gate CX 0 5
-Gate CX 6 7
-Gate CX 5 7
-Gate CX 1 3
-Gate CX 0 6
-Gate Z 1
-Gate T 6
-Gate CX 3 5
-Gate TDG 2
-Gate S 4
-Gate CX 4 5
-Gate CX 4 3
-Gate CX 6 1
-Gate CX 4 2
-Gate CX 4 7
-Gate CX 3 2
-Gate Y 2
-Gate X 2
-Gate RX 3 0.9424777960769379
-Gate CX 0 6
-Gate CX 2 6
-Gate IP 3 1.0147344271095031
-Gate CX 7 5
-Gate CX 0 2
-Gate CX 6 2
-Gate CX 1 2
-Gate IP 0 0.8953539062730911
-Gate CX 5 6
-Gate CX 4 2
-Gate RY 1 0.5560618996853934
-Gate Y 3
-Gate S 6
-Gate CX 7 1
-Gate TDG 3
-Gate CX 0 5
-Gate TDG 2
-Gate CX 1 3
-Gate CX 3 5
-Gate RY 5 1.5268140296446395
-Gate SDG 3
-Gate CX 1 6
-Gate CX 0 7
-Gate Z 7
-Gate IP 6 0.713141532364883
-Gate IP 1 2.824291795577224
-Gate CX 4 2
-Gate CX 6 7
-Gate T 0
-Observable YZZIZIZY 2.0182125960554433
-Observable ZIZZZZIX -1.3030991730202643
-Observable ZIZIZYZZ -0.40739673641910756
-Expected_value 1.5308936557788894e-16
-Qubits 8
-Gate Z 2
-Gate CX 1 2
-Gate CX 7 1
-Gate X 2
-Gate SDG 2
-Gate RX 6 0.9707521299592461
-Gate H 0
-Gate CX 3 0
-Gate IP 5 2.689203311472863
-Gate TDG 5
-Gate CX 7 3
-Gate RY 5 0.02827433388230814
-Gate I 5
-Gate I 6
-Gate CX 5 0
-Gate T 7
-Gate S 7
-Gate CX 6 7
-Gate CX 6 1
-Gate CX 4 6
-Gate RX 0 2.038893632179776
-Gate T 0
-Gate X 7
-Gate CX 6 7
-Gate CX 3 4
-Gate IP 3 3.0379200960213297
-Gate CX 7 1
-Gate SDG 6
-Gate CX 4 6
-Gate I 7
-Gate CX 3 5
-Gate RX 4 1.9792033717615698
-Gate CX 2 3
-Gate RY 3 2.1237166338267004
-Gate I 1
-Gate CX 6 2
-Gate CX 3 4
-Gate CX 3 2
-Gate CX 7 0
-Gate CX 7 4
-Gate CX 4 6
-Gate CX 0 1
-Gate CX 5 4
-Gate CX 6 5
-Gate S 6
-Gate Y 3
-Gate I 0
-Gate S 1
-Gate CX 5 1
-Gate CX 4 3
-Gate CX 6 7
-Gate CX 5 3
-Gate CX 7 4
-Gate T 6
-Gate TDG 1
-Gate H 5
-Gate IP 0 3.097610356439536
-Gate CX 4 2
-Gate I 3
-Gate CX 4 5
-Gate Y 3
-Gate Y 0
-Gate Z 3
-Gate H 7
-Observable ZYXXIZXI 2.0172142439989598
-Observable XIXYZYYI -0.9735832805728066
-Expected_value -0.4833132353591202
-Qubits 3
-Gate S 0
-Gate I 1
-Gate T 0
-Gate IP 1 0.9047786842338604
-Gate CX 0 1
-Gate CX 1 0
-Gate H 0
-Gate S 1
-Gate CX 0 1
-Observable YIZ 2.0176611094849792
-Observable IIY 0.7131117824664333
-Observable YIX -0.0861300073702651
-Observable XXY 0.5225944219171335
-Expected_value 0.0
-Qubits 1
-Gate Z 0
-Observable Z 2.0176001336665674
-Observable I -0.2202215879947209
-Observable Z -1.6376805678988622
-Observable I -2.043996542947314
-Observable Y 0.7513539652175472
-Expected_value -1.8842985651743298
-Qubits 4
-Gate I 3
-Gate CX 3 0
-Gate CX 0 1
-Gate CX 0 1
-Gate I 1
-Gate Y 1
+Gate RX 1 0.8639379797371931
 Gate SDG 1
-Gate CX 2 0
-Gate T 2
-Gate CX 1 3
-Gate CX 0 1
-Gate Z 0
-Gate CX 1 3
-Gate T 2
-Gate CX 0 1
-Gate S 3
-Observable IYZX 2.0175681264417875
-Observable XZYY -2.332071740919789
-Observable XIII -1.2089209001915855
-Expected_value 0.0
-Qubits 10
-Gate H 5
-Gate CX 3 4
-Gate X 6
-Gate Y 7
-Gate CX 1 3
-Gate CX 6 2
-Gate CX 4 5
-Gate TDG 8
-Gate CX 6 7
-Gate TDG 1
-Gate CX 2 3
-Gate CX 4 5
-Gate S 0
-Gate CX 5 0
-Gate CX 1 5
-Gate Z 4
-Gate CX 8 9
-Gate CX 7 8
-Gate CX 5 4
-Gate CX 5 8
-Gate Z 8
-Gate IP 1 0.2670353755551324
-Gate TDG 1
-Gate I 9
-Gate IP 6 2.934247538452867
-Gate IP 5 2.9719466502959446
-Gate CX 7 8
-Gate CX 7 9
-Gate IP 8 0.1445132620651305
-Gate X 2
-Gate CX 1 4
-Gate TDG 8
-Gate TDG 4
-Gate CX 9 5
-Gate CX 5 6
+Gate I 1
+Gate CX 0 3
 Gate CX 0 2
-Gate I 5
-Gate CX 8 1
-Gate CX 6 4
-Gate CX 1 8
-Gate X 9
-Gate CX 3 2
-Gate CX 0 6
-Gate CX 6 1
-Gate H 3
-Gate IP 9 0.6785840131753953
-Gate SDG 3
-Gate CX 7 8
-Gate IP 4 0.015707963267948967
-Gate IP 6 0.6063273821428301
-Gate RX 9 0.7288494956328321
-Gate CX 6 0
-Gate CX 6 1
-Gate CX 2 9
-Gate Y 1
 Gate CX 1 3
-Gate CX 5 6
-Gate CX 4 1
-Gate CX 6 2
-Gate CX 2 3
-Gate T 8
-Gate RY 1 1.3320352851220723
-Gate T 0
-Gate X 3
-Gate CX 5 6
-Gate CX 6 9
-Gate RY 8 2.7269024233159405
-Gate IP 9 2.519557308179014
-Gate Z 8
-Gate I 3
-Gate S 0
-Gate TDG 1
-Gate CX 0 4
-Gate CX 7 1
-Gate S 8
-Gate I 4
-Gate X 8
-Gate CX 4 0
-Gate S 1
-Gate CX 4 5
-Gate CX 6 8
-Gate CX 3 0
+Gate CX 0 2
+Gate CX 0 2
 Gate TDG 0
-Gate TDG 4
-Gate RX 8 1.8409732950036186
-Gate CX 5 3
-Gate CX 6 2
-Gate IP 1 2.315353785695678
-Gate CX 4 7
-Gate IP 7 2.1237166338267004
-Gate IP 0 0.08482300164692441
-Gate RX 4 1.9163715186897738
-Gate X 2
-Gate CX 1 4
-Gate RY 1 0.07853981633974483
-Gate CX 2 6
-Gate RX 6 0.7634070148223198
-Gate Y 0
-Gate CX 0 3
-Gate CX 1 0
-Observable ZIZZIXYIXZ 2.017509825857181
-Observable YIZZXIZIXY -1.1240451628651473
-Observable ZYXZYIIZZX -2.0930972559836305
-Expected_value 2.9418486210153434e-17
+Gate CX 1 3
+Gate I 1
+Gate CX 1 3
+Gate TDG 2
+Gate RY 1 2.337344934270806
+Gate IP 1 3.015928947446201
+Gate CX 0 2
+Observable YYIZ 1.0349873936981289
+Observable IYZX -0.9474406913376846
+Observable YXYY 1.3769333676152518
+Observable YYZZ 2.7233992825818714
+Expected_value 5.4455255272339774e-18
 Qubits 3
-Gate CX 1 0
+Gate H 0
 Gate CX 2 0
+Gate S 0
 Gate CX 0 1
+Gate CX 0 1
+Gate IP 2 1.9540706305328512
+Gate CX 1 0
+Gate CX 0 2
+Gate SDG 1
+Observable ZIY 1.0362816560114316
+Expected_value 0.0
+Qubits 4
+Gate CX 1 2
+Gate Y 3
+Gate Y 2
+Gate CX 1 0
+Gate TDG 2
+Gate CX 2 3
+Gate TDG 1
+Gate X 0
+Gate CX 1 0
+Gate CX 1 3
+Gate CX 3 0
+Gate CX 0 1
+Gate X 3
+Gate CX 2 0
+Gate Y 2
+Gate CX 0 2
+Observable YXIZ 1.0362979516059134
+Observable IIZX 0.014019043514546414
+Observable IYYZ -2.8714733780444224
+Expected_value 0.0
+Qubits 1
+Gate S 0
+Observable I 1.0360252920373243
+Observable Z 1.807262041280747
+Observable Z -0.7455154805233843
+Expected_value 2.0977718527946867
+Qubits 3
+Gate RX 1 0.5183627878423158
+Gate CX 2 0
+Gate IP 1 0.7948229413582177
+Gate CX 1 2
+Gate S 2
+Gate CX 2 0
+Gate CX 1 2
+Gate S 2
 Gate H 1
-Gate CX 2 0
-Gate S 2
-Gate CX 2 1
-Gate CX 0 2
-Gate Y 0
-Observable ZIZ 2.0157279855930677
-Expected_value -2.015727985593067
-Qubits 7
-Gate Z 1
-Gate IP 5 2.987654613563893
-Gate CX 5 0
-Gate RY 5 1.0147344271095031
-Gate CX 4 5
-Gate CX 5 6
-Gate RX 1 2.8054422396556853
-Gate CX 1 0
-Gate CX 3 4
-Gate Y 1
-Gate CX 0 2
-Gate CX 2 3
-Gate CX 1 0
-Gate RY 2 1.749867108049515
-Gate CX 2 4
-Gate S 3
-Gate SDG 6
-Gate RX 2 1.1121237993707869
-Gate CX 6 0
-Gate TDG 6
-Gate Z 4
-Gate CX 5 1
-Gate T 0
-Gate I 1
-Gate CX 5 4
-Gate X 6
-Gate IP 3 0.9990264638415542
-Gate T 3
-Gate S 2
-Gate Y 3
-Gate CX 6 4
-Gate CX 5 3
-Gate Z 4
+Observable XIZ 1.0361336376553956
+Observable ZXI -1.1029611553069216
+Observable XIY 0.6628160042977274
+Observable ZXI 2.016001168397281
+Expected_value 0.7930953293133446
+Qubits 4
 Gate CX 3 0
-Gate CX 2 1
-Gate CX 5 1
-Gate S 2
-Gate TDG 0
-Gate CX 3 6
-Gate RX 5 2.598097124518759
-Gate CX 6 1
+Gate S 0
+Gate CX 0 1
+Gate TDG 3
+Gate Z 2
+Gate IP 0 2.7174776453551712
+Gate IP 2 1.639911365173872
+Gate CX 2 3
+Gate RX 2 0.2796017461694916
+Gate CX 2 3
+Gate IP 3 2.5132741228718345
+Gate CX 2 0
+Gate IP 0 2.5918139392115793
+Gate CX 2 0
 Gate CX 3 2
-Gate RY 1 2.761459942505428
-Gate CX 6 0
-Gate CX 2 1
-Gate CX 6 4
-Gate IP 6 1.4042919161546374
-Gate H 3
-Gate CX 2 4
-Observable XYYZXYI 2.015715312898849
-Observable XYXXIXZ 0.5553570183158363
-Observable YIZYIZI 0.8549032712117899
-Observable IXYYXYY -2.3551348342712926
-Expected_value -0.04447629456706709
-Qubits 1
+Gate CX 0 2
+Observable XXZI 1.0361644658125033
+Observable IYXY -0.4808339816158612
+Observable ZZZZ 2.968861981708428
+Observable ZXZZ 0.6585821127515363
+Observable IYZY 0.21971315206023267
+Expected_value 2.8535674788816676
+Qubits 4
+Gate IP 1 1.988628149722339
+Gate T 3
+Gate CX 1 3
 Gate Y 0
-Observable Y 2.016232309830664
+Gate CX 2 3
+Gate SDG 3
+Gate CX 2 3
+Gate X 0
+Gate X 1
+Gate CX 2 3
+Gate H 3
+Gate Z 0
+Gate S 1
+Gate Z 3
+Gate CX 3 1
+Gate CX 0 2
+Observable IYXY 1.035700609244446
+Observable ZYXX -1.1151165426546115
 Expected_value 0.0
-Qubits 2
-Gate CX 0 1
-Gate CX 0 1
-Gate CX 1 0
-Gate CX 0 1
-Observable XI 2.016180973333114
-Observable YI 1.9740314839623123
-Observable II 1.7207937709823453
-Observable XX -1.7202971263628097
-Observable II 1.7708715986935408
-Expected_value 3.491665369675886
 Qubits 4
 Gate CX 0 2
-Gate RY 0 1.2346459128607887
-Gate CX 1 3
-Gate CX 3 0
-Gate CX 2 1
 Gate CX 2 0
-Gate Z 0
-Gate H 2
-Gate RY 2 2.8776988706882505
-Gate IP 3 1.8912387774610555
-Gate CX 3 2
-Gate CX 1 3
-Gate CX 2 3
-Gate I 1
-Gate T 3
-Gate CX 0 1
-Observable XYXZ 2.016146993890229
-Observable IIXZ -1.0701379237856004
-Observable XXZI 2.103605057520908
-Expected_value -0.4736656168962148
-Qubits 9
-Gate CX 6 1
-Gate IP 3 1.0115928344559133
-Gate Z 1
-Gate CX 2 7
-Gate CX 5 1
-Gate S 3
-Gate Z 2
-Gate Y 5
-Gate CX 7 8
-Gate H 4
-Gate CX 7 5
-Gate CX 5 6
-Gate T 4
-Gate IP 3 2.447300677146449
-Gate X 1
-Gate CX 0 6
 Gate CX 3 1
-Gate IP 8 0.48380526865282814
-Gate IP 8 1.1026990214100174
-Gate I 3
-Gate Z 5
-Gate CX 7 1
-Gate CX 4 6
-Gate T 3
-Gate CX 3 8
-Gate CX 8 1
-Gate CX 5 6
-Gate H 3
-Gate CX 3 4
-Gate CX 7 8
-Gate CX 7 6
-Gate S 2
-Gate CX 2 5
-Gate X 8
-Gate RX 4 2.7834510910805568
-Gate S 4
-Gate CX 7 8
-Gate CX 8 4
-Gate CX 8 0
-Gate CX 3 4
-Gate RY 1 2.6954864967800427
-Gate IP 2 0.43982297150257105
-Gate X 2
-Gate I 2
-Gate CX 8 6
-Gate Y 2
-Gate CX 1 6
-Gate Z 5
-Gate H 7
-Gate IP 3 0.22305307840487532
-Gate CX 6 0
-Gate RY 7 2.4504422698000385
-Gate IP 1 0.6000441968356505
-Gate I 7
-Gate TDG 0
-Gate IP 1 0.32672563597333854
-Gate IP 7 2.195973264859265
-Gate Y 5
-Gate I 0
-Gate TDG 3
-Gate CX 4 5
-Gate S 5
-Gate CX 2 5
-Gate I 1
-Gate CX 1 0
-Gate CX 7 6
-Gate CX 3 4
-Gate CX 7 4
-Gate TDG 1
-Gate IP 7 2.4849997889895263
-Gate CX 2 6
-Gate CX 3 2
-Gate Y 2
-Gate Z 7
-Gate IP 8 0.5340707511102648
-Gate CX 6 5
-Gate IP 0 0.7194247176720626
-Gate CX 8 3
-Gate Z 5
-Gate CX 3 2
-Gate CX 7 8
-Observable YXZXXXYYX 2.0160258081227647
-Observable YIYXIXIIX -1.4354535587544621
-Observable IIIZXXXZZ -0.33272639266439596
-Observable IYXIZYYIZ -2.8021050422743286
-Observable IZYYXIXZZ 2.8811140753269653
-Expected_value 9.803727409397742e-19
-Qubits 1
-Gate T 0
-Observable Y 2.020184459540138
-Observable I 1.7394598277746567
-Observable Z 1.218793230968567
-Observable Z 1.47766225148753
-Expected_value 4.435915310230754
-Qubits 9
-Gate CX 4 8
-Gate CX 6 7
-Gate CX 4 0
-Gate Y 1
-Gate T 2
-Gate CX 8 0
-Gate CX 8 7
-Gate CX 5 0
-Gate CX 0 8
-Gate CX 4 8
-Gate CX 5 2
-Gate CX 0 5
+Gate CX 0 1
+Gate CX 2 1
+Gate CX 2 3
 Gate S 1
-Gate CX 4 5
-Gate X 0
-Gate CX 1 6
-Gate CX 5 7
-Gate RY 6 0.8230972752405259
-Gate SDG 3
-Gate CX 4 0
-Gate IP 0 0.11309733552923255
-Gate CX 5 1
-Gate CX 8 0
-Gate CX 1 6
-Gate IP 8 2.5132741228718345
-Gate IP 4 0.9236282401553992
-Gate CX 7 1
-Gate I 4
-Gate X 4
-Gate CX 4 5
-Gate CX 7 3
-Gate RY 7 1.774999849278233
-Gate CX 2 4
-Gate Y 7
-Gate I 4
-Gate CX 3 4
-Gate CX 8 3
-Gate CX 1 2
-Gate CX 4 6
-Gate IP 5 2.871415685381071
-Gate X 0
-Gate CX 7 4
-Gate Z 1
-Gate IP 7 1.8786724068466962
-Gate CX 4 2
-Gate IP 8 1.2566370614359172
-Gate T 6
-Gate CX 3 6
-Gate CX 0 1
-Gate CX 5 4
-Gate CX 8 4
-Gate CX 4 0
-Gate H 5
-Gate CX 2 6
-Gate IP 1 2.6954864967800427
-Gate CX 6 4
-Gate CX 7 2
-Gate IP 0 1.2126547642856602
-Gate S 7
-Gate I 8
+Gate IP 0 2.616946680440298
+Gate TDG 0
+Gate RX 1 2.7426103865838893
+Gate T 3
 Gate CX 2 3
-Gate IP 0 1.5425219929125886
-Gate CX 0 5
-Gate IP 5 1.4639821765728436
-Gate CX 4 2
-Gate CX 4 3
-Gate RY 7 1.259778654089507
-Gate IP 0 2.7646015351590183
-Gate CX 3 4
-Gate IP 3 2.2211060060879837
-Gate CX 2 0
-Gate IP 1 1.3885839528866886
-Gate CX 7 1
-Gate Z 6
-Gate Y 4
-Gate TDG 1
-Gate CX 5 8
-Gate RX 6 0.5026548245743669
-Gate CX 1 2
-Gate CX 1 5
-Gate T 0
-Observable YIZYYXYXI 2.020070189947886
-Observable YYYZZZZZZ 0.19113283618623167
-Expected_value 3.5042631816235256e-18
-Qubits 9
-Gate T 4
-Gate CX 1 6
-Gate Y 6
-Gate CX 2 8
-Gate TDG 7
-Gate CX 4 5
-Gate IP 8 2.8054422396556853
-Gate RY 7 2.1739821162841366
-Gate CX 2 0
-Gate TDG 3
-Gate Y 5
-Gate IP 5 1.3100441365469437
-Gate H 4
-Gate I 7
-Gate CX 0 1
-Gate CX 2 4
-Gate Y 8
-Gate CX 2 3
-Gate CX 6 7
-Gate CX 7 6
-Gate CX 2 1
-Gate IP 1 0.6031857894892403
-Gate T 0
-Gate CX 6 8
-Gate I 1
-Gate IP 2 0.41154863762026295
-Gate IP 8 2.5603980126756816
-Gate CX 0 2
-Gate CX 1 0
-Gate IP 8 2.7960174616949156
-Gate RY 3 1.0838494654884787
-Gate CX 0 2
-Gate SDG 7
-Gate X 2
-Gate CX 6 7
-Gate CX 0 2
-Gate S 4
-Gate IP 7 0.5434955290710342
-Gate CX 4 5
-Gate CX 1 6
-Gate CX 6 8
-Gate CX 7 5
-Gate I 4
-Gate CX 3 2
-Gate CX 8 0
-Gate RX 5 1.4734069545336128
-Gate X 8
-Gate CX 3 6
-Gate TDG 8
-Gate RX 6 1.1184069846779665
-Gate TDG 1
-Gate H 2
-Gate RY 1 0.7508406442079605
-Gate CX 5 6
-Gate RX 0 1.5770795121020762
-Gate CX 7 4
-Gate CX 3 8
-Gate CX 4 5
-Gate CX 1 4
-Gate IP 3 1.8755308141931064
-Gate RX 7 1.8535396656179781
-Gate CX 1 3
-Gate CX 5 7
-Gate Y 1
-Gate IP 3 1.5865042900628454
-Gate CX 0 8
-Gate Z 4
-Gate CX 6 7
-Gate I 7
-Gate CX 5 1
-Gate RX 8 0.8607963870836034
-Gate CX 6 0
-Gate CX 8 6
-Gate CX 7 0
-Gate SDG 2
-Gate CX 5 1
-Gate CX 8 3
-Gate CX 0 1
-Gate RY 7 2.978229835603124
-Gate CX 7 8
-Gate CX 7 6
-Observable XXZYIIXYI 2.0192983691983817
-Observable XYXYXXXXY 2.6946508218234952
-Expected_value -1.808906735771315e-17
-Qubits 6
-Gate Y 5
-Gate T 1
-Gate IP 0 1.5990706606772047
-Gate SDG 4
-Gate CX 2 3
-Gate CX 3 1
-Gate CX 3 2
 Gate Y 0
-Gate Z 5
-Gate X 2
-Gate IP 3 2.060884780754904
-Gate CX 2 4
-Gate TDG 3
-Gate CX 3 4
-Gate CX 0 4
-Gate CX 2 0
+Gate CX 3 0
+Gate RY 0 2.0420352248333655
 Gate CX 1 0
-Gate CX 4 2
-Gate IP 4 0.05969026041820607
-Gate Z 4
-Gate I 0
+Observable YXXI 1.0369563958443582
+Observable IZII -0.14804898690019863
+Observable XXZI 0.11018550643553726
+Expected_value -0.14804898690019863
+Qubits 9
+Gate CX 4 5
+Gate CX 3 1
+Gate SDG 6
+Gate Z 3
+Gate CX 4 3
+Gate CX 6 1
+Gate CX 5 0
+Gate Z 5
+Gate CX 0 4
+Gate Z 6
+Gate CX 3 5
+Gate RY 6 1.3320352851220723
+Gate CX 3 7
+Gate IP 0 0.8765043503515523
+Gate IP 5 2.9153979825313283
+Gate CX 1 2
+Gate CX 4 1
+Gate X 7
+Gate CX 1 8
+Gate CX 5 7
+Gate CX 1 4
+Gate CX 3 4
+Gate CX 3 1
+Gate CX 0 1
 Gate T 0
-Gate CX 5 0
-Gate Y 1
-Gate RX 3 0.5277875658030853
-Gate CX 3 2
-Gate T 5
-Gate Y 3
+Gate CX 4 1
+Gate CX 0 6
+Gate I 2
+Gate Y 8
+Gate T 1
+Gate CX 6 7
+Gate CX 8 0
+Gate CX 4 8
+Gate IP 8 0.4429645641561608
+Gate TDG 2
 Gate CX 2 5
-Gate IP 4 1.426283064729766
-Gate IP 3 2.7300440159695305
-Gate H 2
-Gate RY 5 1.3477432483900214
-Gate I 5
+Gate RX 2 0.02199114857512855
+Gate Z 0
+Gate RY 2 2.2336723767023425
+Gate CX 0 4
+Gate S 2
+Gate CX 5 8
+Gate CX 0 1
+Gate Z 8
+Gate CX 5 6
+Gate CX 4 5
+Gate Y 3
+Gate Z 8
+Gate TDG 4
 Gate CX 5 0
-Gate RY 0 0.9487609813841175
-Observable ZIIXZI 2.0188067430646486
-Expected_value 0.44657638934542127
+Gate CX 7 0
+Gate CX 1 4
+Gate CX 2 5
+Gate CX 7 5
+Gate CX 3 5
+Gate T 6
+Gate S 5
+Gate CX 0 8
+Gate CX 0 7
+Gate RX 2 0.5026548245743669
+Gate CX 5 8
+Gate CX 7 0
+Gate H 1
+Gate IP 6 2.3750440461138838
+Gate IP 0 1.6367697725202823
+Gate CX 0 7
+Gate CX 8 0
+Gate CX 7 3
+Gate CX 6 4
+Gate TDG 1
+Gate CX 6 3
+Gate T 1
+Gate T 7
+Gate CX 6 7
+Gate X 7
+Gate RY 1 0.39584067435231396
+Gate H 1
+Gate CX 0 7
+Gate IP 3 2.1488493750554185
+Gate CX 4 0
+Gate CX 4 8
+Observable IZIIIYIXI 1.0370196572174202
+Observable IZZIYYIZZ -1.2646633460728764
+Expected_value 1.755072956512e-17

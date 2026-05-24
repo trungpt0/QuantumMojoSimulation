@@ -115,6 +115,9 @@ struct Complex(Copyable):
     def add(self, other: Complex) -> Complex:
         return Complex(self.re + other.re, self.im + other.im)
 
+    def sub(self, other: Complex) -> Complex:
+        return Complex(self.re - other.re, self.im - other.im)
+
     def dif(self, other: Complex) -> Complex:
         return Complex(self.re - other.re, self.im - other.im)
 
