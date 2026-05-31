@@ -34,7 +34,7 @@ def estimator_benchmark(nq: Int, ng: Int, h_terms: Int, pauli_coeff_range: Float
         O_coeffs.append(coeff)
     var expected_value = Estimator().run(qc, H).expectation[0]
     var out: String = ""
-    var f = open("benchmark/estimator_benchmark.txt", "a")
+    var f = open("benchmark/estimator/estimator_benchmark.txt", "a")
     out += "Qubits " + String(nq) + "\n"
     for i in range(len(gate_log)):
         var g = gate_log[i].copy()
@@ -56,7 +56,7 @@ def main() raises:
     var NUM_TRIALS: Int = 100
     var H_TERMS: Int = 5
     var PAULI_COEFF_RANGE: Float64 = 3.0
-    var f = open("benchmark/estimator_benchmark.txt", "w")
+    var f = open("benchmark/estimator/estimator_benchmark.txt", "w")
     f.close()
     for _ in range(NUM_TRIALS):
         var n = random_int(MIN_QUBITS, MAX_QUBITS + 1)

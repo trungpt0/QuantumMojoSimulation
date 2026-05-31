@@ -49,21 +49,42 @@ struct DAGCircuit(Copyable, Movable):
         self.output_nodes = other.output_nodes
         self.frontier = other.frontier
 
+    def _add_edge_if_not_exists(mut self, src: Int, dst: Int, qubit: Int):
+        for i in range(len(self.edges)):
+            if (self.edges[i].src == src and
+                self.edges[i].dst == dst and
+                self.edges[i].qubit == qubit):
+                return
+        self.edges.append(DAGEdge(src, dst, qubit))
+    
+    def _remove_edge_to_output(mut self, q: Int):
+        var onode_id = self.output_nodes[q]
+        var new_edges = List[DAGEdge]()
+        for i in range(len(self.edges)):
+            var e = self.edges[i].copy()
+            if e.src == self.frontier[q] and e.dst == onode_id and e.qubit == q:
+                continue
+            new_edges.append(e.copy())
+        self.edges = new_edges^
+
     def add_operation(mut self, gate: GateOp):
         var node_id = len(self.nodes)
         self.nodes.append(DAGNode(node_id, gate, "gate"))
         for i in range(len(gate.qubit)):
             var q = gate.qubit[i]
             var prev_node_id = self.frontier[q]
+            self._remove_edge_to_output(q)
             self.edges.append(DAGEdge(prev_node_id, node_id, q))
             self.frontier[q] = node_id
-
+    
     def finalize_operation(mut self):
         for q in range(self.qubits):
             var onode_id = self.output_nodes[q]
-            var prev_node_id = self.frontier[q]
-            if prev_node_id != onode_id:
-                self.edges.append(DAGEdge(prev_node_id, onode_id, q))
+            var fnode_id = self.frontier[q]
+            if fnode_id == self.input_nodes[q]:
+                self._add_edge_if_not_exists(fnode_id, onode_id, q)
+                continue
+            self._add_edge_if_not_exists(fnode_id, onode_id, q)
 
     def remove_operation(mut self, node_id: Int):
         var in_edges = List[DAGEdge]()
@@ -84,6 +105,14 @@ struct DAGCircuit(Copyable, Movable):
                 if iedge.qubit == oedge.qubit:
                     keep_edges.append(DAGEdge(iedge.src, oedge.dst, iedge.qubit))
         self.edges = keep_edges.copy()
+        for q in range(self.qubits):
+            if self.frontier[q] == node_id:
+                var new_front = self.input_nodes[q]
+                for i in range(len(in_edges)):
+                    if in_edges[i].qubit == q:
+                        new_front = in_edges[i].src
+                        break
+                self.frontier[q] = new_front
         self.nodes[node_id] = DAGNode(node_id, GateOp("REMOVED", List[Int]()), "removed")
 
     def predecessors(self, node_id: Int) -> List[Int]:
@@ -198,5 +227,190 @@ struct DAGCircuit(Copyable, Movable):
         print("Depth:", self.depth())
         print("Topo:")
         var topo = self.topological_sort()
+        print("Length topo:", len(topo))
         for i in range(len(topo)):
             print(i, "→", self.nodes[topo[i]].__str__())
+
+    def _sort_by_topo(self, topo: List[Int], nodes: List[Int]) -> List[Int]:
+        var res = List[Int]()
+        for i in range(len(topo)):
+            for j in range(len(nodes)):
+                if topo[i] == nodes[j]:
+                    res.append(nodes[j])
+                    break
+        return res^
+
+    def collect_1q_runs(self) -> List[List[Int]]:
+        var topo = self.topological_sort()
+        var in_collected = List[Bool]()
+        for i in range(len(self.nodes)):
+            in_collected.append(False)
+        var collected = List[List[Int]]()
+        for i in range(len(topo)):
+            var start = topo[i]
+            if in_collected[start]: continue
+            if self.nodes[start].type != "gate": continue
+            var gate = self.nodes[start].gate.copy()
+            if len(gate.qubit) != 1: continue
+            if (gate.name == "MEASURE" or
+                gate.name == "RESET" or
+                gate.name == "BARRIER"): continue
+            var q = gate.qubit[0]
+            var coll = List[Int]()
+            coll.append(start)
+            in_collected[start] = True
+            var j = i + 1
+            while j < len(topo):
+                var nid = topo[j]
+                if in_collected[nid]: j += 1; continue
+                if self.nodes[nid].type != "gate": j += 1; continue
+                var ng = self.nodes[nid].gate.copy()
+                if len(ng.qubit) != 1 or ng.qubit[0] != q:
+                    var uses_q = False
+                    for k in range(len(ng.qubit)):
+                        if ng.qubit[k] == q:
+                            uses_q = True
+                    if uses_q: break
+                    j += 1
+                    continue
+                if (ng.name == "MEASURE" or
+                    ng.name == "RESET" or
+                    ng.name == "BARRIER"): break
+                var preds = self.predecessors(nid)
+                var pred_on_q: Int = -1
+                for k in range(len(preds)):
+                    var pid = preds[k]
+                    if self.nodes[pid].type == "input": continue
+                    var pg = self.nodes[pid].gate.copy()
+                    for l in range(len(pg.qubit)):
+                        if pg.qubit[l] == q:
+                            pred_on_q = pid
+                            break
+                if pred_on_q == coll[len(coll) - 1]:
+                    coll.append(nid)
+                    in_collected[nid] = True
+                else:
+                    break
+                j += 1
+            if len(coll) >= 1:
+                collected.append(coll.copy())
+        return collected^
+
+    def collect_2q_runs(self) -> List[List[Int]]:
+        var topo = self.topological_sort()
+        var in_collected = List[Bool]()
+        for i in range(len(self.nodes)):
+            in_collected.append(False)
+        var collected = List[List[Int]]()
+        for i in range(len(topo)):
+            var start = topo[i]
+            if in_collected[start]: continue
+            if self.nodes[start].type != "gate": continue
+            var gate = self.nodes[start].gate.copy()
+            if len(gate.qubit) != 2: continue
+            if (gate.name == "MEASURE" or
+                gate.name == "BARRIER" or
+                gate.name == "RESET"): continue
+            var q0 = gate.qubit[0]
+            var q1 = gate.qubit[1]
+            var coll = List[Int]()
+            var j = i - 1
+            while j >= 0:
+                var nid = topo[j]
+                if in_collected[nid]:
+                    j -= 1
+                    continue
+                if self.nodes[nid].type != "gate":
+                    j -= 1
+                    continue
+                var ng = self.nodes[nid].gate.copy()
+                if len(ng.qubit) != 1:
+                    j -= 1
+                    continue
+                var q = ng.qubit[0]
+                if q != q0 and q != q1:
+                    j -= 1
+                    continue
+                if (ng.name == "MEASURE" or
+                    ng.name == "BARRIER" or
+                    ng.name == "RESET"):
+                    j -= 1
+                    continue
+                var succs = self.successors(nid)
+                var check = True
+                for k in range(len(succs)):
+                    var sid = succs[k]
+                    if self.nodes[sid].type == "output": continue
+                    if sid == start: continue
+                    if not in_collected[sid]:
+                        check = False
+                        break
+                if check:
+                    coll.append(nid)
+                    in_collected[nid] = True
+                j -= 1
+            coll.append(start)
+            in_collected[start] = True
+            j = i + 1
+            while j < len(topo):
+                var nid = topo[j]
+                if in_collected[nid]:
+                    j += 1
+                    continue
+                if self.nodes[nid].type != "gate":
+                    j += 1
+                    continue
+                var ng = self.nodes[nid].gate.copy()
+                if (ng.name == "MEASURE" or
+                    ng.name == "BARRIER" or
+                    ng.name == "RESET"):
+                    for k in range(len(ng.qubit)):
+                        if ng.qubit[k] == q0 or ng.qubit[k] == q1:
+                            j = len(topo)
+                            break
+                    j += 1
+                    continue
+                var uses_q0 = False
+                var uses_q1 = False
+                var uses_other = False
+                for k in range(len(ng.qubit)):
+                    var q = ng.qubit[k]
+                    if q == q0: uses_q0 = True
+                    elif q == q1: uses_q1 = True
+                    else: uses_other = True
+                if uses_other:
+                    if uses_q0 or uses_q1:
+                        break
+                    j += 1
+                    continue
+                var preds = self.predecessors(nid)
+                var all_preds_in_coll = True
+                for k in range(len(preds)):
+                    var pid = preds[k]
+                    if self.nodes[pid].type == "input": continue
+                    if self.nodes[pid].type == "removed": continue
+                    var pg = self.nodes[pid].gate.copy()
+                    var pred_on_block = False
+                    for l in range(len(pg.qubit)):
+                        if pg.qubit[l] == q0 or pg.qubit[l] == q1:
+                            pred_on_block = True
+                            break
+                    if pred_on_block and not in_collected[pid]:
+                        all_preds_in_coll = False
+                        break
+                if all_preds_in_coll:
+                    coll.append(nid)
+                    in_collected[nid] = True
+                else:
+                    if uses_q0 or uses_q1:
+                        break
+                j += 1
+            var sorted_coll = self._sort_by_topo(topo, coll)
+            var has_2q = False
+            for k in range(len(sorted_coll)):
+                if len(self.nodes[sorted_coll[k]].gate.qubit) == 2:
+                    has_2q = True
+                    break
+            if has_2q:
+                collected.append(sorted_coll.copy())
+        return collected^

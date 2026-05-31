@@ -121,7 +121,7 @@ def estimator_evaluation(path: str, tol: float):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--file", default="benchmark/estimator_benchmark.txt")
+    ap.add_argument("--file", default="benchmark/estimator/estimator_benchmark.txt")
     ap.add_argument("--tol", type=float, default=1e-6)
     args = ap.parse_args()
     estimator_evaluation(args.file, args.tol)

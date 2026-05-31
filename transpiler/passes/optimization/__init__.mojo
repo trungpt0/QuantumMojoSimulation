@@ -2,3 +2,6 @@ from .remove_identity_equivalent import RemoveIdentityEquivalent
 from .remove_diagonal_gates_before_measure import RemoveDiagonalGatesBeforeMeasure
 from .inverse_cancellation import InverseCancellation
 from .commutative_inverse_cancellation import CommutativeInverseCancellation
+from .collect_1q_runs import Collect1qRuns
+from .collect_2q_blocks import Collect2qBlocks
+from .consolidate_blocks import ConsolidateBlocks

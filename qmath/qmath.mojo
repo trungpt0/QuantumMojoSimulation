@@ -130,6 +130,19 @@ struct Complex(Copyable):
             self.re * other.im + self.im * other.re
         )
 
+    def div(self, other: Complex) -> Complex:
+        var denom = other.re * other.re + other.im * other.im
+        return Complex(
+            (self.re * other.re + self.im * other.im) / denom,
+            (self.im * other.re - self.re * other.im) / denom
+        )
+
+    def norm(self) -> Float64:
+        return self.re * self.re + self.im * self.im
+
+    def abs(self) -> Float64:
+        return sqrt(self.re * self.re + self.im * self.im)
+
 def abs2(c: Complex) -> Float64:
     return c.re * c.re + c.im * c.im
 
