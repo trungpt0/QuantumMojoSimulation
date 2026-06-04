@@ -1,5 +1,5 @@
 from qmath import inv, Complex
-from std.math import sin, cos, abs
+from std.math import sin, cos, abs, sqrt
 
 struct Matrix2x2(Copyable, Movable):
     """
@@ -46,15 +46,15 @@ struct Matrix2x2(Copyable, Movable):
             for c in range(2):
                 var sum = Complex(0.0, 0.0)
                 for k in range(2):
-                    sum = sum.add(self.get(r, k)).mul(other.get(k, c))
+                    sum = sum.add(self.get(r, k).mul(other.get(k, c)))
                 res.set(r, c, sum)
         return res^
 
     def dagger(self) -> Matrix2x2:
         return Matrix2x2(
-            Complex(self.get(0,0).re, -self.get(0,0).im)
-            Complex(self.get(1,0).re, -self.get(1,0).im)
-            Complex(self.get(0,1).re, -self.get(0,1).im)
+            Complex(self.get(0,0).re, -self.get(0,0).im),
+            Complex(self.get(1,0).re, -self.get(1,0).im),
+            Complex(self.get(0,1).re, -self.get(0,1).im),
             Complex(self.get(1,1).re, -self.get(1,1).im)
         )
 
@@ -148,6 +148,11 @@ struct Matrix4x4(Copyable, Movable):
             var d = self.get(i, i).sub(refm)
             if d.norm() > tol: return False
         return True
+
+    def is_unitary(self, tol = Float64 = 1e-10) -> Float64:
+        var dagger = self.dagger()
+        var product = dagger.mul(self)
+        return product.is_identity(tol)
     
     def is_tensor_product(self, tol: Float64 = 1e-10) -> Bool:
         var ref_block = List[Complex]()
@@ -252,6 +257,20 @@ struct Matrix4x4(Copyable, Movable):
                 var idx = (r * 4 + c) * 2
                 m.set(r, c, Complex(params[idx], params[idx + 1]))
         return m^
+
+    def norm_frobenius(self) -> Float64:
+        var s: Float64 = 0.0
+        for i in range(16):
+            var v = self.matrix[i]
+            s += v.re * v.re + v.im * v.im
+        return sqrt(s)
+
+    def fidelity(self, other: Matrix4x4) -> Float64:
+        var dagger = self.dagger()
+        var product = dagger.mul(other)
+        var tr = product.trace()
+        tr_norm_sq = tr.re * tr.re + tr.im * tr.im
+        return (tr_norm_sq + d) / (d * (d + 1))
 
     def print_matrix(self):
         print("Matrix 4x4:")
