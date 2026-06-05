@@ -134,7 +134,7 @@ struct DAGCircuit(Copyable, Movable):
         Kahn's algorithm
         """
         var in_degree = List[Int]()
-        for i in range(len(self.nodes)):
+        for _ in range(len(self.nodes)):
             in_degree.append(0)
         for i in range(len(self.edges)):
             in_degree[self.edges[i].dst] += 1
@@ -243,7 +243,7 @@ struct DAGCircuit(Copyable, Movable):
     def collect_1q_runs(self) -> List[List[Int]]:
         var topo = self.topological_sort()
         var in_collected = List[Bool]()
-        for i in range(len(self.nodes)):
+        for _ in range(len(self.nodes)):
             in_collected.append(False)
         var collected = List[List[Int]]()
         for i in range(len(topo)):
@@ -299,7 +299,7 @@ struct DAGCircuit(Copyable, Movable):
     def collect_2q_runs(self) -> List[List[Int]]:
         var topo = self.topological_sort()
         var in_collected = List[Bool]()
-        for i in range(len(self.nodes)):
+        for _ in range(len(self.nodes)):
             in_collected.append(False)
         var collected = List[List[Int]]()
         for i in range(len(topo)):

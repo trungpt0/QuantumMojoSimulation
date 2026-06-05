@@ -133,7 +133,7 @@ struct Matrix4x4(Copyable, Movable):
         var t = Complex(0.0, 0.0)
         for i in range(4):
             t = t.add(self.get(i, i))
-        return t
+        return t^
     
     def is_identity(self, tol: Float64 = 1e-10) -> Bool:
         for r in range(4):
@@ -197,8 +197,11 @@ struct Matrix4x4(Copyable, Movable):
     def extract_factors(self, tol: Float64 = 1e-10) -> Tuple[Matrix2x2, Matrix2x2]:
         var ua = Matrix2x2()
         var ub = Matrix2x2()
+        var ref_i: Int = -1
+        var ref_k: Int = -1
+        var ref_block = List[Complex]()
         for i in range(2):
-            for j in range(2):
+            for k in range(2):
                 var block_norm: Float64 = 0.0
                 for di in range(2):
                     for dk in range(2):
@@ -213,7 +216,7 @@ struct Matrix4x4(Copyable, Movable):
             if ref_i >= 0:
                 break
         if ref_i < 0:
-            return (ua, ub)
+            return (ua^, ub^)
         ub.set(0, 0, ref_block[0])
         ub.set(0, 1, ref_block[1])
         ub.set(1, 0, ref_block[2])
@@ -228,7 +231,7 @@ struct Matrix4x4(Copyable, Movable):
                     break
             if pivot_di >= 0:
                 break
-        var pivot_val = ref_block[pivot_di * 2 + pivot_dk]
+        var pivot_val = ref_block[pivot_di * 2 + pivot_dk].copy()
         var lambdas = List[Complex]()
         for i in range(2):
             for k in range(2):
@@ -238,7 +241,7 @@ struct Matrix4x4(Copyable, Movable):
         ua.set(0, 1, lambdas[1])
         ua.set(1, 0, lambdas[2])
         ua.set(1, 1, lambdas[3])
-        return (ua, ub)
+        return (ua^, ub^)
 
     def serialize(self) -> List[Float64]:
         var result = List[Float64]()
