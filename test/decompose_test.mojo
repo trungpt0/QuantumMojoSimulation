@@ -1,5 +1,4 @@
-from qmath import Complex, Matrix2x2
-from std.math import sqrt
+from qmath import Complex, Matrix2x2, sqrt
 from gates import GateOp
 from transpiler.passes.basis import OneQubitEulerDecomposer
 
@@ -8,7 +7,7 @@ def make_identity() -> Matrix2x2:
     return m^
 
 def make_hadamard() -> Matrix2x2:
-    var s = 0.7071067811865476  # 1/sqrt(2)
+    var s = 1 / sqrt(2)
     var m = Matrix2x2()
     m.set(0, 0, Complex(s, 0.0))
     m.set(0, 1, Complex(s, 0.0))
@@ -34,18 +33,12 @@ def make_pauli_y() -> Matrix2x2:
 
 def make_t_gate() -> Matrix2x2:
     var m = Matrix2x2()
-
     m.set(0, 0, Complex(1.0, 0.0))
     m.set(0, 1, Complex(0.0, 0.0))
     m.set(1, 0, Complex(0.0, 0.0))
-
     var s = 1.0 / sqrt(2.0)
     m.set(1, 1, Complex(s, s))
-
     return m^
-
-
-# ── Helper in kết quả ─────────────────────────────────────────────────────────
 
 def print_gates(gates: List[GateOp]):
     if len(gates) == 0:

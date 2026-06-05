@@ -17,7 +17,10 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
         if choice == 0:
             g = ApplyRandomGateLog.apply_random_single_qubit_gate_with_log(qc, nq)
         else:
-            g = ApplyRandomGateLog.apply_random_cx_gate_with_log(qc, nq)
+            if nq == 1:
+                g = ApplyRandomGateLog.apply_random_single_qubit_gate_with_log(qc, nq)
+            else:
+                g = ApplyRandomGateLog.apply_random_cx_gate_with_log(qc, nq)
         gate_log.append(g^)
     var out: String = ""
     var f = open("benchmark/transpiler_stage1/opt_benchmark.txt", "a")
@@ -33,11 +36,10 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
     var dag = DAGCircuit.from_circuit(qc)
     var pass1 = RemoveIdentityEquivalent()
     var dag1 = pass1.run(dag^)
-    var topo = dag1.topological_sort()
-    for i in range(len(topo)):
-        var nid = topo[i]
-        var g = ApplyRandomGateLog.gate_with_log(dag1.nodes[nid].gate.name, dag1.nodes[nid].gate.qubit, dag1.nodes[nid].gate.theta)
-        dag_gate_log.append(g^)
+    for i in range(len(dag1.nodes)):
+        if dag1.nodes[i].type == "gate":
+            var g = ApplyRandomGateLog.gate_with_log(dag1.nodes[i].gate.name, dag1.nodes[i].gate.qubit, dag1.nodes[i].gate.theta)
+            dag_gate_log.append(g^)
     for i in range(len(dag_gate_log)):
         var g = dag_gate_log[i].copy()
         out += "GateAfter " + g.gate_name + " "

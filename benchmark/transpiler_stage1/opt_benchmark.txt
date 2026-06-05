@@ -1,266 +1,302 @@
-Qubits 1
-GateBefore IP 0 0.05969026041820607
-GateAfter IP 0 0.05969026041820607 
-Qubits 3
-GateBefore I 0
+Qubits 5
+GateBefore CX 4 2
+GateBefore CX 3 4
+GateBefore CX 2 3
+GateBefore TDG 4
+GateBefore CX 3 1
 GateBefore CX 1 2
-GateBefore Y 0
+GateBefore CX 3 2
+GateBefore H 4
+GateBefore CX 3 4
+GateBefore CX 0 1
+GateBefore RX 2 2.9216811678385075
+GateBefore H 0
+GateBefore IP 0 2.4441590844928593
+GateBefore CX 4 1
+GateBefore RY 4 1.8284069243892596
+GateBefore CX 2 3
+GateBefore X 3
+GateBefore SDG 2
+GateBefore CX 0 4
+GateBefore I 1
+GateBefore H 1
+GateBefore CX 0 4
+GateBefore CX 3 1
+GateBefore RX 3 1.3257520998148928
+GateBefore CX 2 1
+GateAfter CX 4 2 
+GateAfter CX 3 4 
+GateAfter CX 2 3 
+GateAfter TDG 4 
+GateAfter CX 3 1 
+GateAfter CX 1 2 
+GateAfter CX 3 2 
+GateAfter H 4 
+GateAfter CX 3 4 
+GateAfter CX 0 1 
+GateAfter RX 2 2.9216811678385075 
+GateAfter H 0 
+GateAfter IP 0 2.4441590844928593 
+GateAfter CX 4 1 
+GateAfter RY 4 1.8284069243892596 
+GateAfter CX 2 3 
+GateAfter X 3 
+GateAfter SDG 2 
+GateAfter CX 0 4 
+GateAfter H 1 
+GateAfter CX 0 4 
+GateAfter CX 3 1 
+GateAfter RX 3 1.3257520998148928 
+GateAfter CX 2 1 
+Qubits 3
+GateBefore CX 1 2
 GateBefore CX 2 0
-GateBefore CX 0 2
-GateBefore IP 2 0.21048670779051615
-GateBefore IP 2 1.9352210746113125
-GateBefore Z 1
-GateBefore CX 1 0
-GateAfter Y 0 
+GateBefore T 1
+GateBefore Z 0
+GateBefore X 1
+GateBefore RX 2 2.8934068339561994
+GateBefore SDG 1
+GateBefore CX 0 1
+GateBefore CX 2 1
 GateAfter CX 1 2 
 GateAfter CX 2 0 
-GateAfter Z 1 
-GateAfter CX 0 2 
-GateAfter IP 2 0.21048670779051615 
-GateAfter CX 1 0 
-GateAfter IP 2 1.9352210746113125 
-Qubits 4
-GateBefore RX 0 0.6534512719466771
-GateBefore CX 3 2
-GateBefore Z 3
-GateBefore I 3
-GateBefore S 3
-GateBefore TDG 1
-GateBefore T 1
-GateBefore Z 1
-GateBefore CX 2 0
-GateBefore CX 2 3
-GateBefore Y 3
-GateBefore Z 0
-GateBefore S 3
-GateBefore CX 2 1
-GateBefore CX 2 3
-GateBefore I 0
-GateAfter RX 0 0.6534512719466771 
-GateAfter TDG 1 
-GateAfter CX 3 2 
 GateAfter T 1 
-GateAfter Z 3 
-GateAfter CX 2 0 
-GateAfter Z 1 
-GateAfter S 3 
 GateAfter Z 0 
-GateAfter CX 2 3 
-GateAfter Y 3 
+GateAfter X 1 
+GateAfter RX 2 2.8934068339561994 
+GateAfter SDG 1 
+GateAfter CX 0 1 
 GateAfter CX 2 1 
-GateAfter S 3 
-GateAfter CX 2 3 
-Qubits 5
-GateBefore CX 3 1
-GateBefore CX 3 0
-GateBefore CX 4 3
-GateBefore CX 1 0
+Qubits 3
+GateBefore CX 1 2
+GateBefore I 2
+GateBefore I 2
+GateBefore S 2
+GateBefore CX 1 2
+GateBefore CX 0 2
+GateBefore CX 2 0
+GateBefore RY 0 2.142566189748239
 GateBefore CX 0 1
-GateBefore CX 2 3
-GateBefore IP 3 1.0273007977238624
-GateBefore RY 2 1.429424657383356
-GateBefore TDG 1
-GateBefore CX 4 3
+GateAfter CX 1 2 
+GateAfter S 2 
+GateAfter CX 1 2 
+GateAfter CX 0 2 
+GateAfter CX 2 0 
+GateAfter RY 0 2.142566189748239 
+GateAfter CX 0 1 
+Qubits 5
+GateBefore SDG 4
+GateBefore Y 1
+GateBefore RY 2 0.02827433388230814
+GateBefore IP 4 0.8042477193189871
+GateBefore I 3
+GateBefore X 3
+GateBefore CX 1 4
+GateBefore IP 0 2.8023006470020957
+GateBefore Y 0
+GateBefore CX 4 1
+GateBefore CX 1 0
+GateBefore H 2
+GateBefore Y 0
+GateBefore CX 3 4
+GateBefore S 1
+GateBefore Z 4
+GateBefore RX 1 2.5446900494077322
+GateBefore RX 3 1.2723450247038661
+GateBefore S 3
+GateBefore IP 0 0.5529203070318035
+GateBefore RY 4 2.0734511513692633
 GateBefore CX 4 0
-GateBefore CX 4 2
-GateBefore CX 3 0
-GateBefore CX 2 3
-GateBefore CX 3 2
+GateBefore I 2
 GateBefore CX 1 4
 GateBefore CX 1 0
-GateBefore T 4
-GateBefore CX 4 1
-GateBefore IP 3 2.720619238008761
-GateBefore CX 1 2
-GateBefore X 0
-GateBefore SDG 0
-GateBefore CX 1 0
-GateBefore IP 1 3.0819023931715868
-GateAfter CX 3 1 
-GateAfter CX 3 0 
-GateAfter CX 4 3 
-GateAfter CX 1 0 
-GateAfter CX 2 3 
-GateAfter CX 0 1 
-GateAfter IP 3 1.0273007977238624 
-GateAfter RY 2 1.429424657383356 
-GateAfter TDG 1 
-GateAfter CX 4 3 
-GateAfter CX 4 0 
-GateAfter CX 4 2 
-GateAfter CX 3 0 
+GateAfter SDG 4 
+GateAfter Y 1 
+GateAfter RY 2 0.02827433388230814 
+GateAfter IP 4 0.8042477193189871 
+GateAfter X 3 
 GateAfter CX 1 4 
-GateAfter CX 2 3 
-GateAfter CX 1 0 
-GateAfter T 4 
-GateAfter CX 3 2 
-GateAfter X 0 
+GateAfter IP 0 2.8023006470020957 
+GateAfter Y 0 
 GateAfter CX 4 1 
-GateAfter IP 3 2.720619238008761 
-GateAfter SDG 0 
-GateAfter CX 1 2 
 GateAfter CX 1 0 
-GateAfter IP 1 3.0819023931715868 
-Qubits 1
-GateBefore CX 0 0
-Qubits 5
-GateBefore CX 1 3
-GateBefore IP 4 1.121548577331556
-GateBefore Z 0
-GateBefore CX 3 2
-GateBefore CX 3 4
-GateBefore SDG 3
-GateBefore CX 3 4
-GateBefore RX 2 1.6744688843633597
-GateBefore IP 2 1.9289378893041331
-GateBefore X 2
-GateBefore CX 0 1
-GateBefore RX 1 2.312212193042088
-GateBefore IP 1 1.7592918860102842
-GateBefore CX 2 3
-GateBefore CX 0 4
-GateBefore TDG 3
-GateBefore CX 2 4
-GateBefore CX 1 0
-GateBefore IP 4 0.11623892818282235
-GateBefore CX 3 0
-GateBefore CX 0 3
-GateBefore S 3
-GateBefore CX 2 1
-GateBefore CX 3 4
-GateBefore CX 1 2
-GateAfter Z 0 
-GateAfter CX 1 3 
-GateAfter IP 4 1.121548577331556 
-GateAfter CX 3 2 
-GateAfter CX 0 1 
+GateAfter H 2 
+GateAfter Y 0 
 GateAfter CX 3 4 
-GateAfter RX 2 1.6744688843633597 
-GateAfter RX 1 2.312212193042088 
-GateAfter SDG 3 
-GateAfter IP 2 1.9289378893041331 
-GateAfter IP 1 1.7592918860102842 
-GateAfter CX 3 4 
-GateAfter X 2 
-GateAfter CX 0 4 
-GateAfter CX 2 3 
-GateAfter CX 1 0 
-GateAfter TDG 3 
-GateAfter CX 2 4 
-GateAfter CX 3 0 
-GateAfter IP 4 0.11623892818282235 
-GateAfter CX 2 1 
-GateAfter CX 0 3 
-GateAfter CX 1 2 
+GateAfter S 1 
+GateAfter Z 4 
+GateAfter RX 1 2.5446900494077322 
+GateAfter RX 3 1.2723450247038661 
 GateAfter S 3 
-GateAfter CX 3 4 
+GateAfter IP 0 0.5529203070318035 
+GateAfter RY 4 2.0734511513692633 
+GateAfter CX 4 0 
+GateAfter CX 1 4 
+GateAfter CX 1 0 
 Qubits 2
 GateBefore CX 0 1
-GateBefore Y 0
-GateBefore RX 1 1.564513141487717
-GateBefore CX 0 1
-GateAfter CX 0 1 
-GateAfter Y 0 
-GateAfter RX 1 1.564513141487717 
-GateAfter CX 0 1 
-Qubits 3
-GateBefore I 2
-GateBefore CX 0 1
-GateBefore Z 0
-GateBefore IP 0 1.8723892215395168
-GateBefore CX 0 2
-GateBefore CX 2 1
-GateBefore CX 0 2
-GateBefore CX 0 1
-GateBefore Z 2
-GateAfter CX 0 1 
-GateAfter Z 0 
-GateAfter IP 0 1.8723892215395168 
-GateAfter CX 0 2 
-GateAfter CX 2 1 
-GateAfter CX 0 2 
-GateAfter CX 0 1 
-GateAfter Z 2 
-Qubits 4
-GateBefore CX 2 0
-GateBefore Z 0
-GateBefore CX 2 1
-GateBefore CX 3 0
-GateBefore TDG 2
-GateBefore X 2
-GateBefore CX 2 3
-GateBefore IP 1 1.8880971848074657
-GateBefore IP 2 1.0241592050702726
-GateBefore RX 3 0.37699111843077515
-GateBefore RX 0 2.0137608909510574
-GateBefore IP 0 2.9499555017208157
-GateBefore IP 3 0.6408849013323178
-GateBefore CX 2 3
 GateBefore CX 1 0
-GateBefore SDG 2
-GateAfter CX 2 0 
-GateAfter Z 0 
-GateAfter CX 2 1 
-GateAfter CX 3 0 
-GateAfter TDG 2 
-GateAfter IP 1 1.8880971848074657 
-GateAfter RX 0 2.0137608909510574 
-GateAfter X 2 
-GateAfter IP 0 2.9499555017208157 
-GateAfter CX 2 3 
+GateBefore CX 1 0
+GateBefore CX 1 0
+GateAfter CX 0 1 
 GateAfter CX 1 0 
-GateAfter IP 2 1.0241592050702726 
-GateAfter RX 3 0.37699111843077515 
-GateAfter IP 3 0.6408849013323178 
-GateAfter CX 2 3 
-GateAfter SDG 2 
+GateAfter CX 1 0 
+GateAfter CX 1 0 
 Qubits 5
-GateBefore CX 4 0
+GateBefore CX 0 1
 GateBefore CX 1 0
-GateBefore Z 1
-GateBefore Z 0
-GateBefore CX 0 3
-GateBefore I 2
-GateBefore RX 0 3.0190705400997913
-GateBefore H 3
-GateBefore RY 3 0.05654866776461628
-GateBefore CX 0 1
-GateBefore CX 0 1
-GateBefore Y 3
-GateBefore S 0
-GateBefore CX 1 4
-GateBefore IP 0 0.47123889803846897
-GateBefore S 1
-GateBefore SDG 3
-GateBefore CX 2 1
+GateBefore IP 2 1.7058848108992577
+GateBefore Z 4
+GateBefore SDG 2
+GateBefore Z 3
+GateBefore CX 4 0
 GateBefore CX 3 2
-GateBefore CX 3 1
-GateBefore CX 2 1
-GateBefore CX 3 2
-GateBefore CX 3 0
-GateBefore CX 4 3
+GateBefore CX 3 4
+GateBefore RX 2 2.0263272615654166
 GateBefore CX 2 0
-GateAfter CX 4 0 
+GateBefore RY 3 0.27646015351590175
+GateBefore CX 1 3
+GateBefore IP 1 2.2085396354736244
+GateBefore CX 4 0
+GateBefore CX 2 3
+GateBefore CX 4 0
+GateBefore CX 4 3
+GateBefore CX 0 1
+GateBefore CX 0 1
+GateBefore SDG 3
+GateBefore IP 0 1.731017552127976
+GateBefore TDG 3
+GateBefore CX 1 4
+GateBefore S 4
+GateAfter CX 0 1 
 GateAfter CX 1 0 
-GateAfter Z 1 
-GateAfter Z 0 
-GateAfter CX 0 3 
-GateAfter RX 0 3.0190705400997913 
-GateAfter H 3 
-GateAfter CX 0 1 
-GateAfter RY 3 0.05654866776461628 
-GateAfter CX 0 1 
-GateAfter Y 3 
-GateAfter S 0 
-GateAfter CX 1 4 
-GateAfter SDG 3 
-GateAfter IP 0 0.47123889803846897 
-GateAfter S 1 
-GateAfter CX 2 1 
+GateAfter IP 2 1.7058848108992577 
+GateAfter Z 4 
+GateAfter SDG 2 
+GateAfter Z 3 
+GateAfter CX 4 0 
 GateAfter CX 3 2 
-GateAfter CX 3 1 
-GateAfter CX 2 1 
-GateAfter CX 3 2 
-GateAfter CX 3 0 
-GateAfter CX 4 3 
+GateAfter CX 3 4 
+GateAfter RX 2 2.0263272615654166 
 GateAfter CX 2 0 
+GateAfter RY 3 0.27646015351590175 
+GateAfter CX 1 3 
+GateAfter IP 1 2.2085396354736244 
+GateAfter CX 4 0 
+GateAfter CX 2 3 
+GateAfter CX 4 0 
+GateAfter CX 4 3 
+GateAfter CX 0 1 
+GateAfter CX 0 1 
+GateAfter SDG 3 
+GateAfter IP 0 1.731017552127976 
+GateAfter TDG 3 
+GateAfter CX 1 4 
+GateAfter S 4 
+Qubits 4
+GateBefore CX 3 0
+GateBefore S 1
+GateBefore IP 3 2.6452210143226056
+GateBefore CX 3 0
+GateBefore RY 1 1.624203401905923
+GateBefore H 3
+GateBefore IP 0 1.4388494353441252
+GateBefore TDG 0
+GateBefore Y 2
+GateBefore IP 1 1.7718582566246432
+GateBefore CX 0 1
+GateBefore S 0
+GateBefore SDG 3
+GateBefore CX 3 2
+GateBefore RY 2 2.8682740927274812
+GateBefore CX 2 1
+GateAfter CX 3 0 
+GateAfter S 1 
+GateAfter IP 3 2.6452210143226056 
+GateAfter CX 3 0 
+GateAfter RY 1 1.624203401905923 
+GateAfter H 3 
+GateAfter IP 0 1.4388494353441252 
+GateAfter TDG 0 
+GateAfter Y 2 
+GateAfter IP 1 1.7718582566246432 
+GateAfter CX 0 1 
+GateAfter S 0 
+GateAfter SDG 3 
+GateAfter CX 3 2 
+GateAfter RY 2 2.8682740927274812 
+GateAfter CX 2 1 
+Qubits 2
+GateBefore RX 1 2.067167966062084
+GateBefore CX 1 0
+GateBefore CX 1 0
+GateBefore CX 1 0
+GateAfter RX 1 2.067167966062084 
+GateAfter CX 1 0 
+GateAfter CX 1 0 
+GateAfter CX 1 0 
+Qubits 3
+GateBefore CX 2 1
+GateBefore CX 1 0
+GateBefore CX 2 1
+GateBefore TDG 2
+GateBefore CX 1 0
+GateBefore I 0
+GateBefore CX 1 2
+GateBefore I 2
+GateBefore I 1
+GateAfter CX 2 1 
+GateAfter CX 1 0 
+GateAfter CX 2 1 
+GateAfter TDG 2 
+GateAfter CX 1 0 
+GateAfter CX 1 2 
+Qubits 5
+GateBefore CX 3 4
+GateBefore Y 4
+GateBefore Y 3
+GateBefore Z 3
+GateBefore IP 3 2.9719466502959446
+GateBefore RY 0 1.275486617357456
+GateBefore RX 1 2.3781856387674734
+GateBefore Z 0
+GateBefore T 4
+GateBefore CX 4 1
+GateBefore CX 1 3
+GateBefore H 2
+GateBefore CX 0 1
+GateBefore S 1
+GateBefore TDG 3
+GateBefore Z 0
+GateBefore CX 2 3
+GateBefore CX 1 3
+GateBefore I 2
+GateBefore I 2
+GateBefore CX 4 3
+GateBefore CX 2 4
+GateBefore Y 0
+GateBefore IP 3 0.031415926535897934
+GateBefore IP 3 0.47123889803846897
+GateAfter CX 3 4 
+GateAfter Y 4 
+GateAfter Y 3 
+GateAfter Z 3 
+GateAfter IP 3 2.9719466502959446 
+GateAfter RY 0 1.275486617357456 
+GateAfter RX 1 2.3781856387674734 
+GateAfter Z 0 
+GateAfter T 4 
+GateAfter CX 4 1 
+GateAfter CX 1 3 
+GateAfter H 2 
+GateAfter CX 0 1 
+GateAfter S 1 
+GateAfter TDG 3 
+GateAfter Z 0 
+GateAfter CX 2 3 
+GateAfter CX 1 3 
+GateAfter CX 4 3 
+GateAfter CX 2 4 
+GateAfter Y 0 
+GateAfter IP 3 0.031415926535897934 
+GateAfter IP 3 0.47123889803846897 
