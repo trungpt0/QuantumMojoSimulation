@@ -40,6 +40,11 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
         if dag1.nodes[i].type == "gate":
             var g = ApplyRandomGateLog.gate_with_log(dag1.nodes[i].gate.name, dag1.nodes[i].gate.qubit, dag1.nodes[i].gate.theta)
             dag_gate_log.append(g^)
+    # var topo = dag1.topological_sort()
+    # for i in range(len(topo)):
+    #     var nid = topo[i]
+    #     var g = ApplyRandomGateLog.gate_with_log(dag1.nodes[nid].gate.name, dag1.nodes[nid].gate.qubit, dag1.nodes[nid].gate.theta)
+    #     dag_gate_log.append(g^)
     for i in range(len(dag_gate_log)):
         var g = dag_gate_log[i].copy()
         out += "GateAfter " + g.gate_name + " "

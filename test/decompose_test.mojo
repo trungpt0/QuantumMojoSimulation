@@ -63,9 +63,6 @@ def run_test(name: String, u: Matrix2x2):
     print_gates(gates)
     print()
 
-
-# ── Main ──────────────────────────────────────────────────────────────────────
-
 def main():
     print("=== OneQubitEulerDecomposer Tests ===")
     print()
