@@ -11,6 +11,7 @@ from qiskit.transpiler.passes import (
     RemoveIdentityEquivalent,
     RemoveDiagonalGatesBeforeMeasure,
     InverseCancellation,
+    CommutativeInverseCancellation,
 )
 
 @dataclass
@@ -170,6 +171,7 @@ def run_qiskit_pass(qc: QuantumCircuit) -> QuantumCircuit:
     pm = PassManager([
         RemoveIdentityEquivalent(),
         InverseCancellation(),
+        CommutativeInverseCancellation(),
         RemoveDiagonalGatesBeforeMeasure(),
         ])
     return pm.run(qc)

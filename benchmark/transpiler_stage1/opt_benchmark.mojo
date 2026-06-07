@@ -48,11 +48,13 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
     var dag1 = pass1.run(dag^)
     var pass2 = InverseCancellation()
     var dag2 = pass2.run(dag1^)
-    var pass3 = RemoveDiagonalGatesBeforeMeasure()
+    var pass3 = CommutativeInverseCancellation()
     var dag3 = pass3.run(dag2^)
-    for i in range(len(dag3.nodes)):
-        if dag3.nodes[i].type == "gate":
-            var g = ApplyRandomGateLog.gate_with_log(dag3.nodes[i].gate.name, dag3.nodes[i].gate.qubit, dag3.nodes[i].gate.theta)
+    var pass4 = RemoveDiagonalGatesBeforeMeasure()
+    var dag4 = pass4.run(dag3^)
+    for i in range(len(dag4.nodes)):
+        if dag4.nodes[i].type == "gate":
+            var g = ApplyRandomGateLog.gate_with_log(dag4.nodes[i].gate.name, dag4.nodes[i].gate.qubit, dag4.nodes[i].gate.theta)
             dag_gate_log.append(g^)
     # var topo = dag1.topological_sort()
     # for i in range(len(topo)):
@@ -73,7 +75,7 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
 def main() raises:
     var MIN_QUBITS: Int = 1
     var MAX_QUBITS: Int = 5
-    var NUM_TRIALS: Int = 10
+    var NUM_TRIALS: Int = 50
     var f = open("benchmark/transpiler_stage1/opt_benchmark.txt", "w")
     f.close()
     for _ in range(NUM_TRIALS):

@@ -20,6 +20,7 @@ struct InverseCancellation:
         if len(g1.qubit) != len(g2.qubit): return False
         for i in range(len(g1.qubit)):
             if g1.qubit[i] != g2.qubit[i]: return False
+        if g1.name == "I" and g2.name == "I": return True
         if g1.name == "H" and g2.name == "H": return True
         if g1.name == "X" and g2.name == "X": return True
         if g1.name == "Y" and g2.name == "Y": return True

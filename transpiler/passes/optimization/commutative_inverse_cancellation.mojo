@@ -1,6 +1,6 @@
 from dagcircuit import DAGCircuit
 from gates import GateOp
-from qmath import sqrt, GateMaxtrix
+from qmath import sqrt, GateMatrix, PI, abs
 
 struct CommutationCheck:
     """
@@ -123,6 +123,8 @@ struct CommutationCheck:
         # Unitary gates commutation
         var name_g1 = g1.name
         var name_g2 = g2.name
+        if name_g1 == "I" or name_g2 == "I":
+            return 1
         if name_g1 == name_g2 and g1.qubit == g2.qubit:
             if name_g1 == "RX" or name_g1 == "RY" or name_g1 == "RZ" or name_g1 == "P" or name_g1 == "IP":
                 return 1
@@ -179,8 +181,8 @@ struct CommutationCheck:
     def _single_qubit_matrix_commute(self, g1: GateOp, g2: GateOp) -> Bool:
         if (len(g1.qubit) != 1 or len(g2.qubit) != 1 or g1.qubit[0] != g2.qubit[0]):
             return False
-        var m1 = GateMaxtrix.get_1q(g1.name, g1.theta)
-        var m2 = GateMaxtrix.get_1q(g2.name, g2.theta)
+        var m1 = GateMatrix.get_1q(g1.name, g1.theta)
+        var m2 = GateMatrix.get_1q(g2.name, g2.theta)
         var g1g2 = m1.mul(m2)
         var g2g1 = m2.mul(m1)
         var tol: Float64 = 1e-10
@@ -277,11 +279,21 @@ struct CommutativeInverseCancellation:
 
     def __init__(out self):
         pass
-    
+
+    def _param_sum(self, g1: GateOp, g2: GateOp, tol: Float64 = 1e-10) -> Bool:
+        if len(g1.theta) == 0 or len(g2.theta) == 0:
+            return False
+        var PI2: Float64 = PI * PI
+        var s = g1.theta[0] + g2.theta[0]
+        while s > PI: s -= PI2
+        while s < -PI: s += PI2
+        return abs(s) < tol
+
     def _are_inverses(self, g1: GateOp, g2: GateOp) -> Bool:
         if len(g1.qubit) != len(g2.qubit): return False
         for i in range(len(g1.qubit)):
             if g1.qubit[i] != g2.qubit[i]: return False
+        if g1.name == "I" and g2.name == "I": return True
         if g1.name == "H" and g2.name == "H": return True
         if g1.name == "X" and g2.name == "X": return True
         if g1.name == "Y" and g2.name == "Y": return True
@@ -291,10 +303,23 @@ struct CommutativeInverseCancellation:
         if g1.name == "SDG" and g2.name == "S": return True
         if g1.name == "T" and g2.name == "TDG": return True
         if g1.name == "TDG" and g2.name == "T": return True
+        if g1.name == "RX" and g2.name == "RX":
+            return self._param_sum(g1, g2)
+        if g1.name == "RY" and g2.name == "RY":
+            return self._param_sum(g1, g2)
+        if g1.name == "RZ" and g2.name == "RZ":
+            return self._param_sum(g1, g2)
+        if g1.name == "P" and g2.name == "P":
+            return self._param_sum(g1, g2)
+        if g1.name == "IP" and g2.name == "IP":
+            return self._param_sum(g1, g2)
+        if (g1.name == "P" and g2.name == "IP") or (g1.name == "IP" and g2.name == "P"):
+            return self._param_sum(g1, g2)
         return False
 
     def _can_cancel(self, dag: DAGCircuit, src: Int, dst: Int, cm_check: CommutationCheck, dp_check: DependencyCheck) -> Bool:
         if not dp_check._is_ancestor(dag, src, dst): return False
+        if dag.nodes[src].gate.name == "I" and dag.nodes[dst].gate.name == "I": return True
         var path_gates = dp_check._gate_between(dag, src, dst)
         var src_gate = dag.nodes[src].gate.copy()
         for i in range(len(path_gates)):
