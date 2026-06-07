@@ -7,7 +7,7 @@ from typing import Optional
 from qiskit import QuantumCircuit
 from qiskit.quantum_info import Operator, process_fidelity
 from qiskit.transpiler import PassManager
-from qiskit.transpiler.passes import RemoveIdentityEquivalent
+from qiskit.transpiler.passes import RemoveIdentityEquivalent, RemoveDiagonalGatesBeforeMeasure
 
 @dataclass
 class Gate:
@@ -65,6 +65,9 @@ def parse_file(path: str) -> list[TestCase]:
     flush()
     return test_cases
 
+def has_measure(gates: list[Gate]) -> bool:
+    return any(g.name == 'MEASURE' for g in gates)
+
 def add_gate(qc: QuantumCircuit, gate: Gate) -> bool:
     n = gate.name
     q = gate.qubits
@@ -83,12 +86,13 @@ def add_gate(qc: QuantumCircuit, gate: Gate) -> bool:
             case 'RX': qc.rx(p[0], q[0])
             case 'RY': qc.ry(p[0], q[0])
             case 'RZ': qc.rz(p[0], q[0])
-            case 'p': qc.p(p[0], q[0])
+            case 'P': qc.p(p[0], q[0])
             case 'IP': qc.p(-p[0], q[0])
             case 'CX':
                 if q[0] == q[1]:
                     return False
                 qc.cx(q[0], q[1])
+            case 'MEASURE': qc.measure(q[0], q[0])
             case _:
                 print(f"    [WARN] Unknown gate '{n}', skipping")
                 return True
@@ -97,13 +101,19 @@ def add_gate(qc: QuantumCircuit, gate: Gate) -> bool:
         return False
     return True
 
-def build_circuit(num_qubits: int, gates: list[Gate]) -> tuple[QuantumCircuit, list[str]]:
-    qc = QuantumCircuit(num_qubits)
-    warnings = []
+def build_circuit(num_qubits: int, gates: list[Gate]) -> QuantumCircuit:
+    need_classical = has_measure(gates)
+    qc = QuantumCircuit(num_qubits, num_qubits if need_classical else 0)
     for g in gates:
-        if not add_gate(qc, g):
-            warnings.append(f"Invalid gate skipped: {g}")
-    return qc, warnings
+        add_gate(qc, g)
+    return qc
+
+def build_circuit_no_measure(num_qubits: int, gates: list[Gate]) -> QuantumCircuit:
+    qc = QuantumCircuit(num_qubits)
+    for g in gates:
+        if g.name != 'MEASURE':
+            add_gate(qc, g)
+    return qc
 
 def unitary_equivalent(qc1: QuantumCircuit, qc2: QuantumCircuit, tol: float = 1e-6) -> tuple[bool, float]:
     try:
@@ -112,42 +122,18 @@ def unitary_equivalent(qc1: QuantumCircuit, qc2: QuantumCircuit, tol: float = 1e
     except Exception as e:
         return False, 0.0
 
-def gate_list(qc: QuantumCircuit) -> list[str]:
-    result = []
-    for instr in qc.data:
-        name = instr.operation.name.upper()
-        qubits = [qc.find_bit(q).index for q in instr.qubits]
-        params = [round(float(p), 8) for p in instr.operation.params]
-        s = name
-        if params:
-            s += f"({params})"
-        s += f" {qubits}"
-        result.append(s)
-    return result
-
-def compare_gate_lists(mojo: list[str], qiskit: list[str]) -> tuple[bool, list[str]]:
-    if mojo == qiskit:
-        return True, []
-    diffs = []
-    max_len = max(len(mojo), len(qiskit))
-    for i in range(max_len):
-        m = mojo[i] if i < len(mojo) else "<missing>"
-        q = qiskit[i] if i < len(qiskit) else "<missing>"
-        if m != q:
-            diffs.append(f"    [{i:02d}] Mojo: {m}")
-            diffs.append(f"         Qiskit: {q}")
-    return False, diffs
-
 def instruction_key(instr, qc: QuantumCircuit) -> str:
     name = instr.operation.name.upper()
     qubits = sorted(qc.find_bit(q).index for q in instr.qubits)
     params = [round(float(p), 6) for p in instr.operation.params]
     return f"{name}|{qubits}|{params}"
 
-def circuit_to_dag_layers(qc: QuantumCircuit) -> list[list[str]]:
+def circuit_to_dag_layers(qc: QuantumCircuit, skip_measure: bool = True) -> list[list[str]]:
     last_layer: dict[int, int] = {}
     layers: list[list[str]] = []
     for instr in qc.data:
+        if skip_measure and instr.operation.name.upper() == 'MEASURE':
+            continue
         used_qubits = [qc.find_bit(q).index for q in instr.qubits]
         min_layer = max((last_layer.get(q, -1) for q in used_qubits), default=-1) + 1
         while len(layers) <= min_layer:
@@ -167,9 +153,9 @@ def compare_dag_layers(layers_mojo: list[list[str]], layers_qiskit: list[list[st
         lm = layers_mojo[i] if i < len(layers_mojo) else []
         lq = layers_qiskit[i] if i < len(layers_qiskit) else []
         if lm != lq:
-            diffs.append(f"    Layer {i}:")
             only_m = sorted(set(lm) - set(lq))
             only_q = sorted(set(lq) - set(lm))
+            diffs.append(f"    Layer {i}:")
             if only_m:
                 diffs.append(f"      Mojo only  : {only_m}")
             if only_q:
@@ -177,7 +163,10 @@ def compare_dag_layers(layers_mojo: list[list[str]], layers_qiskit: list[list[st
     return False, diffs
 
 def run_qiskit_pass(qc: QuantumCircuit) -> QuantumCircuit:
-    pm = PassManager([RemoveIdentityEquivalent()])
+    pm = PassManager([
+        RemoveIdentityEquivalent(),
+        RemoveDiagonalGatesBeforeMeasure(),
+        ])
     return pm.run(qc)
 
 P = "✓"
@@ -194,29 +183,35 @@ def verify(tc: TestCase) -> dict():
         equiv_layers = False,
         equiv_uniraty = False,
         fidelity = 0.0,
-        equiv_gates = False,
         layer_diffs = [],
         skipped = False,
         skip_reason = "",
     )
     print(f"\n{'='*62}")
+    num_measure = sum(1 for g in tc.gates_before if g.name=='MEASURE')
+    r['n_before'] -= num_measure
+    r['n_mojo'] -= num_measure
     print(f"  Test #{tc.index+1}  |  Qubits: {tc.num_qubits}  |  "
           f"GateBefore: {len(tc.gates_before)}  GateAfter(Mojo): {len(tc.gates_after)}")
-    qc_before, warns = build_circuit(tc.num_qubits, tc.gates_before)
-    for w in warns:
-        print(f"  {w} {w}")
-        if "Invalid" in w:
-            r['skipped'] = True
-            r['skip_reason'] = w
-    if r['skipped']:
-        print(f"  {w} Skipped (invalid gate in input)")
+    qc_before = build_circuit(tc.num_qubits, tc.gates_before)
+    qc_mojo = build_circuit(tc.num_qubits, tc.gates_after)
+    qc_before_pure = build_circuit_no_measure(tc.num_qubits, tc.gates_before)
+    qc_mojo_pure = build_circuit_no_measure(tc.num_qubits, tc.gates_after)
+    try:
+        qc_qiskit = run_qiskit_pass(qc_before)
+    except Exception as e:
+        print(f"  {W} Qiskit pass failed: {e}")
+        r['skipped'] = True; r['skip_reason'] = str(e)
         return r
-    qc_qiskit = run_qiskit_pass(qc_before)
-    r['n_qiskit'] = len(qc_qiskit.data)
-    print(f"  Gate count → Qiskit: {r['n_qiskit']} | Mojo: {r['n_mojo']}")
-    qc_mojo, _ = build_circuit(tc.num_qubits, tc.gates_after)
-    layers_qiskit = circuit_to_dag_layers(qc_qiskit)
-    layers_mojo = circuit_to_dag_layers(qc_mojo)
+    r['n_qiskit'] = sum(
+        1 for i in qc_qiskit.data
+        if i.operation.name.upper() != 'MEASURE'
+    )
+    print(f"  Gate count (excl. MEASURE)  →  "
+          f"Before: {r['n_before']}  "
+          f"Qiskit: {r['n_qiskit']}  Mojo: {r['n_mojo']}")
+    layers_qiskit = circuit_to_dag_layers(qc_qiskit, skip_measure=True)
+    layers_mojo = circuit_to_dag_layers(qc_mojo, skip_measure=True)
     match, diffs = compare_dag_layers(layers_mojo, layers_qiskit)
     r['equiv_layers'] = match
     r['layer_diffs']  = diffs
@@ -227,11 +222,10 @@ def verify(tc: TestCase) -> dict():
             print(d)
         if len(diffs) > 30:
             print(f"     ... ({len(diffs)//2} more differences)")
-    equiv, fid = unitary_equivalent(qc_before, qc_mojo)
+    equiv, fid = unitary_equivalent(qc_before_pure, qc_mojo_pure)
     r['equiv_unitary'] = equiv
     r['fidelity']      = fid
-    sym2 = P if equiv else F
-    print(f"  {sym2} Unitary equivalence (before ≡ mojo_after) : "
+    print(f"  {P if equiv else F} Unitary equiv (excl. MEASURE) : "
           f"{'YES' if equiv else 'NO'}  fidelity={fid:.8f}")
     # if tc.num_qubits <= 3 and r['n_before'] <= 10:
     for label, circ in [("BEFORE", qc_before), ("QISKIT", qc_qiskit), ("MOJO", qc_mojo)]:
@@ -250,6 +244,7 @@ def main():
     print('─' * 72)
     total = len(results)
     n_layer = n_unitary = n_skip = 0
+
     for r in results:
         if r['skipped']:
             n_skip += 1

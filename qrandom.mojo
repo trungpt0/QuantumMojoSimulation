@@ -60,6 +60,16 @@ struct ApplyRandomGateLog:
         return ApplyGateLog("CX", c_random, t_random)
 
     @staticmethod
+    def apply_measure_with_log(mut qc: QuantumCircuit, w: Int) -> ApplyGateLog:
+        qc.measure(w)
+        return ApplyGateLog("MEASURE", w)
+
+    @staticmethod
+    def apply_measure_all_with_log(mut qc: QuantumCircuit) -> ApplyGateLog:
+        qc.measure_all()
+        return ApplyGateLog("MEASURE_ALL")
+
+    @staticmethod
     def gate_with_log(gate_name: String, qubits: List[Int], params: List[Float64]) -> ApplyUnitaryGateLog:
         return ApplyUnitaryGateLog(gate_name, qubits, params)
 

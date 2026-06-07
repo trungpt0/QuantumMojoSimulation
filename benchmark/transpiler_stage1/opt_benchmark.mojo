@@ -22,23 +22,35 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
             else:
                 g = ApplyRandomGateLog.apply_random_cx_gate_with_log(qc, nq)
         gate_log.append(g^)
+    for i in range(nq):
+        var g: ApplyGateLog
+        g = ApplyRandomGateLog.apply_measure_with_log(qc, i)    
+        gate_log.append(g^)
     var out: String = ""
     var f = open("benchmark/transpiler_stage1/opt_benchmark.txt", "a")
     out += "Qubits " + String(nq) + "\n"
     for i in range(len(gate_log)):
         var g = gate_log[i].copy()
-        if g.gate_name == "CX":
+        if g.gate_name == "REMOVED":
+            continue
+        elif g.gate_name == "CX":
             out += "GateBefore " + g.gate_name + " " + String(g.q0) + " " + String(g.q1) + "\n"
         elif g.gate_name == "RX" or g.gate_name == "RY" or g.gate_name == "RZ" or g.gate_name == "P" or g.gate_name == "IP":
             out += "GateBefore " + g.gate_name + " " + String(g.q0) + " " + String(g.theta) + "\n"
+        elif g.gate_name == "MEASURE":
+            out += "GateBefore " + g.gate_name + " " + String(g.q0) + "\n"
+        elif g.gate_name == "MEASURE_ALL":
+            out += "GateBefore " + g.gate_name + "\n"
         else:
             out += "GateBefore " + g.gate_name + " " + String(g.q0) + "\n" 
     var dag = DAGCircuit.from_circuit(qc)
     var pass1 = RemoveIdentityEquivalent()
     var dag1 = pass1.run(dag^)
-    for i in range(len(dag1.nodes)):
-        if dag1.nodes[i].type == "gate":
-            var g = ApplyRandomGateLog.gate_with_log(dag1.nodes[i].gate.name, dag1.nodes[i].gate.qubit, dag1.nodes[i].gate.theta)
+    var pass2 = RemoveDiagonalGatesBeforeMeasure()
+    var dag2 = pass2.run(dag1^)
+    for i in range(len(dag2.nodes)):
+        if dag2.nodes[i].type == "gate":
+            var g = ApplyRandomGateLog.gate_with_log(dag2.nodes[i].gate.name, dag2.nodes[i].gate.qubit, dag2.nodes[i].gate.theta)
             dag_gate_log.append(g^)
     # var topo = dag1.topological_sort()
     # for i in range(len(topo)):
