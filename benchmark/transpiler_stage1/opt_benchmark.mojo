@@ -46,11 +46,13 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
     var dag = DAGCircuit.from_circuit(qc)
     var pass1 = RemoveIdentityEquivalent()
     var dag1 = pass1.run(dag^)
-    var pass2 = RemoveDiagonalGatesBeforeMeasure()
+    var pass2 = InverseCancellation()
     var dag2 = pass2.run(dag1^)
-    for i in range(len(dag2.nodes)):
-        if dag2.nodes[i].type == "gate":
-            var g = ApplyRandomGateLog.gate_with_log(dag2.nodes[i].gate.name, dag2.nodes[i].gate.qubit, dag2.nodes[i].gate.theta)
+    var pass3 = RemoveDiagonalGatesBeforeMeasure()
+    var dag3 = pass3.run(dag2^)
+    for i in range(len(dag3.nodes)):
+        if dag3.nodes[i].type == "gate":
+            var g = ApplyRandomGateLog.gate_with_log(dag3.nodes[i].gate.name, dag3.nodes[i].gate.qubit, dag3.nodes[i].gate.theta)
             dag_gate_log.append(g^)
     # var topo = dag1.topological_sort()
     # for i in range(len(topo)):
