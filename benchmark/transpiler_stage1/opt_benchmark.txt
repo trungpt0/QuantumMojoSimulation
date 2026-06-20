@@ -1,1278 +1,1385 @@
-Qubits 5
-GateBefore CX 4 0
-GateBefore CX 4 0
-GateBefore S 0
-GateBefore T 4
-GateBefore CX 4 0
-GateBefore CX 4 0
-GateBefore RY 4 2.642079421669016
-GateBefore RY 2 0.835663645854885
-GateBefore Y 1
-GateBefore CX 3 0
+Qubits 3
+GateBefore TDG 2
+GateBefore CX 1 0
+GateBefore TDG 0
+GateBefore IP 2 1.9383626672649024
+GateBefore CX 2 0
 GateBefore CX 2 1
-GateBefore TDG 4
-GateBefore CX 0 3
-GateBefore RY 2 0.45553093477052
+GateBefore RY 2 1.5707963267948966
+GateBefore CX 0 2
+GateBefore IP 1 0.25132741228718347
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.9139708902740611 -0.4057797576662 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -0.9139708902740611 -0.4057797576662 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+0.7071067811865476 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865476 0.0 0.0 0.0 -0.6848917213771574 0.17585030562678616 0.6848917213771575 -0.1758503056267862 0.0 0.0 0.0 0.0 0.6848917213771575 -0.1758503056267862 0.6848917213771574 -0.17585030562678616 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 2
+GateBefore RX 1 0.3832743037379548
+GateBefore IP 1 0.7099999397112933
+GateBefore RX 0 1.441991027997715
+GateBefore CX 1 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.73739819382455 0.0 0.0 -0.1430685809129417 0.0 -0.6480482084009046 -0.12573306839581383 0.0 -0.09535117056377723 0.08195705436595352 -0.4224196778565219 -0.4914550805223348 -0.093256926069993 -0.10849776303877795 0.5592147065992299 -0.48066101171079595 0.0 -0.6480482084009046 -0.12573306839581383 0.0 0.73739819382455 0.0 0.0 -0.1430685809129417 -0.093256926069993 -0.10849776303877795 0.5592147065992299 -0.48066101171079595 -0.09535117056377723 0.08195705436595352 -0.4224196778565219 -0.4914550805223348 
+MatrixEnd
+Qubits 1
+GateBefore IP 0 0.34871678454846705
+GateAfter UNITARY 1 0 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.9398119510863197 -0.3416921078914833 
+MatrixEnd
+Qubits 3
+GateBefore CX 1 2
+GateBefore CX 0 1
+GateBefore CX 1 2
+GateBefore CX 0 1
+GateBefore CX 2 0
+GateBefore RX 0 1.379159174925919
+GateBefore IP 1 0.6974335690969341
+GateBefore Y 1
+GateBefore H 2
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.0 0.0 -0.6422526531765844 -0.7664930068093498 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.6422526531765844 -0.7664930068093498 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+0.5455424665484782 0.0 0.0 -0.44987044489741984 0.0 -0.44987044489741984 0.5455424665484782 0.0 0.5455424665484782 0.0 0.0 0.44987044489741984 0.0 -0.44987044489741984 -0.5455424665484782 0.0 0.0 -0.44987044489741984 0.5455424665484782 0.0 0.5455424665484782 0.0 0.0 -0.44987044489741984 0.0 -0.44987044489741984 -0.5455424665484782 0.0 0.5455424665484782 0.0 0.0 0.44987044489741984 
+MatrixEnd
+Qubits 4
+GateBefore I 3
+GateBefore CX 1 2
+GateBefore I 2
+GateBefore RY 0 1.900663555421825
+GateBefore H 2
+GateBefore I 3
+GateBefore CX 2 3
+GateBefore CX 3 2
+GateBefore CX 3 2
+GateBefore CX 0 2
+GateBefore S 1
+GateBefore H 2
+GateBefore CX 1 0
 GateBefore T 3
-GateBefore T 4
-GateBefore I 3
-GateBefore S 4
-GateBefore CX 3 4
-GateBefore H 3
-GateBefore RY 2 1.21579635693925
-GateBefore CX 1 2
-GateBefore IP 0 1.6210618092523332
-GateBefore RX 4 1.0367255756846316
-GateBefore RX 4 0.44924774946334045
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter S 0 
-GateAfter T 4 
-GateAfter RY 4 2.642079421669016 
-GateAfter RY 2 0.835663645854885 
-GateAfter Y 1 
-GateAfter CX 3 0 
-GateAfter CX 2 1 
-GateAfter CX 0 3 
-GateAfter RY 2 0.45553093477052 
-GateAfter T 3 
-GateAfter S 4 
-GateAfter CX 3 4 
-GateAfter H 3 
-GateAfter RY 2 1.21579635693925 
-GateAfter CX 1 2 
-GateAfter RX 4 1.0367255756846316 
-GateAfter RX 4 0.44924774946334045 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
-Qubits 5
-GateBefore CX 2 3
-GateBefore CX 4 0
-GateBefore S 2
-GateBefore S 3
-GateBefore H 2
-GateBefore S 3
-GateBefore Z 2
-GateBefore RY 3 1.228362727553609
 GateBefore CX 2 1
-GateBefore S 3
-GateBefore CX 4 3
-GateBefore TDG 3
-GateBefore CX 2 3
-GateBefore CX 4 0
-GateBefore X 3
-GateBefore CX 3 1
-GateBefore CX 4 1
-GateBefore CX 1 0
-GateBefore CX 0 2
-GateBefore CX 2 3
-GateBefore CX 0 1
-GateBefore RX 4 2.139424597094649
-GateBefore IP 0 0.7099999397112933
-GateBefore S 0
-GateBefore IP 3 1.5739379194484864
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter CX 2 3 
-GateAfter S 2 
-GateAfter S 3 
-GateAfter H 2 
-GateAfter S 3 
-GateAfter Z 2 
-GateAfter RY 3 1.228362727553609 
-GateAfter CX 2 1 
-GateAfter S 3 
-GateAfter CX 4 3 
-GateAfter TDG 3 
-GateAfter CX 2 3 
-GateAfter X 3 
-GateAfter CX 3 1 
-GateAfter CX 4 1 
-GateAfter CX 1 0 
-GateAfter CX 0 2 
-GateAfter CX 2 3 
-GateAfter CX 0 1 
-GateAfter RX 4 2.139424597094649 
-GateAfter IP 0 0.7099999397112933 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
+GateBefore CX 1 2
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.7071067811865475 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+0.41112120530381624 0.0 0.41112120530381624 0.0 -0.5753080518726792 0.0 -0.5753080518726792 0.0 0.41112120530381624 0.0 -0.41112120530381624 0.0 -0.5753080518726792 0.0 0.5753080518726792 0.0 0.5753080518726792 0.0 0.5753080518726792 0.0 0.41112120530381624 0.0 0.41112120530381624 0.0 -0.5753080518726792 0.0 0.5753080518726792 0.0 -0.41112120530381624 0.0 0.41112120530381624 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
 Qubits 4
+GateBefore CX 0 3
+GateBefore TDG 1
+GateBefore CX 0 3
+GateBefore T 0
+GateBefore I 0
+GateBefore X 0
+GateBefore S 3
+GateBefore CX 1 3
+GateBefore CX 3 0
+GateBefore CX 1 0
+GateBefore CX 1 0
+GateBefore CX 2 1
+GateBefore CX 3 0
+GateBefore TDG 0
+GateBefore Z 3
+GateBefore Z 2
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.7071067811865475 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 -0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 5
+GateBefore CX 1 3
+GateBefore T 1
+GateBefore CX 3 4
 GateBefore H 0
-GateBefore IP 0 0.8702211650443727
-GateBefore CX 3 1
-GateBefore Y 1
-GateBefore IP 1 0.7948229413582177
-GateBefore CX 2 0
-GateBefore H 3
-GateBefore CX 2 3
-GateBefore T 0
-GateBefore Z 2
-GateBefore CX 0 1
-GateBefore Y 1
-GateBefore CX 0 1
-GateBefore CX 0 1
-GateBefore Y 1
 GateBefore I 3
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter H 0 
-GateAfter IP 0 0.8702211650443727 
-GateAfter CX 3 1 
-GateAfter Y 1 
-GateAfter IP 1 0.7948229413582177 
-GateAfter CX 2 0 
-GateAfter H 3 
-GateAfter CX 2 3 
-GateAfter T 0 
-GateAfter CX 0 1 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 1
-GateBefore I 0
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 1
-GateBefore T 0
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 5
-GateBefore Y 4
-GateBefore SDG 0
-GateBefore CX 2 1
-GateBefore Y 2
-GateBefore S 1
-GateBefore CX 4 2
-GateBefore T 1
-GateBefore Z 2
-GateBefore CX 3 4
-GateBefore CX 3 1
-GateBefore CX 2 0
-GateBefore SDG 3
-GateBefore CX 1 2
-GateBefore S 4
-GateBefore X 1
-GateBefore Z 3
-GateBefore CX 4 1
-GateBefore SDG 0
-GateBefore CX 0 4
-GateBefore T 1
-GateBefore T 4
-GateBefore Z 2
-GateBefore CX 3 2
-GateBefore CX 1 2
-GateBefore RX 1 2.177123708937726
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter Y 4 
-GateAfter SDG 0 
-GateAfter CX 2 1 
-GateAfter Y 2 
-GateAfter S 1 
-GateAfter CX 4 2 
-GateAfter T 1 
-GateAfter Z 2 
-GateAfter CX 3 4 
-GateAfter CX 3 1 
-GateAfter CX 2 0 
-GateAfter SDG 3 
-GateAfter CX 1 2 
-GateAfter S 4 
-GateAfter X 1 
-GateAfter Z 3 
-GateAfter CX 4 1 
-GateAfter SDG 0 
-GateAfter CX 0 4 
-GateAfter T 1 
-GateAfter Z 2 
-GateAfter CX 3 2 
-GateAfter CX 1 2 
-GateAfter RX 1 2.177123708937726 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
-Qubits 1
-GateBefore IP 0 2.7991590543485056
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 2
-GateBefore CX 0 1
-GateBefore CX 0 1
-GateBefore SDG 1
-GateBefore Z 1
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateAfter SDG 1 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-Qubits 5
+GateBefore CX 1 3
 GateBefore I 3
-GateBefore IP 4 2.079734336676443
-GateBefore RX 0 1.6053538459843841
-GateBefore CX 2 4
-GateBefore X 4
-GateBefore TDG 3
-GateBefore CX 0 4
-GateBefore CX 0 3
-GateBefore Z 3
-GateBefore CX 1 2
-GateBefore X 0
-GateBefore CX 3 4
-GateBefore T 1
-GateBefore CX 2 3
-GateBefore CX 2 4
-GateBefore CX 0 2
-GateBefore Y 4
-GateBefore IP 2 1.1749556524425828
-GateBefore CX 3 1
-GateBefore TDG 2
-GateBefore CX 1 3
-GateBefore I 2
-GateBefore X 0
-GateBefore CX 0 3
-GateBefore CX 3 4
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter IP 4 2.079734336676443 
-GateAfter RX 0 1.6053538459843841 
-GateAfter CX 2 4 
-GateAfter X 4 
-GateAfter TDG 3 
-GateAfter CX 0 4 
-GateAfter CX 0 3 
-GateAfter Z 3 
-GateAfter CX 1 2 
-GateAfter X 0 
-GateAfter CX 3 4 
-GateAfter T 1 
-GateAfter CX 2 3 
-GateAfter CX 2 4 
-GateAfter CX 0 2 
-GateAfter Y 4 
-GateAfter IP 2 1.1749556524425828 
-GateAfter CX 3 1 
-GateAfter CX 1 3 
-GateAfter X 0 
-GateAfter CX 0 3 
-GateAfter CX 3 4 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
-Qubits 5
-GateBefore CX 3 2
-GateBefore SDG 4
-GateBefore CX 1 0
-GateBefore CX 2 3
-GateBefore CX 3 4
-GateBefore IP 3 2.5761059759436304
-GateBefore CX 0 2
-GateBefore CX 4 0
-GateBefore SDG 0
-GateBefore CX 3 4
-GateBefore CX 3 4
-GateBefore CX 1 2
-GateBefore CX 0 1
-GateBefore CX 1 3
-GateBefore CX 3 4
-GateBefore CX 0 1
-GateBefore CX 4 2
-GateBefore IP 1 1.4765485471872029
-GateBefore T 1
-GateBefore CX 1 2
-GateBefore I 3
-GateBefore RX 2 0.273318560862312
-GateBefore CX 4 0
-GateBefore CX 1 2
-GateBefore SDG 0
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter CX 3 2 
-GateAfter SDG 4 
-GateAfter CX 1 0 
-GateAfter CX 2 3 
-GateAfter CX 3 4 
-GateAfter IP 3 2.5761059759436304 
-GateAfter CX 0 2 
-GateAfter CX 4 0 
-GateAfter SDG 0 
-GateAfter CX 1 2 
-GateAfter CX 0 1 
-GateAfter CX 1 3 
-GateAfter CX 3 4 
-GateAfter CX 0 1 
-GateAfter CX 4 2 
-GateAfter IP 1 1.4765485471872029 
-GateAfter RX 2 0.273318560862312 
-GateAfter CX 4 0 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
-Qubits 4
-GateBefore CX 1 0
-GateBefore CX 2 3
-GateBefore IP 2 2.6923449041264527
-GateBefore RX 3 2.9970793915246627
-GateBefore CX 3 0
-GateBefore IP 0 1.3226105071613028
-GateBefore RY 2 0.9204866475018093
-GateBefore CX 0 1
-GateBefore SDG 2
-GateBefore CX 2 3
-GateBefore CX 3 0
-GateBefore CX 3 0
-GateBefore CX 0 1
-GateBefore CX 1 2
-GateBefore X 2
-GateBefore IP 0 1.291194580625405
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter CX 1 0 
-GateAfter CX 2 3 
-GateAfter IP 2 2.6923449041264527 
-GateAfter RX 3 2.9970793915246627 
-GateAfter CX 3 0 
-GateAfter IP 0 1.3226105071613028 
-GateAfter RY 2 0.9204866475018093 
-GateAfter SDG 2 
-GateAfter CX 2 3 
-GateAfter CX 1 2 
-GateAfter X 2 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 2
-GateBefore SDG 1
-GateBefore RX 0 1.0869910581420683
-GateBefore SDG 1
-GateBefore SDG 0
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateAfter SDG 1 
-GateAfter RX 0 1.0869910581420683 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-Qubits 2
-GateBefore I 1
-GateBefore CX 0 1
-GateBefore RX 1 1.8126989611213107
-GateBefore RX 1 0.047123889803846894
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateAfter CX 0 1 
-GateAfter RX 1 1.8126989611213107 
-GateAfter RX 1 0.047123889803846894 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-Qubits 2
-GateBefore Y 1
-GateBefore RY 0 0.012566370614359173
-GateBefore CX 1 0
-GateBefore T 1
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateAfter Y 1 
-GateAfter RY 0 0.012566370614359173 
-GateAfter CX 1 0 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-Qubits 1
-GateBefore T 0
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 2
-GateBefore I 1
-GateBefore CX 1 0
-GateBefore CX 1 0
-GateBefore CX 1 0
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateAfter CX 1 0 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-Qubits 1
-GateBefore SDG 0
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 3
-GateBefore CX 0 1
-GateBefore CX 1 2
-GateBefore IP 2 2.6797785335120934
-GateBefore CX 1 0
-GateBefore CX 2 1
-GateBefore SDG 1
-GateBefore T 1
-GateBefore CX 2 0
-GateBefore RX 1 1.1498229112138643
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateAfter CX 0 1 
-GateAfter CX 1 2 
-GateAfter IP 2 2.6797785335120934 
-GateAfter CX 1 0 
-GateAfter CX 2 1 
-GateAfter SDG 1 
-GateAfter T 1 
-GateAfter CX 2 0 
-GateAfter RX 1 1.1498229112138643 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-Qubits 3
-GateBefore RX 2 0.031415926535897934
-GateBefore CX 1 0
-GateBefore CX 0 1
-GateBefore CX 0 1
-GateBefore CX 2 1
-GateBefore Y 2
-GateBefore Y 0
-GateBefore CX 0 1
-GateBefore CX 1 2
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateAfter RX 2 0.031415926535897934 
-GateAfter CX 1 0 
-GateAfter CX 2 1 
-GateAfter Y 2 
-GateAfter Y 0 
-GateAfter CX 0 1 
-GateAfter CX 1 2 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-Qubits 3
-GateBefore IP 1 0.5843362335677015
-GateBefore TDG 0
-GateBefore SDG 2
-GateBefore RX 1 2.6954864967800427
-GateBefore CX 0 2
-GateBefore CX 2 0
-GateBefore RX 0 1.8032741831605412
-GateBefore CX 2 0
-GateBefore CX 0 2
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateAfter IP 1 0.5843362335677015 
-GateAfter TDG 0 
-GateAfter SDG 2 
-GateAfter RX 1 2.6954864967800427 
-GateAfter CX 0 2 
-GateAfter RX 0 1.8032741831605412 
-GateAfter CX 0 2 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-Qubits 4
-GateBefore CX 1 3
-GateBefore TDG 0
-GateBefore TDG 2
-GateBefore S 3
-GateBefore CX 0 1
-GateBefore IP 3 1.7718582566246432
-GateBefore CX 0 2
-GateBefore CX 1 3
-GateBefore RX 2 2.7551767571982486
-GateBefore CX 2 1
-GateBefore CX 3 0
-GateBefore T 0
-GateBefore T 1
-GateBefore X 1
-GateBefore CX 3 1
-GateBefore T 2
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter CX 1 3 
-GateAfter TDG 0 
-GateAfter TDG 2 
-GateAfter S 3 
-GateAfter CX 0 1 
-GateAfter IP 3 1.7718582566246432 
-GateAfter CX 0 2 
-GateAfter CX 1 3 
-GateAfter RX 2 2.7551767571982486 
-GateAfter CX 2 1 
-GateAfter CX 3 0 
-GateAfter T 1 
-GateAfter X 1 
-GateAfter CX 3 1 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 3
-GateBefore Z 2
-GateBefore CX 2 0
-GateBefore I 1
-GateBefore CX 0 1
-GateBefore Y 1
-GateBefore CX 1 2
-GateBefore CX 2 0
-GateBefore CX 0 2
-GateBefore IP 1 2.5729643832900404
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateAfter Z 2 
-GateAfter CX 2 0 
-GateAfter CX 0 1 
-GateAfter Y 1 
-GateAfter CX 1 2 
-GateAfter CX 2 0 
-GateAfter CX 0 2 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-Qubits 5
-GateBefore CX 2 3
-GateBefore IP 3 0.6565928646002668
+GateBefore IP 4 2.020044076258237
 GateBefore CX 1 2
 GateBefore H 2
-GateBefore CX 4 3
-GateBefore RY 3 2.9656634649887645
-GateBefore TDG 2
-GateBefore T 0
-GateBefore CX 2 1
-GateBefore CX 0 1
-GateBefore CX 3 4
-GateBefore CX 3 2
-GateBefore I 1
-GateBefore S 4
-GateBefore CX 3 2
-GateBefore CX 3 4
-GateBefore RX 2 0.6126105674500096
-GateBefore T 2
-GateBefore CX 3 2
-GateBefore CX 4 2
-GateBefore Z 0
-GateBefore CX 4 3
-GateBefore CX 0 1
-GateBefore H 3
-GateBefore Z 2
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter CX 2 3 
-GateAfter IP 3 0.6565928646002668 
-GateAfter CX 1 2 
-GateAfter H 2 
-GateAfter CX 4 3 
-GateAfter RY 3 2.9656634649887645 
-GateAfter TDG 2 
-GateAfter T 0 
-GateAfter CX 2 1 
-GateAfter CX 3 4 
-GateAfter S 4 
-GateAfter CX 3 4 
-GateAfter RX 2 0.6126105674500096 
-GateAfter T 2 
-GateAfter CX 3 2 
-GateAfter CX 4 2 
-GateAfter CX 4 3 
-GateAfter H 3 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
-Qubits 2
-GateBefore SDG 1
-GateBefore RY 1 2.5886723465579893
-GateBefore T 0
-GateBefore IP 0 2.296504229774139
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateAfter SDG 1 
-GateAfter RY 1 2.5886723465579893 
-GateAfter T 0 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-Qubits 3
-GateBefore CX 2 1
-GateBefore H 2
-GateBefore IP 2 0.22305307840487532
-GateBefore I 0
-GateBefore CX 1 0
-GateBefore IP 1 0.515221195188726
-GateBefore RY 1 1.6461945504810518
-GateBefore RY 1 0.6283185307179586
-GateBefore TDG 1
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateAfter CX 2 1 
-GateAfter H 2 
-GateAfter CX 1 0 
-GateAfter IP 1 0.515221195188726 
-GateAfter RY 1 1.6461945504810518 
-GateAfter RY 1 0.6283185307179586 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-Qubits 1
-GateBefore RX 0 1.6933184402848986
-GateBefore MEASURE 0
-GateAfter RX 0 1.6933184402848986 
-GateAfter MEASURE 0 
-Qubits 2
-GateBefore RX 1 2.199114857512855
-GateBefore CX 1 0
-GateBefore IP 0 0.5717698629533423
-GateBefore IP 0 2.962521872335175
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateAfter RX 1 2.199114857512855 
-GateAfter CX 1 0 
-GateAfter IP 0 0.5717698629533423 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-Qubits 1
-GateBefore IP 0 0.4366813788489812
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 5
-GateBefore X 2
-GateBefore Z 0
-GateBefore CX 4 2
-GateBefore RX 1 1.6367697725202823
-GateBefore IP 4 1.4765485471872029
-GateBefore IP 3 1.66818569905618
-GateBefore CX 4 1
 GateBefore X 3
-GateBefore I 0
-GateBefore CX 4 0
-GateBefore RY 2 2.0294688542190062
-GateBefore Y 2
-GateBefore CX 1 2
-GateBefore Z 3
-GateBefore CX 3 2
-GateBefore S 4
-GateBefore RX 3 0.10367255756846318
-GateBefore T 1
-GateBefore CX 3 2
-GateBefore IP 1 2.6640705702441445
-GateBefore CX 2 4
-GateBefore CX 3 4
-GateBefore RY 3 0.10367255756846318
-GateBefore IP 2 1.6336281798666923
-GateBefore CX 0 1
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter X 2 
-GateAfter Z 0 
-GateAfter CX 4 2 
-GateAfter RX 1 1.6367697725202823 
-GateAfter IP 4 1.4765485471872029 
-GateAfter IP 3 1.66818569905618 
-GateAfter CX 4 1 
-GateAfter X 3 
-GateAfter CX 4 0 
-GateAfter RY 2 2.0294688542190062 
-GateAfter Y 2 
-GateAfter CX 1 2 
-GateAfter Z 3 
-GateAfter CX 3 2 
-GateAfter S 4 
-GateAfter RX 3 0.10367255756846318 
-GateAfter T 1 
-GateAfter CX 3 2 
-GateAfter IP 1 2.6640705702441445 
-GateAfter CX 2 4 
-GateAfter CX 3 4 
-GateAfter RY 3 0.10367255756846318 
-GateAfter CX 0 1 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
-Qubits 5
-GateBefore S 3
-GateBefore Z 0
-GateBefore CX 0 3
-GateBefore TDG 1
-GateBefore CX 3 1
-GateBefore X 0
-GateBefore CX 2 3
-GateBefore IP 2 1.97606177910798
-GateBefore CX 2 0
-GateBefore CX 2 3
-GateBefore CX 1 0
-GateBefore S 3
-GateBefore T 4
-GateBefore CX 4 3
-GateBefore IP 2 0.6440264939859076
-GateBefore X 2
-GateBefore X 3
-GateBefore RY 4 0.6471680866394973
-GateBefore IP 4 2.447300677146449
-GateBefore I 0
-GateBefore H 3
-GateBefore Y 0
-GateBefore IP 2 2.4158847506105507
-GateBefore CX 3 2
-GateBefore TDG 3
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter S 3 
-GateAfter Z 0 
-GateAfter CX 0 3 
-GateAfter TDG 1 
-GateAfter CX 3 1 
-GateAfter X 0 
-GateAfter IP 2 1.97606177910798 
-GateAfter CX 2 0 
-GateAfter CX 1 0 
-GateAfter S 3 
-GateAfter T 4 
-GateAfter CX 4 3 
-GateAfter IP 2 0.6440264939859076 
-GateAfter X 2 
-GateAfter X 3 
-GateAfter RY 4 0.6471680866394973 
-GateAfter H 3 
-GateAfter Y 0 
-GateAfter IP 2 2.4158847506105507 
-GateAfter CX 3 2 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
-Qubits 1
-GateBefore S 0
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 1
-GateBefore T 0
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 4
-GateBefore Z 2
-GateBefore Z 0
-GateBefore CX 2 1
-GateBefore X 0
-GateBefore CX 2 3
-GateBefore CX 1 2
-GateBefore IP 0 0.20420352248333654
-GateBefore CX 2 1
-GateBefore Y 2
-GateBefore X 1
-GateBefore CX 1 2
-GateBefore IP 1 1.1875220230569419
-GateBefore S 2
-GateBefore RX 1 2.7897342763877364
-GateBefore CX 2 1
-GateBefore TDG 3
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter Z 2 
-GateAfter Z 0 
-GateAfter CX 2 1 
-GateAfter X 0 
-GateAfter CX 2 3 
-GateAfter CX 1 2 
-GateAfter CX 2 1 
-GateAfter Y 2 
-GateAfter X 1 
-GateAfter CX 1 2 
-GateAfter IP 1 1.1875220230569419 
-GateAfter S 2 
-GateAfter RX 1 2.7897342763877364 
-GateAfter CX 2 1 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 5
-GateBefore IP 3 0.7759733854366789
-GateBefore RX 0 2.6389378290154264
-GateBefore CX 1 0
-GateBefore CX 1 2
-GateBefore I 4
-GateBefore TDG 4
-GateBefore I 1
-GateBefore IP 2 2.9562386870279953
-GateBefore CX 2 0
-GateBefore CX 2 0
-GateBefore CX 2 1
-GateBefore CX 2 3
-GateBefore Y 0
-GateBefore CX 4 1
-GateBefore TDG 2
-GateBefore CX 0 4
-GateBefore S 3
-GateBefore CX 3 1
-GateBefore X 2
-GateBefore RX 2 0.5372123437638546
-GateBefore RX 1 3.0599112445964582
-GateBefore CX 2 1
-GateBefore CX 3 4
-GateBefore Z 2
-GateBefore RX 0 0.9079202768874503
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter IP 3 0.7759733854366789 
-GateAfter RX 0 2.6389378290154264 
-GateAfter CX 1 0 
-GateAfter CX 1 2 
-GateAfter TDG 4 
-GateAfter IP 2 2.9562386870279953 
-GateAfter CX 2 1 
-GateAfter CX 2 3 
-GateAfter Y 0 
-GateAfter CX 4 1 
-GateAfter TDG 2 
-GateAfter CX 0 4 
-GateAfter S 3 
-GateAfter CX 3 1 
-GateAfter X 2 
-GateAfter RX 2 0.5372123437638546 
-GateAfter RX 1 3.0599112445964582 
-GateAfter CX 2 1 
-GateAfter CX 3 4 
-GateAfter RX 0 0.9079202768874503 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
-Qubits 1
-GateBefore IP 0 2.2870794518133692
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 4
-GateBefore CX 2 1
-GateBefore CX 2 3
-GateBefore CX 1 0
-GateBefore CX 2 0
-GateBefore RX 0 2.6640705702441445
-GateBefore CX 2 0
-GateBefore CX 3 0
-GateBefore RX 2 0.3047344873982099
-GateBefore SDG 2
-GateBefore CX 0 1
-GateBefore CX 2 3
-GateBefore CX 1 2
-GateBefore Z 2
-GateBefore Z 3
-GateBefore RX 0 2.3436281195779856
-GateBefore I 3
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter CX 2 1 
-GateAfter CX 2 3 
-GateAfter CX 1 0 
-GateAfter RX 0 2.6640705702441445 
-GateAfter CX 3 0 
-GateAfter RX 2 0.3047344873982099 
-GateAfter SDG 2 
-GateAfter CX 0 1 
-GateAfter CX 2 3 
-GateAfter CX 1 2 
-GateAfter RX 0 2.3436281195779856 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 1
-GateBefore Z 0
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 4
-GateBefore H 3
-GateBefore X 2
-GateBefore S 1
-GateBefore TDG 3
-GateBefore S 0
-GateBefore CX 3 0
-GateBefore Z 1
-GateBefore CX 0 2
-GateBefore I 0
-GateBefore Z 3
-GateBefore Y 0
-GateBefore CX 0 1
-GateBefore CX 1 2
-GateBefore CX 0 1
-GateBefore CX 3 0
-GateBefore CX 1 2
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter H 3 
-GateAfter X 2 
-GateAfter S 1 
-GateAfter TDG 3 
-GateAfter S 0 
-GateAfter CX 3 0 
-GateAfter Z 1 
-GateAfter CX 0 2 
-GateAfter Z 3 
-GateAfter Y 0 
-GateAfter CX 0 1 
-GateAfter CX 1 2 
-GateAfter CX 0 1 
-GateAfter CX 3 0 
-GateAfter CX 1 2 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 4
-GateBefore CX 1 2
-GateBefore I 1
-GateBefore CX 0 1
-GateBefore T 3
-GateBefore I 2
-GateBefore CX 2 0
-GateBefore CX 1 0
-GateBefore CX 3 1
-GateBefore X 1
-GateBefore IP 2 1.8472564803107985
-GateBefore H 0
-GateBefore CX 1 0
-GateBefore I 2
-GateBefore IP 0 1.441991027997715
-GateBefore CX 0 1
-GateBefore CX 2 0
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter CX 1 2 
-GateAfter CX 0 1 
-GateAfter T 3 
-GateAfter CX 2 0 
-GateAfter CX 1 0 
-GateAfter CX 3 1 
-GateAfter X 1 
-GateAfter IP 2 1.8472564803107985 
-GateAfter H 0 
-GateAfter CX 1 0 
-GateAfter IP 0 1.441991027997715 
-GateAfter CX 0 1 
-GateAfter CX 2 0 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 1
-GateBefore TDG 0
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 3
-GateBefore TDG 2
-GateBefore Z 2
-GateBefore CX 2 0
-GateBefore TDG 1
-GateBefore RY 2 0.09110618695410401
-GateBefore SDG 1
-GateBefore CX 2 1
-GateBefore CX 2 0
-GateBefore CX 0 1
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateAfter TDG 2 
-GateAfter Z 2 
-GateAfter CX 2 0 
-GateAfter TDG 1 
-GateAfter RY 2 0.09110618695410401 
-GateAfter SDG 1 
-GateAfter CX 2 1 
-GateAfter CX 2 0 
-GateAfter CX 0 1 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-Qubits 4
-GateBefore CX 1 3
-GateBefore CX 0 2
-GateBefore S 1
-GateBefore CX 0 1
-GateBefore CX 2 3
-GateBefore CX 1 3
-GateBefore CX 3 1
-GateBefore CX 0 1
-GateBefore CX 3 2
-GateBefore T 2
-GateBefore CX 3 1
-GateBefore I 2
-GateBefore I 1
-GateBefore TDG 1
-GateBefore IP 1 1.564513141487717
-GateBefore CX 2 3
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter CX 1 3 
-GateAfter CX 0 2 
-GateAfter S 1 
-GateAfter CX 0 1 
-GateAfter CX 2 3 
-GateAfter CX 1 3 
-GateAfter CX 0 1 
-GateAfter CX 3 2 
-GateAfter T 2 
-GateAfter TDG 1 
-GateAfter CX 2 3 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 3
-GateBefore CX 0 2
-GateBefore CX 1 0
-GateBefore IP 2 0.9424777960769379
-GateBefore CX 0 1
-GateBefore H 1
-GateBefore T 2
-GateBefore CX 0 1
-GateBefore CX 2 1
-GateBefore I 2
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateAfter CX 0 2 
-GateAfter CX 1 0 
-GateAfter IP 2 0.9424777960769379 
-GateAfter CX 0 1 
-GateAfter H 1 
-GateAfter T 2 
-GateAfter CX 0 1 
-GateAfter CX 2 1 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-Qubits 2
-GateBefore CX 1 0
-GateBefore CX 0 1
-GateBefore CX 1 0
-GateBefore RY 0 1.5299556222982291
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateAfter CX 1 0 
-GateAfter CX 0 1 
-GateAfter CX 1 0 
-GateAfter RY 0 1.5299556222982291 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-Qubits 4
-GateBefore I 0
-GateBefore H 1
-GateBefore CX 2 3
-GateBefore H 2
-GateBefore Y 3
-GateBefore CX 3 0
-GateBefore X 2
-GateBefore S 3
-GateBefore RY 2 2.6954864967800427
-GateBefore CX 2 3
-GateBefore CX 3 0
-GateBefore CX 3 2
-GateBefore TDG 1
-GateBefore T 1
-GateBefore CX 0 3
-GateBefore I 1
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter H 1 
-GateAfter CX 2 3 
-GateAfter H 2 
-GateAfter Y 3 
-GateAfter CX 3 0 
-GateAfter X 2 
-GateAfter S 3 
-GateAfter RY 2 2.6954864967800427 
-GateAfter CX 2 3 
-GateAfter CX 3 0 
-GateAfter CX 3 2 
-GateAfter CX 0 3 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 5
-GateBefore CX 3 4
-GateBefore SDG 1
-GateBefore RY 3 0.3078760800517997
-GateBefore I 4
-GateBefore IP 2 0.6503096792930871
-GateBefore CX 3 0
-GateBefore SDG 1
-GateBefore CX 3 4
-GateBefore CX 1 0
-GateBefore Y 2
-GateBefore CX 4 3
-GateBefore CX 0 4
 GateBefore SDG 4
-GateBefore CX 3 4
-GateBefore CX 4 3
-GateBefore S 1
 GateBefore CX 1 2
-GateBefore CX 2 4
+GateBefore H 2
+GateBefore I 0
 GateBefore CX 1 4
+GateBefore CX 2 3
+GateBefore I 1
+GateBefore H 0
 GateBefore CX 1 2
-GateBefore CX 1 2
-GateBefore TDG 0
-GateBefore Y 1
-GateBefore SDG 4
-GateBefore IP 4 2.111150263212341
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateBefore MEASURE 4
-GateAfter CX 3 4 
-GateAfter RY 3 0.3078760800517997 
-GateAfter IP 2 0.6503096792930871 
-GateAfter CX 3 0 
-GateAfter SDG 1 
-GateAfter CX 3 4 
-GateAfter CX 1 0 
-GateAfter Y 2 
-GateAfter CX 4 3 
-GateAfter CX 0 4 
-GateAfter SDG 4 
-GateAfter CX 3 4 
-GateAfter CX 4 3 
-GateAfter CX 1 2 
-GateAfter CX 2 4 
-GateAfter CX 1 4 
-GateAfter Y 1 
-GateAfter SDG 4 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-GateAfter MEASURE 4 
-Qubits 1
-GateBefore IP 0 1.4482742133048947
-GateBefore MEASURE 0
-GateAfter MEASURE 0 
-Qubits 3
-GateBefore Z 0
-GateBefore CX 0 1
-GateBefore CX 2 1
-GateBefore RY 1 0.9613273519984767
-GateBefore I 2
-GateBefore CX 1 2
-GateBefore I 2
-GateBefore CX 1 2
-GateBefore CX 1 2
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateAfter Z 0 
-GateAfter CX 0 1 
-GateAfter CX 2 1 
-GateAfter RY 1 0.9613273519984767 
-GateAfter CX 1 2 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
+GateBefore TDG 4
+GateBefore CX 1 4
+GateBefore IP 0 2.4441590844928593
+GateBefore S 0
+GateBefore RY 0 1.2377875055143783
+GateAfter UNITARY 1 0 
+MatrixBegin
+0.8145207270705093 0.0 -0.3725928925323152 0.44466900230051015 0.5801344543918492 0.0 0.523128098028355 -0.6243244412008125 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.9007740506053981 0.4342880492898046 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -0.9007740506053981 0.4342880492898046 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+0.9999999999999998 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.9999999999999998 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.9999999999999998 0.0 0.0 0.0 0.0 0.0 -0.9999999999999998 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
 Qubits 4
-GateBefore RX 0 1.3917255455402784
-GateBefore CX 0 1
-GateBefore CX 1 2
-GateBefore SDG 3
-GateBefore CX 2 1
-GateBefore Z 0
-GateBefore CX 0 1
-GateBefore IP 1 2.016902483604647
-GateBefore CX 0 1
 GateBefore CX 3 0
-GateBefore IP 2 1.97292018645439
+GateBefore S 0
+GateBefore CX 2 3
+GateBefore CX 2 3
+GateBefore CX 0 2
 GateBefore CX 0 1
-GateBefore RY 2 2.2399555620095226
+GateBefore CX 3 1
+GateBefore CX 2 3
+GateBefore CX 2 1
+GateBefore CX 3 0
+GateBefore CX 2 3
+GateBefore CX 3 0
+GateBefore CX 1 2
+GateBefore CX 0 1
+GateBefore CX 3 2
+GateBefore RY 0 2.261946710584651
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.42577929156507266 0.0 0.0 0.0 0.0 0.0 -0.9048270524660196 0.0 0.0 0.0 0.42577929156507266 0.0 -0.9048270524660196 0.0 0.0 0.0 0.9048270524660196 0.0 0.0 0.0 0.0 0.0 0.42577929156507266 0.0 0.0 0.0 0.9048270524660196 0.0 0.42577929156507266 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 2
+GateBefore T 1
+GateBefore RY 1 0.4366813788489812
+GateBefore T 0
+GateBefore CX 1 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.976258216411337 0.0 -0.15316640442563614 -0.15316640442563614 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.15316640442563614 0.15316640442563614 8.906370004964493e-18 0.9762582164113368 0.0 0.0 0.0 0.0 0.6903188050135404 0.6903188050135404 -6.7519619794167755e-18 -0.21661000643865705 0.2166100064386571 0.0 0.6903188050135404 0.6903188050135404 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 3
+GateBefore IP 2 2.151990967709008
+GateBefore CX 2 0
 GateBefore CX 0 1
 GateBefore TDG 0
-GateBefore IP 1 0.2293362637120549
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateBefore MEASURE 2
-GateBefore MEASURE 3
-GateAfter RX 0 1.3917255455402784 
-GateAfter CX 0 1 
-GateAfter CX 1 2 
-GateAfter SDG 3 
-GateAfter CX 2 1 
-GateAfter Z 0 
-GateAfter CX 0 1 
-GateAfter IP 1 2.016902483604647 
-GateAfter CX 0 1 
-GateAfter CX 3 0 
-GateAfter IP 2 1.97292018645439 
-GateAfter RY 2 2.2399555620095226 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
-GateAfter MEASURE 2 
-GateAfter MEASURE 3 
-Qubits 2
-GateBefore IP 0 2.086017521983623
+GateBefore Y 0
 GateBefore CX 1 0
+GateBefore SDG 0
+GateBefore IP 1 1.2629202467430969
+GateBefore CX 2 1
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.5490228179981316 -0.8358073613682704 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -0.5490228179981316 -0.8358073613682704 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 -0.7071067811865475 0.0 0.0 0.9529793415172189 0.303035269632774 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.45957986062148787 0.8881364488135445 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 4
+GateBefore CX 0 2
+GateBefore Y 2
+GateBefore H 2
+GateBefore CX 0 1
+GateBefore CX 1 3
+GateBefore CX 1 3
+GateBefore IP 0 1.8441148876572087
+GateBefore T 0
+GateBefore IP 3 2.491282974296706
+GateBefore IP 0 1.2534954687823274
+GateBefore H 1
+GateBefore CX 1 0
+GateBefore CX 0 2
+GateBefore T 1
+GateBefore S 2
+GateBefore CX 1 0
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 -0.7071067811865475 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.6753328081210245 -0.7375131173581739 0.0 0.0 0.0 0.0 -0.6753328081210245 -0.7375131173581739 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+0.7071067811865475 0.0 0.0 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.5627837038597456 -0.42810571436259304 0.0 0.0 -0.5627837038597456 -0.42810571436259304 0.7071067811865475 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.5627837038597456 -0.42810571436259304 0.0 0.0 0.5627837038597456 0.42810571436259304 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 1
+GateBefore IP 0 2.9468139090672256
+GateAfter UNITARY 1 0 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 -0.981090517443334 -0.19354946805086068 
+MatrixEnd
+Qubits 4
 GateBefore CX 0 1
 GateBefore CX 1 0
-GateBefore MEASURE 0
-GateBefore MEASURE 1
-GateAfter IP 0 2.086017521983623 
-GateAfter CX 1 0 
-GateAfter CX 0 1 
-GateAfter CX 1 0 
-GateAfter MEASURE 0 
-GateAfter MEASURE 1 
+GateBefore CX 3 1
+GateBefore CX 2 1
+GateBefore CX 1 3
+GateBefore CX 3 1
+GateBefore CX 0 1
+GateBefore CX 1 0
+GateBefore CX 1 3
+GateBefore CX 3 1
+GateBefore Y 3
+GateBefore CX 3 2
+GateBefore CX 2 1
+GateBefore CX 3 2
+GateBefore TDG 2
+GateBefore CX 1 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 2
+GateBefore TDG 1
+GateBefore IP 1 0.6565928646002668
+GateBefore CX 1 0
+GateBefore CX 0 1
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.12844943020030275 -0.9917160601105628 0.0 0.0 0.12844943020030275 -0.9917160601105628 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 1
+GateBefore Z 0
+GateAfter UNITARY 1 0 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 
+MatrixEnd
+Qubits 2
+GateBefore CX 0 1
+GateBefore X 0
+GateBefore CX 0 1
+GateBefore CX 1 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 1
+GateBefore TDG 0
+GateAfter UNITARY 1 0 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 
+MatrixEnd
+Qubits 2
+GateBefore TDG 1
+GateBefore IP 0 0.3518583772020568
+GateBefore CX 1 0
+GateBefore CX 0 1
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.4200857284118062 -0.9074844245411169 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.9387338576538741 -0.34464292317451706 0.0 0.0 
+MatrixEnd
+Qubits 3
+GateBefore CX 1 2
+GateBefore CX 1 0
+GateBefore IP 0 0.7759733854366789
+GateBefore SDG 1
+GateBefore TDG 0
+GateBefore CX 0 1
+GateBefore CX 0 1
+GateBefore I 0
+GateBefore SDG 2
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.009424638433143995 -0.9999555871089497 0.0 0.0 0.0 0.0 -0.9999555871089497 -0.009424638433143995 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 3
+GateBefore IP 2 0.015707963267948967
+GateBefore CX 0 1
+GateBefore CX 1 2
+GateBefore SDG 1
+GateBefore CX 0 2
+GateBefore CX 0 2
+GateBefore CX 0 1
+GateBefore CX 2 1
+GateBefore CX 1 2
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.9998766324816606 -0.015707317311820675 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.015707317311820675 -0.9998766324816606 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 5
+GateBefore TDG 4
+GateBefore IP 3 0.31101767270538955
+GateBefore CX 3 4
+GateBefore CX 4 0
+GateBefore H 1
+GateBefore IP 4 0.4429645641561608
+GateBefore RY 0 1.0115928344559133
+GateBefore CX 2 0
+GateBefore IP 2 2.4849997889895263
+GateBefore Y 1
+GateBefore CX 2 3
+GateBefore IP 0 0.2261946710584651
+GateBefore H 3
+GateBefore CX 2 4
+GateBefore CX 1 2
+GateBefore Z 1
+GateBefore RX 4 1.66818569905618
+GateBefore CX 2 4
+GateBefore CX 0 1
+GateBefore CX 0 3
+GateBefore CX 3 0
+GateBefore CX 4 1
+GateBefore T 1
+GateBefore CX 2 4
+GateBefore Y 3
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.4567874343342994 -0.8895758763783379 0.0 0.0 0.0 0.0 0.9520226269456766 -0.30602764218850076 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 4 
+MatrixBegin
+0.8747888843334528 0.0 0.0 0.0 -0.4845042908443979 0.0 0.0 0.0 0.0 0.0 -0.4377423419812036 0.20766812437984772 0.0 0.0 0.7903586040484238 -0.3749518224518903 0.4845042908443979 0.0 0.0 0.0 0.8747888843334528 0.0 0.0 0.0 0.0 0.0 0.7903586040484238 -0.3749518224518903 0.0 0.0 0.4377423419812036 -0.20766812437984772 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.792076614249967 -0.6104216879816026 0.0 0.0 0.0 0.0 0.9745268727865771 -0.22427076094938117 0.0 0.0 0.0 0.0 -0.90879968235604 -0.4172327136617654 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.7071067811865475 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+0.6718498738846354 0.0 0.0 -0.7406873476448748 0.0 0.0 0.0 0.0 0.0 -0.7406873476448748 0.6718498738846354 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7406873476448748 0.6718498738846354 0.0 0.0 0.0 0.0 0.0 0.6718498738846354 0.0 0.0 -0.7406873476448748 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+0.0 -0.7071067811865475 0.0 0.0 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.0 0.7071067811865475 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.0 -0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+MatrixEnd
+GateAfter UNITARY 2 1 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 5
+GateBefore CX 3 4
+GateBefore H 1
+GateBefore S 4
+GateBefore X 2
+GateBefore X 3
+GateBefore CX 0 1
+GateBefore CX 2 0
+GateBefore CX 1 2
+GateBefore IP 0 2.73318560862312
+GateBefore S 2
+GateBefore CX 1 4
+GateBefore CX 4 3
+GateBefore CX 0 1
+GateBefore Z 3
+GateBefore T 2
+GateBefore CX 1 3
+GateBefore CX 4 2
+GateBefore CX 0 1
+GateBefore CX 4 2
+GateBefore CX 3 4
+GateBefore TDG 1
+GateBefore IP 1 1.2220795422464297
+GateBefore IP 3 2.569822790636451
+GateBefore CX 3 0
+GateBefore IP 2 1.8818139995002863
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.9177546256839811 -0.3971478906347806 -0.9177546256839811 -0.3971478906347806 0.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.7071067811865475 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.3060276421885008 -0.9520226269456766 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.3060276421885008 -0.9520226269456766 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.42293459708530334 -0.9061602102212898 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -0.42293459708530334 -0.9061602102212898 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.840944582298169 -0.5411212521268759 0.0 0.0 0.0 0.0 -0.840944582298169 -0.5411212521268759 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 2
+GateBefore CX 0 1
+GateBefore CX 0 1
+GateBefore CX 1 0
+GateBefore CX 1 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+MatrixEnd
+Qubits 3
+GateBefore CX 0 1
+GateBefore TDG 1
+GateBefore I 0
+GateBefore CX 0 1
+GateBefore IP 0 1.350884841043611
+GateBefore CX 1 2
+GateBefore H 2
+GateBefore CX 2 0
+GateBefore CX 0 1
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.5358267949789963 -0.8443279255020151 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.2181432413965427 -0.9759167619387473 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.7071067811865475 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 3
+GateBefore CX 0 2
+GateBefore H 2
+GateBefore Y 2
+GateBefore IP 1 3.1070351344003053
+GateBefore Z 0
+GateBefore RY 2 2.5132741228718345
+GateBefore T 1
+GateBefore CX 0 1
+GateBefore CX 1 0
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+0.0 -0.8910065241883678 0.0 -0.45399049973954675 0.0 0.0 0.0 0.0 0.0 -0.45399049973954675 0.0 0.8910065241883678 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.45399049973954675 0.0 0.8910065241883678 0.0 0.0 0.0 0.0 0.0 -0.8910065241883678 0.0 0.45399049973954675 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.6822536091093963 -0.7311155947298642 0.0 0.0 -0.6822536091093963 -0.7311155947298642 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 5
+GateBefore CX 2 4
+GateBefore CX 3 4
+GateBefore CX 0 1
+GateBefore CX 3 2
+GateBefore CX 1 4
+GateBefore CX 0 4
+GateBefore CX 2 0
+GateBefore TDG 0
+GateBefore Z 2
+GateBefore CX 4 1
+GateBefore CX 3 4
+GateBefore IP 4 0.7382742735936014
+GateBefore CX 1 2
+GateBefore CX 1 0
+GateBefore CX 2 1
+GateBefore CX 1 2
+GateBefore CX 3 2
+GateBefore X 0
+GateBefore CX 2 3
+GateBefore CX 4 2
+GateBefore SDG 1
+GateBefore CX 1 2
+GateBefore CX 3 2
+GateBefore S 0
+GateBefore CX 4 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 -0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7396310949786097 -0.6730125135097733 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7396310949786097 -0.6730125135097733 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 5
+GateBefore CX 0 3
+GateBefore SDG 3
+GateBefore Y 3
+GateBefore Z 2
+GateBefore CX 4 0
+GateBefore IP 3 2.0137608909510574
+GateBefore TDG 0
+GateBefore CX 0 2
+GateBefore Z 4
+GateBefore TDG 3
+GateBefore CX 0 2
+GateBefore CX 1 2
+GateBefore Z 3
+GateBefore CX 1 2
+GateBefore CX 3 2
+GateBefore CX 3 4
+GateBefore CX 3 0
+GateBefore CX 0 1
+GateBefore CX 3 1
+GateBefore CX 1 2
+GateBefore IP 4 1.7561502933566944
+GateBefore Z 4
+GateBefore RY 3 2.5918139392115793
+GateBefore CX 2 4
+GateBefore TDG 4
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 -0.33578038939258065 0.9419403007087905 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.33578038939258065 0.9419403007087905 
+MatrixEnd
+GateAfter UNITARY 2 0 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 -0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.18429444856233326 0.9828710781323792 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.18429444856233326 0.9828710781323792 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+0.2714404498650743 0.0 0.0 0.0 0.0 0.0 -0.9624552364536473 0.0 0.9624552364536473 0.0 0.0 0.0 0.0 0.0 0.2714404498650743 0.0 0.0 0.0 -0.9624552364536473 0.0 0.2714404498650743 0.0 0.0 0.0 0.0 0.0 0.2714404498650743 0.0 0.9624552364536473 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 
+MatrixEnd
+Qubits 1
+GateBefore I 0
+Qubits 1
+GateBefore H 0
+GateAfter UNITARY 1 0 
+MatrixBegin
+0.7071067811865475 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 
+MatrixEnd
+Qubits 2
+GateBefore I 0
+GateBefore Z 0
+GateBefore S 0
+GateBefore CX 1 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 5
+GateBefore CX 1 0
+GateBefore CX 3 4
+GateBefore SDG 2
+GateBefore CX 1 0
+GateBefore RY 3 2.195973264859265
+GateBefore TDG 4
+GateBefore CX 1 0
+GateBefore CX 1 2
+GateBefore SDG 2
+GateBefore Y 0
+GateBefore T 3
+GateBefore IP 4 0.6660176425610361
+GateBefore RX 1 0.8545132017764238
+GateBefore CX 2 3
+GateBefore CX 0 1
+GateBefore RX 3 2.7897342763877364
+GateBefore IP 0 0.7979645340118074
+GateBefore CX 0 1
+GateBefore CX 0 4
+GateBefore CX 0 2
+GateBefore CX 2 4
+GateBefore IP 3 2.4347343065320897
+GateBefore T 2
+GateBefore RY 0 2.5478316420613223
+GateBefore IP 1 0.9519025740377073
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+0.45538952885112005 0.0 0.0 0.0 0.0 0.0 -0.8902922986372256 0.0 0.0 0.0 0.05423559962310917 -0.4521483414995203 -0.10603128442202728 0.8839557362993749 0.0 0.0 0.6295317216045411 0.6295317216045411 0.0 0.0 0.0 0.0 0.3220090239319739 0.3220090239319739 0.0 0.0 0.7000265356387706 -0.5500756551733005 0.3580675186517807 -0.28136679810134263 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+0.9101059706849957 0.0 0.0 0.0 0.0 0.0 -0.41437558099328414 0.0 0.0 0.0 -0.9101059706849957 0.0 -0.41437558099328414 0.0 0.0 0.0 0.0 -0.41437558099328414 0.0 0.0 0.0 0.0 0.0 -0.9101059706849957 0.0 0.0 0.0 0.41437558099328414 0.0 -0.9101059706849957 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+0.17502305897527604 0.0 0.0 -0.9845643345292053 0.0 0.0 0.0 0.0 -0.6394233855154986 0.7486685934930323 -0.13308857816236594 -0.11366838406427167 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.9845643345292053 0.17502305897527604 0.0 0.0 0.0 0.0 0.0 -0.13308857816236594 -0.11366838406427167 -0.6394233855154986 0.7486685934930323 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.5801344543918494 -0.8145207270705094 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.6981654189934727 -0.7159364830218311 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.17811529026421 -0.9840096256511398 
+MatrixEnd
+GateAfter UNITARY 2 0 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+0.292538606935254 0.0 0.0 0.0 0.0 0.0 -0.9562537129090695 0.0 0.0 0.0 0.292538606935254 0.0 -0.9562537129090695 0.0 0.0 0.0 0.9562537129090695 0.0 0.0 0.0 0.0 0.0 0.292538606935254 0.0 0.0 0.0 0.9562537129090695 0.0 0.292538606935254 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 
+MatrixEnd
+Qubits 1
+GateBefore IP 0 0.0439822971502571
+GateAfter UNITARY 1 0 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.9990329346781247 -0.0439681183178649 
+MatrixEnd
+Qubits 1
+GateBefore X 0
+GateAfter UNITARY 1 0 
+MatrixBegin
+0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 1
+GateBefore IP 0 1.7718582566246432
+GateAfter UNITARY 1 0 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 -0.1997099805144069 -0.9798550523842469 
+MatrixEnd
+Qubits 1
+GateBefore H 0
+GateAfter UNITARY 1 0 
+MatrixBegin
+0.7071067811865475 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 
+MatrixEnd
+Qubits 3
+GateBefore X 1
+GateBefore CX 1 2
+GateBefore S 1
+GateBefore SDG 2
+GateBefore CX 2 0
+GateBefore CX 0 2
+GateBefore H 0
+GateBefore CX 2 1
+GateBefore X 2
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.7071067811865475 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 1
+GateBefore T 0
+GateAfter UNITARY 1 0 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 
+MatrixEnd
+Qubits 2
+GateBefore CX 1 0
+GateBefore CX 1 0
+GateBefore CX 1 0
+GateBefore H 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.7071067811865475 0.0 0.0 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 0.0 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.0 0.7071067811865475 0.0 
+MatrixEnd
+Qubits 2
+GateBefore SDG 1
+GateBefore CX 0 1
+GateBefore CX 0 1
+GateBefore Z 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+MatrixEnd
+Qubits 2
+GateBefore T 0
+GateBefore CX 0 1
+GateBefore SDG 1
+GateBefore CX 1 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 1
+GateBefore IP 0 1.4074335088082273
+GateAfter UNITARY 1 0 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.16263716519488372 -0.986685944207868 
+MatrixEnd
+Qubits 2
+GateBefore CX 1 0
+GateBefore CX 1 0
+GateBefore Z 0
+GateBefore IP 0 0.7916813487046279
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7026499697988492 0.7115356772092853 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7026499697988492 0.7115356772092853 
+MatrixEnd
+Qubits 4
+GateBefore TDG 0
+GateBefore CX 1 3
+GateBefore X 3
+GateBefore CX 0 3
+GateBefore CX 2 3
+GateBefore CX 0 1
+GateBefore X 0
+GateBefore RX 2 1.7341591447815659
+GateBefore TDG 2
+GateBefore CX 0 1
+GateBefore CX 0 2
+GateBefore CX 1 2
+GateBefore X 0
+GateBefore CX 2 0
+GateBefore SDG 2
+GateBefore CX 0 2
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+0.6470559615694443 0.0 0.0 0.0 0.0 0.0 0.0 -0.7624425110114479 0.0 0.0 0.6470559615694443 0.0 0.0 -0.7624425110114479 0.0 0.0 -0.5391282698010937 -0.5391282698010937 0.0 0.0 0.0 0.0 0.45753765823293613 -0.45753765823293613 0.0 0.0 -0.5391282698010937 -0.5391282698010937 0.45753765823293613 -0.45753765823293613 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 4
+GateBefore Z 1
+GateBefore CX 1 0
+GateBefore H 0
+GateBefore CX 1 0
+GateBefore T 2
+GateBefore CX 2 1
+GateBefore CX 1 0
+GateBefore CX 1 2
+GateBefore IP 3 0.32672563597333854
+GateBefore X 3
+GateBefore CX 0 1
+GateBefore CX 1 2
+GateBefore CX 2 0
+GateBefore CX 3 0
+GateBefore CX 2 3
+GateBefore RX 2 1.4074335088082273
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.7071067811865475 0.0 0.0 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 0.0 0.0 -0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.0 -0.7071067811865475 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+0.0 0.0 0.9470983049947442 -0.32094360980720954 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.9470983049947442 -0.32094360980720954 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+0.7624425110114479 0.0 0.0 0.0 0.0 0.0 0.0 -0.6470559615694442 0.0 0.0 0.7624425110114479 0.0 0.0 -0.6470559615694442 0.0 0.0 0.0 -0.6470559615694442 0.0 0.0 0.0 0.0 0.7624425110114479 0.0 0.0 0.0 0.0 -0.6470559615694442 0.7624425110114479 0.0 0.0 0.0 
+MatrixEnd
+Qubits 5
+GateBefore CX 4 3
+GateBefore IP 4 2.660928977590555
+GateBefore RY 2 0.16022122533307945
+GateBefore T 1
+GateBefore CX 4 1
+GateBefore RX 0 2.4158847506105507
+GateBefore CX 0 2
+GateBefore SDG 0
+GateBefore CX 4 2
+GateBefore IP 0 1.5425219929125886
+GateBefore X 4
+GateBefore TDG 2
+GateBefore CX 3 1
+GateBefore RX 0 1.7184511815136168
+GateBefore IP 2 1.9854865570687494
+GateBefore Z 3
+GateBefore CX 4 3
+GateBefore CX 1 2
+GateBefore TDG 4
+GateBefore CX 2 3
+GateBefore CX 3 4
+GateBefore IP 2 1.21579635693925
+GateBefore CX 3 0
+GateBefore TDG 2
+GateBefore CX 3 0
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.8866882557005565 -0.46236775104099176 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -0.8866882557005565 -0.46236775104099176 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+0.28768052755982465 0.0016018010714783603 0.6869235241334729 0.019952075256683188 -0.0006081472611715515 -0.587043159414861 -0.00757509789329947 0.3166984559707604 0.7240209911928405 0.019952075256683188 0.17440647424102648 -0.0016018010714783603 -0.00757509789329947 0.21898731546450467 0.0006081472611715515 -0.63004931449506 -0.0013811746609408199 -0.21911394022060657 -0.01720394702463365 0.6298146812718484 -0.7242956620173566 -0.0005243832097549283 -0.1742914814833827 -0.006531730719043135 -0.01720394702463365 0.5867913300873204 0.0013811746609408199 -0.3167860263315172 -0.2876108276779327 -0.006531730719043135 -0.6872130225317676 0.0005243832097549283 
+MatrixEnd
+GateAfter UNITARY 2 1 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.932071112458211 -0.3622753667045456 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.932071112458211 -0.3622753667045456 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 -0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.41723271366176534 -0.90879968235604 0.0 0.0 0.0 0.0 -0.41723271366176534 -0.90879968235604 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+MatrixEnd
+Qubits 1
+GateBefore IP 0 2.321636971002857
+GateAfter UNITARY 1 0 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 -0.6822536091093964 -0.7311155947298642 
+MatrixEnd
+Qubits 1
+GateBefore X 0
+GateAfter UNITARY 1 0 
+MatrixBegin
+0.0 0.0 1.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 4
+GateBefore RY 3 0.6157521601035995
+GateBefore SDG 2
+GateBefore CX 0 2
+GateBefore H 3
+GateBefore IP 1 0.3424335992412874
+GateBefore CX 3 1
+GateBefore CX 0 3
+GateBefore CX 3 0
+GateBefore CX 1 3
+GateBefore TDG 3
+GateBefore CX 0 1
+GateBefore CX 0 2
+GateBefore RY 3 0.5749114556069321
+GateBefore CX 2 1
+GateBefore Z 1
+GateBefore IP 0 0.3455751918948773
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+0.8881364488135445 0.0 0.4595798606214879 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.4328967921135084 -0.15431790455647112 -0.8365715136658676 0.2982188026163557 0.0 0.0 0.0 0.0 0.8365715136658676 -0.2982188026163557 0.4328967921135084 -0.15431790455647112 0.4595798606214879 0.0 -0.8881364488135445 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+0.9589683135152021 0.0 -0.20047415503476892 0.20047415503476892 0.0 0.0 0.0 0.0 0.28351326895545675 0.0 0.6780929974296265 -0.6780929974296265 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.20047415503476892 0.20047415503476892 0.9589683135152021 0.0 0.0 0.0 0.0 0.0 0.6780929974296265 -0.6780929974296265 0.28351326895545675 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.9408807689542255 -0.3387379202452914 0.0 0.0 0.0 0.0 0.9408807689542255 -0.3387379202452914 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 -1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 5
+GateBefore CX 3 4
+GateBefore RX 4 1.9195131113433637
+GateBefore CX 4 0
+GateBefore CX 2 4
+GateBefore CX 1 0
+GateBefore SDG 2
+GateBefore IP 2 2.142566189748239
+GateBefore RY 3 2.2211060060879837
+GateBefore IP 2 2.2776546738526
+GateBefore CX 0 2
+GateBefore CX 1 2
+GateBefore CX 3 4
+GateBefore CX 3 0
+GateBefore H 4
+GateBefore CX 3 4
+GateBefore RY 4 0.7257079029792423
+GateBefore T 2
+GateBefore IP 0 3.1258846903218442
+GateBefore SDG 3
+GateBefore S 2
+GateBefore CX 1 3
+GateBefore CX 4 0
+GateBefore IP 1 1.184380430403352
+GateBefore T 0
+GateBefore CX 1 0
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+0.25482672104657655 0.0 0.0 -0.36379511892018235 0.0 0.7338250236913375 -0.5140207080409394 0.0 0.0 -0.36379511892018235 0.25482672104657655 0.0 -0.5140207080409394 0.0 0.0 0.7338250236913375 0.5140207080409394 0.0 0.0 -0.7338250236913375 0.0 -0.36379511892018235 0.25482672104657655 0.0 0.0 -0.7338250236913375 0.5140207080409394 0.0 0.25482672104657655 0.0 0.0 -0.36379511892018235 
+MatrixEnd
+GateAfter UNITARY 2 0 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.9576216459576222 0.2880291360147694 0.0 0.0 0.0 0.0 0.9576216459576222 0.2880291360147694 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.7071067811865475 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.7071067811865475 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 -0.9998766324816606 -0.01570731731182071 0.0 0.0 0.0 0.0 -0.9998766324816606 -0.01570731731182071 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 3 4 
+MatrixBegin
+0.9348876400143983 0.0 -0.35494379914052415 0.0 0.0 0.0 0.0 0.0 0.35494379914052415 0.0 0.9348876400143983 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.35494379914052415 0.0 -0.9348876400143983 0.0 0.0 0.0 0.0 0.0 -0.9348876400143983 0.0 -0.35494379914052415 
+MatrixEnd
+GateAfter UNITARY 2 0 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.37687101041216264 -0.9262657510190666 0.0 0.0 0.0 0.0 0.37687101041216264 -0.9262657510190666 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+MatrixEnd
+Qubits 5
+GateBefore CX 0 1
+GateBefore CX 3 2
+GateBefore IP 1 0.31730085801256913
+GateBefore Y 0
+GateBefore H 0
+GateBefore CX 0 2
+GateBefore IP 4 0.6534512719466771
+GateBefore T 3
+GateBefore T 2
+GateBefore S 1
+GateBefore CX 3 2
+GateBefore CX 4 1
+GateBefore CX 1 2
+GateBefore IP 0 2.368760860806704
+GateBefore H 3
+GateBefore IP 1 2.4692918257215775
+GateBefore IP 1 1.4671237692264334
+GateBefore IP 0 0.9204866475018093
+GateBefore IP 4 0.16336281798666927
+GateBefore CX 1 4
+GateBefore CX 2 3
+GateBefore RY 4 0.48066367599923837
+GateBefore CX 3 2
+GateBefore X 2
+GateBefore I 0
+GateAfter UNITARY 2 0 1 
+MatrixBegin
+0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 -0.6718087312827814 0.2206196468409364 0.6718087312827814 -0.2206196468409364 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.6718087312827814 -0.2206196468409364 0.6718087312827814 -0.2206196468409364 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 4 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.6845471059286886 -0.7289686274214117 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.6845471059286886 -0.7289686274214117 0.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 0 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.9891188127719619 0.14711891183863735 0.0 0.0 0.0 0.0 -0.8034414001121276 -0.595383839708355 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+0.7071067811865475 0.0 0.0 0.0 0.0 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.0 0.0 0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 0.0 0.0 -0.7071067811865475 0.0 0.7071067811865475 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 2 
+MatrixBegin
+1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.7004111507838063 0.7137396022764213 0.0 0.0 0.0 0.0 -0.7004111507838063 0.7137396022764213 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 2 3 
+MatrixBegin
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+MatrixEnd
+GateAfter UNITARY 2 1 4 
+MatrixBegin
+0.9712590426092713 0.0 -0.23802494018426254 0.0 0.0 0.0 0.0 0.0 0.23802494018426254 0.0 0.9712590426092713 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 -0.23802494018426254 0.0 0.9712590426092713 0.0 0.0 0.0 0.0 0.0 0.9712590426092713 0.0 0.23802494018426254 0.0 
+MatrixEnd

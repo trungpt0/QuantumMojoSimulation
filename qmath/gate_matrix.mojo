@@ -385,8 +385,8 @@ struct GateMatrix:
             )
         elif name == "P" and len(params) > 0:
             var theta = params[0]
-            var c = cos(theta / 2.0)
-            var s = sin(theta / 2.0)
+            var c = cos(theta)
+            var s = sin(theta)
             return Matrix2x2(
                 Complex(1.0, 0.0),
                 Complex(0.0, 0.0),
@@ -395,8 +395,8 @@ struct GateMatrix:
             )
         elif name == "IP" and len(params) > 0:
             var theta = params[0]
-            var c = cos(theta / 2.0)
-            var s = sin(theta / 2.0)
+            var c = cos(theta)
+            var s = sin(theta)
             return Matrix2x2(
                 Complex(1.0, 0.0),
                 Complex(0.0, 0.0),

@@ -6,14 +6,32 @@ from qmath import PI, Matrix4x4
 def main() raises:
     var qc = QuantumCircuit(2)
     qc.CX(1,0)
-    qc.CX(0,1)
-    qc.I(0)
-    qc.I(0)
     var dag = DAGCircuit.from_circuit(qc)
-    dag.print_dag()
-    var pass1 = InverseCancellation()
-    var dag1 = pass1.run(dag^)
-    dag1.print_dag()
+    var pass1 = ConsolidateBlocks()
+    var block = List[Int]()
+    block.append(4)
+    var qs = pass1._get_block_qubits(dag, block)
+    print("q0 =", qs[0])
+    print("q1 =", qs[1])
+    var u = pass1._compute_2q_unitary(
+        dag,
+        block,
+        qs[0],
+        qs[1]
+    )
+    u.print_matrix()
+    # var qc = QuantumCircuit(2)
+    # qc.H(2)
+    # qc.CX(1,0)
+    # qc.Tdg(1)
+    # qc.S(1)
+    # qc.CX(0,1)
+    # qc.H(3)
+    # var dag = DAGCircuit.from_circuit(qc)
+    # dag.print_dag()
+    # var pass1 = ConsolidateBlocks()
+    # var dag1 = pass1.run(dag^)
+    # dag1.print_dag()
     # var assd = dag.collect_2q_runs()
     # for i in range(len(assd)):
     #     print("*")

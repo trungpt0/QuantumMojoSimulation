@@ -22,10 +22,10 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
             else:
                 g = ApplyRandomGateLog.apply_random_cx_gate_with_log(qc, nq)
         gate_log.append(g^)
-    for i in range(nq):
-        var g: ApplyGateLog
-        g = ApplyRandomGateLog.apply_measure_with_log(qc, i)    
-        gate_log.append(g^)
+    # for i in range(nq):
+    #     var g: ApplyGateLog
+    #     g = ApplyRandomGateLog.apply_measure_with_log(qc, i)    
+    #     gate_log.append(g^)
     var out: String = ""
     var f = open("benchmark/transpiler_stage1/opt_benchmark.txt", "a")
     out += "Qubits " + String(nq) + "\n"
@@ -44,17 +44,21 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
         else:
             out += "GateBefore " + g.gate_name + " " + String(g.q0) + "\n" 
     var dag = DAGCircuit.from_circuit(qc)
-    var pass1 = RemoveIdentityEquivalent()
+    # var pass1 = RemoveIdentityEquivalent()
+    # var dag1 = pass1.run(dag^)
+    # var pass2 = InverseCancellation()
+    # var dag2 = pass2.run(dag1^)
+    # var pass3 = CommutativeInverseCancellation()
+    # var dag3 = pass3.run(dag2^)
+    # var pass4 = ConsolidateBlocks()
+    # var dag4 = pass4.run(dag3^)
+    # var pass5 = RemoveDiagonalGatesBeforeMeasure()
+    # var dag5 = pass5.run(dag4^)
+    var pass1 = ConsolidateBlocks()
     var dag1 = pass1.run(dag^)
-    var pass2 = InverseCancellation()
-    var dag2 = pass2.run(dag1^)
-    var pass3 = CommutativeInverseCancellation()
-    var dag3 = pass3.run(dag2^)
-    var pass4 = RemoveDiagonalGatesBeforeMeasure()
-    var dag4 = pass4.run(dag3^)
-    for i in range(len(dag4.nodes)):
-        if dag4.nodes[i].type == "gate":
-            var g = ApplyRandomGateLog.gate_with_log(dag4.nodes[i].gate.name, dag4.nodes[i].gate.qubit, dag4.nodes[i].gate.theta)
+    for i in range(len(dag1.nodes)):
+        if dag1.nodes[i].type == "gate":
+            var g = ApplyRandomGateLog.gate_with_log(dag1.nodes[i].gate.name, dag1.nodes[i].gate.qubit, dag1.nodes[i].gate.theta)
             dag_gate_log.append(g^)
     # var topo = dag1.topological_sort()
     # for i in range(len(topo)):
@@ -63,12 +67,24 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
     #     dag_gate_log.append(g^)
     for i in range(len(dag_gate_log)):
         var g = dag_gate_log[i].copy()
-        out += "GateAfter " + g.gate_name + " "
-        for j in range(len(g.qubits)):
-            out += String(g.qubits[j]) + " "
-        for k in range(len(g.params)):
-            out += String(g.params[k]) + " "
-        out += "\n"
+        if g.gate_name == "UnitaryGate1q" or g.gate_name == "UnitaryGate2q":
+            out += "GateAfter UNITARY "
+            out += String(len(g.qubits)) + " "
+            for q in range(len(g.qubits)):
+                out += String(g.qubits[q]) + " "
+            out += "\n"
+            out += "MatrixBegin\n"
+            for p in range(len(g.params)):
+                out += String(g.params[p]) + " "
+            out += "\n"
+            out += "MatrixEnd\n"
+        else:
+            out += "GateAfter " + g.gate_name + " "
+            for j in range(len(g.qubits)):
+                out += String(g.qubits[j]) + " "
+            for k in range(len(g.params)):
+                out += String(g.params[k]) + " "
+            out += "\n"
     f.write(out)
     f.close()
 

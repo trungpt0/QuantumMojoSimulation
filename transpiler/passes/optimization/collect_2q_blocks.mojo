@@ -8,7 +8,12 @@ struct Collect2qBlocks:
         self.filter_fn_enabled = filter_fn_enabled
 
     def _default_filter(self, dag: DAGCircuit, block: List[Int]) -> Bool:
-        return True
+        for i in range(len(block)):
+            var nid = block[i]
+            if dag.nodes[nid].type == "removed": continue
+            if len(dag.nodes[nid].gate.qubit) == 2:
+                return True
+        return False
 
     def run(self, dag: DAGCircuit) -> List[List[Int]]:
         var block_list = dag.collect_2q_runs()

@@ -115,6 +115,97 @@ struct DAGCircuit(Copyable, Movable):
                 self.frontier[q] = new_front
         self.nodes[node_id] = DAGNode(node_id, GateOp("REMOVED", List[Int]()), "removed")
 
+    def replace_block_operation(mut self, gate: GateOp, block: List[Int]):
+        var gate_qubits = gate.qubit.copy()
+        var n_qubits = len(gate_qubits)
+        var preds = List[Int]()
+        for _ in range(n_qubits):
+            preds.append(-1)
+        var first_on_qubit = List[Int]()
+        for _ in range(n_qubits):
+            first_on_qubit.append(-1)
+        for i in range(len(block)):
+            var nid = block[i]
+            if self.nodes[nid].type == "remove": continue
+            var g = self.nodes[nid].gate.copy()
+            for j in range(len(g.qubit)):
+                var q = g.qubit[j]
+                for k in range(n_qubits):
+                    if gate_qubits[k] == q and first_on_qubit[k] < 0:
+                        first_on_qubit[k] = nid
+                        break
+        for k in range(n_qubits):
+            var q = gate_qubits[k]
+            var fnid = first_on_qubit[k]
+            if fnid < 0:
+                preds[k] = self.frontier[q]
+                continue
+            for e in range(len(self.edges)):
+                var edge = self.edges[e].copy()
+                if edge.dst == fnid and edge.qubit == q:
+                    preds[k] = edge.src
+                    break
+            if preds[k] < 0:
+                preds[k] = self.input_nodes[q]
+        var succs = List[Int]()
+        for _ in range(n_qubits):
+            succs.append(-1)
+        var last_on_qubit = List[Int]()
+        for _ in range(n_qubits):
+            last_on_qubit.append(-1)
+        var bi = len(block) - 1
+        while bi >= 0:
+            var nid = block[bi]
+            if self.nodes[nid].type != "removed":
+                var g = self.nodes[nid].gate.copy()
+                for j in range(len(g.qubit)):
+                    var q = g.qubit[j]
+                    for k in range(n_qubits):
+                        if gate_qubits[k] == q and last_on_qubit[k] < 0:
+                            last_on_qubit[k] = nid
+                            break
+            bi -= 1
+        for k in range(n_qubits):
+            var q = gate_qubits[k]
+            var lnid = last_on_qubit[k]
+            if lnid < 0:
+                succs[k] = self.output_nodes[q]
+                continue
+            for e in range(len(self.edges)):
+                var edge = self.edges[e].copy()
+                if edge.src == lnid and edge.qubit == q:
+                    succs[k] = edge.dst
+                    break
+            if succs[k] < 0:
+                succs[k] = self.output_nodes[q]
+        var block_set = List[Bool]()
+        for _ in range(len(self.nodes)):
+            block_set.append(False)
+        for i in range(len(block)):
+            block_set[block[i]] = True
+        var new_edges = List[DAGEdge]()
+        for e in range(len(self.edges)):
+            var edge = self.edges[e].copy()
+            if block_set[edge.src] or block_set[edge.dst]:
+                continue
+            new_edges.append(edge.copy())
+        self.edges = new_edges^
+        for i in range(len(block)):
+            var nid = block[i]
+            self.nodes[nid] = DAGNode(nid, GateOp("REMOVED", List[Int]()), "removed")
+        var new_node_id = len(self.nodes)
+        self.nodes.append(DAGNode(new_node_id, gate, "gate"))
+        for k in range(n_qubits):
+            var q = gate_qubits[k]
+            var pred_id = preds[k]
+            var succ_id = succs[k]
+            if pred_id >= 0:
+                self.edges.append(DAGEdge(pred_id, new_node_id, q))
+            if succ_id >= 0:
+                self.edges.append(DAGEdge(new_node_id, succ_id, q))
+            if succ_id == self.output_nodes[q]:
+                self.frontier[q] = new_node_id
+
     def predecessors(self, node_id: Int) -> List[Int]:
         var preds = List[Int]()
         for i in range(len(self.edges)):
@@ -352,7 +443,11 @@ struct DAGCircuit(Copyable, Movable):
             coll.append(start)
             in_collected[start] = True
             j = i + 1
+            var q0_blocked = False
+            var q1_blocked = False
             while j < len(topo):
+                if q0_blocked and q1_blocked:
+                    break
                 var nid = topo[j]
                 if in_collected[nid]:
                     j += 1
@@ -364,10 +459,13 @@ struct DAGCircuit(Copyable, Movable):
                 if (ng.name == "MEASURE" or
                     ng.name == "BARRIER" or
                     ng.name == "RESET"):
+                    var touches_q0 = False
+                    var touches_q1 = False
                     for k in range(len(ng.qubit)):
-                        if ng.qubit[k] == q0 or ng.qubit[k] == q1:
-                            j = len(topo)
-                            break
+                        if ng.qubit[k] == q0: touches_q0 = True
+                        if ng.qubit[k] == q1: touches_q1 = True
+                    if touches_q0: q0_blocked = True
+                    if touches_q1: q1_blocked = True
                     j += 1
                     continue
                 var uses_q0 = False
@@ -378,9 +476,15 @@ struct DAGCircuit(Copyable, Movable):
                     if q == q0: uses_q0 = True
                     elif q == q1: uses_q1 = True
                     else: uses_other = True
+                if not uses_q0 and not uses_q1:
+                    j += 1
+                    continue
+                if (uses_q0 and q0_blocked) or (uses_q1 and q1_blocked):
+                    j += 1
+                    continue
                 if uses_other:
-                    if uses_q0 or uses_q1:
-                        break
+                    if uses_q0: q0_blocked = True
+                    if uses_q1: q1_blocked = True
                     j += 1
                     continue
                 var preds = self.predecessors(nid)
@@ -402,8 +506,8 @@ struct DAGCircuit(Copyable, Movable):
                     coll.append(nid)
                     in_collected[nid] = True
                 else:
-                    if uses_q0 or uses_q1:
-                        break
+                    if uses_q0: q0_blocked = True
+                    if uses_q1: q1_blocked = True
                 j += 1
             var sorted_coll = self._sort_by_topo(topo, coll)
             var has_2q = False
