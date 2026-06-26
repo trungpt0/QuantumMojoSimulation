@@ -133,29 +133,12 @@ struct ConsolidateBlocks:
 
     def run(self, dag: DAGCircuit) -> DAGCircuit:
         var dagc = dag.copy()
-        print("---DEBUG: Dag before consolidate")
-        dagc.print_dag()
-        print("---DEBUG END")
         var run_list = Collect1qRuns().run(dagc)
         var block_list = Collect2qBlocks().run(dagc)
         print("Consolidate blocks:")
         print("1q runs", len(run_list))
         print("2q blocks", len(block_list))
         self._process_1q_runs(dagc, run_list)
-        print("---DEBUG: Dag after process 1q")
-        dagc.print_dag()
-        print("---END: Dag after process 1q")
         block_list = Collect2qBlocks().run(dagc)
-        print("---DEBUG: Collect 2q")
-        print("Len of blocklist: ", len(block_list))
-        for i in range(len(block_list)):
-            print("Block ", i)
-            var block = block_list[i].copy()
-            for j in range(len(block)):
-                print(String(block[j]) + " ")
-        print("---END: Collect 2q")
         self._process_2q_blocks(dagc, block_list)
-        print("---DEBUG: Dag after consolidate")
-        dagc.print_dag()
-        print("---DEBUG END")
         return dagc^

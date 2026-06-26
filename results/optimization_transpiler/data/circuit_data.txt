@@ -1,0 +1,2630 @@
+Qubits 1
+Gate IP 0 1.624203401905923
+Qubits 1
+Gate SDG 0
+Gate MEASURE 0
+Qubits 2
+Gate CX 1 0
+Gate CX 1 0
+Gate TDG 1
+Gate X 0
+Qubits 2
+Gate CX 0 1
+Gate CX 1 0
+Gate Y 0
+Gate CX 1 0
+Gate MEASURE 0
+Gate MEASURE 1
+Qubits 3
+Gate CX 2 1
+Gate CX 0 2
+Gate CX 1 2
+Gate CX 1 2
+Gate Y 0
+Gate X 0
+Gate CX 0 1
+Gate CX 2 1
+Gate CX 0 2
+Qubits 3
+Gate H 2
+Gate SDG 1
+Gate T 0
+Gate CX 0 1
+Gate CX 0 1
+Gate CX 2 0
+Gate CX 1 2
+Gate CX 2 0
+Gate RY 2 1.504822881069511
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Qubits 4
+Gate IP 3 2.186548486898496
+Gate IP 2 2.296504229774139
+Gate RX 2 1.2723450247038661
+Gate CX 3 0
+Gate IP 2 0.9361946107697584
+Gate CX 0 1
+Gate CX 0 1
+Gate CX 3 1
+Gate CX 1 0
+Gate CX 1 2
+Gate CX 0 1
+Gate H 0
+Gate H 2
+Gate CX 1 0
+Gate TDG 2
+Gate I 0
+Qubits 4
+Gate IP 0 0.48066367599923837
+Gate CX 1 0
+Gate T 1
+Gate CX 3 2
+Gate CX 2 3
+Gate Z 1
+Gate CX 3 2
+Gate CX 2 3
+Gate T 1
+Gate CX 3 0
+Gate T 2
+Gate CX 2 1
+Gate RX 0 2.051460002794135
+Gate H 0
+Gate IP 1 2.4315927138785
+Gate T 0
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Qubits 5
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 4 1
+Gate CX 0 2
+Gate Y 1
+Gate Y 4
+Gate SDG 0
+Gate CX 0 1
+Gate CX 4 0
+Gate IP 2 1.1623892818282233
+Gate S 1
+Gate CX 4 2
+Gate CX 0 1
+Gate CX 3 1
+Gate RY 2 3.1227430976682546
+Gate CX 2 0
+Gate RX 1 1.8441148876572087
+Gate CX 2 4
+Gate TDG 4
+Gate IP 3 0.5026548245743669
+Gate CX 0 3
+Gate CX 4 0
+Gate Y 2
+Gate H 0
+Gate Z 1
+Qubits 5
+Gate S 4
+Gate CX 3 1
+Gate CX 1 4
+Gate Y 4
+Gate T 2
+Gate CX 3 0
+Gate I 0
+Gate CX 3 1
+Gate SDG 2
+Gate CX 2 1
+Gate CX 2 4
+Gate SDG 0
+Gate RY 2 1.3226105071613028
+Gate CX 2 4
+Gate CX 4 0
+Gate SDG 1
+Gate CX 0 4
+Gate CX 4 3
+Gate CX 3 4
+Gate CX 4 1
+Gate CX 3 1
+Gate CX 2 3
+Gate S 3
+Gate RX 4 0.07539822368615504
+Gate CX 2 3
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Qubits 6
+Gate I 0
+Gate I 5
+Gate IP 1 2.7426103865838893
+Gate T 1
+Gate Z 1
+Gate CX 2 5
+Gate RY 4 2.660928977590555
+Gate CX 0 4
+Gate CX 5 3
+Gate CX 2 0
+Gate CX 5 0
+Gate H 5
+Gate IP 1 0.637743308678728
+Gate RX 2 1.124690169985146
+Gate CX 0 1
+Gate CX 5 2
+Gate Z 5
+Gate S 3
+Gate CX 2 3
+Gate IP 5 2.5446900494077322
+Gate X 4
+Gate S 3
+Gate CX 0 4
+Gate Z 2
+Gate CX 1 5
+Gate SDG 5
+Gate CX 5 2
+Gate CX 2 3
+Gate CX 4 3
+Gate Z 1
+Gate SDG 4
+Gate CX 0 1
+Gate IP 3 2.943672316413636
+Gate CX 5 0
+Gate TDG 5
+Gate CX 1 0
+Qubits 6
+Gate IP 5 1.6744688843633597
+Gate CX 4 1
+Gate CX 4 1
+Gate CX 4 2
+Gate Y 0
+Gate H 5
+Gate CX 1 4
+Gate CX 0 4
+Gate CX 4 0
+Gate IP 0 1.504822881069511
+Gate S 2
+Gate CX 2 4
+Gate CX 2 3
+Gate X 3
+Gate CX 1 2
+Gate CX 4 2
+Gate CX 2 3
+Gate TDG 3
+Gate SDG 4
+Gate CX 2 5
+Gate X 1
+Gate IP 0 0.6880087911361648
+Gate RX 2 0.10681415022205297
+Gate CX 0 4
+Gate IP 1 2.3184953783492674
+Gate CX 1 2
+Gate I 5
+Gate CX 4 5
+Gate CX 4 2
+Gate CX 5 0
+Gate CX 4 5
+Gate CX 2 3
+Gate IP 0 1.8284069243892596
+Gate T 3
+Gate CX 2 4
+Gate CX 1 0
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Qubits 7
+Gate CX 4 2
+Gate CX 6 4
+Gate CX 1 2
+Gate CX 0 4
+Gate SDG 1
+Gate CX 1 3
+Gate CX 6 1
+Gate CX 3 5
+Gate RY 0 1.1278317626387357
+Gate Z 2
+Gate CX 0 4
+Gate IP 3 2.4033183799961915
+Gate CX 3 5
+Gate CX 4 5
+Gate CX 0 6
+Gate CX 6 4
+Gate S 1
+Gate CX 4 6
+Gate CX 5 1
+Gate CX 1 6
+Gate Z 3
+Gate RX 6 1.0555751316061706
+Gate CX 1 6
+Gate CX 0 3
+Gate CX 4 1
+Gate Z 3
+Gate I 5
+Gate CX 4 3
+Gate SDG 6
+Gate IP 4 0.23876104167282428
+Gate CX 2 0
+Gate T 6
+Gate CX 2 1
+Gate CX 0 1
+Gate TDG 5
+Gate IP 2 1.9540706305328512
+Gate CX 6 3
+Gate IP 0 0.9047786842338604
+Gate CX 2 4
+Gate RY 0 2.506990937564655
+Gate CX 2 1
+Gate RY 0 1.1718140597889928
+Gate CX 5 0
+Gate RX 4 2.9499555017208157
+Gate CX 4 3
+Gate CX 6 0
+Gate TDG 5
+Gate IP 1 0.24504422698000386
+Gate CX 1 4
+Qubits 7
+Gate CX 6 0
+Gate CX 0 6
+Gate IP 0 0.2827433388230814
+Gate SDG 4
+Gate IP 5 1.6524777357882312
+Gate IP 6 0.9236282401553992
+Gate SDG 5
+Gate RX 0 0.4303981935418017
+Gate RX 4 1.1875220230569419
+Gate CX 4 1
+Gate CX 2 3
+Gate CX 2 6
+Gate SDG 4
+Gate CX 4 1
+Gate SDG 4
+Gate IP 5 3.0661944299036383
+Gate CX 6 0
+Gate IP 1 0.6754424205218055
+Gate I 6
+Gate CX 3 5
+Gate T 1
+Gate CX 3 2
+Gate IP 0 1.3697343969651496
+Gate Z 0
+Gate X 1
+Gate Z 0
+Gate CX 1 2
+Gate CX 2 1
+Gate S 4
+Gate S 5
+Gate Y 2
+Gate S 0
+Gate CX 1 6
+Gate CX 1 3
+Gate S 5
+Gate IP 3 0.5372123437638546
+Gate CX 1 5
+Gate CX 2 6
+Gate S 6
+Gate T 0
+Gate CX 3 1
+Gate CX 1 2
+Gate CX 0 3
+Gate Z 6
+Gate IP 2 3.0599112445964582
+Gate IP 0 0.06597344572538566
+Gate CX 4 5
+Gate CX 6 1
+Gate RY 6 0.40212385965949354
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Gate MEASURE 6
+Qubits 8
+Gate SDG 5
+Gate RY 1 1.7812830345854127
+Gate T 7
+Gate CX 7 2
+Gate Y 0
+Gate T 2
+Gate CX 3 6
+Gate CX 5 2
+Gate X 3
+Gate RY 2 2.5101325302182445
+Gate H 6
+Gate CX 1 6
+Gate IP 3 0.7665486074759096
+Gate I 0
+Gate CX 5 1
+Gate CX 1 2
+Gate CX 4 0
+Gate CX 4 3
+Gate T 5
+Gate RY 4 2.384468824074653
+Gate CX 7 0
+Gate Z 6
+Gate RY 2 1.7027432182456679
+Gate CX 4 3
+Gate H 3
+Gate TDG 1
+Gate TDG 0
+Gate TDG 1
+Gate CX 5 7
+Gate Z 0
+Gate CX 4 5
+Gate IP 6 1.3728759896187397
+Gate I 2
+Gate IP 7 2.4441590844928593
+Gate RY 0 1.4482742133048947
+Gate Z 6
+Gate CX 6 0
+Gate RX 6 1.152964503867454
+Gate IP 7 2.4253095285713204
+Gate CX 1 3
+Gate CX 2 7
+Gate Z 3
+Gate CX 7 3
+Gate S 4
+Gate CX 2 7
+Gate H 7
+Gate CX 6 3
+Gate H 4
+Gate H 3
+Gate CX 7 2
+Gate RX 4 0.1413716694115407
+Gate CX 0 2
+Gate CX 7 4
+Gate Y 1
+Gate Z 6
+Gate CX 5 6
+Gate CX 1 3
+Gate I 0
+Gate TDG 5
+Gate CX 4 3
+Gate CX 3 1
+Gate CX 7 2
+Gate CX 7 0
+Gate CX 6 7
+Qubits 8
+Gate I 1
+Gate IP 1 1.2849113953182254
+Gate CX 5 0
+Gate TDG 4
+Gate CX 0 6
+Gate CX 3 4
+Gate X 4
+Gate CX 3 1
+Gate T 3
+Gate CX 4 2
+Gate CX 5 1
+Gate CX 2 3
+Gate CX 0 5
+Gate H 4
+Gate CX 4 5
+Gate CX 7 3
+Gate H 0
+Gate CX 4 1
+Gate CX 4 5
+Gate CX 4 7
+Gate CX 1 3
+Gate CX 5 2
+Gate Z 3
+Gate CX 0 5
+Gate CX 5 6
+Gate RX 5 2.689203311472863
+Gate CX 0 1
+Gate CX 2 4
+Gate IP 0 2.0106192982974678
+Gate S 3
+Gate RY 0 1.4639821765728436
+Gate IP 5 3.1227430976682546
+Gate CX 4 2
+Gate IP 3 0.7822565707438585
+Gate CX 4 5
+Gate TDG 7
+Gate CX 2 0
+Gate CX 1 2
+Gate IP 0 2.667212162897734
+Gate CX 7 6
+Gate CX 7 3
+Gate Y 4
+Gate Z 2
+Gate TDG 5
+Gate CX 5 2
+Gate IP 6 0.3895574890451343
+Gate CX 4 6
+Gate CX 7 5
+Gate IP 6 0.2827433388230814
+Gate Y 0
+Gate Z 0
+Gate CX 5 1
+Gate IP 7 1.580221104755666
+Gate CX 7 5
+Gate I 3
+Gate CX 7 0
+Gate CX 1 6
+Gate SDG 0
+Gate SDG 1
+Gate IP 4 1.4828317324943823
+Gate T 7
+Gate IP 0 2.1048670779051615
+Gate CX 3 0
+Gate CX 2 3
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Gate MEASURE 6
+Gate MEASURE 7
+Qubits 9
+Gate CX 2 5
+Gate CX 2 5
+Gate RX 8 2.060884780754904
+Gate RY 4 0.9047786842338604
+Gate H 7
+Gate Z 6
+Gate X 7
+Gate IP 1 0.3612831551628262
+Gate X 3
+Gate CX 2 0
+Gate CX 8 0
+Gate CX 1 0
+Gate CX 2 6
+Gate Z 5
+Gate CX 8 5
+Gate CX 8 0
+Gate CX 4 0
+Gate X 4
+Gate CX 6 5
+Gate SDG 3
+Gate RX 1 1.9666370011472105
+Gate S 3
+Gate I 2
+Gate CX 2 4
+Gate CX 3 8
+Gate CX 1 4
+Gate RY 3 1.6084954386379742
+Gate I 8
+Gate TDG 5
+Gate CX 0 6
+Gate CX 3 8
+Gate IP 8 2.42845112122491
+Gate CX 6 2
+Gate CX 7 5
+Gate TDG 7
+Gate CX 5 6
+Gate IP 2 0.9424777960769379
+Gate Y 1
+Gate SDG 5
+Gate Z 4
+Gate CX 6 4
+Gate CX 2 6
+Gate RX 1 1.2660618393966865
+Gate CX 3 4
+Gate CX 2 8
+Gate CX 2 3
+Gate S 4
+Gate X 2
+Gate TDG 1
+Gate CX 5 6
+Gate X 5
+Gate CX 0 5
+Gate IP 2 1.0053096491487339
+Gate Y 8
+Gate CX 2 8
+Gate CX 1 3
+Gate CX 7 8
+Gate SDG 7
+Gate CX 6 7
+Gate CX 0 3
+Gate CX 2 3
+Gate IP 7 1.7718582566246432
+Gate CX 7 5
+Gate X 5
+Gate IP 8 2.214822820780804
+Gate Y 2
+Gate CX 3 2
+Gate CX 8 4
+Gate S 7
+Gate IP 4 0.8639379797371931
+Gate SDG 0
+Gate RX 1 1.1435397259066846
+Gate Z 0
+Gate Z 4
+Gate I 0
+Gate IP 3 1.9509290378792616
+Gate Y 7
+Gate CX 4 8
+Gate CX 0 2
+Gate TDG 3
+Gate CX 1 0
+Qubits 9
+Gate RY 7 1.639911365173872
+Gate CX 0 8
+Gate S 3
+Gate X 0
+Gate IP 1 2.5132741228718345
+Gate S 3
+Gate CX 8 4
+Gate Y 8
+Gate CX 0 8
+Gate CX 7 1
+Gate RX 8 0.5592034923389833
+Gate RY 6 0.8545132017764238
+Gate CX 6 0
+Gate I 0
+Gate CX 2 6
+Gate CX 8 3
+Gate CX 7 2
+Gate RX 1 2.151990967709008
+Gate CX 6 5
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 5 0
+Gate CX 1 2
+Gate IP 1 2.9656634649887645
+Gate CX 2 0
+Gate CX 0 4
+Gate CX 5 2
+Gate CX 4 2
+Gate IP 4 0.5811946409141117
+Gate RX 2 0.3675663404700058
+Gate I 2
+Gate SDG 0
+Gate IP 5 1.51738925168387
+Gate Z 1
+Gate CX 7 0
+Gate IP 8 0.6283185307179586
+Gate CX 1 4
+Gate CX 8 5
+Gate IP 3 3.088185578478767
+Gate IP 7 0.6094689747964198
+Gate T 6
+Gate SDG 0
+Gate RY 2 0.6942919764433443
+Gate S 0
+Gate IP 2 0.4586725274241098
+Gate CX 3 2
+Gate CX 7 4
+Gate RY 0 2.748893571891069
+Gate CX 4 0
+Gate CX 2 1
+Gate RY 2 0.10995574287564276
+Gate IP 5 1.6807520696705394
+Gate CX 5 6
+Gate CX 7 8
+Gate IP 7 1.580221104755666
+Gate I 1
+Gate CX 5 2
+Gate TDG 4
+Gate CX 6 5
+Gate CX 6 7
+Gate I 1
+Gate Z 4
+Gate TDG 5
+Gate CX 4 5
+Gate CX 2 5
+Gate IP 0 2.045176817486955
+Gate CX 2 8
+Gate Z 6
+Gate IP 8 0.4680973053848792
+Gate IP 1 0.3424335992412874
+Gate CX 2 0
+Gate H 3
+Gate CX 5 8
+Gate CX 8 5
+Gate CX 3 0
+Gate CX 8 4
+Gate CX 2 4
+Gate CX 2 1
+Gate IP 1 3.0002209841782523
+Gate CX 2 1
+Gate CX 4 8
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Gate MEASURE 6
+Gate MEASURE 7
+Gate MEASURE 8
+Qubits 10
+Gate CX 5 2
+Gate CX 5 9
+Gate Y 8
+Gate CX 7 8
+Gate RY 1 2.8148670176164545
+Gate CX 8 2
+Gate IP 7 1.6619025137490004
+Gate TDG 9
+Gate S 4
+Gate CX 0 2
+Gate CX 4 5
+Gate CX 8 4
+Gate CX 9 0
+Gate Y 9
+Gate RY 9 2.086017521983623
+Gate Y 7
+Gate CX 3 6
+Gate CX 7 0
+Gate CX 3 0
+Gate CX 3 9
+Gate IP 0 0.8293804605477054
+Gate CX 6 9
+Gate H 3
+Gate X 2
+Gate CX 8 1
+Gate I 1
+Gate CX 3 5
+Gate CX 7 9
+Gate CX 8 6
+Gate CX 2 4
+Gate CX 1 6
+Gate CX 5 2
+Gate CX 2 1
+Gate RY 2 2.918539575184918
+Gate CX 7 8
+Gate RX 0 1.108982206717197
+Gate CX 7 8
+Gate CX 8 2
+Gate CX 6 7
+Gate IP 4 2.6452210143226056
+Gate RX 3 1.5896458827164355
+Gate CX 1 5
+Gate CX 1 4
+Gate CX 5 6
+Gate Y 9
+Gate CX 6 8
+Gate CX 0 5
+Gate CX 6 1
+Gate RX 3 1.1718140597889928
+Gate IP 7 1.9854865570687494
+Gate Y 3
+Gate IP 3 2.7551767571982486
+Gate CX 6 8
+Gate CX 1 2
+Gate CX 1 2
+Gate CX 1 4
+Gate CX 4 6
+Gate H 1
+Gate CX 0 8
+Gate CX 2 4
+Gate S 3
+Gate RY 1 2.340486526924396
+Gate CX 7 0
+Gate X 2
+Gate I 8
+Gate IP 1 1.913229926036184
+Gate RY 5 2.9593802796815853
+Gate CX 1 9
+Gate IP 4 0.6880087911361648
+Gate Z 8
+Gate RY 9 1.0964158361028378
+Gate CX 1 8
+Gate T 8
+Gate I 3
+Gate CX 5 8
+Gate CX 9 2
+Gate T 7
+Gate CX 0 1
+Gate CX 8 1
+Gate CX 1 0
+Gate CX 8 9
+Gate X 2
+Gate Z 1
+Gate IP 0 1.4796901398407927
+Gate CX 1 6
+Gate CX 8 9
+Gate CX 8 4
+Gate CX 0 9
+Gate CX 6 3
+Gate Z 7
+Gate IP 5 2.2556635252774715
+Gate IP 2 1.5550883635269477
+Gate CX 9 5
+Gate CX 4 2
+Gate CX 9 2
+Gate CX 7 0
+Gate CX 5 7
+Gate IP 3 2.412743157956961
+Gate T 3
+Gate CX 3 2
+Qubits 10
+Gate CX 1 6
+Gate CX 1 3
+Gate CX 9 6
+Gate SDG 3
+Gate RY 4 3.0473448739820994
+Gate X 5
+Gate CX 0 7
+Gate CX 5 8
+Gate RX 5 2.020044076258237
+Gate CX 7 9
+Gate T 2
+Gate CX 3 7
+Gate CX 2 6
+Gate SDG 8
+Gate CX 9 5
+Gate Z 8
+Gate CX 6 7
+Gate CX 9 0
+Gate Y 1
+Gate CX 2 9
+Gate Z 0
+Gate X 1
+Gate T 7
+Gate CX 3 4
+Gate CX 7 2
+Gate CX 3 5
+Gate I 7
+Gate IP 7 2.4096015653033716
+Gate CX 0 5
+Gate CX 4 1
+Gate CX 4 2
+Gate RY 3 3.1164599123610746
+Gate S 6
+Gate H 0
+Gate IP 8 0.9330530181161686
+Gate CX 7 1
+Gate CX 9 5
+Gate CX 7 5
+Gate TDG 9
+Gate CX 0 6
+Gate Z 7
+Gate X 0
+Gate CX 2 8
+Gate X 9
+Gate Z 7
+Gate CX 0 1
+Gate RX 0 0.02199114857512855
+Gate TDG 1
+Gate Z 1
+Gate IP 8 1.8629644435787474
+Gate IP 7 0.6440264939859076
+Gate IP 6 0.6597344572538566
+Gate IP 4 1.0555751316061706
+Gate CX 2 4
+Gate CX 6 9
+Gate CX 7 3
+Gate Y 4
+Gate X 8
+Gate H 6
+Gate CX 3 2
+Gate CX 4 7
+Gate CX 3 4
+Gate IP 6 0.8042477193189871
+Gate H 0
+Gate CX 4 1
+Gate CX 2 9
+Gate CX 6 4
+Gate X 3
+Gate T 5
+Gate RY 9 0.6031857894892403
+Gate CX 9 1
+Gate CX 1 0
+Gate Y 5
+Gate S 9
+Gate IP 7 1.8189821464284903
+Gate Y 5
+Gate S 9
+Gate X 9
+Gate TDG 0
+Gate CX 8 7
+Gate SDG 7
+Gate RY 0 1.0964158361028378
+Gate CX 8 7
+Gate CX 4 0
+Gate S 1
+Gate RX 8 2.296504229774139
+Gate CX 4 0
+Gate IP 5 2.302787415081318
+Gate CX 3 4
+Gate CX 5 0
+Gate CX 2 0
+Gate CX 4 7
+Gate SDG 2
+Gate CX 0 2
+Gate SDG 9
+Gate CX 7 6
+Gate CX 0 4
+Gate CX 2 6
+Gate IP 9 2.855707722113122
+Gate CX 6 5
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Gate MEASURE 6
+Gate MEASURE 7
+Gate MEASURE 8
+Gate MEASURE 9
+Qubits 11
+Gate IP 10 1.2252211349000193
+Gate T 9
+Gate CX 10 9
+Gate RY 4 0.744557458900781
+Gate CX 6 9
+Gate CX 4 2
+Gate IP 7 2.8934068339561994
+Gate CX 9 0
+Gate TDG 1
+Gate CX 7 2
+Gate RX 3 2.214822820780804
+Gate RX 4 1.762433478663874
+Gate CX 9 2
+Gate RX 4 1.1592476891746337
+Gate CX 0 8
+Gate X 6
+Gate TDG 4
+Gate CX 10 1
+Gate CX 2 10
+Gate CX 1 5
+Gate CX 1 7
+Gate IP 8 2.7269024233159405
+Gate TDG 5
+Gate CX 8 7
+Gate RX 3 1.4922565104551517
+Gate CX 9 6
+Gate CX 4 10
+Gate CX 10 5
+Gate IP 5 1.3446016557364315
+Gate CX 3 5
+Gate CX 4 5
+Gate T 1
+Gate Z 7
+Gate CX 5 1
+Gate IP 6 1.611637031291564
+Gate H 1
+Gate SDG 7
+Gate H 1
+Gate CX 3 9
+Gate CX 10 9
+Gate CX 1 4
+Gate H 7
+Gate IP 8 1.655619328441821
+Gate S 3
+Gate X 4
+Gate CX 3 0
+Gate S 2
+Gate I 1
+Gate H 2
+Gate CX 2 4
+Gate S 5
+Gate CX 7 6
+Gate IP 1 2.0231856689118266
+Gate CX 5 9
+Gate CX 4 10
+Gate CX 4 0
+Gate IP 8 2.686061718819273
+Gate SDG 9
+Gate CX 5 3
+Gate CX 7 0
+Gate CX 4 3
+Gate SDG 9
+Gate TDG 7
+Gate CX 2 5
+Gate CX 3 7
+Gate S 0
+Gate T 6
+Gate TDG 3
+Gate RX 10 2.4033183799961915
+Gate CX 9 7
+Gate CX 7 8
+Gate CX 3 4
+Gate CX 1 5
+Gate CX 1 7
+Gate CX 9 6
+Gate IP 1 0.4995132319207771
+Gate CX 0 3
+Gate I 5
+Gate S 4
+Gate X 6
+Gate TDG 2
+Gate CX 8 10
+Gate CX 10 0
+Gate IP 8 0.47438049069205873
+Gate T 7
+Gate SDG 8
+Gate CX 7 3
+Gate IP 9 2.7834510910805568
+Gate I 1
+Gate CX 0 7
+Gate CX 8 2
+Gate CX 8 0
+Gate H 10
+Gate SDG 4
+Gate CX 5 2
+Gate CX 10 3
+Gate CX 1 3
+Gate CX 1 5
+Gate IP 10 2.5918139392115793
+Gate CX 5 3
+Gate CX 7 1
+Gate CX 1 3
+Gate IP 3 2.1676989309769574
+Gate CX 6 9
+Gate I 0
+Gate CX 4 1
+Gate CX 5 10
+Gate CX 3 5
+Gate CX 8 6
+Gate CX 7 8
+Gate CX 5 6
+Gate T 5
+Gate RY 10 1.429424657383356
+Gate X 1
+Gate CX 5 10
+Gate CX 6 10
+Gate CX 0 4
+Gate IP 7 2.2650883032382407
+Gate I 7
+Gate IP 6 0.5089380098815465
+Gate CX 6 9
+Qubits 11
+Gate CX 9 1
+Gate CX 4 3
+Gate CX 1 5
+Gate RX 5 2.6200882730938875
+Gate CX 3 10
+Gate TDG 5
+Gate H 3
+Gate RX 3 1.1780972450961724
+Gate CX 1 2
+Gate CX 7 5
+Gate CX 5 6
+Gate TDG 4
+Gate CX 9 2
+Gate IP 3 3.0410616886749198
+Gate RY 10 1.6147786239451536
+Gate RY 5 2.4378758991856793
+Gate CX 9 10
+Gate RX 4 1.4953981031087415
+Gate CX 6 8
+Gate SDG 4
+Gate SDG 10
+Gate S 6
+Gate CX 5 8
+Gate CX 8 1
+Gate IP 1 2.7269024233159405
+Gate CX 3 1
+Gate CX 7 9
+Gate CX 0 1
+Gate CX 10 2
+Gate S 0
+Gate T 0
+Gate CX 7 6
+Gate Y 4
+Gate IP 8 1.0712830948741194
+Gate T 5
+Gate X 1
+Gate CX 2 0
+Gate Y 3
+Gate TDG 3
+Gate CX 8 2
+Gate RY 10 0.6628760499074464
+Gate Y 9
+Gate IP 5 0.8922123136195013
+Gate RX 0 2.42845112122491
+Gate IP 6 2.557256420022092
+Gate T 7
+Gate H 4
+Gate H 8
+Gate CX 0 1
+Gate TDG 0
+Gate Y 6
+Gate CX 5 6
+Gate TDG 10
+Gate IP 10 1.0053096491487339
+Gate CX 2 4
+Gate CX 0 5
+Gate CX 4 2
+Gate CX 1 2
+Gate CX 9 3
+Gate X 9
+Gate IP 5 0.578053048260522
+Gate X 1
+Gate H 5
+Gate IP 5 1.7938494051997718
+Gate Z 5
+Gate S 0
+Gate I 0
+Gate Y 7
+Gate IP 3 0.3581415625092364
+Gate CX 9 0
+Gate RY 2 1.5330972149518192
+Gate X 1
+Gate TDG 9
+Gate CX 2 0
+Gate CX 8 10
+Gate CX 6 7
+Gate RX 2 2.3247785636564466
+Gate CX 4 9
+Gate IP 9 0.16650441064025903
+Gate IP 5 3.0190705400997913
+Gate CX 5 9
+Gate CX 4 5
+Gate CX 6 1
+Gate CX 4 5
+Gate Z 7
+Gate CX 1 2
+Gate CX 8 5
+Gate I 10
+Gate CX 3 5
+Gate CX 6 7
+Gate RY 10 0.09110618695410401
+Gate IP 1 2.381327231421063
+Gate IP 8 1.5613715488341273
+Gate CX 9 4
+Gate CX 5 4
+Gate X 6
+Gate X 0
+Gate CX 3 1
+Gate CX 2 4
+Gate CX 6 9
+Gate CX 3 2
+Gate IP 7 1.7278759594743862
+Gate T 1
+Gate CX 7 1
+Gate CX 6 5
+Gate CX 0 1
+Gate Z 7
+Gate S 7
+Gate TDG 9
+Gate Z 5
+Gate TDG 4
+Gate S 4
+Gate H 5
+Gate IP 3 1.7153095888600272
+Gate CX 5 7
+Gate CX 9 5
+Gate CX 9 8
+Gate S 3
+Gate Z 8
+Gate CX 6 4
+Gate CX 3 1
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Gate MEASURE 6
+Gate MEASURE 7
+Gate MEASURE 8
+Gate MEASURE 9
+Gate MEASURE 10
+Qubits 12
+Gate T 2
+Gate CX 4 8
+Gate CX 11 8
+Gate CX 6 9
+Gate CX 1 4
+Gate Y 1
+Gate IP 1 1.97606177910798
+Gate Y 7
+Gate CX 1 2
+Gate CX 7 5
+Gate CX 11 0
+Gate CX 4 5
+Gate CX 11 6
+Gate I 9
+Gate CX 4 7
+Gate CX 1 10
+Gate CX 10 2
+Gate T 1
+Gate IP 0 1.7090264035528475
+Gate Y 10
+Gate CX 2 8
+Gate CX 6 0
+Gate CX 1 9
+Gate CX 10 11
+Gate CX 4 2
+Gate I 2
+Gate Z 3
+Gate Z 9
+Gate CX 6 0
+Gate IP 4 0.17278759594743864
+Gate CX 9 11
+Gate X 0
+Gate CX 8 7
+Gate CX 10 8
+Gate CX 8 9
+Gate SDG 3
+Gate CX 2 9
+Gate CX 9 4
+Gate IP 5 0.24504422698000386
+Gate S 6
+Gate CX 9 5
+Gate CX 11 6
+Gate CX 4 0
+Gate CX 7 9
+Gate CX 9 1
+Gate Z 1
+Gate H 6
+Gate CX 3 4
+Gate Y 11
+Gate RX 6 2.4504422698000385
+Gate CX 1 9
+Gate Y 3
+Gate CX 4 8
+Gate CX 7 6
+Gate Z 3
+Gate RX 11 2.4158847506105507
+Gate CX 11 6
+Gate X 2
+Gate H 3
+Gate Z 1
+Gate IP 6 0.8325220532012952
+Gate CX 1 6
+Gate CX 1 8
+Gate IP 0 1.6430529578274617
+Gate CX 10 11
+Gate CX 5 9
+Gate CX 1 8
+Gate CX 8 0
+Gate RY 11 2.808583832309275
+Gate CX 2 6
+Gate H 5
+Gate CX 10 6
+Gate T 6
+Gate CX 8 3
+Gate RY 7 0.39584067435231396
+Gate CX 11 0
+Gate CX 7 3
+Gate CX 5 10
+Gate T 3
+Gate X 5
+Gate CX 2 6
+Gate IP 9 0.7037167544041136
+Gate CX 5 10
+Gate CX 9 2
+Gate IP 7 2.0137608909510574
+Gate SDG 7
+Gate Z 11
+Gate IP 1 0.744557458900781
+Gate T 3
+Gate CX 9 5
+Gate SDG 3
+Gate CX 5 0
+Gate Y 10
+Gate Y 10
+Gate IP 6 1.2880529879718152
+Gate CX 9 10
+Gate CX 9 3
+Gate CX 11 0
+Gate H 7
+Gate CX 0 2
+Gate CX 11 4
+Gate CX 7 8
+Gate IP 9 1.9634954084936207
+Gate CX 11 5
+Gate CX 11 1
+Gate CX 5 11
+Gate TDG 10
+Gate CX 9 10
+Gate CX 8 9
+Gate CX 5 6
+Gate Z 7
+Gate IP 6 1.5205308443374599
+Gate CX 5 10
+Gate I 7
+Gate CX 10 5
+Gate CX 11 6
+Gate RY 6 2.8902652413026098
+Gate IP 8 2.73318560862312
+Gate X 0
+Gate CX 10 9
+Gate CX 11 10
+Gate RX 7 0.7665486074759096
+Gate CX 3 2
+Gate X 4
+Gate CX 7 9
+Gate I 8
+Gate S 11
+Gate CX 1 5
+Gate T 3
+Gate TDG 9
+Gate CX 4 6
+Gate Y 4
+Gate RY 6 1.121548577331556
+Gate TDG 9
+Gate TDG 6
+Gate CX 1 4
+Gate IP 7 1.2723450247038661
+Gate H 2
+Gate CX 2 11
+Gate RX 6 0.38641589639154456
+Gate X 1
+Gate SDG 6
+Gate S 11
+Gate CX 6 3
+Qubits 12
+Gate H 1
+Gate SDG 2
+Gate Y 0
+Gate T 3
+Gate CX 4 3
+Gate H 9
+Gate H 11
+Gate S 11
+Gate CX 1 11
+Gate IP 10 1.7655750713174636
+Gate TDG 9
+Gate Y 1
+Gate I 6
+Gate CX 8 10
+Gate IP 9 2.855707722113122
+Gate X 0
+Gate Y 7
+Gate CX 9 7
+Gate CX 11 4
+Gate CX 1 8
+Gate CX 11 2
+Gate CX 4 6
+Gate CX 8 4
+Gate CX 9 7
+Gate I 10
+Gate I 11
+Gate CX 0 10
+Gate CX 10 8
+Gate Z 2
+Gate RY 6 3.0379200960213297
+Gate RX 4 2.912256389877738
+Gate I 9
+Gate CX 3 4
+Gate SDG 1
+Gate H 11
+Gate CX 3 6
+Gate CX 5 8
+Gate CX 8 3
+Gate CX 5 9
+Gate CX 10 4
+Gate I 8
+Gate CX 6 4
+Gate CX 8 11
+Gate Y 6
+Gate CX 4 9
+Gate IP 1 2.1488493750554185
+Gate IP 11 1.592787475370025
+Gate RY 0 0.36442474781641604
+Gate IP 6 0.13194689145077132
+Gate Y 5
+Gate RX 11 0.031415926535897934
+Gate CX 4 5
+Gate I 6
+Gate RX 0 0.9330530181161686
+Gate CX 2 1
+Gate RX 7 1.9352210746113125
+Gate IP 4 0.9236282401553992
+Gate CX 4 10
+Gate IP 8 2.155132560362598
+Gate CX 8 6
+Gate CX 6 10
+Gate CX 11 7
+Gate CX 6 1
+Gate CX 8 6
+Gate CX 11 8
+Gate CX 8 11
+Gate CX 5 1
+Gate IP 6 0.6848671984825748
+Gate CX 10 11
+Gate CX 6 3
+Gate IP 6 0.0879645943005142
+Gate Z 7
+Gate IP 5 2.1142918558659307
+Gate CX 9 2
+Gate CX 5 7
+Gate CX 3 8
+Gate IP 4 0.14765485471872028
+Gate X 11
+Gate RY 1 1.2220795422464297
+Gate Y 9
+Gate CX 6 10
+Gate CX 2 11
+Gate CX 5 10
+Gate RY 0 0.047123889803846894
+Gate RX 0 2.7960174616949156
+Gate RX 2 0.13823007675795088
+Gate CX 5 10
+Gate CX 1 0
+Gate CX 8 9
+Gate CX 4 11
+Gate CX 8 7
+Gate CX 0 11
+Gate IP 10 2.748893571891069
+Gate CX 3 6
+Gate CX 3 5
+Gate H 5
+Gate CX 1 6
+Gate X 7
+Gate IP 8 2.42845112122491
+Gate CX 11 5
+Gate Y 1
+Gate Y 1
+Gate S 5
+Gate CX 11 5
+Gate CX 5 4
+Gate TDG 4
+Gate CX 5 7
+Gate Z 3
+Gate CX 6 4
+Gate IP 3 1.4545573986120741
+Gate CX 10 6
+Gate CX 4 9
+Gate CX 6 0
+Gate CX 9 8
+Gate H 2
+Gate IP 3 0.13194689145077132
+Gate IP 4 2.1174334485195203
+Gate CX 2 7
+Gate T 3
+Gate CX 11 2
+Gate CX 4 0
+Gate CX 9 2
+Gate X 8
+Gate CX 8 0
+Gate CX 11 0
+Gate RX 1 0.47438049069205873
+Gate RX 11 1.4011503235010478
+Gate S 9
+Gate CX 5 3
+Gate CX 11 4
+Gate CX 3 4
+Gate X 9
+Gate IP 1 0.7005751617505239
+Gate CX 5 3
+Gate IP 1 0.6723008278682158
+Gate RX 6 0.43982297150257105
+Gate Z 8
+Gate CX 11 7
+Gate Z 0
+Gate H 5
+Gate IP 7 2.7363272012767097
+Gate CX 9 2
+Gate IP 3 1.8629644435787474
+Gate CX 9 2
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Gate MEASURE 6
+Gate MEASURE 7
+Gate MEASURE 8
+Gate MEASURE 9
+Gate MEASURE 10
+Gate MEASURE 11
+Qubits 13
+Gate S 6
+Gate CX 10 6
+Gate CX 10 6
+Gate H 9
+Gate Y 10
+Gate CX 10 9
+Gate RX 8 2.3184953783492674
+Gate CX 0 5
+Gate S 11
+Gate CX 10 2
+Gate IP 10 0.7319910882864218
+Gate CX 6 5
+Gate RX 5 3.1038935417467157
+Gate CX 7 8
+Gate T 12
+Gate IP 4 0.5277875658030853
+Gate CX 5 9
+Gate CX 6 1
+Gate X 10
+Gate Z 4
+Gate Z 11
+Gate RX 6 1.1969468010177111
+Gate CX 6 7
+Gate CX 3 11
+Gate CX 5 12
+Gate RY 10 2.004336112990288
+Gate IP 8 1.4985396957623314
+Gate CX 0 9
+Gate RX 9 0.8859291283123216
+Gate CX 7 0
+Gate CX 3 4
+Gate CX 7 4
+Gate CX 10 9
+Gate IP 4 1.3163273218541234
+Gate CX 7 4
+Gate CX 9 6
+Gate CX 4 5
+Gate IP 4 1.778141441931823
+Gate CX 10 6
+Gate I 3
+Gate X 6
+Gate CX 3 9
+Gate CX 4 1
+Gate CX 6 9
+Gate IP 12 0.34871678454846705
+Gate CX 7 10
+Gate IP 10 2.9656634649887645
+Gate TDG 0
+Gate SDG 8
+Gate CX 11 5
+Gate CX 3 10
+Gate IP 10 2.777167905773377
+Gate Y 10
+Gate CX 7 6
+Gate Y 9
+Gate S 9
+Gate CX 5 11
+Gate CX 7 8
+Gate CX 6 9
+Gate Y 12
+Gate CX 2 3
+Gate CX 4 7
+Gate S 6
+Gate Z 9
+Gate RX 11 0.7634070148223198
+Gate CX 4 6
+Gate T 1
+Gate CX 1 6
+Gate CX 2 3
+Gate CX 11 12
+Gate CX 3 7
+Gate Z 8
+Gate T 7
+Gate SDG 5
+Gate CX 12 8
+Gate CX 4 8
+Gate CX 5 12
+Gate TDG 1
+Gate CX 5 11
+Gate CX 1 2
+Gate CX 5 10
+Gate CX 7 3
+Gate CX 7 4
+Gate I 7
+Gate CX 11 7
+Gate SDG 10
+Gate SDG 11
+Gate T 7
+Gate H 9
+Gate SDG 6
+Gate CX 7 6
+Gate CX 9 6
+Gate SDG 10
+Gate CX 11 6
+Gate CX 1 9
+Gate RX 4 1.6022122533307945
+Gate Z 9
+Gate CX 6 7
+Gate X 11
+Gate CX 10 9
+Gate S 4
+Gate CX 6 4
+Gate IP 2 2.563539605329271
+Gate CX 3 2
+Gate CX 2 5
+Gate IP 5 1.837831702350029
+Gate CX 2 3
+Gate IP 2 2.1299998191338796
+Gate CX 3 6
+Gate RY 8 0.9393362034233481
+Gate CX 3 12
+Gate T 1
+Gate CX 6 9
+Gate CX 12 7
+Gate CX 9 10
+Gate CX 7 4
+Gate I 1
+Gate CX 9 10
+Gate SDG 2
+Gate CX 2 5
+Gate S 3
+Gate Y 3
+Gate CX 10 7
+Gate CX 9 2
+Gate SDG 2
+Gate CX 7 0
+Gate S 9
+Gate CX 9 7
+Gate CX 12 1
+Gate CX 2 10
+Gate CX 6 1
+Gate CX 12 2
+Gate CX 9 4
+Gate CX 9 8
+Gate S 2
+Gate CX 5 1
+Gate RX 0 1.1718140597889928
+Gate CX 7 0
+Gate CX 11 0
+Gate CX 2 6
+Gate CX 9 7
+Gate CX 6 11
+Gate IP 0 2.2839378591597796
+Gate SDG 10
+Gate CX 6 0
+Gate CX 8 2
+Gate TDG 4
+Gate CX 7 4
+Gate CX 6 0
+Gate CX 11 2
+Gate SDG 7
+Gate TDG 9
+Gate CX 12 5
+Gate CX 7 8
+Gate CX 6 11
+Gate CX 8 0
+Gate IP 2 2.1205750411731104
+Gate IP 1 1.897521962768235
+Gate CX 0 10
+Gate CX 7 4
+Gate CX 7 5
+Gate Y 12
+Gate Z 11
+Gate CX 1 10
+Gate CX 5 4
+Gate CX 10 3
+Gate CX 0 9
+Gate I 5
+Gate SDG 10
+Qubits 13
+Gate Z 0
+Gate CX 3 6
+Gate CX 0 2
+Gate TDG 4
+Gate T 12
+Gate IP 10 1.731017552127976
+Gate CX 10 6
+Gate CX 3 10
+Gate CX 2 1
+Gate CX 9 1
+Gate CX 2 7
+Gate Z 9
+Gate CX 10 3
+Gate CX 0 5
+Gate CX 5 8
+Gate RX 12 0.9896016858807849
+Gate CX 6 9
+Gate Y 1
+Gate CX 6 12
+Gate RX 12 2.8305749808844034
+Gate CX 8 0
+Gate T 4
+Gate CX 6 9
+Gate CX 11 7
+Gate CX 8 9
+Gate Z 0
+Gate T 8
+Gate Y 1
+Gate TDG 0
+Gate S 2
+Gate CX 2 3
+Gate CX 1 10
+Gate S 6
+Gate Z 10
+Gate IP 5 1.82526533173567
+Gate CX 1 2
+Gate CX 5 6
+Gate Z 3
+Gate CX 6 1
+Gate CX 4 2
+Gate CX 12 1
+Gate CX 4 0
+Gate IP 5 2.3530528975387552
+Gate CX 6 10
+Gate CX 9 10
+Gate Y 2
+Gate CX 7 4
+Gate IP 0 1.2440706908215582
+Gate CX 3 6
+Gate CX 5 11
+Gate CX 9 4
+Gate CX 8 11
+Gate Y 1
+Gate IP 2 0.44610615680975063
+Gate Z 0
+Gate CX 12 9
+Gate CX 7 0
+Gate SDG 1
+Gate X 1
+Gate CX 9 2
+Gate CX 3 6
+Gate CX 10 3
+Gate IP 3 0.32672563597333854
+Gate H 5
+Gate CX 12 1
+Gate CX 2 6
+Gate H 3
+Gate SDG 8
+Gate CX 0 11
+Gate X 9
+Gate CX 3 5
+Gate CX 0 12
+Gate CX 0 10
+Gate CX 12 10
+Gate CX 10 12
+Gate SDG 11
+Gate CX 5 6
+Gate SDG 9
+Gate I 11
+Gate CX 12 4
+Gate IP 2 2.6200882730938875
+Gate X 1
+Gate CX 4 6
+Gate RY 5 2.6483626069761956
+Gate Y 11
+Gate CX 10 11
+Gate CX 2 0
+Gate X 6
+Gate CX 4 8
+Gate CX 0 6
+Gate SDG 10
+Gate CX 1 4
+Gate X 2
+Gate T 5
+Gate SDG 6
+Gate TDG 0
+Gate IP 7 2.777167905773377
+Gate CX 10 7
+Gate CX 12 0
+Gate CX 2 4
+Gate Y 2
+Gate IP 4 2.902831611916969
+Gate CX 0 12
+Gate CX 1 9
+Gate CX 4 5
+Gate CX 8 7
+Gate H 6
+Gate X 5
+Gate IP 6 0.2293362637120549
+Gate CX 7 5
+Gate CX 1 12
+Gate CX 11 7
+Gate I 4
+Gate S 9
+Gate IP 2 1.9572122231864413
+Gate H 6
+Gate CX 8 11
+Gate RY 11 0.7351326809400116
+Gate CX 7 11
+Gate CX 8 1
+Gate CX 8 9
+Gate IP 11 2.8902652413026098
+Gate CX 3 5
+Gate CX 10 2
+Gate SDG 2
+Gate Z 11
+Gate I 0
+Gate CX 2 11
+Gate I 7
+Gate H 2
+Gate TDG 4
+Gate X 7
+Gate SDG 11
+Gate CX 12 10
+Gate CX 4 1
+Gate CX 0 8
+Gate CX 7 0
+Gate CX 7 2
+Gate RX 3 3.0127873547926116
+Gate I 9
+Gate CX 0 1
+Gate SDG 2
+Gate CX 8 6
+Gate SDG 4
+Gate X 0
+Gate CX 0 7
+Gate CX 6 12
+Gate TDG 4
+Gate RX 2 2.519557308179014
+Gate I 1
+Gate CX 2 5
+Gate CX 7 8
+Gate I 9
+Gate CX 8 11
+Gate RY 10 0.9204866475018093
+Gate IP 7 0.6440264939859076
+Gate CX 10 2
+Gate IP 12 0.15079644737231007
+Gate CX 6 7
+Gate I 5
+Gate CX 3 4
+Gate CX 7 4
+Gate IP 2 1.080707872834889
+Gate RY 7 2.6640705702441445
+Gate CX 5 1
+Gate CX 2 11
+Gate CX 5 7
+Gate RX 5 2.8494245368059423
+Gate CX 3 2
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Gate MEASURE 6
+Gate MEASURE 7
+Gate MEASURE 8
+Gate MEASURE 9
+Gate MEASURE 10
+Gate MEASURE 11
+Gate MEASURE 12
+Qubits 14
+Gate CX 11 13
+Gate CX 6 1
+Gate CX 6 9
+Gate TDG 1
+Gate T 5
+Gate CX 12 8
+Gate X 1
+Gate CX 8 13
+Gate I 13
+Gate CX 8 5
+Gate S 13
+Gate CX 2 9
+Gate CX 11 13
+Gate Z 5
+Gate Z 1
+Gate CX 2 3
+Gate Y 12
+Gate CX 6 8
+Gate CX 7 8
+Gate CX 6 4
+Gate T 8
+Gate T 6
+Gate CX 2 4
+Gate Y 6
+Gate IP 8 1.6084954386379742
+Gate CX 1 6
+Gate SDG 3
+Gate CX 7 1
+Gate TDG 7
+Gate CX 4 2
+Gate CX 9 1
+Gate SDG 1
+Gate CX 4 3
+Gate IP 6 1.504822881069511
+Gate SDG 7
+Gate RX 7 2.7394687939302993
+Gate CX 2 0
+Gate IP 11 1.7215927741672068
+Gate T 5
+Gate CX 0 4
+Gate CX 8 5
+Gate CX 3 1
+Gate CX 6 7
+Gate S 4
+Gate CX 4 2
+Gate Z 8
+Gate CX 4 5
+Gate CX 5 7
+Gate Y 10
+Gate IP 9 1.4639821765728436
+Gate CX 2 0
+Gate CX 2 1
+Gate Y 1
+Gate Z 11
+Gate CX 0 1
+Gate CX 3 4
+Gate CX 6 3
+Gate CX 11 1
+Gate TDG 13
+Gate CX 4 7
+Gate IP 13 3.0504864666356895
+Gate IP 13 1.0430087609918115
+Gate CX 0 11
+Gate IP 1 0.20106192982974677
+Gate CX 2 3
+Gate CX 3 1
+Gate CX 9 6
+Gate CX 6 8
+Gate CX 0 2
+Gate CX 1 10
+Gate I 13
+Gate CX 9 1
+Gate CX 13 6
+Gate TDG 2
+Gate S 11
+Gate CX 2 10
+Gate CX 11 2
+Gate H 11
+Gate CX 5 4
+Gate CX 11 5
+Gate IP 4 1.429424657383356
+Gate CX 9 13
+Gate CX 0 11
+Gate IP 12 2.943672316413636
+Gate X 0
+Gate CX 4 13
+Gate CX 9 3
+Gate CX 5 4
+Gate S 6
+Gate CX 10 12
+Gate CX 12 2
+Gate CX 12 3
+Gate CX 6 7
+Gate CX 3 13
+Gate IP 1 2.067167966062084
+Gate CX 2 12
+Gate CX 8 9
+Gate IP 9 2.170840523630547
+Gate I 9
+Gate CX 10 5
+Gate CX 13 8
+Gate H 4
+Gate S 6
+Gate S 2
+Gate Y 4
+Gate CX 2 12
+Gate H 13
+Gate Z 12
+Gate CX 1 0
+Gate Y 6
+Gate CX 1 13
+Gate CX 7 6
+Gate CX 11 8
+Gate CX 9 4
+Gate IP 2 2.2273891913951633
+Gate SDG 5
+Gate Z 5
+Gate X 0
+Gate IP 12 1.1278317626387357
+Gate CX 4 11
+Gate Z 12
+Gate CX 13 8
+Gate CX 2 3
+Gate SDG 11
+Gate RX 9 0.637743308678728
+Gate CX 11 13
+Gate RY 3 1.4576989912656642
+Gate IP 4 2.305929007734908
+Gate X 4
+Gate CX 5 13
+Gate CX 8 4
+Gate CX 12 0
+Gate CX 4 0
+Gate CX 12 9
+Gate Y 1
+Gate CX 11 1
+Gate SDG 3
+Gate X 2
+Gate CX 4 8
+Gate CX 12 3
+Gate S 6
+Gate RY 2 2.472433418375167
+Gate CX 10 13
+Gate Z 11
+Gate SDG 6
+Gate CX 12 4
+Gate CX 4 1
+Gate CX 9 6
+Gate X 0
+Gate IP 0 1.7969909978533618
+Gate IP 1 0.49637163926718736
+Gate X 3
+Gate CX 12 5
+Gate T 8
+Gate CX 9 3
+Gate CX 3 11
+Gate CX 9 1
+Gate Z 3
+Gate CX 4 5
+Gate Y 0
+Gate CX 7 12
+Gate I 12
+Gate TDG 3
+Gate CX 11 1
+Gate CX 1 8
+Gate RY 9 2.4441590844928593
+Gate S 12
+Gate CX 0 1
+Gate Y 4
+Gate IP 13 2.067167966062084
+Gate Z 10
+Gate X 8
+Gate RY 10 1.3917255455402784
+Gate CX 10 2
+Gate H 5
+Gate T 2
+Gate CX 7 13
+Gate CX 5 6
+Gate CX 12 2
+Gate TDG 12
+Gate CX 8 12
+Gate CX 9 6
+Gate RX 3 1.774999849278233
+Gate RY 2 1.850398072964388
+Gate Y 11
+Gate X 13
+Gate Z 0
+Gate S 3
+Gate CX 5 4
+Gate CX 6 0
+Gate IP 0 2.0891591146372126
+Gate IP 8 1.778141441931823
+Gate T 6
+Gate CX 5 7
+Gate IP 4 1.0210176124166828
+Gate IP 3 0.18221237390820802
+Qubits 14
+Gate CX 7 3
+Gate I 11
+Gate CX 7 2
+Gate CX 11 13
+Gate CX 13 8
+Gate IP 0 1.5519467708733579
+Gate CX 9 8
+Gate CX 5 13
+Gate CX 13 3
+Gate CX 10 1
+Gate CX 6 0
+Gate Z 5
+Gate CX 6 8
+Gate RY 6 1.6807520696705394
+Gate CX 7 8
+Gate Y 0
+Gate S 2
+Gate CX 5 0
+Gate RY 4 1.9195131113433637
+Gate RX 7 2.8462829441523527
+Gate CX 4 7
+Gate IP 13 1.2566370614359172
+Gate TDG 11
+Gate CX 2 0
+Gate CX 8 0
+Gate CX 13 0
+Gate CX 8 9
+Gate Z 5
+Gate CX 2 6
+Gate IP 0 1.2723450247038661
+Gate CX 4 8
+Gate CX 11 8
+Gate T 9
+Gate CX 2 13
+Gate TDG 11
+Gate TDG 5
+Gate CX 13 12
+Gate Y 0
+Gate CX 8 9
+Gate CX 13 4
+Gate CX 5 7
+Gate T 3
+Gate CX 2 3
+Gate Z 11
+Gate CX 4 8
+Gate CX 13 1
+Gate CX 13 8
+Gate SDG 9
+Gate I 8
+Gate CX 9 13
+Gate CX 13 5
+Gate Y 4
+Gate Y 3
+Gate CX 10 3
+Gate CX 6 3
+Gate S 5
+Gate X 13
+Gate IP 8 2.3719024534602937
+Gate IP 5 2.4755750110287567
+Gate CX 4 13
+Gate IP 8 1.3069025438933541
+Gate CX 2 1
+Gate CX 2 9
+Gate CX 1 5
+Gate RX 8 0.48380526865282814
+Gate CX 0 7
+Gate IP 8 0.4146902302738527
+Gate CX 6 1
+Gate RY 5 0.2670353755551324
+Gate T 4
+Gate CX 1 11
+Gate CX 3 7
+Gate T 5
+Gate CX 11 3
+Gate TDG 3
+Gate CX 0 5
+Gate CX 6 4
+Gate Z 9
+Gate CX 6 12
+Gate IP 10 2.6923449041264527
+Gate CX 6 5
+Gate RX 11 0.6848671984825748
+Gate IP 4 0.07539822368615504
+Gate RX 6 1.8723892215395168
+Gate CX 7 9
+Gate I 5
+Gate CX 6 9
+Gate TDG 7
+Gate H 6
+Gate TDG 6
+Gate CX 8 4
+Gate CX 8 2
+Gate S 8
+Gate SDG 3
+Gate S 0
+Gate T 8
+Gate CX 8 11
+Gate CX 2 11
+Gate CX 5 4
+Gate CX 11 8
+Gate X 13
+Gate H 7
+Gate CX 10 11
+Gate CX 1 11
+Gate CX 13 12
+Gate CX 10 1
+Gate IP 2 1.0838494654884787
+Gate IP 13 0.39269908169872414
+Gate Z 10
+Gate CX 12 5
+Gate Z 5
+Gate CX 2 10
+Gate CX 11 3
+Gate CX 4 1
+Gate CX 12 13
+Gate T 5
+Gate X 0
+Gate H 4
+Gate CX 4 5
+Gate RY 13 0.5309291584566751
+Gate CX 4 3
+Gate SDG 4
+Gate CX 1 2
+Gate Z 12
+Gate TDG 4
+Gate CX 11 7
+Gate Y 2
+Gate CX 3 7
+Gate CX 2 10
+Gate Y 9
+Gate CX 9 13
+Gate S 8
+Gate CX 11 12
+Gate X 11
+Gate Y 13
+Gate TDG 1
+Gate CX 2 9
+Gate Y 1
+Gate T 13
+Gate CX 5 4
+Gate IP 5 0.06283185307179587
+Gate T 12
+Gate Y 2
+Gate CX 6 8
+Gate X 6
+Gate CX 9 12
+Gate Y 5
+Gate RX 4 0.08168140899333463
+Gate Z 11
+Gate H 11
+Gate IP 5 0.7571238295151402
+Gate CX 3 9
+Gate I 5
+Gate S 0
+Gate CX 7 5
+Gate I 6
+Gate I 13
+Gate CX 11 9
+Gate CX 0 1
+Gate CX 11 12
+Gate SDG 3
+Gate I 4
+Gate S 8
+Gate CX 8 6
+Gate CX 13 12
+Gate T 6
+Gate RY 8 1.687035254977719
+Gate CX 9 4
+Gate SDG 8
+Gate X 7
+Gate H 6
+Gate IP 3 2.491282974296706
+Gate CX 1 9
+Gate CX 7 12
+Gate CX 1 8
+Gate CX 7 1
+Gate RX 12 3.0819023931715868
+Gate Y 13
+Gate CX 13 5
+Gate IP 13 0.5560618996853934
+Gate RY 9 1.184380430403352
+Gate TDG 1
+Gate IP 1 0.4146902302738527
+Gate CX 11 8
+Gate CX 13 6
+Gate CX 13 1
+Gate SDG 2
+Gate CX 7 1
+Gate RY 10 1.9163715186897738
+Gate S 8
+Gate CX 4 2
+Gate X 13
+Gate CX 10 12
+Gate Y 8
+Gate CX 8 6
+Gate CX 13 0
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Gate MEASURE 6
+Gate MEASURE 7
+Gate MEASURE 8
+Gate MEASURE 9
+Gate MEASURE 10
+Gate MEASURE 11
+Gate MEASURE 12
+Gate MEASURE 13
+Qubits 15
+Gate CX 4 13
+Gate CX 8 1
+Gate S 6
+Gate S 7
+Gate SDG 14
+Gate S 3
+Gate CX 8 12
+Gate I 7
+Gate Y 9
+Gate Z 9
+Gate CX 5 13
+Gate Y 12
+Gate T 4
+Gate CX 3 14
+Gate CX 6 0
+Gate IP 1 2.9530970943744057
+Gate TDG 1
+Gate X 1
+Gate CX 1 14
+Gate CX 10 6
+Gate CX 9 6
+Gate CX 10 0
+Gate CX 1 9
+Gate CX 12 8
+Gate CX 14 11
+Gate Y 2
+Gate SDG 14
+Gate I 9
+Gate RY 12 1.5456635855661782
+Gate RY 10 1.7687166639710536
+Gate RX 14 1.4451326206513049
+Gate IP 3 0.18221237390820802
+Gate IP 12 2.8871236486490197
+Gate Z 4
+Gate CX 2 3
+Gate I 1
+Gate S 0
+Gate X 1
+Gate Y 11
+Gate CX 7 12
+Gate CX 7 6
+Gate CX 2 5
+Gate Y 12
+Gate CX 9 14
+Gate CX 14 12
+Gate SDG 1
+Gate CX 8 13
+Gate CX 12 8
+Gate RX 3 0.8042477193189871
+Gate S 9
+Gate S 0
+Gate H 13
+Gate H 6
+Gate X 0
+Gate CX 12 13
+Gate IP 12 0.6188937527571892
+Gate CX 9 4
+Gate CX 4 14
+Gate IP 0 0.9958848711879644
+Gate S 10
+Gate Z 3
+Gate RY 3 0.20106192982974677
+Gate CX 13 7
+Gate I 11
+Gate SDG 6
+Gate IP 10 1.200088393671301
+Gate CX 4 7
+Gate CX 1 5
+Gate Z 12
+Gate CX 0 11
+Gate CX 2 5
+Gate IP 6 2.824291795577224
+Gate IP 6 0.5434955290710342
+Gate CX 5 11
+Gate Y 13
+Gate CX 0 4
+Gate IP 10 2.463008640414398
+Gate CX 0 9
+Gate SDG 1
+Gate CX 1 14
+Gate CX 13 0
+Gate CX 3 11
+Gate SDG 7
+Gate TDG 8
+Gate IP 3 1.1466813185602747
+Gate CX 7 0
+Gate CX 1 11
+Gate T 5
+Gate CX 3 2
+Gate CX 9 4
+Gate T 11
+Gate CX 13 1
+Gate CX 0 6
+Gate I 0
+Gate IP 0 2.4504422698000385
+Gate CX 9 0
+Gate IP 0 2.1582741530161877
+Gate IP 6 2.6200882730938875
+Gate H 0
+Gate TDG 2
+Gate Z 9
+Gate CX 10 4
+Gate IP 6 0.16336281798666927
+Gate CX 7 9
+Gate CX 12 0
+Gate SDG 0
+Gate H 12
+Gate T 12
+Gate CX 6 2
+Gate CX 5 6
+Gate CX 13 4
+Gate CX 1 2
+Gate CX 13 7
+Gate CX 5 10
+Gate CX 1 9
+Gate CX 10 11
+Gate IP 13 1.564513141487717
+Gate H 4
+Gate Y 12
+Gate CX 3 12
+Gate SDG 1
+Gate CX 9 12
+Gate CX 3 6
+Gate CX 11 6
+Gate CX 6 3
+Gate IP 6 1.4482742133048947
+Gate CX 8 3
+Gate CX 3 12
+Gate Y 8
+Gate RY 13 1.1026990214100174
+Gate RY 11 2.086017521983623
+Gate RY 10 0.09424777960769379
+Gate IP 11 0.4932300466135975
+Gate CX 3 11
+Gate H 3
+Gate TDG 10
+Gate CX 8 11
+Gate IP 0 1.7530087007031045
+Gate IP 5 3.0661944299036383
+Gate CX 11 1
+Gate SDG 10
+Gate CX 12 10
+Gate TDG 5
+Gate CX 14 0
+Gate CX 1 2
+Gate H 9
+Gate CX 12 10
+Gate RX 6 0.1759291886010284
+Gate TDG 10
+Gate CX 12 2
+Gate CX 4 9
+Gate CX 4 3
+Gate RY 11 0.6565928646002668
+Gate CX 13 14
+Gate CX 12 3
+Gate CX 0 11
+Gate CX 4 1
+Gate H 6
+Gate RX 3 2.5101325302182445
+Gate T 6
+Gate CX 6 10
+Gate T 5
+Gate CX 0 1
+Gate RY 13 2.4881413816431164
+Gate CX 5 11
+Gate CX 3 13
+Gate CX 12 11
+Gate CX 1 0
+Gate IP 5 0.25132741228718347
+Gate S 9
+Gate IP 6 0.22305307840487532
+Gate RX 11 2.2933626371205493
+Gate CX 6 7
+Gate CX 0 9
+Gate S 4
+Gate Z 9
+Gate CX 4 5
+Gate CX 6 14
+Gate RY 2 2.3499113048851656
+Gate CX 14 4
+Gate X 11
+Gate CX 2 3
+Gate CX 11 0
+Gate CX 12 5
+Gate Z 8
+Gate IP 14 0.012566370614359173
+Gate CX 9 14
+Gate CX 14 4
+Gate CX 11 0
+Gate RX 14 3.1164599123610746
+Gate T 4
+Gate IP 1 0.10367255756846318
+Gate TDG 10
+Gate I 4
+Gate I 11
+Gate IP 4 2.623229865747477
+Gate RY 13 1.580221104755666
+Gate CX 12 5
+Gate TDG 5
+Gate IP 3 2.598097124518759
+Gate CX 11 0
+Gate CX 4 9
+Gate CX 8 13
+Gate CX 13 3
+Gate CX 11 6
+Gate CX 13 2
+Gate I 11
+Gate CX 8 0
+Gate S 13
+Gate RY 3 1.82212373908208
+Gate CX 1 5
+Gate IP 2 1.900663555421825
+Gate S 4
+Gate Z 1
+Gate RX 8 2.987654613563893
+Gate RY 2 0.7099999397112933
+Gate CX 0 11
+Gate CX 4 10
+Gate IP 8 1.6147786239451536
+Gate CX 1 11
+Gate RY 14 1.8158405537749005
+Gate CX 12 10
+Gate CX 1 3
+Gate CX 0 3
+Gate CX 7 11
+Qubits 15
+Gate RX 11 2.0891591146372126
+Gate CX 2 9
+Gate IP 5 0.12566370614359174
+Gate CX 14 11
+Gate CX 0 7
+Gate I 14
+Gate CX 5 4
+Gate RY 10 0.5026548245743669
+Gate CX 14 7
+Gate S 4
+Gate CX 14 4
+Gate Z 9
+Gate CX 13 3
+Gate CX 5 2
+Gate IP 11 1.2032299863248908
+Gate IP 8 1.9666370011472105
+Gate I 3
+Gate CX 1 3
+Gate CX 3 4
+Gate CX 5 6
+Gate CX 10 9
+Gate T 2
+Gate CX 1 0
+Gate IP 7 2.459867047760808
+Gate CX 8 11
+Gate CX 3 7
+Gate TDG 2
+Gate CX 2 10
+Gate RY 12 2.626371458401067
+Gate CX 7 1
+Gate CX 10 5
+Gate IP 1 0.03455751918948772
+Gate CX 9 10
+Gate CX 6 9
+Gate CX 12 0
+Gate IP 4 0.4429645641561608
+Gate CX 3 4
+Gate IP 10 2.067167966062084
+Gate CX 13 0
+Gate CX 6 10
+Gate CX 11 12
+Gate CX 2 14
+Gate CX 13 3
+Gate X 3
+Gate I 12
+Gate CX 6 8
+Gate CX 2 10
+Gate CX 6 5
+Gate CX 2 4
+Gate CX 5 0
+Gate CX 0 5
+Gate Z 14
+Gate X 3
+Gate I 12
+Gate X 5
+Gate CX 6 3
+Gate TDG 6
+Gate CX 2 5
+Gate T 4
+Gate CX 9 5
+Gate RY 8 2.7363272012767097
+Gate CX 7 8
+Gate RX 14 2.0326104468725963
+Gate CX 7 0
+Gate CX 8 2
+Gate CX 9 2
+Gate T 4
+Gate CX 7 13
+Gate S 0
+Gate CX 10 14
+Gate CX 1 13
+Gate H 0
+Gate CX 3 2
+Gate RX 2 0.6471680866394973
+Gate RY 1 0.27646015351590175
+Gate CX 9 12
+Gate SDG 6
+Gate CX 4 5
+Gate CX 9 13
+Gate Y 14
+Gate IP 11 1.3571680263507906
+Gate CX 3 7
+Gate RX 6 2.9405307237600464
+Gate T 9
+Gate CX 2 1
+Gate S 14
+Gate H 13
+Gate CX 7 8
+Gate Y 2
+Gate Z 9
+Gate TDG 0
+Gate T 12
+Gate S 0
+Gate CX 4 2
+Gate CX 1 5
+Gate CX 1 13
+Gate IP 9 2.535265271446963
+Gate CX 13 11
+Gate CX 3 14
+Gate X 8
+Gate Z 3
+Gate CX 10 7
+Gate CX 6 2
+Gate TDG 12
+Gate SDG 2
+Gate CX 3 10
+Gate CX 12 6
+Gate CX 1 12
+Gate IP 4 2.7394687939302993
+Gate I 0
+Gate CX 5 2
+Gate CX 0 1
+Gate Z 7
+Gate CX 13 5
+Gate CX 6 10
+Gate CX 10 12
+Gate CX 7 1
+Gate T 8
+Gate CX 6 13
+Gate CX 3 4
+Gate RX 6 0.7571238295151402
+Gate CX 6 9
+Gate RY 2 2.598097124518759
+Gate CX 6 11
+Gate SDG 1
+Gate CX 2 11
+Gate CX 7 0
+Gate CX 5 14
+Gate Z 11
+Gate CX 5 13
+Gate CX 10 2
+Gate CX 13 12
+Gate CX 4 0
+Gate CX 3 9
+Gate CX 2 0
+Gate X 8
+Gate CX 13 8
+Gate CX 7 4
+Gate CX 13 6
+Gate CX 13 10
+Gate CX 0 2
+Gate IP 8 1.3006193585861743
+Gate IP 0 1.0901326507956584
+Gate RX 6 1.3980087308474578
+Gate CX 8 6
+Gate TDG 0
+Gate CX 2 1
+Gate CX 12 0
+Gate RX 4 2.368760860806704
+Gate CX 0 7
+Gate CX 9 6
+Gate CX 11 9
+Gate I 12
+Gate CX 8 7
+Gate RX 3 2.626371458401067
+Gate CX 10 2
+Gate CX 13 5
+Gate CX 8 10
+Gate CX 9 8
+Gate X 10
+Gate CX 11 7
+Gate IP 1 0.5057964172279567
+Gate CX 11 4
+Gate CX 14 7
+Gate Y 5
+Gate Y 5
+Gate CX 7 11
+Gate CX 8 0
+Gate RY 11 1.077566280181299
+Gate RY 4 1.5676547341413067
+Gate SDG 8
+Gate CX 1 13
+Gate CX 9 12
+Gate CX 7 1
+Gate IP 5 0.11623892818282235
+Gate CX 0 9
+Gate SDG 13
+Gate CX 11 1
+Gate X 13
+Gate CX 3 4
+Gate CX 4 9
+Gate X 1
+Gate CX 2 4
+Gate H 13
+Gate CX 10 12
+Gate CX 8 12
+Gate CX 11 3
+Gate CX 8 2
+Gate CX 2 3
+Gate CX 13 1
+Gate CX 1 10
+Gate CX 11 0
+Gate X 5
+Gate RX 0 1.8095573684677209
+Gate I 1
+Gate I 14
+Gate CX 7 11
+Gate RY 12 2.563539605329271
+Gate X 12
+Gate I 8
+Gate CX 12 7
+Gate CX 3 8
+Gate CX 12 4
+Gate CX 7 12
+Gate IP 4 2.9405307237600464
+Gate IP 4 1.3414600630828417
+Gate IP 12 2.5289820861397834
+Gate H 12
+Gate Z 10
+Gate CX 14 3
+Gate X 2
+Gate X 12
+Gate IP 0 2.9468139090672256
+Gate CX 14 9
+Gate SDG 3
+Gate RX 5 1.6304865872131027
+Gate SDG 13
+Gate CX 14 12
+Gate RX 5 1.1466813185602747
+Gate S 12
+Gate X 5
+Gate CX 13 4
+Gate H 10
+Gate CX 13 3
+Gate IP 1 1.4451326206513049
+Gate MEASURE 0
+Gate MEASURE 1
+Gate MEASURE 2
+Gate MEASURE 3
+Gate MEASURE 4
+Gate MEASURE 5
+Gate MEASURE 6
+Gate MEASURE 7
+Gate MEASURE 8
+Gate MEASURE 9
+Gate MEASURE 10
+Gate MEASURE 11
+Gate MEASURE 12
+Gate MEASURE 13
+Gate MEASURE 14

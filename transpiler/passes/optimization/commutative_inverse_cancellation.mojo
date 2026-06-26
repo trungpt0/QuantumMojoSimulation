@@ -207,7 +207,7 @@ struct DependencyCheck:
     def _is_ancestor(self, dag: DAGCircuit, src: Int, dst: Int) -> Bool:
         if src == dst: return False
         var visited = List[Bool]()
-        for i in range(len(dag.nodes)):
+        for _ in range(len(dag.nodes)):
             visited.append(False)
         var queue = List[Int]()
         queue.append(src)
@@ -227,7 +227,7 @@ struct DependencyCheck:
 
     def _reachable_forward(self, dag: DAGCircuit, start: Int) -> List[Bool]:
         var visited = List[Bool]()
-        for i in range(len(dag.nodes)):
+        for _ in range(len(dag.nodes)):
             visited.append(False)
         var queue = List[Int]()
         queue.append(start)
@@ -245,7 +245,7 @@ struct DependencyCheck:
 
     def _reachable_backward(self, dag: DAGCircuit, start: Int) -> List[Bool]:
         var visited = List[Bool]()
-        for i in range(len(dag.nodes)):
+        for _ in range(len(dag.nodes)):
             visited.append(False)
         var queue = List[Int]()
         queue.append(start)
