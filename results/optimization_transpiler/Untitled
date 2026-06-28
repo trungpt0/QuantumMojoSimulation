@@ -35,45 +35,6 @@ GATE_MAP = {
     "CX":  lambda p: CXGate(),
 }
 
-GATE_NAME_MAP = {
-    "id":    "I",
-    "x":     "X",
-    "y":     "Y",
-    "z":     "Z",
-    "h":     "H",
-    "s":     "S",
-    "sdg":   "SDG",
-    "t":     "T",
-    "tdg":   "TDG",
-    "rx":    "RX",
-    "ry":    "RY",
-    "rz":    "RZ",
-    "p":     "P",
-    "cx":    "CX",
-    "measure": "MEASURE",
-}
-
-def qc_to_mojo_str(qc: QuantumCircuit, num_q: int) -> str:
-    lines = [f"Qubits {num_q}"]
-    for instruction in qc.data:
-        gate = instruction.operation
-        qargs = instruction.qubits
-        gate_name = gate.name.lower()
-        mojo_name = GATE_NAME_MAP.get(gate_name)
-        if mojo_name is None:
-            continue
-        qubit_indices = [qc.find_bit(q).index for q in qargs]
-        if mojo_name == "MEASURE":
-            lines.append(f"Gate MEASURE {qubit_indices[0]}")
-        elif mojo_name == "CX":
-            lines.append(f"Gate CX {qubit_indices[0]} {qubit_indices[1]}")
-        elif mojo_name in ("RX", "RY", "RZ", "P"):
-            theta = gate.params[0]
-            lines.append(f"Gate {mojo_name} {qubit_indices[0]} {theta}")
-        else:
-            lines.append(f"Gate {mojo_name} {qubit_indices[0]}")
-    return "\n".join(lines) + "\n"
-
 def _run_consolidate(dag):
     from qiskit.transpiler import PropertySet
     prop = PropertySet()
@@ -87,33 +48,15 @@ def _run_consolidate(dag):
     p2.run(dag)
     return p3.run(dag)
 
-def _run_all(dag):
-    from qiskit.transpiler import PropertySet
-    RemoveIdentityEquivalent().run(dag)
-    InverseCancellation().run(dag)
-    CommutativeInverseCancellation().run(dag)
-    prop = PropertySet()
-    p1 = Collect1qRuns()
-    p2 = Collect2qBlocks()
-    p3 = ConsolidateBlocks(force_consolidate=True)
-    p1.property_set = prop
-    p2.property_set = prop
-    p3.property_set = prop
-    p1.run(dag)
-    p2.run(dag)
-    p3.run(dag)
-
 PASSES_ORDER = [
     ("RemoveIdentityEquivalent",        "no_measure",   lambda dag: RemoveIdentityEquivalent().run(dag)),
     ("RemoveDiagonalGatesBeforeMeasure","with_measure", lambda dag: RemoveDiagonalGatesBeforeMeasure().run(dag)),
     ("InverseCancellation",             "no_measure",   lambda dag: InverseCancellation().run(dag)),
     ("CommutativeInverseCancellation",  "no_measure",   lambda dag: CommutativeInverseCancellation().run(dag)),
     ("ConsolidateBlocks",               "no_measure",   _run_consolidate),
-    ("AllOptimization",                 "no_measure",   _run_all),
 ]
 
 OUTPUT_FILE = "results/optimization_transpiler/data/exe_timing_qiskit_data.txt"
-CIRCUIT_VERIFY = "results/optimization_transpiler/data/circuit_data_qiskit.txt"
 
 def circuit_from_parse(path: str) -> dict[int, tuple[QuantumCircuit, QuantumCircuit]]:
     blocks: list[tuple[int, list[tuple[str, list[str]]]]] = []
@@ -165,24 +108,16 @@ def circuit_from_parse(path: str) -> dict[int, tuple[QuantumCircuit, QuantumCirc
             gate = GATE_MAP[gate_name](params)
             qc.append(gate, qubit_indices)
         return qc
+
     result: dict[int, tuple[QuantumCircuit, QuantumCircuit]] = {}
-    with open(CIRCUIT_VERIFY, "w") as f:
-        f.write("")
     for num_q, gate_lists in seen.items():
         circuit_no_measure   = build_circuit(num_q, gate_lists[0], include_measure=False)
         circuit_with_measure = build_circuit(num_q, gate_lists[1], include_measure=True)
         result[num_q] = (circuit_no_measure, circuit_with_measure)
-        with open(CIRCUIT_VERIFY, "a") as f:
-            f.write(qc_to_mojo_str(circuit_no_measure,   num_q))
-            f.write(qc_to_mojo_str(circuit_with_measure, num_q))
     return result
 
-N_RUNS = 1000
-WARMUP = 50
+N_RUNS = 50
 def time_pass(run_fn, qc: QuantumCircuit) -> int:
-    for _ in range(WARMUP):
-        dag = circuit_to_dag(qc)
-        run_fn(dag)
     samples: list[int] = []
     for _ in range(N_RUNS):
         dag = circuit_to_dag(qc)

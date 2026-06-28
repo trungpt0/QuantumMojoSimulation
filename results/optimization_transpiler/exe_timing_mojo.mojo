@@ -47,7 +47,11 @@ def make_random_circuit(nq: Int, ng: Int, measurement: Bool = False) raises -> Q
     return qc^
 
 def time_remove_identity(qc: QuantumCircuit) raises:
-    comptime N_RUNS = 50
+    comptime N_RUNS = 1000
+    comptime WARMUP = 50
+    for _ in range(WARMUP):
+        var dag = DAGCircuit.from_circuit(qc)
+        var _ = RemoveIdentityEquivalent().run(dag^)
     var total: Int = 0
     for _ in range(N_RUNS):
         var dag = DAGCircuit.from_circuit(qc)
@@ -61,7 +65,11 @@ def time_remove_identity(qc: QuantumCircuit) raises:
     f.close()
 
 def time_inverse_cancellation(qc: QuantumCircuit) raises:
-    comptime N_RUNS = 50
+    comptime N_RUNS = 1000
+    comptime WARMUP = 50
+    for _ in range(WARMUP):
+        var dag = DAGCircuit.from_circuit(qc)
+        var _ = InverseCancellation().run(dag^)
     var total: Int = 0
     for _ in range(N_RUNS):
         var dag = DAGCircuit.from_circuit(qc)
@@ -75,7 +83,11 @@ def time_inverse_cancellation(qc: QuantumCircuit) raises:
     f.close()
 
 def time_commutative_inverse_cancellation(qc: QuantumCircuit) raises:
-    comptime N_RUNS = 50
+    comptime N_RUNS = 1000
+    comptime WARMUP = 50
+    for _ in range(WARMUP):
+        var dag = DAGCircuit.from_circuit(qc)
+        var _ = CommutativeInverseCancellation().run(dag^)
     var total: Int = 0
     for _ in range(N_RUNS):
         var dag = DAGCircuit.from_circuit(qc)
@@ -89,7 +101,11 @@ def time_commutative_inverse_cancellation(qc: QuantumCircuit) raises:
     f.close()
 
 def time_consolidate_blocks(qc: QuantumCircuit) raises:
-    comptime N_RUNS = 50
+    comptime N_RUNS = 1000
+    comptime WARMUP = 50
+    for _ in range(WARMUP):
+        var dag = DAGCircuit.from_circuit(qc)
+        var _ = ConsolidateBlocks().run(dag^)
     var total: Int = 0
     for _ in range(N_RUNS):
         var dag = DAGCircuit.from_circuit(qc)
@@ -103,7 +119,11 @@ def time_consolidate_blocks(qc: QuantumCircuit) raises:
     f.close()
 
 def time_remove_diagonal(qc: QuantumCircuit) raises:
-    comptime N_RUNS = 50
+    comptime N_RUNS = 1000
+    comptime WARMUP = 50
+    for _ in range(WARMUP):
+        var dag = DAGCircuit.from_circuit(qc)
+        var _ = RemoveDiagonalGatesBeforeMeasure().run(dag^)
     var total: Int = 0
     for _ in range(N_RUNS):
         var dag = DAGCircuit.from_circuit(qc)
@@ -114,6 +134,30 @@ def time_remove_diagonal(qc: QuantumCircuit) raises:
     var avg = total // N_RUNS
     var f = open("results/optimization_transpiler/data/exe_timing_mojo_data.txt", "a")
     f.write("RemoveDiagonalGatesBeforeMeasure " + String(avg) + "\n")
+    f.close()
+
+def time_all_passes(qc: QuantumCircuit) raises:
+    comptime N_RUNS = 1000
+    comptime WARMUP = 50
+    for _ in range(WARMUP):
+        var dag = DAGCircuit.from_circuit(qc)
+        var dag2 = RemoveIdentityEquivalent().run(dag^)
+        var dag3 = InverseCancellation().run(dag2^)
+        var dag4 = CommutativeInverseCancellation().run(dag3^)
+        var _    = ConsolidateBlocks().run(dag4^)
+    var total: Int = 0
+    for _ in range(N_RUNS):
+        var dag = DAGCircuit.from_circuit(qc)
+        var t0 = monotonic()
+        var dag2 = RemoveIdentityEquivalent().run(dag^)
+        var dag3 = InverseCancellation().run(dag2^)
+        var dag4 = CommutativeInverseCancellation().run(dag3^)
+        var _    = ConsolidateBlocks().run(dag4^)
+        var t1 = monotonic()
+        total += Int(t1 - t0)
+    var avg = total // N_RUNS
+    var f = open("results/optimization_transpiler/data/exe_timing_mojo_data.txt", "a")
+    f.write("AllOptimization " + String(avg) + "\n")
     f.close()
 
 def main() raises:
@@ -143,3 +187,4 @@ def main() raises:
         time_inverse_cancellation(qc)
         time_commutative_inverse_cancellation(qc)
         time_consolidate_blocks(qc)
+        time_all_passes(qc)

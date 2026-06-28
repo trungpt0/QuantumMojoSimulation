@@ -8,6 +8,7 @@ PASSES = [
     "InverseCancellation",
     "CommutativeInverseCancellation",
     "ConsolidateBlocks",
+    "AllOptimization",
 ]
  
 UNIT_DIVISORS = {"ns": 1, "us": 1e3, "ms": 1e6, "s": 1e9}
@@ -38,21 +39,33 @@ def plot(mojo_path: str, qiskit_path: str, unit: str, out: str | None):
     qiskit_data = parse_log(qiskit_path)
     qubits = sorted(set(mojo_data) & set(qiskit_data))
     n_passes = len(PASSES)
-    fig, axes = plt.subplots(
-        nrows=(n_passes + 1) // 2,
-        ncols=2,
-        figsize=(12, 4 * ((n_passes + 1) // 2)),
+    ncols    = 2
+    nrows    = (n_passes + 1) // ncols
+    ul       = UNIT_LABELS[unit]
+    fig, axes = plt.subplots(nrows=nrows, ncols=ncols,
+                             figsize=(14, 5.5 * nrows))
+    fig.subplots_adjust(
+        left=0.08,
+        right=0.98,
+        bottom=0.07,
+        top=0.92,
+        hspace=0.50,
+        wspace=0.25,
     )
     axes = axes.flatten()
-    ul = UNIT_LABELS[unit]
     for idx, pass_name in enumerate(PASSES):
         ax = axes[idx]
         mojo_times   = [convert(mojo_data.get(q, {}).get(pass_name, 0),   unit) for q in qubits]
         qiskit_times = [convert(qiskit_data.get(q, {}).get(pass_name, 0), unit) for q in qubits]
-        ax.plot(qubits, mojo_times,   marker="o", linewidth=2,
-                label="Mojo",   color="#2a78d6")
-        ax.plot(qubits, qiskit_times, marker="s", linewidth=2,
-                label="Qiskit", color="#eda100", linestyle="--")
+        has_mojo   = any(v > 0 for v in mojo_times)
+        has_qiskit = any(v > 0 for v in qiskit_times)
+        if has_mojo:
+            ax.plot(qubits, mojo_times,   marker="o", linewidth=2,
+                    label="Mojo",   color="#2a78d6")
+        if has_qiskit:
+            ax.plot(qubits, qiskit_times, marker="s", linewidth=2,
+                    label="Qiskit", color="#eda100", linestyle="--")
+        title_color = "#c0392b" if pass_name == "All4PassesNoMeasure" else "black"
         ax.set_title(pass_name, fontsize=11, fontweight="bold")
         ax.set_xlabel("Qubits", fontsize=9)
         ax.set_ylabel(f"Time ({ul})", fontsize=9)
@@ -68,9 +81,8 @@ def plot(mojo_path: str, qiskit_path: str, unit: str, out: str | None):
         axes[i].set_visible(False)
     fig.suptitle(
         f"Transpiler pass execution time — Mojo vs Qiskit ({ul})",
-        fontsize=13, fontweight="bold", y=1.01,
+        fontsize=14, fontweight="bold", y=0.98
     )
-    plt.tight_layout()
     if out:
         plt.savefig(out, dpi=150, bbox_inches="tight")
         print(f"Saved → {out}")
