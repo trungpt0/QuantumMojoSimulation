@@ -53,160 +53,174 @@ GATE_NAME_MAP = {
     "measure": "MEASURE",
 }
 
-def qc_to_mojo_str(qc: QuantumCircuit, num_q: int) -> str:
-    lines = [f"Qubits {num_q}"]
-    for instruction in qc.data:
-        gate = instruction.operation
-        qargs = instruction.qubits
-        gate_name = gate.name.lower()
-        mojo_name = GATE_NAME_MAP.get(gate_name)
-        if mojo_name is None:
-            continue
-        qubit_indices = [qc.find_bit(q).index for q in qargs]
-        if mojo_name == "MEASURE":
-            lines.append(f"Gate MEASURE {qubit_indices[0]}")
-        elif mojo_name == "CX":
-            lines.append(f"Gate CX {qubit_indices[0]} {qubit_indices[1]}")
-        elif mojo_name in ("RX", "RY", "RZ", "P"):
-            theta = gate.params[0]
-            lines.append(f"Gate {mojo_name} {qubit_indices[0]} {theta}")
-        else:
-            lines.append(f"Gate {mojo_name} {qubit_indices[0]}")
-    return "\n".join(lines) + "\n"
+N_RUNS = 30
+N_ITER = 500
+PASS_DEFS = [
+    ("RemoveIdentityEquivalent",        "no_measure"),
+    ("RemoveDiagonalGatesBeforeMeasure","with_measure"),
+    ("InverseCancellation",             "no_measure"),
+    ("CommutativeInverseCancellation",  "no_measure"),
+    ("ConsolidateBlocks",               "no_measure"),
+    ("AllOptimization",                 "no_measure"),
+]
 
+OUTPUT_FILE = "results/optimization_transpiler/data/exe_timing_qiskit_data.txt"
+CIRCUIT_VERIFY = "results/optimization_transpiler/data/circuit_data_qiskit.txt"
+
+def _run_remove_identity(dag):
+    RemoveIdentityEquivalent().run(dag)
+ 
+def _run_remove_diagonal(dag):
+    RemoveDiagonalGatesBeforeMeasure().run(dag)
+ 
+def _run_inverse_cancellation(dag):
+    InverseCancellation().run(dag)
+ 
+def _run_commutative(dag):
+    CommutativeInverseCancellation().run(dag)
+ 
 def _run_consolidate(dag):
     from qiskit.transpiler import PropertySet
     prop = PropertySet()
-    p1 = Collect1qRuns()
-    p2 = Collect2qBlocks()
-    p3 = ConsolidateBlocks(force_consolidate=True)
-    p1.property_set = prop
-    p2.property_set = prop
-    p3.property_set = prop
-    p1.run(dag)
-    p2.run(dag)
-    return p3.run(dag)
-
+    p1, p2, p3 = Collect1qRuns(), Collect2qBlocks(), ConsolidateBlocks(force_consolidate=True)
+    p1.property_set = p2.property_set = p3.property_set = prop
+    p1.run(dag); p2.run(dag); p3.run(dag)
+ 
 def _run_all(dag):
     from qiskit.transpiler import PropertySet
     RemoveIdentityEquivalent().run(dag)
     InverseCancellation().run(dag)
     CommutativeInverseCancellation().run(dag)
     prop = PropertySet()
-    p1 = Collect1qRuns()
-    p2 = Collect2qBlocks()
-    p3 = ConsolidateBlocks(force_consolidate=True)
-    p1.property_set = prop
-    p2.property_set = prop
-    p3.property_set = prop
-    p1.run(dag)
-    p2.run(dag)
-    p3.run(dag)
+    p1, p2, p3 = Collect1qRuns(), Collect2qBlocks(), ConsolidateBlocks(force_consolidate=True)
+    p1.property_set = p2.property_set = p3.property_set = prop
+    p1.run(dag); p2.run(dag); p3.run(dag)
 
-PASSES_ORDER = [
-    ("RemoveIdentityEquivalent",        "no_measure",   lambda dag: RemoveIdentityEquivalent().run(dag)),
-    ("RemoveDiagonalGatesBeforeMeasure","with_measure", lambda dag: RemoveDiagonalGatesBeforeMeasure().run(dag)),
-    ("InverseCancellation",             "no_measure",   lambda dag: InverseCancellation().run(dag)),
-    ("CommutativeInverseCancellation",  "no_measure",   lambda dag: CommutativeInverseCancellation().run(dag)),
-    ("ConsolidateBlocks",               "no_measure",   _run_consolidate),
-    ("AllOptimization",                 "no_measure",   _run_all),
-]
+PASS_RUNNERS = {
+    "RemoveIdentityEquivalent":        _run_remove_identity,
+    "RemoveDiagonalGatesBeforeMeasure":_run_remove_diagonal,
+    "InverseCancellation":             _run_inverse_cancellation,
+    "CommutativeInverseCancellation":  _run_commutative,
+    "ConsolidateBlocks":               _run_consolidate,
+    "AllOptimization":                 _run_all,
+}
 
-OUTPUT_FILE = "results/optimization_transpiler/data/exe_timing_qiskit_data.txt"
-CIRCUIT_VERIFY = "results/optimization_transpiler/data/circuit_data_qiskit.txt"
-
-def circuit_from_parse(path: str) -> dict[int, tuple[QuantumCircuit, QuantumCircuit]]:
-    blocks: list[tuple[int, list[tuple[str, list[str]]]]] = []
-    with open(path, "r") as f:
-        lines = [ln.strip() for ln in f if ln.strip()]
-    current_qubits: int | None = None
-    current_gates: list[tuple[str, list[str]]] = []
-    for line in lines:
-        if line.startswith("Qubits"):
-            if current_qubits is not None:
-                blocks.append((current_qubits, current_gates))
-            current_qubits = int(line.split()[1])
-            current_gates = []
-        elif line.startswith("Gate"):
-            tokens = line.split()
-            gate_name = tokens[1].upper()
-            rest = tokens[2:]
-            current_gates.append((gate_name, rest))
+def parse_blocks(path: str) -> list[tuple[int, list[tuple[str, list[str]]]]]:
+    blocks = []
+    current_qubits = None
+    current_gates  = []
+    with open(path) as f:
+        for raw in f:
+            line = raw.strip()
+            if not line:
+                continue
+            if line.startswith("Qubits"):
+                if current_qubits is not None:
+                    blocks.append((current_qubits, current_gates))
+                current_qubits = int(line.split()[1])
+                current_gates  = []
+            elif line.startswith("Gate"):
+                tokens    = line.split()
+                gate_name = tokens[1].upper()
+                rest      = tokens[2:]
+                current_gates.append((gate_name, rest))
     if current_qubits is not None:
         blocks.append((current_qubits, current_gates))
-    seen: dict[int, list] = {}
-    for num_q, gates in blocks:
-        seen.setdefault(num_q, []).append(gates)
+    return blocks
 
-    def build_circuit(num_q: int, gate_list: list[tuple[str, list[str]]],
-                      include_measure: bool) -> QuantumCircuit:
-        from qiskit import ClassicalRegister
-        qc = QuantumCircuit(num_q)
-        for gate_name, rest in gate_list:
-            if gate_name == "MEASURE":
-                if include_measure:
-                    qubit = int(rest[0])
-                    qc.add_register(ClassicalRegister(1))
-                    qc.measure(qubit, qc.num_clbits - 1)
-                continue
-            if gate_name == "MEASURE_ALL":
-                if include_measure:
-                    qc.measure_all()
-                continue
-            if gate_name not in GATE_MAP:
-                raise ValueError(f"Unknown gate: {gate_name}")
-            qubit_indices: list[int] = []
-            params: list[str] = []
-            for token in rest:
-                try:
-                    qubit_indices.append(int(token))
-                except ValueError:
-                    params.append(token)
-            gate = GATE_MAP[gate_name](params)
-            qc.append(gate, qubit_indices)
-        return qc
-    result: dict[int, tuple[QuantumCircuit, QuantumCircuit]] = {}
-    with open(CIRCUIT_VERIFY, "w") as f:
-        f.write("")
-    for num_q, gate_lists in seen.items():
-        circuit_no_measure   = build_circuit(num_q, gate_lists[0], include_measure=False)
-        circuit_with_measure = build_circuit(num_q, gate_lists[1], include_measure=True)
-        result[num_q] = (circuit_no_measure, circuit_with_measure)
-        with open(CIRCUIT_VERIFY, "a") as f:
-            f.write(qc_to_mojo_str(circuit_no_measure,   num_q))
-            f.write(qc_to_mojo_str(circuit_with_measure, num_q))
-    return result
+def build_circuit(num_q: int, gate_list: list[tuple[str, list[str]]],
+                  include_measure: bool) -> QuantumCircuit:
+    from qiskit import ClassicalRegister
+    qc = QuantumCircuit(num_q)
+    for gate_name, rest in gate_list:
+        if gate_name == "MEASURE":
+            if include_measure:
+                qubit = int(rest[0])
+                qc.add_register(ClassicalRegister(1))
+                qc.measure(qubit, qc.num_clbits - 1)
+            continue
+        if gate_name == "MEASURE_ALL":
+            if include_measure:
+                qc.measure_all()
+            continue
+        if gate_name not in GATE_MAP:
+            raise ValueError(f"Unknown gate: {gate_name}")
+        qubit_indices, params = [], []
+        for token in rest:
+            try:
+                qubit_indices.append(int(token))
+            except ValueError:
+                params.append(token)
+        qc.append(GATE_MAP[gate_name](params), qubit_indices)
+    return qc
 
-N_RUNS = 1000
-WARMUP = 50
-def time_pass(run_fn, qc: QuantumCircuit) -> int:
-    for _ in range(WARMUP):
-        dag = circuit_to_dag(qc)
-        run_fn(dag)
-    samples: list[int] = []
-    for _ in range(N_RUNS):
-        dag = circuit_to_dag(qc)
-        t0 = time.perf_counter_ns()
-        run_fn(dag)
-        t1 = time.perf_counter_ns()
-        samples.append(t1 - t0)
-    return round(sum(samples) / N_RUNS)
+def qc_to_mojo_str(qc: QuantumCircuit, num_q: int) -> str:
+    lines = [f"Qubits {num_q}"]
+    for inst in qc.data:
+        gate      = inst.operation
+        mojo_name = GATE_NAME_MAP.get(gate.name.lower())
+        if mojo_name is None:
+            continue
+        qidx = [qc.find_bit(q).index for q in inst.qubits]
+        if mojo_name == "MEASURE":
+            lines.append(f"Gate MEASURE {qidx[0]}")
+        elif mojo_name == "CX":
+            lines.append(f"Gate CX {qidx[0]} {qidx[1]}")
+        elif mojo_name in ("RX", "RY", "RZ", "P"):
+            lines.append(f"Gate {mojo_name} {qidx[0]} {gate.params[0]}")
+        else:
+            lines.append(f"Gate {mojo_name} {qidx[0]}")
+    return "\n".join(lines) + "\n"
 
-def time_optimization_pass_run():
-    circuits = circuit_from_parse("results/optimization_transpiler/data/circuit_data.txt")
-    for nq, (qc_no_meas, qc_with_meas) in circuits.items():
+def time_pass_list(run_fn, circuits: list[QuantumCircuit]) -> int:
+    total = 0
+    for qc in circuits:
+        dt = 0
+        for _ in range(N_ITER):
+            dag = circuit_to_dag(qc)
+            t0  = time.perf_counter_ns()
+            run_fn(dag)
+            t1  = time.perf_counter_ns()
+            dt += t1 - t0
+        dts = dt // N_ITER
+        total += dts
+    return round(total / len(circuits))
+ 
+def time_optimization_pass_run(circuit_path: str):
+    all_blocks = parse_blocks(circuit_path)
+    qubit_sizes = []
+    seen_order  = {}
+    for num_q, gates in all_blocks:
+        if num_q not in seen_order:
+            seen_order[num_q] = []
+            qubit_sizes.append(num_q)
+        seen_order[num_q].append(gates)
+    with open(CIRCUIT_VERIFY, "w"):
+        pass
+    for num_q in qubit_sizes:
+        gate_lists = seen_order[num_q]
+        n_passes   = len(PASS_DEFS)
+        if len(gate_lists) < n_passes * N_RUNS:
+            print(f"[WARN] Qubits {num_q}: has {len(gate_lists)} blocks, "
+                  f"need {n_passes * N_RUNS}")
         with open(OUTPUT_FILE, "a") as f:
-            f.write(f"Qubits {nq}\n")
-        for pass_name, circuit_type, run_fn in PASSES_ORDER:
-            qc = qc_no_meas if circuit_type == "no_measure" else qc_with_meas
-            elapsed = time_pass(run_fn, qc)
+            f.write(f"Qubits {num_q}\n")
+        for i, (pass_name, circuit_type) in enumerate(PASS_DEFS):
+            include_measure = (circuit_type == "with_measure")
+            chunk = gate_lists[i * N_RUNS : (i + 1) * N_RUNS]
+            circuits = [build_circuit(num_q, gl, include_measure) for gl in chunk]
+            with open(CIRCUIT_VERIFY, "a") as f:
+                for circ in circuits:
+                    f.write(qc_to_mojo_str(circ, num_q))
+            run_fn  = PASS_RUNNERS[pass_name]
+            elapsed = time_pass_list(run_fn, circuits)
             with open(OUTPUT_FILE, "a") as f:
                 f.write(f"{pass_name} {elapsed}\n")
 
 def main():
     with open(OUTPUT_FILE, "w"):
         pass
-    time_optimization_pass_run()
+    time_optimization_pass_run("results/optimization_transpiler/data/circuit_data.txt")
 
 if __name__ == '__main__':
     main()

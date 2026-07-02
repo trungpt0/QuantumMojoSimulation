@@ -1,4 +1,5 @@
 from std.time import monotonic
+from std.math import atan2, cos, sin
 
 comptime PI = 3.141592653589793
 
@@ -142,6 +143,13 @@ struct Complex(Copyable):
 
     def abs(self) -> Float64:
         return sqrt(self.re * self.re + self.im * self.im)
+
+    def pow(self, exp: Float64) -> Complex:
+        var r = self.abs() 
+        var theta = atan2(self.im, self.re)
+        var r_exp = r ** exp
+        var theta_exp = theta * exp
+        return Complex(r_exp * cos(theta_exp), r_exp * sin(theta_exp))
 
 def abs2(c: Complex) -> Float64:
     return c.re * c.re + c.im * c.im

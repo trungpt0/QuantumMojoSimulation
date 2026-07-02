@@ -344,6 +344,7 @@ def build_pass_manager(pass_name: str) -> PassManager:
             passes.append(Collect1qRuns())
             passes.append(Collect2qBlocks())
             passes.append(ConsolidateBlocks(force_consolidate=True))
+            passes.append(Split2QUnitaries())
             return PassManager(passes)
         case _:
             raise ValueError(f"Unknown pass: {pass_name}")

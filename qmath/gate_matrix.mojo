@@ -129,6 +129,37 @@ struct Matrix4x4(Copyable, Movable):
                 res.set(c, r, Complex(cp.re, -cp.im))
         return res^
 
+    def transpose(self) -> Matrix4x4:
+        var res = Matrix4x4()
+        for r in range(4):
+            for c in range(4):
+                res.set(c, r, self.get(r, c))
+        return res^
+
+    def determinant(self) -> Complex:
+        def det3x3(m: Matrix4x4, r0: Int, r1: Int, r2: Int, c0: Int, c1: Int, c2: Int) -> Complex:
+            var t1 = m.get(r0, c0).mul(m.get(r1, c1).mul(m.get(r2, c2)).sub(m.get(r1, c2).mul(m.get(r2, c1))))
+            var t2 = m.get(r0, c1).mul(m.get(r1, c0).mul(m.get(r2, c2)).sub(m.get(r1, c2).mul(m.get(r2, c0))))
+            var t3 = m.get(r0, c2).mul(m.get(r1, c0).mul(m.get(r2, c1)).sub(m.get(r1, c1).mul(m.get(r2, c0))))
+            return t1.sub(t2).add(t3)
+        var det = Complex(0.0, 0.0)
+        var sign: Float64 = 1.0
+        for c0 in range(4):
+            var sub_rows = List[Int]()
+            for r in range(1, 4):
+                sub_rows.append(r)
+            var sub_cols = List[Int]()
+            for c in range(4):
+                if c != c0: 
+                    sub_cols.append(c)
+            var minor_det = det3x3(self, sub_rows[0], sub_rows[1], sub_rows[2], sub_cols[0], sub_cols[1], sub_cols[2])
+            var term = self.get(0, c0).mul(minor_det)
+            if sign < 0.0:
+                term = Complex(-term.re, -term.im)
+            det = det.add(term)
+            sign = -sign
+        return det^
+        
     def trace(self) -> Complex:
         var t = Complex(0.0, 0.0)
         for i in range(4):
@@ -149,7 +180,7 @@ struct Matrix4x4(Copyable, Movable):
             if d.norm() > tol: return False
         return True
 
-    def is_unitary(self, tol = Float64 = 1e-10) -> Float64:
+    def is_unitary(self, tol = Float64 = 1e-10) -> Bool:
         var dagger = self.dagger()
         var product = dagger.mul(self)
         return product.is_identity(tol)
@@ -273,7 +304,7 @@ struct Matrix4x4(Copyable, Movable):
         var product = dagger.mul(other)
         var tr = product.trace()
         tr_norm_sq = tr.re * tr.re + tr.im * tr.im
-        return (tr_norm_sq + d) / (d * (d + 1))
+        return tr_norm_sq / 16.0
 
     def print_matrix(self):
         print("Matrix 4x4:")

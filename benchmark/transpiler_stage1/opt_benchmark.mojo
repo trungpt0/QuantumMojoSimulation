@@ -4,7 +4,7 @@ from circuit import QuantumCircuit
 from gate_record import ApplyGateLog, ApplyUnitaryGateLog
 from std.time import monotonic
 from qrandom import ApplyRandomGateLog
-from transpiler.passes.optimization import RemoveIdentityEquivalent, RemoveDiagonalGatesBeforeMeasure, InverseCancellation, CommutativeInverseCancellation, ConsolidateBlocks, Split2QUnitaries
+from transpiler.passes.optimization import RemoveIdentityEquivalent, RemoveDiagonalGatesBeforeMeasure, InverseCancellation, CommutativeInverseCancellation, ConsolidateBlocks
 
 def optimization_benchmark(nq: Int, ng: Int) raises:
     var qc = QuantumCircuit(nq)
@@ -44,21 +44,19 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
         else:
             out += "GateBefore " + g.gate_name + " " + String(g.q0) + "\n" 
     var dag = DAGCircuit.from_circuit(qc)
-    # var pass1 = RemoveIdentityEquivalent()
-    # var dag1 = pass1.run(dag^)
-    # var pass2 = InverseCancellation()
-    # var dag2 = pass2.run(dag1^)
-    # var pass3 = CommutativeInverseCancellation()
-    # var dag3 = pass3.run(dag2^)
-    # var pass4 = ConsolidateBlocks()
-    # var dag4 = pass4.run(dag3^)
+    var pass1 = RemoveIdentityEquivalent()
+    var dag1 = pass1.run(dag^)
+    var pass2 = InverseCancellation()
+    var dag2 = pass2.run(dag1^)
+    var pass3 = CommutativeInverseCancellation()
+    var dag3 = pass3.run(dag2^)
+    var pass4 = ConsolidateBlocks()
+    var dag4 = pass4.run(dag3^)
     # var pass5 = RemoveDiagonalGatesBeforeMeasure()
     # var dag5 = pass5.run(dag4^)
-    var pass1 = ConsolidateBlocks()
-    var dag1 = pass1.run(dag^)
-    for i in range(len(dag1.nodes)):
-        if dag1.nodes[i].type == "gate":
-            var g = ApplyRandomGateLog.gate_with_log(dag1.nodes[i].gate.name, dag1.nodes[i].gate.qubit, dag1.nodes[i].gate.theta)
+    for i in range(len(dag4.nodes)):
+        if dag4.nodes[i].type == "gate":
+            var g = ApplyRandomGateLog.gate_with_log(dag4.nodes[i].gate.name, dag4.nodes[i].gate.qubit, dag4.nodes[i].gate.theta)
             dag_gate_log.append(g^)
     # var topo = dag1.topological_sort()
     # for i in range(len(topo)):
