@@ -5,31 +5,41 @@ from qmath import Matrix2x2, Matrix4x4
 from transpiler.passes.synthesis import WeylDecomposition
 from transpiler.passes.synthesis import TensorFactorize
 from transpiler.passes.synthesis import VatanWilliams
+from transpiler.passes.synthesis import EulerSU2, EulerSU2ToGates
 
-struct Split2QUnitaries:
+struct UnitarySynthesis:
     var tol: Float64
+    var euler: EulerSU2
+    var etg: EulerSU2ToGates
 
     def __init__(out self, tol: Float64 = 1e-10):
         self.tol = tol
+        self.euler = EulerSU2(tol)
+        self.etg = EulerSU2ToGates(tol)
 
-    def _u2_to_gate(self, U: Matrix2x2, q: Int) -> GateOp:
-        var ql = List[Int]()
-        ql.append(q)
-        return GateOp("UnitaryGate1q", ql, U.serialize())^
+    def _u2_to_rot_gates(self, u: Matrix2x2, q: Int) -> List[GateOp]:
+        var abc = self.euler.decompose(u)
+        return self.e2g.synthesize(abc.get[0](), abc.get[1](), abc.get[2](), q)^
+
+    def _extend(self, mut dst: List[GateOp], src: List[GateOp]):
+        for i in range(len(src)):
+            dst.append(src[i])
 
     def _split_unitary_gate(out self, dag: DAGCircuit, nid: Int) -> List[GateOp]:
         var gate = dag.nodes[nid].gate.copy()
         var q0 = gate.qubit[0]
         var q1 = gate.qubit[1]
         var U = Matrix4x4.deserialize(gate.theta)
+        var result = List[GateOp]()
         # Case 1: U = Ua ⊗ Ub
         if U.is_tensor_product(self.tol):
             var factors = U.extract_factors(self.tol)
-            var result = List[GateOp]()
-            if not factors[0].is_identity(self.tol):
-                result.append(self._u2_to_gate(factors[0], q0))
-            if not factors[1].is_identity(self.tol):
-                result.append(self._u2_to_gate(factors[1], q1))
+            var Ua = factors[0]
+            var Ub = factors[1]
+            if not Ua.is_identity(self.tol):
+                self._extend(result, self._u2_to_rot_gates(Ua, q0))
+            if not Ub.is_identity(self.tol):
+                self._extend(result, self._u2_to_rot_gates(Ub, q1))
             return result^
         # Case 2: KAK decomposition
         var weyl = WeylDecomposition(self.tol)
@@ -49,17 +59,16 @@ struct Split2QUnitaries:
         var K2r = k2[1]
         var result = List[GateOp]()
         if not K2l.is_identity(self.tol):
-            result.append(self._u2_to_gate(K2l, q0))
+            self._extend(result, self._u2_to_rot_gates(K2l, q0))
         if not K2r.is_identity(self.tol):
-            result.append(self._u2_to_gate(K2r, q1))
+            self._extend(result, self._u2_to_rot_gates(K2r, q1))
         var vw = VatanWilliams(self.tol)
         var canon = vw.synthesize(alpha, beta, gamma, q0, q1)
-        for i in range(len(canon)):
-            result.append(canon[i])
+        self._extend(result, canon)
         if not K1l.is_identity(self.tol):
-            result.append(self._u2_to_gate(K1l, q0))
+            self._extend(result, self._u2_to_rot_gates(K1l, q0))
         if not K1r.is_identity(self.tol):
-            result.append(self._u2_to_gate(K1r, q1))
+            self._extend(result, self._u2_to_rot_gates(K1r, q1))
         return result^
 
     def run(out self, dag: DAGCircuit) -> DAGCircuit:

@@ -136,6 +136,14 @@ struct Matrix4x4(Copyable, Movable):
                 res.set(c, r, self.get(r, c))
         return res^
 
+    def conjugate(self) -> Matrix4x4:
+        var res = Matrix4x4()
+        for r in range(4):
+            for c in range(4):
+                var cp = self.get(r, c)
+                res.set(r, c, Complex(cp.re, -cp.im))
+        return res^
+
     def determinant(self) -> Complex:
         def det3x3(m: Matrix4x4, r0: Int, r1: Int, r2: Int, c0: Int, c1: Int, c2: Int) -> Complex:
             var t1 = m.get(r0, c0).mul(m.get(r1, c1).mul(m.get(r2, c2)).sub(m.get(r1, c2).mul(m.get(r2, c1))))
