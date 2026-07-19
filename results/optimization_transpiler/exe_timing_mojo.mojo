@@ -48,7 +48,7 @@ def make_random_circuit(nq: Int, ng: Int, measurement: Bool = False) raises -> Q
 
 def time_remove_identity(nq: Int, ng: Int) raises:
     comptime N_RUNS = 30
-    comptime N_ITER = 500
+    comptime N_ITER = 50
     var total: Int = 0
     for _ in range(N_RUNS):
         qc = make_random_circuit(nq, ng, measurement=False)
@@ -68,7 +68,7 @@ def time_remove_identity(nq: Int, ng: Int) raises:
 
 def time_inverse_cancellation(nq: Int, ng: Int) raises:
     comptime N_RUNS = 30
-    comptime N_ITER = 500
+    comptime N_ITER = 50
     var total: Int = 0
     for _ in range(N_RUNS):
         qc = make_random_circuit(nq, ng, measurement=False)
@@ -88,7 +88,7 @@ def time_inverse_cancellation(nq: Int, ng: Int) raises:
 
 def time_commutative_inverse_cancellation(nq: Int, ng: Int) raises:
     comptime N_RUNS = 30
-    comptime N_ITER = 500
+    comptime N_ITER = 50
     var total: Int = 0
     for _ in range(N_RUNS):
         qc = make_random_circuit(nq, ng, measurement=False)
@@ -108,7 +108,7 @@ def time_commutative_inverse_cancellation(nq: Int, ng: Int) raises:
 
 def time_consolidate_blocks(nq: Int, ng: Int) raises:
     comptime N_RUNS = 30
-    comptime N_ITER = 500
+    comptime N_ITER = 50
     var total: Int = 0
     for _ in range(N_RUNS):
         qc = make_random_circuit(nq, ng, measurement=False)
@@ -128,7 +128,7 @@ def time_consolidate_blocks(nq: Int, ng: Int) raises:
 
 def time_remove_diagonal(nq: Int, ng: Int) raises:
     comptime N_RUNS = 30
-    comptime N_ITER = 500
+    comptime N_ITER = 50
     var total: Int = 0
     for _ in range(N_RUNS):
         qc = make_random_circuit(nq, ng, measurement=True)
@@ -148,7 +148,7 @@ def time_remove_diagonal(nq: Int, ng: Int) raises:
 
 def time_all_passes(nq: Int, ng: Int) raises:
     comptime N_RUNS = 50
-    comptime N_ITER = 500
+    comptime N_ITER = 50
     var total: Int = 0
     for _ in range(N_RUNS):
         qc = make_random_circuit(nq, ng, measurement=False)

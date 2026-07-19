@@ -27,4 +27,4 @@ struct Collect1qRuns:
                 if self._default_filter(dag, run_list[i]):
                     filtered.append(run_list[i].copy())
             return filtered^
-        return run_list^
+        return run_list^    

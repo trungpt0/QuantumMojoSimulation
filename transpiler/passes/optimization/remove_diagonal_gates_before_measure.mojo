@@ -16,8 +16,9 @@ struct RemoveDiagonalGatesBeforeMeasure:
         var topo = dagc.topological_sort()
         for i in range(len(topo)):
             var nid = topo[i]
-            if dagc.nodes[nid].type == "removed": continue
-            var gate = dagc.nodes[nid].gate.copy()
+            var node = dagc.nodes[nid].copy()
+            if node.type == "removed": continue
+            var gate = node.gate.copy()
             if gate.name == "MEASURE" and len(gate.qubit) > 0:
                 var preds = dagc.predecessors(nid)
                 for j in range(len(preds)):

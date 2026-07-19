@@ -283,7 +283,7 @@ struct CommutativeInverseCancellation:
     def _param_sum(self, g1: GateOp, g2: GateOp, tol: Float64 = 1e-10) -> Bool:
         if len(g1.theta) == 0 or len(g2.theta) == 0:
             return False
-        var PI2: Float64 = PI * PI
+        var PI2: Float64 = 2 * PI
         var s = g1.theta[0] + g2.theta[0]
         while s > PI: s -= PI2
         while s < -PI: s += PI2

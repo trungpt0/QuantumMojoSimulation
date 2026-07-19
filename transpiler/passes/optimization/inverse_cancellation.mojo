@@ -10,7 +10,7 @@ struct InverseCancellation:
     def _param_sum(self, g1: GateOp, g2: GateOp, tol: Float64 = 1e-10) -> Bool:
         if len(g1.theta) == 0 or len(g2.theta) == 0:
             return False
-        var PI2: Float64 = PI * PI
+        var PI2: Float64 = 2 * PI
         var s = g1.theta[0] + g2.theta[0]
         while s > PI: s -= PI2
         while s < -PI: s += PI2
@@ -18,29 +18,32 @@ struct InverseCancellation:
 
     def _are_inverses(self, g1: GateOp, g2: GateOp) -> Bool:
         if len(g1.qubit) != len(g2.qubit): return False
-        for i in range(len(g1.qubit)):
+        var nq = len(g1.qubit)
+        for i in range(nq):
             if g1.qubit[i] != g2.qubit[i]: return False
-        if g1.name == "I" and g2.name == "I": return True
-        if g1.name == "H" and g2.name == "H": return True
-        if g1.name == "X" and g2.name == "X": return True
-        if g1.name == "Y" and g2.name == "Y": return True
-        if g1.name == "Z" and g2.name == "Z": return True
-        if g1.name == "CX" and g2.name == "CX": return True
-        if g1.name == "S" and g2.name == "SDG": return True
-        if g1.name == "SDG" and g2.name == "S": return True
-        if g1.name == "T" and g2.name == "TDG": return True
-        if g1.name == "TDG" and g2.name == "T": return True
-        if g1.name == "RX" and g2.name == "RX":
+        var n1 = g1.name
+        var n2 = g2.name
+        if n1 == "I" and n2 == "I": return True
+        if n1 == "H" and n2 == "H": return True
+        if n1 == "X" and n2 == "X": return True
+        if n1 == "Y" and n2 == "Y": return True
+        if n1 == "Z" and n2 == "Z": return True
+        if n1 == "CX" and n2 == "CX": return True
+        if n1 == "S" and n2 == "SDG": return True
+        if n1 == "SDG" and n2 == "S": return True
+        if n1 == "T" and n2 == "TDG": return True
+        if n1 == "TDG" and n2 == "T": return True
+        if n1 == "RX" and n2 == "RX":
             return self._param_sum(g1, g2)
-        if g1.name == "RY" and g2.name == "RY":
+        if n1 == "RY" and n2 == "RY":
             return self._param_sum(g1, g2)
-        if g1.name == "RZ" and g2.name == "RZ":
+        if n1 == "RZ" and n2 == "RZ":
             return self._param_sum(g1, g2)
-        if g1.name == "P" and g2.name == "P":
+        if n1 == "P" and n2 == "P":
             return self._param_sum(g1, g2)
-        if g1.name == "IP" and g2.name == "IP":
+        if n1 == "IP" and n2 == "IP":
             return self._param_sum(g1, g2)
-        if (g1.name == "P" and g2.name == "IP") or (g1.name == "IP" and g2.name == "P"):
+        if (n1 == "P" and n2 == "IP") or (n1 == "IP" and n2 == "P"):
             return self._param_sum(g1, g2)
         return False
 
