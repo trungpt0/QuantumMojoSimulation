@@ -206,6 +206,104 @@ struct DAGCircuit(Copyable, Movable):
             if succ_id == self.output_nodes[q]:
                 self.frontier[q] = new_node_id
 
+    def replace_block_operations(mut self, gates: List[GateOp], block: List[Int]):
+        if len(gates) == 0:
+            for i in range(len(block)):
+                self.remove_operation(block[i])
+            return
+        if len(gates) == 1:
+            self.replace_block_operation(gates[0], block)
+            return
+        var all_qubits = List[Int]()
+        for i in range(len(block)):
+            if self.nodes[block[i]].type == "removed": continue
+            var g = self.nodes[block[i]].gate.copy()
+            for j in range(len(g.qubit)):
+                var q = g.qubit[j]
+                var found = False
+                for k in range(len(all_qubits)):
+                    if all_qubits[k] == q: found = True; break
+                if not found: all_qubits.append(q)
+        var nq = len(all_qubits)
+        var preds = List[Int]()
+        var succs = List[Int]()
+        for _ in range(nq): preds.append(-1); succs.append(-1)
+        var first_on_qubit = List[Int]()
+        var last_on_qubit = List[Int]()
+        for _ in range(nq): first_on_qubit.append(-1); last_on_qubit.append(-1)
+        for i in range(len(block)):
+            var nid = block[i]
+            if self.nodes[nid].type == "removed": continue
+            var g = self.nodes[nid].gate.copy()
+            for j in range(len(g.qubit)):
+                var q = g.qubit[j]
+                for k in range(nq):
+                    if all_qubits[k] == q:
+                        if first_on_qubit[k] < 0: first_on_qubit[k] = nid
+                        last_on_qubit[k] = nid
+        for k in range(nq):
+            var q = all_qubits[k]
+            var fnid = first_on_qubit[k]
+            if fnid < 0:
+                preds[k] = self.frontier[q]
+            else:
+                preds[k] = self.input_nodes[q]
+                for e in range(len(self.edges)):
+                    var edge = self.edges[e].copy()
+                    if edge.dst == fnid and edge.qubit == q:
+                        preds[k] = edge.src
+                        break
+            var lnid = last_on_qubit[k]
+            if lnid < 0:
+                succs[k] = self.output_nodes[q]
+            else:
+                succs[k] = self.output_nodes[q]
+                for e in range(len(self.edges)):
+                    var edge = self.edges[e].copy()
+                    if edge.src == lnid and edge.qubit == q:
+                        succs[k] = edge.dst
+                        break
+        var block_set = List[Bool]()
+        for _ in range(len(self.nodes)): block_set.append(False)
+        for i in range(len(block)): block_set[block[i]] = True
+        var new_edges = List[DAGEdge]()
+        for e in range(len(self.edges)):
+            var edge = self.edges[e].copy()
+            if block_set[edge.src] or block_set[edge.dst]: continue
+            new_edges.append(edge^)
+        self.edges = new_edges^
+        for i in range(len(block)):
+            var nid = block[i]
+            self.nodes[nid] = DAGNode(nid, GateOp("REMOVED", List[Int]()), "removed")
+        var local_frontier = List[Int]()
+        for k in range(nq): local_frontier.append(preds[k])
+        var new_node_ids = List[Int]()
+        for gi in range(len(gates)):
+            var gate = gates[gi].copy()
+            var node_id = len(self.nodes)
+            self.nodes.append(DAGNode(node_id, gate, "gate"))
+            new_node_ids.append(node_id)
+            for j in range(len(gate.qubit)):
+                var q = gate.qubit[j]
+                var k = -1
+                for kk in range(nq):
+                    if all_qubits[kk] == q: k = kk; break
+                if k < 0:
+                    var prev = self.frontier[q]
+                    self.edges.append(DAGEdge(prev, node_id, q))
+                    self.frontier[q] = node_id
+                    continue
+                var prev_local = local_frontier[k]
+                self.edges.append(DAGEdge(prev_local, node_id, q))
+                local_frontier[k] = node_id
+        for k in range(nq):
+            var q = all_qubits[k]
+            var last_id = local_frontier[k]
+            var succ_id = succs[k]
+            self.edges.append(DAGEdge(last_id, succ_id, q))
+            if succ_id == self.output_nodes[q]:
+                self.frontier[q] = last_id
+
     def predecessors(self, node_id: Int) -> List[Int]:
         var preds = List[Int]()
         for i in range(len(self.edges)):

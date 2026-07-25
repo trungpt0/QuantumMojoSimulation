@@ -6,3 +6,4 @@ from .collect_1q_runs import Collect1qRuns
 from .collect_2q_blocks import Collect2qBlocks
 from .consolidate_blocks import ConsolidateBlocks
 from .split_2q_unitaries import Split2QUnitaries
+from .clifford_T_optimization import CliffordTOptimization

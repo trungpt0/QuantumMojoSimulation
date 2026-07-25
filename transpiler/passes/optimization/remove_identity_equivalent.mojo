@@ -22,8 +22,7 @@ struct RemoveIdentityEquivalent:
         var topo = dagc.topological_sort()
         for i in range(len(topo)):
             var nid = topo[i]
-            var node = dagc.nodes[nid].copy()
-            if node.type == "removed": continue
-            if self._is_identity(node.gate):
+            if dagc.nodes[nid].type == "removed": continue
+            if self._is_identity(dagc.nodes[nid].gate):
                 dagc.remove_operation(nid)
         return dagc^
