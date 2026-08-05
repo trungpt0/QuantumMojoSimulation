@@ -166,3 +166,22 @@ def sqrt(x: Float64) -> Float64:
     for _ in range(20):
         guess = 0.5 * (guess + x / guess)
     return guess
+
+def bit_length(x: Int) -> Int:
+    var v = x
+    var l = 0
+    while v != 0:
+        v = v >> 1
+        l += 1
+    return l
+
+struct nummojo:
+
+    @staticmethod
+    def bit_length(x: Int) -> Int:
+        var v = x
+        var l = 0
+        while v != 0:
+            v = v >> 1
+            l += 1
+        return l

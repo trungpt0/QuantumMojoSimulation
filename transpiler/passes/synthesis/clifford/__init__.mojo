@@ -1,0 +1,1 @@
+from .tpar import tpar_algorithm
