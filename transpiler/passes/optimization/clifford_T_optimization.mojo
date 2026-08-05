@@ -10,9 +10,9 @@ struct TParOptimization:
 
     def _is_clifford_t(self, name: String) -> Bool:
         return (name == "X" or name == "Y" or name == "Z" or
-                name == "S" or name == "Sdg" or
+                name == "S" or name == "SDG" or
                 name == "H" or name == "CX" or
-                name == "T" or name == "Tdg")
+                name == "T" or name == "TDG")
 
     def _count_t_gate(self, gates: List[GateOp]) -> Int:
         var c = 0

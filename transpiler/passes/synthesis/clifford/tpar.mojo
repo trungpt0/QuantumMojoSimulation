@@ -93,15 +93,15 @@ struct PhasePoly(Copyable, Movable):
         if name == "T": return 1
         if name == "S": return 2
         if name == "Z": return 4
-        if name == "Sdg": return 6
-        if name == "Tdg": return 7
+        if name == "SDG": return 6
+        if name == "TDG": return 7
         return 0
 
     def _is_clifford_t(self, name: String) -> Bool:
         return (name == "X" or name == "Y" or name == "Z" or
-                name == "S" or name == "Sdg" or
+                name == "S" or name == "SDG" or
                 name == "H" or name == "CX" or
-                name == "T" or name == "Tdg")
+                name == "T" or name == "TDG")
 
     def compute(self, gates: List[GateOp]) -> Tuple[
         List[PhaseEntry],       # S: phase entries
@@ -130,7 +130,7 @@ struct PhasePoly(Copyable, Movable):
                 var QI = qiqo[0].copy()
                 var QO = qiqo[1].copy()
                 h_ctxs.append(HadamardContext(q, QI, QO, self.nq))
-            elif name == "T" or name == "S" or name == "Z" or name == "Sdg" or name == "Tdg":
+            elif name == "T" or name == "S" or name == "Z" or name == "SDG" or name == "TDG":
                 var q = gate.qubit[0]
                 var coeff = self._t_coeff(name)
                 entries.append(PhaseEntry(coeff, tracker.Q[q]))
@@ -199,7 +199,7 @@ def partition(
     var P_prime = List[List[Int]]()
     for pi in range(len(P)):
         var p = List[Int]()
-        for j in range(len(p)): p.append(P[pi][j])
+        for j in range(len(P[pi])): p.append(P[pi][j])
         P_prime.append(p.copy())
     var queue = List[Int]()
     var visited = List[Bool]()
@@ -392,9 +392,9 @@ def synthesize(
             C2.append(GateOp("Z", ql, List[Float64]()))
             C2.append(GateOp("T", ql, List[Float64]()))
         elif c == 6:
-            C2.append(GateOp("Sdg", ql, List[Float64]()))
+            C2.append(GateOp("SDG", ql, List[Float64]()))
         elif c == 7:
-            C2.append(GateOp("Tdg", ql, List[Float64]()))
+            C2.append(GateOp("TDG", ql, List[Float64]()))
     # Synthesize {CNOT, X, H} circuit C3
     var C3 = List[GateOp]()
     if is_QI_eq_QO(QI, QO, nq):
@@ -431,6 +431,21 @@ def tpar_algorithm(gates: List[GateOp], nq: Int, passthrough: List[GateOp]) -> L
     var S = sqh_res[0].copy()
     var Q = sqh_res[1].copy()
     var H = sqh_res[2].copy()
+    print("-------------STEP 1----------------")
+    print("DEBUG: S")
+    for i in range(len(S)):
+        print(S[i].coeff, S[i].func.bits)
+    print("DEBUG: Q")
+    for i in range(len(Q)):
+        print(Q[i].bits)
+    for i in range(len(H)):
+        print("h ", i, "QI")
+        for j in range(len(H[i].QI)):
+            print(H[i].QI[j].bits)
+        print("h ", i, "QO")
+        for j in range(len(H[i].QO)):
+            print(H[i].QO[j].bits)
+    print("-----------------------------------")
     if len(S) == 0:
         return gates.copy()
     var S_reduced = List[PhaseEntry]()
@@ -446,6 +461,11 @@ def tpar_algorithm(gates: List[GateOp], nq: Int, passthrough: List[GateOp]) -> L
                 processed[j] = True
         if total % 8 != 0:
             S_reduced.append(PhaseEntry(total, S[i].func))
+    print("-------------STEP 2----------------")
+    print("DEBUG: S reduced")
+    for i in range(len(S_reduced)):
+        print(S_reduced[i].coeff, S_reduced[i].func.bits)
+    print("-----------------------------------")
     if len(S_reduced) == 0:
         var structural = List[GateOp]()
         for i in range(len(gates)):
@@ -459,11 +479,33 @@ def tpar_algorithm(gates: List[GateOp], nq: Int, passthrough: List[GateOp]) -> L
         var final_ctx = HadamardContext(-1, Q, Q, nq)
         H.append(final_ctx^)
         k = 1
+    print("-------------STEP 3----------------")
+    print("DEBUG: H = 0, QI = QO")
+    for i in range(len(H)):
+        print("h ", i, "QI")
+        for j in range(len(H[i].QI)):
+            print(H[i].QI[j].bits)
+        print("h ", i, "QO")
+        for j in range(len(H[i].QO)):
+            print(H[i].QO[j].bits)
+    print("-----------------------------------")
     var S_P = List[Int]()
     var S_nP = List[Int]()
     for i in range(len(S_reduced)):
         S_nP.append(i)
     P = List[List[Int]]()
+    print("-------------STEP 4----------------")
+    print("DEBUG: S_P")
+    for i in range(len(S_P)):
+        print(S_P[i])
+    print("DEBUG: S_nP")
+    for i in range(len(S_nP)):
+        print(S_nP[i])
+    print("DEBUG: P")
+    for i in range(len(P)):
+        for j in range(len(P[i])):
+            print(P[i][j])
+    print("-----------------------------------")
     for hi_idx in range(k):
         var hi = H[hi_idx].copy()
         var QI = hi.QI.copy()
@@ -473,6 +515,12 @@ def tpar_algorithm(gates: List[GateOp], nq: Int, passthrough: List[GateOp]) -> L
             var s_idx = S_nP[nP_idx]
             var f = S_reduced[s_idx].func.copy()
             if in_span(f, QI):
+                print("-------------STEP 5----------------")
+                print("Phase: ", s_idx)
+                print("Coeff: ", S_reduced[s_idx].coeff)
+                print("Bits: ", S_reduced[s_idx].func.bits)
+                print("In span:", String(in_span(f, QI)))
+                print("-----------------------------------")
                 P = partition(s_idx, P, S_P, S_reduced, QI, nq)
                 S_P.append(s_idx)
             else:

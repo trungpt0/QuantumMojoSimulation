@@ -20,4 +20,4 @@ def main() raises:
     var dag = DAGCircuit.from_circuit(qc)
     var opt = TParOptimization()
     var dag1 = opt.run(dag^)
-    dag1.print_dag()
+    # dag1.print_dag()
