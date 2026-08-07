@@ -53,10 +53,10 @@ struct StateTracker:
 
     def __init__(out self, nq: Int):
         self.n_orig = nq
-        self.n_total = nq
+        self.n_total = nq + 1
         self.Q = List[F2Vector]()
         for i in range(nq):
-            self.Q.append(F2Vector(1 << i, nq))
+            self.Q.append(F2Vector(1 << (i + 1), nq))
 
     def apply_cx(mut self, ctrl: Int, targ: Int):
         var new_bits = self.Q[targ].bits ^ self.Q[ctrl].bits
@@ -75,7 +75,7 @@ struct StateTracker:
         return (QI^, QO^)
 
     def apply_x(mut self, q: Int):
-        pass
+        self.Q[q] = F2Vector(self.Q[q].bits ^ 1, self.n_total)
 
     def get_state_copy(self) -> List[F2Vector]:
         var state_copy = List[F2Vector]()
@@ -121,9 +121,9 @@ struct PhasePoly(Copyable, Movable):
             elif name == "X":
                 tracker.apply_x(gate.qubit[0])
             elif name == "Y":
-                tracker.apply_x(gate.qubit[0])
                 var q = gate.qubit[0]
                 entries.append(PhaseEntry(4, tracker.Q[q]))
+                tracker.apply_x(q)
             elif name == "H":
                 var q = gate.qubit[0]
                 var qiqo = tracker.apply_h(q)
@@ -329,6 +329,12 @@ def row_reduce(vecs: List[F2Vector], nq: Int, width: Int) -> RowReduce:
 def linear_synth_same_basis(src: List[F2Vector], dst: List[F2Vector], nq: Int, width: Int) -> List[GateOp]:
     var red_src = row_reduce(src, nq, width)
     var red_dst = row_reduce(dst, nq, width)
+    print("SRC ROW REDUCED")
+    for i in range(len(red_src.vectors)):
+        print(red_src.vectors[i].bits)
+    print("DST ROW REDUCED")
+    for i in range(len(red_dst.vectors)):
+        print(red_dst.vectors[i].bits)
     var gates = List[GateOp]()
     for i in range(len(red_src.gates)):
         gates.append(red_src.gates[i].copy())
@@ -344,11 +350,41 @@ def synthesize(
     nq: Int
 ) -> List[GateOp]:
     var C = List[GateOp]()
+    print("-------------STEP 9----------------")
+    print("Synthesize input")
+    print("A:")
+    for i in range(len(A)):
+        var idx = A[i]
+        print(
+            "idx =", A[i],
+            "coeff =", entries[idx].coeff,
+            "bits =", entries[idx].func.bits,
+        )
+    print("QI:")
+    for i in range(len(QI)):
+        print(QI[i].bits)
+    print("QO:")
+    for i in range(len(QO)):
+        print(QO[i].bits)
+    print("-----------------------------------")
     if len(A) == 0 and is_QI_eq_QO(QI, QO, nq):
         return C^
     var w = -1
     if w < 0:
         w = infer_width(QI, QO, entries, nq)
+    print("-------------STEP 10----------------")
+    print("QI")
+    for i in range(len(QI)):
+        print(QI[i].bits, "bitlen =", nummojo.bit_length(QI[i].bits))
+    print("QO")
+    for i in range(len(QO)):
+        print(QO[i].bits, "bitlen =", nummojo.bit_length(QO[i].bits))
+    print("Entries")
+    for i in range(len(entries)):
+        print(entries[i].func.bits, "bitlen =", nummojo.bit_length(entries[i].func.bits))
+    print("Infer width")
+    print("width =", w)
+    print("-----------------------------------")
     # Compute A_prime ⊇ A s.t rank(A_prime) = rank(QI), |A_prime| = n
     var A_prime_vecs = List[F2Vector]()
     var A_prime_coeffs = List[Int]()
@@ -357,6 +393,13 @@ def synthesize(
         A_prime_coeffs.append(entries[A[ai]].coeff)
     var rank_QI = gaussian_rank(QI)
     var qi_idx = 0
+    print("-------------STEP 11----------------")
+    print("A_prime BEFORE:")
+    for i in range(len(A_prime_vecs)):
+        print(A_prime_coeffs[i], A_prime_vecs[i].bits)
+    print("A_prime rank:", gaussian_rank(A_prime_vecs))
+    print("QI rank:", rank_QI)
+    print("-----------------------------------")
     while gaussian_rank(A_prime_vecs) < rank_QI and qi_idx < nq:
         var A_prime_vecs_test = List[F2Vector]()
         for j in range(len(A_prime_vecs)):
@@ -369,8 +412,19 @@ def synthesize(
     while len(A_prime_vecs) < nq:
         A_prime_vecs.append(F2Vector(0, w))
         A_prime_coeffs.append(0)
+    print("-------------STEP 12----------------")
+    print("A_prime AFTER:")
+    for i in range(len(A_prime_vecs)):
+        print(A_prime_coeffs[i], A_prime_vecs[i].bits)
+    print("A_prime rank:", gaussian_rank(A_prime_vecs))
+    print("-----------------------------------")
     # Synthesize {CNOT, X} circuit C1
     var C1 = linear_synth_same_basis(QI, A_prime_vecs, nq, w)
+    print("-------------STEP 13----------------")
+    print("C1 Gates:")
+    for i in range(len(C1)):
+        print(C1[i].name, C1[i].qubit[0], C1[i].qubit[1])
+    print("-----------------------------------")
     # Synthesize {Z, P, T} circuit C2
     var C2 = List[GateOp]()
     for i in range(nq):
@@ -395,30 +449,29 @@ def synthesize(
             C2.append(GateOp("SDG", ql, List[Float64]()))
         elif c == 7:
             C2.append(GateOp("TDG", ql, List[Float64]()))
+    print("-------------STEP 14----------------")
+    print("C2 Gates:")
+    for i in range(len(C2)):
+        print(C2[i].name, C2[i].qubit[0])
+    print("-----------------------------------")
     # Synthesize {CNOT, X, H} circuit C3
     var C3 = List[GateOp]()
-    if is_QI_eq_QO(QI, QO, nq):
-        for i in range(len(C1)):
-            C3.append(C1[len(C1) - 1 - i].copy())
-    else:
+    for i in range(len(C1)):
+        C3.append(C1[len(C1) - 1 - i].copy())
+    if not is_QI_eq_QO(QI, QO, nq):
         var h_qubit = -1
         for q in range(nq):
             if not QI[q].equals(QO[q]):
                 h_qubit = q
                 break
-        var target = List[F2Vector]()
-        for q in range(nq):
-            if q == h_qubit:
-                target.append(A_prime_vecs[q].copy())
-            else:
-                target.append(QO[q].copy())
-        var C3_linear = linear_synth_same_basis(A_prime_vecs, target, nq, w)
-        for i in range(len(C3_linear)):
-            C3.append(C3_linear[i].copy())
         if h_qubit >= 0:
             var qhl = List[Int]()
             qhl.append(h_qubit)
             C3.append(GateOp("H", qhl, List[Float64]()))
+    print("-------------STEP 15----------------")
+    print("C3 Gates:")
+    for i in range(len(C3)):
+        print(C3[i].name, C3[i].qubit[0], C3[i].qubit[1])
     # C = C1 + C2 + C3
     for i in range(len(C1)): C.append(C1[i].copy())
     for i in range(len(C2)): C.append(C2[i].copy())
@@ -523,14 +576,38 @@ def tpar_algorithm(gates: List[GateOp], nq: Int, passthrough: List[GateOp]) -> L
                 print("-----------------------------------")
                 P = partition(s_idx, P, S_P, S_reduced, QI, nq)
                 S_P.append(s_idx)
+                print("-------------STEP 6----------------")
+                print("After partition (Algorithm 1)")
+                for i in range(len(P)):
+                    print("Block ", i)
+                    for j in range(len(P[i])):
+                        print(P[i][j])
+                print("S_P:")
+                for i in range(len(S_P)):
+                    print(S_P[i])
+                print("-----------------------------------")
             else:
                 still_nP.append(s_idx)
         S_nP = still_nP^
+        print("-------------STEP 7----------------")
+        print("After partition (Algorithm 1)")
+        print("S_nP:")
+        for i in range(len(S_nP)):
+            print(S_nP[i])
+        print("-----------------------------------")
         var P_keep = List[List[Int]]()
         for b in range(len(P)):
             var A = P[b].copy()
             var is_last_H = (hi_idx == k - 1)
             var must_synthesize = is_last_H
+            print("-------------STEP 8----------------")
+            print("Must Synthesize or not?")
+            print("Block ", b)
+            for i in range(len(A)):
+                print(A[i])
+            print("Is last H: ", String(is_last_H))
+            print("Must synthesize: ", String(must_synthesize))
+            print("-----------------------------------")
             if not must_synthesize:
                 for ai in range(len(A)):
                     var f = S_reduced[A[ai]].func.copy()
@@ -540,6 +617,14 @@ def tpar_algorithm(gates: List[GateOp], nq: Int, passthrough: List[GateOp]) -> L
                 var C = synthesize(A, S_reduced, QI, QI, nq)
                 for cg in range(len(C)):
                     C_prime.append(C[cg].copy())
+                print("-------------FINAL STEP----------------")
+                print("Debug: C_prime after synthesize")
+                for gi in range(len(C_prime)):
+                    if C_prime[gi].name == "CX":
+                        print(C_prime[gi].name, String(C_prime[gi].qubit[0]), String(C_prime[gi].qubit[1]))
+                    else:
+                        print(C_prime[gi].name, String(C_prime[gi].qubit[0]))
+                print("-----------------------------------")
             else:
                 var rank_QO = gaussian_rank(QO)
                 var rank_A = rank_of_subset(A, S_reduced)
@@ -567,8 +652,8 @@ def tpar_algorithm(gates: List[GateOp], nq: Int, passthrough: List[GateOp]) -> L
                 else:
                     P_keep.append(A.copy())
         P = P_keep^
-        if hi.qubit >= 0:
-            var h_ql = List[Int]()
-            h_ql.append(hi.qubit)
-            C_prime.append(GateOp("H", h_ql, List[Float64]()))
+        var empty_A = List[Int]()
+        var C_transition = synthesize(empty_A, S_reduced, QI, QO, nq)
+        for ti in range(len(C_transition)):
+            C_prime.append(C_transition[ti].copy())
     return C_prime^

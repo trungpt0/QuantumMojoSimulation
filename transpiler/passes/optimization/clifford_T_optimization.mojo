@@ -41,11 +41,15 @@ struct TParOptimization:
         if self._count_t_gate(clifford_t_gates) < self.min_t_gates:
             return dagc^
         var optimized = tpar_algorithm(clifford_t_gates, nq, passthrough)
-        var opt_dag = DAGCircuit(nq)
+        var all_gates = List[GateOp]()
         for i in range(len(optimized)):
-            opt_dag.add_operation(optimized[i])
+            all_gates.append(optimized[i].copy())
         for i in range(len(passthrough)):
-            opt_dag.add_operation(passthrough[i])
+            all_gates.append(passthrough[i].copy())
         for i in range(len(measure_gates)):
-            opt_dag.add_operation(measure_gates[i])
-        return opt_dag^
+            all_gates.append(measure_gates[i].copy())
+        var block = List[Int]()
+        for i in range(nq * 2, len(dagc.nodes)):
+            block.append(i)
+        dagc.replace_block_operations(all_gates, block)
+        return dagc^
