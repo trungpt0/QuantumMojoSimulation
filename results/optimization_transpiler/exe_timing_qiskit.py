@@ -53,8 +53,8 @@ GATE_NAME_MAP = {
     "measure": "MEASURE",
 }
 
-N_RUNS = 30
-N_ITER = 50
+N_RUNS = 50
+N_ITER = 500
 PASS_DEFS = [
     ("RemoveIdentityEquivalent",        "no_measure"),
     ("RemoveDiagonalGatesBeforeMeasure","with_measure"),

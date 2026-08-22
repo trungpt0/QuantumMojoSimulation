@@ -6,17 +6,25 @@ struct DAGCircuit(Copyable, Movable):
     var qubits: Int
     var nodes: List[DAGNode]
     var edges: List[DAGEdge]
+    var edge_valid: List[Bool]
+    var adj_in: List[List[Int]]
+    var adj_out: List[List[Int]]
     var input_nodes: List[Int]
     var output_nodes: List[Int]
     var frontier: List[Int]
+    var layout: List[Int]
 
     def __init__(out self, qubits: Int):
         self.qubits = qubits
         self.nodes = List[DAGNode]()
         self.edges = List[DAGEdge]()
+        self.edge_valid = List[Bool]()
+        self.adj_in = List[List[Int]]()
+        self.adj_out = List[List[Int]]()
         self.input_nodes = List[Int]()
         self.output_nodes = List[Int]()
         self.frontier = List[Int]()
+        self.layout = List[Int]()
 
         for q in range(qubits):
             var dqubits = List[Int]()
@@ -25,6 +33,9 @@ struct DAGCircuit(Copyable, Movable):
             self.input_nodes.append(inode.id)
             self.frontier.append(inode.id)
             self.nodes.append(inode^)
+            self.adj_in.append(List[Int]())
+            self.adj_out.append(List[Int]())
+            self.layout.append(q)
 
         for q in range(qubits):
             var dqubits = List[Int]()
@@ -32,79 +43,86 @@ struct DAGCircuit(Copyable, Movable):
             var onode = DAGNode(len(self.nodes), GateOp("OUTPUT", dqubits), "output")
             self.output_nodes.append(onode.id)
             self.nodes.append(onode^)
+            self.adj_in.append(List[Int]())
+            self.adj_out.append(List[Int]())
 
-    def __moveinit__(out self, owned other: Self):
-        self.qubits = other.qubits
-        self.nodes = other.nodes^
-        self.edges = other.edges^
-        self.input_nodes = other.input_nodes^
-        self.output_nodes = other.output_nodes^
-        self.frontier = other.frontier^
+    def _add_node(mut self, node: DAGNode) -> Int:
+        var nid = node.id
+        self.nodes.append(node.copy())
+        self.adj_out.append(List[Int]())
+        self.adj_in.append(List[Int]())
+        return nid
 
-    def __copyinit__(out self, other: Self):
-        self.qubits = other.qubits
-        self.nodes = other.nodes
-        self.edges = other.edges
-        self.input_nodes = other.input_nodes
-        self.output_nodes = other.output_nodes
-        self.frontier = other.frontier
+    def _link_edge(mut self, src: Int, dst: Int, qubit: Int) -> Int:
+        var eidx = len(self.edges)
+        self.edges.append(DAGEdge(src, dst, qubit))
+        self.edge_valid.append(True)
+        self.adj_out[src].append(eidx)
+        self.adj_in[dst].append(eidx)
+        return eidx
+    
+    def _valid_edge_count(self) -> Int:
+        var cnt: Int = 0
+        for i in range(len(self.edges)):
+            if self.edge_valid[i]:
+                cnt += 1
+        return cnt
 
     def _add_edge_if_not_exists(mut self, src: Int, dst: Int, qubit: Int):
-        for i in range(len(self.edges)):
-            if (self.edges[i].src == src and
-                self.edges[i].dst == dst and
-                self.edges[i].qubit == qubit):
+        for i in range(len(self.adj_out[src])):
+            var eidx = self.adj_out[src][i]
+            if (self.edge_valid[eidx] and
+                self.edges[eidx].dst == dst and
+                self.edges[eidx].qubit == qubit):
                 return
-        self.edges.append(DAGEdge(src, dst, qubit))
+        _ = self._link_edge(src, dst, qubit)
     
     def _remove_edge_to_output(mut self, q: Int):
         var onode_id = self.output_nodes[q]
-        var new_edges = List[DAGEdge]()
-        for i in range(len(self.edges)):
-            var e = self.edges[i].copy()
-            if e.src == self.frontier[q] and e.dst == onode_id and e.qubit == q:
-                continue
-            new_edges.append(e.copy())
-        self.edges = new_edges^
+        var src = self.frontier[q]
+        for i in range(len(self.adj_out[src])):
+            var eidx = self.adj_out[src][i]
+            if (self.edge_valid[eidx] and
+                self.edges[eidx].dst == onode_id and
+                self.edges[eidx].qubit == q):
+                self.edge_valid[eidx] = False
+                return
 
     def add_operation(mut self, gate: GateOp):
         var node_id = len(self.nodes)
-        self.nodes.append(DAGNode(node_id, gate, "gate"))
+        _ = self._add_node(DAGNode(node_id, gate, "gate"))
         for i in range(len(gate.qubit)):
             var q = gate.qubit[i]
             var prev_node_id = self.frontier[q]
             self._remove_edge_to_output(q)
-            self.edges.append(DAGEdge(prev_node_id, node_id, q))
+            _ = self._link_edge(prev_node_id, node_id, q)
             self.frontier[q] = node_id
     
     def finalize_operation(mut self):
         for q in range(self.qubits):
             var onode_id = self.output_nodes[q]
             var fnode_id = self.frontier[q]
-            if fnode_id == self.input_nodes[q]:
-                self._add_edge_if_not_exists(fnode_id, onode_id, q)
-                continue
             self._add_edge_if_not_exists(fnode_id, onode_id, q)
 
     def remove_operation(mut self, node_id: Int):
         var in_edges = List[DAGEdge]()
+        for i in range(len(self.adj_in[node_id])):
+            var eidx = self.adj_in[node_id][i]
+            if self.edge_valid[eidx]:
+                in_edges.append(self.edges[eidx].copy())
+                self.edge_valid[eidx] = False
         var out_edges = List[DAGEdge]()
-        var keep_edges = List[DAGEdge]()
-        for i in range(len(self.edges)):
-            var edge = self.edges[i].copy()
-            if edge.dst == node_id:
-                in_edges.append(edge.copy())
-            elif edge.src == node_id:
-                out_edges.append(edge.copy())
-            else:
-                keep_edges.append(edge.copy())
+        for i in range(len(self.adj_out[node_id])):
+            var eidx = self.adj_out[node_id][i]
+            if self.edge_valid[eidx]:
+                out_edges.append(self.edges[eidx].copy())
+                self.edge_valid[eidx] = False
         for i in range(len(in_edges)):
             var iedge = in_edges[i].copy()
             for j in range(len(out_edges)):
                 var oedge = out_edges[j].copy()
                 if iedge.qubit == oedge.qubit:
-                    keep_edges.append(DAGEdge(iedge.src, oedge.dst, iedge.qubit))
-        self.edges = keep_edges.copy()
+                    _ = self._link_edge(iedge.src, oedge.dst, iedge.qubit)
         for q in range(self.qubits):
             if self.frontier[q] == node_id:
                 var new_front = self.input_nodes[q]
@@ -140,13 +158,12 @@ struct DAGCircuit(Copyable, Movable):
             if fnid < 0:
                 preds[k] = self.frontier[q]
                 continue
-            for e in range(len(self.edges)):
-                var edge = self.edges[e].copy()
-                if edge.dst == fnid and edge.qubit == q:
-                    preds[k] = edge.src
+            preds[k] = self.input_nodes[q]
+            for i in range(len(self.adj_in[fnid])):
+                var eidx = self.adj_in[fnid][i]
+                if self.edge_valid[eidx] and self.edges[eidx].qubit == q:
+                    preds[k] = self.edges[eidx].src
                     break
-            if preds[k] < 0:
-                preds[k] = self.input_nodes[q]
         var succs = List[Int]()
         for _ in range(n_qubits):
             succs.append(-1)
@@ -171,38 +188,29 @@ struct DAGCircuit(Copyable, Movable):
             if lnid < 0:
                 succs[k] = self.output_nodes[q]
                 continue
-            for e in range(len(self.edges)):
-                var edge = self.edges[e].copy()
-                if edge.src == lnid and edge.qubit == q:
-                    succs[k] = edge.dst
+            succs[k] = self.output_nodes[q]
+            for i in range(len(self.adj_out[lnid])):
+                var eidx = self.adj_out[lnid][i]
+                if self.edge_valid[eidx] and self.edges[eidx].qubit == q:
+                    succs[k] = self.edges[eidx].dst
                     break
-            if succs[k] < 0:
-                succs[k] = self.output_nodes[q]
-        var block_set = List[Bool]()
-        for _ in range(len(self.nodes)):
-            block_set.append(False)
-        for i in range(len(block)):
-            block_set[block[i]] = True
-        var new_edges = List[DAGEdge]()
-        for e in range(len(self.edges)):
-            var edge = self.edges[e].copy()
-            if block_set[edge.src] or block_set[edge.dst]:
-                continue
-            new_edges.append(edge.copy())
-        self.edges = new_edges^
         for i in range(len(block)):
             var nid = block[i]
+            for j in range(len(self.adj_in[nid])):
+                self.edge_valid[self.adj_in[nid][j]] = False
+            for j in range(len(self.adj_out[nid])):
+                self.edge_valid[self.adj_out[nid][j]] = False
             self.nodes[nid] = DAGNode(nid, GateOp("REMOVED", List[Int]()), "removed")
         var new_node_id = len(self.nodes)
-        self.nodes.append(DAGNode(new_node_id, gate, "gate"))
+        _ = self._add_node(DAGNode(new_node_id, gate, "gate"))
         for k in range(n_qubits):
             var q = gate_qubits[k]
             var pred_id = preds[k]
             var succ_id = succs[k]
             if pred_id >= 0:
-                self.edges.append(DAGEdge(pred_id, new_node_id, q))
+                _ = self._link_edge(pred_id, new_node_id, q)
             if succ_id >= 0:
-                self.edges.append(DAGEdge(new_node_id, succ_id, q))
+                _ = self._link_edge(new_node_id, succ_id, q)
             if succ_id == self.output_nodes[q]:
                 self.frontier[q] = new_node_id
 
@@ -248,32 +256,27 @@ struct DAGCircuit(Copyable, Movable):
                 preds[k] = self.frontier[q]
             else:
                 preds[k] = self.input_nodes[q]
-                for e in range(len(self.edges)):
-                    var edge = self.edges[e].copy()
-                    if edge.dst == fnid and edge.qubit == q:
-                        preds[k] = edge.src
+                for i in range(len(self.adj_in[fnid])):
+                    var eidx = self.adj_in[fnid][i]
+                    if self.edge_valid[eidx] and self.edges[eidx].qubit == q:
+                        preds[k] = self.edges[eidx].src
                         break
             var lnid = last_on_qubit[k]
             if lnid < 0:
                 succs[k] = self.output_nodes[q]
             else:
                 succs[k] = self.output_nodes[q]
-                for e in range(len(self.edges)):
-                    var edge = self.edges[e].copy()
-                    if edge.src == lnid and edge.qubit == q:
-                        succs[k] = edge.dst
+                for i in range(len(self.adj_out[lnid])):
+                    var eidx = self.adj_out[lnid][i]
+                    if self.edge_valid[eidx] and self.edges[eidx].qubit == q:
+                        succs[k] = self.edges[eidx].dst
                         break
-        var block_set = List[Bool]()
-        for _ in range(len(self.nodes)): block_set.append(False)
-        for i in range(len(block)): block_set[block[i]] = True
-        var new_edges = List[DAGEdge]()
-        for e in range(len(self.edges)):
-            var edge = self.edges[e].copy()
-            if block_set[edge.src] or block_set[edge.dst]: continue
-            new_edges.append(edge^)
-        self.edges = new_edges^
         for i in range(len(block)):
             var nid = block[i]
+            for j in range(len(self.adj_in[nid])):
+                self.edge_valid[self.adj_in[nid][j]] = False
+            for j in range(len(self.adj_out[nid])):
+                self.edge_valid[self.adj_out[nid][j]] = False
             self.nodes[nid] = DAGNode(nid, GateOp("REMOVED", List[Int]()), "removed")
         var local_frontier = List[Int]()
         for k in range(nq): local_frontier.append(preds[k])
@@ -281,7 +284,7 @@ struct DAGCircuit(Copyable, Movable):
         for gi in range(len(gates)):
             var gate = gates[gi].copy()
             var node_id = len(self.nodes)
-            self.nodes.append(DAGNode(node_id, gate, "gate"))
+            _ = self._add_node(DAGNode(node_id, gate, "gate"))
             new_node_ids.append(node_id)
             for j in range(len(gate.qubit)):
                 var q = gate.qubit[j]
@@ -290,32 +293,34 @@ struct DAGCircuit(Copyable, Movable):
                     if all_qubits[kk] == q: k = kk; break
                 if k < 0:
                     var prev = self.frontier[q]
-                    self.edges.append(DAGEdge(prev, node_id, q))
+                    _ = self._link_edge(prev, node_id, q)
                     self.frontier[q] = node_id
                     continue
                 var prev_local = local_frontier[k]
-                self.edges.append(DAGEdge(prev_local, node_id, q))
+                _ = self._link_edge(prev_local, node_id, q)
                 local_frontier[k] = node_id
         for k in range(nq):
             var q = all_qubits[k]
             var last_id = local_frontier[k]
             var succ_id = succs[k]
-            self.edges.append(DAGEdge(last_id, succ_id, q))
+            _ = self._link_edge(last_id, succ_id, q)
             if succ_id == self.output_nodes[q]:
                 self.frontier[q] = last_id
 
     def predecessors(self, node_id: Int) -> List[Int]:
         var preds = List[Int]()
-        for i in range(len(self.edges)):
-            if self.edges[i].dst == node_id:
-                preds.append(self.edges[i].src)
+        for i in range(len(self.adj_in[node_id])):
+            var eidx = self.adj_in[node_id][i]
+            if self.edge_valid[eidx]:
+                preds.append(self.edges[eidx].src)
         return preds^
 
     def successors(self, node_id: Int) -> List[Int]:
         var succs = List[Int]()
-        for i in range(len(self.edges)):
-            if self.edges[i].src == node_id:
-                succs.append(self.edges[i].dst)
+        for i in range(len(self.adj_out[node_id])):
+            var eidx = self.adj_out[node_id][i]
+            if self.edge_valid[eidx]:
+                succs.append(self.edges[eidx].dst)
         return succs^
 
     def topological_sort(self) -> List[Int]:
@@ -326,7 +331,8 @@ struct DAGCircuit(Copyable, Movable):
         for _ in range(len(self.nodes)):
             in_degree.append(0)
         for i in range(len(self.edges)):
-            in_degree[self.edges[i].dst] += 1
+            if self.edge_valid[i]:
+                in_degree[self.edges[i].dst] += 1
         var queue = List[Int]()
         for i in range(len(self.input_nodes)):
             queue.append(self.input_nodes[i])
@@ -337,12 +343,13 @@ struct DAGCircuit(Copyable, Movable):
             queue_idx += 1
             if self.nodes[curr_node].type == "gate":
                 sorted_nodes.append(curr_node)
-            for i in range(len(self.edges)):
-                if self.edges[i].src == curr_node:
-                    var dst_node = self.edges[i].dst
-                    in_degree[dst_node] -= 1
-                    if in_degree[dst_node] == 0:
-                        queue.append(dst_node)
+            for i in range(len(self.adj_out[curr_node])):
+                var eidx = self.adj_out[curr_node][i]
+                if not self.edge_valid[eidx]: continue
+                var dst_node = self.edges[eidx].dst
+                in_degree[dst_node] -= 1
+                if in_degree[dst_node] == 0:
+                    queue.append(dst_node)
         return sorted_nodes^
 
     def count_operation(self) -> Int:
@@ -411,7 +418,7 @@ struct DAGCircuit(Copyable, Movable):
                 var preds = self.predecessors(node.id)
                 var succs = self.successors(node.id)
                 print("[ Node", node.id, "]", node.__str__(), "| PREDS:", preds, "| SUCCS:", succs)
-        print("Edges:", len(self.edges))
+        print("Edges:", self._valid_edge_count())
         print("Operations:", self.count_operation())
         print("Depth:", self.depth())
         print("Topo:")
@@ -421,12 +428,15 @@ struct DAGCircuit(Copyable, Movable):
             print(i, "→", self.nodes[topo[i]].__str__())
 
     def _sort_by_topo(self, topo: List[Int], nodes: List[Int]) -> List[Int]:
+        var in_nodes = List[Bool]()
+        for _ in range(len(self.nodes)):
+            in_nodes.append(False)
+        for i in range(len(nodes)):
+            in_nodes[nodes[i]] = True
         var res = List[Int]()
         for i in range(len(topo)):
-            for j in range(len(nodes)):
-                if topo[i] == nodes[j]:
-                    res.append(nodes[j])
-                    break
+            if in_nodes[topo[i]]:
+                res.append(topo[i])
         return res^
 
     def collect_1q_runs(self) -> List[List[Int]]:

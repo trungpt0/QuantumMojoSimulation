@@ -8,5 +8,8 @@ from .optimization import InverseCancellation
 from .optimization import RemoveDiagonalGatesBeforeMeasure
 from .optimization import RemoveIdentityEquivalent
 from .optimization import Split2QUnitaries
+from .optimization import TParOptimization
+
+from .layout import VF2Layout
 
 from .synthesis import tpar_algorithm

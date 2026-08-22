@@ -1,25 +1,20 @@
 from circuit import QuantumCircuit
 from dagcircuit import DAGCircuit
-from transpiler.passes.optimization import TParOptimization
+from transpiler import CouplingMap, TParOptimization, VF2Layout
 from gates import GateOp
 
 def main() raises:
-    var qc = QuantumCircuit(4)
-    qc.T(0)
+    var qc = QuantumCircuit(3)
     qc.CX(0,1)
-    qc.CX(2,3)
-    qc.T(3)
-    qc.CX(2,3)
-    # qc.H(3)
     qc.CX(1,2)
-    qc.CX(1,0)
-    qc.CX(3,2)
-    qc.CX(1,2)
-    qc.CX(0,1)
-    qc.T(2)
-    qc.Tdg(1)
     var dag = DAGCircuit.from_circuit(qc)
     dag.print_dag()
-    var opt = TParOptimization()
-    var dag1 = opt.run(dag^)
-    dag1.print_dag()
+
+    var cm = CouplingMap(4)
+    cm.add_edge(1,0)
+    cm.add_edge(0,2)
+    cm.add_edge(2,3)
+
+    var lay = VF2Layout()
+    var dagl = lay.run(dag^, cm)
+    print("layout =", dagl.layout)

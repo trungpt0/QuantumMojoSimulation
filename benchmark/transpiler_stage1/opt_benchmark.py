@@ -335,16 +335,16 @@ def build_pass_manager(pass_name: str) -> PassManager:
                                 Split2QUnitaries()])
         case 'FullOptimize':
             passes = []
-            passes.append(RemoveIdentityEquivalent())
-            if _make_IC is not None:
-                passes.append(_make_IC())
-            if _make_CIC is not None:
-                passes.append(_make_CIC())
-            # passes.append(RemoveDiagonalGatesBeforeMeasure())
-            passes.append(Collect1qRuns())
-            passes.append(Collect2qBlocks())
-            passes.append(ConsolidateBlocks(force_consolidate=True))
-            passes.append(Split2QUnitaries())
+            # passes.append(RemoveIdentityEquivalent())
+            # if _make_IC is not None:
+            #     passes.append(_make_IC())
+            # if _make_CIC is not None:
+            #     passes.append(_make_CIC())
+            passes.append(RemoveDiagonalGatesBeforeMeasure())
+            # passes.append(Collect1qRuns())
+            # passes.append(Collect2qBlocks())
+            # passes.append(ConsolidateBlocks(force_consolidate=True))
+            # passes.append(Split2QUnitaries())
             return PassManager(passes)
         case _:
             raise ValueError(f"Unknown pass: {pass_name}")

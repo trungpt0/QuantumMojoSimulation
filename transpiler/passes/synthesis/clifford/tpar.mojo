@@ -533,7 +533,7 @@ def tpar_algorithm(gates: List[GateOp], nq: Int, passthrough: List[GateOp]) -> L
         H.append(final_ctx^)
         k = 1
     print("-------------STEP 3----------------")
-    print("DEBUG: H = 0, QI = QO")
+    print("DEBUG: Hi")
     for i in range(len(H)):
         print("h ", i, "QI")
         for j in range(len(H[i].QI)):
