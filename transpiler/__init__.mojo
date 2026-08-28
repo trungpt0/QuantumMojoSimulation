@@ -7,6 +7,8 @@ from .passes import RemoveDiagonalGatesBeforeMeasure
 from .passes import RemoveIdentityEquivalent
 from .passes import Split2QUnitaries
 from .passes import TParOptimization
+
 from .passes import VF2Layout
+from .passes import TrivialLayout
 
 from .coupling import CouplingMap

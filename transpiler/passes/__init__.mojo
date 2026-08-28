@@ -11,5 +11,6 @@ from .optimization import Split2QUnitaries
 from .optimization import TParOptimization
 
 from .layout import VF2Layout
+from .layout import TrivialLayout
 
 from .synthesis import tpar_algorithm
