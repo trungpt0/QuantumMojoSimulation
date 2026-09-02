@@ -10,5 +10,8 @@ from .passes import TParOptimization
 
 from .passes import VF2Layout
 from .passes import TrivialLayout
+from .passes import SabreLayout, SabreDAG, SabreMapping
+
+from .passes import SabreRouting
 
 from .coupling import CouplingMap
