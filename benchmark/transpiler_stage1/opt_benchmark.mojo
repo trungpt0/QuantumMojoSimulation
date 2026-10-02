@@ -22,10 +22,10 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
             else:
                 g = ApplyRandomGateLog.apply_random_cx_gate_with_log(qc, nq)
         gate_log.append(g^)
-    for i in range(nq):
-        var g: ApplyGateLog
-        g = ApplyRandomGateLog.apply_measure_with_log(qc, i)    
-        gate_log.append(g^)
+    # for i in range(nq):
+    #     var g: ApplyGateLog
+    #     g = ApplyRandomGateLog.apply_measure_with_log(qc, i)    
+    #     gate_log.append(g^)
     var out: String = ""
     var f = open("benchmark/transpiler_stage1/opt_benchmark.txt", "a")
     out += "Qubits " + String(nq) + "\n"
@@ -44,7 +44,7 @@ def optimization_benchmark(nq: Int, ng: Int) raises:
         else:
             out += "GateBefore " + g.gate_name + " " + String(g.q0) + "\n" 
     var dag = DAGCircuit.from_circuit(qc)
-    var pass1 = RemoveDiagonalGatesBeforeMeasure()
+    var pass1 = ConsolidateBlocks()
     var dag1 = pass1.run(dag^)
     # var pass1 = RemoveIdentityEquivalent()
     # var dag1 = pass1.run(dag^)

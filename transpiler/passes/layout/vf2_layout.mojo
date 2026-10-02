@@ -80,7 +80,7 @@ struct VF2State(Copyable, Movable):
         self.core_1[u] = v
         self.core_2[v] = u
         self.t1[u] = False
-        self.t2[u] = False
+        self.t2[v] = False
         self.depth += 1
         for i in range(len(g1.adj[u])):
             var nb = g1.adj[u][i]
@@ -162,7 +162,9 @@ struct VF2Feasibility(Copyable, Movable):
             var nb = cm.edges[v][i]
             if state.core_2[nb] < 0 and not state.t2[nb]:
                 new2 += 1
-        if new2 < new1:
+        if t2_count < t1_count:
+            return False
+        if t2_count + new2 < t1_count + new1:
             return False
         return True
 

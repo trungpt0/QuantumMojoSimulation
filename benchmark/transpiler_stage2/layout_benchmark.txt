@@ -1,0 +1,3123 @@
+VF2Layout Call_limit 100000 Max_solutions 3
+SabreLayout Trials 5 Iter 3 Weight 0.5 E_size 20 Delta 0.001 Valve_limit 0
+Case 0 Chain
+Qubits 5
+Physical 7
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [1, 2, 3, 4, 5]
+VF2Eval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 44533
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 25245
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 17487
+Sabre [6, 0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 24103
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 14566
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 15544
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [2, 1, 3, 0, 4]
+VF2Eval Valid True Perfect False Connected 2/4 EstSwaps 3 Runtime_ns 18271
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect False Connected 3/4 EstSwaps 1 Runtime_ns 61962
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 2, 3, 8]
+VF2Eval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 14858
+Sabre [0, 1, 2, 6, 7]
+SabreEval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 49853
+EndCase
+Case 1 Triangle
+Qubits 3
+Physical 5
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 0 2
+Topology Linear 5
+Edges 0 1 1 2 2 3 3 4
+VF2 [1, 2, 3]
+VF2Eval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 23728
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 92428
+Topology Ring 5
+Edges 0 1 0 4 1 2 2 3 3 4
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 23583
+Sabre [4, 0, 1]
+SabreEval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 91177
+Topology Full 5
+Edges 0 1 0 2 0 3 0 4 1 2 1 3 1 4 2 3 2 4 3 4
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 17992
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 19970
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 3, 0]
+VF2Eval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 18651
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 88844
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [1, 2, 6]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 17410
+Sabre [4, 3, 8]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 109322
+EndCase
+Case 2 Star
+Qubits 4
+Physical 6
+Gate CX 0 1
+Gate CX 0 2
+Gate CX 0 3
+Topology Linear 6
+Edges 0 1 1 2 2 3 3 4 4 5
+VF2 [1, 2, 3, 4]
+VF2Eval Valid True Perfect False Connected 1/3 EstSwaps 3 Runtime_ns 29545
+Sabre [1, 0, 2, 3]
+SabreEval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 84829
+Topology Ring 6
+Edges 0 1 0 5 1 2 2 3 3 4 4 5
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect False Connected 1/3 EstSwaps 3 Runtime_ns 15182
+Sabre [0, 1, 5, 2]
+SabreEval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 77620
+Topology Full 6
+Edges 0 1 0 2 0 3 0 4 0 5 1 2 1 3 1 4 1 5 2 3 2 4 2 5 3 4 3 5 4 5
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 16779
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 17104
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 0, 2, 3]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 17942
+Sabre [1, 0, 2, 3]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 18379
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [1, 0, 2, 6]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 17868
+Sabre [4, 3, 8, 9]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 103612
+EndCase
+Case 3 Cycle
+Qubits 6
+Physical 6
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate CX 4 5
+Gate CX 5 0
+Topology Linear 6
+Edges 0 1 1 2 2 3 3 4 4 5
+VF2 [1, 2, 3, 4, 0, 5]
+VF2Eval Valid True Perfect False Connected 3/6 EstSwaps 10 Runtime_ns 54883
+Sabre [0, 1, 2, 3, 4, 5]
+SabreEval Valid True Perfect False Connected 5/6 EstSwaps 4 Runtime_ns 212650
+Topology Ring 6
+Edges 0 1 0 5 1 2 2 3 3 4 4 5
+VF2 [0, 1, 2, 3, 4, 5]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 25265
+Sabre [5, 0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 30739
+Topology Full 6
+Edges 0 1 0 2 0 3 0 4 0 5 1 2 1 3 1 4 1 5 2 3 2 4 2 5 3 4 3 5 4 5
+VF2 [0, 1, 2, 3, 4, 5]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 22658
+Sabre [0, 1, 2, 3, 4, 5]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 37221
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 2, 6, 11, 5]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 48598
+Sabre [1, 0, 5, 6, 2, 7]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 97823
+EndCase
+Case 4 AllPairs
+Qubits 5
+Physical 7
+Gate CX 0 1
+Gate CX 0 2
+Gate CX 0 3
+Gate CX 0 4
+Gate CX 1 2
+Gate CX 1 3
+Gate CX 1 4
+Gate CX 2 3
+Gate CX 2 4
+Gate CX 3 4
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [1, 2, 3, 4, 5]
+VF2Eval Valid True Perfect False Connected 4/10 EstSwaps 10 Runtime_ns 144827
+Sabre [1, 2, 0, 3, 4]
+SabreEval Valid True Perfect False Connected 4/10 EstSwaps 10 Runtime_ns 2450757
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect False Connected 4/10 EstSwaps 9 Runtime_ns 232379
+Sabre [1, 0, 2, 6, 5]
+SabreEval Valid True Perfect False Connected 4/10 EstSwaps 9 Runtime_ns 304724
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 10/10 EstSwaps 0 Runtime_ns 45071
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 10/10 EstSwaps 0 Runtime_ns 50681
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 3, 0, 2, 4]
+VF2Eval Valid True Perfect False Connected 4/10 EstSwaps 8 Runtime_ns 39999
+Sabre [3, 1, 4, 0, 2]
+SabreEval Valid True Perfect False Connected 4/10 EstSwaps 8 Runtime_ns 264858
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [6, 7, 8, 11, 12]
+VF2Eval Valid True Perfect False Connected 6/10 EstSwaps 4 Runtime_ns 59915
+Sabre [1, 0, 2, 6, 7]
+SabreEval Valid True Perfect False Connected 7/10 EstSwaps 3 Runtime_ns 335443
+EndCase
+Case 5 RepeatedPair
+Qubits 2
+Physical 2
+Gate CX 0 1
+Gate CX 0 1
+Gate CX 0 1
+Topology Linear 2
+Edges 0 1
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 42749
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 12507
+Topology Full 2
+Edges 0 1
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 21994
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 8394
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 24706
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 13002
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 25407
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 34925
+EndCase
+Case 6 No2Q
+Qubits 4
+Physical 6
+Gate X 1
+Gate IP 0 0.08482300164692441
+Gate IP 3 1.8315485170428494
+Gate RX 2 2.6515041996297857
+Gate TDG 0
+Gate Y 2
+Gate S 3
+Gate RY 3 1.231504320207199
+Topology Linear 6
+Edges 0 1 1 2 2 3 3 4 4 5
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 19656
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 4309
+Topology Ring 6
+Edges 0 1 0 5 1 2 2 3 3 4 4 5
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 10965
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 2939
+Topology Full 6
+Edges 0 1 0 2 0 3 0 4 0 5 1 2 1 3 1 4 1 5 2 3 2 4 2 5 3 4 3 5 4 5
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 11327
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 2672
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 10795
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 2835
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 10604
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 0/0 EstSwaps 0 Runtime_ns 2846
+EndCase
+Case 7 Overflow
+Qubits 6
+Physical 4
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate CX 4 5
+Topology Linear 4
+Edges 0 1 1 2 2 3
+VF2 [0, 1, 2, 3, 4, 5]
+VF2Eval Valid False Perfect False Connected 0/5 EstSwaps 0 Runtime_ns 2131
+Sabre [0, 1, 2, 3, 4, 5]
+SabreEval Valid False Perfect False Connected 0/5 EstSwaps 0 Runtime_ns 1857
+Topology Ring 4
+Edges 0 1 0 3 1 2 2 3
+VF2 [0, 1, 2, 3, 4, 5]
+VF2Eval Valid False Perfect False Connected 0/5 EstSwaps 0 Runtime_ns 1569
+Sabre [0, 1, 2, 3, 4, 5]
+SabreEval Valid False Perfect False Connected 0/5 EstSwaps 0 Runtime_ns 2137
+Topology Full 4
+Edges 0 1 0 2 0 3 1 2 1 3 2 3
+VF2 [0, 1, 2, 3, 4, 5]
+VF2Eval Valid False Perfect False Connected 0/5 EstSwaps 0 Runtime_ns 1552
+Sabre [0, 1, 2, 3, 4, 5]
+SabreEval Valid False Perfect False Connected 0/5 EstSwaps 0 Runtime_ns 2236
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 2, 3, 4, 8]
+VF2Eval Valid True Perfect True Connected 5/5 EstSwaps 0 Runtime_ns 54078
+Sabre [0, 5, 6, 2, 1, 7]
+SabreEval Valid True Perfect True Connected 5/5 EstSwaps 0 Runtime_ns 58392
+EndCase
+Case 8 ScaleQubits
+Qubits 2
+Physical 3
+Gate RY 0 1.3885839528866886
+Gate CX 1 0
+Gate CX 0 1
+Gate CX 0 1
+Topology Linear 3
+Edges 0 1 1 2
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 37239
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 14989
+Topology Ring 3
+Edges 0 1 0 2 1 2
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 31105
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 13157
+Topology Full 3
+Edges 0 1 0 2 1 2
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 31405
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 14302
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 32816
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 16839
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 41430
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 54507
+EndCase
+Case 9 ScaleQubits
+Qubits 2
+Physical 3
+Gate CX 0 1
+Gate CX 0 1
+Gate CX 1 0
+Gate IP 0 1.7121679962064373
+Topology Linear 3
+Edges 0 1 1 2
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 47375
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 118821
+Topology Ring 3
+Edges 0 1 0 2 1 2
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 57623
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 22376
+Topology Full 3
+Edges 0 1 0 2 1 2
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 52123
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 16694
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 42742
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 21455
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 52117
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 71162
+EndCase
+Case 10 ScaleQubits
+Qubits 2
+Physical 4
+Gate H 1
+Gate CX 1 0
+Gate I 0
+Gate CX 0 1
+Topology Linear 4
+Edges 0 1 1 2 2 3
+VF2 [1, 2]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 42855
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 16060
+Topology Ring 4
+Edges 0 1 0 3 1 2 2 3
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 29929
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 11177
+Topology Full 4
+Edges 0 1 0 2 0 3 1 2 1 3 2 3
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 30087
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 16932
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 49792
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 21486
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 32772
+Sabre [0, 1]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 42567
+EndCase
+Case 11 ScaleQubits
+Qubits 3
+Physical 3
+Gate RX 1 2.472433418375167
+Gate CX 0 1
+Gate CX 1 0
+Gate CX 0 1
+Gate CX 1 0
+Gate SDG 2
+Gate SDG 0
+Gate CX 0 1
+Gate CX 0 2
+Topology Linear 3
+Edges 0 1 1 2
+VF2 [1, 0, 2]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 23498
+Sabre [1, 0, 2]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 18529
+Topology Ring 3
+Edges 0 1 0 2 1 2
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 19135
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 9957
+Topology Full 3
+Edges 0 1 0 2 1 2
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 16819
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 9668
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 0, 3]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 19100
+Sabre [1, 0, 2]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 14832
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 5]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 33047
+Sabre [4, 3, 8]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 35664
+EndCase
+Case 12 ScaleQubits
+Qubits 3
+Physical 4
+Gate IP 0 2.9562386870279953
+Gate CX 2 0
+Gate I 2
+Gate I 0
+Gate RX 0 2.818008610270044
+Gate I 2
+Gate CX 1 2
+Gate CX 0 1
+Gate H 2
+Topology Linear 4
+Edges 0 1 1 2 2 3
+VF2 [1, 2, 0]
+VF2Eval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 23431
+Sabre [1, 0, 2]
+SabreEval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 36904
+Topology Ring 4
+Edges 0 1 0 3 1 2 2 3
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 18934
+Sabre [3, 1, 2]
+SabreEval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 36563
+Topology Full 4
+Edges 0 1 0 2 0 3 1 2 1 3 2 3
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 20719
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 7816
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 3, 0]
+VF2Eval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 19012
+Sabre [1, 0, 2]
+SabreEval Valid True Perfect False Connected 2/3 EstSwaps 1 Runtime_ns 37276
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [1, 2, 6]
+VF2Eval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 19991
+Sabre [4, 3, 8]
+SabreEval Valid True Perfect True Connected 3/3 EstSwaps 0 Runtime_ns 27047
+EndCase
+Case 13 ScaleQubits
+Qubits 3
+Physical 3
+Gate IP 1 2.1488493750554185
+Gate CX 1 0
+Gate IP 2 2.3279201563100367
+Gate I 1
+Gate CX 1 0
+Gate SDG 0
+Gate S 2
+Gate I 1
+Gate TDG 0
+Topology Linear 3
+Edges 0 1 1 2
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 38685
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 10839
+Topology Ring 3
+Edges 0 1 0 2 1 2
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 38505
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 9697
+Topology Full 3
+Edges 0 1 0 2 1 2
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 34436
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 10120
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [0, 1, 3]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 32447
+Sabre [0, 1, 2]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 23524
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 2]
+VF2Eval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 82185
+Sabre [4, 3, 8]
+SabreEval Valid True Perfect True Connected 2/2 EstSwaps 0 Runtime_ns 40260
+EndCase
+Case 14 ScaleQubits
+Qubits 4
+Physical 8
+Gate CX 1 2
+Gate CX 1 2
+Gate CX 0 2
+Gate S 0
+Gate CX 2 0
+Gate IP 1 2.990796206217483
+Gate S 1
+Gate X 3
+Gate SDG 2
+Gate T 0
+Gate Y 1
+Gate IP 3 2.8211502029236346
+Gate IP 0 2.346769712231575
+Gate CX 0 1
+Gate IP 0 0.273318560862312
+Gate IP 3 1.156106096521044
+Topology Linear 8
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [3, 2, 1, 4]
+VF2Eval Valid True Perfect False Connected 3/5 EstSwaps 2 Runtime_ns 58220
+Sabre [2, 0, 1, 3]
+SabreEval Valid True Perfect False Connected 4/5 EstSwaps 1 Runtime_ns 125977
+Topology Ring 8
+Edges 0 1 0 7 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [2, 1, 0, 3]
+VF2Eval Valid True Perfect False Connected 3/5 EstSwaps 2 Runtime_ns 58513
+Sabre [7, 1, 0, 2]
+SabreEval Valid True Perfect False Connected 4/5 EstSwaps 1 Runtime_ns 85937
+Topology Full 8
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 1 2 1 3 1 4 1 5 1 6 1 7 2 3 2 4 2 5 2 6 2 7 3 4 3 5 3 6 3 7 4 5 4 6 4 7 5 6 5 7 6 7
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 5/5 EstSwaps 0 Runtime_ns 33206
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 5/5 EstSwaps 0 Runtime_ns 25040
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [0, 3, 1, 2]
+VF2Eval Valid True Perfect False Connected 4/5 EstSwaps 1 Runtime_ns 33810
+Sabre [2, 0, 1, 3]
+SabreEval Valid True Perfect False Connected 4/5 EstSwaps 1 Runtime_ns 82258
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [1, 2, 6, 3]
+VF2Eval Valid True Perfect True Connected 5/5 EstSwaps 0 Runtime_ns 35835
+Sabre [4, 3, 8, 9]
+SabreEval Valid True Perfect True Connected 5/5 EstSwaps 0 Runtime_ns 57726
+EndCase
+Case 15 ScaleQubits
+Qubits 4
+Physical 5
+Gate S 1
+Gate RY 1 1.8786724068466962
+Gate IP 2 0.7571238295151402
+Gate Z 1
+Gate S 3
+Gate CX 3 1
+Gate CX 0 3
+Gate CX 2 0
+Gate CX 0 1
+Gate CX 1 2
+Gate RY 0 2.8808404633418405
+Gate CX 3 2
+Gate CX 3 2
+Gate S 1
+Gate Z 1
+Gate TDG 0
+Topology Linear 5
+Edges 0 1 1 2 2 3 3 4
+VF2 [3, 0, 1, 2]
+VF2Eval Valid True Perfect False Connected 4/7 EstSwaps 4 Runtime_ns 42096
+Sabre [1, 3, 0, 2]
+SabreEval Valid True Perfect False Connected 3/7 EstSwaps 5 Runtime_ns 180869
+Topology Ring 5
+Edges 0 1 0 4 1 2 2 3 3 4
+VF2 [2, 3, 0, 1]
+VF2Eval Valid True Perfect False Connected 4/7 EstSwaps 3 Runtime_ns 39084
+Sabre [3, 1, 0, 2]
+SabreEval Valid True Perfect False Connected 3/7 EstSwaps 4 Runtime_ns 202632
+Topology Full 5
+Edges 0 1 0 2 0 3 0 4 1 2 1 3 1 4 2 3 2 4 3 4
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 90627
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 27412
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [0, 2, 1, 3]
+VF2Eval Valid True Perfect False Connected 4/7 EstSwaps 3 Runtime_ns 37010
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect False Connected 3/7 EstSwaps 4 Runtime_ns 155798
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [1, 2, 6, 7]
+VF2Eval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 50292
+Sabre [4, 3, 8, 9]
+SabreEval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 50444
+EndCase
+Case 16 ScaleQubits
+Qubits 4
+Physical 5
+Gate CX 0 2
+Gate IP 3 2.3342033416172163
+Gate SDG 1
+Gate CX 0 1
+Gate IP 1 0.5497787143782138
+Gate CX 3 0
+Gate CX 3 0
+Gate SDG 1
+Gate H 3
+Gate CX 3 2
+Gate CX 0 1
+Gate SDG 0
+Gate CX 3 1
+Gate I 1
+Gate CX 2 3
+Gate CX 0 3
+Topology Linear 5
+Edges 0 1 1 2 2 3 3 4
+VF2 [1, 0, 3, 2]
+VF2Eval Valid True Perfect False Connected 7/9 EstSwaps 2 Runtime_ns 41606
+Sabre [1, 0, 2, 3]
+SabreEval Valid True Perfect False Connected 5/9 EstSwaps 5 Runtime_ns 191464
+Topology Ring 5
+Edges 0 1 0 4 1 2 2 3 3 4
+VF2 [0, 3, 2, 1]
+VF2Eval Valid True Perfect False Connected 5/9 EstSwaps 4 Runtime_ns 43825
+Sabre [1, 2, 0, 4]
+SabreEval Valid True Perfect False Connected 5/9 EstSwaps 4 Runtime_ns 170635
+Topology Full 5
+Edges 0 1 0 2 0 3 0 4 1 2 1 3 1 4 2 3 2 4 3 4
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 28829
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 16721
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 2, 0, 3]
+VF2Eval Valid True Perfect False Connected 6/9 EstSwaps 3 Runtime_ns 22632
+Sabre [1, 0, 2, 3]
+SabreEval Valid True Perfect False Connected 6/9 EstSwaps 3 Runtime_ns 99922
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [1, 2, 6, 7]
+VF2Eval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 25622
+Sabre [4, 3, 8, 9]
+SabreEval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 34812
+EndCase
+Case 17 ScaleQubits
+Qubits 5
+Physical 7
+Gate IP 1 1.2472122834751478
+Gate IP 2 3.009645762139022
+Gate Z 3
+Gate CX 1 2
+Gate IP 2 0.5372123437638546
+Gate CX 1 2
+Gate IP 4 2.752035164544659
+Gate IP 0 2.217964413434394
+Gate S 1
+Gate IP 3 2.0420352248333655
+Gate X 3
+Gate IP 1 0.1759291886010284
+Gate CX 3 0
+Gate CX 2 3
+Gate CX 4 1
+Gate IP 4 1.3760175822723295
+Gate CX 3 2
+Gate CX 3 4
+Gate H 3
+Gate CX 0 3
+Gate S 0
+Gate CX 3 4
+Gate T 2
+Gate I 0
+Gate CX 0 1
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [4, 3, 2, 1, 5]
+VF2Eval Valid True Perfect False Connected 5/10 EstSwaps 11 Runtime_ns 40070
+Sabre [1, 4, 3, 2, 0]
+SabreEval Valid True Perfect False Connected 6/10 EstSwaps 7 Runtime_ns 185077
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [3, 2, 1, 0, 4]
+VF2Eval Valid True Perfect False Connected 5/10 EstSwaps 9 Runtime_ns 27247
+Sabre [2, 6, 0, 1, 5]
+SabreEval Valid True Perfect False Connected 7/10 EstSwaps 6 Runtime_ns 193058
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 10/10 EstSwaps 0 Runtime_ns 34308
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 10/10 EstSwaps 0 Runtime_ns 22811
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [2, 0, 3, 1, 4]
+VF2Eval Valid True Perfect False Connected 4/10 EstSwaps 7 Runtime_ns 39390
+Sabre [4, 1, 2, 3, 0]
+SabreEval Valid True Perfect False Connected 5/10 EstSwaps 5 Runtime_ns 131665
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [11, 8, 7, 6, 12]
+VF2Eval Valid True Perfect False Connected 7/10 EstSwaps 3 Runtime_ns 247530
+Sabre [0, 1, 2, 6, 7]
+SabreEval Valid True Perfect False Connected 8/10 EstSwaps 2 Runtime_ns 245735
+EndCase
+Case 18 ScaleQubits
+Qubits 5
+Physical 10
+Gate RY 2 1.3131857292005336
+Gate IP 3 0.3518583772020568
+Gate CX 0 2
+Gate IP 0 0.4052654523130833
+Gate CX 2 0
+Gate CX 3 1
+Gate CX 2 3
+Gate CX 4 0
+Gate CX 4 3
+Gate I 2
+Gate CX 0 2
+Gate X 0
+Gate CX 4 1
+Gate Y 3
+Gate CX 0 3
+Gate CX 3 4
+Gate CX 0 1
+Gate I 1
+Gate CX 2 3
+Gate CX 4 1
+Gate CX 0 1
+Gate RY 0 0.8702211650443727
+Gate TDG 2
+Gate I 0
+Gate CX 2 4
+Topology Linear 10
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9
+VF2 [1, 5, 2, 3, 4]
+VF2Eval Valid True Perfect False Connected 9/15 EstSwaps 11 Runtime_ns 81469
+Sabre [3, 0, 4, 1, 2]
+SabreEval Valid True Perfect False Connected 7/15 EstSwaps 12 Runtime_ns 619557
+Topology Ring 10
+Edges 0 1 0 9 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9
+VF2 [0, 4, 1, 2, 3]
+VF2Eval Valid True Perfect False Connected 9/15 EstSwaps 11 Runtime_ns 80663
+Sabre [1, 8, 2, 9, 0]
+SabreEval Valid True Perfect False Connected 7/15 EstSwaps 12 Runtime_ns 531720
+Topology Full 10
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 2 3 2 4 2 5 2 6 2 7 2 8 2 9 3 4 3 5 3 6 3 7 3 8 3 9 4 5 4 6 4 7 4 8 4 9 5 6 5 7 5 8 5 9 6 7 6 8 6 9 7 8 7 9 8 9
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 15/15 EstSwaps 0 Runtime_ns 67173
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 15/15 EstSwaps 0 Runtime_ns 28784
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 4, 3, 0, 2]
+VF2Eval Valid True Perfect False Connected 5/15 EstSwaps 13 Runtime_ns 37427
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect False Connected 5/15 EstSwaps 12 Runtime_ns 494511
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [6, 12, 7, 8, 11]
+VF2Eval Valid True Perfect False Connected 9/15 EstSwaps 6 Runtime_ns 173100
+Sabre [11, 12, 17, 16, 7]
+SabreEval Valid True Perfect False Connected 11/15 EstSwaps 4 Runtime_ns 985045
+EndCase
+Case 19 ScaleQubits
+Qubits 5
+Physical 7
+Gate CX 2 4
+Gate CX 3 1
+Gate S 4
+Gate CX 2 3
+Gate CX 3 0
+Gate CX 3 4
+Gate CX 4 3
+Gate CX 0 3
+Gate CX 2 4
+Gate IP 2 2.195973264859265
+Gate CX 0 1
+Gate CX 0 1
+Gate CX 4 0
+Gate CX 0 2
+Gate CX 0 2
+Gate CX 0 4
+Gate CX 1 0
+Gate CX 2 3
+Gate IP 4 0.8388052385084748
+Gate S 1
+Gate Z 0
+Gate CX 4 2
+Gate CX 4 0
+Gate IP 2 1.4545573986120741
+Gate CX 1 2
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [1, 5, 2, 4, 3]
+VF2Eval Valid True Perfect False Connected 8/19 EstSwaps 20 Runtime_ns 101548
+Sabre [2, 0, 3, 1, 4]
+SabreEval Valid True Perfect False Connected 8/19 EstSwaps 14 Runtime_ns 1022329
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [0, 4, 1, 3, 2]
+VF2Eval Valid True Perfect False Connected 8/19 EstSwaps 17 Runtime_ns 143556
+Sabre [0, 2, 6, 1, 5]
+SabreEval Valid True Perfect False Connected 8/19 EstSwaps 14 Runtime_ns 2330790
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 19/19 EstSwaps 0 Runtime_ns 119810
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 19/19 EstSwaps 0 Runtime_ns 102390
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 4, 3, 2, 0]
+VF2Eval Valid True Perfect False Connected 8/19 EstSwaps 12 Runtime_ns 30280
+Sabre [0, 2, 3, 1, 4]
+SabreEval Valid True Perfect False Connected 8/19 EstSwaps 14 Runtime_ns 555297
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [6, 12, 7, 11, 8]
+VF2Eval Valid True Perfect False Connected 9/19 EstSwaps 10 Runtime_ns 60617
+Sabre [8, 7, 1, 6, 2]
+SabreEval Valid True Perfect False Connected 12/19 EstSwaps 7 Runtime_ns 483050
+EndCase
+Case 20 ScaleQubits
+Qubits 6
+Physical 12
+Gate Y 5
+Gate SDG 3
+Gate CX 5 3
+Gate H 0
+Gate IP 3 0.15393804002589986
+Gate IP 3 1.8032741831605412
+Gate CX 3 4
+Gate CX 0 3
+Gate CX 4 5
+Gate T 1
+Gate CX 1 2
+Gate CX 0 3
+Gate X 5
+Gate CX 3 4
+Gate CX 1 0
+Gate CX 3 4
+Gate IP 1 1.4796901398407927
+Gate IP 0 2.045176817486955
+Gate H 2
+Gate CX 4 5
+Gate RY 2 1.379159174925919
+Gate CX 4 2
+Gate RX 4 2.365619268153114
+Gate H 2
+Gate CX 1 4
+Gate IP 5 1.335176877775662
+Gate CX 5 3
+Gate CX 0 5
+Gate TDG 2
+Gate CX 1 0
+Gate CX 5 2
+Gate IP 2 1.6524777357882312
+Gate RX 1 2.777167905773377
+Gate CX 0 5
+Gate SDG 5
+Gate CX 5 3
+Topology Linear 12
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [4, 5, 6, 1, 3, 2]
+VF2Eval Valid True Perfect False Connected 8/18 EstSwaps 15 Runtime_ns 58986
+Sabre [5, 1, 0, 3, 4, 2]
+SabreEval Valid True Perfect False Connected 7/18 EstSwaps 20 Runtime_ns 809490
+Topology Ring 12
+Edges 0 1 0 11 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [3, 4, 5, 0, 2, 1]
+VF2Eval Valid True Perfect False Connected 8/18 EstSwaps 15 Runtime_ns 109672
+Sabre [3, 11, 10, 1, 2, 0]
+SabreEval Valid True Perfect False Connected 7/18 EstSwaps 20 Runtime_ns 932253
+Topology Full 12
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 4 5 4 6 4 7 4 8 4 9 4 10 4 11 5 6 5 7 5 8 5 9 5 10 5 11 6 7 6 8 6 9 6 10 6 11 7 8 7 9 7 10 7 11 8 9 8 10 8 11 9 10 9 11 10 11
+VF2 [0, 1, 2, 3, 4, 5]
+VF2Eval Valid True Perfect True Connected 18/18 EstSwaps 0 Runtime_ns 162265
+Sabre [0, 1, 2, 3, 4, 5]
+SabreEval Valid True Perfect True Connected 18/18 EstSwaps 0 Runtime_ns 55751
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [11, 12, 13, 6, 8, 7]
+VF2Eval Valid True Perfect False Connected 13/18 EstSwaps 5 Runtime_ns 394645
+Sabre [1, 0, 5, 2, 6, 7]
+SabreEval Valid True Perfect False Connected 16/18 EstSwaps 2 Runtime_ns 447465
+EndCase
+Case 21 ScaleQubits
+Qubits 6
+Physical 7
+Gate RY 0 3.0379200960213297
+Gate Y 3
+Gate IP 5 1.5268140296446395
+Gate S 3
+Gate Y 0
+Gate CX 0 4
+Gate I 0
+Gate CX 5 2
+Gate S 1
+Gate Z 5
+Gate Z 2
+Gate CX 1 2
+Gate CX 1 2
+Gate Z 2
+Gate X 0
+Gate IP 0 2.5132741228718345
+Gate IP 3 0.3455751918948773
+Gate CX 4 2
+Gate CX 4 3
+Gate CX 2 0
+Gate CX 2 0
+Gate CX 2 3
+Gate RX 4 0.39584067435231396
+Gate TDG 4
+Gate IP 4 1.6807520696705394
+Gate TDG 3
+Gate CX 4 5
+Gate CX 3 4
+Gate CX 2 1
+Gate CX 5 1
+Gate RX 1 3.003362576831842
+Gate X 4
+Gate T 0
+Gate CX 4 2
+Gate CX 0 2
+Gate CX 0 1
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [3, 4, 1, 5, 2, 0]
+VF2Eval Valid True Perfect False Connected 5/16 EstSwaps 20 Runtime_ns 43475
+Sabre [1, 5, 4, 0, 2, 3]
+SabreEval Valid True Perfect False Connected 6/16 EstSwaps 17 Runtime_ns 504487
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [2, 3, 0, 4, 1, 5]
+VF2Eval Valid True Perfect False Connected 4/16 EstSwaps 19 Runtime_ns 58123
+Sabre [6, 0, 1, 4, 5, 2]
+SabreEval Valid True Perfect False Connected 8/16 EstSwaps 12 Runtime_ns 450642
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4, 5]
+VF2Eval Valid True Perfect True Connected 16/16 EstSwaps 0 Runtime_ns 70888
+Sabre [0, 1, 2, 3, 4, 5]
+SabreEval Valid True Perfect True Connected 16/16 EstSwaps 0 Runtime_ns 51182
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [8, 11, 6, 12, 7, 13]
+VF2Eval Valid True Perfect False Connected 9/16 EstSwaps 7 Runtime_ns 120405
+Sabre [1, 2, 5, 0, 6, 7]
+SabreEval Valid True Perfect False Connected 7/16 EstSwaps 9 Runtime_ns 868825
+EndCase
+Case 22 ScaleQubits
+Qubits 6
+Physical 8
+Gate TDG 4
+Gate CX 4 5
+Gate RY 1 0.5749114556069321
+Gate CX 4 5
+Gate RX 4 1.8755308141931064
+Gate TDG 2
+Gate TDG 4
+Gate CX 4 5
+Gate IP 5 2.2399555620095226
+Gate I 4
+Gate CX 0 4
+Gate S 0
+Gate CX 0 3
+Gate CX 2 5
+Gate CX 0 3
+Gate H 5
+Gate RX 4 2.720619238008761
+Gate CX 0 3
+Gate S 1
+Gate CX 4 0
+Gate CX 1 5
+Gate CX 0 5
+Gate RY 2 2.689203311472863
+Gate CX 5 3
+Gate CX 5 1
+Gate CX 1 0
+Gate CX 4 1
+Gate CX 1 4
+Gate CX 2 3
+Gate CX 2 1
+Gate I 3
+Gate TDG 1
+Gate H 2
+Gate CX 5 1
+Gate CX 3 1
+Gate Y 5
+Topology Linear 8
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [4, 2, 6, 5, 3, 1]
+VF2Eval Valid True Perfect False Connected 11/20 EstSwaps 18 Runtime_ns 149780
+Sabre [0, 5, 4, 3, 1, 2]
+SabreEval Valid True Perfect False Connected 8/20 EstSwaps 25 Runtime_ns 1968799
+Topology Ring 8
+Edges 0 1 0 7 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [3, 1, 5, 4, 2, 0]
+VF2Eval Valid True Perfect False Connected 11/20 EstSwaps 16 Runtime_ns 197259
+Sabre [3, 6, 7, 0, 2, 1]
+SabreEval Valid True Perfect False Connected 8/20 EstSwaps 23 Runtime_ns 1881184
+Topology Full 8
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 1 2 1 3 1 4 1 5 1 6 1 7 2 3 2 4 2 5 2 6 2 7 3 4 3 5 3 6 3 7 4 5 4 6 4 7 5 6 5 7 6 7
+VF2 [0, 1, 2, 3, 4, 5]
+VF2Eval Valid True Perfect True Connected 20/20 EstSwaps 0 Runtime_ns 303383
+Sabre [0, 1, 2, 3, 4, 5]
+SabreEval Valid True Perfect True Connected 20/20 EstSwaps 0 Runtime_ns 167796
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [11, 7, 13, 12, 8, 6]
+VF2Eval Valid True Perfect False Connected 12/20 EstSwaps 8 Runtime_ns 194959
+Sabre [1, 5, 7, 0, 2, 6]
+SabreEval Valid True Perfect False Connected 14/20 EstSwaps 6 Runtime_ns 1770036
+EndCase
+Case 23 ScaleQubits
+Qubits 7
+Physical 8
+Gate CX 2 0
+Gate IP 5 2.8211502029236346
+Gate IP 6 2.0294688542190062
+Gate RX 5 1.9540706305328512
+Gate CX 0 5
+Gate CX 2 5
+Gate CX 1 0
+Gate CX 6 2
+Gate CX 1 4
+Gate H 4
+Gate CX 5 6
+Gate X 2
+Gate CX 3 6
+Gate T 5
+Gate TDG 1
+Gate CX 3 1
+Gate Z 6
+Gate IP 5 2.098583892597982
+Gate CX 6 1
+Gate CX 2 6
+Gate Y 6
+Gate CX 0 2
+Gate Z 0
+Gate CX 5 0
+Gate RY 3 2.035752039526186
+Gate SDG 5
+Gate CX 2 4
+Gate RX 3 2.1237166338267004
+Gate CX 4 5
+Gate IP 6 1.0618583169133502
+Gate CX 6 0
+Gate RY 4 0.9330530181161686
+Gate CX 4 3
+Gate I 3
+Gate RX 2 1.350884841043611
+Gate CX 4 5
+Gate SDG 1
+Gate CX 0 6
+Gate CX 0 1
+Gate CX 1 3
+Gate CX 2 3
+Gate CX 4 2
+Gate Z 0
+Gate IP 6 0.7916813487046279
+Gate CX 0 2
+Gate CX 0 1
+Gate RX 3 0.3204424506661589
+Gate CX 6 0
+Gate CX 4 6
+Topology Linear 8
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [1, 5, 2, 0, 4, 6, 3]
+VF2Eval Valid True Perfect False Connected 7/27 EstSwaps 44 Runtime_ns 105552
+Sabre [4, 2, 3, 1, 0, 5, 6]
+SabreEval Valid True Perfect False Connected 9/27 EstSwaps 37 Runtime_ns 2571752
+Topology Ring 8
+Edges 0 1 0 7 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [0, 4, 1, 6, 3, 5, 2]
+VF2Eval Valid True Perfect False Connected 7/27 EstSwaps 35 Runtime_ns 93985
+Sabre [4, 2, 5, 7, 1, 3, 6]
+SabreEval Valid True Perfect False Connected 9/27 EstSwaps 28 Runtime_ns 1752524
+Topology Full 8
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 1 2 1 3 1 4 1 5 1 6 1 7 2 3 2 4 2 5 2 6 2 7 3 4 3 5 3 6 3 7 4 5 4 6 4 7 5 6 5 7 6 7
+VF2 [0, 1, 2, 3, 4, 5, 6]
+VF2Eval Valid True Perfect True Connected 27/27 EstSwaps 0 Runtime_ns 120027
+Sabre [0, 1, 2, 3, 4, 5, 6]
+SabreEval Valid True Perfect True Connected 27/27 EstSwaps 0 Runtime_ns 75962
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [6, 12, 7, 1, 11, 13, 8]
+VF2Eval Valid True Perfect False Connected 10/27 EstSwaps 17 Runtime_ns 119659
+Sabre [6, 12, 7, 1, 11, 5, 2]
+SabreEval Valid True Perfect False Connected 15/27 EstSwaps 12 Runtime_ns 1099667
+EndCase
+Case 24 ScaleQubits
+Qubits 7
+Physical 8
+Gate CX 5 1
+Gate IP 4 2.4253095285713204
+Gate CX 5 2
+Gate T 4
+Gate RX 3 1.489114917801562
+Gate CX 5 1
+Gate CX 1 4
+Gate CX 4 5
+Gate CX 3 4
+Gate Z 6
+Gate IP 5 0.31730085801256913
+Gate SDG 5
+Gate CX 0 3
+Gate S 5
+Gate Z 1
+Gate CX 5 6
+Gate CX 3 0
+Gate I 3
+Gate CX 5 0
+Gate IP 4 3.015928947446201
+Gate Y 5
+Gate CX 6 3
+Gate RY 3 2.0231856689118266
+Gate CX 4 2
+Gate CX 0 1
+Gate CX 5 2
+Gate TDG 4
+Gate S 4
+Gate Z 5
+Gate CX 1 5
+Gate Z 1
+Gate Y 5
+Gate CX 1 5
+Gate CX 6 0
+Gate T 1
+Gate CX 1 5
+Gate CX 0 6
+Gate IP 2 2.3719024534602937
+Gate T 2
+Gate CX 4 6
+Gate CX 4 2
+Gate CX 3 4
+Gate X 6
+Gate CX 2 3
+Gate CX 0 3
+Gate CX 5 3
+Gate IP 2 0.6754424205218055
+Gate T 1
+Gate CX 5 0
+Topology Linear 8
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [3, 5, 6, 2, 4, 1, 0]
+VF2Eval Valid True Perfect False Connected 6/26 EstSwaps 43 Runtime_ns 229959
+Sabre [7, 3, 1, 6, 4, 2, 5]
+SabreEval Valid True Perfect False Connected 13/26 EstSwaps 29 Runtime_ns 1198750
+Topology Ring 8
+Edges 0 1 0 7 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [2, 4, 5, 1, 3, 0, 6]
+VF2Eval Valid True Perfect False Connected 5/26 EstSwaps 42 Runtime_ns 61536
+Sabre [3, 7, 1, 2, 6, 0, 5]
+SabreEval Valid True Perfect False Connected 13/26 EstSwaps 25 Runtime_ns 1353928
+Topology Full 8
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 1 2 1 3 1 4 1 5 1 6 1 7 2 3 2 4 2 5 2 6 2 7 3 4 3 5 3 6 3 7 4 5 4 6 4 7 5 6 5 7 6 7
+VF2 [0, 1, 3, 2, 4, 5, 6]
+VF2Eval Valid True Perfect True Connected 26/26 EstSwaps 0 Runtime_ns 122771
+Sabre [0, 1, 2, 3, 4, 5, 6]
+SabreEval Valid True Perfect True Connected 26/26 EstSwaps 0 Runtime_ns 71229
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [8, 12, 13, 7, 11, 6, 1]
+VF2Eval Valid True Perfect False Connected 10/26 EstSwaps 16 Runtime_ns 168401
+Sabre [2, 6, 5, 7, 1, 10, 11]
+SabreEval Valid True Perfect False Connected 15/26 EstSwaps 11 Runtime_ns 857734
+EndCase
+Case 25 ScaleQubits
+Qubits 7
+Physical 8
+Gate SDG 2
+Gate CX 3 5
+Gate RX 6 1.9572122231864413
+Gate CX 4 5
+Gate CX 0 1
+Gate TDG 4
+Gate X 6
+Gate T 5
+Gate CX 2 1
+Gate SDG 5
+Gate CX 5 6
+Gate CX 5 3
+Gate IP 0 3.129026282975434
+Gate CX 6 5
+Gate H 2
+Gate T 5
+Gate CX 2 5
+Gate CX 6 3
+Gate S 5
+Gate T 5
+Gate CX 5 2
+Gate SDG 3
+Gate CX 0 2
+Gate T 6
+Gate RY 5 2.0263272615654166
+Gate Z 1
+Gate CX 1 2
+Gate CX 0 3
+Gate Y 4
+Gate RX 6 1.7655750713174636
+Gate Y 1
+Gate RX 0 1.6053538459843841
+Gate T 2
+Gate S 4
+Gate CX 3 6
+Gate T 3
+Gate CX 4 6
+Gate CX 4 5
+Gate CX 4 0
+Gate H 6
+Gate CX 1 4
+Gate Y 0
+Gate CX 5 6
+Gate CX 0 5
+Gate I 0
+Gate IP 5 2.079734336676443
+Gate TDG 2
+Gate RX 1 2.8305749808844034
+Gate Y 1
+Topology Linear 8
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [5, 0, 6, 3, 4, 1, 2]
+VF2Eval Valid True Perfect False Connected 7/20 EstSwaps 36 Runtime_ns 80830
+Sabre [7, 6, 5, 4, 2, 3, 1]
+SabreEval Valid True Perfect False Connected 8/20 EstSwaps 22 Runtime_ns 741985
+Topology Ring 8
+Edges 0 1 0 7 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [4, 6, 5, 2, 3, 0, 1]
+VF2Eval Valid True Perfect False Connected 9/20 EstSwaps 18 Runtime_ns 76683
+Sabre [3, 2, 1, 6, 4, 5, 7]
+SabreEval Valid True Perfect False Connected 10/20 EstSwaps 16 Runtime_ns 916957
+Topology Full 8
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 1 2 1 3 1 4 1 5 1 6 1 7 2 3 2 4 2 5 2 6 2 7 3 4 3 5 3 6 3 7 4 5 4 6 4 7 5 6 5 7 6 7
+VF2 [0, 1, 2, 3, 4, 5, 6]
+VF2Eval Valid True Perfect True Connected 20/20 EstSwaps 0 Runtime_ns 79794
+Sabre [0, 1, 2, 3, 4, 5, 6]
+SabreEval Valid True Perfect True Connected 20/20 EstSwaps 0 Runtime_ns 50367
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [12, 1, 13, 8, 11, 6, 7]
+VF2Eval Valid True Perfect False Connected 10/20 EstSwaps 10 Runtime_ns 212158
+Sabre [7, 1, 0, 12, 6, 11, 5]
+SabreEval Valid True Perfect False Connected 14/20 EstSwaps 6 Runtime_ns 1009141
+EndCase
+Case 26 ScaleQubits
+Qubits 8
+Physical 12
+Gate CX 0 4
+Gate CX 6 0
+Gate SDG 1
+Gate CX 7 0
+Gate Z 6
+Gate CX 6 2
+Gate CX 2 1
+Gate CX 0 7
+Gate CX 1 2
+Gate CX 2 5
+Gate CX 1 0
+Gate I 6
+Gate CX 4 7
+Gate S 1
+Gate IP 2 0.38641589639154456
+Gate T 3
+Gate Y 7
+Gate CX 4 5
+Gate RY 0 2.5541148273685015
+Gate CX 3 4
+Gate H 6
+Gate CX 2 7
+Gate CX 6 3
+Gate CX 7 2
+Gate SDG 2
+Gate CX 7 0
+Gate CX 5 2
+Gate CX 2 5
+Gate CX 0 1
+Gate CX 3 0
+Gate Z 0
+Gate RX 5 1.3131857292005336
+Gate CX 5 3
+Gate CX 2 0
+Gate CX 5 6
+Gate IP 2 1.2220795422464297
+Gate CX 0 6
+Gate Y 5
+Gate Z 1
+Gate S 7
+Gate CX 3 6
+Gate IP 2 1.002168056495144
+Gate CX 3 4
+Gate I 6
+Gate CX 1 3
+Gate X 0
+Gate RY 5 2.067167966062084
+Gate I 7
+Gate T 2
+Gate CX 7 6
+Gate T 7
+Gate CX 3 4
+Gate RY 5 2.6357962363618364
+Gate CX 5 0
+Gate CX 1 0
+Gate CX 4 3
+Gate CX 1 2
+Gate TDG 7
+Gate CX 7 0
+Gate RX 4 2.761459942505428
+Gate RY 0 0.5529203070318035
+Gate CX 1 4
+Gate T 3
+Gate CX 3 4
+Topology Linear 12
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [1, 5, 2, 3, 4, 8, 7, 6]
+VF2Eval Valid True Perfect False Connected 9/36 EstSwaps 90 Runtime_ns 266250
+Sabre [5, 0, 2, 7, 6, 1, 3, 4]
+SabreEval Valid True Perfect False Connected 15/36 EstSwaps 53 Runtime_ns 3485221
+Topology Ring 12
+Edges 0 1 0 11 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [0, 4, 1, 2, 3, 7, 6, 5]
+VF2Eval Valid True Perfect False Connected 9/36 EstSwaps 88 Runtime_ns 93072
+Sabre [11, 4, 2, 9, 10, 3, 1, 0]
+SabreEval Valid True Perfect False Connected 15/36 EstSwaps 51 Runtime_ns 3660103
+Topology Full 12
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 4 5 4 6 4 7 4 8 4 9 4 10 4 11 5 6 5 7 5 8 5 9 5 10 5 11 6 7 6 8 6 9 6 10 6 11 7 8 7 9 7 10 7 11 8 9 8 10 8 11 9 10 9 11 10 11
+VF2 [0, 1, 2, 3, 4, 5, 6, 7]
+VF2Eval Valid True Perfect True Connected 36/36 EstSwaps 0 Runtime_ns 118861
+Sabre [0, 1, 2, 3, 4, 5, 6, 7]
+SabreEval Valid True Perfect True Connected 36/36 EstSwaps 0 Runtime_ns 94640
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [6, 12, 7, 8, 11, 2, 1, 13]
+VF2Eval Valid True Perfect False Connected 17/36 EstSwaps 19 Runtime_ns 89871
+Sabre [7, 3, 8, 19, 13, 12, 2, 1]
+SabreEval Valid True Perfect False Connected 22/36 EstSwaps 17 Runtime_ns 1802916
+EndCase
+Case 27 ScaleQubits
+Qubits 8
+Physical 16
+Gate CX 0 1
+Gate CX 5 6
+Gate CX 0 1
+Gate CX 4 6
+Gate S 0
+Gate IP 6 2.3970351946890123
+Gate CX 5 1
+Gate CX 7 3
+Gate S 5
+Gate CX 0 4
+Gate X 5
+Gate IP 1 1.0524335389525807
+Gate CX 6 5
+Gate CX 3 0
+Gate RX 0 0.9079202768874503
+Gate CX 6 3
+Gate TDG 6
+Gate CX 6 2
+Gate RX 7 1.9854865570687494
+Gate CX 1 5
+Gate SDG 2
+Gate I 3
+Gate TDG 1
+Gate I 1
+Gate IP 6 1.501681288415921
+Gate CX 6 1
+Gate CX 7 5
+Gate CX 7 1
+Gate I 4
+Gate IP 4 2.3279201563100367
+Gate I 0
+Gate CX 7 4
+Gate CX 6 2
+Gate CX 4 3
+Gate Y 0
+Gate IP 5 0.7005751617505239
+Gate CX 3 2
+Gate CX 7 4
+Gate S 7
+Gate CX 4 2
+Gate IP 4 0.819955682586936
+Gate CX 7 6
+Gate H 6
+Gate CX 2 1
+Gate CX 5 3
+Gate IP 7 0.9016370915802706
+Gate RY 4 2.145707782401829
+Gate SDG 5
+Gate CX 7 0
+Gate CX 4 6
+Gate TDG 5
+Gate CX 7 0
+Gate CX 0 5
+Gate CX 5 2
+Gate CX 3 1
+Gate CX 3 4
+Gate CX 2 5
+Gate CX 3 0
+Gate SDG 7
+Gate TDG 4
+Gate Y 6
+Gate X 7
+Gate CX 2 3
+Gate IP 4 1.4702653618800232
+Topology Linear 16
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15
+VF2 [4, 6, 7, 1, 5, 2, 3, 8]
+VF2Eval Valid True Perfect False Connected 5/34 EstSwaps 79 Runtime_ns 88220
+Sabre [14, 11, 8, 10, 15, 12, 13, 9]
+SabreEval Valid True Perfect False Connected 7/34 EstSwaps 73 Runtime_ns 4175944
+Topology Ring 16
+Edges 0 1 0 15 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15
+VF2 [3, 5, 6, 0, 4, 1, 2, 7]
+VF2Eval Valid True Perfect False Connected 5/34 EstSwaps 79 Runtime_ns 206768
+Sabre [3, 0, 13, 15, 4, 1, 2, 14]
+SabreEval Valid True Perfect False Connected 7/34 EstSwaps 73 Runtime_ns 7362029
+Topology Full 16
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 1 13 1 14 1 15 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 3 12 3 13 3 14 3 15 4 5 4 6 4 7 4 8 4 9 4 10 4 11 4 12 4 13 4 14 4 15 5 6 5 7 5 8 5 9 5 10 5 11 5 12 5 13 5 14 5 15 6 7 6 8 6 9 6 10 6 11 6 12 6 13 6 14 6 15 7 8 7 9 7 10 7 11 7 12 7 13 7 14 7 15 8 9 8 10 8 11 8 12 8 13 8 14 8 15 9 10 9 11 9 12 9 13 9 14 9 15 10 11 10 12 10 13 10 14 10 15 11 12 11 13 11 14 11 15 12 13 12 14 12 15 13 14 13 15 14 15
+VF2 [0, 1, 2, 3, 4, 5, 6, 7]
+VF2Eval Valid True Perfect True Connected 34/34 EstSwaps 0 Runtime_ns 334291
+Sabre [0, 1, 2, 3, 4, 5, 6, 7]
+SabreEval Valid True Perfect True Connected 34/34 EstSwaps 0 Runtime_ns 118904
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [11, 13, 1, 6, 12, 7, 8, 2]
+VF2Eval Valid True Perfect False Connected 17/34 EstSwaps 17 Runtime_ns 77318
+Sabre [6, 7, 8, 16, 11, 13, 12, 17]
+SabreEval Valid True Perfect False Connected 22/34 EstSwaps 12 Runtime_ns 2524962
+EndCase
+Case 28 ScaleQubits
+Qubits 8
+Physical 16
+Gate H 3
+Gate IP 6 0.6251769380643689
+Gate CX 4 5
+Gate CX 0 4
+Gate CX 7 2
+Gate RX 3 0.9424777960769379
+Gate CX 5 6
+Gate CX 1 0
+Gate IP 1 2.9405307237600464
+Gate CX 7 0
+Gate CX 4 7
+Gate SDG 4
+Gate IP 3 2.2682298958918303
+Gate RY 3 2.7803094984269667
+Gate CX 2 3
+Gate I 6
+Gate T 5
+Gate CX 1 2
+Gate Y 2
+Gate CX 5 2
+Gate IP 6 1.6587609210954108
+Gate IP 4 0.2827433388230814
+Gate CX 5 1
+Gate CX 2 3
+Gate RY 1 1.900663555421825
+Gate IP 6 2.189690079552086
+Gate I 3
+Gate S 6
+Gate RY 3 2.2022564501664452
+Gate S 7
+Gate RX 3 1.3194689145077132
+Gate IP 4 3.0002209841782523
+Gate CX 5 6
+Gate CX 2 7
+Gate SDG 5
+Gate CX 0 4
+Gate IP 1 0.2827433388230814
+Gate Z 0
+Gate X 6
+Gate IP 0 2.4315927138785
+Gate CX 1 5
+Gate CX 2 3
+Gate CX 5 1
+Gate IP 7 1.228362727553609
+Gate H 7
+Gate CX 0 4
+Gate S 4
+Gate CX 5 6
+Gate CX 7 2
+Gate CX 0 1
+Gate SDG 4
+Gate CX 3 6
+Gate CX 0 7
+Gate CX 6 7
+Gate IP 6 0.9361946107697584
+Gate Y 5
+Gate H 7
+Gate IP 2 0.08482300164692441
+Gate SDG 5
+Gate IP 0 1.6210618092523332
+Gate CX 0 6
+Gate IP 5 0.9079202768874503
+Gate Y 0
+Gate CX 0 3
+Topology Linear 16
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15
+VF2 [1, 6, 2, 8, 7, 3, 5, 4]
+VF2Eval Valid True Perfect False Connected 2/27 EstSwaps 73 Runtime_ns 119486
+Sabre [0, 3, 5, 6, 1, 2, 7, 4]
+SabreEval Valid True Perfect False Connected 14/27 EstSwaps 40 Runtime_ns 2121723
+Topology Ring 16
+Edges 0 1 0 15 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15
+VF2 [0, 5, 1, 7, 6, 2, 4, 3]
+VF2Eval Valid True Perfect False Connected 2/27 EstSwaps 73 Runtime_ns 63288
+Sabre [7, 4, 2, 1, 6, 5, 0, 3]
+SabreEval Valid True Perfect False Connected 14/27 EstSwaps 40 Runtime_ns 1645210
+Topology Full 16
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 1 13 1 14 1 15 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 3 12 3 13 3 14 3 15 4 5 4 6 4 7 4 8 4 9 4 10 4 11 4 12 4 13 4 14 4 15 5 6 5 7 5 8 5 9 5 10 5 11 5 12 5 13 5 14 5 15 6 7 6 8 6 9 6 10 6 11 6 12 6 13 6 14 6 15 7 8 7 9 7 10 7 11 7 12 7 13 7 14 7 15 8 9 8 10 8 11 8 12 8 13 8 14 8 15 9 10 9 11 9 12 9 13 9 14 9 15 10 11 10 12 10 13 10 14 10 15 11 12 11 13 11 14 11 15 12 13 12 14 12 15 13 14 13 15 14 15
+VF2 [0, 1, 2, 3, 4, 5, 6, 7]
+VF2Eval Valid True Perfect True Connected 27/27 EstSwaps 0 Runtime_ns 87399
+Sabre [0, 1, 2, 3, 4, 5, 6, 7]
+SabreEval Valid True Perfect True Connected 27/27 EstSwaps 0 Runtime_ns 83269
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [6, 13, 7, 2, 1, 8, 12, 11]
+VF2Eval Valid True Perfect False Connected 18/27 EstSwaps 9 Runtime_ns 113000
+Sabre [1, 6, 11, 2, 0, 5, 10, 7]
+SabreEval Valid True Perfect False Connected 17/27 EstSwaps 10 Runtime_ns 1279467
+EndCase
+Case 29 ScaleQubits
+Qubits 9
+Physical 18
+Gate CX 1 2
+Gate CX 4 5
+Gate CX 2 0
+Gate CX 0 7
+Gate CX 6 3
+Gate T 0
+Gate I 7
+Gate CX 7 0
+Gate CX 1 2
+Gate IP 6 2.199114857512855
+Gate SDG 1
+Gate CX 7 0
+Gate CX 1 7
+Gate SDG 5
+Gate H 8
+Gate Z 6
+Gate IP 0 1.7153095888600272
+Gate I 6
+Gate CX 7 3
+Gate CX 1 8
+Gate X 5
+Gate RX 6 2.9091147972241482
+Gate T 5
+Gate CX 5 2
+Gate CX 3 0
+Gate IP 6 0.12566370614359174
+Gate IP 6 1.033583983031042
+Gate CX 0 7
+Gate CX 3 6
+Gate CX 6 4
+Gate X 4
+Gate IP 3 3.069336022557228
+Gate CX 8 2
+Gate CX 2 1
+Gate Y 8
+Gate CX 8 0
+Gate T 2
+Gate CX 1 2
+Gate IP 7 0.257610597594363
+Gate CX 3 8
+Gate IP 8 2.092300707290802
+Gate CX 2 8
+Gate CX 0 5
+Gate I 8
+Gate Z 5
+Gate I 8
+Gate CX 1 6
+Gate IP 4 1.746725515395925
+Gate Z 8
+Gate CX 2 4
+Gate CX 3 4
+Gate IP 6 0.5434955290710342
+Gate I 8
+Gate CX 1 7
+Gate CX 7 8
+Gate X 4
+Gate CX 3 5
+Gate CX 6 7
+Gate SDG 5
+Gate X 6
+Gate CX 3 4
+Gate SDG 0
+Gate SDG 1
+Gate RX 7 0.0031415926535897933
+Gate Z 1
+Gate CX 0 1
+Gate CX 2 1
+Gate RY 0 2.818008610270044
+Gate T 2
+Gate CX 8 0
+Gate H 5
+Gate X 3
+Gate CX 6 5
+Gate S 0
+Gate TDG 2
+Gate RX 3 2.1331414117874696
+Gate CX 6 7
+Gate CX 1 6
+Gate CX 5 4
+Gate CX 7 0
+Gate CX 0 5
+Topology Linear 18
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17
+VF2 [1, 2, 4, 6, 9, 7, 5, 3, 8]
+VF2Eval Valid True Perfect False Connected 6/40 EstSwaps 78 Runtime_ns 135826
+Sabre [15, 13, 14, 12, 8, 9, 11, 16, 10]
+SabreEval Valid True Perfect False Connected 15/40 EstSwaps 72 Runtime_ns 6136784
+Topology Ring 18
+Edges 0 1 0 17 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17
+VF2 [0, 1, 3, 5, 8, 6, 4, 2, 7]
+VF2Eval Valid True Perfect False Connected 6/40 EstSwaps 78 Runtime_ns 361538
+Sabre [12, 14, 13, 15, 1, 0, 16, 11, 17]
+SabreEval Valid True Perfect False Connected 15/40 EstSwaps 72 Runtime_ns 5414602
+Topology Full 18
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 1 13 1 14 1 15 1 16 1 17 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 2 16 2 17 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 3 12 3 13 3 14 3 15 3 16 3 17 4 5 4 6 4 7 4 8 4 9 4 10 4 11 4 12 4 13 4 14 4 15 4 16 4 17 5 6 5 7 5 8 5 9 5 10 5 11 5 12 5 13 5 14 5 15 5 16 5 17 6 7 6 8 6 9 6 10 6 11 6 12 6 13 6 14 6 15 6 16 6 17 7 8 7 9 7 10 7 11 7 12 7 13 7 14 7 15 7 16 7 17 8 9 8 10 8 11 8 12 8 13 8 14 8 15 8 16 8 17 9 10 9 11 9 12 9 13 9 14 9 15 9 16 9 17 10 11 10 12 10 13 10 14 10 15 10 16 10 17 11 12 11 13 11 14 11 15 11 16 11 17 12 13 12 14 12 15 12 16 12 17 13 14 13 15 13 16 13 17 14 15 14 16 14 17 15 16 15 17 16 17
+VF2 [0, 1, 2, 3, 4, 5, 6, 7, 8]
+VF2Eval Valid True Perfect True Connected 40/40 EstSwaps 0 Runtime_ns 116340
+Sabre [0, 1, 2, 3, 4, 5, 6, 7, 8]
+SabreEval Valid True Perfect True Connected 40/40 EstSwaps 0 Runtime_ns 77579
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [6, 7, 11, 13, 3, 1, 12, 8, 2]
+VF2Eval Valid True Perfect False Connected 16/40 EstSwaps 25 Runtime_ns 43134
+Sabre [12, 6, 11, 13, 18, 17, 14, 7, 8]
+SabreEval Valid True Perfect False Connected 29/40 EstSwaps 13 Runtime_ns 2280204
+EndCase
+Case 30 ScaleQubits
+Qubits 9
+Physical 12
+Gate CX 3 2
+Gate CX 6 3
+Gate CX 7 6
+Gate IP 0 0.015707963267948967
+Gate IP 7 2.752035164544659
+Gate Y 0
+Gate S 8
+Gate S 3
+Gate IP 5 2.871415685381071
+Gate CX 5 3
+Gate T 7
+Gate CX 5 7
+Gate CX 6 5
+Gate CX 3 5
+Gate RY 0 1.4734069545336128
+Gate CX 4 2
+Gate CX 3 4
+Gate IP 1 2.836858166191583
+Gate IP 4 0.21991148575128552
+Gate CX 3 2
+Gate IP 6 0.35499996985564664
+Gate S 5
+Gate IP 3 1.441991027997715
+Gate CX 4 5
+Gate IP 3 1.592787475370025
+Gate CX 3 5
+Gate IP 3 1.9163715186897738
+Gate SDG 7
+Gate CX 6 1
+Gate CX 7 0
+Gate CX 1 2
+Gate CX 2 0
+Gate CX 8 0
+Gate CX 3 8
+Gate CX 1 3
+Gate CX 2 1
+Gate CX 4 1
+Gate CX 5 6
+Gate CX 8 5
+Gate IP 7 1.0398671683382215
+Gate CX 7 3
+Gate T 2
+Gate CX 4 6
+Gate CX 8 7
+Gate H 7
+Gate IP 1 0.515221195188726
+Gate IP 5 0.05026548245743669
+Gate CX 3 1
+Gate CX 7 3
+Gate CX 4 5
+Gate CX 4 3
+Gate CX 0 1
+Gate SDG 3
+Gate CX 0 2
+Gate CX 3 0
+Gate CX 0 2
+Gate CX 3 4
+Gate CX 7 0
+Gate CX 1 8
+Gate RX 2 1.778141441931823
+Gate CX 6 2
+Gate S 8
+Gate T 1
+Gate CX 7 0
+Gate X 2
+Gate CX 1 4
+Gate CX 5 6
+Gate CX 1 8
+Gate CX 1 2
+Gate CX 6 4
+Gate CX 1 2
+Gate RX 1 3.138451060936203
+Gate CX 2 1
+Gate Y 8
+Gate X 8
+Gate CX 0 1
+Gate I 2
+Gate CX 1 5
+Gate IP 8 3.009645762139022
+Gate CX 1 7
+Gate RY 4 1.687035254977719
+Topology Linear 12
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [6, 1, 3, 2, 5, 4, 7, 8, 9]
+VF2Eval Valid True Perfect False Connected 8/49 EstSwaps 108 Runtime_ns 89299
+Sabre [7, 0, 1, 2, 3, 5, 4, 6, 8]
+SabreEval Valid True Perfect False Connected 20/49 EstSwaps 90 Runtime_ns 8895627
+Topology Ring 12
+Edges 0 1 0 11 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [5, 0, 2, 1, 4, 3, 6, 7, 8]
+VF2Eval Valid True Perfect False Connected 8/49 EstSwaps 96 Runtime_ns 82494
+Sabre [5, 4, 3, 2, 1, 11, 0, 10, 6]
+SabreEval Valid True Perfect False Connected 19/49 EstSwaps 66 Runtime_ns 5348452
+Topology Full 12
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 4 5 4 6 4 7 4 8 4 9 4 10 4 11 5 6 5 7 5 8 5 9 5 10 5 11 6 7 6 8 6 9 6 10 6 11 7 8 7 9 7 10 7 11 8 9 8 10 8 11 9 10 9 11 10 11
+VF2 [0, 1, 2, 3, 4, 5, 6, 7, 8]
+VF2Eval Valid True Perfect True Connected 49/49 EstSwaps 0 Runtime_ns 155870
+Sabre [0, 1, 2, 3, 4, 5, 6, 7, 8]
+SabreEval Valid True Perfect True Connected 49/49 EstSwaps 0 Runtime_ns 109939
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [13, 6, 8, 7, 12, 11, 1, 2, 3]
+VF2Eval Valid True Perfect False Connected 22/49 EstSwaps 28 Runtime_ns 67924
+Sabre [3, 11, 8, 7, 4, 2, 6, 1, 9]
+SabreEval Valid True Perfect False Connected 19/49 EstSwaps 39 Runtime_ns 4129004
+EndCase
+Case 31 ScaleQubits
+Qubits 9
+Physical 18
+Gate I 3
+Gate CX 5 2
+Gate CX 0 4
+Gate X 3
+Gate TDG 1
+Gate Z 6
+Gate CX 1 6
+Gate CX 0 8
+Gate CX 1 4
+Gate CX 4 1
+Gate IP 7 2.6138050877867083
+Gate CX 0 1
+Gate T 6
+Gate CX 6 3
+Gate CX 6 3
+Gate CX 4 0
+Gate IP 4 0.7916813487046279
+Gate CX 4 7
+Gate CX 8 1
+Gate RX 6 0.053407075111026485
+Gate CX 7 1
+Gate SDG 0
+Gate CX 4 3
+Gate CX 7 1
+Gate IP 3 2.8305749808844034
+Gate CX 8 0
+Gate CX 4 7
+Gate IP 6 0.9707521299592461
+Gate X 4
+Gate CX 3 5
+Gate CX 0 1
+Gate H 0
+Gate H 1
+Gate H 3
+Gate RX 3 1.925796296650543
+Gate Z 0
+Gate IP 6 1.4482742133048947
+Gate CX 3 8
+Gate Z 5
+Gate T 3
+Gate CX 0 7
+Gate CX 7 6
+Gate RX 7 2.054601595447725
+Gate CX 6 7
+Gate S 8
+Gate CX 0 1
+Gate CX 0 1
+Gate TDG 5
+Gate CX 8 6
+Gate Z 8
+Gate TDG 6
+Gate IP 8 0.7288494956328321
+Gate CX 8 7
+Gate CX 1 8
+Gate CX 8 0
+Gate CX 8 1
+Gate X 6
+Gate TDG 3
+Gate CX 1 2
+Gate CX 2 3
+Gate IP 7 1.5613715488341273
+Gate CX 4 5
+Gate RX 1 1.9477874452256718
+Gate TDG 6
+Gate SDG 5
+Gate X 4
+Gate CX 8 1
+Gate CX 6 7
+Gate IP 3 2.858849314766712
+Gate X 0
+Gate X 0
+Gate X 5
+Gate CX 1 3
+Gate CX 0 8
+Gate CX 1 5
+Gate RX 8 2.6389378290154264
+Gate TDG 4
+Gate S 7
+Gate CX 0 6
+Gate H 2
+Gate CX 5 6
+Topology Linear 18
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17
+VF2 [2, 1, 9, 7, 6, 8, 5, 4, 3]
+VF2Eval Valid True Perfect False Connected 15/40 EstSwaps 58 Runtime_ns 81915
+Sabre [15, 13, 8, 11, 14, 9, 12, 10, 16]
+SabreEval Valid True Perfect False Connected 12/40 EstSwaps 62 Runtime_ns 3416381
+Topology Ring 18
+Edges 0 1 0 17 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17
+VF2 [1, 0, 8, 6, 5, 7, 4, 3, 2]
+VF2Eval Valid True Perfect False Connected 15/40 EstSwaps 58 Runtime_ns 170970
+Sabre [12, 14, 1, 16, 13, 0, 15, 17, 11]
+SabreEval Valid True Perfect False Connected 12/40 EstSwaps 62 Runtime_ns 4426213
+Topology Full 18
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 1 13 1 14 1 15 1 16 1 17 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 2 16 2 17 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 3 12 3 13 3 14 3 15 3 16 3 17 4 5 4 6 4 7 4 8 4 9 4 10 4 11 4 12 4 13 4 14 4 15 4 16 4 17 5 6 5 7 5 8 5 9 5 10 5 11 5 12 5 13 5 14 5 15 5 16 5 17 6 7 6 8 6 9 6 10 6 11 6 12 6 13 6 14 6 15 6 16 6 17 7 8 7 9 7 10 7 11 7 12 7 13 7 14 7 15 7 16 7 17 8 9 8 10 8 11 8 12 8 13 8 14 8 15 8 16 8 17 9 10 9 11 9 12 9 13 9 14 9 15 9 16 9 17 10 11 10 12 10 13 10 14 10 15 10 16 10 17 11 12 11 13 11 14 11 15 11 16 11 17 12 13 12 14 12 15 12 16 12 17 13 14 13 15 13 16 13 17 14 15 14 16 14 17 15 16 15 17 16 17
+VF2 [0, 1, 2, 3, 4, 5, 6, 7, 8]
+VF2Eval Valid True Perfect True Connected 40/40 EstSwaps 0 Runtime_ns 88448
+Sabre [0, 1, 2, 3, 4, 5, 6, 7, 8]
+SabreEval Valid True Perfect True Connected 40/40 EstSwaps 0 Runtime_ns 75988
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [7, 6, 3, 1, 13, 2, 12, 11, 8]
+VF2Eval Valid True Perfect False Connected 21/40 EstSwaps 19 Runtime_ns 62012
+Sabre [7, 6, 4, 3, 2, 9, 8, 1, 12]
+SabreEval Valid True Perfect False Connected 26/40 EstSwaps 16 Runtime_ns 2152516
+EndCase
+Case 32 ScaleQubits
+Qubits 10
+Physical 20
+Gate S 7
+Gate IP 3 1.504822881069511
+Gate T 6
+Gate CX 5 0
+Gate CX 1 9
+Gate CX 7 4
+Gate CX 0 1
+Gate CX 8 2
+Gate CX 4 1
+Gate CX 5 6
+Gate H 1
+Gate CX 3 4
+Gate RY 0 1.9320794819577227
+Gate CX 4 7
+Gate RX 9 3.0379200960213297
+Gate CX 1 2
+Gate I 1
+Gate CX 7 1
+Gate CX 5 2
+Gate CX 0 1
+Gate CX 5 2
+Gate CX 1 7
+Gate Z 3
+Gate S 6
+Gate T 1
+Gate X 9
+Gate CX 9 7
+Gate CX 3 4
+Gate SDG 5
+Gate RX 1 2.6389378290154264
+Gate CX 1 0
+Gate RY 8 0.8388052385084748
+Gate CX 5 0
+Gate CX 0 8
+Gate Y 3
+Gate RX 1 1.2377875055143783
+Gate IP 9 2.670353755551324
+Gate CX 2 3
+Gate TDG 5
+Gate CX 2 9
+Gate I 7
+Gate I 8
+Gate RX 6 2.161415745669778
+Gate CX 3 5
+Gate SDG 6
+Gate CX 3 4
+Gate CX 5 0
+Gate CX 5 6
+Gate CX 0 9
+Gate CX 5 2
+Gate CX 7 3
+Gate CX 9 2
+Gate CX 5 4
+Gate SDG 4
+Gate CX 0 4
+Gate CX 7 9
+Gate X 5
+Gate X 1
+Gate I 8
+Gate SDG 3
+Gate X 9
+Gate CX 2 0
+Gate SDG 7
+Gate T 1
+Gate Z 6
+Gate X 7
+Gate IP 4 2.466150233067988
+Gate RX 8 2.4881413816431164
+Gate IP 0 2.151990967709008
+Gate Y 7
+Gate RY 8 2.321636971002857
+Gate CX 7 6
+Gate CX 1 2
+Gate S 8
+Gate RY 0 1.900663555421825
+Gate T 1
+Gate CX 3 6
+Gate TDG 2
+Gate RX 9 2.211681228127214
+Gate IP 9 2.6986280894336323
+Gate RY 7 0.24190263432641407
+Gate I 5
+Gate Y 5
+Gate Z 7
+Gate Z 1
+Gate Z 0
+Gate RY 0 0.6503096792930871
+Gate CX 8 2
+Gate CX 0 3
+Gate IP 6 2.6640705702441445
+Gate Y 4
+Gate CX 1 8
+Gate CX 2 7
+Gate CX 9 2
+Gate Y 7
+Gate RY 4 1.3257520998148928
+Gate CX 6 7
+Gate CX 6 0
+Gate CX 1 2
+Gate CX 6 4
+Topology Linear 20
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19
+VF2 [2, 3, 1, 7, 6, 4, 8, 5, 10, 9]
+VF2Eval Valid True Perfect False Connected 10/46 EstSwaps 118 Runtime_ns 242969
+Sabre [10, 7, 5, 12, 8, 11, 13, 9, 4, 6]
+SabreEval Valid True Perfect False Connected 14/46 EstSwaps 82 Runtime_ns 8267749
+Topology Ring 20
+Edges 0 1 0 19 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19
+VF2 [1, 2, 0, 6, 5, 3, 7, 4, 9, 8]
+VF2Eval Valid True Perfect False Connected 10/46 EstSwaps 118 Runtime_ns 116584
+Sabre [13, 10, 8, 15, 11, 14, 16, 12, 7, 9]
+SabreEval Valid True Perfect False Connected 14/46 EstSwaps 82 Runtime_ns 7477459
+Topology Full 20
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 2 16 2 17 2 18 2 19 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 3 12 3 13 3 14 3 15 3 16 3 17 3 18 3 19 4 5 4 6 4 7 4 8 4 9 4 10 4 11 4 12 4 13 4 14 4 15 4 16 4 17 4 18 4 19 5 6 5 7 5 8 5 9 5 10 5 11 5 12 5 13 5 14 5 15 5 16 5 17 5 18 5 19 6 7 6 8 6 9 6 10 6 11 6 12 6 13 6 14 6 15 6 16 6 17 6 18 6 19 7 8 7 9 7 10 7 11 7 12 7 13 7 14 7 15 7 16 7 17 7 18 7 19 8 9 8 10 8 11 8 12 8 13 8 14 8 15 8 16 8 17 8 18 8 19 9 10 9 11 9 12 9 13 9 14 9 15 9 16 9 17 9 18 9 19 10 11 10 12 10 13 10 14 10 15 10 16 10 17 10 18 10 19 11 12 11 13 11 14 11 15 11 16 11 17 11 18 11 19 12 13 12 14 12 15 12 16 12 17 12 18 12 19 13 14 13 15 13 16 13 17 13 18 13 19 14 15 14 16 14 17 14 18 14 19 15 16 15 17 15 18 15 19 16 17 16 18 16 19 17 18 17 19 18 19
+VF2 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+VF2Eval Valid True Perfect True Connected 46/46 EstSwaps 0 Runtime_ns 113467
+Sabre [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+SabreEval Valid True Perfect True Connected 46/46 EstSwaps 0 Runtime_ns 153411
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [7, 8, 6, 1, 13, 11, 2, 12, 5, 3]
+VF2Eval Valid True Perfect False Connected 20/46 EstSwaps 27 Runtime_ns 111672
+Sabre [8, 9, 3, 6, 2, 7, 1, 12, 4, 13]
+SabreEval Valid True Perfect False Connected 26/46 EstSwaps 20 Runtime_ns 3917339
+EndCase
+Case 33 ScaleQubits
+Qubits 10
+Physical 12
+Gate SDG 0
+Gate CX 5 6
+Gate CX 7 3
+Gate CX 2 5
+Gate Z 8
+Gate TDG 4
+Gate S 4
+Gate TDG 4
+Gate CX 4 1
+Gate I 7
+Gate I 7
+Gate CX 5 6
+Gate I 2
+Gate I 2
+Gate H 2
+Gate CX 6 9
+Gate CX 8 3
+Gate CX 4 5
+Gate RY 6 2.3938936020354222
+Gate X 4
+Gate H 7
+Gate CX 6 2
+Gate RY 6 0.8576547944300136
+Gate RY 6 2.8965484266097894
+Gate CX 2 3
+Gate Y 5
+Gate CX 6 5
+Gate TDG 4
+Gate CX 0 7
+Gate CX 7 1
+Gate I 2
+Gate RY 6 2.855707722113122
+Gate RY 0 1.2660618393966865
+Gate IP 0 3.1038935417467157
+Gate CX 0 6
+Gate RX 7 1.7373007374351555
+Gate SDG 8
+Gate CX 7 5
+Gate CX 6 0
+Gate CX 4 2
+Gate CX 1 2
+Gate CX 2 3
+Gate IP 0 0.7476990515543708
+Gate RX 1 0.34871678454846705
+Gate CX 2 0
+Gate T 2
+Gate IP 1 1.1592476891746337
+Gate IP 5 0.7476990515543708
+Gate CX 4 1
+Gate RX 6 0.2293362637120549
+Gate CX 4 8
+Gate CX 1 7
+Gate Y 0
+Gate CX 2 5
+Gate CX 5 8
+Gate CX 2 7
+Gate CX 8 9
+Gate CX 5 6
+Gate RY 1 2.5478316420613223
+Gate SDG 0
+Gate CX 5 8
+Gate CX 4 3
+Gate H 8
+Gate Z 0
+Gate IP 2 1.4545573986120741
+Gate CX 6 7
+Gate CX 4 8
+Gate S 6
+Gate CX 8 9
+Gate IP 7 1.6776104770169495
+Gate IP 8 2.8934068339561994
+Gate I 7
+Gate Y 9
+Gate CX 9 0
+Gate S 0
+Gate CX 9 7
+Gate CX 2 3
+Gate CX 3 5
+Gate CX 4 8
+Gate X 6
+Gate CX 6 3
+Gate CX 4 3
+Gate RY 5 0.2827433388230814
+Gate CX 0 3
+Gate CX 6 1
+Gate CX 1 7
+Gate SDG 6
+Gate CX 8 7
+Gate CX 5 3
+Gate CX 5 9
+Gate Z 5
+Gate CX 3 1
+Gate Y 4
+Gate X 6
+Gate S 1
+Gate Y 7
+Gate CX 5 2
+Gate Y 9
+Gate IP 3 2.1299998191338796
+Gate CX 2 0
+Topology Linear 12
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [9, 8, 3, 2, 6, 1, 4, 5, 7, 10]
+VF2Eval Valid True Perfect False Connected 11/49 EstSwaps 113 Runtime_ns 123873
+Sabre [10, 9, 5, 6, 8, 4, 3, 7, 1, 2]
+SabreEval Valid True Perfect False Connected 16/49 EstSwaps 99 Runtime_ns 9494157
+Topology Ring 12
+Edges 0 1 0 11 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [8, 7, 2, 1, 5, 0, 3, 4, 6, 9]
+VF2Eval Valid True Perfect False Connected 11/49 EstSwaps 105 Runtime_ns 152410
+Sabre [8, 9, 11, 4, 10, 0, 1, 5, 3, 2]
+SabreEval Valid True Perfect False Connected 15/49 EstSwaps 103 Runtime_ns 8994928
+Topology Full 12
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 4 5 4 6 4 7 4 8 4 9 4 10 4 11 5 6 5 7 5 8 5 9 5 10 5 11 6 7 6 8 6 9 6 10 6 11 7 8 7 9 7 10 7 11 8 9 8 10 8 11 9 10 9 11 10 11
+VF2 [0, 2, 1, 3, 4, 5, 6, 7, 8, 9]
+VF2Eval Valid True Perfect True Connected 49/49 EstSwaps 0 Runtime_ns 314996
+Sabre [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+SabreEval Valid True Perfect True Connected 49/49 EstSwaps 0 Runtime_ns 147787
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [3, 2, 8, 7, 13, 6, 11, 12, 1, 5]
+VF2Eval Valid True Perfect False Connected 23/49 EstSwaps 29 Runtime_ns 105899
+Sabre [12, 4, 9, 3, 1, 13, 7, 8, 2, 6]
+SabreEval Valid True Perfect False Connected 26/49 EstSwaps 26 Runtime_ns 4323702
+EndCase
+Case 34 ScaleQubits
+Qubits 10
+Physical 13
+Gate S 8
+Gate CX 3 5
+Gate TDG 2
+Gate S 2
+Gate CX 5 0
+Gate CX 3 0
+Gate RX 1 1.7090264035528475
+Gate S 5
+Gate CX 2 3
+Gate CX 3 4
+Gate TDG 1
+Gate CX 3 5
+Gate RX 0 0.13194689145077132
+Gate H 1
+Gate X 8
+Gate RY 8 1.5079644737231006
+Gate CX 8 2
+Gate CX 0 8
+Gate CX 7 1
+Gate CX 4 7
+Gate CX 2 3
+Gate CX 1 3
+Gate CX 1 2
+Gate IP 5 2.8305749808844034
+Gate RY 2 0.18535396656179778
+Gate I 6
+Gate Y 9
+Gate CX 2 8
+Gate CX 4 3
+Gate IP 7 1.6461945504810518
+Gate CX 3 2
+Gate CX 6 7
+Gate CX 7 5
+Gate IP 7 0.9267698328089891
+Gate CX 1 4
+Gate IP 1 0.6534512719466771
+Gate CX 8 4
+Gate Y 9
+Gate CX 0 1
+Gate CX 2 7
+Gate CX 7 8
+Gate CX 1 5
+Gate S 6
+Gate SDG 8
+Gate Y 9
+Gate IP 1 0.7037167544041136
+Gate CX 1 9
+Gate RY 7 1.5205308443374599
+Gate CX 3 7
+Gate RY 6 0.02827433388230814
+Gate CX 3 8
+Gate I 5
+Gate IP 5 0.6817256058289851
+Gate CX 3 1
+Gate H 9
+Gate RY 2 2.365619268153114
+Gate IP 7 2.720619238008761
+Gate CX 2 7
+Gate CX 9 3
+Gate CX 9 1
+Gate IP 3 3.097610356439536
+Gate CX 7 5
+Gate X 8
+Gate IP 1 2.4787166036823467
+Gate SDG 0
+Gate CX 0 8
+Gate Y 7
+Gate RY 2 2.839999758845173
+Gate CX 8 2
+Gate CX 1 3
+Gate CX 9 6
+Gate CX 9 2
+Gate X 4
+Gate CX 7 0
+Gate CX 0 1
+Gate RY 2 0.7508406442079605
+Gate CX 6 8
+Gate TDG 8
+Gate TDG 5
+Gate CX 6 2
+Gate CX 7 0
+Gate SDG 6
+Gate CX 5 4
+Gate IP 5 2.7897342763877364
+Gate H 4
+Gate CX 0 9
+Gate CX 4 5
+Gate IP 1 1.8849555921538759
+Gate CX 8 9
+Gate CX 8 1
+Gate SDG 4
+Gate CX 2 5
+Gate CX 3 7
+Gate CX 4 3
+Gate CX 7 8
+Gate CX 4 0
+Gate T 4
+Gate CX 4 5
+Gate S 4
+Gate CX 6 9
+Topology Linear 13
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12
+VF2 [7, 3, 4, 1, 8, 6, 10, 2, 5, 9]
+VF2Eval Valid True Perfect False Connected 11/54 EstSwaps 130 Runtime_ns 95194
+Sabre [7, 5, 10, 9, 6, 8, 3, 4, 11, 2]
+SabreEval Valid True Perfect False Connected 15/54 EstSwaps 127 Runtime_ns 10222226
+Topology Ring 13
+Edges 0 1 0 12 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12
+VF2 [6, 2, 3, 0, 7, 5, 9, 1, 4, 8]
+VF2Eval Valid True Perfect False Connected 11/54 EstSwaps 121 Runtime_ns 88579
+Sabre [10, 6, 9, 11, 8, 12, 4, 7, 0, 1]
+SabreEval Valid True Perfect False Connected 6/54 EstSwaps 131 Runtime_ns 16457097
+Topology Full 13
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 3 12 4 5 4 6 4 7 4 8 4 9 4 10 4 11 4 12 5 6 5 7 5 8 5 9 5 10 5 11 5 12 6 7 6 8 6 9 6 10 6 11 6 12 7 8 7 9 7 10 7 11 7 12 8 9 8 10 8 11 8 12 9 10 9 11 9 12 10 11 10 12 11 12
+VF2 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+VF2Eval Valid True Perfect True Connected 54/54 EstSwaps 0 Runtime_ns 127094
+Sabre [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+SabreEval Valid True Perfect True Connected 54/54 EstSwaps 0 Runtime_ns 134816
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [1, 8, 11, 6, 2, 13, 5, 7, 12, 3]
+VF2Eval Valid True Perfect False Connected 26/54 EstSwaps 31 Runtime_ns 81974
+Sabre [7, 1, 3, 9, 13, 8, 11, 12, 2, 6]
+SabreEval Valid True Perfect False Connected 31/54 EstSwaps 28 Runtime_ns 4502738
+EndCase
+Case 35 ScaleGates
+Qubits 5
+Physical 7
+Gate CX 0 1
+Gate TDG 3
+Gate Y 4
+Gate RX 4 1.278628210011046
+Gate IP 1 2.038893632179776
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 55231
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 17781
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 152233
+Sabre [0, 1, 6, 2, 5]
+SabreEval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 17276
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 33956
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 12169
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 29210
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 11230
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 2, 3, 6]
+VF2Eval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 29330
+Sabre [1, 0, 2, 6, 7]
+SabreEval Valid True Perfect True Connected 1/1 EstSwaps 0 Runtime_ns 40259
+EndCase
+Case 36 ScaleGates
+Qubits 5
+Physical 7
+Gate CX 1 0
+Gate CX 2 3
+Gate X 0
+Gate IP 3 1.3854423602330987
+Gate CX 4 3
+Gate H 3
+Gate CX 4 1
+Gate IP 4 2.4787166036823467
+Gate T 3
+Gate I 1
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [1, 2, 5, 4, 3]
+VF2Eval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 40711
+Sabre [0, 1, 4, 3, 2]
+SabreEval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 28045
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [0, 1, 4, 3, 2]
+VF2Eval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 37379
+Sabre [0, 6, 3, 4, 5]
+SabreEval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 25616
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 4, 3, 2]
+VF2Eval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 32129
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 18225
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [2, 1, 4, 3, 0]
+VF2Eval Valid True Perfect False Connected 3/4 EstSwaps 1 Runtime_ns 38482
+Sabre [4, 3, 1, 0, 2]
+SabreEval Valid True Perfect False Connected 2/4 EstSwaps 2 Runtime_ns 81773
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 8, 3, 2]
+VF2Eval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 47747
+Sabre [7, 1, 6, 5, 0]
+SabreEval Valid True Perfect True Connected 4/4 EstSwaps 0 Runtime_ns 52729
+EndCase
+Case 37 ScaleGates
+Qubits 5
+Physical 7
+Gate CX 4 0
+Gate RY 2 0.6220353454107791
+Gate CX 4 3
+Gate CX 3 4
+Gate CX 1 2
+Gate RX 0 3.0253537254069705
+Gate X 0
+Gate CX 3 2
+Gate CX 3 4
+Gate CX 4 2
+Gate T 1
+Gate CX 1 4
+Gate I 1
+Gate CX 4 3
+Gate CX 0 1
+Gate IP 3 0.43982297150257105
+Gate H 1
+Gate CX 0 1
+Gate IP 0 1.2534954687823274
+Gate CX 2 1
+Gate CX 1 4
+Gate IP 1 0.8545132017764238
+Gate IP 1 1.6587609210954108
+Gate CX 2 3
+Gate CX 1 0
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [5, 2, 4, 3, 1]
+VF2Eval Valid True Perfect False Connected 4/15 EstSwaps 17 Runtime_ns 61742
+Sabre [1, 0, 3, 4, 2]
+SabreEval Valid True Perfect False Connected 7/15 EstSwaps 10 Runtime_ns 514708
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [4, 1, 3, 2, 0]
+VF2Eval Valid True Perfect False Connected 4/15 EstSwaps 16 Runtime_ns 52935
+Sabre [5, 0, 1, 2, 4]
+SabreEval Valid True Perfect False Connected 5/15 EstSwaps 13 Runtime_ns 388910
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 15/15 EstSwaps 0 Runtime_ns 39467
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 15/15 EstSwaps 0 Runtime_ns 45100
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [4, 3, 2, 0, 1]
+VF2Eval Valid True Perfect False Connected 10/15 EstSwaps 5 Runtime_ns 55658
+Sabre [1, 0, 2, 4, 3]
+SabreEval Valid True Perfect False Connected 8/15 EstSwaps 9 Runtime_ns 472270
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [12, 7, 11, 8, 6]
+VF2Eval Valid True Perfect False Connected 6/15 EstSwaps 9 Runtime_ns 1141729
+Sabre [1, 0, 2, 6, 7]
+SabreEval Valid True Perfect False Connected 11/15 EstSwaps 4 Runtime_ns 998662
+EndCase
+Case 38 ScaleGates
+Qubits 5
+Physical 7
+Gate CX 0 1
+Gate S 3
+Gate CX 3 4
+Gate H 2
+Gate H 3
+Gate CX 2 3
+Gate RY 2 2.720619238008761
+Gate TDG 2
+Gate I 4
+Gate CX 4 3
+Gate Y 3
+Gate CX 3 2
+Gate T 2
+Gate CX 4 0
+Gate CX 4 1
+Gate CX 2 3
+Gate S 3
+Gate CX 0 1
+Gate Z 3
+Gate I 3
+Gate IP 3 0.7885397560510381
+Gate CX 3 0
+Gate CX 1 3
+Gate IP 1 0.7476990515543708
+Gate CX 2 1
+Gate CX 4 0
+Gate CX 1 4
+Gate CX 0 1
+Gate TDG 3
+Gate T 2
+Gate CX 3 1
+Gate CX 4 1
+Gate CX 4 0
+Gate Z 0
+Gate CX 2 3
+Gate IP 0 1.5550883635269477
+Gate CX 4 2
+Gate CX 1 2
+Gate Y 3
+Gate Z 0
+Gate CX 2 1
+Gate CX 2 4
+Gate CX 1 2
+Gate IP 1 1.8441148876572087
+Gate CX 1 2
+Gate H 1
+Gate CX 4 0
+Gate CX 4 0
+Gate CX 0 1
+Gate H 2
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [4, 1, 3, 5, 2]
+VF2Eval Valid True Perfect False Connected 6/28 EstSwaps 32 Runtime_ns 77912
+Sabre [0, 1, 4, 3, 2]
+SabreEval Valid True Perfect False Connected 13/28 EstSwaps 21 Runtime_ns 1123206
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [3, 0, 2, 4, 1]
+VF2Eval Valid True Perfect False Connected 6/28 EstSwaps 30 Runtime_ns 290068
+Sabre [1, 0, 4, 5, 6]
+SabreEval Valid True Perfect False Connected 13/28 EstSwaps 21 Runtime_ns 1915066
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 28/28 EstSwaps 0 Runtime_ns 366582
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 28/28 EstSwaps 0 Runtime_ns 158745
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [2, 1, 0, 4, 3]
+VF2Eval Valid True Perfect False Connected 14/28 EstSwaps 19 Runtime_ns 72391
+Sabre [1, 0, 4, 3, 2]
+SabreEval Valid True Perfect False Connected 14/28 EstSwaps 21 Runtime_ns 1078884
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [11, 6, 8, 12, 7]
+VF2Eval Valid True Perfect False Connected 16/28 EstSwaps 12 Runtime_ns 219773
+Sabre [6, 2, 0, 1, 7]
+SabreEval Valid True Perfect False Connected 21/28 EstSwaps 7 Runtime_ns 866196
+EndCase
+Case 39 ScaleGates
+Qubits 5
+Physical 7
+Gate Z 1
+Gate X 4
+Gate CX 2 4
+Gate X 2
+Gate X 3
+Gate CX 3 0
+Gate CX 1 2
+Gate IP 0 2.2776546738526
+Gate CX 3 4
+Gate CX 0 1
+Gate CX 3 1
+Gate CX 3 0
+Gate I 0
+Gate CX 1 2
+Gate CX 0 1
+Gate Y 4
+Gate IP 0 0.5529203070318035
+Gate S 2
+Gate SDG 2
+Gate RY 3 2.2336723767023425
+Gate Z 1
+Gate T 0
+Gate RY 3 0.9016370915802706
+Gate CX 1 2
+Gate CX 1 2
+Gate IP 1 2.048318410140545
+Gate Z 0
+Gate X 3
+Gate IP 1 1.9792033717615698
+Gate CX 2 0
+Gate CX 2 4
+Gate IP 0 0.31101767270538955
+Gate IP 3 2.9499555017208157
+Gate Z 1
+Gate CX 1 4
+Gate SDG 3
+Gate CX 4 2
+Gate Z 0
+Gate CX 4 2
+Gate RY 3 2.4033183799961915
+Gate RY 0 1.6022122533307945
+Gate TDG 0
+Gate CX 1 0
+Gate CX 4 0
+Gate Z 2
+Gate Z 4
+Gate X 0
+Gate T 4
+Gate CX 2 3
+Gate CX 2 1
+Gate CX 2 0
+Gate CX 0 3
+Gate CX 4 0
+Gate H 3
+Gate SDG 1
+Gate RX 4 2.8305749808844034
+Gate IP 4 1.4828317324943823
+Gate CX 0 1
+Gate CX 2 3
+Gate S 0
+Gate S 1
+Gate RY 4 2.4253095285713204
+Gate CX 2 1
+Gate T 0
+Gate IP 0 0.33300882128051806
+Gate SDG 0
+Gate CX 1 0
+Gate CX 0 4
+Gate TDG 0
+Gate CX 0 3
+Gate CX 0 1
+Gate S 4
+Gate CX 0 4
+Gate CX 1 0
+Gate CX 1 2
+Gate X 0
+Gate IP 4 1.5896458827164355
+Gate RX 2 2.3184953783492674
+Gate IP 0 0.47438049069205873
+Gate CX 4 1
+Gate CX 2 0
+Gate CX 2 1
+Gate H 2
+Gate RX 1 2.5038493449110653
+Gate RX 4 0.8922123136195013
+Gate CX 2 0
+Gate CX 0 2
+Gate RY 3 2.0231856689118266
+Gate I 0
+Gate IP 1 0.015707963267948967
+Gate H 2
+Gate RX 1 3.0756192078644076
+Gate IP 1 0.8702211650443727
+Gate Y 3
+Gate IP 3 0.6597344572538566
+Gate CX 0 1
+Gate CX 0 2
+Gate X 0
+Gate CX 1 3
+Gate T 4
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [1, 2, 3, 5, 4]
+VF2Eval Valid True Perfect False Connected 21/41 EstSwaps 34 Runtime_ns 71384
+Sabre [5, 6, 3, 4, 2]
+SabreEval Valid True Perfect False Connected 18/41 EstSwaps 39 Runtime_ns 3142461
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [0, 1, 2, 4, 3]
+VF2Eval Valid True Perfect False Connected 21/41 EstSwaps 30 Runtime_ns 153112
+Sabre [4, 3, 6, 5, 0]
+SabreEval Valid True Perfect False Connected 18/41 EstSwaps 37 Runtime_ns 2950139
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 41/41 EstSwaps 0 Runtime_ns 122587
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 41/41 EstSwaps 0 Runtime_ns 109289
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 3, 0, 4, 2]
+VF2Eval Valid True Perfect False Connected 20/41 EstSwaps 24 Runtime_ns 101024
+Sabre [4, 2, 1, 3, 0]
+SabreEval Valid True Perfect False Connected 18/41 EstSwaps 35 Runtime_ns 1083197
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [6, 7, 8, 12, 11]
+VF2Eval Valid True Perfect False Connected 25/41 EstSwaps 16 Runtime_ns 76795
+Sabre [1, 6, 2, 0, 7]
+SabreEval Valid True Perfect False Connected 36/41 EstSwaps 5 Runtime_ns 2278434
+EndCase
+Case 40 ScaleGates
+Qubits 5
+Physical 7
+Gate H 0
+Gate CX 4 3
+Gate RX 1 2.6829201261656834
+Gate CX 2 1
+Gate CX 4 0
+Gate CX 0 3
+Gate I 3
+Gate IP 1 0.9204866475018093
+Gate CX 2 4
+Gate RX 2 0.16650441064025903
+Gate CX 1 2
+Gate CX 1 3
+Gate IP 0 0.48694686130641796
+Gate CX 4 0
+Gate CX 0 4
+Gate CX 0 1
+Gate CX 0 2
+Gate IP 1 0.8545132017764238
+Gate S 3
+Gate X 2
+Gate RX 0 0.5686282702997526
+Gate IP 4 1.1372565405995052
+Gate H 2
+Gate SDG 0
+Gate CX 0 1
+Gate I 4
+Gate SDG 0
+Gate IP 0 1.5582299561805373
+Gate Y 3
+Gate X 2
+Gate RY 2 2.871415685381071
+Gate IP 4 1.82526533173567
+Gate IP 4 2.6954864967800427
+Gate S 1
+Gate CX 4 0
+Gate CX 1 4
+Gate CX 0 4
+Gate X 4
+Gate CX 0 2
+Gate CX 3 4
+Gate CX 0 1
+Gate CX 1 2
+Gate IP 0 0.744557458900781
+Gate CX 2 3
+Gate RY 4 1.7153095888600272
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 4
+Gate RY 2 2.4064599726497815
+Gate I 4
+Gate H 3
+Gate CX 3 2
+Gate CX 3 4
+Gate H 1
+Gate CX 1 0
+Gate CX 1 2
+Gate CX 3 4
+Gate Y 0
+Gate IP 0 1.6964600329384882
+Gate CX 3 1
+Gate SDG 1
+Gate CX 4 2
+Gate Z 4
+Gate IP 1 1.3823007675795091
+Gate IP 3 0.5717698629533423
+Gate CX 4 2
+Gate CX 2 1
+Gate I 3
+Gate CX 3 4
+Gate IP 1 1.338318470429252
+Gate CX 2 0
+Gate SDG 4
+Gate CX 2 4
+Gate CX 0 1
+Gate I 2
+Gate CX 3 0
+Gate CX 0 1
+Gate CX 4 2
+Gate S 4
+Gate CX 4 2
+Gate CX 4 1
+Gate X 2
+Gate T 3
+Gate CX 3 4
+Gate CX 2 0
+Gate I 0
+Gate CX 0 4
+Gate RX 2 2.035752039526186
+Gate CX 4 2
+Gate TDG 4
+Gate IP 1 1.2220795422464297
+Gate IP 0 0.02199114857512855
+Gate CX 2 0
+Gate TDG 3
+Gate IP 3 1.2252211349000193
+Gate CX 0 2
+Gate CX 4 3
+Gate CX 4 2
+Gate CX 3 1
+Gate CX 2 3
+Gate CX 1 2
+Gate Z 2
+Gate CX 0 1
+Gate H 0
+Gate Y 4
+Gate IP 3 1.9415042599184922
+Gate CX 2 3
+Gate CX 2 4
+Gate CX 3 0
+Gate T 1
+Gate RX 3 2.943672316413636
+Gate RY 3 2.5918139392115793
+Gate CX 3 1
+Gate CX 4 0
+Gate RX 3 0.5434955290710342
+Gate IP 4 1.0901326507956584
+Gate X 1
+Gate I 0
+Gate Z 2
+Gate X 3
+Gate RX 1 2.7803094984269667
+Gate CX 3 4
+Gate CX 4 0
+Gate X 2
+Gate IP 4 1.548805178219768
+Gate CX 3 1
+Gate Z 4
+Gate CX 3 1
+Gate Z 1
+Gate CX 0 2
+Gate CX 2 0
+Gate CX 2 3
+Gate CX 4 2
+Gate T 1
+Gate Z 1
+Gate RX 3 2.2870794518133692
+Gate RX 2 0.8262388678941156
+Gate CX 3 4
+Gate CX 0 1
+Gate TDG 3
+Gate CX 4 0
+Gate T 0
+Gate CX 1 3
+Gate CX 1 3
+Gate CX 4 2
+Gate S 4
+Gate CX 0 3
+Gate CX 2 4
+Gate I 2
+Gate TDG 0
+Gate CX 4 0
+Gate S 3
+Gate CX 1 2
+Gate CX 4 1
+Gate CX 3 2
+Gate SDG 0
+Gate CX 0 3
+Gate CX 3 4
+Gate CX 3 0
+Gate Z 1
+Gate H 2
+Gate CX 0 1
+Gate CX 1 2
+Gate IP 4 0.5120796025351363
+Gate CX 0 1
+Gate RX 3 0.47438049069205873
+Gate CX 2 1
+Gate T 2
+Gate CX 0 1
+Gate CX 1 3
+Gate IP 0 0.3832743037379548
+Gate Z 2
+Gate CX 0 1
+Gate Y 0
+Gate CX 3 2
+Gate CX 2 3
+Gate CX 4 0
+Gate CX 2 4
+Gate CX 0 4
+Gate S 1
+Gate Z 1
+Gate Y 4
+Gate IP 1 1.5865042900628454
+Gate CX 0 3
+Gate S 4
+Gate T 2
+Gate CX 0 3
+Gate SDG 2
+Gate Y 2
+Gate X 2
+Gate CX 1 2
+Gate CX 0 1
+Gate CX 1 0
+Gate T 3
+Gate TDG 3
+Gate IP 0 2.045176817486955
+Gate IP 2 0.13823007675795088
+Gate S 4
+Gate CX 2 4
+Gate CX 4 1
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+VF2 [1, 4, 2, 5, 3]
+VF2Eval Valid True Perfect False Connected 36/100 EstSwaps 103 Runtime_ns 345274
+Sabre [5, 1, 2, 3, 4]
+SabreEval Valid True Perfect False Connected 41/100 EstSwaps 101 Runtime_ns 13634620
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+VF2 [0, 3, 1, 4, 2]
+VF2Eval Valid True Perfect False Connected 36/100 EstSwaps 95 Runtime_ns 208429
+Sabre [1, 0, 6, 3, 2]
+SabreEval Valid True Perfect False Connected 48/100 EstSwaps 84 Runtime_ns 7652273
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+VF2 [0, 1, 2, 3, 4]
+VF2Eval Valid True Perfect True Connected 100/100 EstSwaps 0 Runtime_ns 97689
+Sabre [0, 1, 2, 3, 4]
+SabreEval Valid True Perfect True Connected 100/100 EstSwaps 0 Runtime_ns 126235
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 2, 3, 4, 0]
+VF2Eval Valid True Perfect False Connected 43/100 EstSwaps 76 Runtime_ns 87467
+Sabre [2, 4, 3, 0, 1]
+SabreEval Valid True Perfect False Connected 48/100 EstSwaps 76 Runtime_ns 4896060
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [6, 11, 7, 12, 8]
+VF2Eval Valid True Perfect False Connected 65/100 EstSwaps 35 Runtime_ns 140497
+Sabre [7, 5, 2, 6, 1]
+SabreEval Valid True Perfect False Connected 70/100 EstSwaps 30 Runtime_ns 6421959
+EndCase
+Case 41 ScalePhysical
+Qubits 4
+Physical 4
+Gate CX 3 1
+Gate CX 2 0
+Gate RY 3 2.827433388230814
+Gate CX 2 3
+Gate T 2
+Gate CX 1 0
+Gate CX 0 1
+Gate Y 2
+Gate TDG 2
+Gate CX 1 2
+Gate T 2
+Gate SDG 1
+Gate T 2
+Gate CX 0 1
+Gate T 1
+Gate RX 3 1.8629644435787474
+Topology Linear 4
+Edges 0 1 1 2 2 3
+VF2 [2, 1, 0, 3]
+VF2Eval Valid True Perfect False Connected 4/7 EstSwaps 4 Runtime_ns 67950
+Sabre [0, 2, 1, 3]
+SabreEval Valid True Perfect False Connected 3/7 EstSwaps 4 Runtime_ns 78600
+Topology Ring 4
+Edges 0 1 0 3 1 2 2 3
+VF2 [1, 0, 2, 3]
+VF2Eval Valid True Perfect False Connected 6/7 EstSwaps 1 Runtime_ns 25726
+Sabre [3, 1, 2, 0]
+SabreEval Valid True Perfect False Connected 3/7 EstSwaps 4 Runtime_ns 57133
+Topology Full 4
+Edges 0 1 0 2 0 3 1 2 1 3 2 3
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 21360
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 12113
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [3, 1, 0, 2]
+VF2Eval Valid True Perfect False Connected 5/7 EstSwaps 2 Runtime_ns 20975
+Sabre [4, 1, 3, 2]
+SabreEval Valid True Perfect False Connected 3/7 EstSwaps 4 Runtime_ns 74864
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [1, 2, 6, 7]
+VF2Eval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 24442
+Sabre [4, 3, 8, 9]
+SabreEval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 34336
+EndCase
+Case 42 ScalePhysical
+Qubits 4
+Physical 5
+Gate S 1
+Gate IP 1 1.156106096521044
+Gate CX 2 3
+Gate SDG 0
+Gate CX 2 3
+Gate CX 3 1
+Gate RY 2 0.9047786842338604
+Gate CX 2 3
+Gate CX 1 3
+Gate SDG 1
+Gate IP 0 0.2293362637120549
+Gate CX 0 2
+Gate CX 0 1
+Gate T 2
+Gate CX 1 3
+Gate CX 2 0
+Topology Linear 5
+Edges 0 1 1 2 2 3 3 4
+VF2 [0, 3, 2, 1]
+VF2Eval Valid True Perfect False Connected 3/9 EstSwaps 7 Runtime_ns 26515
+Sabre [0, 3, 1, 2]
+SabreEval Valid True Perfect False Connected 8/9 EstSwaps 2 Runtime_ns 252204
+Topology Ring 5
+Edges 0 1 0 4 1 2 2 3 3 4
+VF2 [3, 2, 1, 0]
+VF2Eval Valid True Perfect False Connected 4/9 EstSwaps 5 Runtime_ns 110710
+Sabre [0, 1, 3, 2]
+SabreEval Valid True Perfect False Connected 7/9 EstSwaps 2 Runtime_ns 180926
+Topology Full 5
+Edges 0 1 0 2 0 3 0 4 1 2 1 3 1 4 2 3 2 4 3 4
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 70137
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 38481
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [2, 0, 3, 1]
+VF2Eval Valid True Perfect False Connected 6/9 EstSwaps 3 Runtime_ns 65795
+Sabre [3, 2, 0, 1]
+SabreEval Valid True Perfect False Connected 6/9 EstSwaps 3 Runtime_ns 207762
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 5, 6]
+VF2Eval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 57409
+Sabre [4, 3, 8, 9]
+SabreEval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 52410
+EndCase
+Case 43 ScalePhysical
+Qubits 4
+Physical 8
+Gate IP 1 1.8001325905069514
+Gate IP 1 3.088185578478767
+Gate CX 1 2
+Gate H 0
+Gate RY 1 2.937389131106457
+Gate CX 3 0
+Gate RX 1 2.899690019263379
+Gate X 0
+Gate CX 2 1
+Gate CX 0 1
+Gate CX 0 1
+Gate Z 0
+Gate Y 0
+Gate CX 2 3
+Gate IP 3 0.9487609813841175
+Gate H 3
+Topology Linear 8
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [2, 1, 3, 4]
+VF2Eval Valid True Perfect False Connected 3/6 EstSwaps 3 Runtime_ns 41287
+Sabre [2, 0, 1, 3]
+SabreEval Valid True Perfect False Connected 3/6 EstSwaps 3 Runtime_ns 105535
+Topology Ring 8
+Edges 0 1 0 7 1 2 2 3 3 4 4 5 5 6 6 7
+VF2 [1, 0, 2, 3]
+VF2Eval Valid True Perfect False Connected 3/6 EstSwaps 3 Runtime_ns 72395
+Sabre [5, 3, 2, 4]
+SabreEval Valid True Perfect False Connected 3/6 EstSwaps 3 Runtime_ns 212388
+Topology Full 8
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 1 2 1 3 1 4 1 5 1 6 1 7 2 3 2 4 2 5 2 6 2 7 3 4 3 5 3 6 3 7 4 5 4 6 4 7 5 6 5 7 6 7
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 80704
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 43948
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [3, 1, 0, 2]
+VF2Eval Valid True Perfect False Connected 4/6 EstSwaps 2 Runtime_ns 104134
+Sabre [4, 1, 2, 3]
+SabreEval Valid True Perfect False Connected 3/6 EstSwaps 3 Runtime_ns 187732
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 6, 5]
+VF2Eval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 85906
+Sabre [4, 3, 8, 9]
+SabreEval Valid True Perfect True Connected 6/6 EstSwaps 0 Runtime_ns 93920
+EndCase
+Case 44 ScalePhysical
+Qubits 4
+Physical 12
+Gate RY 3 3.053628059289279
+Gate IP 2 0.5057964172279567
+Gate CX 3 0
+Gate RX 2 2.3938936020354222
+Gate CX 3 0
+Gate S 0
+Gate CX 2 1
+Gate CX 1 2
+Gate CX 0 3
+Gate S 3
+Gate Y 0
+Gate T 3
+Gate Y 1
+Gate CX 3 2
+Gate Z 2
+Gate CX 0 1
+Topology Linear 12
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [1, 4, 3, 2]
+VF2Eval Valid True Perfect False Connected 6/7 EstSwaps 2 Runtime_ns 99208
+Sabre [8, 6, 5, 7]
+SabreEval Valid True Perfect False Connected 5/7 EstSwaps 2 Runtime_ns 298461
+Topology Ring 12
+Edges 0 1 0 11 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11
+VF2 [0, 3, 2, 1]
+VF2Eval Valid True Perfect False Connected 6/7 EstSwaps 2 Runtime_ns 93680
+Sabre [8, 6, 5, 7]
+SabreEval Valid True Perfect False Connected 5/7 EstSwaps 2 Runtime_ns 254296
+Topology Full 12
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 4 5 4 6 4 7 4 8 4 9 4 10 4 11 5 6 5 7 5 8 5 9 5 10 5 11 6 7 6 8 6 9 6 10 6 11 7 8 7 9 7 10 7 11 8 9 8 10 8 11 9 10 9 11 10 11
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 75870
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 44057
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 2, 0, 3]
+VF2Eval Valid True Perfect False Connected 4/7 EstSwaps 3 Runtime_ns 50611
+Sabre [4, 1, 2, 3]
+SabreEval Valid True Perfect False Connected 5/7 EstSwaps 2 Runtime_ns 135683
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [0, 1, 6, 5]
+VF2Eval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 76871
+Sabre [4, 3, 8, 9]
+SabreEval Valid True Perfect True Connected 7/7 EstSwaps 0 Runtime_ns 75904
+EndCase
+Case 45 ScalePhysical
+Qubits 4
+Physical 20
+Gate CX 0 1
+Gate SDG 3
+Gate IP 0 2.0828759293300325
+Gate CX 0 1
+Gate X 1
+Gate RX 3 0.7225663103256524
+Gate TDG 2
+Gate CX 0 2
+Gate CX 3 2
+Gate RY 0 1.6776104770169495
+Gate Z 2
+Gate CX 0 3
+Gate CX 2 0
+Gate CX 1 3
+Gate CX 3 0
+Gate CX 2 0
+Topology Linear 20
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19
+VF2 [1, 4, 2, 3]
+VF2Eval Valid True Perfect False Connected 5/9 EstSwaps 6 Runtime_ns 85651
+Sabre [2, 3, 1, 0]
+SabreEval Valid True Perfect False Connected 6/9 EstSwaps 4 Runtime_ns 303158
+Topology Ring 20
+Edges 0 1 0 19 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 13 14 14 15 15 16 16 17 17 18 18 19
+VF2 [0, 3, 1, 2]
+VF2Eval Valid True Perfect False Connected 5/9 EstSwaps 6 Runtime_ns 69197
+Sabre [0, 19, 1, 2]
+SabreEval Valid True Perfect False Connected 6/9 EstSwaps 4 Runtime_ns 323392
+Topology Full 20
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 1 2 1 3 1 4 1 5 1 6 1 7 1 8 1 9 1 10 1 11 1 12 1 13 1 14 1 15 1 16 1 17 1 18 1 19 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10 2 11 2 12 2 13 2 14 2 15 2 16 2 17 2 18 2 19 3 4 3 5 3 6 3 7 3 8 3 9 3 10 3 11 3 12 3 13 3 14 3 15 3 16 3 17 3 18 3 19 4 5 4 6 4 7 4 8 4 9 4 10 4 11 4 12 4 13 4 14 4 15 4 16 4 17 4 18 4 19 5 6 5 7 5 8 5 9 5 10 5 11 5 12 5 13 5 14 5 15 5 16 5 17 5 18 5 19 6 7 6 8 6 9 6 10 6 11 6 12 6 13 6 14 6 15 6 16 6 17 6 18 6 19 7 8 7 9 7 10 7 11 7 12 7 13 7 14 7 15 7 16 7 17 7 18 7 19 8 9 8 10 8 11 8 12 8 13 8 14 8 15 8 16 8 17 8 18 8 19 9 10 9 11 9 12 9 13 9 14 9 15 9 16 9 17 9 18 9 19 10 11 10 12 10 13 10 14 10 15 10 16 10 17 10 18 10 19 11 12 11 13 11 14 11 15 11 16 11 17 11 18 11 19 12 13 12 14 12 15 12 16 12 17 12 18 12 19 13 14 13 15 13 16 13 17 13 18 13 19 14 15 14 16 14 17 14 18 14 19 15 16 15 17 15 18 15 19 16 17 16 18 16 19 17 18 17 19 18 19
+VF2 [0, 1, 2, 3]
+VF2Eval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 59710
+Sabre [0, 1, 2, 3]
+SabreEval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 76294
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+VF2 [1, 2, 3, 0]
+VF2Eval Valid True Perfect False Connected 7/9 EstSwaps 2 Runtime_ns 79327
+Sabre [1, 0, 2, 3]
+SabreEval Valid True Perfect False Connected 7/9 EstSwaps 2 Runtime_ns 229869
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+VF2 [1, 2, 6, 7]
+VF2Eval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 73110
+Sabre [4, 3, 8, 9]
+SabreEval Valid True Perfect True Connected 9/9 EstSwaps 0 Runtime_ns 82027
+EndCase
+Total 46

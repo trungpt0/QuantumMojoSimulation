@@ -340,10 +340,10 @@ def build_pass_manager(pass_name: str) -> PassManager:
             #     passes.append(_make_IC())
             # if _make_CIC is not None:
             #     passes.append(_make_CIC())
-            passes.append(RemoveDiagonalGatesBeforeMeasure())
+            # passes.append(RemoveDiagonalGatesBeforeMeasure())
             # passes.append(Collect1qRuns())
             # passes.append(Collect2qBlocks())
-            # passes.append(ConsolidateBlocks(force_consolidate=True))
+            passes.append(ConsolidateBlocks(force_consolidate=True))
             # passes.append(Split2QUnitaries())
             return PassManager(passes)
         case _:
