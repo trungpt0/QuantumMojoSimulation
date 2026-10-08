@@ -11,5 +11,6 @@ from .passes import TParOptimization
 from .passes import VF2Layout
 from .passes import TrivialLayout
 from .passes import SabreRNG, DistTable, SabreMapping, SabreDAG, RouteResult, SabreRouting, SabreLayout
+from .passes import SabreSwap
 
 from .coupling import CouplingMap

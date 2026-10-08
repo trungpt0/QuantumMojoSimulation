@@ -162,7 +162,7 @@ struct SabreMapping(Copyable, Movable):
         self.np = n_phys
         self.pi = List[Int]()
         self.pi_inv = List[Int]()
-        for i in range(n_phys):
+        for _ in range(n_phys):
             self.pi_inv.append(-1)
         for v in range(n_virt):
             var p = init_layout[v] if v < len(init_layout) else v
@@ -879,6 +879,7 @@ struct SabreLayout:
             if best_sw == 0:
                 break
         self._refine(router, sd, best_layout, best_sw, best_dp, n_virt, cm, D)
+        print("SWAPs:", best_sw)
         dagc.layout = best_layout^
         return dagc^
 

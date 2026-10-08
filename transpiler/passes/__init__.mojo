@@ -14,4 +14,6 @@ from .layout import VF2Layout
 from .layout import TrivialLayout
 from .layout import SabreRNG, DistTable, SabreMapping, SabreDAG, RouteResult, SabreRouting, SabreLayout
 
+from .routing import SabreSwap
+
 from .synthesis import tpar_algorithm

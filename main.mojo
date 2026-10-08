@@ -1,25 +1,28 @@
 from circuit import QuantumCircuit
 from dagcircuit import DAGCircuit
-from transpiler import CouplingMap, TParOptimization, VF2Layout, TrivialLayout, SabreLayout, SabreDAG
+from transpiler import CouplingMap, TParOptimization, VF2Layout, TrivialLayout, SabreLayout, SabreDAG, SabreSwap
 from gates import GateOp
 
 def main() raises:
     var qc = QuantumCircuit(3)
     qc.CX(0,1)
     qc.CX(1,2)
-    qc.SWAP(0,1)
     qc.CX(0,2)
 
     var dag = DAGCircuit.from_circuit(qc)
     dag.print_dag()
 
-    # var cm = CouplingMap(3)
-    # cm.add_edge(0,1)
-    # cm.add_edge(1,2)
+    var cm = CouplingMap(3)
+    cm.add_edge(0,1)
+    cm.add_edge(1,2)
 
-    # var lay = SabreLayout(trials = 10)
-    # var dagl = lay.run(dag^, cm)
-    # print("layout =", dagl.layout)
+    var lay = SabreLayout(trials = 10)
+    var dagl = lay.run(dag^, cm)
+    print("layout =", dagl.layout)
+    var rout = SabreSwap()
+    var dagr = rout.run(dagl^, cm)
+    dagr.print_dag()
+    print("layout =", dagl.layout)
 
     # var qc = QuantumCircuit(6)
     # qc.CX(0,5)
