@@ -1,7 +1,7 @@
 from circuit import QuantumCircuit
 from qmath import random_int
 
-struct SamplerResult(Movable):
+struct SamplerResult(Copyable, Movable):
     var count: Dict[String, Int]
     var quasi_dists: Dict[String, Float64]
     var shots: Int
@@ -12,12 +12,6 @@ struct SamplerResult(Movable):
         self.quasi_dists = Dict[String, Float64]()
         self.shots = shots
         self.n = n
-    
-    def __moveinit__(out self, owned other: Self):
-        self.count = other.count
-        self.quasi_dists = other.quasi_dists
-        self.shots = other.shots
-        self.n = other.n
 
     def add_count(mut self, bitstring: String) raises:
         if bitstring in self.count:

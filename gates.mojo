@@ -1,6 +1,6 @@
 from qmath import Complex, inv
 from std.math import cos, sin
-from apply_gate import apply_single_qubit_gate, apply_cx_gate
+from apply_gate import apply_single_qubit_gate, apply_cx_gate, apply_swap_gate
 from qutils import assert_equal
 
 struct GateOp(Copyable, Movable):
@@ -197,6 +197,9 @@ def IP(psi: List[Complex], w: Int, theta: Float64) -> List[Complex]:
 def CX(psi: List[Complex], c: Int, t: Int) -> List[Complex]:
     return apply_cx_gate(psi, c, t)
 
+def SWAP(psi: List[Complex], w0: Int, w1: Int) -> List[Complex]:
+    return apply_swap_gate(psi, w0, w1)
+
 def X_test(psi: List[Complex]):
     var psi_test = X(psi, 0)
     var psi_expe = List[Complex]()
@@ -305,3 +308,12 @@ def CX_test(psi: List[Complex]):
     psi_expe.append(Complex(0.0, 0.0))
     psi_expe.append(Complex(0.0, 0.0))
     assert_equal(psi_test, psi_expe, "CX gate")
+
+def SWAP_test(psi: List[Complex]):
+    var psi_test = SWAP(psi, 0, 1)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(1.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    assert_equal(psi_test, psi_expe, "SWAP gate")

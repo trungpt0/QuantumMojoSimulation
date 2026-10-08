@@ -15,3 +15,4 @@ def main() raises:
     qc.P_test(PI)
     qc.IP_test(PI)
     qc.CX_test()
+    qc.SWAP_test()

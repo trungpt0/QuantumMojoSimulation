@@ -68,4 +68,21 @@ def apply_swap_gate(
         return psi.copy()
     var N = len(psi)
     var n = log2_int(N)
-    
+    var pos1 = n - w0 - 1
+    var pos2 = n - w1 - 1
+    var mask1 = 1 << pos1
+    var mask2 = 1 << pos2
+    var new_psi = List[Complex]()
+    for _ in range(N):
+        new_psi.append(Complex(0.0, 0.0))
+    for i in range(N):
+        var bit1 = (i >> pos1) & 1
+        var bit2 = (i >> pos2) & 1
+        if bit1 != bit2:
+            var j = i ^ mask1 ^ mask2
+            if i < j:
+                new_psi[i] = psi[j].copy()
+                new_psi[j] = psi[i].copy()
+        else:
+            new_psi[i] = psi[i].copy()
+    return new_psi^

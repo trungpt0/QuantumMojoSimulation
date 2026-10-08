@@ -10,18 +10,6 @@ struct DAGNode(Copyable, Movable):
         self.gate = gate.copy()
         self.type = type
 
-    def __copy__(self) -> Self:
-        var node = DAGNode.__new__(DAGNode)
-        node.id = self.id
-        node.gate = self.gate.copy()
-        node.type = self.type
-        return node^
-
-    def __moveinit__(out self, owned other: Self):
-        self.id = other.id
-        self.gate = other.gate^
-        self.type = other.type^
-
     def __str__(self) -> String:
         return "Type: " + self.type + " | Gate: " + self.gate.__str__()
 
@@ -34,15 +22,3 @@ struct DAGEdge(Copyable, Movable):
         self.src = src
         self.dst = dst
         self.qubit = qubit
-
-    def __copy__(self) -> Self:
-        var edge = DAGEdge.__new__(DAGEdge)
-        edge.src = self.src
-        edge.dst = self.dst
-        edge.qubit = self.qubit
-        return edge
-
-    def __moveinit__(out self, owned other: Self):
-        self.src = other.src
-        self.dst = other.dst
-        self.qubit = other.qubit

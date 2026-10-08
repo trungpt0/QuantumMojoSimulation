@@ -26,14 +26,6 @@ struct Matrix2x2(Copyable, Movable):
         self.matrix.append(c.copy())
         self.matrix.append(d.copy())
 
-    def __copy__(self):
-        var m = Matrix2x2.__new__(Matrix2x2)
-        m.matrix = self.matrix
-        return m
-    
-    def __moveinit__(out self, owned other: Self):
-        self.matrix = other.matrix^
-
     def get(self, r: Int, c: Int) -> Complex:
         return self.matrix[r * 2 + c].copy()
 
@@ -96,14 +88,6 @@ struct Matrix4x4(Copyable, Movable):
         
     def __init__(out self, matrix: List[Complex]):
         self.matrix = matrix.copy()
-
-    def __copy__(self) -> Self:
-        var m = Matrix4x4.__new__(Matrix4x4)
-        m.matrix = self.matrix
-        return m 
-    
-    def __moveinit__(out self, owned other: Self):
-        self.matrix = other.matrix^
 
     def get(self, r: Int, c: Int) -> Complex:
         return self.matrix[r * 4 + c].copy()
@@ -188,7 +172,7 @@ struct Matrix4x4(Copyable, Movable):
             if d.norm() > tol: return False
         return True
 
-    def is_unitary(self, tol = Float64 = 1e-10) -> Bool:
+    def is_unitary(self, tol: Float64 = 1e-10) -> Bool:
         var dagger = self.dagger()
         var product = dagger.mul(self)
         return product.is_identity(tol)

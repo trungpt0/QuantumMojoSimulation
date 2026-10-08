@@ -15,16 +15,6 @@ struct SparsePauliOp(Copyable, Movable):
             elif b == 88: self.pauli.append("X")
             elif b == 89: self.pauli.append("Y")
             elif b == 90: self.pauli.append("Z")
-    
-    def __copy__(self) -> Self:
-        var new_op = SparsePauliOp.__new__(SparsePauliOp)
-        new_op.pauli = self.pauli
-        new_op.coeff = self.coeff
-        return new_op
-
-    def __moveinit__(out self, owned other: Self):
-        self.pauli = other.pauli^
-        self.coeff = other.coeff
 
     def __str__(self) -> String:
         var s: String = String(self.coeff) + "*"
