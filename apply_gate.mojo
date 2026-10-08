@@ -58,3 +58,14 @@ def apply_cx_gate(
         else:
             new_psi[j] = psi[j].copy()
     return new_psi^
+
+def apply_swap_gate(
+    psi: List[Complex],
+    w0: Int,
+    w1: Int
+) -> List[Complex]:
+    if w0 == w1:
+        return psi.copy()
+    var N = len(psi)
+    var n = log2_int(N)
+    

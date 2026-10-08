@@ -18,18 +18,6 @@ struct GateOp(Copyable, Movable):
         self.qubit = qubit.copy()
         self.theta = theta.copy()
 
-    def __copy__(self) -> Self:
-        var gateop = GateOp.__new__(GateOp)
-        gateop.name = self.name
-        gateop.qubit = self.qubit.copy()
-        gateop.theta = self.theta.copy()
-        return gateop^
-
-    def __moveinit__(out self, owned other: Self):
-        self.name = other.name^
-        self.qubit = other.qubit^
-        self.theta = other.theta^
-
     def __str__(self) -> String:
         var s = self.name + "("
         for i in range(len(self.qubit)):

@@ -12,6 +12,6 @@ from .optimization import TParOptimization
 
 from .layout import VF2Layout
 from .layout import TrivialLayout
-from .layout import SabreLayout, SabreDAG, SabreMapping
+from .layout import SabreRNG, DistTable, SabreMapping, SabreDAG, RouteResult, SabreRouting, SabreLayout
 
 from .synthesis import tpar_algorithm

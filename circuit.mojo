@@ -17,16 +17,6 @@ struct QuantumCircuit(Copyable, Movable):
             else:
                 self.psi.append(Complex(0.0, 0.0))
 
-    def __copyinit__(out self, other: Self):
-        self.n = other.n
-        self.psi = other.psi.copy()
-        self.gates = other.gates.copy()
-
-    def __moveinit__(out self, owned other: Self):
-        self.n = other.n
-        self.psi = other.psi^
-        self.gates = other.gates^
-
     def _q1(self, q: Int) -> List[Int]:
         var qubit = List[Int]()
         qubit.append(q)

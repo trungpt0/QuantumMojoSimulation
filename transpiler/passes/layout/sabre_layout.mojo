@@ -124,9 +124,7 @@ struct SabreDAG(Copyable, Movable):
         var ng = len(self.gates)
         for i in range(ng):
             var ri = ng - 1 - i
-            rdag.gates.append(
-                Sabre2QGate(self.gates[ri].q0, self.gates[ri].q1, self.gates[ri].id)
-            )
+            rdag.gates.append(Sabre2QGate(self.gates[ri].q0, self.gates[ri].q1, self.gates[ri].id))
             rdag.preds.append(List[Int]())
             rdag.succs.append(List[Int]())
             rdag.in_degree.append(0)
@@ -158,6 +156,19 @@ struct SabreMapping(Copyable, Movable):
                 self.pi_inv.append(i)
             else:
                 self.pi_inv.append(-1)
+
+    def __init__(out self, n_virt: Int, n_phys: Int, init_layout: List[Int]):
+        self.nv = n_virt
+        self.np = n_phys
+        self.pi = List[Int]()
+        self.pi_inv = List[Int]()
+        for i in range(n_phys):
+            self.pi_inv.append(-1)
+        for v in range(n_virt):
+            var p = init_layout[v] if v < len(init_layout) else v
+            self.pi.append(p)
+            if p >= 0 and p < n_phys:
+                self.pi_inv[p] = v
 
     def clear(mut self):
         for v in range(self.nv):
@@ -286,19 +297,14 @@ struct SabreRouting:
             eadj[sd.gates[g].q0].append(sd.gates[g].q1)
             eadj[sd.gates[g].q1].append(sd.gates[g].q0)
 
-    def _set_total(
-        self, S: List[Int], mapping: SabreMapping, D: DistTable, sd: SabreDAG
-    ) -> Int:
+    def _set_total(self, S: List[Int], mapping: SabreMapping, D: DistTable, sd: SabreDAG) -> Int:
         var t = 0
         for i in range(len(S)):
             var g = S[i]
             t += D.get(mapping.physical(sd.gates[g].q0), mapping.physical(sd.gates[g].q1))
         return t
 
-    def _delta_front(
-        self, pa: Int, pb: Int, va: Int, vb: Int,
-        fpart: List[Int], mapping: SabreMapping, D: DistTable,
-    ) -> Int:
+    def _delta_front(self, pa: Int, pb: Int, va: Int, vb: Int, fpart: List[Int], mapping: SabreMapping, D: DistTable) -> Int:
         var d = 0
         if va >= 0:
             var w = fpart[va]
@@ -312,10 +318,7 @@ struct SabreRouting:
                 d += D.get(pa, pw) - D.get(pb, pw)
         return d
 
-    def _delta_ext(
-        self, pa: Int, pb: Int, va: Int, vb: Int,
-        eadj: List[List[Int]], mapping: SabreMapping, D: DistTable,
-    ) -> Int:
+    def _delta_ext(self, pa: Int, pb: Int, va: Int, vb: Int, eadj: List[List[Int]], mapping: SabreMapping, D: DistTable) -> Int:
         var d = 0
         if va >= 0:
             for k in range(len(eadj[va])):
@@ -517,9 +520,7 @@ struct SabreRouting:
                 continue
             check_all = False
             if since_progress >= limit:
-                if not self._release_valve(
-                    F, since_progress, swaps, pswaps, ev_a, ev_b, ev_w, mapping, cm, D, sd
-                ):
+                if not self._release_valve(F, since_progress, swaps, pswaps, ev_a, ev_b, ev_w, mapping, cm, D, sd):
                     break
                 f_total = self._set_total(F, mapping, D, sd)
                 e_total = self._set_total(E, mapping, D, sd)
@@ -560,9 +561,7 @@ struct SabreRouting:
                 var de = self._delta_ext(pa, pb, va, vb, eadj, mapping, D)
                 cand_df.append(df)
                 cand_de.append(de)
-                var score = max(decay[pa], decay[pb]) * (
-                    bw * Float64(f_total + df) + lw * Float64(e_total + de)
-                )
+                var score = max(decay[pa], decay[pb]) * (bw * Float64(f_total + df) + lw * Float64(e_total + de))
                 if score < best_score - 1e-10:
                     best_score = score
                     best.clear()
@@ -614,7 +613,7 @@ struct SabreLayout:
 
     def __init__(
         out self,
-        trials: Int = 5,
+        trials: Int = 15,
         iter: Int = 3,
         weight: Float64 = 0.5,
         E_size: Int = 20,
