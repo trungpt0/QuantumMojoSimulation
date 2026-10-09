@@ -5,9 +5,12 @@ from gates import GateOp
 
 def main() raises:
     var qc = QuantumCircuit(3)
+    qc.H(0)
     qc.CX(0,1)
+    qc.X(1)
     qc.CX(1,2)
     qc.CX(0,2)
+    qc.H(2)
 
     var dag = DAGCircuit.from_circuit(qc)
     dag.print_dag()

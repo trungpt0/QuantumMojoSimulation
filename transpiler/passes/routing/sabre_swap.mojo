@@ -234,11 +234,49 @@ struct SabreSwap:
         var n_phys = cm.nq
         if n_virt == 0 or n_virt > n_phys:
             return dag.copy()
+        var topo = dag.topological_sort()
+        var pre_1q = List[List[Int]]()
+        for _ in range(len(dag.nodes)):
+            pre_1q.append(List[Int]())
+        var pending_1q = List[List[Int]]()
+        for _ in range(n_virt):
+            pending_1q.append(List[Int]())
+        for idx in range(len(topo)):
+            var nid = topo[idx]
+            var gate = dag.nodes[nid].gate.copy()
+            if len(gate.qubit) == 1:
+                var q = gate.qubit[0]
+                if q < n_virt:
+                    pending_1q[q].append(nid)
+            elif len(gate.qubit) == 2:
+                var q0 = gate.qubit[0]
+                var q1 = gate.qubit[1]
+                if q0 < n_virt:
+                    for k in range(len(pending_1q[q0])):
+                        pre_1q[nid].append(pending_1q[q0][k])
+                    pending_1q[q0].clear()
+                if q1 < n_virt:
+                    for k in range(len(pending_1q[q1])):
+                        pre_1q[nid].append(pending_1q[q1][k])
+                    pending_1q[q1].clear()
+        var trailing_1q = pending_1q^
         var sd = SabreDAG.from_dag(dag)
         if len(sd.gates) == 0:
             return dag.copy()
-        var D = DistTable(cm)
         var init_map = SabreMapping(n_virt, n_phys, initial_layout)
+        if len(sd.gates) == 0:
+            var simple_dag = DAGCircuit(n_phys)
+            for idx in range(len(topo)):
+                var nid = topo[idx]
+                var g = dag.nodes[nid].gate.copy()
+                if len(g.qubit) > 0:
+                    for q_idx in range(len(g.qubit)):
+                        g.qubit[q_idx] = init_map.physical(g.qubit[q_idx])
+                simple_dag.add_operation(g)
+            simple_dag.finalize_operation()
+            simple_dag.layout = initial_layout.copy()
+            return simple_dag^
+        var D = DistTable(cm)
         var best_route = self._route_and_record(sd, init_map, cm, D, self.seed)
         var min_swaps = best_route.swap_count
         var min_depth = best_route.depth
@@ -260,11 +298,24 @@ struct SabreSwap:
                 routed_dag.add_operation(GateOp("SWAP", q_swap))
                 current_map.swap_physical(ev.pa, ev.pb)
             elif ev.event_type == 0:
-                var orig_node = dag.nodes[ev.node_id].copy()
-                var gate = orig_node.gate.copy()
-                for q_idx in range(len(gate.qubit)):
-                    gate.qubit[q_idx] = current_map.physical(gate.qubit[q_idx])
-                routed_dag.add_operation(gate)
+                var node_2q_id = ev.node_id
+                for p_idx in range(len(pre_1q[node_2q_id])):
+                    var nid_1q = pre_1q[node_2q_id][p_idx]
+                    var gate_1q = dag.nodes[nid_1q].gate.copy()
+                    var vq = gate_1q.qubit[0]
+                    gate_1q.qubit[0] = current_map.physical(vq)
+                    routed_dag.add_operation(gate_1q)
+                var orig_node = dag.nodes[node_2q_id].copy()
+                var gate_2q = orig_node.gate.copy()
+                for q_idx in range(len(gate_2q.qubit)):
+                    gate_2q.qubit[q_idx] = current_map.physical(gate_2q.qubit[q_idx])
+                routed_dag.add_operation(gate_2q)
+        for v in range(n_virt):
+            for k in range(len(trailing_1q[v])):
+                var nid_1q = trailing_1q[v][k]
+                var gate_1q = dag.nodes[nid_1q].gate.copy()
+                gate_1q.qubit[0] = current_map.physical(v)
+                routed_dag.add_operation(gate_1q)
         routed_dag.finalize_operation()
         routed_dag.layout = initial_layout.copy()
         return routed_dag^
