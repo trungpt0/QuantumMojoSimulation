@@ -1,5 +1,3 @@
-from .basis import OneQubitEulerDecomposer
-
 from .optimization import Collect1qRuns
 from .optimization import Collect2qBlocks
 from .optimization import CommutativeInverseCancellation

@@ -1,0 +1,2080 @@
+SabreSwap Trials 20 Weight 0.5 E_size 20 Delta 0.001 Valve_limit 0
+Case 0 Chain
+Qubits 5
+Physical 7
+OriginalGates
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate Y 2
+Gate I 3
+EndOriginalGates
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+InitialLayout [0, 1, 2, 3, 4]
+MojoSwapCount 0
+MojoRuntime_ns 129963
+RoutedGates
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate Y 2
+Gate I 3
+EndRoutedGates
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+InitialLayout [1, 0, 6, 5, 4]
+MojoSwapCount 0
+MojoRuntime_ns 96414
+RoutedGates
+Gate CX 1 0
+Gate CX 0 6
+Gate CX 6 5
+Gate CX 5 4
+Gate Y 6
+Gate I 5
+EndRoutedGates
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+InitialLayout [0, 1, 2, 3, 4]
+MojoSwapCount 0
+MojoRuntime_ns 115725
+RoutedGates
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate Y 2
+Gate I 3
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [0, 1, 2, 3, 4]
+MojoSwapCount 1
+MojoRuntime_ns 99094
+RoutedGates
+Gate CX 0 1
+Gate CX 1 2
+Gate SWAP 2 1
+Gate CX 1 3
+Gate CX 3 4
+Gate Y 1
+Gate I 3
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [0, 1, 2, 6, 7]
+MojoSwapCount 0
+MojoRuntime_ns 78239
+RoutedGates
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 6
+Gate CX 6 7
+Gate Y 2
+Gate I 6
+EndRoutedGates
+EndCase
+Case 1 Triangle
+Qubits 3
+Physical 5
+OriginalGates
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 0 2
+Gate RX 2 2.4944245669502956
+EndOriginalGates
+Topology Linear 5
+Edges 0 1 1 2 2 3 3 4
+InitialLayout [0, 1, 2]
+MojoSwapCount 1
+MojoRuntime_ns 96187
+RoutedGates
+Gate CX 0 1
+Gate CX 1 2
+Gate SWAP 2 1
+Gate CX 0 1
+Gate RX 1
+EndRoutedGates
+Topology Ring 5
+Edges 0 1 0 4 1 2 2 3 3 4
+InitialLayout [0, 1, 4]
+MojoSwapCount 1
+MojoRuntime_ns 86741
+RoutedGates
+Gate CX 0 1
+Gate SWAP 4 0
+Gate CX 1 0
+Gate CX 4 0
+Gate RX 0
+EndRoutedGates
+Topology Full 5
+Edges 0 1 0 2 0 3 0 4 1 2 1 3 1 4 2 3 2 4 3 4
+InitialLayout [0, 1, 2]
+MojoSwapCount 0
+MojoRuntime_ns 73227
+RoutedGates
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 0 2
+Gate RX 2
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [0, 1, 2]
+MojoSwapCount 1
+MojoRuntime_ns 84048
+RoutedGates
+Gate CX 0 1
+Gate CX 1 2
+Gate SWAP 2 1
+Gate CX 0 1
+Gate RX 1
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [4, 3, 8]
+MojoSwapCount 0
+MojoRuntime_ns 84936
+RoutedGates
+Gate CX 4 3
+Gate CX 3 8
+Gate CX 4 8
+Gate RX 8
+EndRoutedGates
+EndCase
+Case 2 Star
+Qubits 4
+Physical 6
+OriginalGates
+Gate CX 0 1
+Gate CX 0 2
+Gate CX 0 3
+Gate T 1
+EndOriginalGates
+Topology Linear 6
+Edges 0 1 1 2 2 3 3 4 4 5
+InitialLayout [1, 2, 0, 3]
+MojoSwapCount 1
+MojoRuntime_ns 86593
+RoutedGates
+Gate CX 1 2
+Gate CX 1 0
+Gate SWAP 3 2
+Gate CX 1 2
+Gate T 3
+EndRoutedGates
+Topology Ring 6
+Edges 0 1 0 5 1 2 2 3 3 4 4 5
+InitialLayout [0, 1, 5, 2]
+MojoSwapCount 1
+MojoRuntime_ns 105009
+RoutedGates
+Gate CX 0 1
+Gate CX 0 5
+Gate SWAP 2 1
+Gate CX 0 1
+Gate T 2
+EndRoutedGates
+Topology Full 6
+Edges 0 1 0 2 0 3 0 4 0 5 1 2 1 3 1 4 1 5 2 3 2 4 2 5 3 4 3 5 4 5
+InitialLayout [0, 1, 2, 3]
+MojoSwapCount 0
+MojoRuntime_ns 76962
+RoutedGates
+Gate CX 0 1
+Gate CX 0 2
+Gate T 1
+Gate CX 0 3
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [1, 0, 2, 3]
+MojoSwapCount 0
+MojoRuntime_ns 77797
+RoutedGates
+Gate CX 1 0
+Gate CX 1 2
+Gate T 0
+Gate CX 1 3
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [4, 3, 8, 9]
+MojoSwapCount 0
+MojoRuntime_ns 99982
+RoutedGates
+Gate CX 4 3
+Gate CX 4 8
+Gate T 3
+Gate CX 4 9
+EndRoutedGates
+EndCase
+Case 3 Cycle
+Qubits 6
+Physical 6
+OriginalGates
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate CX 4 5
+Gate CX 5 0
+Gate IP 0 0.9770353152664256
+Gate H 0
+EndOriginalGates
+Topology Linear 6
+Edges 0 1 1 2 2 3 3 4 4 5
+InitialLayout [0, 1, 2, 3, 4, 5]
+MojoSwapCount 4
+MojoRuntime_ns 167850
+RoutedGates
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate SWAP 0 1
+Gate CX 3 4
+Gate SWAP 1 2
+Gate CX 4 5
+Gate SWAP 5 4
+Gate SWAP 4 3
+Gate CX 3 2
+Gate IP 2
+Gate H 2
+EndRoutedGates
+Topology Ring 6
+Edges 0 1 0 5 1 2 2 3 3 4 4 5
+InitialLayout [5, 0, 1, 2, 3, 4]
+MojoSwapCount 0
+MojoRuntime_ns 139126
+RoutedGates
+Gate CX 5 0
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate CX 4 5
+Gate IP 5
+Gate H 5
+EndRoutedGates
+Topology Full 6
+Edges 0 1 0 2 0 3 0 4 0 5 1 2 1 3 1 4 1 5 2 3 2 4 2 5 3 4 3 5 4 5
+InitialLayout [0, 1, 2, 3, 4, 5]
+MojoSwapCount 0
+MojoRuntime_ns 120077
+RoutedGates
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate CX 4 5
+Gate CX 5 0
+Gate IP 0
+Gate H 0
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [1, 0, 5, 6, 2, 7]
+MojoSwapCount 0
+MojoRuntime_ns 152485
+RoutedGates
+Gate CX 1 0
+Gate CX 0 5
+Gate CX 5 6
+Gate CX 6 2
+Gate CX 2 7
+Gate CX 7 1
+Gate IP 1
+Gate H 1
+EndRoutedGates
+EndCase
+Case 4 AllPairs
+Qubits 5
+Physical 7
+OriginalGates
+Gate CX 0 1
+Gate CX 0 2
+Gate CX 0 3
+Gate CX 0 4
+Gate CX 1 2
+Gate CX 1 3
+Gate CX 1 4
+Gate CX 2 3
+Gate CX 2 4
+Gate CX 3 4
+Gate RX 2 2.092300707290802
+Gate I 1
+Gate I 4
+EndOriginalGates
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+InitialLayout [1, 2, 0, 3, 4]
+MojoSwapCount 6
+MojoRuntime_ns 351690
+RoutedGates
+Gate CX 1 2
+Gate CX 1 0
+Gate SWAP 1 2
+Gate CX 2 3
+Gate CX 1 0
+Gate SWAP 2 3
+Gate CX 3 4
+Gate CX 1 2
+Gate SWAP 4 3
+Gate SWAP 1 2
+Gate CX 0 1
+Gate CX 2 3
+Gate SWAP 3 2
+Gate SWAP 2 1
+Gate I 3
+Gate CX 0 1
+Gate CX 2 1
+Gate RX 0
+Gate I 1
+EndRoutedGates
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+InitialLayout [6, 5, 0, 4, 3]
+MojoSwapCount 6
+MojoRuntime_ns 375118
+RoutedGates
+Gate CX 6 5
+Gate CX 6 0
+Gate SWAP 5 6
+Gate CX 5 4
+Gate CX 6 0
+Gate SWAP 4 5
+Gate CX 4 3
+Gate CX 6 5
+Gate SWAP 3 4
+Gate SWAP 5 6
+Gate CX 0 6
+Gate CX 5 4
+Gate SWAP 4 5
+Gate SWAP 5 6
+Gate I 4
+Gate CX 0 6
+Gate CX 5 6
+Gate RX 0
+Gate I 6
+EndRoutedGates
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+InitialLayout [0, 1, 2, 3, 4]
+MojoSwapCount 0
+MojoRuntime_ns 207762
+RoutedGates
+Gate CX 0 1
+Gate CX 0 2
+Gate CX 0 3
+Gate CX 1 2
+Gate CX 0 4
+Gate CX 1 3
+Gate CX 1 4
+Gate CX 2 3
+Gate I 1
+Gate CX 2 4
+Gate CX 3 4
+Gate RX 2
+Gate I 4
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [1, 2, 3, 0, 4]
+MojoSwapCount 4
+MojoRuntime_ns 260331
+RoutedGates
+Gate CX 1 2
+Gate CX 1 3
+Gate CX 1 0
+Gate SWAP 1 3
+Gate CX 2 1
+Gate CX 3 4
+Gate SWAP 0 1
+Gate SWAP 4 3
+Gate CX 2 1
+Gate CX 0 1
+Gate SWAP 3 1
+Gate CX 2 1
+Gate CX 0 1
+Gate I 2
+Gate CX 3 1
+Gate RX 0
+Gate I 1
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [6, 7, 1, 2, 11]
+MojoSwapCount 1
+MojoRuntime_ns 251003
+RoutedGates
+Gate CX 6 7
+Gate CX 6 1
+Gate CX 6 2
+Gate CX 7 1
+Gate CX 6 11
+Gate CX 7 2
+Gate SWAP 11 6
+Gate CX 1 2
+Gate CX 7 6
+Gate CX 1 6
+Gate I 7
+Gate CX 2 6
+Gate RX 1
+Gate I 6
+EndRoutedGates
+EndCase
+Case 5 ScaleQubits
+Qubits 3
+Physical 4
+OriginalGates
+Gate Y 2
+Gate IP 2 1.8786724068466962
+Gate CX 0 2
+Gate Y 2
+Gate CX 0 2
+Gate CX 0 1
+Gate CX 1 2
+Gate IP 2 1.988628149722339
+Gate CX 1 2
+EndOriginalGates
+Topology Linear 4
+Edges 0 1 1 2 2 3
+InitialLayout [1, 0, 2]
+MojoSwapCount 1
+MojoRuntime_ns 138882
+RoutedGates
+Gate Y 2
+Gate IP 2
+Gate CX 1 2
+Gate Y 2
+Gate CX 1 2
+Gate CX 1 0
+Gate SWAP 2 1
+Gate CX 0 1
+Gate IP 1
+Gate CX 0 1
+EndRoutedGates
+Topology Ring 4
+Edges 0 1 0 3 1 2 2 3
+InitialLayout [3, 2, 0]
+MojoSwapCount 1
+MojoRuntime_ns 167747
+RoutedGates
+Gate Y 0
+Gate IP 0
+Gate CX 3 0
+Gate Y 0
+Gate CX 3 0
+Gate CX 3 2
+Gate SWAP 0 1
+Gate CX 2 1
+Gate IP 1
+Gate CX 2 1
+EndRoutedGates
+Topology Full 4
+Edges 0 1 0 2 0 3 1 2 1 3 2 3
+InitialLayout [0, 1, 2]
+MojoSwapCount 0
+MojoRuntime_ns 116498
+RoutedGates
+Gate Y 2
+Gate IP 2
+Gate CX 0 2
+Gate Y 2
+Gate CX 0 2
+Gate CX 0 1
+Gate CX 1 2
+Gate IP 2
+Gate CX 1 2
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [1, 0, 2]
+MojoSwapCount 1
+MojoRuntime_ns 125746
+RoutedGates
+Gate Y 2
+Gate IP 2
+Gate CX 1 2
+Gate Y 2
+Gate CX 1 2
+Gate CX 1 0
+Gate SWAP 2 1
+Gate CX 0 1
+Gate IP 1
+Gate CX 0 1
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [4, 3, 8]
+MojoSwapCount 0
+MojoRuntime_ns 110801
+RoutedGates
+Gate Y 8
+Gate IP 8
+Gate CX 4 8
+Gate Y 8
+Gate CX 4 8
+Gate CX 4 3
+Gate CX 3 8
+Gate IP 8
+Gate CX 3 8
+EndRoutedGates
+EndCase
+Case 6 ScaleQubits
+Qubits 3
+Physical 4
+OriginalGates
+Gate Y 0
+Gate H 0
+Gate CX 2 0
+Gate S 0
+Gate CX 2 0
+Gate X 1
+Gate CX 0 1
+Gate IP 1 2.6483626069761956
+Gate Z 1
+EndOriginalGates
+Topology Linear 4
+Edges 0 1 1 2 2 3
+InitialLayout [1, 0, 2]
+MojoSwapCount 0
+MojoRuntime_ns 65865
+RoutedGates
+Gate X 0
+Gate Y 1
+Gate H 1
+Gate CX 2 1
+Gate S 1
+Gate CX 2 1
+Gate CX 1 0
+Gate IP 0
+Gate Z 0
+EndRoutedGates
+Topology Ring 4
+Edges 0 1 0 3 1 2 2 3
+InitialLayout [0, 1, 3]
+MojoSwapCount 0
+MojoRuntime_ns 65924
+RoutedGates
+Gate Y 0
+Gate X 1
+Gate H 0
+Gate CX 3 0
+Gate S 0
+Gate CX 3 0
+Gate CX 0 1
+Gate IP 1
+Gate Z 1
+EndRoutedGates
+Topology Full 4
+Edges 0 1 0 2 0 3 1 2 1 3 2 3
+InitialLayout [0, 1, 2]
+MojoSwapCount 0
+MojoRuntime_ns 68676
+RoutedGates
+Gate Y 0
+Gate X 1
+Gate H 0
+Gate CX 2 0
+Gate S 0
+Gate CX 2 0
+Gate CX 0 1
+Gate IP 1
+Gate Z 1
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [1, 0, 2]
+MojoSwapCount 0
+MojoRuntime_ns 73392
+RoutedGates
+Gate X 0
+Gate Y 1
+Gate H 1
+Gate CX 2 1
+Gate S 1
+Gate CX 2 1
+Gate CX 1 0
+Gate IP 0
+Gate Z 0
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [4, 3, 8]
+MojoSwapCount 0
+MojoRuntime_ns 86902
+RoutedGates
+Gate X 3
+Gate Y 4
+Gate H 4
+Gate CX 8 4
+Gate S 4
+Gate CX 8 4
+Gate CX 4 3
+Gate IP 3
+Gate Z 3
+EndRoutedGates
+EndCase
+Case 7 ScaleQubits
+Qubits 4
+Physical 8
+OriginalGates
+Gate IP 3 1.7184511815136168
+Gate RY 0 0.43353978619539146
+Gate RY 3 3.1227430976682546
+Gate CX 3 0
+Gate CX 2 3
+Gate CX 0 3
+Gate CX 3 2
+Gate CX 1 0
+Gate Z 0
+Gate Y 3
+Gate CX 0 1
+Gate RX 2 2.6923449041264527
+EndOriginalGates
+Topology Linear 8
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7
+InitialLayout [1, 0, 3, 2]
+MojoSwapCount 0
+MojoRuntime_ns 116001
+RoutedGates
+Gate RY 1
+Gate IP 2
+Gate RY 2
+Gate CX 2 1
+Gate CX 3 2
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 0 1
+Gate RX 3
+Gate Y 2
+Gate Z 1
+Gate CX 1 0
+EndRoutedGates
+Topology Ring 8
+Edges 0 1 0 7 1 2 2 3 3 4 4 5 5 6 6 7
+InitialLayout [0, 7, 2, 1]
+MojoSwapCount 0
+MojoRuntime_ns 128910
+RoutedGates
+Gate RY 0
+Gate IP 1
+Gate RY 1
+Gate CX 1 0
+Gate CX 2 1
+Gate CX 0 1
+Gate CX 1 2
+Gate CX 7 0
+Gate RX 2
+Gate Y 1
+Gate Z 0
+Gate CX 0 7
+EndRoutedGates
+Topology Full 8
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 1 2 1 3 1 4 1 5 1 6 1 7 2 3 2 4 2 5 2 6 2 7 3 4 3 5 3 6 3 7 4 5 4 6 4 7 5 6 5 7 6 7
+InitialLayout [0, 1, 2, 3]
+MojoSwapCount 0
+MojoRuntime_ns 140278
+RoutedGates
+Gate RY 0
+Gate IP 3
+Gate RY 3
+Gate CX 3 0
+Gate CX 2 3
+Gate CX 0 3
+Gate CX 3 2
+Gate CX 1 0
+Gate RX 2
+Gate Y 3
+Gate Z 0
+Gate CX 0 1
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [3, 4, 0, 1]
+MojoSwapCount 0
+MojoRuntime_ns 123671
+RoutedGates
+Gate IP 1
+Gate RY 3
+Gate RY 1
+Gate CX 1 3
+Gate CX 0 1
+Gate CX 3 1
+Gate CX 1 0
+Gate CX 4 3
+Gate RX 0
+Gate Y 1
+Gate Z 3
+Gate CX 3 4
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [4, 3, 8, 9]
+MojoSwapCount 0
+MojoRuntime_ns 137946
+RoutedGates
+Gate RY 4
+Gate IP 9
+Gate RY 9
+Gate CX 9 4
+Gate CX 8 9
+Gate CX 4 9
+Gate CX 9 8
+Gate CX 3 4
+Gate RX 8
+Gate Y 9
+Gate Z 4
+Gate CX 4 3
+EndRoutedGates
+EndCase
+Case 8 ScaleQubits
+Qubits 4
+Physical 5
+OriginalGates
+Gate CX 3 2
+Gate Z 2
+Gate IP 1 1.3697343969651496
+Gate CX 1 2
+Gate CX 0 1
+Gate CX 3 2
+Gate CX 1 0
+Gate CX 3 0
+Gate CX 1 2
+Gate Z 2
+Gate CX 1 3
+Gate CX 3 0
+EndOriginalGates
+Topology Linear 5
+Edges 0 1 1 2 2 3 3 4
+InitialLayout [0, 1, 2, 3]
+MojoSwapCount 2
+MojoRuntime_ns 280862
+RoutedGates
+Gate IP 1
+Gate CX 3 2
+Gate Z 2
+Gate CX 1 2
+Gate CX 0 1
+Gate CX 3 2
+Gate CX 1 0
+Gate CX 1 2
+Gate SWAP 3 2
+Gate SWAP 2 1
+Gate Z 3
+Gate CX 1 0
+Gate CX 2 1
+Gate CX 1 0
+EndRoutedGates
+Topology Ring 5
+Edges 0 1 0 4 1 2 2 3 3 4
+InitialLayout [0, 1, 2, 3]
+MojoSwapCount 2
+MojoRuntime_ns 222294
+RoutedGates
+Gate IP 1
+Gate CX 3 2
+Gate Z 2
+Gate CX 1 2
+Gate CX 0 1
+Gate CX 3 2
+Gate CX 1 0
+Gate CX 1 2
+Gate SWAP 0 4
+Gate SWAP 1 2
+Gate CX 3 4
+Gate Z 1
+Gate CX 2 3
+Gate CX 3 4
+EndRoutedGates
+Topology Full 5
+Edges 0 1 0 2 0 3 0 4 1 2 1 3 1 4 2 3 2 4 3 4
+InitialLayout [0, 1, 2, 3]
+MojoSwapCount 0
+MojoRuntime_ns 160180
+RoutedGates
+Gate IP 1
+Gate CX 3 2
+Gate Z 2
+Gate CX 1 2
+Gate CX 0 1
+Gate CX 3 2
+Gate CX 1 0
+Gate CX 3 0
+Gate CX 1 2
+Gate CX 1 3
+Gate Z 2
+Gate CX 3 0
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [2, 1, 3, 4]
+MojoSwapCount 2
+MojoRuntime_ns 173797
+RoutedGates
+Gate IP 1
+Gate CX 4 3
+Gate Z 3
+Gate CX 1 3
+Gate CX 2 1
+Gate CX 4 3
+Gate CX 1 2
+Gate CX 1 3
+Gate SWAP 4 3
+Gate SWAP 3 1
+Gate Z 4
+Gate CX 1 2
+Gate CX 3 1
+Gate CX 1 2
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [4, 3, 8, 9]
+MojoSwapCount 0
+MojoRuntime_ns 152479
+RoutedGates
+Gate IP 3
+Gate CX 9 8
+Gate Z 8
+Gate CX 3 8
+Gate CX 4 3
+Gate CX 9 8
+Gate CX 3 4
+Gate CX 9 4
+Gate CX 3 8
+Gate CX 3 9
+Gate Z 8
+Gate CX 9 4
+EndRoutedGates
+EndCase
+Case 9 ScaleQubits
+Qubits 5
+Physical 7
+OriginalGates
+Gate TDG 1
+Gate CX 1 3
+Gate CX 2 0
+Gate CX 2 3
+Gate X 1
+Gate CX 4 3
+Gate CX 0 1
+Gate T 0
+Gate IP 0 0.7759733854366789
+Gate IP 3 2.4315927138785
+Gate CX 4 3
+Gate IP 1 1.548805178219768
+Gate IP 0 0.2827433388230814
+Gate H 0
+Gate SDG 3
+EndOriginalGates
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+InitialLayout [0, 2, 1, 3, 4]
+MojoSwapCount 1
+MojoRuntime_ns 177153
+RoutedGates
+Gate CX 1 0
+Gate TDG 2
+Gate CX 2 3
+Gate SWAP 1 2
+Gate CX 2 3
+Gate X 1
+Gate CX 4 3
+Gate CX 0 1
+Gate IP 3
+Gate T 0
+Gate IP 1
+Gate CX 4 3
+Gate IP 0
+Gate SDG 3
+Gate IP 0
+Gate H 0
+EndRoutedGates
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+InitialLayout [4, 6, 5, 0, 1]
+MojoSwapCount 1
+MojoRuntime_ns 119787
+RoutedGates
+Gate CX 5 4
+Gate TDG 6
+Gate CX 6 0
+Gate SWAP 5 6
+Gate CX 6 0
+Gate X 5
+Gate CX 1 0
+Gate CX 4 5
+Gate IP 0
+Gate T 4
+Gate IP 5
+Gate CX 1 0
+Gate IP 4
+Gate SDG 0
+Gate IP 4
+Gate H 4
+EndRoutedGates
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+InitialLayout [0, 1, 2, 3, 4]
+MojoSwapCount 0
+MojoRuntime_ns 108677
+RoutedGates
+Gate TDG 1
+Gate CX 2 0
+Gate CX 1 3
+Gate CX 2 3
+Gate X 1
+Gate CX 4 3
+Gate CX 0 1
+Gate IP 3
+Gate T 0
+Gate IP 1
+Gate CX 4 3
+Gate IP 0
+Gate SDG 3
+Gate IP 0
+Gate H 0
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [1, 4, 0, 3, 2]
+MojoSwapCount 1
+MojoRuntime_ns 115199
+RoutedGates
+Gate CX 0 1
+Gate TDG 4
+Gate CX 4 3
+Gate SWAP 1 3
+Gate X 4
+Gate CX 0 1
+Gate CX 3 4
+Gate CX 2 1
+Gate T 3
+Gate IP 4
+Gate IP 1
+Gate IP 3
+Gate CX 2 1
+Gate IP 3
+Gate SDG 1
+Gate H 3
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [2, 7, 1, 6, 11]
+MojoSwapCount 0
+MojoRuntime_ns 120653
+RoutedGates
+Gate CX 1 2
+Gate TDG 7
+Gate CX 7 6
+Gate CX 1 6
+Gate X 7
+Gate CX 11 6
+Gate CX 2 7
+Gate IP 6
+Gate T 2
+Gate IP 7
+Gate CX 11 6
+Gate IP 2
+Gate SDG 6
+Gate IP 2
+Gate H 2
+EndRoutedGates
+EndCase
+Case 10 ScaleQubits
+Qubits 5
+Physical 7
+OriginalGates
+Gate H 2
+Gate CX 2 1
+Gate CX 2 0
+Gate CX 2 3
+Gate IP 1 2.9845130209103035
+Gate RX 4 1.7938494051997718
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate CX 3 1
+Gate CX 1 0
+Gate S 1
+Gate TDG 2
+Gate CX 1 2
+Gate CX 4 1
+EndOriginalGates
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+InitialLayout [0, 2, 1, 3, 4]
+MojoSwapCount 5
+MojoRuntime_ns 256184
+RoutedGates
+Gate H 1
+Gate RX 4
+Gate CX 1 2
+Gate CX 1 0
+Gate SWAP 1 2
+Gate CX 2 3
+Gate IP 1
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate SWAP 1 2
+Gate CX 3 2
+Gate SWAP 0 1
+Gate SWAP 4 3
+Gate CX 2 1
+Gate SWAP 0 1
+Gate S 2
+Gate TDG 1
+Gate CX 2 1
+Gate CX 3 2
+EndRoutedGates
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+InitialLayout [1, 6, 0, 5, 4]
+MojoSwapCount 5
+MojoRuntime_ns 254018
+RoutedGates
+Gate H 0
+Gate RX 4
+Gate CX 0 6
+Gate CX 0 1
+Gate SWAP 0 6
+Gate CX 6 5
+Gate IP 0
+Gate CX 0 6
+Gate CX 6 5
+Gate CX 5 4
+Gate SWAP 0 6
+Gate CX 5 6
+Gate SWAP 1 0
+Gate SWAP 4 5
+Gate CX 6 0
+Gate SWAP 1 0
+Gate S 6
+Gate TDG 0
+Gate CX 6 0
+Gate CX 5 6
+EndRoutedGates
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+InitialLayout [0, 1, 2, 3, 4]
+MojoSwapCount 0
+MojoRuntime_ns 249069
+RoutedGates
+Gate H 2
+Gate RX 4
+Gate CX 2 1
+Gate CX 2 0
+Gate IP 1
+Gate CX 2 3
+Gate CX 1 2
+Gate CX 2 3
+Gate CX 3 4
+Gate TDG 2
+Gate CX 3 1
+Gate CX 1 0
+Gate S 1
+Gate CX 1 2
+Gate CX 4 1
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [0, 2, 1, 3, 4]
+MojoSwapCount 2
+MojoRuntime_ns 264086
+RoutedGates
+Gate H 1
+Gate RX 4
+Gate CX 1 2
+Gate CX 1 0
+Gate IP 2
+Gate CX 1 3
+Gate CX 2 1
+Gate CX 1 3
+Gate CX 3 4
+Gate SWAP 2 1
+Gate CX 3 1
+Gate TDG 2
+Gate CX 1 0
+Gate SWAP 4 3
+Gate S 1
+Gate CX 1 2
+Gate CX 3 1
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [2, 7, 6, 1, 0]
+MojoSwapCount 1
+MojoRuntime_ns 282039
+RoutedGates
+Gate RX 0
+Gate H 6
+Gate CX 6 7
+Gate CX 6 2
+Gate IP 7
+Gate CX 6 1
+Gate CX 7 6
+Gate CX 6 1
+Gate CX 1 0
+Gate TDG 6
+Gate CX 1 7
+Gate CX 7 2
+Gate SWAP 0 1
+Gate S 7
+Gate CX 7 6
+Gate CX 1 7
+EndRoutedGates
+EndCase
+Case 11 ScaleQubits
+Qubits 6
+Physical 9
+OriginalGates
+Gate IP 0 2.8148670176164545
+Gate CX 4 2
+Gate CX 1 4
+Gate CX 0 1
+Gate CX 3 0
+Gate CX 4 5
+Gate RX 2 2.978229835603124
+Gate CX 2 5
+Gate CX 0 5
+Gate TDG 0
+Gate IP 0 0.5183627878423158
+Gate CX 0 2
+Gate IP 4 2.419026343264141
+Gate T 4
+Gate CX 5 1
+Gate CX 0 4
+Gate RX 0 0.3738495257771854
+Gate CX 2 0
+EndOriginalGates
+Topology Linear 9
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8
+InitialLayout [7, 6, 4, 8, 5, 3]
+MojoSwapCount 5
+MojoRuntime_ns 324261
+RoutedGates
+Gate CX 5 4
+Gate IP 7
+Gate CX 6 5
+Gate SWAP 3 4
+Gate CX 7 6
+Gate CX 5 4
+Gate RX 3
+Gate CX 8 7
+Gate CX 3 4
+Gate SWAP 7 6
+Gate SWAP 6 5
+Gate CX 5 4
+Gate SWAP 4 5
+Gate TDG 4
+Gate SWAP 5 6
+Gate IP 4
+Gate CX 6 7
+Gate IP 5
+Gate CX 4 3
+Gate T 5
+Gate CX 4 5
+Gate RX 4
+Gate CX 3 4
+EndRoutedGates
+Topology Ring 9
+Edges 0 1 0 8 1 2 2 3 3 4 4 5 5 6 6 7 7 8
+InitialLayout [7, 6, 4, 8, 5, 3]
+MojoSwapCount 5
+MojoRuntime_ns 348401
+RoutedGates
+Gate CX 5 4
+Gate IP 7
+Gate CX 6 5
+Gate SWAP 3 4
+Gate CX 7 6
+Gate CX 5 4
+Gate RX 3
+Gate CX 8 7
+Gate CX 3 4
+Gate SWAP 7 6
+Gate SWAP 6 5
+Gate CX 5 4
+Gate SWAP 4 5
+Gate TDG 4
+Gate SWAP 5 6
+Gate IP 4
+Gate CX 6 7
+Gate IP 5
+Gate CX 4 3
+Gate T 5
+Gate CX 4 5
+Gate RX 4
+Gate CX 3 4
+EndRoutedGates
+Topology Full 9
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 1 2 1 3 1 4 1 5 1 6 1 7 1 8 2 3 2 4 2 5 2 6 2 7 2 8 3 4 3 5 3 6 3 7 3 8 4 5 4 6 4 7 4 8 5 6 5 7 5 8 6 7 6 8 7 8
+InitialLayout [0, 1, 2, 3, 4, 5]
+MojoSwapCount 0
+MojoRuntime_ns 223159
+RoutedGates
+Gate IP 0
+Gate CX 4 2
+Gate CX 1 4
+Gate RX 2
+Gate CX 0 1
+Gate CX 4 5
+Gate CX 3 0
+Gate CX 2 5
+Gate IP 4
+Gate CX 0 5
+Gate T 4
+Gate CX 5 1
+Gate TDG 0
+Gate IP 0
+Gate CX 0 2
+Gate CX 0 4
+Gate RX 0
+Gate CX 2 0
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [7, 2, 1, 8, 6, 3]
+MojoSwapCount 1
+MojoRuntime_ns 323507
+RoutedGates
+Gate CX 6 1
+Gate IP 7
+Gate CX 2 6
+Gate RX 1
+Gate CX 7 2
+Gate CX 8 7
+Gate SWAP 3 2
+Gate CX 6 2
+Gate CX 1 2
+Gate IP 6
+Gate CX 7 2
+Gate T 6
+Gate CX 2 3
+Gate TDG 7
+Gate IP 7
+Gate CX 7 1
+Gate CX 7 6
+Gate RX 7
+Gate CX 1 7
+EndRoutedGates
+EndCase
+Case 12 ScaleQubits
+Qubits 6
+Physical 9
+OriginalGates
+Gate S 5
+Gate CX 2 4
+Gate CX 5 0
+Gate IP 5 2.9059732045705586
+Gate IP 3 0.44610615680975063
+Gate CX 4 5
+Gate CX 1 3
+Gate CX 4 1
+Gate RX 2 1.1466813185602747
+Gate SDG 0
+Gate CX 1 0
+Gate S 5
+Gate TDG 3
+Gate CX 5 0
+Gate CX 5 1
+Gate T 5
+Gate IP 1 1.4011503235010478
+Gate CX 5 0
+EndOriginalGates
+Topology Linear 9
+Edges 0 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8
+InitialLayout [0, 4, 3, 5, 2, 1]
+MojoSwapCount 4
+MojoRuntime_ns 255940
+RoutedGates
+Gate S 1
+Gate CX 3 2
+Gate IP 5
+Gate CX 1 0
+Gate CX 4 5
+Gate IP 1
+Gate SWAP 4 3
+Gate TDG 5
+Gate CX 2 1
+Gate RX 4
+Gate CX 2 3
+Gate SWAP 0 1
+Gate SWAP 3 2
+Gate SDG 1
+Gate S 0
+Gate CX 2 1
+Gate CX 0 1
+Gate SWAP 0 1
+Gate CX 1 2
+Gate T 1
+Gate IP 2
+Gate CX 1 0
+EndRoutedGates
+Topology Ring 9
+Edges 0 1 0 8 1 2 2 3 3 4 4 5 5 6 6 7 7 8
+InitialLayout [4, 8, 7, 0, 6, 5]
+MojoSwapCount 4
+MojoRuntime_ns 242495
+RoutedGates
+Gate IP 0
+Gate S 5
+Gate CX 7 6
+Gate CX 8 0
+Gate CX 5 4
+Gate SWAP 8 7
+Gate TDG 0
+Gate IP 5
+Gate RX 8
+Gate CX 6 5
+Gate CX 6 7
+Gate SWAP 4 5
+Gate SWAP 7 6
+Gate SDG 5
+Gate S 4
+Gate CX 6 5
+Gate CX 4 5
+Gate SWAP 4 5
+Gate CX 5 6
+Gate T 5
+Gate IP 6
+Gate CX 5 4
+EndRoutedGates
+Topology Full 9
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 1 2 1 3 1 4 1 5 1 6 1 7 1 8 2 3 2 4 2 5 2 6 2 7 2 8 3 4 3 5 3 6 3 7 3 8 4 5 4 6 4 7 4 8 5 6 5 7 5 8 6 7 6 8 7 8
+InitialLayout [0, 1, 2, 3, 4, 5]
+MojoSwapCount 0
+MojoRuntime_ns 190301
+RoutedGates
+Gate IP 3
+Gate CX 2 4
+Gate S 5
+Gate CX 1 3
+Gate RX 2
+Gate CX 5 0
+Gate TDG 3
+Gate IP 5
+Gate SDG 0
+Gate CX 4 5
+Gate CX 4 1
+Gate S 5
+Gate CX 1 0
+Gate CX 5 0
+Gate CX 5 1
+Gate T 5
+Gate IP 1
+Gate CX 5 0
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [16, 17, 8, 18, 12, 11]
+MojoSwapCount 0
+MojoRuntime_ns 237871
+RoutedGates
+Gate S 11
+Gate CX 8 12
+Gate IP 18
+Gate CX 11 16
+Gate RX 8
+Gate CX 17 18
+Gate IP 11
+Gate SDG 16
+Gate TDG 18
+Gate CX 12 11
+Gate CX 12 17
+Gate S 11
+Gate CX 17 16
+Gate CX 11 16
+Gate CX 11 17
+Gate T 11
+Gate IP 17
+Gate CX 11 16
+EndRoutedGates
+EndCase
+Case 13 ScaleGates
+Qubits 5
+Physical 7
+OriginalGates
+Gate CX 0 3
+Gate CX 2 1
+Gate IP 0 1.303760951239764
+Gate RY 0 0.9927432785343747
+Gate SDG 2
+Gate X 2
+Gate TDG 2
+Gate CX 4 2
+Gate I 0
+Gate IP 4 1.837831702350029
+EndOriginalGates
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+InitialLayout [0, 2, 3, 1, 4]
+MojoSwapCount 0
+MojoRuntime_ns 96368
+RoutedGates
+Gate CX 0 1
+Gate CX 3 2
+Gate IP 0
+Gate SDG 3
+Gate RY 0
+Gate X 3
+Gate I 0
+Gate TDG 3
+Gate CX 4 3
+Gate IP 4
+EndRoutedGates
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+InitialLayout [1, 0, 6, 2, 5]
+MojoSwapCount 0
+MojoRuntime_ns 110119
+RoutedGates
+Gate CX 1 2
+Gate CX 6 0
+Gate IP 1
+Gate SDG 6
+Gate RY 1
+Gate X 6
+Gate I 1
+Gate TDG 6
+Gate CX 5 6
+Gate IP 5
+EndRoutedGates
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+InitialLayout [0, 1, 2, 3, 4]
+MojoSwapCount 0
+MojoRuntime_ns 79604
+RoutedGates
+Gate CX 2 1
+Gate CX 0 3
+Gate SDG 2
+Gate IP 0
+Gate X 2
+Gate RY 0
+Gate TDG 2
+Gate I 0
+Gate CX 4 2
+Gate IP 4
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [3, 2, 1, 4, 0]
+MojoSwapCount 0
+MojoRuntime_ns 71059
+RoutedGates
+Gate CX 1 2
+Gate CX 3 4
+Gate SDG 1
+Gate IP 3
+Gate X 1
+Gate RY 3
+Gate TDG 1
+Gate I 3
+Gate CX 0 1
+Gate IP 0
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [0, 6, 2, 1, 7]
+MojoSwapCount 0
+MojoRuntime_ns 245365
+RoutedGates
+Gate CX 0 1
+Gate CX 2 6
+Gate IP 0
+Gate SDG 2
+Gate RY 0
+Gate X 2
+Gate I 0
+Gate TDG 2
+Gate CX 7 2
+Gate IP 7
+EndRoutedGates
+EndCase
+Case 14 ScaleGates
+Qubits 5
+Physical 7
+OriginalGates
+Gate S 3
+Gate Z 3
+Gate CX 0 4
+Gate IP 4 2.777167905773377
+Gate RY 2 0.44924774946334045
+Gate CX 2 1
+Gate CX 3 0
+Gate CX 4 2
+Gate CX 0 1
+Gate CX 4 0
+Gate CX 3 0
+Gate RY 3 3.03477850336774
+Gate T 4
+Gate IP 0 2.962521872335175
+Gate IP 4 2.912256389877738
+Gate SDG 4
+Gate CX 2 1
+Gate CX 2 1
+Gate CX 0 3
+Gate IP 3 1.2660618393966865
+Gate CX 4 2
+Gate CX 3 2
+Gate RY 2 1.033583983031042
+Gate CX 0 3
+Gate Y 1
+EndOriginalGates
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+InitialLayout [3, 1, 0, 4, 2]
+MojoSwapCount 5
+MojoRuntime_ns 295376
+RoutedGates
+Gate RY 0
+Gate CX 3 2
+Gate S 4
+Gate CX 0 1
+Gate Z 4
+Gate SWAP 1 2
+Gate CX 4 3
+Gate IP 1
+Gate CX 3 2
+Gate CX 1 0
+Gate SWAP 1 2
+Gate CX 2 3
+Gate CX 0 1
+Gate CX 4 3
+Gate T 2
+Gate CX 0 1
+Gate IP 3
+Gate RY 4
+Gate IP 2
+Gate SWAP 0 1
+Gate CX 3 4
+Gate SDG 2
+Gate Y 0
+Gate SWAP 4 3
+Gate CX 2 1
+Gate IP 3
+Gate SWAP 1 2
+Gate CX 3 2
+Gate CX 4 3
+Gate RY 2
+EndRoutedGates
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+InitialLayout [1, 6, 5, 2, 0]
+MojoSwapCount 5
+MojoRuntime_ns 379868
+RoutedGates
+Gate CX 1 0
+Gate S 2
+Gate RY 5
+Gate Z 2
+Gate CX 5 6
+Gate CX 2 1
+Gate SWAP 0 6
+Gate IP 6
+Gate CX 1 0
+Gate CX 6 5
+Gate SWAP 0 6
+Gate CX 0 1
+Gate CX 5 6
+Gate CX 2 1
+Gate T 0
+Gate CX 5 6
+Gate IP 1
+Gate RY 2
+Gate IP 0
+Gate SWAP 5 6
+Gate CX 1 2
+Gate SDG 0
+Gate Y 5
+Gate SWAP 2 1
+Gate CX 0 6
+Gate IP 1
+Gate SWAP 6 0
+Gate CX 1 0
+Gate CX 2 1
+Gate RY 0
+EndRoutedGates
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+InitialLayout [0, 1, 2, 3, 4]
+MojoSwapCount 0
+MojoRuntime_ns 478282
+RoutedGates
+Gate RY 2
+Gate S 3
+Gate CX 0 4
+Gate CX 2 1
+Gate Z 3
+Gate IP 4
+Gate CX 3 0
+Gate CX 4 2
+Gate CX 0 1
+Gate CX 4 0
+Gate CX 2 1
+Gate CX 3 0
+Gate T 4
+Gate CX 2 1
+Gate IP 0
+Gate RY 3
+Gate IP 4
+Gate Y 1
+Gate CX 0 3
+Gate SDG 4
+Gate IP 3
+Gate CX 4 2
+Gate CX 3 2
+Gate CX 0 3
+Gate RY 2
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [1, 3, 4, 0, 2]
+MojoSwapCount 3
+MojoRuntime_ns 161201
+RoutedGates
+Gate S 0
+Gate CX 1 2
+Gate RY 4
+Gate Z 0
+Gate CX 4 3
+Gate CX 0 1
+Gate CX 1 3
+Gate SWAP 4 3
+Gate SWAP 2 1
+Gate IP 1
+Gate CX 1 3
+Gate CX 1 2
+Gate CX 3 4
+Gate T 1
+Gate CX 3 4
+Gate IP 1
+Gate Y 4
+Gate SDG 1
+Gate CX 1 3
+Gate SWAP 0 1
+Gate CX 1 2
+Gate IP 2
+Gate RY 1
+Gate CX 2 1
+Gate IP 1
+Gate CX 1 3
+Gate CX 2 1
+Gate RY 3
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [11, 6, 7, 5, 12]
+MojoSwapCount 1
+MojoRuntime_ns 299391
+RoutedGates
+Gate S 5
+Gate RY 7
+Gate CX 11 12
+Gate Z 5
+Gate CX 7 6
+Gate IP 12
+Gate CX 5 11
+Gate CX 12 7
+Gate CX 11 6
+Gate CX 12 11
+Gate CX 7 6
+Gate CX 5 11
+Gate T 12
+Gate CX 7 6
+Gate IP 11
+Gate RY 5
+Gate IP 12
+Gate CX 11 5
+Gate SDG 12
+Gate IP 5
+Gate CX 12 7
+Gate SWAP 7 6
+Gate CX 5 6
+Gate Y 7
+Gate CX 11 5
+Gate RY 6
+EndRoutedGates
+EndCase
+Case 15 ScaleGates
+Qubits 5
+Physical 7
+OriginalGates
+Gate CX 0 3
+Gate RX 3 1.5299556222982291
+Gate CX 4 0
+Gate CX 4 1
+Gate S 1
+Gate TDG 0
+Gate I 0
+Gate CX 1 0
+Gate X 0
+Gate CX 2 4
+Gate SDG 2
+Gate CX 3 4
+Gate IP 0 1.5299556222982291
+Gate Z 4
+Gate X 3
+Gate CX 3 2
+Gate CX 3 1
+Gate IP 2 0.8168140899333461
+Gate CX 0 1
+Gate I 3
+Gate CX 2 1
+Gate IP 2 1.5613715488341273
+Gate S 2
+Gate TDG 2
+Gate RX 1 2.2588051179310615
+Gate CX 3 4
+Gate CX 2 3
+Gate CX 1 2
+Gate Z 0
+Gate RX 0 3.0190705400997913
+Gate RX 2 0.16022122533307945
+Gate CX 2 0
+Gate CX 2 3
+Gate IP 1 2.899690019263379
+Gate H 2
+Gate CX 1 4
+Gate CX 3 4
+Gate T 1
+Gate CX 4 3
+Gate Z 0
+Gate Z 2
+Gate IP 3 2.987654613563893
+Gate Z 0
+Gate CX 0 3
+Gate S 4
+Gate CX 0 2
+Gate CX 4 0
+Gate CX 2 0
+Gate X 4
+Gate I 4
+EndOriginalGates
+Topology Linear 7
+Edges 0 1 1 2 2 3 3 4 4 5 5 6
+InitialLayout [2, 0, 4, 3, 1]
+MojoSwapCount 12
+MojoRuntime_ns 625106
+RoutedGates
+Gate CX 2 3
+Gate CX 1 2
+Gate SWAP 4 3
+Gate CX 1 0
+Gate RX 4
+Gate SWAP 1 2
+Gate S 0
+Gate TDG 1
+Gate CX 3 2
+Gate I 1
+Gate SWAP 2 3
+Gate CX 0 1
+Gate CX 4 3
+Gate SDG 2
+Gate SWAP 0 1
+Gate SWAP 4 3
+Gate X 0
+Gate X 3
+Gate Z 4
+Gate IP 0
+Gate CX 3 2
+Gate SWAP 1 2
+Gate CX 3 2
+Gate I 3
+Gate SWAP 2 1
+Gate CX 3 4
+Gate CX 0 1
+Gate IP 2
+Gate Z 0
+Gate CX 2 1
+Gate RX 0
+Gate IP 2
+Gate RX 1
+Gate S 2
+Gate TDG 2
+Gate CX 2 3
+Gate CX 1 2
+Gate SWAP 1 2
+Gate RX 1
+Gate SWAP 2 3
+Gate CX 1 0
+Gate IP 3
+Gate CX 1 2
+Gate CX 3 4
+Gate SWAP 0 1
+Gate SWAP 4 3
+Gate Z 1
+Gate H 0
+Gate CX 2 3
+Gate T 4
+Gate Z 1
+Gate Z 0
+Gate CX 3 2
+Gate IP 2
+Gate CX 1 2
+Gate CX 1 0
+Gate SWAP 3 2
+Gate S 2
+Gate CX 2 1
+Gate CX 0 1
+Gate X 2
+Gate I 2
+EndRoutedGates
+Topology Ring 7
+Edges 0 1 0 6 1 2 2 3 3 4 4 5 5 6
+InitialLayout [6, 4, 1, 0, 5]
+MojoSwapCount 12
+MojoRuntime_ns 986016
+RoutedGates
+Gate CX 6 0
+Gate CX 5 6
+Gate SWAP 1 0
+Gate CX 5 4
+Gate RX 1
+Gate SWAP 5 6
+Gate S 4
+Gate TDG 5
+Gate CX 0 6
+Gate I 5
+Gate SWAP 6 0
+Gate CX 4 5
+Gate CX 1 0
+Gate SDG 6
+Gate SWAP 4 5
+Gate SWAP 1 0
+Gate X 4
+Gate X 0
+Gate Z 1
+Gate IP 4
+Gate CX 0 6
+Gate SWAP 5 6
+Gate CX 0 6
+Gate I 0
+Gate SWAP 6 5
+Gate CX 0 1
+Gate CX 4 5
+Gate IP 6
+Gate Z 4
+Gate CX 6 5
+Gate RX 4
+Gate IP 6
+Gate RX 5
+Gate S 6
+Gate TDG 6
+Gate CX 6 0
+Gate CX 5 6
+Gate SWAP 5 6
+Gate RX 5
+Gate SWAP 0 6
+Gate CX 5 4
+Gate IP 0
+Gate CX 5 6
+Gate CX 0 1
+Gate SWAP 4 5
+Gate SWAP 1 0
+Gate Z 5
+Gate H 4
+Gate CX 6 0
+Gate T 1
+Gate Z 5
+Gate Z 4
+Gate CX 0 6
+Gate IP 6
+Gate CX 5 6
+Gate CX 5 4
+Gate SWAP 0 6
+Gate S 6
+Gate CX 6 5
+Gate CX 4 5
+Gate X 6
+Gate I 6
+EndRoutedGates
+Topology Full 7
+Edges 0 1 0 2 0 3 0 4 0 5 0 6 1 2 1 3 1 4 1 5 1 6 2 3 2 4 2 5 2 6 3 4 3 5 3 6 4 5 4 6 5 6
+InitialLayout [0, 1, 2, 3, 4]
+MojoSwapCount 0
+MojoRuntime_ns 325392
+RoutedGates
+Gate CX 0 3
+Gate CX 4 0
+Gate RX 3
+Gate CX 4 1
+Gate TDG 0
+Gate CX 2 4
+Gate S 1
+Gate I 0
+Gate CX 3 4
+Gate SDG 2
+Gate CX 1 0
+Gate X 3
+Gate Z 4
+Gate X 0
+Gate CX 3 2
+Gate IP 0
+Gate CX 3 1
+Gate IP 2
+Gate CX 0 1
+Gate I 3
+Gate CX 2 1
+Gate Z 0
+Gate CX 3 4
+Gate IP 2
+Gate RX 1
+Gate RX 0
+Gate S 2
+Gate TDG 2
+Gate CX 2 3
+Gate CX 1 2
+Gate RX 2
+Gate IP 1
+Gate CX 2 0
+Gate CX 1 4
+Gate CX 2 3
+Gate Z 0
+Gate T 1
+Gate CX 3 4
+Gate H 2
+Gate Z 0
+Gate CX 4 3
+Gate Z 2
+Gate IP 3
+Gate S 4
+Gate CX 0 3
+Gate CX 0 2
+Gate CX 4 0
+Gate CX 2 0
+Gate X 4
+Gate I 4
+EndRoutedGates
+Topology Manila(5) 5
+Edges 0 1 1 2 1 3 3 4
+InitialLayout [1, 4, 2, 0, 3]
+MojoSwapCount 8
+MojoRuntime_ns 3321032
+RoutedGates
+Gate CX 1 0
+Gate CX 3 1
+Gate RX 0
+Gate CX 3 4
+Gate SWAP 1 3
+Gate S 4
+Gate CX 2 1
+Gate TDG 3
+Gate CX 0 1
+Gate SDG 2
+Gate I 3
+Gate SWAP 0 1
+Gate CX 4 3
+Gate X 1
+Gate Z 0
+Gate SWAP 4 3
+Gate CX 1 2
+Gate X 4
+Gate CX 1 3
+Gate IP 4
+Gate I 1
+Gate CX 4 3
+Gate CX 1 0
+Gate Z 4
+Gate SWAP 2 1
+Gate RX 4
+Gate IP 1
+Gate CX 1 3
+Gate IP 1
+Gate RX 3
+Gate S 1
+Gate TDG 1
+Gate CX 1 2
+Gate CX 3 1
+Gate SWAP 1 3
+Gate RX 3
+Gate IP 1
+Gate CX 3 4
+Gate CX 1 0
+Gate SWAP 2 1
+Gate CX 3 1
+Gate T 2
+Gate CX 1 0
+Gate SWAP 4 3
+Gate CX 0 1
+Gate Z 3
+Gate H 4
+Gate IP 1
+Gate Z 3
+Gate Z 4
+Gate CX 3 1
+Gate CX 3 4
+Gate SWAP 0 1
+Gate S 1
+Gate CX 1 3
+Gate CX 4 3
+Gate X 1
+Gate I 1
+EndRoutedGates
+Topology IBM_q20_tokyo(20) 20
+Edges 0 1 0 5 1 2 1 6 1 7 2 3 2 6 2 7 3 4 3 8 3 9 4 8 4 9 5 6 5 10 5 11 6 7 6 10 6 11 7 8 7 12 7 13 8 9 8 12 8 13 9 14 10 11 10 15 11 12 11 16 11 17 12 13 12 16 12 17 13 14 13 18 13 19 14 18 14 19 15 16 16 17 17 18 18 19
+InitialLayout [1, 0, 2, 6, 7]
+MojoSwapCount 2
+MojoRuntime_ns 635019
+RoutedGates
+Gate CX 1 6
+Gate CX 7 1
+Gate RX 6
+Gate SWAP 0 1
+Gate CX 7 1
+Gate TDG 0
+Gate CX 2 7
+Gate S 1
+Gate I 0
+Gate CX 6 7
+Gate SDG 2
+Gate CX 1 0
+Gate X 6
+Gate Z 7
+Gate X 0
+Gate CX 6 2
+Gate IP 0
+Gate CX 6 1
+Gate IP 2
+Gate CX 0 1
+Gate I 6
+Gate CX 2 1
+Gate CX 6 7
+Gate IP 2
+Gate RX 1
+Gate S 2
+Gate TDG 2
+Gate CX 2 6
+Gate CX 1 2
+Gate IP 1
+Gate RX 2
+Gate CX 1 7
+Gate SWAP 0 1
+Gate Z 1
+Gate T 0
+Gate RX 1
+Gate CX 2 1
+Gate CX 2 6
+Gate Z 1
+Gate CX 6 7
+Gate H 2
+Gate Z 1
+Gate CX 7 6
+Gate Z 2
+Gate IP 6
+Gate S 7
+Gate CX 1 6
+Gate CX 1 2
+Gate CX 7 1
+Gate CX 2 1
+Gate X 7
+Gate I 7
+EndRoutedGates
+EndCase
+Total 16
