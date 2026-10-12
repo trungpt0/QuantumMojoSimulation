@@ -22,8 +22,15 @@ struct QuantumCircuit(Copyable, Movable):
         qubit.append(q)
         return qubit^
 
-    def _q2(self, q1: Int, q2: Int) -> List[Int]:
+    def _q2(self, q0: Int, q1: Int) -> List[Int]:
         var qubit = List[Int]()
+        qubit.append(q0)
+        qubit.append(q1)
+        return qubit^
+
+    def _q3(self, q0: Int, q1: Int, q2:Int) -> List[Int]:
+        var qubit = List[Int]()
+        qubit.append(q0)
         qubit.append(q1)
         qubit.append(q2)
         return qubit^
@@ -96,6 +103,10 @@ struct QuantumCircuit(Copyable, Movable):
     def SWAP(mut self, w0: Int, w1: Int):
         self.psi = SWAP(self.psi, w0, w1)
         self.gates.append(GateOp("SWAP", self._q2(w0, w1)))
+
+    def CCX(mut self, w0: Int, w1: Int, w2: Int):
+        self.psi = CCX(self.psi, w0, w1, w2)
+        self.gates.append(GateOp("CCX", self._q3(w0, w1, w2)))
 
     def measure(mut self, w: Int) -> Int:
         var n = self.n
@@ -177,6 +188,9 @@ struct QuantumCircuit(Copyable, Movable):
 
     def SWAP_test(self):
         SWAP_test(self.psi)
+
+    def CCX_test(self):
+        CCX_test(self.psi)
 
     def print_psi(self):
         print("Num Qubits:", self.n)

@@ -60,6 +60,54 @@ struct ApplyRandomGateLog:
         return ApplyGateLog("CX", c_random, t_random)
 
     @staticmethod
+    def apply_random_swap_gate(mut qc: QuantumCircuit, n: Int):
+        var s0 = random_int(0, n)
+        var s1 = random_int(0, n)
+        if s0 == s1:
+            s1 = (s1 + 1) % n
+        qc.SWAP(s0, s1)
+
+    @staticmethod
+    def apply_random_swap_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+        var s0 = random_int(0, n)
+        var s1 = random_int(0, n)
+        if s0 == s1:
+            s1 = (s1 + 1) % n
+        qc.SWAP(s0, s1)
+        return ApplyGateLog("SWAP", s0, s1)
+
+    @staticmethod
+    def apply_random_ccx_gate(mut qc: QuantumCircuit, n: Int):
+        var c0 = random_int(0, n)
+        var c1 = random_int(0, n - 1)
+        if c0 >= c1:
+            c1 += 1
+        var t = random_int(0, n - 2)
+        var lo = min(c0, c1)
+        var hi = max(c0, c1)
+        if t >= lo:
+            t += 1
+        if t >= hi:
+            t += 1
+        qc.CCX(c0, c1, t)
+
+    @staticmethod
+    def apply_random_ccx_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+        var c0 = random_int(0, n)
+        var c1 = random_int(0, n - 1)
+        if c0 >= c1:
+            c1 += 1
+        var t = random_int(0, n - 2)
+        var lo = min(c0, c1)
+        var hi = max(c0, c1)
+        if t >= lo:
+            t += 1
+        if t >= hi:
+            t += 1
+        qc.CCX(c0, c1, t)
+        return ApplyGateLog("CCX", c0, c1, t)
+
+    @staticmethod
     def apply_measure_with_log(mut qc: QuantumCircuit, w: Int) -> ApplyGateLog:
         qc.measure(w)
         return ApplyGateLog("MEASURE", w)

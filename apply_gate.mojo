@@ -86,3 +86,32 @@ def apply_swap_gate(
         else:
             new_psi[i] = psi[i].copy()
     return new_psi^
+
+def apply_ccx_gate(
+    psi: List[Complex],
+    w0: Int,
+    w1: Int,
+    w2: Int
+) -> List[Complex]:
+    if w0 == w1 or w1 == w2 or w0 == w2:
+        return psi.copy()
+    var N = len(psi)
+    var n = log2_int(N)
+    var pos0 = n - w0 - 1
+    var pos1 = n - w1 - 1
+    var pos2 = n - w2 - 1
+    var _ = 1 << pos0
+    var _ = 1 << pos1
+    var mask2 = 1 << pos2
+    var new_psi = List[Complex]()
+    for _ in range(N):
+        new_psi.append(Complex(0.0, 0.0))
+    for i in range(N):
+        var bit0 = (i >> pos0) & 1
+        var bit1 = (i >> pos1) & 1
+        if bit0 == 1 and bit1 == 1:
+            var j = i ^ mask2
+            new_psi[i] = psi[j].copy()
+        else:
+            new_psi[i] = psi[i].copy()
+    return new_psi^

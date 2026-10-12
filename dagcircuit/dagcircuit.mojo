@@ -406,6 +406,7 @@ struct DAGCircuit(Copyable, Movable):
             elif gate.name == "IP": qc.IP(gate.qubit[0], gate.theta[0])
             elif gate.name == "CX": qc.CX(gate.qubit[0], gate.qubit[1])
             elif gate.name == "SWAP": qc.SWAP(gate.qubit[0], gate.qubit[1])
+            elif gate.name == "CCX": qc.CCX(gate.qubit[0], gate.qubit[1], gate.qubit[2])
             elif gate.name == "MEASURE": qc.measure(gate.qubit[0])
         return qc^
 
