@@ -197,6 +197,12 @@ def IP(psi: List[Complex], w: Int, theta: Float64) -> List[Complex]:
 def CX(psi: List[Complex], c: Int, t: Int) -> List[Complex]:
     return apply_cx_gate(psi, c, t)
 
+def CY(psi: List[Complex], c: Int, t: Int) -> List[Complex]:
+    return apply_cy_gate(psi, c, t)
+
+def CZ(psi: List[Complex], c: Int, t: Int) -> List[Complex]:
+    return apply_cz_gate(psi, c, t)
+
 def SWAP(psi: List[Complex], w0: Int, w1: Int) -> List[Complex]:
     return apply_swap_gate(psi, w0, w1)
 
@@ -311,6 +317,24 @@ def CX_test(psi: List[Complex]):
     psi_expe.append(Complex(0.0, 0.0))
     psi_expe.append(Complex(0.0, 0.0))
     assert_equal(psi_test, psi_expe, "CX gate")
+
+def CY_test(psi: List[Complex]):
+    var psi_test = CY(psi, 0, 1)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(1.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    assert_equal(psi_test, psi_expe, "CY gate")
+
+def CZ_test(psi: List[Complex]):
+    var psi_test = CZ(psi, 0, 1)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(1.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    assert_equal(psi_test, psi_expe, "CZ gate")
 
 def SWAP_test(psi: List[Complex]):
     var psi_test = SWAP(psi, 0, 1)

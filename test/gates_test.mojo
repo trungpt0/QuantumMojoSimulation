@@ -15,6 +15,8 @@ def main() raises:
     qc.P_test(PI)
     qc.IP_test(PI)
     qc.CX_test()
+    qc.CY_test()
+    qc.CZ_test()
     qc.SWAP_test()
     var qc1 = QuantumCircuit(3)
     qc1.CCX_test()

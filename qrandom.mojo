@@ -60,6 +60,40 @@ struct ApplyRandomGateLog:
         return ApplyGateLog("CX", c_random, t_random)
 
     @staticmethod
+    def apply_random_cy_gate(mut qc: QuantumCircuit, n: Int):
+        var c_random = random_int(0, n)
+        var t_random = random_int(0, n)
+        if c_random == t_random:
+            t_random = (t_random + 1) % n
+        qc.CY(c_random, t_random)
+
+    @staticmethod
+    def apply_random_cy_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+        var c_random = random_int(0, n)
+        var t_random = random_int(0, n)
+        if c_random == t_random:
+            t_random = (t_random + 1) % n
+        qc.CY(c_random, t_random)
+        return ApplyGateLog("CY", c_random, t_random)
+
+    @staticmethod
+    def apply_random_cz_gate(mut qc: QuantumCircuit, n: Int):
+        var c_random = random_int(0, n)
+        var t_random = random_int(0, n)
+        if c_random == t_random:
+            t_random = (t_random + 1) % n
+        qc.CZ(c_random, t_random)
+
+    @staticmethod
+    def apply_random_cz_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+        var c_random = random_int(0, n)
+        var t_random = random_int(0, n)
+        if c_random == t_random:
+            t_random = (t_random + 1) % n
+        qc.CZ(c_random, t_random)
+        return ApplyGateLog("CZ", c_random, t_random)
+
+    @staticmethod
     def apply_random_swap_gate(mut qc: QuantumCircuit, n: Int):
         var s0 = random_int(0, n)
         var s1 = random_int(0, n)

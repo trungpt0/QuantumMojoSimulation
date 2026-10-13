@@ -40,7 +40,6 @@ def apply_cx_gate(
     w0: Int,
     w1: Int
 ) -> List[Complex]:
-
     var N = len(psi)
     var n = log2_int(N)
     var cut = 1 << (n - w1 - 1)
@@ -57,6 +56,54 @@ def apply_cx_gate(
                 new_psi[j + cut] = new_psi[j + cut].add(psi[j])
         else:
             new_psi[j] = psi[j].copy()
+    return new_psi^
+
+def apply_cy_gate(
+    psi: List[Complex],
+    w0: Int,
+    w1: Int
+) -> List[Complex]:
+    var N = len(psi)
+    var n = log2_int(N)
+    var pos0 = n - w0 - 1
+    var pos1 = n - w1 - 1
+    var cut = 1 << pos1
+    var new_psi = List[Complex]()
+    for _ in range(N):
+        new_psi.append(Complex(0.0, 0.0))
+    for i in range(N):
+        var c = (i >> pos0) & 1
+        var t = (i >> pos1) & 1
+        if c == 1:
+            if t == 0:
+                var j = i + cut
+                new_psi[j] = new_psi[j].add(psi[i].mul(Complex(0.0, 1.0)))
+            else:
+                var j = i - cut
+                new_psi[j] = new_psi[j].add(psi[i].mul(Complex(0.0, -1.0)))
+        else:
+            new_psi[i] = psi[i].copy()
+    return new_psi^
+
+def apply_cz_gate(
+    psi: List[Complex],
+    w0: Int,
+    w1: Int
+) -> List[Complex]:
+    var N = len(psi)
+    var n = log2_int(N)
+    var pos0 = n - w0 - 1
+    var pos1 = n - w1 - 1
+    var new_psi = List[Complex]()
+    for _ in range(N):
+        new_psi.append(Complex(0.0, 0.0))
+    for i in range(N):
+        var c = (i >> pos0) & 1
+        var t = (i >> pos1) & 1
+        if c == 1 and t == 1:
+            new_psi[i] = psi[i].mul(Complex(-1.0, 0.0))
+        else:
+            new_psi[i] = psi[i].copy()
     return new_psi^
 
 def apply_swap_gate(
