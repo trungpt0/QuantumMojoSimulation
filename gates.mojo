@@ -204,6 +204,16 @@ def SX(psi: List[Complex], w: Int) -> List[Complex]:
         Complex(0.5, 0.5)
     )
 
+def V(psi: List[Complex], w: Int) -> List[Complex]:
+    return apply_single_qubit_gate(
+        psi,
+        w,
+        Complex(0.5, 0.5),
+        Complex(0.5, -0.5),
+        Complex(0.5, -0.5),
+        Complex(0.5, 0.5)
+    )
+
 def CX(psi: List[Complex], c: Int, t: Int) -> List[Complex]:
     return apply_cx_gate(psi, c, t)
 
@@ -327,6 +337,15 @@ def SX_test(psi: List[Complex]):
     psi_expe.append(Complex(0.5, -0.5))
     psi_expe.append(Complex(0.0, 0.0))
     assert_equal(psi_test, psi_expe, "SX gate")
+
+def V_test(psi: List[Complex]):
+    var psi_test = V(psi, 0)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(0.5, 0.5))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.5, -0.5))
+    psi_expe.append(Complex(0.0, 0.0))
+    assert_equal(psi_test, psi_expe, "V gate")
 
 def CX_test(psi: List[Complex]):
     var psi_test = CX(psi, 0, 1)

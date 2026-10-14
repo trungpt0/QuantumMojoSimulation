@@ -15,6 +15,7 @@ def main() raises:
     qc.P_test(PI)
     qc.IP_test(PI)
     qc.SX_test()
+    qc.V_test()
     qc.CX_test()
     qc.CY_test()
     qc.CZ_test()

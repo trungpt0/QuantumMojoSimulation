@@ -41,7 +41,8 @@ struct ApplyRandomGateLog:
         elif gate_random == 11: qc.RZ(w_random, theta_random); return ApplyGateLog("RZ", w_random, -1, theta_random)
         elif gate_random == 12: qc.P(w_random, theta_random); return ApplyGateLog("P", w_random, -1, theta_random)
         elif gate_random == 13: qc.IP(w_random, theta_random); return ApplyGateLog("IP", w_random, -1, theta_random)
-        else: qc.SX(w_random); return ApplyGateLog("SX", w_random)
+        elif gate_randim == 14: qc.SX(w_random); return ApplyGateLog("SX", w_random)
+        else: qc.V(w_random); return ApplyGateLog("V", w_random)
 
     @staticmethod
     def apply_random_cx_gate(mut qc: QuantumCircuit, n: Int):
