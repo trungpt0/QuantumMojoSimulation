@@ -226,6 +226,9 @@ def CZ(psi: List[Complex], c: Int, t: Int) -> List[Complex]:
 def SWAP(psi: List[Complex], w0: Int, w1: Int) -> List[Complex]:
     return apply_swap_gate(psi, w0, w1)
 
+def ECR(psi: List[Complex], w0: Int, w1: Int) -> List[Complex]:
+    return apply_ecr_gate(psi, w0, w1)
+
 def CCX(psi: List[Complex], w0: Int, w1: Int, w2: Int) -> List[Complex]:
     return apply_ccx_gate(psi, w0, w1, w2)
 
@@ -382,6 +385,15 @@ def SWAP_test(psi: List[Complex]):
     psi_expe.append(Complex(0.0, 0.0))
     psi_expe.append(Complex(0.0, 0.0))
     assert_equal(psi_test, psi_expe, "SWAP gate")
+
+def ECR_test(psi: List[Complex]):
+    var psi_test = ECR(psi, 0, 1)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(inv(), 0.0))
+    psi_expe.append(Complex(0.0, -inv()))
+    assert_equal(psi_test, psi_expe, "ECR gate")
 
 def CCX_test(psi: List[Complex]):
     var psi_test = CCX(psi, 0, 1, 2)

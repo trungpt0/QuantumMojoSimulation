@@ -120,6 +120,10 @@ struct QuantumCircuit(Copyable, Movable):
         self.psi = SWAP(self.psi, w0, w1)
         self.gates.append(GateOp("SWAP", self._q2(w0, w1)))
 
+    def ECR(mut self, w0: Int, w1: Int):
+        self.psi = ECR(self.psi, w0, w1)
+        self.gates.append(GateOp("ECR", self._q2(w0, w1)))
+
     def CCX(mut self, w0: Int, w1: Int, w2: Int):
         self.psi = CCX(self.psi, w0, w1, w2)
         self.gates.append(GateOp("CCX", self._q3(w0, w1, w2)))
@@ -216,6 +220,9 @@ struct QuantumCircuit(Copyable, Movable):
 
     def SWAP_test(self):
         SWAP_test(self.psi)
+
+    def ECR_test(self):
+        ECR_test(self.psi)
 
     def CCX_test(self):
         CCX_test(self.psi)

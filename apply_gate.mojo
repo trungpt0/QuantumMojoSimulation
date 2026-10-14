@@ -1,4 +1,4 @@
-from qmath import log2_int, Complex
+from qmath import log2_int, Complex, inv
 
 def create_zero_state(n: Int) -> List[Complex]:
     var N = 1 << n
@@ -132,6 +132,34 @@ def apply_swap_gate(
                 new_psi[j] = psi[i].copy()
         else:
             new_psi[i] = psi[i].copy()
+    return new_psi^
+
+def apply_ecr_gate(
+    psi: List[Complex],
+    w0: Int,
+    w1: Int
+) -> List[Complex]:
+    var N = len(psi)
+    var n = log2_int(N)
+    var pos0 = n - w0 - 1
+    var pos1 = n - w1 - 1
+    var mask0 = 1 << pos0
+    var mask1 = 1 << pos1
+    var new_psi = List[Complex]()
+    for _ in range(N):
+        new_psi.append(Complex(0.0, 0.0))
+    for i in range(N):
+        var bit0 = (i >> pos0) & 1
+        var bit1 = (i >> pos1) & 1
+        if bit0 == 0 and bit1 == 0:
+            var j00 = i
+            var j01 = i | mask1
+            var j10 = i | mask0
+            var j11 = i | mask0 | mask1
+            new_psi[j00] = psi[j10].add(psi[j11].mul(Complex(0.0, 1.0))).mul(Complex(inv(), 0.0))
+            new_psi[j01] = psi[j10].mul(Complex(0.0, 1.0)).add(psi[j11]).mul(Complex(inv(), 0.0))
+            new_psi[j10] = psi[j00].add(psi[j01].mul(Complex(0.0, -1.0))).mul(Complex(inv(), 0.0))
+            new_psi[j11] = psi[j00].mul(Complex(0.0, -1.0)).add(psi[j01]).mul(Complex(inv(), 0.0))
     return new_psi^
 
 def apply_ccx_gate(
