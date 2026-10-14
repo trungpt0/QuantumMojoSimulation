@@ -95,6 +95,10 @@ struct QuantumCircuit(Copyable, Movable):
     def IP(mut self, w: Int, theta: Float64):
         self.psi = IP(self.psi, w, theta)
         self.gates.append(GateOp("IP", self._q1(w), self._t(theta)))
+
+    def SX(mut self, w: Int):
+        self.psi = SX(self.psi, w)
+        self.gates.append(GateOp("SX", self._q1(w)))
         
     def CX(mut self, c: Int, t: Int):
         self.psi = CX(self.psi, c, t)
@@ -190,6 +194,9 @@ struct QuantumCircuit(Copyable, Movable):
     
     def IP_test(self, theta: Float64):
         IP_test(self.psi, theta)
+
+    def SX_test(self):
+        SX_test(self.psi)
 
     def CX_test(self):
         CX_test(self.psi)
