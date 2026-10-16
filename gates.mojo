@@ -229,6 +229,9 @@ def SWAP(psi: List[Complex], w0: Int, w1: Int) -> List[Complex]:
 def ECR(psi: List[Complex], w0: Int, w1: Int) -> List[Complex]:
     return apply_ecr_gate(psi, w0, w1)
 
+def RBS(psi: List[Complex], w0: Int, w1: Int, p: Float64) -> List[Complex]:
+    return apply_rbs_gate(psi, w0, w1, p)
+
 def CCX(psi: List[Complex], w0: Int, w1: Int, w2: Int) -> List[Complex]:
     return apply_ccx_gate(psi, w0, w1, w2)
 
@@ -394,6 +397,15 @@ def ECR_test(psi: List[Complex]):
     psi_expe.append(Complex(inv(), 0.0))
     psi_expe.append(Complex(0.0, -inv()))
     assert_equal(psi_test, psi_expe, "ECR gate")
+
+def RBS_test(psi: List[Complex], theta: Float64):
+    var psi_test = RBS(psi, 0, 1, theta)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(1.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    assert_equal(psi_test, psi_expe, "RBS gate")
 
 def CCX_test(psi: List[Complex]):
     var psi_test = CCX(psi, 0, 1, 2)

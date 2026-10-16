@@ -120,6 +120,14 @@ def ECR(q0: Int, q1: Int) -> GateOp:
     q.append(q1)
     return GateOp("ECR", q, List[Float64]())
 
+def RBS(q0: Int, q1: Int, params: Float64) -> GateOp:
+    var q = List[Int]()
+    q.append(q0)
+    q.append(q1)
+    var p = List[Float64]()
+    p.append(params)
+    return GateOp("RBS", q, p)
+
 def CCX(c0: Int, c1: Int, t: Int) -> GateOp:
     var q = List[Int]()
     q.append(c0)

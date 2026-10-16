@@ -130,6 +130,25 @@ struct ApplyRandomGateLog:
         return ApplyGateLog("ECR", s0, s1)
 
     @staticmethod
+    def apply_random_rbs_gate(mut qc: QuantumCircuit, n: Int):
+        var s0 = random_int(0, n)
+        var s1 = random_int(0, n)
+        if s0 == s1:
+            s1 = (s1 + 1) % n
+        var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
+        qc.RBS(s0, s1, theta_random)
+
+    @staticmethod
+    def apply_random_rbs_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+        var s0 = random_int(0, n)
+        var s1 = random_int(0, n)
+        if s0 == s1:
+            s1 = (s1 + 1) % n
+        var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
+        qc.RBS(s0, s1, theta_random)
+        return ApplyGateLog("RBS", s0, s1)
+
+    @staticmethod
     def apply_random_ccx_gate(mut qc: QuantumCircuit, n: Int):
         var c0 = random_int(0, n)
         var c1 = random_int(0, n - 1)

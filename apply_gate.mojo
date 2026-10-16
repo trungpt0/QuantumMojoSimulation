@@ -1,4 +1,5 @@
 from qmath import log2_int, Complex, inv
+from std.math import cos, sin
 
 def create_zero_state(n: Int) -> List[Complex]:
     var N = 1 << n
@@ -162,6 +163,40 @@ def apply_ecr_gate(
             new_psi[j11] = psi[j00].mul(Complex(0.0, -1.0)).add(psi[j01]).mul(Complex(inv(), 0.0))
     return new_psi^
 
+def apply_rbs_gate(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List[Complex]:
+    """
+    RBS(θ) =
+    | 1   0     0   0 |
+    | 0 cosθ  sinθ  0 |
+    | 0 -sinθ cosθ  0 |
+    | 0   0     0   1 |
+    """
+    var N = len(psi)
+    var n = log2_int(N)
+    var pos0 = n - w0 - 1
+    var pos1 = n - w1 - 1
+    var mask0 = 1 << pos0
+    var mask1 = 1 << pos1
+    var c = cos(theta)
+    var s = sin(theta)
+    var new_psi = List[Complex]()
+    for _ in range(N):
+        new_psi.append(Complex(0.0, 0.0))
+    for i in range(N):
+        var bit0 = (i & mask0) != 0
+        var bit1 = (i & mask1) != 0
+        if bit0 == bit1:
+            new_psi[i] = psi[i].copy()
+        elif bit0 and not bit1:
+            new_psi[i] = psi[i].mul(Complex(c, 0.0))
+            var partner = i ^ mask0 ^ mask1
+            new_psi[partner] = new_psi[partner].add(psi[i].mul(Complex(s, 0.0)))
+        else:
+            new_psi[i] = psi[i].mul(Complex(c, 0.0))
+            var partner = i ^ mask0 ^ mask1
+            new_psi[partner] = new_psi[partner].add(psi[i].mul(Complex(-s, 0.0)))
+    return new_psi^
+
 def apply_ccx_gate(
     psi: List[Complex],
     w0: Int,
@@ -185,8 +220,8 @@ def apply_ccx_gate(
         var bit0 = (i >> pos0) & 1
         var bit1 = (i >> pos1) & 1
         if bit0 == 1 and bit1 == 1:
-            var j = i ^ mask2
-            new_psi[i] = psi[j].copy()
+            var i = i ^ mask2
+            new_psi[i] = psi[i].copy()
         else:
             new_psi[i] = psi[i].copy()
     return new_psi^
