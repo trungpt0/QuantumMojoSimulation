@@ -32,11 +32,8 @@ struct Target(Copyable, Movable):
         self.basis_gates = basis_gates.copy()
         self.gate_props = List[Tuple[String, GateProperties]]()
         if len(self.basis_gates) == 0:
-            self.basis_gates.append("CX")
-            self.basis_gates.append("RZ")
-            self.basis_gates.append("SX")
-            self.basis_gates.append("X")
-            self.basis_gates.append("MEASURE")
+            for g in ["CX", "RZ", "SX", "X", "MEASURE", "RESET"]:
+                self.basis_gates.append(g)
 
     def supports_gate(self, name: String) -> Bool:
         for i in range(len(self.basis_gates)):
@@ -71,6 +68,16 @@ struct Target(Copyable, Movable):
             if self.basis_gates[i] != name:
                 new_basis.append(self.basis_gates[i])
         self.basis_gates = new_basis^
+
+    def has_ccx(self) -> Bool: return self.supports_gate("CCX")
+    def has_cx(self) -> Bool: return self.supports_gate("CX")
+    def has_t(self) -> Bool: return self.supports_gate("T") or self.supports_gate("TDG")
+    def has_rz(self) -> Bool: return self.supports_gate("RZ")
+    def has_swap(self) -> Bool: return self.supports_gate("SWAP")
+    def has_cp(self) -> Bool: return self.supports_gate("CP")
+    def has_crx(self) -> Bool: return self.supports_gate("CRX")
+    def has_cry(self) -> Bool: return self.supports_gate("CRY")
+    def has_crz(self) -> Bool: return self.supports_gate("CRZ")
 
 def target_ibm_basis(num_qubits: Int, cm: CouplingMap) -> Target:
     var basis = List[String]()

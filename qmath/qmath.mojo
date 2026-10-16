@@ -2,6 +2,7 @@ from std.time import monotonic
 from std.math import atan2, cos, sin
 
 comptime PI = 3.141592653589793
+comptime PI4 = 0.7853981633974483
 
 def abs(x: Int) -> Int:
     return x if x >= 0 else -x

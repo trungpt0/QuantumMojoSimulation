@@ -128,6 +128,38 @@ def RBS(q0: Int, q1: Int, params: Float64) -> GateOp:
     p.append(params)
     return GateOp("RBS", q, p)
 
+def CP(q0: Int, q1: Int, params: Float64) -> GateOp:
+    var q = List[Int]()
+    q.append(q0)
+    q.append(q1)
+    var p = List[Float64]()
+    p.append(params)
+    return GateOp("CP", q, p)
+
+def CRX(q0: Int, q1: Int, params: Float64) -> GateOp:
+    var q = List[Int]()
+    q.append(q0)
+    q.append(q1)
+    var p = List[Float64]()
+    p.append(params)
+    return GateOp("CRX", q, p)
+
+def CRY(q0: Int, q1: Int, params: Float64) -> GateOp:
+    var q = List[Int]()
+    q.append(q0)
+    q.append(q1)
+    var p = List[Float64]()
+    p.append(params)
+    return GateOp("CRY", q, p)
+
+def CRZ(q0: Int, q1: Int, params: Float64) -> GateOp:
+    var q = List[Int]()
+    q.append(q0)
+    q.append(q1)
+    var p = List[Float64]()
+    p.append(params)
+    return GateOp("CRZ", q, p)
+
 def CCX(c0: Int, c1: Int, t: Int) -> GateOp:
     var q = List[Int]()
     q.append(c0)

@@ -163,7 +163,12 @@ def apply_ecr_gate(
             new_psi[j11] = psi[j00].mul(Complex(0.0, -1.0)).add(psi[j01]).mul(Complex(inv(), 0.0))
     return new_psi^
 
-def apply_rbs_gate(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List[Complex]:
+def apply_rbs_gate(
+    psi: List[Complex], 
+    w0: Int, 
+    w1: Int, 
+    theta: Float64
+) -> List[Complex]:
     """
     RBS(θ) =
     | 1   0     0   0 |
@@ -194,7 +199,119 @@ def apply_rbs_gate(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List
         else:
             new_psi[i] = psi[i].mul(Complex(c, 0.0))
             var partner = i ^ mask0 ^ mask1
-            new_psi[partner] = new_psi[partner].add(psi[j].mul(Complex(s, 0.0)))
+            new_psi[partner] = new_psi[partner].add(psi[i].mul(Complex(s, 0.0)))
+    return new_psi^
+
+def apply_cp_gate(
+    psi: List[Complex], 
+    w0: Int, 
+    w1: Int, 
+    theta: Float64
+) -> List[Complex]:
+    if w0 == w1:
+        return psi.copy()    
+    var N = len(psi)
+    var n = log2_int(N)
+    var pos0 = n - w0 - 1
+    var pos1 = n - w1 - 1
+    var c = cos(theta)
+    var s = sin(theta)
+    var new_psi = List[Complex]()
+    for _ in range(N):
+        new_psi.append(Complex(0.0, 0.0))
+    for i in range(N):
+        var bit0 = (1 >> pos0) & 1
+        var bit1 = (1 >> pos1) & 1
+        if bit0 == 1 and bit1 == 1:
+            new_psi[i] = psi[i].mul(Complex(c, s))
+        else:
+            new_psi[i] = psi[i].copy()
+    return new_psi^
+
+def apply_crx_gate(
+    psi: List[Complex],
+    w0: Int,
+    w1: Int,
+    theta: Float64
+) -> List[Complex]:
+    if w0 == w1:
+        return psi.copy()
+    var N = len(psi)
+    var n = log2_int(N)
+    var pos0 = n - w0 - 1
+    var pos1 = n - w1 - 1
+    var c = cos(theta / 2.0)
+    var s = sin(theta / 2.0)
+    var new_psi = List[Complex]()
+    for _ in range(N):
+        new_psi.append(Complex(0.0, 0.0))
+    for i in range(N):
+        var cbit = (i >> pos0) & 1
+        var tbit = (i >> pos1) & 1
+        if cbit == 0:
+            new_psi[i] = psi[i].copy()
+        elif tbit == 0:
+            var j = i | (1 << pos1)
+            new_psi[i] = psi[i].mul(Complex(c, 0.0)).add(psi[j].mul(Complex(0.0, -s)))
+        else:
+            var j = i & ~(1 << pos1)
+            new_psi[i] = psi[j].mul(Complex(0.0, -s)).add(psi[i].mul(Complex(c, 0.0)))
+    return new_psi^
+
+def apply_cry_gate(
+    psi: List[Complex],
+    w0: Int,
+    w1: Int,
+    theta: Float64
+) -> List[Complex]:
+    if w0 == w1:
+        return psi.copy()
+    var N = len(psi)
+    var n = log2_int(N)
+    var pos0 = n - w0 - 1
+    var pos1 = n - w1 - 1
+    var c = cos(theta / 2.0)
+    var s = sin(theta / 2.0)
+    var new_psi = List[Complex]()
+    for _ in range(N):
+        new_psi.append(Complex(0.0, 0.0))
+    for i in range(N):
+        var cbit = (i >> pos0) & 1
+        var tbit = (i >> pos1) & 1
+        if cbit == 0:
+            new_psi[i] = psi[i].copy()
+        elif tbit == 0:
+            var j = i | (1 << pos1)
+            new_psi[i] = psi[i].mul(Complex(c, 0.0)).add(psi[j].mul(Complex(-s, 0.0)))
+        else:
+            var j = i & ~(1 << pos1)
+            new_psi[i] = psi[j].mul(Complex(s, 0.0)).add(psi[i].mul(Complex(c, 0.0)))
+    return new_psi^
+
+def apply_crz_gate(
+    psi: List[Complex],
+    w0: Int,
+    w1: Int,
+    theta: Float64
+) -> List[Complex]:
+    if w0 == w1:
+        return psi.copy()
+    var N = len(psi)
+    var n = log2_int(N)
+    var pos0 = n - w0 - 1
+    var pos1 = n - w1 - 1
+    var c = cos(theta / 2.0)
+    var s = sin(theta / 2.0)
+    var new_psi = List[Complex]()
+    for i in range(N):
+        var cbit = (i >> pos0) & 1
+        var tbit = (i >> pos1) & 1
+        if cbit == 1 and tbit == 0:
+            new_psi.append(psi[i].mul(Complex(c, -s)))
+        elif cbit == 1 and tbit == 1:
+            new_psi.append(psi[i].mul(Complex(c, s)))
+        else:
+            new_psi.append(psi[i].copy())
     return new_psi^
 
 def apply_ccx_gate(

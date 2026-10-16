@@ -229,8 +229,20 @@ def SWAP(psi: List[Complex], w0: Int, w1: Int) -> List[Complex]:
 def ECR(psi: List[Complex], w0: Int, w1: Int) -> List[Complex]:
     return apply_ecr_gate(psi, w0, w1)
 
-def RBS(psi: List[Complex], w0: Int, w1: Int, p: Float64) -> List[Complex]:
-    return apply_rbs_gate(psi, w0, w1, p)
+def RBS(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List[Complex]:
+    return apply_rbs_gate(psi, w0, w1, theta)
+
+def CP(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List[Complex]:
+    return apply_cp_gate(psi, w0, w1, theta)
+
+def CRX(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List[Complex]:
+    return apply_crx_gate(psi, w0, w1, theta)
+
+def CRY(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List[Complex]:
+    return apply_cry_gate(psi, w0, w1, theta)
+
+def CRZ(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List[Complex]:
+    return apply_crz_gate(psi, w0, w1, theta)
 
 def CCX(psi: List[Complex], w0: Int, w1: Int, w2: Int) -> List[Complex]:
     return apply_ccx_gate(psi, w0, w1, w2)
@@ -406,6 +418,42 @@ def RBS_test(psi: List[Complex], theta: Float64):
     psi_expe.append(Complex(0.0, 0.0))
     psi_expe.append(Complex(0.0, 0.0))
     assert_equal(psi_test, psi_expe, "RBS gate")
+
+def CP_test(psi: List[Complex], theta: Float64):
+    var psi_test = CP(psi, 0, 1, theta)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(1.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    assert_equal(psi_test, psi_expe, "CP gate")
+
+def CRX_test(psi: List[Complex], theta: Float64):
+    var psi_test = CRX(psi, 0, 1, theta)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(1.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    assert_equal(psi_test, psi_expe, "CRX gate")
+
+def CRY_test(psi: List[Complex], theta: Float64):
+    var psi_test = CRY(psi, 0, 1, theta)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(1.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    assert_equal(psi_test, psi_expe, "CRY gate")
+
+def CRZ_test(psi: List[Complex], theta: Float64):
+    var psi_test = CRZ(psi, 0, 1, theta)
+    var psi_expe = List[Complex]()
+    psi_expe.append(Complex(1.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    psi_expe.append(Complex(0.0, 0.0))
+    assert_equal(psi_test, psi_expe, "CRZ gate")
 
 def CCX_test(psi: List[Complex]):
     var psi_test = CCX(psi, 0, 1, 2)
