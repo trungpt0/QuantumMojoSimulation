@@ -167,8 +167,8 @@ def apply_rbs_gate(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List
     """
     RBS(θ) =
     | 1   0     0   0 |
-    | 0 cosθ  sinθ  0 |
-    | 0 -sinθ cosθ  0 |
+    | 0 cosθ  -sinθ  0 |
+    | 0 sinθ cosθ  0 |
     | 0   0     0   1 |
     """
     var N = len(psi)
@@ -190,11 +190,11 @@ def apply_rbs_gate(psi: List[Complex], w0: Int, w1: Int, theta: Float64) -> List
         elif bit0 and not bit1:
             new_psi[i] = psi[i].mul(Complex(c, 0.0))
             var partner = i ^ mask0 ^ mask1
-            new_psi[partner] = new_psi[partner].add(psi[i].mul(Complex(s, 0.0)))
+            new_psi[partner] = new_psi[partner].add(psi[i].mul(Complex(-s, 0.0)))
         else:
             new_psi[i] = psi[i].mul(Complex(c, 0.0))
             var partner = i ^ mask0 ^ mask1
-            new_psi[partner] = new_psi[partner].add(psi[i].mul(Complex(-s, 0.0)))
+            new_psi[partner] = new_psi[partner].add(psi[j].mul(Complex(s, 0.0)))
     return new_psi^
 
 def apply_ccx_gate(
