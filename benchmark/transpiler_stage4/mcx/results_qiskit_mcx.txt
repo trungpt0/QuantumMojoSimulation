@@ -1,0 +1,59 @@
+# Qiskit MCX Synthesis Benchmark
+# Format: RESULT method n_controls gates= cx= t= depth= qubits= valid= ns=
+# Timing: warm=3 reps=50 median
+RESULT noancilla_ibm 1 gates=1 cx=1 t=0 depth=1 qubits=2 valid=1 ns=184777
+RESULT noancilla_ft 1 gates=1 cx=1 t=0 depth=1 qubits=2 valid=1 ns=177792
+RESULT noancilla_uni 1 gates=1 cx=1 t=0 depth=1 qubits=2 valid=1 ns=186399
+RESULT gray_code 1 gates=1 cx=1 t=0 depth=1 qubits=2 valid=1 ns=124211
+# ERROR noancilla_ibm n=2: 'HighLevelSynthesis is unable to synthesize "u"'
+RESULT noancilla_ft 2 gates=15 cx=6 t=7 depth=11 qubits=3 valid=1 ns=186785
+RESULT noancilla_uni 2 gates=1 cx=0 t=0 depth=1 qubits=3 valid=1 ns=142700
+# ERROR gray_code n=2: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_ibm n=3: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_ft n=3: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_uni n=3: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR gray_code n=3: 'HighLevelSynthesis is unable to synthesize "u"'
+RESULT vchain 3 gates=33 cx=12 t=15 depth=28 qubits=5 valid=1 ns=335024
+RESULT recursion 3 gates=48 cx=18 t=22 depth=34 qubits=5 valid=1 ns=386760
+# ERROR noancilla_ibm n=4: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_ft n=4: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_uni n=4: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR gray_code n=4: 'HighLevelSynthesis is unable to synthesize "u"'
+RESULT vchain 4 gates=51 cx=18 t=23 depth=42 qubits=7 valid=1 ns=203124
+RESULT recursion 4 gates=88 cx=30 t=38 depth=72 qubits=6 valid=1 ns=1111183
+# ERROR noancilla_ibm n=5: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_ft n=5: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_uni n=5: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR gray_code n=5: 'HighLevelSynthesis is unable to synthesize "u"'
+RESULT vchain 5 gates=69 cx=24 t=31 depth=56 qubits=9 valid=1 ns=449713
+RESULT recursion 5 gates=128 cx=42 t=54 depth=104 qubits=7 valid=1 ns=501360
+# ERROR noancilla_ibm n=6: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_ft n=6: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_uni n=6: 'HighLevelSynthesis is unable to synthesize "u"'
+RESULT vchain 6 gates=87 cx=30 t=39 depth=70 qubits=11 valid=-1 ns=441099
+RESULT recursion 6 gates=168 cx=54 t=70 depth=124 qubits=8 valid=1 ns=862628
+# ERROR noancilla_ibm n=7: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_ft n=7: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_uni n=7: 'HighLevelSynthesis is unable to synthesize "u"'
+RESULT vchain 7 gates=105 cx=36 t=47 depth=84 qubits=13 valid=-1 ns=486938
+RESULT recursion 7 gates=208 cx=66 t=86 depth=156 qubits=9 valid=1 ns=927234
+# ERROR noancilla_ibm n=8: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_ft n=8: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_uni n=8: 'HighLevelSynthesis is unable to synthesize "u"'
+RESULT vchain 8 gates=123 cx=42 t=55 depth=98 qubits=15 valid=-1 ns=475295
+RESULT recursion 8 gates=248 cx=78 t=102 depth=176 qubits=10 valid=1 ns=1024171
+# ERROR noancilla_ibm n=10: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_ft n=10: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_uni n=10: 'HighLevelSynthesis is unable to synthesize "u"'
+RESULT vchain 10 gates=159 cx=54 t=71 depth=126 qubits=19 valid=-1 ns=633599
+RESULT recursion 10 gates=328 cx=102 t=134 depth=228 qubits=12 valid=-1 ns=847084
+# ERROR noancilla_ibm n=12: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_ft n=12: 'HighLevelSynthesis is unable to synthesize "u"'
+# ERROR noancilla_uni n=12: 'HighLevelSynthesis is unable to synthesize "u"'
+RESULT vchain 12 gates=195 cx=66 t=87 depth=154 qubits=23 valid=-1 ns=476727
+RESULT recursion 12 gates=408 cx=126 t=166 depth=280 qubits=14 valid=-1 ns=934881
+# SECTION: toffoli_methods
+RESULT toffoli_standard 2 gates=15 cx=6 t=7 depth=11 qubits=3 valid=1 ns=247766
+RESULT toffoli_relative_phase 2 gates=9 cx=3 t=4 depth=9 qubits=3 valid=1 ns=212900
+# SKIP toffoli_t_depth: no equivalent implementation available in Qiskit
+# DONE

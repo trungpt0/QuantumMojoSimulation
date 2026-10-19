@@ -166,3 +166,24 @@ def _CCX(c0: Int, c1: Int, t: Int) -> GateOp:
     q.append(c1)
     q.append(t)
     return GateOp("CCX", q, List[Float64]())
+
+def _CCY(c0: Int, c1: Int, t: Int) -> GateOp:
+    var q = List[Int]()
+    q.append(c0)
+    q.append(c1)
+    q.append(t)
+    return GateOp("_CCY", q, List[Float64]())
+
+def _CCZ(c0: Int, c1: Int, t: Int) -> GateOp:
+    var q = List[Int]()
+    q.append(c0)
+    q.append(c1)
+    q.append(t)
+    return GateOp("CCZ", q, List[Float64]())
+
+def _RCCX(c0: Int, c1: Int, t: Int) -> GateOp:
+    var q = List[Int]()
+    q.append(c0)
+    q.append(c1)
+    q.append(t)
+    return GateOp("RCCX", q, List[Float64]())

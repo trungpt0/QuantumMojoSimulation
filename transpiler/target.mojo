@@ -71,8 +71,12 @@ struct Target(Copyable, Movable):
 
     def has_ccx(self) -> Bool: return self.supports_gate("CCX")
     def has_cx(self) -> Bool: return self.supports_gate("CX")
-    def has_t(self) -> Bool: return self.supports_gate("T") or self.supports_gate("TDG")
+    def has_h(self) -> Bool: return self.supports_gate("H")
+    def has_sx(self) -> Bool: return self.supports_gate("SX")
+    def has_tdg(self) -> Bool: return self.supports_gate("TDG")
+    def has_t(self) -> Bool: return self.supports_gate("T") and self.supports_gate("TDG")
     def has_rz(self) -> Bool: return self.supports_gate("RZ")
+    def has_p(self) -> Bool: return self.supports_gate("P")
     def has_swap(self) -> Bool: return self.supports_gate("SWAP")
     def has_cp(self) -> Bool: return self.supports_gate("CP")
     def has_crx(self) -> Bool: return self.supports_gate("CRX")
@@ -85,21 +89,21 @@ def target_ibm_basis(num_qubits: Int, cm: CouplingMap) -> Target:
     return Target(num_qubits, cm, basis)
 
 def target_ibm_ecr(num_qubits: Int, cm: CouplingMap) -> Target:
-    var basic = List[String]()
-    for g in ["ECR", "RZ", "SX", "X", "MEASURE"]: basic.append(g)
-    return Target(num_qubits, cm, basic)
+    var basis = List[String]()
+    for g in ["ECR", "RZ", "SX", "X", "MEASURE"]: basis.append(g)
+    return Target(num_qubits, cm, basis)
 
 def target_clifford_t(num_qubits: Int, cm: CouplingMap) -> Target:
-    var basic = List[String]()
-    for g in ["CX", "H", "T", "TDG", "S", "SDG", "X", "Y", "Z", "MEASURE"]: basic.append(g)
-    return Target(num_qubits, cm, basic)
+    var basis = List[String]()
+    for g in ["CX", "H", "T", "TDG", "S", "SDG", "X", "Y", "Z", "MEASURE"]: basis.append(g)
+    return Target(num_qubits, cm, basis)
 
 def target_universal(num_qubits: Int, cm: CouplingMap) -> Target:
-    var basic = List[String]()
-    for g in ["CX","CCX","U","RZ","RY","RX","H","S","SDG","T","TDG",
-              "SX","X","Y","Z","SWAP","CP","CRZ","CRY","CRX","MEASURE"]:
-        basic.append(g)
-    return Target(num_qubits, cm, basic)
+    var basis = List[String]()
+    for g in ["CX", "CCX", "U", "RZ", "RY", "RX", "H", "S", "SDG", "T", "TDG",
+              "SX", "X", "Y", "Z", "SWAP", "CP", "CRZ", "CRY", "CRX", "MEASURE"]:
+        basis.append(g)
+    return Target(num_qubits, cm, basis)
 
 def target_custom(num_qubits: Int, cm: CouplingMap, gates: List[String]) -> Target:
     return Target(num_qubits, cm, gates)
