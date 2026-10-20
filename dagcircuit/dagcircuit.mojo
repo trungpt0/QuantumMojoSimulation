@@ -415,7 +415,10 @@ struct DAGCircuit(Copyable, Movable):
             elif gate.name == "CP": qc.CP(gate.qubit[0], gate.qubit[1], gate.theta[0])
             elif gate.name == "CRX": qc.CRX(gate.qubit[0], gate.qubit[1], gate.theta[0])
             elif gate.name == "CRY": qc.CRY(gate.qubit[0], gate.qubit[1], gate.theta[0])
-            elif gate.name == "CRZ": qc.CRZ(gate.qubit[0], gate.qubit[1], gate.qubit[2])
+            elif gate.name == "CRZ": qc.CRZ(gate.qubit[0], gate.qubit[1], gate.theta[0])
+            elif gate.name == "CCX": qc.CCX(gate.qubit[0], gate.qubit[1], gate.qubit[2])
+            elif gate.name == "CCY": qc.CCY(gate.qubit[0], gate.qubit[1], gate.qubit[2])
+            elif gate.name == "CCZ": qc.CCZ(gate.qubit[0], gate.qubit[1], gate.qubit[2])
             elif gate.name == "MEASURE": qc.measure(gate.qubit[0])
         return qc^
 

@@ -49,6 +49,7 @@ struct ApplyRandomGateLog:
         elif gate_random == 14: qc.SX(w_random); return ApplyGateLog("SX", w_random)
         else: qc.V(w_random); return ApplyGateLog("V", w_random)
 
+    @staticmethod
     def apply_random_two_qubit_gate(mut qc: QuantumCircuit, n: Int):
         var gate_random = random_int(0, 1)
         var w1_random = random_int(0, n)
@@ -65,8 +66,9 @@ struct ApplyRandomGateLog:
         elif gate_random == 6: qc.CP(w1_random, w2_random, theta_random)
         elif gate_random == 7: qc.CRX(w1_random, w2_random, theta_random)
         elif gate_random == 8: qc.CRY(w1_random, w2_random, theta_random)
-        else: qc.CRX(w1_random, w2_random, theta_random)
+        else: qc.CRZ(w1_random, w2_random, theta_random)
 
+    @staticmethod
     def apply_random_two_qubit_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
         var gate_random = random_int(0, 1)
         var w1_random = random_int(0, n)
@@ -83,7 +85,7 @@ struct ApplyRandomGateLog:
         elif gate_random == 6: qc.CP(w1_random, w2_random, theta_random); return ApplyGateLog("CP", w1_random, w2_random, theta_random)
         elif gate_random == 7: qc.CRX(w1_random, w2_random, theta_random); return ApplyGateLog("CRX", w1_random, w2_random, theta_random)
         elif gate_random == 8: qc.CRY(w1_random, w2_random, theta_random); return ApplyGateLog("CRY", w1_random, w2_random, theta_random)
-        else: qc.CRX(w1_random, w2_random, theta_random); return ApplyGateLog("CRZ", w1_random, w2_random, theta_random)
+        else: qc.CRZ(w1_random, w2_random, theta_random); return ApplyGateLog("CRZ", w1_random, w2_random, theta_random)
 
     @staticmethod
     def apply_random_cx_gate(mut qc: QuantumCircuit, n: Int):
@@ -199,7 +201,7 @@ struct ApplyRandomGateLog:
         qc.CP(s0, s1, theta_random)
 
     @staticmethod
-    def apply_random_CP_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+    def apply_random_cp_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
         var s0 = random_int(0, n)
         var s1 = random_int(0, n)
         if s0 == s1:
@@ -209,32 +211,32 @@ struct ApplyRandomGateLog:
         return ApplyGateLog("CP", s0, s1, theta_random)
 
     @staticmethod
-    def apply_random_rcx_gate(mut qc: QuantumCircuit, n: Int):
+    def apply_random_crx_gate(mut qc: QuantumCircuit, n: Int):
         var s0 = random_int(0, n)
         var s1 = random_int(0, n)
         if s0 == s1:
             s1 = (s1 + 1) % n
         var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
-        qc.RCX(s0, s1, theta_random)
+        qc.CRX(s0, s1, theta_random)
 
     @staticmethod
-    def apply_random_rcx_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+    def apply_random_crx_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
         var s0 = random_int(0, n)
         var s1 = random_int(0, n)
         if s0 == s1:
             s1 = (s1 + 1) % n
         var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
-        qc.RCX(s0, s1, theta_random)
-        return ApplyGateLog("RCX", s0, s1, theta_random)
+        qc.CRX(s0, s1, theta_random)
+        return ApplyGateLog("CRX", s0, s1, theta_random)
 
     @staticmethod
-    def apply_random_rcy_gate(mut qc: QuantumCircuit, n: Int):
+    def apply_random_cry_gate(mut qc: QuantumCircuit, n: Int):
         var s0 = random_int(0, n)
         var s1 = random_int(0, n)
         if s0 == s1:
             s1 = (s1 + 1) % n
         var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
-        qc.RCY(s0, s1, theta_random)
+        qc.CRY(s0, s1, theta_random)
 
     @staticmethod
     def apply_random_rcy_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
@@ -243,27 +245,27 @@ struct ApplyRandomGateLog:
         if s0 == s1:
             s1 = (s1 + 1) % n
         var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
-        qc.RCY(s0, s1, theta_random)
-        return ApplyGateLog("RCY", s0, s1, theta_random)
+        qc.CRY(s0, s1, theta_random)
+        return ApplyGateLog("CRY", s0, s1, theta_random)
 
     @staticmethod
-    def apply_random_rcz_gate(mut qc: QuantumCircuit, n: Int):
+    def apply_random_crz_gate(mut qc: QuantumCircuit, n: Int):
         var s0 = random_int(0, n)
         var s1 = random_int(0, n)
         if s0 == s1:
             s1 = (s1 + 1) % n
         var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
-        qc.RCZ(s0, s1, theta_random)
+        qc.CRZ(s0, s1, theta_random)
 
     @staticmethod
-    def apply_random_rcz_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+    def apply_random_crz_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
         var s0 = random_int(0, n)
         var s1 = random_int(0, n)
         if s0 == s1:
             s1 = (s1 + 1) % n
         var theta_random = PI * Float64(random_int(0, 1000)) / 1000.0
-        qc.RCZ(s0, s1, theta_random)
-        return ApplyGateLog("RCZ", s0, s1, theta_random)
+        qc.CRZ(s0, s1, theta_random)
+        return ApplyGateLog("CRZ", s0, s1, theta_random)
 
     @staticmethod
     def apply_random_ccx_gate(mut qc: QuantumCircuit, n: Int):
@@ -295,6 +297,68 @@ struct ApplyRandomGateLog:
             t += 1
         qc.CCX(c0, c1, t)
         return ApplyGateLog("CCX", c0, c1, t)
+
+    @staticmethod
+    def apply_random_ccy_gate(mut qc: QuantumCircuit, n: Int):
+        var c0 = random_int(0, n)
+        var c1 = random_int(0, n - 1)
+        if c0 >= c1:
+            c1 += 1
+        var t = random_int(0, n - 2)
+        var lo = min(c0, c1)
+        var hi = max(c0, c1)
+        if t >= lo:
+            t += 1
+        if t >= hi:
+            t += 1
+        qc.CCY(c0, c1, t)
+
+    @staticmethod
+    def apply_random_ccy_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+        var c0 = random_int(0, n)
+        var c1 = random_int(0, n - 1)
+        if c0 >= c1:
+            c1 += 1
+        var t = random_int(0, n - 2)
+        var lo = min(c0, c1)
+        var hi = max(c0, c1)
+        if t >= lo:
+            t += 1
+        if t >= hi:
+            t += 1
+        qc.CCY(c0, c1, t)
+        return ApplyGateLog("CCY", c0, c1, t)
+
+    @staticmethod
+    def apply_random_ccz_gate(mut qc: QuantumCircuit, n: Int):
+        var c0 = random_int(0, n)
+        var c1 = random_int(0, n - 1)
+        if c0 >= c1:
+            c1 += 1
+        var t = random_int(0, n - 2)
+        var lo = min(c0, c1)
+        var hi = max(c0, c1)
+        if t >= lo:
+            t += 1
+        if t >= hi:
+            t += 1
+        qc.CCZ(c0, c1, t)
+
+    @staticmethod
+    def apply_random_ccz_gate_with_log(mut qc: QuantumCircuit, n: Int) -> ApplyGateLog:
+        var c0 = random_int(0, n)
+        var c1 = random_int(0, n - 1)
+        if c0 >= c1:
+            c1 += 1
+        var t = random_int(0, n - 2)
+        var lo = min(c0, c1)
+        var hi = max(c0, c1)
+        if t >= lo:
+            t += 1
+        if t >= hi:
+            t += 1
+        qc.CCZ(c0, c1, t)
+        return ApplyGateLog("CCZ", c0, c1, t)
 
     @staticmethod
     def apply_measure_with_log(mut qc: QuantumCircuit, w: Int) -> ApplyGateLog:

@@ -148,6 +148,14 @@ struct QuantumCircuit(Copyable, Movable):
         self.psi = CCX(self.psi, w0, w1, w2)
         self.gates.append(GateOp("CCX", self._q3(w0, w1, w2)))
 
+    def CCY(mut self, w0: Int, w1: Int, w2: Int):
+        self.psi = CCY(self.psi, w0, w1, w2)
+        self.gates.append(GateOp("CCY", self._q3(w0, w1, w2)))
+
+    def CCZ(mut self, w0: Int, w1: Int, w2: Int):
+        self.psi = CCZ(self.psi, w0, w1, w2)
+        self.gates.append(GateOp("CCZ", self._q3(w0, w1, w2)))
+
     def measure(mut self, w: Int) -> Int:
         var n = self.n
         var N = 1 << n
@@ -261,6 +269,12 @@ struct QuantumCircuit(Copyable, Movable):
 
     def CCX_test(self):
         CCX_test(self.psi)
+
+    def CCY_test(self):
+        CCY_test(self.psi)
+
+    def CCZ_test(self):
+        CCZ_test(self.psi)
 
     def print_psi(self):
         print("Num Qubits:", self.n)
