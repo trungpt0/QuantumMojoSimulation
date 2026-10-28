@@ -39,3 +39,8 @@ def evaluate_estimator(name: String, actual: Float64, expected: Float64):
         print("PASS:", name, "->", round6(actual))
     else:
         print("FAIL:", name, "-> got", round6(actual), "expected", round6(expected))
+
+def int_to_listint(x: Int) -> List[Int]:
+    var r = List[Int]()
+    r.append(x)
+    return r^
