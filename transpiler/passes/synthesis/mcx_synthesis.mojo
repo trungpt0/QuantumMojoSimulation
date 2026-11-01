@@ -1,7 +1,12 @@
 from gates import GateOp
 from qmath import PI
 from gateop_shortcut import _X, _H, _P, _CX, _CCX, _RCCX
-from transpiler import basis_translate
+from transpiler import (
+    toffoli_standard,
+    toffoli_relative_phase,
+    toffoli_t_depth_optimal, 
+    toffoli_rz_based
+)
 
 def _extend(mut g: List[GateOp], sub: List[GateOp]):
     for i in range(len(sub)):
@@ -200,4 +205,5 @@ def mcx_synthesize(
         g = mcx_recursion(controls, target_q, anc)
     else:
         raise Error("Invalid method: " + method)
-    return basis_translate(g, target)
+    from transpiler import _apply_basis_translator
+    return _apply_basis_translator(g, target)

@@ -1,13 +1,18 @@
 from circuit import QuantumCircuit
 from dagcircuit import DAGCircuit
-from transpiler import CouplingMap, TParOptimization, VF2Layout, TrivialLayout, SabreLayout, SabreDAG, SabreSwap
-from gates import GateOp
+from transpiler import BasisTranslator, Target, CouplingMap
 
 def main() raises:
     var qc = QuantumCircuit(3)
     qc.CCX(0,1,2)
     var dag = DAGCircuit.from_circuit(qc)
     dag.print_dag()
+    var cm = CouplingMap(3)
+    cm.add_edge(0,1)
+    cm.add_edge(1,2)
+    var target = Target(3, cm, ["CX", "H", "T", "TDG", "S"])
+    var dag1 = BasisTranslator(target).run(dag)
+    dag1.print_dag()
 
     # var qc = QuantumCircuit(3)
     # qc.H(0)

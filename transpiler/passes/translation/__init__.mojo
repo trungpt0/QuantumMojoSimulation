@@ -1,7 +1,2 @@
-from .gate_definitions import (
-    toffoli_standard,
-    ccz_definition,
-    toffoli_relative_phase,
-    toffoli_t_depth_optimal,
-)
-from .basis_translator import basis_translate
+from .gate_definitions import toffoli_standard, ccz_definition, toffoli_relative_phase, toffoli_t_depth_optimal, toffoli_rz_based
+from .basis_translator import BasisTranslator, _apply_basis_translator

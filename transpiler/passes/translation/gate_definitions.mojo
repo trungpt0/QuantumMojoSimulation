@@ -1,5 +1,6 @@
 from gates import GateOp
-from gateop_shortcut import _H, _T, _Tdg, _CX
+from qmath import PI
+from gateop_shortcut import _H, _T, _Tdg, _CX, _RZ
 
 def toffoli_standard(c0: Int, c1: Int, t: Int) -> List[GateOp]:
     var g = List[GateOp]()
@@ -71,4 +72,23 @@ def toffoli_t_depth_optimal(c0: Int, c1: Int, t: Int) -> List[GateOp]:
     g.append(_CX(c0, t))
     g.append(_CX(c0, c1))
     g.append(_H(t))
+    return g^
+
+def toffoli_rz_based(c0: Int, c1: Int, t: Int) -> List[GateOp]:
+    var g = List[GateOp]()
+    g.append(_H(t))
+    g.append(_CX(c1, t))
+    g.append(_RZ(t, -PI / 4))
+    g.append(_CX(c0, t))
+    g.append(_RZ(t, PI / 4))
+    g.append(_CX(c1, t))
+    g.append(_RZ(t, -PI / 4))
+    g.append(_CX(c0, t))
+    g.append(_RZ(c1, PI / 4))
+    g.append(_RZ(t, PI / 4))
+    g.append(_H(t))
+    g.append(_CX(c0, c1))
+    g.append(_RZ(c0, PI / 4))
+    g.append(_RZ(c1, -PI / 4))
+    g.append(_CX(c0, c1))
     return g^
