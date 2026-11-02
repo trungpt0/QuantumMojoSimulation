@@ -855,7 +855,7 @@ Email: `trungtrnminh368@gmail.com`
 
 # License
 
-GPL
+This is the product of AISeQ-Lab, University of Information Technology, Vietnam National University, Ho Chi Minh City
 
 ---
 
