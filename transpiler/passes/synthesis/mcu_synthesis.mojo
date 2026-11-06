@@ -147,14 +147,12 @@ def _c3x(c0: Int, c1: Int, c2: Int, t: Int) -> List[GateOp]:
     g.append(_H(t))
     return g^
 
-
 def _gad_act(mut g: List[GateOp], q0: Int, q1: Int, q2: Int):
     g.append(_H(q2))
     g.append(_T(q2))
     g.append(_CX(q0, q2))
     g.append(_Tdg(q2))
     g.append(_CX(q1, q2))
-
 
 def _gad_rst(mut g: List[GateOp], q0: Int, q1: Int, q2: Int):
     g.append(_CX(q1, q2))
@@ -163,12 +161,7 @@ def _gad_rst(mut g: List[GateOp], q0: Int, q1: Int, q2: Int):
     g.append(_Tdg(q2))
     g.append(_H(q2))
 
-
 def _mcx_i15(controls: List[Int], t: Int, anc: List[Int]) -> List[GateOp]:
-    """
-    Iten 2016 (synth_mcx_n_dirty_i15): k >= 4 cần k-2 ancilla bẩn, 8k-6 CX.
-    k = 3 dùng C3X (14 CX), k <= 2 dùng X, CX, CCX.
-    """
     var g = List[GateOp]()
     var n = len(controls)
     if n == 0:
@@ -222,10 +215,6 @@ def _rot1(cname: String, q: Int, angle: Float64) -> GateOp:
     return _RY(q, angle)
 
 def _mcrot_noaux(controls: List[Int], t: Int, theta: Float64, cname: String) -> List[GateOp]:
-    """
-    R(th/4) MCX_A R(-th/4) MCX_B R(th/4) MCX_A R(-th/4) MCX_B, R là RZ hoặc RY.
-    Mỗi MCX dùng i15, mượn các điều khiển của nửa kia làm ancilla bẩn. 16m-24 CX.
-    """
     var g = List[GateOp]()
     var n = len(controls)
     if n == 1:
