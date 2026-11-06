@@ -14,3 +14,4 @@ from .routing import SabreSwap
 from .translation import toffoli_standard, ccz_definition, toffoli_relative_phase, toffoli_t_depth_optimal, toffoli_rz_based
 from .translation import BasisTranslator, _apply_basis_translator
 from .synthesis import mcx_noancilla, mcx_vchain, mcx_recursion, mcx_gray_code, mcx_synthesize
+from .synthesis import mcmt_synthesize

@@ -1,7 +1,7 @@
 from gates import GateOp
 from qmath import PI
-from gateop_shortcut import _X, _H, _S, _Sdg, _P, _RX, _RY, _RZ, _CX, _CY, _CZ, _CP, _CRX, _CRY, _CRZ, _CCX, _RCCX
-from transpiler import Target, mcx_recursion, basis_translate
+from gateop_shortcut import _X, _H, _S, _Sdg, _T, _Tdg, _P, _RX, _RY, _RZ, _CX, _CY, _CZ, _CP, _CRX, _CRY, _CRZ, _CCX, _RCCX
+from transpiler import Target, mcx_recursion, _apply_basis_translator
 from qutils import int_to_listint
 
 comptime EPS = 1e-12
@@ -55,13 +55,13 @@ def gate_spec(name: String, params: List[Float64]) raises -> GateSpec:
         return GateSpec("P", lam=params[0])
     if name == "RZ":
         _need(params, 1, name)
-        return GateSpec("RZ", lam=params[0])
+        return GateSpec("RZ", theta=params[0])
     if name == "RY":
         _need(params, 1, name)
-        return GateSpec("RY", lam=params[0])
+        return GateSpec("RY", theta=params[0])
     if name == "RX":
         _need(params, 1, name)
-        return GateSpec("RX", lam=params[0])
+        return GateSpec("RX", theta=params[0])
     if name == "H":
         return GateSpec("U", theta=PI/2, phi=0.0, lam=PI)
     if name == "SX":
@@ -111,6 +111,86 @@ def _c2p(name: String, c: Int, t: Int, angle: Float64) -> GateOp:
     g.theta.append(angle)
     return g^
 
+def _c3x(c0: Int, c1: Int, c2: Int, t: Int) -> List[GateOp]:
+    var a = PI / 8
+    var g = List[GateOp]()
+    g.append(_H(t))
+    g.append(_P(c0, a))
+    g.append(_P(c1, a))
+    g.append(_P(c2, a))
+    g.append(_P(t, a))
+    g.append(_CX(c0, c1))
+    g.append(_P(c1, -a))
+    g.append(_CX(c0, c1))
+    g.append(_CX(c1, c2))
+    g.append(_P(c2, -a))
+    g.append(_CX(c0, c2))
+    g.append(_P(c2, a))
+    g.append(_CX(c1, c2))
+    g.append(_P(c2, -a))
+    g.append(_CX(c0, c2))
+    g.append(_CX(c2, t))
+    g.append(_P(t, -a))
+    g.append(_CX(c1, t))
+    g.append(_P(t, a))
+    g.append(_CX(c2, t))
+    g.append(_P(t, -a))
+    g.append(_CX(c0, t))
+    g.append(_P(t, a))
+    g.append(_CX(c2, t))
+    g.append(_P(t, -a))
+    g.append(_CX(c1, t))
+    g.append(_P(t, a))
+    g.append(_CX(c2, t))
+    g.append(_P(t, -a))
+    g.append(_CX(c0, t))
+    g.append(_H(t))
+    return g^
+
+
+def _gad_act(mut g: List[GateOp], q0: Int, q1: Int, q2: Int):
+    g.append(_H(q2))
+    g.append(_T(q2))
+    g.append(_CX(q0, q2))
+    g.append(_Tdg(q2))
+    g.append(_CX(q1, q2))
+
+
+def _gad_rst(mut g: List[GateOp], q0: Int, q1: Int, q2: Int):
+    g.append(_CX(q1, q2))
+    g.append(_T(q2))
+    g.append(_CX(q0, q2))
+    g.append(_Tdg(q2))
+    g.append(_H(q2))
+
+
+def _mcx_i15(controls: List[Int], t: Int, anc: List[Int]) -> List[GateOp]:
+    """
+    Iten 2016 (synth_mcx_n_dirty_i15): k >= 4 cần k-2 ancilla bẩn, 8k-6 CX.
+    k = 3 dùng C3X (14 CX), k <= 2 dùng X, CX, CCX.
+    """
+    var g = List[GateOp]()
+    var n = len(controls)
+    if n == 0:
+        g.append(_X(t))
+        return g^
+    if n == 1:
+        g.append(_CX(controls[0], t))
+        return g^
+    if n == 2:
+        g.append(_CCX(controls[0], controls[1], t))
+        return g^
+    if n == 3:
+        return _c3x(controls[0], controls[1], controls[2], t)
+    for _ in range(2):
+        g.append(_CCX(controls[n - 1], anc[n - 3], t))
+        for i in range(n - 4, -1, -1):
+            _gad_act(g, controls[i + 2], anc[i], anc[i + 1])
+        g.append(_RCCX(controls[0], controls[1], anc[0]))
+        for i in range(n - 3):
+            _gad_rst(g, controls[i + 2], anc[i], anc[i + 1])
+    return g^
+
 def _mcx_dirty(controls: List[Int], t: Int, dirty: Int) -> List[GateOp]:
     var g = List[GateOp]()
     var n = len(controls)
@@ -120,27 +200,10 @@ def _mcx_dirty(controls: List[Int], t: Int, dirty: Int) -> List[GateOp]:
         g.append(_CX(controls[0], t))
     elif n == 2:
         g.append(_CCX(controls[0], controls[1], t))
+    elif n == 3:
+        return _c3x(controls[0], controls[1], controls[2], t)
     else:
         return mcx_recursion(controls, t, dirty)
-    return g^
-
-def _mcphase_noaux(controls: List[Int], t: Int, lam: Float64) -> List[GateOp]:
-    var g = List[GateOp]()
-    var k = len(controls)
-    if k == 0:
-        g.append(_P(t, lam))
-        return g^
-    if k == 1:
-        g.append(_CP(controls[0], t, lam))
-        return g^
-    var s = controls[k - 1]
-    var rest = _drop_last(controls)
-    var m = _mcx_dirty(rest, s, t)
-    g.append(_CP(s, t, lam / 2))
-    _extend(g, m)
-    g.append(_CP(s, t, -lam / 2))
-    _extend(g, m)
-    _extend(g, _mcphase_noaux(rest, t, lam / 2))
     return g^
 
 def _mcx_noaux(controls: List[Int], t: Int) -> List[GateOp]:
@@ -153,19 +216,50 @@ def _mcx_noaux(controls: List[Int], t: Int) -> List[GateOp]:
     g.append(_H(t))
     return g^
 
+def _rot1(cname: String, q: Int, angle: Float64) -> GateOp:
+    if cname == "CRZ":
+        return _RZ(q, angle)
+    return _RY(q, angle)
+
 def _mcrot_noaux(controls: List[Int], t: Int, theta: Float64, cname: String) -> List[GateOp]:
+    """
+    R(th/4) MCX_A R(-th/4) MCX_B R(th/4) MCX_A R(-th/4) MCX_B, R là RZ hoặc RY.
+    Mỗi MCX dùng i15, mượn các điều khiển của nửa kia làm ancilla bẩn. 16m-24 CX.
+    """
     var g = List[GateOp]()
     var n = len(controls)
     if n == 1:
         g.append(_c2p(cname, controls[0], t, theta))
         return g^
-    var s = controls[n - 1]
-    var rest = _drop_last(controls)
-    var m = _mcx_dirty(rest, t, s)
-    g.append(_c2p(cname, s, t, theta / 2))
-    _extend(g, m)
-    g.append(_c2p(cname, s, t, -theta / 2))
-    _extend(g, m)
+    var h = (n + 1) // 2
+    var A = List[Int]()
+    var B = List[Int]()
+    for i in range(h):
+        A.append(controls[i])
+    for i in range(h, n):
+        B.append(controls[i])
+    var ma = _mcx_i15(A, t, B)
+    var mb = _mcx_i15(B, t, A)
+    for _ in range(2):
+        g.append(_rot1(cname, t, theta / 4))
+        _extend(g, ma)
+        g.append(_rot1(cname, t, -theta / 4))
+        _extend(g, mb)
+    return g^
+
+def _mcphase_noaux(controls: List[Int], t: Int, lam: Float64) -> List[GateOp]:
+    var g = List[GateOp]()
+    var n = len(controls)
+    if n == 0:
+        g.append(_P(t, lam))
+        return g^
+    var ctrls = controls.copy()
+    var nt = t
+    for k in range(n):
+        _extend(g, _mcrot_noaux(ctrls, nt, lam / Float64(1 << k), "CRZ"))
+        nt = ctrls[len(ctrls) - 1]
+        ctrls = _drop_last(ctrls)
+    g.append(_P(nt, lam / Float64(1 << n)))
     return g^
 
 def _mc_noaux(controls: List[Int], t: Int, spec: GateSpec) -> List[GateOp]:
@@ -181,6 +275,8 @@ def _mc_noaux(controls: List[Int], t: Int, spec: GateSpec) -> List[GateOp]:
         g.append(_S(t))
     elif spec.kind == "Z":
         return _mcphase_noaux(controls, t, PI)
+    elif spec.kind == "P":
+        return _mcphase_noaux(controls, t, spec.lam)
     elif spec.kind == "RZ":
         return _mcrot_noaux(controls, t, spec.theta, "CRZ")
     elif spec.kind == "RY":
@@ -201,7 +297,8 @@ def _mc_noaux(controls: List[Int], t: Int, spec: GateSpec) -> List[GateOp]:
             _extend(g, _mcrot_noaux(controls, t, spec.phi, "CRZ"))
     return g^
 
-def _mc_vchain(controls: List[Int], targets: List[Int], spec: GateSpec, ancilla: List[Int]) -> List[GateOp]:
+def _mc_vchain(controls: List[Int], targets: List[Int], spec: GateSpec,
+               ancilla: List[Int], use_ccx: Bool) -> List[GateOp]:
     var g = List[GateOp]()
     var n = len(controls)
     if n == 1:
@@ -209,9 +306,14 @@ def _mc_vchain(controls: List[Int], targets: List[Int], spec: GateSpec, ancilla:
             _extend(g, _c1(controls[0], targets[j], spec))
         return g^
     var up = List[GateOp]()
-    up.append(_RCCX(controls[0], controls[1], ancilla[0]))
-    for i in range(2, n):
-        up.append(_RCCX(controls[i], ancilla[i - 2], ancilla[i - 1]))
+    if use_ccx:
+        up.append(_CCX(controls[0], controls[1], ancilla[0]))
+        for i in range(2, n):
+            up.append(_CCX(controls[i], ancilla[i - 2], ancilla[i - 1]))
+    else:
+        up.append(_RCCX(controls[0], controls[1], ancilla[0]))
+        for i in range(2, n):
+            up.append(_RCCX(controls[i], ancilla[i - 2], ancilla[i - 1]))
     var last = ancilla[n - 2]
     _extend(g, up)
     for j in range(len(targets)):
@@ -237,15 +339,22 @@ def mcmt_synthesize(
         raise Error("Requires at least 1 target qubit")
     var g = List[GateOp]()
     if method == "noancilla":
-        for j in range(len(targets)):
-            _extend(g, _mc_noaux(controls, targets[j], spec))
+        if spec.kind == "X" and len(targets) >= 2 and n >= 3:
+            for j in range(1, len(targets)):
+                g.append(_CX(targets[0], targets[j]))
+            _extend(g, _mcx_dirty(controls, targets[0], targets[1]))
+            for j in range(1, len(targets)):
+                g.append(_CX(targets[0], targets[j]))
+        else:
+            for j in range(len(targets)):
+                _extend(g, _mc_noaux(controls, targets[j], spec))
     elif method == "vchain":
         if n >= 2 and len(ancilla) < n - 1:
             raise Error("vchain can " + String(n - 1) + " ancilla")
-        g = _mc_vchain(controls, targets, spec, ancilla)
+        g = _mc_vchain(controls, targets, spec, ancilla, target.has_ccx())
     else:
         raise Error("Invalid method: " + method)
-    return basis_translate(g, target)
+    return _apply_basis_translator(g, target)
 
 def mcphase_synthesize(
     controls: List[Int],

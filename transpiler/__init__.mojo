@@ -13,6 +13,7 @@ from .passes import SabreRNG, DistTable, SabreMapping, SabreDAG, RouteResult, Sa
 from .passes import SabreSwap
 from .passes import toffoli_standard, ccz_definition, toffoli_relative_phase, toffoli_t_depth_optimal, toffoli_rz_based
 from .passes import mcx_noancilla, mcx_vchain, mcx_recursion, mcx_gray_code, mcx_synthesize
+from .passes import mcmt_synthesize
 from .passes import BasisTranslator, _apply_basis_translator
 from .coupling import CouplingMap
 from .target import GateProperties, Target
