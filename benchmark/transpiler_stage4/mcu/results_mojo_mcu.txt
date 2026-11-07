@@ -1,17 +1,17 @@
 # Mojo MCU Synthesis Benchmark
 # Timing: warm=3 reps=30 median
-RESULT mcphase_noancilla_ibm 1 gates=5 cx=2 t=0 depth=5 qubits=2 ns=50867
+RESULT mcphase_noancilla_ibm 1 gates=5 cx=2 t=0 depth=5 qubits=2 ns=39904
 GATE mcphase_noancilla_ibm 1 RZ 0 p=0.35
 GATE mcphase_noancilla_ibm 1 CX 0 1
 GATE mcphase_noancilla_ibm 1 RZ 1 p=-0.35
 GATE mcphase_noancilla_ibm 1 CX 0 1
 GATE mcphase_noancilla_ibm 1 RZ 1 p=0.35
-RESULT mcrz_noancilla_ibm 1 gates=4 cx=2 t=0 depth=4 qubits=2 ns=116237
+RESULT mcrz_noancilla_ibm 1 gates=4 cx=2 t=0 depth=4 qubits=2 ns=73953
 GATE mcrz_noancilla_ibm 1 RZ 1 p=0.45
 GATE mcrz_noancilla_ibm 1 CX 0 1
 GATE mcrz_noancilla_ibm 1 RZ 1 p=-0.45
 GATE mcrz_noancilla_ibm 1 CX 0 1
-RESULT mcry_noancilla_ibm 1 gates=10 cx=2 t=0 depth=10 qubits=2 ns=98653
+RESULT mcry_noancilla_ibm 1 gates=10 cx=2 t=0 depth=10 qubits=2 ns=82871
 GATE mcry_noancilla_ibm 1 SX 1
 GATE mcry_noancilla_ibm 1 RZ 1 p=3.5915926535897933
 GATE mcry_noancilla_ibm 1 SX 1
@@ -22,7 +22,7 @@ GATE mcry_noancilla_ibm 1 RZ 1 p=2.691592653589793
 GATE mcry_noancilla_ibm 1 SX 1
 GATE mcry_noancilla_ibm 1 RZ 1 p=3.141592653589793
 GATE mcry_noancilla_ibm 1 CX 0 1
-RESULT mcrx_noancilla_ibm 1 gates=12 cx=2 t=0 depth=12 qubits=2 ns=56939
+RESULT mcrx_noancilla_ibm 1 gates=12 cx=2 t=0 depth=12 qubits=2 ns=72813
 GATE mcrx_noancilla_ibm 1 RZ 1 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 1 SX 1
 GATE mcrx_noancilla_ibm 1 RZ 1 p=3.5915926535897933
@@ -35,7 +35,7 @@ GATE mcrx_noancilla_ibm 1 SX 1
 GATE mcrx_noancilla_ibm 1 RZ 1 p=3.141592653589793
 GATE mcrx_noancilla_ibm 1 CX 0 1
 GATE mcrx_noancilla_ibm 1 RZ 1 p=-1.5707963267948966
-RESULT mcu_noancilla_ibm 1 gates=14 cx=2 t=0 depth=13 qubits=2 ns=76362
+RESULT mcu_noancilla_ibm 1 gates=14 cx=2 t=0 depth=13 qubits=2 ns=45723
 GATE mcu_noancilla_ibm 1 RZ 1 p=0.14999999999999997
 GATE mcu_noancilla_ibm 1 CX 0 1
 GATE mcu_noancilla_ibm 1 RZ 1 p=-0.55
@@ -50,17 +50,17 @@ GATE mcu_noancilla_ibm 1 SX 1
 GATE mcu_noancilla_ibm 1 RZ 1 p=3.141592653589793
 GATE mcu_noancilla_ibm 1 RZ 1 p=0.4
 GATE mcu_noancilla_ibm 1 RZ 0 p=0.55
-RESULT mcmt_x2_noancilla_ibm 1 gates=2 cx=2 t=0 depth=2 qubits=3 ns=106623
+RESULT mcmt_x2_noancilla_ibm 1 gates=2 cx=2 t=0 depth=2 qubits=3 ns=43101
 GATE mcmt_x2_noancilla_ibm 1 CX 0 1
 GATE mcmt_x2_noancilla_ibm 1 CX 0 2
-RESULT mcmt_y2_noancilla_ibm 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=92710
+RESULT mcmt_y2_noancilla_ibm 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=40402
 GATE mcmt_y2_noancilla_ibm 1 RZ 1 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 1 CX 0 1
 GATE mcmt_y2_noancilla_ibm 1 RZ 1 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 1 RZ 2 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 1 CX 0 2
 GATE mcmt_y2_noancilla_ibm 1 RZ 2 p=1.5707963267948966
-RESULT mcmt_z2_noancilla_ibm 1 gates=14 cx=2 t=0 depth=8 qubits=3 ns=88562
+RESULT mcmt_z2_noancilla_ibm 1 gates=14 cx=2 t=0 depth=8 qubits=3 ns=120204
 GATE mcmt_z2_noancilla_ibm 1 RZ 1 p=1.5707963267948966
 GATE mcmt_z2_noancilla_ibm 1 SX 1
 GATE mcmt_z2_noancilla_ibm 1 RZ 1 p=1.5707963267948966
@@ -75,7 +75,7 @@ GATE mcmt_z2_noancilla_ibm 1 CX 0 2
 GATE mcmt_z2_noancilla_ibm 1 RZ 2 p=1.5707963267948966
 GATE mcmt_z2_noancilla_ibm 1 SX 2
 GATE mcmt_z2_noancilla_ibm 1 RZ 2 p=1.5707963267948966
-RESULT mcmt_h2_noancilla_ibm 1 gates=28 cx=4 t=0 depth=21 qubits=3 ns=52558
+RESULT mcmt_h2_noancilla_ibm 1 gates=28 cx=4 t=0 depth=21 qubits=3 ns=116640
 GATE mcmt_h2_noancilla_ibm 1 RZ 1 p=1.5707963267948966
 GATE mcmt_h2_noancilla_ibm 1 CX 0 1
 GATE mcmt_h2_noancilla_ibm 1 RZ 1 p=-1.5707963267948966
@@ -104,18 +104,18 @@ GATE mcmt_h2_noancilla_ibm 1 SX 2
 GATE mcmt_h2_noancilla_ibm 1 RZ 2 p=3.141592653589793
 GATE mcmt_h2_noancilla_ibm 1 RZ 2 p=0.0
 GATE mcmt_h2_noancilla_ibm 1 RZ 0 p=1.5707963267948966
-RESULT mcphase_vchain_ibm 1 gates=5 cx=2 t=0 depth=5 qubits=2 ns=54998
+RESULT mcphase_vchain_ibm 1 gates=5 cx=2 t=0 depth=5 qubits=2 ns=60405
 GATE mcphase_vchain_ibm 1 RZ 0 p=0.35
 GATE mcphase_vchain_ibm 1 CX 0 1
 GATE mcphase_vchain_ibm 1 RZ 1 p=-0.35
 GATE mcphase_vchain_ibm 1 CX 0 1
 GATE mcphase_vchain_ibm 1 RZ 1 p=0.35
-RESULT mcrz_vchain_ibm 1 gates=4 cx=2 t=0 depth=4 qubits=2 ns=91880
+RESULT mcrz_vchain_ibm 1 gates=4 cx=2 t=0 depth=4 qubits=2 ns=117954
 GATE mcrz_vchain_ibm 1 RZ 1 p=0.45
 GATE mcrz_vchain_ibm 1 CX 0 1
 GATE mcrz_vchain_ibm 1 RZ 1 p=-0.45
 GATE mcrz_vchain_ibm 1 CX 0 1
-RESULT mcry_vchain_ibm 1 gates=10 cx=2 t=0 depth=10 qubits=2 ns=76026
+RESULT mcry_vchain_ibm 1 gates=10 cx=2 t=0 depth=10 qubits=2 ns=135701
 GATE mcry_vchain_ibm 1 SX 1
 GATE mcry_vchain_ibm 1 RZ 1 p=3.5915926535897933
 GATE mcry_vchain_ibm 1 SX 1
@@ -126,7 +126,7 @@ GATE mcry_vchain_ibm 1 RZ 1 p=2.691592653589793
 GATE mcry_vchain_ibm 1 SX 1
 GATE mcry_vchain_ibm 1 RZ 1 p=3.141592653589793
 GATE mcry_vchain_ibm 1 CX 0 1
-RESULT mcrx_vchain_ibm 1 gates=12 cx=2 t=0 depth=12 qubits=2 ns=48396
+RESULT mcrx_vchain_ibm 1 gates=12 cx=2 t=0 depth=12 qubits=2 ns=133327
 GATE mcrx_vchain_ibm 1 RZ 1 p=1.5707963267948966
 GATE mcrx_vchain_ibm 1 SX 1
 GATE mcrx_vchain_ibm 1 RZ 1 p=3.5915926535897933
@@ -139,7 +139,7 @@ GATE mcrx_vchain_ibm 1 SX 1
 GATE mcrx_vchain_ibm 1 RZ 1 p=3.141592653589793
 GATE mcrx_vchain_ibm 1 CX 0 1
 GATE mcrx_vchain_ibm 1 RZ 1 p=-1.5707963267948966
-RESULT mcu_vchain_ibm 1 gates=14 cx=2 t=0 depth=13 qubits=2 ns=50980
+RESULT mcu_vchain_ibm 1 gates=14 cx=2 t=0 depth=13 qubits=2 ns=91516
 GATE mcu_vchain_ibm 1 RZ 1 p=0.14999999999999997
 GATE mcu_vchain_ibm 1 CX 0 1
 GATE mcu_vchain_ibm 1 RZ 1 p=-0.55
@@ -154,17 +154,17 @@ GATE mcu_vchain_ibm 1 SX 1
 GATE mcu_vchain_ibm 1 RZ 1 p=3.141592653589793
 GATE mcu_vchain_ibm 1 RZ 1 p=0.4
 GATE mcu_vchain_ibm 1 RZ 0 p=0.55
-RESULT mcmt_x2_vchain_ibm 1 gates=2 cx=2 t=0 depth=2 qubits=3 ns=53518
+RESULT mcmt_x2_vchain_ibm 1 gates=2 cx=2 t=0 depth=2 qubits=3 ns=38891
 GATE mcmt_x2_vchain_ibm 1 CX 0 1
 GATE mcmt_x2_vchain_ibm 1 CX 0 2
-RESULT mcmt_y2_vchain_ibm 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=48433
+RESULT mcmt_y2_vchain_ibm 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=65584
 GATE mcmt_y2_vchain_ibm 1 RZ 1 p=-1.5707963267948966
 GATE mcmt_y2_vchain_ibm 1 CX 0 1
 GATE mcmt_y2_vchain_ibm 1 RZ 1 p=1.5707963267948966
 GATE mcmt_y2_vchain_ibm 1 RZ 2 p=-1.5707963267948966
 GATE mcmt_y2_vchain_ibm 1 CX 0 2
 GATE mcmt_y2_vchain_ibm 1 RZ 2 p=1.5707963267948966
-RESULT mcmt_z2_vchain_ibm 1 gates=14 cx=2 t=0 depth=8 qubits=3 ns=75608
+RESULT mcmt_z2_vchain_ibm 1 gates=14 cx=2 t=0 depth=8 qubits=3 ns=56295
 GATE mcmt_z2_vchain_ibm 1 RZ 1 p=1.5707963267948966
 GATE mcmt_z2_vchain_ibm 1 SX 1
 GATE mcmt_z2_vchain_ibm 1 RZ 1 p=1.5707963267948966
@@ -179,7 +179,7 @@ GATE mcmt_z2_vchain_ibm 1 CX 0 2
 GATE mcmt_z2_vchain_ibm 1 RZ 2 p=1.5707963267948966
 GATE mcmt_z2_vchain_ibm 1 SX 2
 GATE mcmt_z2_vchain_ibm 1 RZ 2 p=1.5707963267948966
-RESULT mcmt_h2_vchain_ibm 1 gates=28 cx=4 t=0 depth=21 qubits=3 ns=67476
+RESULT mcmt_h2_vchain_ibm 1 gates=28 cx=4 t=0 depth=21 qubits=3 ns=64524
 GATE mcmt_h2_vchain_ibm 1 RZ 1 p=1.5707963267948966
 GATE mcmt_h2_vchain_ibm 1 CX 0 1
 GATE mcmt_h2_vchain_ibm 1 RZ 1 p=-1.5707963267948966
@@ -208,18 +208,18 @@ GATE mcmt_h2_vchain_ibm 1 SX 2
 GATE mcmt_h2_vchain_ibm 1 RZ 2 p=3.141592653589793
 GATE mcmt_h2_vchain_ibm 1 RZ 2 p=0.0
 GATE mcmt_h2_vchain_ibm 1 RZ 0 p=1.5707963267948966
-RESULT mcphase_noancilla_uni 1 gates=5 cx=2 t=0 depth=5 qubits=2 ns=93670
+RESULT mcphase_noancilla_uni 1 gates=5 cx=2 t=0 depth=5 qubits=2 ns=53495
 GATE mcphase_noancilla_uni 1 RZ 0 p=0.35
 GATE mcphase_noancilla_uni 1 CX 0 1
 GATE mcphase_noancilla_uni 1 RZ 1 p=-0.35
 GATE mcphase_noancilla_uni 1 CX 0 1
 GATE mcphase_noancilla_uni 1 RZ 1 p=0.35
-RESULT mcrz_noancilla_uni 1 gates=4 cx=2 t=0 depth=4 qubits=2 ns=109992
+RESULT mcrz_noancilla_uni 1 gates=4 cx=2 t=0 depth=4 qubits=2 ns=53772
 GATE mcrz_noancilla_uni 1 RZ 1 p=0.45
 GATE mcrz_noancilla_uni 1 CX 0 1
 GATE mcrz_noancilla_uni 1 RZ 1 p=-0.45
 GATE mcrz_noancilla_uni 1 CX 0 1
-RESULT mcry_noancilla_uni 1 gates=10 cx=2 t=0 depth=10 qubits=2 ns=52936
+RESULT mcry_noancilla_uni 1 gates=10 cx=2 t=0 depth=10 qubits=2 ns=84572
 GATE mcry_noancilla_uni 1 SX 1
 GATE mcry_noancilla_uni 1 RZ 1 p=3.5915926535897933
 GATE mcry_noancilla_uni 1 SX 1
@@ -230,7 +230,7 @@ GATE mcry_noancilla_uni 1 RZ 1 p=2.691592653589793
 GATE mcry_noancilla_uni 1 SX 1
 GATE mcry_noancilla_uni 1 RZ 1 p=3.141592653589793
 GATE mcry_noancilla_uni 1 CX 0 1
-RESULT mcrx_noancilla_uni 1 gates=12 cx=2 t=0 depth=12 qubits=2 ns=86280
+RESULT mcrx_noancilla_uni 1 gates=12 cx=2 t=0 depth=12 qubits=2 ns=52469
 GATE mcrx_noancilla_uni 1 RZ 1 p=1.5707963267948966
 GATE mcrx_noancilla_uni 1 SX 1
 GATE mcrx_noancilla_uni 1 RZ 1 p=3.5915926535897933
@@ -243,7 +243,7 @@ GATE mcrx_noancilla_uni 1 SX 1
 GATE mcrx_noancilla_uni 1 RZ 1 p=3.141592653589793
 GATE mcrx_noancilla_uni 1 CX 0 1
 GATE mcrx_noancilla_uni 1 RZ 1 p=-1.5707963267948966
-RESULT mcu_noancilla_uni 1 gates=14 cx=2 t=0 depth=13 qubits=2 ns=49962
+RESULT mcu_noancilla_uni 1 gates=14 cx=2 t=0 depth=13 qubits=2 ns=107686
 GATE mcu_noancilla_uni 1 RZ 1 p=0.14999999999999997
 GATE mcu_noancilla_uni 1 CX 0 1
 GATE mcu_noancilla_uni 1 RZ 1 p=-0.55
@@ -258,24 +258,24 @@ GATE mcu_noancilla_uni 1 SX 1
 GATE mcu_noancilla_uni 1 RZ 1 p=3.141592653589793
 GATE mcu_noancilla_uni 1 RZ 1 p=0.4
 GATE mcu_noancilla_uni 1 RZ 0 p=0.55
-RESULT mcmt_x2_noancilla_uni 1 gates=2 cx=2 t=0 depth=2 qubits=3 ns=67335
+RESULT mcmt_x2_noancilla_uni 1 gates=2 cx=2 t=0 depth=2 qubits=3 ns=98862
 GATE mcmt_x2_noancilla_uni 1 CX 0 1
 GATE mcmt_x2_noancilla_uni 1 CX 0 2
-RESULT mcmt_y2_noancilla_uni 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=65295
+RESULT mcmt_y2_noancilla_uni 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=82946
 GATE mcmt_y2_noancilla_uni 1 RZ 1 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 1 CX 0 1
 GATE mcmt_y2_noancilla_uni 1 S 1
 GATE mcmt_y2_noancilla_uni 1 RZ 2 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 1 CX 0 2
 GATE mcmt_y2_noancilla_uni 1 S 2
-RESULT mcmt_z2_noancilla_uni 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=74971
+RESULT mcmt_z2_noancilla_uni 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=102533
 GATE mcmt_z2_noancilla_uni 1 H 1
 GATE mcmt_z2_noancilla_uni 1 CX 0 1
 GATE mcmt_z2_noancilla_uni 1 H 1
 GATE mcmt_z2_noancilla_uni 1 H 2
 GATE mcmt_z2_noancilla_uni 1 CX 0 2
 GATE mcmt_z2_noancilla_uni 1 H 2
-RESULT mcmt_h2_noancilla_uni 1 gates=28 cx=4 t=0 depth=21 qubits=3 ns=65669
+RESULT mcmt_h2_noancilla_uni 1 gates=28 cx=4 t=0 depth=21 qubits=3 ns=115445
 GATE mcmt_h2_noancilla_uni 1 RZ 1 p=1.5707963267948966
 GATE mcmt_h2_noancilla_uni 1 CX 0 1
 GATE mcmt_h2_noancilla_uni 1 RZ 1 p=-1.5707963267948966
@@ -304,18 +304,18 @@ GATE mcmt_h2_noancilla_uni 1 SX 2
 GATE mcmt_h2_noancilla_uni 1 RZ 2 p=3.141592653589793
 GATE mcmt_h2_noancilla_uni 1 RZ 2 p=0.0
 GATE mcmt_h2_noancilla_uni 1 RZ 0 p=1.5707963267948966
-RESULT mcphase_vchain_uni 1 gates=5 cx=2 t=0 depth=5 qubits=2 ns=40911
+RESULT mcphase_vchain_uni 1 gates=5 cx=2 t=0 depth=5 qubits=2 ns=35794
 GATE mcphase_vchain_uni 1 RZ 0 p=0.35
 GATE mcphase_vchain_uni 1 CX 0 1
 GATE mcphase_vchain_uni 1 RZ 1 p=-0.35
 GATE mcphase_vchain_uni 1 CX 0 1
 GATE mcphase_vchain_uni 1 RZ 1 p=0.35
-RESULT mcrz_vchain_uni 1 gates=4 cx=2 t=0 depth=4 qubits=2 ns=68289
+RESULT mcrz_vchain_uni 1 gates=4 cx=2 t=0 depth=4 qubits=2 ns=56793
 GATE mcrz_vchain_uni 1 RZ 1 p=0.45
 GATE mcrz_vchain_uni 1 CX 0 1
 GATE mcrz_vchain_uni 1 RZ 1 p=-0.45
 GATE mcrz_vchain_uni 1 CX 0 1
-RESULT mcry_vchain_uni 1 gates=10 cx=2 t=0 depth=10 qubits=2 ns=85994
+RESULT mcry_vchain_uni 1 gates=10 cx=2 t=0 depth=10 qubits=2 ns=41708
 GATE mcry_vchain_uni 1 SX 1
 GATE mcry_vchain_uni 1 RZ 1 p=3.5915926535897933
 GATE mcry_vchain_uni 1 SX 1
@@ -326,7 +326,7 @@ GATE mcry_vchain_uni 1 RZ 1 p=2.691592653589793
 GATE mcry_vchain_uni 1 SX 1
 GATE mcry_vchain_uni 1 RZ 1 p=3.141592653589793
 GATE mcry_vchain_uni 1 CX 0 1
-RESULT mcrx_vchain_uni 1 gates=12 cx=2 t=0 depth=12 qubits=2 ns=86221
+RESULT mcrx_vchain_uni 1 gates=12 cx=2 t=0 depth=12 qubits=2 ns=52126
 GATE mcrx_vchain_uni 1 RZ 1 p=1.5707963267948966
 GATE mcrx_vchain_uni 1 SX 1
 GATE mcrx_vchain_uni 1 RZ 1 p=3.5915926535897933
@@ -339,7 +339,7 @@ GATE mcrx_vchain_uni 1 SX 1
 GATE mcrx_vchain_uni 1 RZ 1 p=3.141592653589793
 GATE mcrx_vchain_uni 1 CX 0 1
 GATE mcrx_vchain_uni 1 RZ 1 p=-1.5707963267948966
-RESULT mcu_vchain_uni 1 gates=14 cx=2 t=0 depth=13 qubits=2 ns=61755
+RESULT mcu_vchain_uni 1 gates=14 cx=2 t=0 depth=13 qubits=2 ns=59956
 GATE mcu_vchain_uni 1 RZ 1 p=0.14999999999999997
 GATE mcu_vchain_uni 1 CX 0 1
 GATE mcu_vchain_uni 1 RZ 1 p=-0.55
@@ -354,24 +354,24 @@ GATE mcu_vchain_uni 1 SX 1
 GATE mcu_vchain_uni 1 RZ 1 p=3.141592653589793
 GATE mcu_vchain_uni 1 RZ 1 p=0.4
 GATE mcu_vchain_uni 1 RZ 0 p=0.55
-RESULT mcmt_x2_vchain_uni 1 gates=2 cx=2 t=0 depth=2 qubits=3 ns=37484
+RESULT mcmt_x2_vchain_uni 1 gates=2 cx=2 t=0 depth=2 qubits=3 ns=58034
 GATE mcmt_x2_vchain_uni 1 CX 0 1
 GATE mcmt_x2_vchain_uni 1 CX 0 2
-RESULT mcmt_y2_vchain_uni 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=41023
+RESULT mcmt_y2_vchain_uni 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=59715
 GATE mcmt_y2_vchain_uni 1 RZ 1 p=-1.5707963267948966
 GATE mcmt_y2_vchain_uni 1 CX 0 1
 GATE mcmt_y2_vchain_uni 1 S 1
 GATE mcmt_y2_vchain_uni 1 RZ 2 p=-1.5707963267948966
 GATE mcmt_y2_vchain_uni 1 CX 0 2
 GATE mcmt_y2_vchain_uni 1 S 2
-RESULT mcmt_z2_vchain_uni 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=47408
+RESULT mcmt_z2_vchain_uni 1 gates=6 cx=2 t=0 depth=4 qubits=3 ns=50779
 GATE mcmt_z2_vchain_uni 1 H 1
 GATE mcmt_z2_vchain_uni 1 CX 0 1
 GATE mcmt_z2_vchain_uni 1 H 1
 GATE mcmt_z2_vchain_uni 1 H 2
 GATE mcmt_z2_vchain_uni 1 CX 0 2
 GATE mcmt_z2_vchain_uni 1 H 2
-RESULT mcmt_h2_vchain_uni 1 gates=28 cx=4 t=0 depth=21 qubits=3 ns=59107
+RESULT mcmt_h2_vchain_uni 1 gates=28 cx=4 t=0 depth=21 qubits=3 ns=67390
 GATE mcmt_h2_vchain_uni 1 RZ 1 p=1.5707963267948966
 GATE mcmt_h2_vchain_uni 1 CX 0 1
 GATE mcmt_h2_vchain_uni 1 RZ 1 p=-1.5707963267948966
@@ -400,7 +400,7 @@ GATE mcmt_h2_vchain_uni 1 SX 2
 GATE mcmt_h2_vchain_uni 1 RZ 2 p=3.141592653589793
 GATE mcmt_h2_vchain_uni 1 RZ 2 p=0.0
 GATE mcmt_h2_vchain_uni 1 RZ 0 p=1.5707963267948966
-RESULT mcphase_noancilla_ibm 2 gates=13 cx=6 t=0 depth=13 qubits=3 ns=64149
+RESULT mcphase_noancilla_ibm 2 gates=13 cx=6 t=0 depth=13 qubits=3 ns=48282
 GATE mcphase_noancilla_ibm 2 RZ 2 p=0.175
 GATE mcphase_noancilla_ibm 2 CX 0 2
 GATE mcphase_noancilla_ibm 2 RZ 2 p=-0.175
@@ -414,7 +414,7 @@ GATE mcphase_noancilla_ibm 2 CX 0 1
 GATE mcphase_noancilla_ibm 2 RZ 1 p=-0.175
 GATE mcphase_noancilla_ibm 2 CX 0 1
 GATE mcphase_noancilla_ibm 2 RZ 0 p=0.175
-RESULT mcrz_noancilla_ibm 2 gates=8 cx=4 t=0 depth=8 qubits=3 ns=98541
+RESULT mcrz_noancilla_ibm 2 gates=8 cx=4 t=0 depth=8 qubits=3 ns=40958
 GATE mcrz_noancilla_ibm 2 RZ 2 p=0.225
 GATE mcrz_noancilla_ibm 2 CX 0 2
 GATE mcrz_noancilla_ibm 2 RZ 2 p=-0.225
@@ -423,7 +423,7 @@ GATE mcrz_noancilla_ibm 2 RZ 2 p=0.225
 GATE mcrz_noancilla_ibm 2 CX 0 2
 GATE mcrz_noancilla_ibm 2 RZ 2 p=-0.225
 GATE mcrz_noancilla_ibm 2 CX 1 2
-RESULT mcry_noancilla_ibm 2 gates=20 cx=4 t=0 depth=20 qubits=3 ns=58704
+RESULT mcry_noancilla_ibm 2 gates=20 cx=4 t=0 depth=20 qubits=3 ns=114720
 GATE mcry_noancilla_ibm 2 SX 2
 GATE mcry_noancilla_ibm 2 RZ 2 p=3.366592653589793
 GATE mcry_noancilla_ibm 2 SX 2
@@ -444,7 +444,7 @@ GATE mcry_noancilla_ibm 2 RZ 2 p=2.916592653589793
 GATE mcry_noancilla_ibm 2 SX 2
 GATE mcry_noancilla_ibm 2 RZ 2 p=3.141592653589793
 GATE mcry_noancilla_ibm 2 CX 1 2
-RESULT mcrx_noancilla_ibm 2 gates=14 cx=4 t=0 depth=14 qubits=3 ns=52466
+RESULT mcrx_noancilla_ibm 2 gates=14 cx=4 t=0 depth=14 qubits=3 ns=72073
 GATE mcrx_noancilla_ibm 2 RZ 2 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 2 SX 2
 GATE mcrx_noancilla_ibm 2 RZ 2 p=1.5707963267948966
@@ -459,7 +459,7 @@ GATE mcrx_noancilla_ibm 2 CX 1 2
 GATE mcrx_noancilla_ibm 2 RZ 2 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 2 SX 2
 GATE mcrx_noancilla_ibm 2 RZ 2 p=1.5707963267948966
-RESULT mcu_noancilla_ibm 2 gates=41 cx=14 t=0 depth=40 qubits=3 ns=104367
+RESULT mcu_noancilla_ibm 2 gates=41 cx=14 t=0 depth=40 qubits=3 ns=73717
 GATE mcu_noancilla_ibm 2 RZ 1 p=0.275
 GATE mcu_noancilla_ibm 2 CX 0 1
 GATE mcu_noancilla_ibm 2 RZ 1 p=-0.275
@@ -501,7 +501,7 @@ GATE mcu_noancilla_ibm 2 RZ 2 p=0.1
 GATE mcu_noancilla_ibm 2 CX 0 2
 GATE mcu_noancilla_ibm 2 RZ 2 p=-0.1
 GATE mcu_noancilla_ibm 2 CX 1 2
-RESULT mcmt_x2_noancilla_ibm 2 gates=38 cx=12 t=0 depth=24 qubits=4 ns=100086
+RESULT mcmt_x2_noancilla_ibm 2 gates=38 cx=12 t=0 depth=24 qubits=4 ns=68118
 GATE mcmt_x2_noancilla_ibm 2 RZ 2 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 2 SX 2
 GATE mcmt_x2_noancilla_ibm 2 RZ 2 p=1.5707963267948966
@@ -540,7 +540,7 @@ GATE mcmt_x2_noancilla_ibm 2 CX 0 1
 GATE mcmt_x2_noancilla_ibm 2 RZ 0 p=0.7853981633974483
 GATE mcmt_x2_noancilla_ibm 2 RZ 1 p=-0.7853981633974483
 GATE mcmt_x2_noancilla_ibm 2 CX 0 1
-RESULT mcmt_y2_noancilla_ibm 2 gates=42 cx=12 t=0 depth=26 qubits=4 ns=106479
+RESULT mcmt_y2_noancilla_ibm 2 gates=42 cx=12 t=0 depth=26 qubits=4 ns=53392
 GATE mcmt_y2_noancilla_ibm 2 RZ 2 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 2 RZ 2 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 2 SX 2
@@ -583,7 +583,7 @@ GATE mcmt_y2_noancilla_ibm 2 RZ 0 p=0.7853981633974483
 GATE mcmt_y2_noancilla_ibm 2 RZ 1 p=-0.7853981633974483
 GATE mcmt_y2_noancilla_ibm 2 CX 0 1
 GATE mcmt_y2_noancilla_ibm 2 RZ 3 p=1.5707963267948966
-RESULT mcmt_z2_noancilla_ibm 2 gates=26 cx=12 t=0 depth=25 qubits=4 ns=53357
+RESULT mcmt_z2_noancilla_ibm 2 gates=26 cx=12 t=0 depth=25 qubits=4 ns=48932
 GATE mcmt_z2_noancilla_ibm 2 RZ 2 p=0.7853981633974483
 GATE mcmt_z2_noancilla_ibm 2 CX 0 2
 GATE mcmt_z2_noancilla_ibm 2 RZ 2 p=-0.7853981633974483
@@ -610,7 +610,7 @@ GATE mcmt_z2_noancilla_ibm 2 CX 0 1
 GATE mcmt_z2_noancilla_ibm 2 RZ 1 p=-0.7853981633974483
 GATE mcmt_z2_noancilla_ibm 2 CX 0 1
 GATE mcmt_z2_noancilla_ibm 2 RZ 0 p=0.7853981633974483
-RESULT mcmt_h2_noancilla_ibm 2 gates=66 cx=20 t=0 depth=64 qubits=4 ns=149636
+RESULT mcmt_h2_noancilla_ibm 2 gates=66 cx=20 t=0 depth=64 qubits=4 ns=86815
 GATE mcmt_h2_noancilla_ibm 2 RZ 1 p=0.7853981633974483
 GATE mcmt_h2_noancilla_ibm 2 CX 0 1
 GATE mcmt_h2_noancilla_ibm 2 RZ 1 p=-0.7853981633974483
@@ -677,7 +677,7 @@ GATE mcmt_h2_noancilla_ibm 2 RZ 3 p=2.748893571891069
 GATE mcmt_h2_noancilla_ibm 2 SX 3
 GATE mcmt_h2_noancilla_ibm 2 RZ 3 p=3.141592653589793
 GATE mcmt_h2_noancilla_ibm 2 CX 1 3
-RESULT mcphase_vchain_ibm 2 gates=31 cx=8 t=0 depth=30 qubits=4 ns=84628
+RESULT mcphase_vchain_ibm 2 gates=31 cx=8 t=0 depth=30 qubits=4 ns=76032
 GATE mcphase_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcphase_vchain_ibm 2 SX 3
 GATE mcphase_vchain_ibm 2 RZ 3 p=1.5707963267948966
@@ -709,7 +709,7 @@ GATE mcphase_vchain_ibm 2 RZ 3 p=-0.7853981633974483
 GATE mcphase_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcphase_vchain_ibm 2 SX 3
 GATE mcphase_vchain_ibm 2 RZ 3 p=1.5707963267948966
-RESULT mcrz_vchain_ibm 2 gates=30 cx=8 t=0 depth=29 qubits=4 ns=69562
+RESULT mcrz_vchain_ibm 2 gates=30 cx=8 t=0 depth=29 qubits=4 ns=73234
 GATE mcrz_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcrz_vchain_ibm 2 SX 3
 GATE mcrz_vchain_ibm 2 RZ 3 p=1.5707963267948966
@@ -740,7 +740,7 @@ GATE mcrz_vchain_ibm 2 RZ 3 p=-0.7853981633974483
 GATE mcrz_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcrz_vchain_ibm 2 SX 3
 GATE mcrz_vchain_ibm 2 RZ 3 p=1.5707963267948966
-RESULT mcry_vchain_ibm 2 gates=36 cx=8 t=0 depth=32 qubits=4 ns=73713
+RESULT mcry_vchain_ibm 2 gates=36 cx=8 t=0 depth=32 qubits=4 ns=69918
 GATE mcry_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcry_vchain_ibm 2 SX 3
 GATE mcry_vchain_ibm 2 RZ 3 p=1.5707963267948966
@@ -777,7 +777,7 @@ GATE mcry_vchain_ibm 2 RZ 3 p=-0.7853981633974483
 GATE mcry_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcry_vchain_ibm 2 SX 3
 GATE mcry_vchain_ibm 2 RZ 3 p=1.5707963267948966
-RESULT mcrx_vchain_ibm 2 gates=38 cx=8 t=0 depth=32 qubits=4 ns=60718
+RESULT mcrx_vchain_ibm 2 gates=38 cx=8 t=0 depth=32 qubits=4 ns=61281
 GATE mcrx_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcrx_vchain_ibm 2 SX 3
 GATE mcrx_vchain_ibm 2 RZ 3 p=1.5707963267948966
@@ -816,7 +816,7 @@ GATE mcrx_vchain_ibm 2 RZ 3 p=-0.7853981633974483
 GATE mcrx_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcrx_vchain_ibm 2 SX 3
 GATE mcrx_vchain_ibm 2 RZ 3 p=1.5707963267948966
-RESULT mcu_vchain_ibm 2 gates=40 cx=8 t=0 depth=34 qubits=4 ns=88060
+RESULT mcu_vchain_ibm 2 gates=40 cx=8 t=0 depth=34 qubits=4 ns=58649
 GATE mcu_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcu_vchain_ibm 2 SX 3
 GATE mcu_vchain_ibm 2 RZ 3 p=1.5707963267948966
@@ -857,7 +857,7 @@ GATE mcu_vchain_ibm 2 RZ 3 p=-0.7853981633974483
 GATE mcu_vchain_ibm 2 RZ 3 p=1.5707963267948966
 GATE mcu_vchain_ibm 2 SX 3
 GATE mcu_vchain_ibm 2 RZ 3 p=1.5707963267948966
-RESULT mcmt_x2_vchain_ibm 2 gates=28 cx=8 t=0 depth=28 qubits=5 ns=93254
+RESULT mcmt_x2_vchain_ibm 2 gates=28 cx=8 t=0 depth=28 qubits=5 ns=141369
 GATE mcmt_x2_vchain_ibm 2 RZ 4 p=1.5707963267948966
 GATE mcmt_x2_vchain_ibm 2 SX 4
 GATE mcmt_x2_vchain_ibm 2 RZ 4 p=1.5707963267948966
@@ -886,7 +886,7 @@ GATE mcmt_x2_vchain_ibm 2 RZ 4 p=-0.7853981633974483
 GATE mcmt_x2_vchain_ibm 2 RZ 4 p=1.5707963267948966
 GATE mcmt_x2_vchain_ibm 2 SX 4
 GATE mcmt_x2_vchain_ibm 2 RZ 4 p=1.5707963267948966
-RESULT mcmt_y2_vchain_ibm 2 gates=32 cx=8 t=0 depth=28 qubits=5 ns=82869
+RESULT mcmt_y2_vchain_ibm 2 gates=32 cx=8 t=0 depth=28 qubits=5 ns=127320
 GATE mcmt_y2_vchain_ibm 2 RZ 4 p=1.5707963267948966
 GATE mcmt_y2_vchain_ibm 2 SX 4
 GATE mcmt_y2_vchain_ibm 2 RZ 4 p=1.5707963267948966
@@ -919,7 +919,7 @@ GATE mcmt_y2_vchain_ibm 2 RZ 4 p=-0.7853981633974483
 GATE mcmt_y2_vchain_ibm 2 RZ 4 p=1.5707963267948966
 GATE mcmt_y2_vchain_ibm 2 SX 4
 GATE mcmt_y2_vchain_ibm 2 RZ 4 p=1.5707963267948966
-RESULT mcmt_z2_vchain_ibm 2 gates=40 cx=8 t=0 depth=28 qubits=5 ns=134829
+RESULT mcmt_z2_vchain_ibm 2 gates=40 cx=8 t=0 depth=28 qubits=5 ns=130275
 GATE mcmt_z2_vchain_ibm 2 RZ 4 p=1.5707963267948966
 GATE mcmt_z2_vchain_ibm 2 SX 4
 GATE mcmt_z2_vchain_ibm 2 RZ 4 p=1.5707963267948966
@@ -960,7 +960,7 @@ GATE mcmt_z2_vchain_ibm 2 RZ 4 p=-0.7853981633974483
 GATE mcmt_z2_vchain_ibm 2 RZ 4 p=1.5707963267948966
 GATE mcmt_z2_vchain_ibm 2 SX 4
 GATE mcmt_z2_vchain_ibm 2 RZ 4 p=1.5707963267948966
-RESULT mcmt_h2_vchain_ibm 2 gates=54 cx=10 t=0 depth=42 qubits=5 ns=66525
+RESULT mcmt_h2_vchain_ibm 2 gates=54 cx=10 t=0 depth=42 qubits=5 ns=141232
 GATE mcmt_h2_vchain_ibm 2 RZ 4 p=1.5707963267948966
 GATE mcmt_h2_vchain_ibm 2 SX 4
 GATE mcmt_h2_vchain_ibm 2 RZ 4 p=1.5707963267948966
@@ -1015,7 +1015,7 @@ GATE mcmt_h2_vchain_ibm 2 RZ 4 p=-0.7853981633974483
 GATE mcmt_h2_vchain_ibm 2 RZ 4 p=1.5707963267948966
 GATE mcmt_h2_vchain_ibm 2 SX 4
 GATE mcmt_h2_vchain_ibm 2 RZ 4 p=1.5707963267948966
-RESULT mcphase_noancilla_uni 2 gates=13 cx=6 t=0 depth=13 qubits=3 ns=49413
+RESULT mcphase_noancilla_uni 2 gates=13 cx=6 t=0 depth=13 qubits=3 ns=117458
 GATE mcphase_noancilla_uni 2 RZ 2 p=0.175
 GATE mcphase_noancilla_uni 2 CX 0 2
 GATE mcphase_noancilla_uni 2 RZ 2 p=-0.175
@@ -1029,7 +1029,7 @@ GATE mcphase_noancilla_uni 2 CX 0 1
 GATE mcphase_noancilla_uni 2 RZ 1 p=-0.175
 GATE mcphase_noancilla_uni 2 CX 0 1
 GATE mcphase_noancilla_uni 2 RZ 0 p=0.175
-RESULT mcrz_noancilla_uni 2 gates=8 cx=4 t=0 depth=8 qubits=3 ns=50009
+RESULT mcrz_noancilla_uni 2 gates=8 cx=4 t=0 depth=8 qubits=3 ns=106119
 GATE mcrz_noancilla_uni 2 RZ 2 p=0.225
 GATE mcrz_noancilla_uni 2 CX 0 2
 GATE mcrz_noancilla_uni 2 RZ 2 p=-0.225
@@ -1038,7 +1038,7 @@ GATE mcrz_noancilla_uni 2 RZ 2 p=0.225
 GATE mcrz_noancilla_uni 2 CX 0 2
 GATE mcrz_noancilla_uni 2 RZ 2 p=-0.225
 GATE mcrz_noancilla_uni 2 CX 1 2
-RESULT mcry_noancilla_uni 2 gates=20 cx=4 t=0 depth=20 qubits=3 ns=48253
+RESULT mcry_noancilla_uni 2 gates=20 cx=4 t=0 depth=20 qubits=3 ns=56299
 GATE mcry_noancilla_uni 2 SX 2
 GATE mcry_noancilla_uni 2 RZ 2 p=3.366592653589793
 GATE mcry_noancilla_uni 2 SX 2
@@ -1059,7 +1059,7 @@ GATE mcry_noancilla_uni 2 RZ 2 p=2.916592653589793
 GATE mcry_noancilla_uni 2 SX 2
 GATE mcry_noancilla_uni 2 RZ 2 p=3.141592653589793
 GATE mcry_noancilla_uni 2 CX 1 2
-RESULT mcrx_noancilla_uni 2 gates=10 cx=4 t=0 depth=10 qubits=3 ns=57509
+RESULT mcrx_noancilla_uni 2 gates=10 cx=4 t=0 depth=10 qubits=3 ns=31461
 GATE mcrx_noancilla_uni 2 H 2
 GATE mcrx_noancilla_uni 2 RZ 2 p=0.225
 GATE mcrx_noancilla_uni 2 CX 0 2
@@ -1070,7 +1070,7 @@ GATE mcrx_noancilla_uni 2 CX 0 2
 GATE mcrx_noancilla_uni 2 RZ 2 p=-0.225
 GATE mcrx_noancilla_uni 2 CX 1 2
 GATE mcrx_noancilla_uni 2 H 2
-RESULT mcu_noancilla_uni 2 gates=41 cx=14 t=0 depth=40 qubits=3 ns=62148
+RESULT mcu_noancilla_uni 2 gates=41 cx=14 t=0 depth=40 qubits=3 ns=84456
 GATE mcu_noancilla_uni 2 RZ 1 p=0.275
 GATE mcu_noancilla_uni 2 CX 0 1
 GATE mcu_noancilla_uni 2 RZ 1 p=-0.275
@@ -1112,17 +1112,17 @@ GATE mcu_noancilla_uni 2 RZ 2 p=0.1
 GATE mcu_noancilla_uni 2 CX 0 2
 GATE mcu_noancilla_uni 2 RZ 2 p=-0.1
 GATE mcu_noancilla_uni 2 CX 1 2
-RESULT mcmt_x2_noancilla_uni 2 gates=2 cx=0 t=0 depth=2 qubits=4 ns=44602
+RESULT mcmt_x2_noancilla_uni 2 gates=2 cx=0 t=0 depth=2 qubits=4 ns=70394
 GATE mcmt_x2_noancilla_uni 2 CCX 0 1 2
 GATE mcmt_x2_noancilla_uni 2 CCX 0 1 3
-RESULT mcmt_y2_noancilla_uni 2 gates=6 cx=0 t=0 depth=4 qubits=4 ns=48148
+RESULT mcmt_y2_noancilla_uni 2 gates=6 cx=0 t=0 depth=4 qubits=4 ns=69556
 GATE mcmt_y2_noancilla_uni 2 RZ 2 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 2 CCX 0 1 2
 GATE mcmt_y2_noancilla_uni 2 S 2
 GATE mcmt_y2_noancilla_uni 2 RZ 3 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 2 CCX 0 1 3
 GATE mcmt_y2_noancilla_uni 2 S 3
-RESULT mcmt_z2_noancilla_uni 2 gates=26 cx=12 t=0 depth=25 qubits=4 ns=72724
+RESULT mcmt_z2_noancilla_uni 2 gates=26 cx=12 t=0 depth=25 qubits=4 ns=80722
 GATE mcmt_z2_noancilla_uni 2 RZ 2 p=0.7853981633974483
 GATE mcmt_z2_noancilla_uni 2 CX 0 2
 GATE mcmt_z2_noancilla_uni 2 RZ 2 p=-0.7853981633974483
@@ -1149,7 +1149,7 @@ GATE mcmt_z2_noancilla_uni 2 CX 0 1
 GATE mcmt_z2_noancilla_uni 2 RZ 1 p=-0.7853981633974483
 GATE mcmt_z2_noancilla_uni 2 CX 0 1
 GATE mcmt_z2_noancilla_uni 2 RZ 0 p=0.7853981633974483
-RESULT mcmt_h2_noancilla_uni 2 gates=66 cx=20 t=0 depth=64 qubits=4 ns=74449
+RESULT mcmt_h2_noancilla_uni 2 gates=66 cx=20 t=0 depth=64 qubits=4 ns=94701
 GATE mcmt_h2_noancilla_uni 2 RZ 1 p=0.7853981633974483
 GATE mcmt_h2_noancilla_uni 2 CX 0 1
 GATE mcmt_h2_noancilla_uni 2 RZ 1 p=-0.7853981633974483
@@ -1216,7 +1216,7 @@ GATE mcmt_h2_noancilla_uni 2 RZ 3 p=2.748893571891069
 GATE mcmt_h2_noancilla_uni 2 SX 3
 GATE mcmt_h2_noancilla_uni 2 RZ 3 p=3.141592653589793
 GATE mcmt_h2_noancilla_uni 2 CX 1 3
-RESULT mcphase_vchain_uni 2 gates=7 cx=2 t=0 depth=6 qubits=4 ns=57799
+RESULT mcphase_vchain_uni 2 gates=7 cx=2 t=0 depth=6 qubits=4 ns=68446
 GATE mcphase_vchain_uni 2 CCX 0 1 3
 GATE mcphase_vchain_uni 2 RZ 3 p=0.35
 GATE mcphase_vchain_uni 2 CX 3 2
@@ -1224,14 +1224,14 @@ GATE mcphase_vchain_uni 2 RZ 2 p=-0.35
 GATE mcphase_vchain_uni 2 CX 3 2
 GATE mcphase_vchain_uni 2 RZ 2 p=0.35
 GATE mcphase_vchain_uni 2 CCX 0 1 3
-RESULT mcrz_vchain_uni 2 gates=6 cx=2 t=0 depth=5 qubits=4 ns=59840
+RESULT mcrz_vchain_uni 2 gates=6 cx=2 t=0 depth=5 qubits=4 ns=66738
 GATE mcrz_vchain_uni 2 CCX 0 1 3
 GATE mcrz_vchain_uni 2 RZ 2 p=0.45
 GATE mcrz_vchain_uni 2 CX 3 2
 GATE mcrz_vchain_uni 2 RZ 2 p=-0.45
 GATE mcrz_vchain_uni 2 CX 3 2
 GATE mcrz_vchain_uni 2 CCX 0 1 3
-RESULT mcry_vchain_uni 2 gates=12 cx=2 t=0 depth=11 qubits=4 ns=44158
+RESULT mcry_vchain_uni 2 gates=12 cx=2 t=0 depth=11 qubits=4 ns=68755
 GATE mcry_vchain_uni 2 CCX 0 1 3
 GATE mcry_vchain_uni 2 SX 2
 GATE mcry_vchain_uni 2 RZ 2 p=3.5915926535897933
@@ -1244,7 +1244,7 @@ GATE mcry_vchain_uni 2 SX 2
 GATE mcry_vchain_uni 2 RZ 2 p=3.141592653589793
 GATE mcry_vchain_uni 2 CX 3 2
 GATE mcry_vchain_uni 2 CCX 0 1 3
-RESULT mcrx_vchain_uni 2 gates=14 cx=2 t=0 depth=12 qubits=4 ns=51503
+RESULT mcrx_vchain_uni 2 gates=14 cx=2 t=0 depth=12 qubits=4 ns=69312
 GATE mcrx_vchain_uni 2 CCX 0 1 3
 GATE mcrx_vchain_uni 2 RZ 2 p=1.5707963267948966
 GATE mcrx_vchain_uni 2 SX 2
@@ -1259,7 +1259,7 @@ GATE mcrx_vchain_uni 2 RZ 2 p=3.141592653589793
 GATE mcrx_vchain_uni 2 CX 3 2
 GATE mcrx_vchain_uni 2 RZ 2 p=-1.5707963267948966
 GATE mcrx_vchain_uni 2 CCX 0 1 3
-RESULT mcu_vchain_uni 2 gates=16 cx=2 t=0 depth=13 qubits=4 ns=40019
+RESULT mcu_vchain_uni 2 gates=16 cx=2 t=0 depth=13 qubits=4 ns=57899
 GATE mcu_vchain_uni 2 CCX 0 1 3
 GATE mcu_vchain_uni 2 RZ 2 p=0.14999999999999997
 GATE mcu_vchain_uni 2 CX 3 2
@@ -1276,12 +1276,12 @@ GATE mcu_vchain_uni 2 RZ 2 p=3.141592653589793
 GATE mcu_vchain_uni 2 RZ 2 p=0.4
 GATE mcu_vchain_uni 2 RZ 3 p=0.55
 GATE mcu_vchain_uni 2 CCX 0 1 3
-RESULT mcmt_x2_vchain_uni 2 gates=4 cx=2 t=0 depth=4 qubits=5 ns=41598
+RESULT mcmt_x2_vchain_uni 2 gates=4 cx=2 t=0 depth=4 qubits=5 ns=60462
 GATE mcmt_x2_vchain_uni 2 CCX 0 1 4
 GATE mcmt_x2_vchain_uni 2 CX 4 2
 GATE mcmt_x2_vchain_uni 2 CX 4 3
 GATE mcmt_x2_vchain_uni 2 CCX 0 1 4
-RESULT mcmt_y2_vchain_uni 2 gates=8 cx=2 t=0 depth=4 qubits=5 ns=60371
+RESULT mcmt_y2_vchain_uni 2 gates=8 cx=2 t=0 depth=4 qubits=5 ns=49354
 GATE mcmt_y2_vchain_uni 2 CCX 0 1 4
 GATE mcmt_y2_vchain_uni 2 RZ 2 p=-1.5707963267948966
 GATE mcmt_y2_vchain_uni 2 CX 4 2
@@ -1290,7 +1290,7 @@ GATE mcmt_y2_vchain_uni 2 RZ 3 p=-1.5707963267948966
 GATE mcmt_y2_vchain_uni 2 CX 4 3
 GATE mcmt_y2_vchain_uni 2 S 3
 GATE mcmt_y2_vchain_uni 2 CCX 0 1 4
-RESULT mcmt_z2_vchain_uni 2 gates=8 cx=2 t=0 depth=4 qubits=5 ns=97375
+RESULT mcmt_z2_vchain_uni 2 gates=8 cx=2 t=0 depth=4 qubits=5 ns=40775
 GATE mcmt_z2_vchain_uni 2 CCX 0 1 4
 GATE mcmt_z2_vchain_uni 2 H 2
 GATE mcmt_z2_vchain_uni 2 CX 4 2
@@ -1299,7 +1299,7 @@ GATE mcmt_z2_vchain_uni 2 H 3
 GATE mcmt_z2_vchain_uni 2 CX 4 3
 GATE mcmt_z2_vchain_uni 2 H 3
 GATE mcmt_z2_vchain_uni 2 CCX 0 1 4
-RESULT mcmt_h2_vchain_uni 2 gates=30 cx=4 t=0 depth=21 qubits=5 ns=81746
+RESULT mcmt_h2_vchain_uni 2 gates=30 cx=4 t=0 depth=21 qubits=5 ns=50255
 GATE mcmt_h2_vchain_uni 2 CCX 0 1 4
 GATE mcmt_h2_vchain_uni 2 RZ 2 p=1.5707963267948966
 GATE mcmt_h2_vchain_uni 2 CX 4 2
@@ -1330,7 +1330,7 @@ GATE mcmt_h2_vchain_uni 2 RZ 3 p=3.141592653589793
 GATE mcmt_h2_vchain_uni 2 RZ 3 p=0.0
 GATE mcmt_h2_vchain_uni 2 RZ 4 p=1.5707963267948966
 GATE mcmt_h2_vchain_uni 2 CCX 0 1 4
-RESULT mcphase_noancilla_ibm 3 gates=57 cx=20 t=0 depth=47 qubits=4 ns=71270
+RESULT mcphase_noancilla_ibm 3 gates=57 cx=20 t=0 depth=47 qubits=4 ns=89541
 GATE mcphase_noancilla_ibm 3 RZ 3 p=0.175
 GATE mcphase_noancilla_ibm 3 RZ 3 p=1.5707963267948966
 GATE mcphase_noancilla_ibm 3 SX 3
@@ -1388,7 +1388,7 @@ GATE mcphase_noancilla_ibm 3 CX 0 1
 GATE mcphase_noancilla_ibm 3 RZ 1 p=-0.0875
 GATE mcphase_noancilla_ibm 3 CX 0 1
 GATE mcphase_noancilla_ibm 3 RZ 0 p=0.0875
-RESULT mcrz_noancilla_ibm 3 gates=44 cx=14 t=0 depth=34 qubits=4 ns=66302
+RESULT mcrz_noancilla_ibm 3 gates=44 cx=14 t=0 depth=34 qubits=4 ns=87469
 GATE mcrz_noancilla_ibm 3 RZ 3 p=0.225
 GATE mcrz_noancilla_ibm 3 RZ 3 p=1.5707963267948966
 GATE mcrz_noancilla_ibm 3 SX 3
@@ -1433,7 +1433,7 @@ GATE mcrz_noancilla_ibm 3 RZ 1 p=-0.7853981633974483
 GATE mcrz_noancilla_ibm 3 CX 0 1
 GATE mcrz_noancilla_ibm 3 RZ 3 p=-0.225
 GATE mcrz_noancilla_ibm 3 CX 2 3
-RESULT mcry_noancilla_ibm 3 gates=56 cx=14 t=0 depth=46 qubits=4 ns=70667
+RESULT mcry_noancilla_ibm 3 gates=56 cx=14 t=0 depth=46 qubits=4 ns=91671
 GATE mcry_noancilla_ibm 3 SX 3
 GATE mcry_noancilla_ibm 3 RZ 3 p=3.366592653589793
 GATE mcry_noancilla_ibm 3 SX 3
@@ -1490,7 +1490,7 @@ GATE mcry_noancilla_ibm 3 RZ 3 p=2.916592653589793
 GATE mcry_noancilla_ibm 3 SX 3
 GATE mcry_noancilla_ibm 3 RZ 3 p=3.141592653589793
 GATE mcry_noancilla_ibm 3 CX 2 3
-RESULT mcrx_noancilla_ibm 3 gates=50 cx=14 t=0 depth=40 qubits=4 ns=68843
+RESULT mcrx_noancilla_ibm 3 gates=50 cx=14 t=0 depth=40 qubits=4 ns=78544
 GATE mcrx_noancilla_ibm 3 RZ 3 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 3 SX 3
 GATE mcrx_noancilla_ibm 3 RZ 3 p=1.5707963267948966
@@ -1541,7 +1541,7 @@ GATE mcrx_noancilla_ibm 3 CX 2 3
 GATE mcrx_noancilla_ibm 3 RZ 3 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 3 SX 3
 GATE mcrx_noancilla_ibm 3 RZ 3 p=1.5707963267948966
-RESULT mcu_noancilla_ibm 3 gates=157 cx=48 t=0 depth=122 qubits=4 ns=89203
+RESULT mcu_noancilla_ibm 3 gates=157 cx=48 t=0 depth=122 qubits=4 ns=116498
 GATE mcu_noancilla_ibm 3 RZ 2 p=0.1375
 GATE mcu_noancilla_ibm 3 CX 0 2
 GATE mcu_noancilla_ibm 3 RZ 2 p=-0.1375
@@ -1699,7 +1699,7 @@ GATE mcu_noancilla_ibm 3 RZ 1 p=-0.7853981633974483
 GATE mcu_noancilla_ibm 3 CX 0 1
 GATE mcu_noancilla_ibm 3 RZ 3 p=-0.1
 GATE mcu_noancilla_ibm 3 CX 2 3
-RESULT mcmt_x2_noancilla_ibm 3 gates=37 cx=16 t=0 depth=30 qubits=5 ns=89374
+RESULT mcmt_x2_noancilla_ibm 3 gates=37 cx=16 t=0 depth=30 qubits=5 ns=88224
 GATE mcmt_x2_noancilla_ibm 3 CX 3 4
 GATE mcmt_x2_noancilla_ibm 3 RZ 3 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 3 SX 3
@@ -1737,7 +1737,7 @@ GATE mcmt_x2_noancilla_ibm 3 RZ 3 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 3 SX 3
 GATE mcmt_x2_noancilla_ibm 3 RZ 3 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 3 CX 3 4
-RESULT mcmt_y2_noancilla_ibm 3 gates=130 cx=40 t=0 depth=93 qubits=5 ns=146888
+RESULT mcmt_y2_noancilla_ibm 3 gates=130 cx=40 t=0 depth=93 qubits=5 ns=113562
 GATE mcmt_y2_noancilla_ibm 3 RZ 3 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 3 RZ 3 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 3 SX 3
@@ -1868,7 +1868,7 @@ GATE mcmt_y2_noancilla_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 3 SX 4
 GATE mcmt_y2_noancilla_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 3 RZ 4 p=1.5707963267948966
-RESULT mcmt_z2_noancilla_ibm 3 gates=114 cx=40 t=0 depth=89 qubits=5 ns=85805
+RESULT mcmt_z2_noancilla_ibm 3 gates=114 cx=40 t=0 depth=89 qubits=5 ns=102315
 GATE mcmt_z2_noancilla_ibm 3 RZ 3 p=0.7853981633974483
 GATE mcmt_z2_noancilla_ibm 3 RZ 3 p=1.5707963267948966
 GATE mcmt_z2_noancilla_ibm 3 SX 3
@@ -1983,7 +1983,7 @@ GATE mcmt_z2_noancilla_ibm 3 CX 0 1
 GATE mcmt_z2_noancilla_ibm 3 RZ 1 p=-0.39269908169872414
 GATE mcmt_z2_noancilla_ibm 3 CX 0 1
 GATE mcmt_z2_noancilla_ibm 3 RZ 0 p=0.39269908169872414
-RESULT mcmt_h2_noancilla_ibm 3 gates=226 cx=68 t=0 depth=176 qubits=5 ns=139825
+RESULT mcmt_h2_noancilla_ibm 3 gates=226 cx=68 t=0 depth=176 qubits=5 ns=149711
 GATE mcmt_h2_noancilla_ibm 3 RZ 2 p=0.39269908169872414
 GATE mcmt_h2_noancilla_ibm 3 CX 0 2
 GATE mcmt_h2_noancilla_ibm 3 RZ 2 p=-0.39269908169872414
@@ -2210,7 +2210,7 @@ GATE mcmt_h2_noancilla_ibm 3 RZ 4 p=2.748893571891069
 GATE mcmt_h2_noancilla_ibm 3 SX 4
 GATE mcmt_h2_noancilla_ibm 3 RZ 4 p=3.141592653589793
 GATE mcmt_h2_noancilla_ibm 3 CX 2 4
-RESULT mcphase_vchain_ibm 3 gates=57 cx=14 t=0 depth=48 qubits=6 ns=71751
+RESULT mcphase_vchain_ibm 3 gates=57 cx=14 t=0 depth=48 qubits=6 ns=85221
 GATE mcphase_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcphase_vchain_ibm 3 SX 4
 GATE mcphase_vchain_ibm 3 RZ 4 p=1.5707963267948966
@@ -2268,7 +2268,7 @@ GATE mcphase_vchain_ibm 3 RZ 4 p=-0.7853981633974483
 GATE mcphase_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcphase_vchain_ibm 3 SX 4
 GATE mcphase_vchain_ibm 3 RZ 4 p=1.5707963267948966
-RESULT mcrz_vchain_ibm 3 gates=56 cx=14 t=0 depth=47 qubits=6 ns=60905
+RESULT mcrz_vchain_ibm 3 gates=56 cx=14 t=0 depth=47 qubits=6 ns=92253
 GATE mcrz_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcrz_vchain_ibm 3 SX 4
 GATE mcrz_vchain_ibm 3 RZ 4 p=1.5707963267948966
@@ -2325,7 +2325,7 @@ GATE mcrz_vchain_ibm 3 RZ 4 p=-0.7853981633974483
 GATE mcrz_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcrz_vchain_ibm 3 SX 4
 GATE mcrz_vchain_ibm 3 RZ 4 p=1.5707963267948966
-RESULT mcry_vchain_ibm 3 gates=62 cx=14 t=0 depth=50 qubits=6 ns=132651
+RESULT mcry_vchain_ibm 3 gates=62 cx=14 t=0 depth=50 qubits=6 ns=147796
 GATE mcry_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcry_vchain_ibm 3 SX 4
 GATE mcry_vchain_ibm 3 RZ 4 p=1.5707963267948966
@@ -2388,7 +2388,7 @@ GATE mcry_vchain_ibm 3 RZ 4 p=-0.7853981633974483
 GATE mcry_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcry_vchain_ibm 3 SX 4
 GATE mcry_vchain_ibm 3 RZ 4 p=1.5707963267948966
-RESULT mcrx_vchain_ibm 3 gates=64 cx=14 t=0 depth=50 qubits=6 ns=80442
+RESULT mcrx_vchain_ibm 3 gates=64 cx=14 t=0 depth=50 qubits=6 ns=152761
 GATE mcrx_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcrx_vchain_ibm 3 SX 4
 GATE mcrx_vchain_ibm 3 RZ 4 p=1.5707963267948966
@@ -2453,7 +2453,7 @@ GATE mcrx_vchain_ibm 3 RZ 4 p=-0.7853981633974483
 GATE mcrx_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcrx_vchain_ibm 3 SX 4
 GATE mcrx_vchain_ibm 3 RZ 4 p=1.5707963267948966
-RESULT mcu_vchain_ibm 3 gates=66 cx=14 t=0 depth=52 qubits=6 ns=116651
+RESULT mcu_vchain_ibm 3 gates=66 cx=14 t=0 depth=52 qubits=6 ns=142121
 GATE mcu_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcu_vchain_ibm 3 SX 4
 GATE mcu_vchain_ibm 3 RZ 4 p=1.5707963267948966
@@ -2520,7 +2520,7 @@ GATE mcu_vchain_ibm 3 RZ 4 p=-0.7853981633974483
 GATE mcu_vchain_ibm 3 RZ 4 p=1.5707963267948966
 GATE mcu_vchain_ibm 3 SX 4
 GATE mcu_vchain_ibm 3 RZ 4 p=1.5707963267948966
-RESULT mcmt_x2_vchain_ibm 3 gates=54 cx=14 t=0 depth=46 qubits=7 ns=124552
+RESULT mcmt_x2_vchain_ibm 3 gates=54 cx=14 t=0 depth=46 qubits=7 ns=60182
 GATE mcmt_x2_vchain_ibm 3 RZ 5 p=1.5707963267948966
 GATE mcmt_x2_vchain_ibm 3 SX 5
 GATE mcmt_x2_vchain_ibm 3 RZ 5 p=1.5707963267948966
@@ -2575,7 +2575,7 @@ GATE mcmt_x2_vchain_ibm 3 RZ 5 p=-0.7853981633974483
 GATE mcmt_x2_vchain_ibm 3 RZ 5 p=1.5707963267948966
 GATE mcmt_x2_vchain_ibm 3 SX 5
 GATE mcmt_x2_vchain_ibm 3 RZ 5 p=1.5707963267948966
-RESULT mcmt_y2_vchain_ibm 3 gates=58 cx=14 t=0 depth=46 qubits=7 ns=111148
+RESULT mcmt_y2_vchain_ibm 3 gates=58 cx=14 t=0 depth=46 qubits=7 ns=94820
 GATE mcmt_y2_vchain_ibm 3 RZ 5 p=1.5707963267948966
 GATE mcmt_y2_vchain_ibm 3 SX 5
 GATE mcmt_y2_vchain_ibm 3 RZ 5 p=1.5707963267948966
@@ -2634,7 +2634,7 @@ GATE mcmt_y2_vchain_ibm 3 RZ 5 p=-0.7853981633974483
 GATE mcmt_y2_vchain_ibm 3 RZ 5 p=1.5707963267948966
 GATE mcmt_y2_vchain_ibm 3 SX 5
 GATE mcmt_y2_vchain_ibm 3 RZ 5 p=1.5707963267948966
-RESULT mcmt_z2_vchain_ibm 3 gates=66 cx=14 t=0 depth=46 qubits=7 ns=97196
+RESULT mcmt_z2_vchain_ibm 3 gates=66 cx=14 t=0 depth=46 qubits=7 ns=86442
 GATE mcmt_z2_vchain_ibm 3 RZ 5 p=1.5707963267948966
 GATE mcmt_z2_vchain_ibm 3 SX 5
 GATE mcmt_z2_vchain_ibm 3 RZ 5 p=1.5707963267948966
@@ -2701,7 +2701,7 @@ GATE mcmt_z2_vchain_ibm 3 RZ 5 p=-0.7853981633974483
 GATE mcmt_z2_vchain_ibm 3 RZ 5 p=1.5707963267948966
 GATE mcmt_z2_vchain_ibm 3 SX 5
 GATE mcmt_z2_vchain_ibm 3 RZ 5 p=1.5707963267948966
-RESULT mcmt_h2_vchain_ibm 3 gates=80 cx=16 t=0 depth=60 qubits=7 ns=151652
+RESULT mcmt_h2_vchain_ibm 3 gates=80 cx=16 t=0 depth=60 qubits=7 ns=98560
 GATE mcmt_h2_vchain_ibm 3 RZ 5 p=1.5707963267948966
 GATE mcmt_h2_vchain_ibm 3 SX 5
 GATE mcmt_h2_vchain_ibm 3 RZ 5 p=1.5707963267948966
@@ -2782,7 +2782,7 @@ GATE mcmt_h2_vchain_ibm 3 RZ 5 p=-0.7853981633974483
 GATE mcmt_h2_vchain_ibm 3 RZ 5 p=1.5707963267948966
 GATE mcmt_h2_vchain_ibm 3 SX 5
 GATE mcmt_h2_vchain_ibm 3 RZ 5 p=1.5707963267948966
-RESULT mcphase_noancilla_uni 3 gates=21 cx=8 t=0 depth=21 qubits=4 ns=109421
+RESULT mcphase_noancilla_uni 3 gates=21 cx=8 t=0 depth=21 qubits=4 ns=120529
 GATE mcphase_noancilla_uni 3 RZ 3 p=0.175
 GATE mcphase_noancilla_uni 3 CCX 0 1 3
 GATE mcphase_noancilla_uni 3 RZ 3 p=-0.175
@@ -2804,7 +2804,7 @@ GATE mcphase_noancilla_uni 3 CX 0 1
 GATE mcphase_noancilla_uni 3 RZ 1 p=-0.0875
 GATE mcphase_noancilla_uni 3 CX 0 1
 GATE mcphase_noancilla_uni 3 RZ 0 p=0.0875
-RESULT mcrz_noancilla_uni 3 gates=8 cx=2 t=0 depth=8 qubits=4 ns=96590
+RESULT mcrz_noancilla_uni 3 gates=8 cx=2 t=0 depth=8 qubits=4 ns=111690
 GATE mcrz_noancilla_uni 3 RZ 3 p=0.225
 GATE mcrz_noancilla_uni 3 CCX 0 1 3
 GATE mcrz_noancilla_uni 3 RZ 3 p=-0.225
@@ -2813,7 +2813,7 @@ GATE mcrz_noancilla_uni 3 RZ 3 p=0.225
 GATE mcrz_noancilla_uni 3 CCX 0 1 3
 GATE mcrz_noancilla_uni 3 RZ 3 p=-0.225
 GATE mcrz_noancilla_uni 3 CX 2 3
-RESULT mcry_noancilla_uni 3 gates=20 cx=2 t=0 depth=20 qubits=4 ns=102383
+RESULT mcry_noancilla_uni 3 gates=20 cx=2 t=0 depth=20 qubits=4 ns=128113
 GATE mcry_noancilla_uni 3 SX 3
 GATE mcry_noancilla_uni 3 RZ 3 p=3.366592653589793
 GATE mcry_noancilla_uni 3 SX 3
@@ -2834,7 +2834,7 @@ GATE mcry_noancilla_uni 3 RZ 3 p=2.916592653589793
 GATE mcry_noancilla_uni 3 SX 3
 GATE mcry_noancilla_uni 3 RZ 3 p=3.141592653589793
 GATE mcry_noancilla_uni 3 CX 2 3
-RESULT mcrx_noancilla_uni 3 gates=10 cx=2 t=0 depth=10 qubits=4 ns=91166
+RESULT mcrx_noancilla_uni 3 gates=10 cx=2 t=0 depth=10 qubits=4 ns=105839
 GATE mcrx_noancilla_uni 3 H 3
 GATE mcrx_noancilla_uni 3 RZ 3 p=0.225
 GATE mcrx_noancilla_uni 3 CCX 0 1 3
@@ -2845,7 +2845,7 @@ GATE mcrx_noancilla_uni 3 CCX 0 1 3
 GATE mcrx_noancilla_uni 3 RZ 3 p=-0.225
 GATE mcrx_noancilla_uni 3 CX 2 3
 GATE mcrx_noancilla_uni 3 H 3
-RESULT mcu_noancilla_uni 3 gates=49 cx=12 t=0 depth=48 qubits=4 ns=97166
+RESULT mcu_noancilla_uni 3 gates=49 cx=12 t=0 depth=48 qubits=4 ns=63145
 GATE mcu_noancilla_uni 3 RZ 2 p=0.1375
 GATE mcu_noancilla_uni 3 CX 0 2
 GATE mcu_noancilla_uni 3 RZ 2 p=-0.1375
@@ -2895,7 +2895,7 @@ GATE mcu_noancilla_uni 3 RZ 3 p=0.1
 GATE mcu_noancilla_uni 3 CCX 0 1 3
 GATE mcu_noancilla_uni 3 RZ 3 p=-0.1
 GATE mcu_noancilla_uni 3 CX 2 3
-RESULT mcmt_x2_noancilla_uni 3 gates=33 cx=16 t=0 depth=28 qubits=5 ns=114446
+RESULT mcmt_x2_noancilla_uni 3 gates=33 cx=16 t=0 depth=28 qubits=5 ns=134753
 GATE mcmt_x2_noancilla_uni 3 CX 3 4
 GATE mcmt_x2_noancilla_uni 3 H 3
 GATE mcmt_x2_noancilla_uni 3 RZ 0 p=0.39269908169872414
@@ -2929,7 +2929,7 @@ GATE mcmt_x2_noancilla_uni 3 RZ 3 p=-0.39269908169872414
 GATE mcmt_x2_noancilla_uni 3 CX 0 3
 GATE mcmt_x2_noancilla_uni 3 H 3
 GATE mcmt_x2_noancilla_uni 3 CX 3 4
-RESULT mcmt_y2_noancilla_uni 3 gates=50 cx=16 t=0 depth=43 qubits=5 ns=120439
+RESULT mcmt_y2_noancilla_uni 3 gates=50 cx=16 t=0 depth=43 qubits=5 ns=64359
 GATE mcmt_y2_noancilla_uni 3 RZ 3 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 3 H 3
 GATE mcmt_y2_noancilla_uni 3 RZ 3 p=0.7853981633974483
@@ -2980,7 +2980,7 @@ GATE mcmt_y2_noancilla_uni 3 CX 0 1
 GATE mcmt_y2_noancilla_uni 3 RZ 0 p=0.39269908169872414
 GATE mcmt_y2_noancilla_uni 3 H 4
 GATE mcmt_y2_noancilla_uni 3 S 4
-RESULT mcmt_z2_noancilla_uni 3 gates=42 cx=16 t=0 depth=41 qubits=5 ns=90598
+RESULT mcmt_z2_noancilla_uni 3 gates=42 cx=16 t=0 depth=41 qubits=5 ns=123373
 GATE mcmt_z2_noancilla_uni 3 RZ 3 p=0.7853981633974483
 GATE mcmt_z2_noancilla_uni 3 CCX 0 1 3
 GATE mcmt_z2_noancilla_uni 3 RZ 3 p=-0.7853981633974483
@@ -3023,7 +3023,7 @@ GATE mcmt_z2_noancilla_uni 3 CX 0 1
 GATE mcmt_z2_noancilla_uni 3 RZ 1 p=-0.39269908169872414
 GATE mcmt_z2_noancilla_uni 3 CX 0 1
 GATE mcmt_z2_noancilla_uni 3 RZ 0 p=0.39269908169872414
-RESULT mcmt_h2_noancilla_uni 3 gates=82 cx=20 t=0 depth=80 qubits=5 ns=145631
+RESULT mcmt_h2_noancilla_uni 3 gates=82 cx=20 t=0 depth=80 qubits=5 ns=69805
 GATE mcmt_h2_noancilla_uni 3 RZ 2 p=0.39269908169872414
 GATE mcmt_h2_noancilla_uni 3 CX 0 2
 GATE mcmt_h2_noancilla_uni 3 RZ 2 p=-0.39269908169872414
@@ -3106,7 +3106,7 @@ GATE mcmt_h2_noancilla_uni 3 RZ 4 p=2.748893571891069
 GATE mcmt_h2_noancilla_uni 3 SX 4
 GATE mcmt_h2_noancilla_uni 3 RZ 4 p=3.141592653589793
 GATE mcmt_h2_noancilla_uni 3 CX 2 4
-RESULT mcphase_vchain_uni 3 gates=9 cx=2 t=0 depth=8 qubits=6 ns=107132
+RESULT mcphase_vchain_uni 3 gates=9 cx=2 t=0 depth=8 qubits=6 ns=113761
 GATE mcphase_vchain_uni 3 CCX 0 1 4
 GATE mcphase_vchain_uni 3 CCX 2 4 5
 GATE mcphase_vchain_uni 3 RZ 5 p=0.35
@@ -3116,7 +3116,7 @@ GATE mcphase_vchain_uni 3 CX 5 3
 GATE mcphase_vchain_uni 3 RZ 3 p=0.35
 GATE mcphase_vchain_uni 3 CCX 2 4 5
 GATE mcphase_vchain_uni 3 CCX 0 1 4
-RESULT mcrz_vchain_uni 3 gates=8 cx=2 t=0 depth=7 qubits=6 ns=78441
+RESULT mcrz_vchain_uni 3 gates=8 cx=2 t=0 depth=7 qubits=6 ns=106589
 GATE mcrz_vchain_uni 3 CCX 0 1 4
 GATE mcrz_vchain_uni 3 CCX 2 4 5
 GATE mcrz_vchain_uni 3 RZ 3 p=0.45
@@ -3125,7 +3125,7 @@ GATE mcrz_vchain_uni 3 RZ 3 p=-0.45
 GATE mcrz_vchain_uni 3 CX 5 3
 GATE mcrz_vchain_uni 3 CCX 2 4 5
 GATE mcrz_vchain_uni 3 CCX 0 1 4
-RESULT mcry_vchain_uni 3 gates=14 cx=2 t=0 depth=12 qubits=6 ns=76086
+RESULT mcry_vchain_uni 3 gates=14 cx=2 t=0 depth=12 qubits=6 ns=106127
 GATE mcry_vchain_uni 3 CCX 0 1 4
 GATE mcry_vchain_uni 3 CCX 2 4 5
 GATE mcry_vchain_uni 3 SX 3
@@ -3140,7 +3140,7 @@ GATE mcry_vchain_uni 3 RZ 3 p=3.141592653589793
 GATE mcry_vchain_uni 3 CX 5 3
 GATE mcry_vchain_uni 3 CCX 2 4 5
 GATE mcry_vchain_uni 3 CCX 0 1 4
-RESULT mcrx_vchain_uni 3 gates=16 cx=2 t=0 depth=13 qubits=6 ns=51330
+RESULT mcrx_vchain_uni 3 gates=16 cx=2 t=0 depth=13 qubits=6 ns=47365
 GATE mcrx_vchain_uni 3 CCX 0 1 4
 GATE mcrx_vchain_uni 3 CCX 2 4 5
 GATE mcrx_vchain_uni 3 RZ 3 p=1.5707963267948966
@@ -3157,7 +3157,7 @@ GATE mcrx_vchain_uni 3 CX 5 3
 GATE mcrx_vchain_uni 3 RZ 3 p=-1.5707963267948966
 GATE mcrx_vchain_uni 3 CCX 2 4 5
 GATE mcrx_vchain_uni 3 CCX 0 1 4
-RESULT mcu_vchain_uni 3 gates=18 cx=2 t=0 depth=14 qubits=6 ns=49474
+RESULT mcu_vchain_uni 3 gates=18 cx=2 t=0 depth=14 qubits=6 ns=43816
 GATE mcu_vchain_uni 3 CCX 0 1 4
 GATE mcu_vchain_uni 3 CCX 2 4 5
 GATE mcu_vchain_uni 3 RZ 3 p=0.14999999999999997
@@ -3176,14 +3176,14 @@ GATE mcu_vchain_uni 3 RZ 3 p=0.4
 GATE mcu_vchain_uni 3 RZ 5 p=0.55
 GATE mcu_vchain_uni 3 CCX 2 4 5
 GATE mcu_vchain_uni 3 CCX 0 1 4
-RESULT mcmt_x2_vchain_uni 3 gates=6 cx=2 t=0 depth=6 qubits=7 ns=48243
+RESULT mcmt_x2_vchain_uni 3 gates=6 cx=2 t=0 depth=6 qubits=7 ns=46531
 GATE mcmt_x2_vchain_uni 3 CCX 0 1 5
 GATE mcmt_x2_vchain_uni 3 CCX 2 5 6
 GATE mcmt_x2_vchain_uni 3 CX 6 3
 GATE mcmt_x2_vchain_uni 3 CX 6 4
 GATE mcmt_x2_vchain_uni 3 CCX 2 5 6
 GATE mcmt_x2_vchain_uni 3 CCX 0 1 5
-RESULT mcmt_y2_vchain_uni 3 gates=10 cx=2 t=0 depth=6 qubits=7 ns=43558
+RESULT mcmt_y2_vchain_uni 3 gates=10 cx=2 t=0 depth=6 qubits=7 ns=50245
 GATE mcmt_y2_vchain_uni 3 CCX 0 1 5
 GATE mcmt_y2_vchain_uni 3 CCX 2 5 6
 GATE mcmt_y2_vchain_uni 3 RZ 3 p=-1.5707963267948966
@@ -3194,7 +3194,7 @@ GATE mcmt_y2_vchain_uni 3 CX 6 4
 GATE mcmt_y2_vchain_uni 3 S 4
 GATE mcmt_y2_vchain_uni 3 CCX 2 5 6
 GATE mcmt_y2_vchain_uni 3 CCX 0 1 5
-RESULT mcmt_z2_vchain_uni 3 gates=10 cx=2 t=0 depth=6 qubits=7 ns=63425
+RESULT mcmt_z2_vchain_uni 3 gates=10 cx=2 t=0 depth=6 qubits=7 ns=51342
 GATE mcmt_z2_vchain_uni 3 CCX 0 1 5
 GATE mcmt_z2_vchain_uni 3 CCX 2 5 6
 GATE mcmt_z2_vchain_uni 3 H 3
@@ -3205,7 +3205,7 @@ GATE mcmt_z2_vchain_uni 3 CX 6 4
 GATE mcmt_z2_vchain_uni 3 H 4
 GATE mcmt_z2_vchain_uni 3 CCX 2 5 6
 GATE mcmt_z2_vchain_uni 3 CCX 0 1 5
-RESULT mcmt_h2_vchain_uni 3 gates=32 cx=4 t=0 depth=22 qubits=7 ns=100250
+RESULT mcmt_h2_vchain_uni 3 gates=32 cx=4 t=0 depth=22 qubits=7 ns=59922
 GATE mcmt_h2_vchain_uni 3 CCX 0 1 5
 GATE mcmt_h2_vchain_uni 3 CCX 2 5 6
 GATE mcmt_h2_vchain_uni 3 RZ 3 p=1.5707963267948966
@@ -3238,7 +3238,7 @@ GATE mcmt_h2_vchain_uni 3 RZ 4 p=0.0
 GATE mcmt_h2_vchain_uni 3 RZ 6 p=1.5707963267948966
 GATE mcmt_h2_vchain_uni 3 CCX 2 5 6
 GATE mcmt_h2_vchain_uni 3 CCX 0 1 5
-RESULT mcphase_noancilla_ibm 4 gates=137 cx=44 t=0 depth=106 qubits=5 ns=173152
+RESULT mcphase_noancilla_ibm 4 gates=137 cx=44 t=0 depth=106 qubits=5 ns=89041
 GATE mcphase_noancilla_ibm 4 RZ 4 p=0.175
 GATE mcphase_noancilla_ibm 4 RZ 4 p=1.5707963267948966
 GATE mcphase_noancilla_ibm 4 SX 4
@@ -3376,7 +3376,7 @@ GATE mcphase_noancilla_ibm 4 CX 0 1
 GATE mcphase_noancilla_ibm 4 RZ 1 p=-0.04375
 GATE mcphase_noancilla_ibm 4 CX 0 1
 GATE mcphase_noancilla_ibm 4 RZ 0 p=0.04375
-RESULT mcrz_noancilla_ibm 4 gates=80 cx=24 t=0 depth=60 qubits=5 ns=141448
+RESULT mcrz_noancilla_ibm 4 gates=80 cx=24 t=0 depth=60 qubits=5 ns=84198
 GATE mcrz_noancilla_ibm 4 RZ 4 p=0.225
 GATE mcrz_noancilla_ibm 4 RZ 4 p=1.5707963267948966
 GATE mcrz_noancilla_ibm 4 SX 4
@@ -3457,7 +3457,7 @@ GATE mcrz_noancilla_ibm 4 CX 2 3
 GATE mcrz_noancilla_ibm 4 RZ 2 p=0.7853981633974483
 GATE mcrz_noancilla_ibm 4 RZ 3 p=-0.7853981633974483
 GATE mcrz_noancilla_ibm 4 CX 2 3
-RESULT mcry_noancilla_ibm 4 gates=92 cx=24 t=0 depth=72 qubits=5 ns=142569
+RESULT mcry_noancilla_ibm 4 gates=92 cx=24 t=0 depth=72 qubits=5 ns=58828
 GATE mcry_noancilla_ibm 4 SX 4
 GATE mcry_noancilla_ibm 4 RZ 4 p=3.366592653589793
 GATE mcry_noancilla_ibm 4 SX 4
@@ -3550,7 +3550,7 @@ GATE mcry_noancilla_ibm 4 CX 2 3
 GATE mcry_noancilla_ibm 4 RZ 2 p=0.7853981633974483
 GATE mcry_noancilla_ibm 4 RZ 3 p=-0.7853981633974483
 GATE mcry_noancilla_ibm 4 CX 2 3
-RESULT mcrx_noancilla_ibm 4 gates=86 cx=24 t=0 depth=66 qubits=5 ns=95073
+RESULT mcrx_noancilla_ibm 4 gates=86 cx=24 t=0 depth=66 qubits=5 ns=181504
 GATE mcrx_noancilla_ibm 4 RZ 4 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 4 SX 4
 GATE mcrx_noancilla_ibm 4 RZ 4 p=1.5707963267948966
@@ -3637,7 +3637,7 @@ GATE mcrx_noancilla_ibm 4 CX 2 3
 GATE mcrx_noancilla_ibm 4 RZ 4 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 4 SX 4
 GATE mcrx_noancilla_ibm 4 RZ 4 p=1.5707963267948966
-RESULT mcu_noancilla_ibm 4 gates=309 cx=92 t=0 depth=234 qubits=5 ns=207912
+RESULT mcu_noancilla_ibm 4 gates=309 cx=92 t=0 depth=234 qubits=5 ns=310730
 GATE mcu_noancilla_ibm 4 RZ 3 p=0.1375
 GATE mcu_noancilla_ibm 4 RZ 3 p=1.5707963267948966
 GATE mcu_noancilla_ibm 4 SX 3
@@ -3947,7 +3947,7 @@ GATE mcu_noancilla_ibm 4 CX 2 3
 GATE mcu_noancilla_ibm 4 RZ 2 p=0.7853981633974483
 GATE mcu_noancilla_ibm 4 RZ 3 p=-0.7853981633974483
 GATE mcu_noancilla_ibm 4 CX 2 3
-RESULT mcmt_x2_noancilla_ibm 4 gates=122 cx=32 t=0 depth=91 qubits=6 ns=91238
+RESULT mcmt_x2_noancilla_ibm 4 gates=122 cx=32 t=0 depth=91 qubits=6 ns=177830
 GATE mcmt_x2_noancilla_ibm 4 CX 4 5
 GATE mcmt_x2_noancilla_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 4 SX 5
@@ -4070,7 +4070,7 @@ GATE mcmt_x2_noancilla_ibm 4 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 4 SX 1
 GATE mcmt_x2_noancilla_ibm 4 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 4 CX 4 5
-RESULT mcmt_y2_noancilla_ibm 4 gates=290 cx=88 t=0 depth=211 qubits=6 ns=173637
+RESULT mcmt_y2_noancilla_ibm 4 gates=290 cx=88 t=0 depth=211 qubits=6 ns=137661
 GATE mcmt_y2_noancilla_ibm 4 RZ 4 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 4 RZ 4 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 4 SX 4
@@ -4361,7 +4361,7 @@ GATE mcmt_y2_noancilla_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 4 SX 5
 GATE mcmt_y2_noancilla_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 4 RZ 5 p=1.5707963267948966
-RESULT mcmt_z2_noancilla_ibm 4 gates=274 cx=88 t=0 depth=207 qubits=6 ns=126516
+RESULT mcmt_z2_noancilla_ibm 4 gates=274 cx=88 t=0 depth=207 qubits=6 ns=170618
 GATE mcmt_z2_noancilla_ibm 4 RZ 4 p=0.7853981633974483
 GATE mcmt_z2_noancilla_ibm 4 RZ 4 p=1.5707963267948966
 GATE mcmt_z2_noancilla_ibm 4 SX 4
@@ -4636,7 +4636,7 @@ GATE mcmt_z2_noancilla_ibm 4 CX 0 1
 GATE mcmt_z2_noancilla_ibm 4 RZ 1 p=-0.19634954084936207
 GATE mcmt_z2_noancilla_ibm 4 CX 0 1
 GATE mcmt_z2_noancilla_ibm 4 RZ 0 p=0.19634954084936207
-RESULT mcmt_h2_noancilla_ibm 4 gates=458 cx=136 t=0 depth=347 qubits=6 ns=213684
+RESULT mcmt_h2_noancilla_ibm 4 gates=458 cx=136 t=0 depth=347 qubits=6 ns=231034
 GATE mcmt_h2_noancilla_ibm 4 RZ 3 p=0.39269908169872414
 GATE mcmt_h2_noancilla_ibm 4 RZ 3 p=1.5707963267948966
 GATE mcmt_h2_noancilla_ibm 4 SX 3
@@ -5095,7 +5095,7 @@ GATE mcmt_h2_noancilla_ibm 4 CX 2 3
 GATE mcmt_h2_noancilla_ibm 4 RZ 2 p=0.7853981633974483
 GATE mcmt_h2_noancilla_ibm 4 RZ 3 p=-0.7853981633974483
 GATE mcmt_h2_noancilla_ibm 4 CX 2 3
-RESULT mcphase_vchain_ibm 4 gates=83 cx=20 t=0 depth=66 qubits=8 ns=77325
+RESULT mcphase_vchain_ibm 4 gates=83 cx=20 t=0 depth=66 qubits=8 ns=186750
 GATE mcphase_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcphase_vchain_ibm 4 SX 5
 GATE mcphase_vchain_ibm 4 RZ 5 p=1.5707963267948966
@@ -5179,7 +5179,7 @@ GATE mcphase_vchain_ibm 4 RZ 5 p=-0.7853981633974483
 GATE mcphase_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcphase_vchain_ibm 4 SX 5
 GATE mcphase_vchain_ibm 4 RZ 5 p=1.5707963267948966
-RESULT mcrz_vchain_ibm 4 gates=82 cx=20 t=0 depth=65 qubits=8 ns=77480
+RESULT mcrz_vchain_ibm 4 gates=82 cx=20 t=0 depth=65 qubits=8 ns=163765
 GATE mcrz_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcrz_vchain_ibm 4 SX 5
 GATE mcrz_vchain_ibm 4 RZ 5 p=1.5707963267948966
@@ -5262,7 +5262,7 @@ GATE mcrz_vchain_ibm 4 RZ 5 p=-0.7853981633974483
 GATE mcrz_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcrz_vchain_ibm 4 SX 5
 GATE mcrz_vchain_ibm 4 RZ 5 p=1.5707963267948966
-RESULT mcry_vchain_ibm 4 gates=88 cx=20 t=0 depth=68 qubits=8 ns=78883
+RESULT mcry_vchain_ibm 4 gates=88 cx=20 t=0 depth=68 qubits=8 ns=67036
 GATE mcry_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcry_vchain_ibm 4 SX 5
 GATE mcry_vchain_ibm 4 RZ 5 p=1.5707963267948966
@@ -5351,7 +5351,7 @@ GATE mcry_vchain_ibm 4 RZ 5 p=-0.7853981633974483
 GATE mcry_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcry_vchain_ibm 4 SX 5
 GATE mcry_vchain_ibm 4 RZ 5 p=1.5707963267948966
-RESULT mcrx_vchain_ibm 4 gates=90 cx=20 t=0 depth=68 qubits=8 ns=147212
+RESULT mcrx_vchain_ibm 4 gates=90 cx=20 t=0 depth=68 qubits=8 ns=78234
 GATE mcrx_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcrx_vchain_ibm 4 SX 5
 GATE mcrx_vchain_ibm 4 RZ 5 p=1.5707963267948966
@@ -5442,7 +5442,7 @@ GATE mcrx_vchain_ibm 4 RZ 5 p=-0.7853981633974483
 GATE mcrx_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcrx_vchain_ibm 4 SX 5
 GATE mcrx_vchain_ibm 4 RZ 5 p=1.5707963267948966
-RESULT mcu_vchain_ibm 4 gates=92 cx=20 t=0 depth=70 qubits=8 ns=138295
+RESULT mcu_vchain_ibm 4 gates=92 cx=20 t=0 depth=70 qubits=8 ns=104552
 GATE mcu_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcu_vchain_ibm 4 SX 5
 GATE mcu_vchain_ibm 4 RZ 5 p=1.5707963267948966
@@ -5535,7 +5535,7 @@ GATE mcu_vchain_ibm 4 RZ 5 p=-0.7853981633974483
 GATE mcu_vchain_ibm 4 RZ 5 p=1.5707963267948966
 GATE mcu_vchain_ibm 4 SX 5
 GATE mcu_vchain_ibm 4 RZ 5 p=1.5707963267948966
-RESULT mcmt_x2_vchain_ibm 4 gates=80 cx=20 t=0 depth=64 qubits=9 ns=73499
+RESULT mcmt_x2_vchain_ibm 4 gates=80 cx=20 t=0 depth=64 qubits=9 ns=82356
 GATE mcmt_x2_vchain_ibm 4 RZ 6 p=1.5707963267948966
 GATE mcmt_x2_vchain_ibm 4 SX 6
 GATE mcmt_x2_vchain_ibm 4 RZ 6 p=1.5707963267948966
@@ -5616,7 +5616,7 @@ GATE mcmt_x2_vchain_ibm 4 RZ 6 p=-0.7853981633974483
 GATE mcmt_x2_vchain_ibm 4 RZ 6 p=1.5707963267948966
 GATE mcmt_x2_vchain_ibm 4 SX 6
 GATE mcmt_x2_vchain_ibm 4 RZ 6 p=1.5707963267948966
-RESULT mcmt_y2_vchain_ibm 4 gates=84 cx=20 t=0 depth=64 qubits=9 ns=94006
+RESULT mcmt_y2_vchain_ibm 4 gates=84 cx=20 t=0 depth=64 qubits=9 ns=66565
 GATE mcmt_y2_vchain_ibm 4 RZ 6 p=1.5707963267948966
 GATE mcmt_y2_vchain_ibm 4 SX 6
 GATE mcmt_y2_vchain_ibm 4 RZ 6 p=1.5707963267948966
@@ -5701,7 +5701,7 @@ GATE mcmt_y2_vchain_ibm 4 RZ 6 p=-0.7853981633974483
 GATE mcmt_y2_vchain_ibm 4 RZ 6 p=1.5707963267948966
 GATE mcmt_y2_vchain_ibm 4 SX 6
 GATE mcmt_y2_vchain_ibm 4 RZ 6 p=1.5707963267948966
-RESULT mcmt_z2_vchain_ibm 4 gates=92 cx=20 t=0 depth=64 qubits=9 ns=139664
+RESULT mcmt_z2_vchain_ibm 4 gates=92 cx=20 t=0 depth=64 qubits=9 ns=77639
 GATE mcmt_z2_vchain_ibm 4 RZ 6 p=1.5707963267948966
 GATE mcmt_z2_vchain_ibm 4 SX 6
 GATE mcmt_z2_vchain_ibm 4 RZ 6 p=1.5707963267948966
@@ -5794,7 +5794,7 @@ GATE mcmt_z2_vchain_ibm 4 RZ 6 p=-0.7853981633974483
 GATE mcmt_z2_vchain_ibm 4 RZ 6 p=1.5707963267948966
 GATE mcmt_z2_vchain_ibm 4 SX 6
 GATE mcmt_z2_vchain_ibm 4 RZ 6 p=1.5707963267948966
-RESULT mcmt_h2_vchain_ibm 4 gates=106 cx=22 t=0 depth=78 qubits=9 ns=85944
+RESULT mcmt_h2_vchain_ibm 4 gates=106 cx=22 t=0 depth=78 qubits=9 ns=73505
 GATE mcmt_h2_vchain_ibm 4 RZ 6 p=1.5707963267948966
 GATE mcmt_h2_vchain_ibm 4 SX 6
 GATE mcmt_h2_vchain_ibm 4 RZ 6 p=1.5707963267948966
@@ -5901,7 +5901,7 @@ GATE mcmt_h2_vchain_ibm 4 RZ 6 p=-0.7853981633974483
 GATE mcmt_h2_vchain_ibm 4 RZ 6 p=1.5707963267948966
 GATE mcmt_h2_vchain_ibm 4 SX 6
 GATE mcmt_h2_vchain_ibm 4 RZ 6 p=1.5707963267948966
-RESULT mcphase_noancilla_uni 4 gates=29 cx=8 t=0 depth=29 qubits=5 ns=118600
+RESULT mcphase_noancilla_uni 4 gates=29 cx=8 t=0 depth=29 qubits=5 ns=48926
 GATE mcphase_noancilla_uni 4 RZ 4 p=0.175
 GATE mcphase_noancilla_uni 4 CCX 0 1 4
 GATE mcphase_noancilla_uni 4 RZ 4 p=-0.175
@@ -5931,7 +5931,7 @@ GATE mcphase_noancilla_uni 4 CX 0 1
 GATE mcphase_noancilla_uni 4 RZ 1 p=-0.04375
 GATE mcphase_noancilla_uni 4 CX 0 1
 GATE mcphase_noancilla_uni 4 RZ 0 p=0.04375
-RESULT mcrz_noancilla_uni 4 gates=8 cx=0 t=0 depth=8 qubits=5 ns=49401
+RESULT mcrz_noancilla_uni 4 gates=8 cx=0 t=0 depth=8 qubits=5 ns=82091
 GATE mcrz_noancilla_uni 4 RZ 4 p=0.225
 GATE mcrz_noancilla_uni 4 CCX 0 1 4
 GATE mcrz_noancilla_uni 4 RZ 4 p=-0.225
@@ -5940,7 +5940,7 @@ GATE mcrz_noancilla_uni 4 RZ 4 p=0.225
 GATE mcrz_noancilla_uni 4 CCX 0 1 4
 GATE mcrz_noancilla_uni 4 RZ 4 p=-0.225
 GATE mcrz_noancilla_uni 4 CCX 2 3 4
-RESULT mcry_noancilla_uni 4 gates=20 cx=0 t=0 depth=20 qubits=5 ns=54008
+RESULT mcry_noancilla_uni 4 gates=20 cx=0 t=0 depth=20 qubits=5 ns=46893
 GATE mcry_noancilla_uni 4 SX 4
 GATE mcry_noancilla_uni 4 RZ 4 p=3.366592653589793
 GATE mcry_noancilla_uni 4 SX 4
@@ -5961,7 +5961,7 @@ GATE mcry_noancilla_uni 4 RZ 4 p=2.916592653589793
 GATE mcry_noancilla_uni 4 SX 4
 GATE mcry_noancilla_uni 4 RZ 4 p=3.141592653589793
 GATE mcry_noancilla_uni 4 CCX 2 3 4
-RESULT mcrx_noancilla_uni 4 gates=10 cx=0 t=0 depth=10 qubits=5 ns=52904
+RESULT mcrx_noancilla_uni 4 gates=10 cx=0 t=0 depth=10 qubits=5 ns=37172
 GATE mcrx_noancilla_uni 4 H 4
 GATE mcrx_noancilla_uni 4 RZ 4 p=0.225
 GATE mcrx_noancilla_uni 4 CCX 0 1 4
@@ -5972,7 +5972,7 @@ GATE mcrx_noancilla_uni 4 CCX 0 1 4
 GATE mcrx_noancilla_uni 4 RZ 4 p=-0.225
 GATE mcrx_noancilla_uni 4 CCX 2 3 4
 GATE mcrx_noancilla_uni 4 H 4
-RESULT mcu_noancilla_uni 4 gates=57 cx=8 t=0 depth=56 qubits=5 ns=92207
+RESULT mcu_noancilla_uni 4 gates=57 cx=8 t=0 depth=56 qubits=5 ns=52192
 GATE mcu_noancilla_uni 4 RZ 3 p=0.1375
 GATE mcu_noancilla_uni 4 CCX 0 1 3
 GATE mcu_noancilla_uni 4 RZ 3 p=-0.1375
@@ -6030,7 +6030,7 @@ GATE mcu_noancilla_uni 4 RZ 4 p=0.1
 GATE mcu_noancilla_uni 4 CCX 0 1 4
 GATE mcu_noancilla_uni 4 RZ 4 p=-0.1
 GATE mcu_noancilla_uni 4 CCX 2 3 4
-RESULT mcmt_x2_noancilla_uni 4 gates=62 cx=20 t=24 depth=55 qubits=6 ns=83113
+RESULT mcmt_x2_noancilla_uni 4 gates=62 cx=20 t=24 depth=55 qubits=6 ns=49845
 GATE mcmt_x2_noancilla_uni 4 CX 4 5
 GATE mcmt_x2_noancilla_uni 4 H 5
 GATE mcmt_x2_noancilla_uni 4 T 5
@@ -6093,7 +6093,7 @@ GATE mcmt_x2_noancilla_uni 4 CX 3 1
 GATE mcmt_x2_noancilla_uni 4 TDG 1
 GATE mcmt_x2_noancilla_uni 4 H 1
 GATE mcmt_x2_noancilla_uni 4 CX 4 5
-RESULT mcmt_y2_noancilla_uni 4 gates=66 cx=16 t=0 depth=59 qubits=6 ns=71125
+RESULT mcmt_y2_noancilla_uni 4 gates=66 cx=16 t=0 depth=59 qubits=6 ns=68431
 GATE mcmt_y2_noancilla_uni 4 RZ 4 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 4 H 4
 GATE mcmt_y2_noancilla_uni 4 RZ 4 p=0.7853981633974483
@@ -6160,7 +6160,7 @@ GATE mcmt_y2_noancilla_uni 4 CX 0 1
 GATE mcmt_y2_noancilla_uni 4 RZ 0 p=0.19634954084936207
 GATE mcmt_y2_noancilla_uni 4 H 5
 GATE mcmt_y2_noancilla_uni 4 S 5
-RESULT mcmt_z2_noancilla_uni 4 gates=58 cx=16 t=0 depth=57 qubits=6 ns=60880
+RESULT mcmt_z2_noancilla_uni 4 gates=58 cx=16 t=0 depth=57 qubits=6 ns=59610
 GATE mcmt_z2_noancilla_uni 4 RZ 4 p=0.7853981633974483
 GATE mcmt_z2_noancilla_uni 4 CCX 0 1 4
 GATE mcmt_z2_noancilla_uni 4 RZ 4 p=-0.7853981633974483
@@ -6219,7 +6219,7 @@ GATE mcmt_z2_noancilla_uni 4 CX 0 1
 GATE mcmt_z2_noancilla_uni 4 RZ 1 p=-0.19634954084936207
 GATE mcmt_z2_noancilla_uni 4 CX 0 1
 GATE mcmt_z2_noancilla_uni 4 RZ 0 p=0.19634954084936207
-RESULT mcmt_h2_noancilla_uni 4 gates=98 cx=16 t=0 depth=96 qubits=6 ns=79341
+RESULT mcmt_h2_noancilla_uni 4 gates=98 cx=16 t=0 depth=96 qubits=6 ns=90694
 GATE mcmt_h2_noancilla_uni 4 RZ 3 p=0.39269908169872414
 GATE mcmt_h2_noancilla_uni 4 CCX 0 1 3
 GATE mcmt_h2_noancilla_uni 4 RZ 3 p=-0.39269908169872414
@@ -6318,7 +6318,7 @@ GATE mcmt_h2_noancilla_uni 4 RZ 5 p=2.748893571891069
 GATE mcmt_h2_noancilla_uni 4 SX 5
 GATE mcmt_h2_noancilla_uni 4 RZ 5 p=3.141592653589793
 GATE mcmt_h2_noancilla_uni 4 CCX 2 3 5
-RESULT mcphase_vchain_uni 4 gates=11 cx=2 t=0 depth=10 qubits=8 ns=68951
+RESULT mcphase_vchain_uni 4 gates=11 cx=2 t=0 depth=10 qubits=8 ns=106191
 GATE mcphase_vchain_uni 4 CCX 0 1 5
 GATE mcphase_vchain_uni 4 CCX 2 5 6
 GATE mcphase_vchain_uni 4 CCX 3 6 7
@@ -6330,7 +6330,7 @@ GATE mcphase_vchain_uni 4 RZ 4 p=0.35
 GATE mcphase_vchain_uni 4 CCX 3 6 7
 GATE mcphase_vchain_uni 4 CCX 2 5 6
 GATE mcphase_vchain_uni 4 CCX 0 1 5
-RESULT mcrz_vchain_uni 4 gates=10 cx=2 t=0 depth=9 qubits=8 ns=85192
+RESULT mcrz_vchain_uni 4 gates=10 cx=2 t=0 depth=9 qubits=8 ns=121634
 GATE mcrz_vchain_uni 4 CCX 0 1 5
 GATE mcrz_vchain_uni 4 CCX 2 5 6
 GATE mcrz_vchain_uni 4 CCX 3 6 7
@@ -6341,7 +6341,7 @@ GATE mcrz_vchain_uni 4 CX 7 4
 GATE mcrz_vchain_uni 4 CCX 3 6 7
 GATE mcrz_vchain_uni 4 CCX 2 5 6
 GATE mcrz_vchain_uni 4 CCX 0 1 5
-RESULT mcry_vchain_uni 4 gates=16 cx=2 t=0 depth=13 qubits=8 ns=61962
+RESULT mcry_vchain_uni 4 gates=16 cx=2 t=0 depth=13 qubits=8 ns=107478
 GATE mcry_vchain_uni 4 CCX 0 1 5
 GATE mcry_vchain_uni 4 CCX 2 5 6
 GATE mcry_vchain_uni 4 CCX 3 6 7
@@ -6358,7 +6358,7 @@ GATE mcry_vchain_uni 4 CX 7 4
 GATE mcry_vchain_uni 4 CCX 3 6 7
 GATE mcry_vchain_uni 4 CCX 2 5 6
 GATE mcry_vchain_uni 4 CCX 0 1 5
-RESULT mcrx_vchain_uni 4 gates=18 cx=2 t=0 depth=14 qubits=8 ns=81433
+RESULT mcrx_vchain_uni 4 gates=18 cx=2 t=0 depth=14 qubits=8 ns=76742
 GATE mcrx_vchain_uni 4 CCX 0 1 5
 GATE mcrx_vchain_uni 4 CCX 2 5 6
 GATE mcrx_vchain_uni 4 CCX 3 6 7
@@ -6377,7 +6377,7 @@ GATE mcrx_vchain_uni 4 RZ 4 p=-1.5707963267948966
 GATE mcrx_vchain_uni 4 CCX 3 6 7
 GATE mcrx_vchain_uni 4 CCX 2 5 6
 GATE mcrx_vchain_uni 4 CCX 0 1 5
-RESULT mcu_vchain_uni 4 gates=20 cx=2 t=0 depth=15 qubits=8 ns=68678
+RESULT mcu_vchain_uni 4 gates=20 cx=2 t=0 depth=15 qubits=8 ns=49662
 GATE mcu_vchain_uni 4 CCX 0 1 5
 GATE mcu_vchain_uni 4 CCX 2 5 6
 GATE mcu_vchain_uni 4 CCX 3 6 7
@@ -6398,7 +6398,7 @@ GATE mcu_vchain_uni 4 RZ 7 p=0.55
 GATE mcu_vchain_uni 4 CCX 3 6 7
 GATE mcu_vchain_uni 4 CCX 2 5 6
 GATE mcu_vchain_uni 4 CCX 0 1 5
-RESULT mcmt_x2_vchain_uni 4 gates=8 cx=2 t=0 depth=8 qubits=9 ns=59767
+RESULT mcmt_x2_vchain_uni 4 gates=8 cx=2 t=0 depth=8 qubits=9 ns=119018
 GATE mcmt_x2_vchain_uni 4 CCX 0 1 6
 GATE mcmt_x2_vchain_uni 4 CCX 2 6 7
 GATE mcmt_x2_vchain_uni 4 CCX 3 7 8
@@ -6407,7 +6407,7 @@ GATE mcmt_x2_vchain_uni 4 CX 8 5
 GATE mcmt_x2_vchain_uni 4 CCX 3 7 8
 GATE mcmt_x2_vchain_uni 4 CCX 2 6 7
 GATE mcmt_x2_vchain_uni 4 CCX 0 1 6
-RESULT mcmt_y2_vchain_uni 4 gates=12 cx=2 t=0 depth=8 qubits=9 ns=60452
+RESULT mcmt_y2_vchain_uni 4 gates=12 cx=2 t=0 depth=8 qubits=9 ns=77898
 GATE mcmt_y2_vchain_uni 4 CCX 0 1 6
 GATE mcmt_y2_vchain_uni 4 CCX 2 6 7
 GATE mcmt_y2_vchain_uni 4 CCX 3 7 8
@@ -6420,7 +6420,7 @@ GATE mcmt_y2_vchain_uni 4 S 5
 GATE mcmt_y2_vchain_uni 4 CCX 3 7 8
 GATE mcmt_y2_vchain_uni 4 CCX 2 6 7
 GATE mcmt_y2_vchain_uni 4 CCX 0 1 6
-RESULT mcmt_z2_vchain_uni 4 gates=12 cx=2 t=0 depth=8 qubits=9 ns=60883
+RESULT mcmt_z2_vchain_uni 4 gates=12 cx=2 t=0 depth=8 qubits=9 ns=39542
 GATE mcmt_z2_vchain_uni 4 CCX 0 1 6
 GATE mcmt_z2_vchain_uni 4 CCX 2 6 7
 GATE mcmt_z2_vchain_uni 4 CCX 3 7 8
@@ -6433,7 +6433,7 @@ GATE mcmt_z2_vchain_uni 4 H 5
 GATE mcmt_z2_vchain_uni 4 CCX 3 7 8
 GATE mcmt_z2_vchain_uni 4 CCX 2 6 7
 GATE mcmt_z2_vchain_uni 4 CCX 0 1 6
-RESULT mcmt_h2_vchain_uni 4 gates=34 cx=4 t=0 depth=23 qubits=9 ns=79273
+RESULT mcmt_h2_vchain_uni 4 gates=34 cx=4 t=0 depth=23 qubits=9 ns=44176
 GATE mcmt_h2_vchain_uni 4 CCX 0 1 6
 GATE mcmt_h2_vchain_uni 4 CCX 2 6 7
 GATE mcmt_h2_vchain_uni 4 CCX 3 7 8
@@ -6468,7 +6468,7 @@ GATE mcmt_h2_vchain_uni 4 RZ 8 p=1.5707963267948966
 GATE mcmt_h2_vchain_uni 4 CCX 3 7 8
 GATE mcmt_h2_vchain_uni 4 CCX 2 6 7
 GATE mcmt_h2_vchain_uni 4 CCX 0 1 6
-RESULT mcphase_noancilla_ibm 5 gates=249 cx=84 t=0 depth=187 qubits=6 ns=203701
+RESULT mcphase_noancilla_ibm 5 gates=249 cx=84 t=0 depth=187 qubits=6 ns=130810
 GATE mcphase_noancilla_ibm 5 RZ 5 p=0.175
 GATE mcphase_noancilla_ibm 5 RZ 5 p=1.5707963267948966
 GATE mcphase_noancilla_ibm 5 SX 5
@@ -6718,7 +6718,7 @@ GATE mcphase_noancilla_ibm 5 CX 0 1
 GATE mcphase_noancilla_ibm 5 RZ 1 p=-0.021875
 GATE mcphase_noancilla_ibm 5 CX 0 1
 GATE mcphase_noancilla_ibm 5 RZ 0 p=0.021875
-RESULT mcrz_noancilla_ibm 5 gates=112 cx=40 t=0 depth=82 qubits=6 ns=91453
+RESULT mcrz_noancilla_ibm 5 gates=112 cx=40 t=0 depth=82 qubits=6 ns=71699
 GATE mcrz_noancilla_ibm 5 RZ 5 p=0.225
 GATE mcrz_noancilla_ibm 5 RZ 5 p=1.5707963267948966
 GATE mcrz_noancilla_ibm 5 SX 5
@@ -6831,7 +6831,7 @@ GATE mcrz_noancilla_ibm 5 CX 3 4
 GATE mcrz_noancilla_ibm 5 RZ 3 p=0.7853981633974483
 GATE mcrz_noancilla_ibm 5 RZ 4 p=-0.7853981633974483
 GATE mcrz_noancilla_ibm 5 CX 3 4
-RESULT mcry_noancilla_ibm 5 gates=124 cx=40 t=0 depth=91 qubits=6 ns=137513
+RESULT mcry_noancilla_ibm 5 gates=124 cx=40 t=0 depth=91 qubits=6 ns=104352
 GATE mcry_noancilla_ibm 5 SX 5
 GATE mcry_noancilla_ibm 5 RZ 5 p=3.366592653589793
 GATE mcry_noancilla_ibm 5 SX 5
@@ -6956,7 +6956,7 @@ GATE mcry_noancilla_ibm 5 CX 3 4
 GATE mcry_noancilla_ibm 5 RZ 3 p=0.7853981633974483
 GATE mcry_noancilla_ibm 5 RZ 4 p=-0.7853981633974483
 GATE mcry_noancilla_ibm 5 CX 3 4
-RESULT mcrx_noancilla_ibm 5 gates=118 cx=40 t=0 depth=85 qubits=6 ns=103162
+RESULT mcrx_noancilla_ibm 5 gates=118 cx=40 t=0 depth=85 qubits=6 ns=97392
 GATE mcrx_noancilla_ibm 5 RZ 5 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 5 SX 5
 GATE mcrx_noancilla_ibm 5 RZ 5 p=1.5707963267948966
@@ -7075,7 +7075,7 @@ GATE mcrx_noancilla_ibm 5 CX 3 4
 GATE mcrx_noancilla_ibm 5 RZ 5 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 5 SX 5
 GATE mcrx_noancilla_ibm 5 RZ 5 p=1.5707963267948966
-RESULT mcu_noancilla_ibm 5 gates=485 cx=164 t=0 depth=352 qubits=6 ns=207998
+RESULT mcu_noancilla_ibm 5 gates=485 cx=164 t=0 depth=352 qubits=6 ns=334647
 GATE mcu_noancilla_ibm 5 RZ 4 p=0.1375
 GATE mcu_noancilla_ibm 5 RZ 4 p=1.5707963267948966
 GATE mcu_noancilla_ibm 5 SX 4
@@ -7561,7 +7561,7 @@ GATE mcu_noancilla_ibm 5 CX 3 4
 GATE mcu_noancilla_ibm 5 RZ 3 p=0.7853981633974483
 GATE mcu_noancilla_ibm 5 RZ 4 p=-0.7853981633974483
 GATE mcu_noancilla_ibm 5 CX 3 4
-RESULT mcmt_x2_noancilla_ibm 5 gates=178 cx=44 t=0 depth=123 qubits=7 ns=119590
+RESULT mcmt_x2_noancilla_ibm 5 gates=178 cx=44 t=0 depth=123 qubits=7 ns=187520
 GATE mcmt_x2_noancilla_ibm 5 CX 5 6
 GATE mcmt_x2_noancilla_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 5 SX 6
@@ -7740,7 +7740,7 @@ GATE mcmt_x2_noancilla_ibm 5 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 5 SX 1
 GATE mcmt_x2_noancilla_ibm 5 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 5 CX 5 6
-RESULT mcmt_y2_noancilla_ibm 5 gates=514 cx=168 t=0 depth=374 qubits=7 ns=221105
+RESULT mcmt_y2_noancilla_ibm 5 gates=514 cx=168 t=0 depth=374 qubits=7 ns=264886
 GATE mcmt_y2_noancilla_ibm 5 RZ 5 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 5 RZ 5 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 5 SX 5
@@ -8255,7 +8255,7 @@ GATE mcmt_y2_noancilla_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 5 SX 6
 GATE mcmt_y2_noancilla_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 5 RZ 6 p=1.5707963267948966
-RESULT mcmt_z2_noancilla_ibm 5 gates=498 cx=168 t=0 depth=374 qubits=7 ns=504101
+RESULT mcmt_z2_noancilla_ibm 5 gates=498 cx=168 t=0 depth=374 qubits=7 ns=217135
 GATE mcmt_z2_noancilla_ibm 5 RZ 5 p=0.7853981633974483
 GATE mcmt_z2_noancilla_ibm 5 RZ 5 p=1.5707963267948966
 GATE mcmt_z2_noancilla_ibm 5 SX 5
@@ -8754,7 +8754,7 @@ GATE mcmt_z2_noancilla_ibm 5 CX 0 1
 GATE mcmt_z2_noancilla_ibm 5 RZ 1 p=-0.09817477042468103
 GATE mcmt_z2_noancilla_ibm 5 CX 0 1
 GATE mcmt_z2_noancilla_ibm 5 RZ 0 p=0.09817477042468103
-RESULT mcmt_h2_noancilla_ibm 5 gates=746 cx=248 t=0 depth=551 qubits=7 ns=512046
+RESULT mcmt_h2_noancilla_ibm 5 gates=746 cx=248 t=0 depth=551 qubits=7 ns=285482
 GATE mcmt_h2_noancilla_ibm 5 RZ 4 p=0.39269908169872414
 GATE mcmt_h2_noancilla_ibm 5 RZ 4 p=1.5707963267948966
 GATE mcmt_h2_noancilla_ibm 5 SX 4
@@ -9501,7 +9501,7 @@ GATE mcmt_h2_noancilla_ibm 5 CX 3 4
 GATE mcmt_h2_noancilla_ibm 5 RZ 3 p=0.7853981633974483
 GATE mcmt_h2_noancilla_ibm 5 RZ 4 p=-0.7853981633974483
 GATE mcmt_h2_noancilla_ibm 5 CX 3 4
-RESULT mcphase_vchain_ibm 5 gates=109 cx=26 t=0 depth=84 qubits=10 ns=144781
+RESULT mcphase_vchain_ibm 5 gates=109 cx=26 t=0 depth=84 qubits=10 ns=84283
 GATE mcphase_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcphase_vchain_ibm 5 SX 6
 GATE mcphase_vchain_ibm 5 RZ 6 p=1.5707963267948966
@@ -9611,7 +9611,7 @@ GATE mcphase_vchain_ibm 5 RZ 6 p=-0.7853981633974483
 GATE mcphase_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcphase_vchain_ibm 5 SX 6
 GATE mcphase_vchain_ibm 5 RZ 6 p=1.5707963267948966
-RESULT mcrz_vchain_ibm 5 gates=108 cx=26 t=0 depth=83 qubits=10 ns=81636
+RESULT mcrz_vchain_ibm 5 gates=108 cx=26 t=0 depth=83 qubits=10 ns=180526
 GATE mcrz_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcrz_vchain_ibm 5 SX 6
 GATE mcrz_vchain_ibm 5 RZ 6 p=1.5707963267948966
@@ -9720,7 +9720,7 @@ GATE mcrz_vchain_ibm 5 RZ 6 p=-0.7853981633974483
 GATE mcrz_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcrz_vchain_ibm 5 SX 6
 GATE mcrz_vchain_ibm 5 RZ 6 p=1.5707963267948966
-RESULT mcry_vchain_ibm 5 gates=114 cx=26 t=0 depth=86 qubits=10 ns=87376
+RESULT mcry_vchain_ibm 5 gates=114 cx=26 t=0 depth=86 qubits=10 ns=173196
 GATE mcry_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcry_vchain_ibm 5 SX 6
 GATE mcry_vchain_ibm 5 RZ 6 p=1.5707963267948966
@@ -9835,7 +9835,7 @@ GATE mcry_vchain_ibm 5 RZ 6 p=-0.7853981633974483
 GATE mcry_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcry_vchain_ibm 5 SX 6
 GATE mcry_vchain_ibm 5 RZ 6 p=1.5707963267948966
-RESULT mcrx_vchain_ibm 5 gates=116 cx=26 t=0 depth=86 qubits=10 ns=84066
+RESULT mcrx_vchain_ibm 5 gates=116 cx=26 t=0 depth=86 qubits=10 ns=187511
 GATE mcrx_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcrx_vchain_ibm 5 SX 6
 GATE mcrx_vchain_ibm 5 RZ 6 p=1.5707963267948966
@@ -9952,7 +9952,7 @@ GATE mcrx_vchain_ibm 5 RZ 6 p=-0.7853981633974483
 GATE mcrx_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcrx_vchain_ibm 5 SX 6
 GATE mcrx_vchain_ibm 5 RZ 6 p=1.5707963267948966
-RESULT mcu_vchain_ibm 5 gates=118 cx=26 t=0 depth=88 qubits=10 ns=93958
+RESULT mcu_vchain_ibm 5 gates=118 cx=26 t=0 depth=88 qubits=10 ns=154540
 GATE mcu_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcu_vchain_ibm 5 SX 6
 GATE mcu_vchain_ibm 5 RZ 6 p=1.5707963267948966
@@ -10071,11 +10071,11 @@ GATE mcu_vchain_ibm 5 RZ 6 p=-0.7853981633974483
 GATE mcu_vchain_ibm 5 RZ 6 p=1.5707963267948966
 GATE mcu_vchain_ibm 5 SX 6
 GATE mcu_vchain_ibm 5 RZ 6 p=1.5707963267948966
-RESULT mcmt_x2_vchain_ibm 5 gates=106 cx=26 t=0 depth=82 qubits=11 ns=78743
-RESULT mcmt_y2_vchain_ibm 5 gates=110 cx=26 t=0 depth=82 qubits=11 ns=78782
-RESULT mcmt_z2_vchain_ibm 5 gates=118 cx=26 t=0 depth=82 qubits=11 ns=81836
-RESULT mcmt_h2_vchain_ibm 5 gates=132 cx=28 t=0 depth=96 qubits=11 ns=93713
-RESULT mcphase_noancilla_uni 5 gates=97 cx=36 t=0 depth=84 qubits=6 ns=182771
+RESULT mcmt_x2_vchain_ibm 5 gates=106 cx=26 t=0 depth=82 qubits=11 ns=134242
+RESULT mcmt_y2_vchain_ibm 5 gates=110 cx=26 t=0 depth=82 qubits=11 ns=79364
+RESULT mcmt_z2_vchain_ibm 5 gates=118 cx=26 t=0 depth=82 qubits=11 ns=185178
+RESULT mcmt_h2_vchain_ibm 5 gates=132 cx=28 t=0 depth=96 qubits=11 ns=182245
+RESULT mcphase_noancilla_uni 5 gates=97 cx=36 t=0 depth=84 qubits=6 ns=160062
 GATE mcphase_noancilla_uni 5 RZ 5 p=0.175
 GATE mcphase_noancilla_uni 5 H 5
 GATE mcphase_noancilla_uni 5 RZ 0 p=0.39269908169872414
@@ -10173,7 +10173,7 @@ GATE mcphase_noancilla_uni 5 CX 0 1
 GATE mcphase_noancilla_uni 5 RZ 1 p=-0.021875
 GATE mcphase_noancilla_uni 5 CX 0 1
 GATE mcphase_noancilla_uni 5 RZ 0 p=0.021875
-RESULT mcrz_noancilla_uni 5 gates=68 cx=28 t=0 depth=55 qubits=6 ns=119405
+RESULT mcrz_noancilla_uni 5 gates=68 cx=28 t=0 depth=55 qubits=6 ns=60306
 GATE mcrz_noancilla_uni 5 RZ 5 p=0.225
 GATE mcrz_noancilla_uni 5 H 5
 GATE mcrz_noancilla_uni 5 RZ 0 p=0.39269908169872414
@@ -10242,7 +10242,7 @@ GATE mcrz_noancilla_uni 5 CX 0 5
 GATE mcrz_noancilla_uni 5 H 5
 GATE mcrz_noancilla_uni 5 RZ 5 p=-0.225
 GATE mcrz_noancilla_uni 5 CCX 3 4 5
-RESULT mcry_noancilla_uni 5 gates=80 cx=28 t=0 depth=59 qubits=6 ns=110748
+RESULT mcry_noancilla_uni 5 gates=80 cx=28 t=0 depth=59 qubits=6 ns=155619
 GATE mcry_noancilla_uni 5 SX 5
 GATE mcry_noancilla_uni 5 RZ 5 p=3.366592653589793
 GATE mcry_noancilla_uni 5 SX 5
@@ -10323,7 +10323,7 @@ GATE mcry_noancilla_uni 5 RZ 5 p=2.916592653589793
 GATE mcry_noancilla_uni 5 SX 5
 GATE mcry_noancilla_uni 5 RZ 5 p=3.141592653589793
 GATE mcry_noancilla_uni 5 CCX 3 4 5
-RESULT mcrx_noancilla_uni 5 gates=70 cx=28 t=0 depth=56 qubits=6 ns=129745
+RESULT mcrx_noancilla_uni 5 gates=70 cx=28 t=0 depth=56 qubits=6 ns=83947
 GATE mcrx_noancilla_uni 5 H 5
 GATE mcrx_noancilla_uni 5 RZ 5 p=0.225
 GATE mcrx_noancilla_uni 5 H 5
@@ -10394,7 +10394,7 @@ GATE mcrx_noancilla_uni 5 H 5
 GATE mcrx_noancilla_uni 5 RZ 5 p=-0.225
 GATE mcrx_noancilla_uni 5 CCX 3 4 5
 GATE mcrx_noancilla_uni 5 H 5
-RESULT mcu_noancilla_uni 5 gates=245 cx=92 t=0 depth=189 qubits=6 ns=131557
+RESULT mcu_noancilla_uni 5 gates=245 cx=92 t=0 depth=189 qubits=6 ns=169731
 GATE mcu_noancilla_uni 5 RZ 4 p=0.1375
 GATE mcu_noancilla_uni 5 CCX 0 1 4
 GATE mcu_noancilla_uni 5 RZ 4 p=-0.1375
@@ -10640,7 +10640,7 @@ GATE mcu_noancilla_uni 5 CX 0 5
 GATE mcu_noancilla_uni 5 H 5
 GATE mcu_noancilla_uni 5 RZ 5 p=-0.1
 GATE mcu_noancilla_uni 5 CCX 3 4 5
-RESULT mcmt_x2_noancilla_uni 5 gates=102 cx=32 t=40 depth=79 qubits=7 ns=97215
+RESULT mcmt_x2_noancilla_uni 5 gates=102 cx=32 t=40 depth=79 qubits=7 ns=48197
 GATE mcmt_x2_noancilla_uni 5 CX 5 6
 GATE mcmt_x2_noancilla_uni 5 H 6
 GATE mcmt_x2_noancilla_uni 5 T 6
@@ -10743,7 +10743,7 @@ GATE mcmt_x2_noancilla_uni 5 CX 3 1
 GATE mcmt_x2_noancilla_uni 5 TDG 1
 GATE mcmt_x2_noancilla_uni 5 H 1
 GATE mcmt_x2_noancilla_uni 5 CX 5 6
-RESULT mcmt_y2_noancilla_uni 5 gates=202 cx=72 t=0 depth=168 qubits=7 ns=132483
+RESULT mcmt_y2_noancilla_uni 5 gates=202 cx=72 t=0 depth=168 qubits=7 ns=122501
 GATE mcmt_y2_noancilla_uni 5 RZ 5 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 5 H 5
 GATE mcmt_y2_noancilla_uni 5 RZ 5 p=0.7853981633974483
@@ -10946,7 +10946,7 @@ GATE mcmt_y2_noancilla_uni 5 CX 0 1
 GATE mcmt_y2_noancilla_uni 5 RZ 0 p=0.09817477042468103
 GATE mcmt_y2_noancilla_uni 5 H 6
 GATE mcmt_y2_noancilla_uni 5 S 6
-RESULT mcmt_z2_noancilla_uni 5 gates=194 cx=72 t=0 depth=168 qubits=7 ns=109099
+RESULT mcmt_z2_noancilla_uni 5 gates=194 cx=72 t=0 depth=168 qubits=7 ns=147238
 GATE mcmt_z2_noancilla_uni 5 RZ 5 p=0.7853981633974483
 GATE mcmt_z2_noancilla_uni 5 H 5
 GATE mcmt_z2_noancilla_uni 5 RZ 0 p=0.39269908169872414
@@ -11141,7 +11141,7 @@ GATE mcmt_z2_noancilla_uni 5 CX 0 1
 GATE mcmt_z2_noancilla_uni 5 RZ 1 p=-0.09817477042468103
 GATE mcmt_z2_noancilla_uni 5 CX 0 1
 GATE mcmt_z2_noancilla_uni 5 RZ 0 p=0.09817477042468103
-RESULT mcmt_h2_noancilla_uni 5 gates=354 cx=128 t=0 depth=280 qubits=7 ns=315088
+RESULT mcmt_h2_noancilla_uni 5 gates=354 cx=128 t=0 depth=280 qubits=7 ns=225156
 GATE mcmt_h2_noancilla_uni 5 RZ 4 p=0.39269908169872414
 GATE mcmt_h2_noancilla_uni 5 CCX 0 1 4
 GATE mcmt_h2_noancilla_uni 5 RZ 4 p=-0.39269908169872414
@@ -11496,7 +11496,7 @@ GATE mcmt_h2_noancilla_uni 5 RZ 6 p=2.748893571891069
 GATE mcmt_h2_noancilla_uni 5 SX 6
 GATE mcmt_h2_noancilla_uni 5 RZ 6 p=3.141592653589793
 GATE mcmt_h2_noancilla_uni 5 CCX 3 4 6
-RESULT mcphase_vchain_uni 5 gates=13 cx=2 t=0 depth=12 qubits=10 ns=63254
+RESULT mcphase_vchain_uni 5 gates=13 cx=2 t=0 depth=12 qubits=10 ns=100046
 GATE mcphase_vchain_uni 5 CCX 0 1 6
 GATE mcphase_vchain_uni 5 CCX 2 6 7
 GATE mcphase_vchain_uni 5 CCX 3 7 8
@@ -11510,7 +11510,7 @@ GATE mcphase_vchain_uni 5 CCX 4 8 9
 GATE mcphase_vchain_uni 5 CCX 3 7 8
 GATE mcphase_vchain_uni 5 CCX 2 6 7
 GATE mcphase_vchain_uni 5 CCX 0 1 6
-RESULT mcrz_vchain_uni 5 gates=12 cx=2 t=0 depth=11 qubits=10 ns=106355
+RESULT mcrz_vchain_uni 5 gates=12 cx=2 t=0 depth=11 qubits=10 ns=98828
 GATE mcrz_vchain_uni 5 CCX 0 1 6
 GATE mcrz_vchain_uni 5 CCX 2 6 7
 GATE mcrz_vchain_uni 5 CCX 3 7 8
@@ -11523,7 +11523,7 @@ GATE mcrz_vchain_uni 5 CCX 4 8 9
 GATE mcrz_vchain_uni 5 CCX 3 7 8
 GATE mcrz_vchain_uni 5 CCX 2 6 7
 GATE mcrz_vchain_uni 5 CCX 0 1 6
-RESULT mcry_vchain_uni 5 gates=18 cx=2 t=0 depth=14 qubits=10 ns=107919
+RESULT mcry_vchain_uni 5 gates=18 cx=2 t=0 depth=14 qubits=10 ns=99969
 GATE mcry_vchain_uni 5 CCX 0 1 6
 GATE mcry_vchain_uni 5 CCX 2 6 7
 GATE mcry_vchain_uni 5 CCX 3 7 8
@@ -11542,7 +11542,7 @@ GATE mcry_vchain_uni 5 CCX 4 8 9
 GATE mcry_vchain_uni 5 CCX 3 7 8
 GATE mcry_vchain_uni 5 CCX 2 6 7
 GATE mcry_vchain_uni 5 CCX 0 1 6
-RESULT mcrx_vchain_uni 5 gates=20 cx=2 t=0 depth=15 qubits=10 ns=49540
+RESULT mcrx_vchain_uni 5 gates=20 cx=2 t=0 depth=15 qubits=10 ns=102095
 GATE mcrx_vchain_uni 5 CCX 0 1 6
 GATE mcrx_vchain_uni 5 CCX 2 6 7
 GATE mcrx_vchain_uni 5 CCX 3 7 8
@@ -11563,7 +11563,7 @@ GATE mcrx_vchain_uni 5 CCX 4 8 9
 GATE mcrx_vchain_uni 5 CCX 3 7 8
 GATE mcrx_vchain_uni 5 CCX 2 6 7
 GATE mcrx_vchain_uni 5 CCX 0 1 6
-RESULT mcu_vchain_uni 5 gates=22 cx=2 t=0 depth=16 qubits=10 ns=52366
+RESULT mcu_vchain_uni 5 gates=22 cx=2 t=0 depth=16 qubits=10 ns=94460
 GATE mcu_vchain_uni 5 CCX 0 1 6
 GATE mcu_vchain_uni 5 CCX 2 6 7
 GATE mcu_vchain_uni 5 CCX 3 7 8
@@ -11586,11 +11586,11 @@ GATE mcu_vchain_uni 5 CCX 4 8 9
 GATE mcu_vchain_uni 5 CCX 3 7 8
 GATE mcu_vchain_uni 5 CCX 2 6 7
 GATE mcu_vchain_uni 5 CCX 0 1 6
-RESULT mcmt_x2_vchain_uni 5 gates=10 cx=2 t=0 depth=10 qubits=11 ns=47563
-RESULT mcmt_y2_vchain_uni 5 gates=14 cx=2 t=0 depth=10 qubits=11 ns=69658
-RESULT mcmt_z2_vchain_uni 5 gates=14 cx=2 t=0 depth=10 qubits=11 ns=77292
-RESULT mcmt_h2_vchain_uni 5 gates=36 cx=4 t=0 depth=24 qubits=11 ns=75379
-RESULT mcphase_noancilla_ibm 6 gates=393 cx=140 t=0 depth=274 qubits=7 ns=322811
+RESULT mcmt_x2_vchain_uni 5 gates=10 cx=2 t=0 depth=10 qubits=11 ns=113270
+RESULT mcmt_y2_vchain_uni 5 gates=14 cx=2 t=0 depth=10 qubits=11 ns=115337
+RESULT mcmt_z2_vchain_uni 5 gates=14 cx=2 t=0 depth=10 qubits=11 ns=105831
+RESULT mcmt_h2_vchain_uni 5 gates=36 cx=4 t=0 depth=24 qubits=11 ns=93336
+RESULT mcphase_noancilla_ibm 6 gates=393 cx=140 t=0 depth=274 qubits=7 ns=428451
 GATE mcphase_noancilla_ibm 6 RZ 6 p=0.175
 GATE mcphase_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcphase_noancilla_ibm 6 SX 6
@@ -11984,7 +11984,7 @@ GATE mcphase_noancilla_ibm 6 CX 0 1
 GATE mcphase_noancilla_ibm 6 RZ 1 p=-0.0109375
 GATE mcphase_noancilla_ibm 6 CX 0 1
 GATE mcphase_noancilla_ibm 6 RZ 0 p=0.0109375
-RESULT mcrz_noancilla_ibm 6 gates=144 cx=56 t=0 depth=98 qubits=7 ns=103608
+RESULT mcrz_noancilla_ibm 6 gates=144 cx=56 t=0 depth=98 qubits=7 ns=191232
 GATE mcrz_noancilla_ibm 6 RZ 6 p=0.225
 GATE mcrz_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcrz_noancilla_ibm 6 SX 6
@@ -12129,7 +12129,7 @@ GATE mcrz_noancilla_ibm 6 CX 3 6
 GATE mcrz_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcrz_noancilla_ibm 6 SX 6
 GATE mcrz_noancilla_ibm 6 RZ 6 p=1.5707963267948966
-RESULT mcry_noancilla_ibm 6 gates=156 cx=56 t=0 depth=107 qubits=7 ns=96935
+RESULT mcry_noancilla_ibm 6 gates=156 cx=56 t=0 depth=107 qubits=7 ns=220040
 GATE mcry_noancilla_ibm 6 SX 6
 GATE mcry_noancilla_ibm 6 RZ 6 p=3.366592653589793
 GATE mcry_noancilla_ibm 6 SX 6
@@ -12286,7 +12286,7 @@ GATE mcry_noancilla_ibm 6 CX 3 6
 GATE mcry_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcry_noancilla_ibm 6 SX 6
 GATE mcry_noancilla_ibm 6 RZ 6 p=1.5707963267948966
-RESULT mcrx_noancilla_ibm 6 gates=150 cx=56 t=0 depth=101 qubits=7 ns=117727
+RESULT mcrx_noancilla_ibm 6 gates=150 cx=56 t=0 depth=101 qubits=7 ns=207820
 GATE mcrx_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 6 SX 6
 GATE mcrx_noancilla_ibm 6 RZ 6 p=1.5707963267948966
@@ -12437,7 +12437,7 @@ GATE mcrx_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 6 SX 6
 GATE mcrx_noancilla_ibm 6 RZ 6 p=1.5707963267948966
-RESULT mcu_noancilla_ibm 6 gates=693 cx=252 t=0 depth=481 qubits=7 ns=304768
+RESULT mcu_noancilla_ibm 6 gates=693 cx=252 t=0 depth=481 qubits=7 ns=304965
 GATE mcu_noancilla_ibm 6 RZ 5 p=0.1375
 GATE mcu_noancilla_ibm 6 RZ 5 p=1.5707963267948966
 GATE mcu_noancilla_ibm 6 SX 5
@@ -13131,7 +13131,7 @@ GATE mcu_noancilla_ibm 6 CX 3 6
 GATE mcu_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcu_noancilla_ibm 6 SX 6
 GATE mcu_noancilla_ibm 6 RZ 6 p=1.5707963267948966
-RESULT mcmt_x2_noancilla_ibm 6 gates=234 cx=56 t=0 depth=167 qubits=8 ns=130290
+RESULT mcmt_x2_noancilla_ibm 6 gates=234 cx=56 t=0 depth=167 qubits=8 ns=137727
 GATE mcmt_x2_noancilla_ibm 6 CX 6 7
 GATE mcmt_x2_noancilla_ibm 6 RZ 7 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 6 SX 7
@@ -13366,7 +13366,7 @@ GATE mcmt_x2_noancilla_ibm 6 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 6 SX 1
 GATE mcmt_x2_noancilla_ibm 6 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 6 CX 6 7
-RESULT mcmt_y2_noancilla_ibm 6 gates=802 cx=280 t=0 depth=548 qubits=8 ns=896412
+RESULT mcmt_y2_noancilla_ibm 6 gates=802 cx=280 t=0 depth=548 qubits=8 ns=582989
 GATE mcmt_y2_noancilla_ibm 6 RZ 6 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 6 SX 6
@@ -14169,7 +14169,7 @@ GATE mcmt_y2_noancilla_ibm 6 RZ 7 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 6 SX 7
 GATE mcmt_y2_noancilla_ibm 6 RZ 7 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 6 RZ 7 p=1.5707963267948966
-RESULT mcmt_z2_noancilla_ibm 6 gates=786 cx=280 t=0 depth=548 qubits=8 ns=473427
+RESULT mcmt_z2_noancilla_ibm 6 gates=786 cx=280 t=0 depth=548 qubits=8 ns=693329
 GATE mcmt_z2_noancilla_ibm 6 RZ 6 p=0.7853981633974483
 GATE mcmt_z2_noancilla_ibm 6 RZ 6 p=1.5707963267948966
 GATE mcmt_z2_noancilla_ibm 6 SX 6
@@ -14956,7 +14956,7 @@ GATE mcmt_z2_noancilla_ibm 6 CX 0 1
 GATE mcmt_z2_noancilla_ibm 6 RZ 1 p=-0.04908738521234052
 GATE mcmt_z2_noancilla_ibm 6 CX 0 1
 GATE mcmt_z2_noancilla_ibm 6 RZ 0 p=0.04908738521234052
-RESULT mcmt_h2_noancilla_ibm 6 gates=1098 cx=392 t=0 depth=767 qubits=8 ns=1138440
+RESULT mcmt_h2_noancilla_ibm 6 gates=1098 cx=392 t=0 depth=767 qubits=8 ns=983858
 GATE mcmt_h2_noancilla_ibm 6 RZ 5 p=0.39269908169872414
 GATE mcmt_h2_noancilla_ibm 6 RZ 5 p=1.5707963267948966
 GATE mcmt_h2_noancilla_ibm 6 SX 5
@@ -16055,16 +16055,16 @@ GATE mcmt_h2_noancilla_ibm 6 CX 3 7
 GATE mcmt_h2_noancilla_ibm 6 RZ 7 p=1.5707963267948966
 GATE mcmt_h2_noancilla_ibm 6 SX 7
 GATE mcmt_h2_noancilla_ibm 6 RZ 7 p=1.5707963267948966
-RESULT mcphase_vchain_ibm 6 gates=135 cx=32 t=0 depth=102 qubits=12 ns=92988
-RESULT mcrz_vchain_ibm 6 gates=134 cx=32 t=0 depth=101 qubits=12 ns=69030
-RESULT mcry_vchain_ibm 6 gates=140 cx=32 t=0 depth=104 qubits=12 ns=96891
-RESULT mcrx_vchain_ibm 6 gates=142 cx=32 t=0 depth=104 qubits=12 ns=70123
-RESULT mcu_vchain_ibm 6 gates=144 cx=32 t=0 depth=106 qubits=12 ns=81922
-RESULT mcmt_x2_vchain_ibm 6 gates=132 cx=32 t=0 depth=100 qubits=13 ns=87826
-RESULT mcmt_y2_vchain_ibm 6 gates=136 cx=32 t=0 depth=100 qubits=13 ns=212742
-RESULT mcmt_z2_vchain_ibm 6 gates=144 cx=32 t=0 depth=100 qubits=13 ns=201965
-RESULT mcmt_h2_vchain_ibm 6 gates=158 cx=34 t=0 depth=114 qubits=13 ns=217032
-RESULT mcphase_noancilla_uni 6 gates=225 cx=92 t=0 depth=157 qubits=7 ns=198794
+RESULT mcphase_vchain_ibm 6 gates=135 cx=32 t=0 depth=102 qubits=12 ns=113073
+RESULT mcrz_vchain_ibm 6 gates=134 cx=32 t=0 depth=101 qubits=12 ns=99676
+RESULT mcry_vchain_ibm 6 gates=140 cx=32 t=0 depth=104 qubits=12 ns=202134
+RESULT mcrx_vchain_ibm 6 gates=142 cx=32 t=0 depth=104 qubits=12 ns=177437
+RESULT mcu_vchain_ibm 6 gates=144 cx=32 t=0 depth=106 qubits=12 ns=76607
+RESULT mcmt_x2_vchain_ibm 6 gates=132 cx=32 t=0 depth=100 qubits=13 ns=176833
+RESULT mcmt_y2_vchain_ibm 6 gates=136 cx=32 t=0 depth=100 qubits=13 ns=201961
+RESULT mcmt_z2_vchain_ibm 6 gates=144 cx=32 t=0 depth=100 qubits=13 ns=199855
+RESULT mcmt_h2_vchain_ibm 6 gates=158 cx=34 t=0 depth=114 qubits=13 ns=198338
+RESULT mcphase_noancilla_uni 6 gates=225 cx=92 t=0 depth=157 qubits=7 ns=117518
 GATE mcphase_noancilla_uni 6 RZ 6 p=0.175
 GATE mcphase_noancilla_uni 6 H 6
 GATE mcphase_noancilla_uni 6 RZ 0 p=0.39269908169872414
@@ -16290,7 +16290,7 @@ GATE mcphase_noancilla_uni 6 CX 0 1
 GATE mcphase_noancilla_uni 6 RZ 1 p=-0.0109375
 GATE mcphase_noancilla_uni 6 CX 0 1
 GATE mcphase_noancilla_uni 6 RZ 0 p=0.0109375
-RESULT mcrz_noancilla_uni 6 gates=128 cx=56 t=0 depth=84 qubits=7 ns=204148
+RESULT mcrz_noancilla_uni 6 gates=128 cx=56 t=0 depth=84 qubits=7 ns=99722
 GATE mcrz_noancilla_uni 6 RZ 6 p=0.225
 GATE mcrz_noancilla_uni 6 H 6
 GATE mcrz_noancilla_uni 6 RZ 0 p=0.39269908169872414
@@ -16419,7 +16419,7 @@ GATE mcrz_noancilla_uni 6 CX 5 6
 GATE mcrz_noancilla_uni 6 RZ 6 p=-0.39269908169872414
 GATE mcrz_noancilla_uni 6 CX 3 6
 GATE mcrz_noancilla_uni 6 H 6
-RESULT mcry_noancilla_uni 6 gates=140 cx=56 t=0 depth=93 qubits=7 ns=108377
+RESULT mcry_noancilla_uni 6 gates=140 cx=56 t=0 depth=93 qubits=7 ns=170211
 GATE mcry_noancilla_uni 6 SX 6
 GATE mcry_noancilla_uni 6 RZ 6 p=3.366592653589793
 GATE mcry_noancilla_uni 6 SX 6
@@ -16560,7 +16560,7 @@ GATE mcry_noancilla_uni 6 CX 5 6
 GATE mcry_noancilla_uni 6 RZ 6 p=-0.39269908169872414
 GATE mcry_noancilla_uni 6 CX 3 6
 GATE mcry_noancilla_uni 6 H 6
-RESULT mcrx_noancilla_uni 6 gates=130 cx=56 t=0 depth=85 qubits=7 ns=117183
+RESULT mcrx_noancilla_uni 6 gates=130 cx=56 t=0 depth=85 qubits=7 ns=182002
 GATE mcrx_noancilla_uni 6 H 6
 GATE mcrx_noancilla_uni 6 RZ 6 p=0.225
 GATE mcrx_noancilla_uni 6 H 6
@@ -16691,7 +16691,7 @@ GATE mcrx_noancilla_uni 6 RZ 6 p=-0.39269908169872414
 GATE mcrx_noancilla_uni 6 CX 3 6
 GATE mcrx_noancilla_uni 6 H 6
 GATE mcrx_noancilla_uni 6 H 6
-RESULT mcu_noancilla_uni 6 gates=493 cx=204 t=0 depth=332 qubits=7 ns=253544
+RESULT mcu_noancilla_uni 6 gates=493 cx=204 t=0 depth=332 qubits=7 ns=379742
 GATE mcu_noancilla_uni 6 RZ 5 p=0.1375
 GATE mcu_noancilla_uni 6 H 5
 GATE mcu_noancilla_uni 6 RZ 0 p=0.39269908169872414
@@ -17185,7 +17185,7 @@ GATE mcu_noancilla_uni 6 CX 5 6
 GATE mcu_noancilla_uni 6 RZ 6 p=-0.39269908169872414
 GATE mcu_noancilla_uni 6 CX 3 6
 GATE mcu_noancilla_uni 6 H 6
-RESULT mcmt_x2_noancilla_uni 6 gates=142 cx=44 t=56 depth=115 qubits=8 ns=65787
+RESULT mcmt_x2_noancilla_uni 6 gates=142 cx=44 t=56 depth=115 qubits=8 ns=164310
 GATE mcmt_x2_noancilla_uni 6 CX 6 7
 GATE mcmt_x2_noancilla_uni 6 H 7
 GATE mcmt_x2_noancilla_uni 6 T 7
@@ -17328,7 +17328,7 @@ GATE mcmt_x2_noancilla_uni 6 CX 3 1
 GATE mcmt_x2_noancilla_uni 6 TDG 1
 GATE mcmt_x2_noancilla_uni 6 H 1
 GATE mcmt_x2_noancilla_uni 6 CX 6 7
-RESULT mcmt_y2_noancilla_uni 6 gates=458 cx=184 t=0 depth=314 qubits=8 ns=246549
+RESULT mcmt_y2_noancilla_uni 6 gates=458 cx=184 t=0 depth=314 qubits=8 ns=361633
 GATE mcmt_y2_noancilla_uni 6 RZ 6 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 6 H 6
 GATE mcmt_y2_noancilla_uni 6 RZ 6 p=0.7853981633974483
@@ -17787,7 +17787,7 @@ GATE mcmt_y2_noancilla_uni 6 CX 0 1
 GATE mcmt_y2_noancilla_uni 6 RZ 0 p=0.04908738521234052
 GATE mcmt_y2_noancilla_uni 6 H 7
 GATE mcmt_y2_noancilla_uni 6 S 7
-RESULT mcmt_z2_noancilla_uni 6 gates=450 cx=184 t=0 depth=314 qubits=8 ns=289965
+RESULT mcmt_z2_noancilla_uni 6 gates=450 cx=184 t=0 depth=314 qubits=8 ns=229758
 GATE mcmt_z2_noancilla_uni 6 RZ 6 p=0.7853981633974483
 GATE mcmt_z2_noancilla_uni 6 H 6
 GATE mcmt_z2_noancilla_uni 6 RZ 0 p=0.39269908169872414
@@ -18238,7 +18238,7 @@ GATE mcmt_z2_noancilla_uni 6 CX 0 1
 GATE mcmt_z2_noancilla_uni 6 RZ 1 p=-0.04908738521234052
 GATE mcmt_z2_noancilla_uni 6 CX 0 1
 GATE mcmt_z2_noancilla_uni 6 RZ 0 p=0.04908738521234052
-RESULT mcmt_h2_noancilla_uni 6 gates=730 cx=296 t=0 depth=501 qubits=8 ns=494631
+RESULT mcmt_h2_noancilla_uni 6 gates=730 cx=296 t=0 depth=501 qubits=8 ns=322817
 GATE mcmt_h2_noancilla_uni 6 RZ 5 p=0.39269908169872414
 GATE mcmt_h2_noancilla_uni 6 H 5
 GATE mcmt_h2_noancilla_uni 6 RZ 0 p=0.39269908169872414
@@ -18969,16 +18969,16 @@ GATE mcmt_h2_noancilla_uni 6 CX 5 7
 GATE mcmt_h2_noancilla_uni 6 RZ 7 p=-0.39269908169872414
 GATE mcmt_h2_noancilla_uni 6 CX 3 7
 GATE mcmt_h2_noancilla_uni 6 H 7
-RESULT mcphase_vchain_uni 6 gates=15 cx=2 t=0 depth=14 qubits=12 ns=45015
-RESULT mcrz_vchain_uni 6 gates=14 cx=2 t=0 depth=13 qubits=12 ns=81254
-RESULT mcry_vchain_uni 6 gates=20 cx=2 t=0 depth=16 qubits=12 ns=45285
-RESULT mcrx_vchain_uni 6 gates=22 cx=2 t=0 depth=16 qubits=12 ns=72627
-RESULT mcu_vchain_uni 6 gates=24 cx=2 t=0 depth=18 qubits=12 ns=131511
-RESULT mcmt_x2_vchain_uni 6 gates=12 cx=2 t=0 depth=12 qubits=13 ns=120945
-RESULT mcmt_y2_vchain_uni 6 gates=16 cx=2 t=0 depth=12 qubits=13 ns=61410
-RESULT mcmt_z2_vchain_uni 6 gates=16 cx=2 t=0 depth=12 qubits=13 ns=60736
-RESULT mcmt_h2_vchain_uni 6 gates=38 cx=4 t=0 depth=26 qubits=13 ns=93634
-RESULT mcphase_noancilla_ibm 7 gates=651 cx=220 t=0 depth=477 qubits=8 ns=577266
+RESULT mcphase_vchain_uni 6 gates=15 cx=2 t=0 depth=14 qubits=12 ns=107872
+RESULT mcrz_vchain_uni 6 gates=14 cx=2 t=0 depth=13 qubits=12 ns=103011
+RESULT mcry_vchain_uni 6 gates=20 cx=2 t=0 depth=16 qubits=12 ns=57395
+RESULT mcrx_vchain_uni 6 gates=22 cx=2 t=0 depth=16 qubits=12 ns=128460
+RESULT mcu_vchain_uni 6 gates=24 cx=2 t=0 depth=18 qubits=12 ns=114215
+RESULT mcmt_x2_vchain_uni 6 gates=12 cx=2 t=0 depth=12 qubits=13 ns=97454
+RESULT mcmt_y2_vchain_uni 6 gates=16 cx=2 t=0 depth=12 qubits=13 ns=51816
+RESULT mcmt_z2_vchain_uni 6 gates=16 cx=2 t=0 depth=12 qubits=13 ns=37195
+RESULT mcmt_h2_vchain_uni 6 gates=38 cx=4 t=0 depth=26 qubits=13 ns=36046
+RESULT mcphase_noancilla_ibm 7 gates=651 cx=220 t=0 depth=477 qubits=8 ns=476359
 GATE mcphase_noancilla_ibm 7 RZ 7 p=0.175
 GATE mcphase_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcphase_noancilla_ibm 7 SX 7
@@ -19630,7 +19630,7 @@ GATE mcphase_noancilla_ibm 7 CX 0 1
 GATE mcphase_noancilla_ibm 7 RZ 1 p=-0.00546875
 GATE mcphase_noancilla_ibm 7 CX 0 1
 GATE mcphase_noancilla_ibm 7 RZ 0 p=0.00546875
-RESULT mcrz_noancilla_ibm 7 gates=258 cx=80 t=0 depth=214 qubits=8 ns=114303
+RESULT mcrz_noancilla_ibm 7 gates=258 cx=80 t=0 depth=214 qubits=8 ns=263911
 GATE mcrz_noancilla_ibm 7 RZ 7 p=0.225
 GATE mcrz_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcrz_noancilla_ibm 7 SX 7
@@ -19889,7 +19889,7 @@ GATE mcrz_noancilla_ibm 7 CX 4 7
 GATE mcrz_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcrz_noancilla_ibm 7 SX 7
 GATE mcrz_noancilla_ibm 7 RZ 7 p=1.5707963267948966
-RESULT mcry_noancilla_ibm 7 gates=270 cx=80 t=0 depth=220 qubits=8 ns=324829
+RESULT mcry_noancilla_ibm 7 gates=270 cx=80 t=0 depth=220 qubits=8 ns=317989
 GATE mcry_noancilla_ibm 7 SX 7
 GATE mcry_noancilla_ibm 7 RZ 7 p=3.366592653589793
 GATE mcry_noancilla_ibm 7 SX 7
@@ -20160,7 +20160,7 @@ GATE mcry_noancilla_ibm 7 CX 4 7
 GATE mcry_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcry_noancilla_ibm 7 SX 7
 GATE mcry_noancilla_ibm 7 RZ 7 p=1.5707963267948966
-RESULT mcrx_noancilla_ibm 7 gates=264 cx=80 t=0 depth=220 qubits=8 ns=333460
+RESULT mcrx_noancilla_ibm 7 gates=264 cx=80 t=0 depth=220 qubits=8 ns=267924
 GATE mcrx_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 7 SX 7
 GATE mcrx_noancilla_ibm 7 RZ 7 p=1.5707963267948966
@@ -20425,7 +20425,7 @@ GATE mcrx_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 7 SX 7
 GATE mcrx_noancilla_ibm 7 RZ 7 p=1.5707963267948966
-RESULT mcu_noancilla_ibm 7 gates=1179 cx=380 t=0 depth=903 qubits=8 ns=747665
+RESULT mcu_noancilla_ibm 7 gates=1179 cx=380 t=0 depth=903 qubits=8 ns=1029964
 GATE mcu_noancilla_ibm 7 RZ 6 p=0.1375
 GATE mcu_noancilla_ibm 7 RZ 6 p=1.5707963267948966
 GATE mcu_noancilla_ibm 7 SX 6
@@ -21605,7 +21605,7 @@ GATE mcu_noancilla_ibm 7 CX 4 7
 GATE mcu_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcu_noancilla_ibm 7 SX 7
 GATE mcu_noancilla_ibm 7 RZ 7 p=1.5707963267948966
-RESULT mcmt_x2_noancilla_ibm 7 gates=290 cx=68 t=0 depth=199 qubits=9 ns=155944
+RESULT mcmt_x2_noancilla_ibm 7 gates=290 cx=68 t=0 depth=199 qubits=9 ns=150814
 GATE mcmt_x2_noancilla_ibm 7 CX 7 8
 GATE mcmt_x2_noancilla_ibm 7 RZ 8 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 7 SX 8
@@ -21896,7 +21896,7 @@ GATE mcmt_x2_noancilla_ibm 7 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 7 SX 1
 GATE mcmt_x2_noancilla_ibm 7 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 7 CX 7 8
-RESULT mcmt_y2_noancilla_ibm 7 gates=1318 cx=440 t=0 depth=939 qubits=9 ns=551906
+RESULT mcmt_y2_noancilla_ibm 7 gates=1318 cx=440 t=0 depth=939 qubits=9 ns=531981
 GATE mcmt_y2_noancilla_ibm 7 RZ 7 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 7 SX 7
@@ -23215,7 +23215,7 @@ GATE mcmt_y2_noancilla_ibm 7 RZ 8 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 7 SX 8
 GATE mcmt_y2_noancilla_ibm 7 RZ 8 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 7 RZ 8 p=1.5707963267948966
-RESULT mcmt_z2_noancilla_ibm 7 gates=1302 cx=440 t=0 depth=935 qubits=9 ns=817525
+RESULT mcmt_z2_noancilla_ibm 7 gates=1302 cx=440 t=0 depth=935 qubits=9 ns=482642
 GATE mcmt_z2_noancilla_ibm 7 RZ 7 p=0.7853981633974483
 GATE mcmt_z2_noancilla_ibm 7 RZ 7 p=1.5707963267948966
 GATE mcmt_z2_noancilla_ibm 7 SX 7
@@ -24518,7 +24518,7 @@ GATE mcmt_z2_noancilla_ibm 7 CX 0 1
 GATE mcmt_z2_noancilla_ibm 7 RZ 1 p=-0.02454369260617026
 GATE mcmt_z2_noancilla_ibm 7 CX 0 1
 GATE mcmt_z2_noancilla_ibm 7 RZ 0 p=0.02454369260617026
-RESULT mcmt_h2_noancilla_ibm 7 gates=1842 cx=600 t=0 depth=1367 qubits=9 ns=1174696
+RESULT mcmt_h2_noancilla_ibm 7 gates=1842 cx=600 t=0 depth=1367 qubits=9 ns=783437
 GATE mcmt_h2_noancilla_ibm 7 RZ 6 p=0.39269908169872414
 GATE mcmt_h2_noancilla_ibm 7 RZ 6 p=1.5707963267948966
 GATE mcmt_h2_noancilla_ibm 7 SX 6
@@ -26361,16 +26361,16 @@ GATE mcmt_h2_noancilla_ibm 7 CX 4 8
 GATE mcmt_h2_noancilla_ibm 7 RZ 8 p=1.5707963267948966
 GATE mcmt_h2_noancilla_ibm 7 SX 8
 GATE mcmt_h2_noancilla_ibm 7 RZ 8 p=1.5707963267948966
-RESULT mcphase_vchain_ibm 7 gates=161 cx=38 t=0 depth=120 qubits=14 ns=83486
-RESULT mcrz_vchain_ibm 7 gates=160 cx=38 t=0 depth=119 qubits=14 ns=177665
-RESULT mcry_vchain_ibm 7 gates=166 cx=38 t=0 depth=122 qubits=14 ns=84163
-RESULT mcrx_vchain_ibm 7 gates=168 cx=38 t=0 depth=122 qubits=14 ns=96373
-RESULT mcu_vchain_ibm 7 gates=170 cx=38 t=0 depth=124 qubits=14 ns=175545
-RESULT mcmt_x2_vchain_ibm 7 gates=158 cx=38 t=0 depth=118 qubits=15 ns=156527
-RESULT mcmt_y2_vchain_ibm 7 gates=162 cx=38 t=0 depth=118 qubits=15 ns=188361
-RESULT mcmt_z2_vchain_ibm 7 gates=170 cx=38 t=0 depth=118 qubits=15 ns=237373
-RESULT mcmt_h2_vchain_ibm 7 gates=184 cx=40 t=0 depth=132 qubits=15 ns=155595
-RESULT mcphase_noancilla_uni 7 gates=371 cx=148 t=32 depth=282 qubits=8 ns=341224
+RESULT mcphase_vchain_ibm 7 gates=161 cx=38 t=0 depth=120 qubits=14 ns=141185
+RESULT mcrz_vchain_ibm 7 gates=160 cx=38 t=0 depth=119 qubits=14 ns=215039
+RESULT mcry_vchain_ibm 7 gates=166 cx=38 t=0 depth=122 qubits=14 ns=120366
+RESULT mcrx_vchain_ibm 7 gates=168 cx=38 t=0 depth=122 qubits=14 ns=107203
+RESULT mcu_vchain_ibm 7 gates=170 cx=38 t=0 depth=124 qubits=14 ns=121627
+RESULT mcmt_x2_vchain_ibm 7 gates=158 cx=38 t=0 depth=118 qubits=15 ns=90020
+RESULT mcmt_y2_vchain_ibm 7 gates=162 cx=38 t=0 depth=118 qubits=15 ns=98538
+RESULT mcmt_z2_vchain_ibm 7 gates=170 cx=38 t=0 depth=118 qubits=15 ns=154738
+RESULT mcmt_h2_vchain_ibm 7 gates=184 cx=40 t=0 depth=132 qubits=15 ns=124823
+RESULT mcphase_noancilla_uni 7 gates=371 cx=148 t=32 depth=282 qubits=8 ns=267011
 GATE mcphase_noancilla_uni 7 RZ 7 p=0.175
 GATE mcphase_noancilla_uni 7 CCX 3 5 7
 GATE mcphase_noancilla_uni 7 H 5
@@ -26742,7 +26742,7 @@ GATE mcphase_noancilla_uni 7 CX 0 1
 GATE mcphase_noancilla_uni 7 RZ 1 p=-0.00546875
 GATE mcphase_noancilla_uni 7 CX 0 1
 GATE mcphase_noancilla_uni 7 RZ 0 p=0.00546875
-RESULT mcrz_noancilla_uni 7 gates=146 cx=56 t=32 depth=136 qubits=8 ns=191474
+RESULT mcrz_noancilla_uni 7 gates=146 cx=56 t=32 depth=136 qubits=8 ns=113788
 GATE mcrz_noancilla_uni 7 RZ 7 p=0.225
 GATE mcrz_noancilla_uni 7 CCX 3 5 7
 GATE mcrz_noancilla_uni 7 H 5
@@ -26889,7 +26889,7 @@ GATE mcrz_noancilla_uni 7 CX 6 7
 GATE mcrz_noancilla_uni 7 RZ 7 p=-0.39269908169872414
 GATE mcrz_noancilla_uni 7 CX 4 7
 GATE mcrz_noancilla_uni 7 H 7
-RESULT mcry_noancilla_uni 7 gates=158 cx=56 t=32 depth=142 qubits=8 ns=112524
+RESULT mcry_noancilla_uni 7 gates=158 cx=56 t=32 depth=142 qubits=8 ns=128144
 GATE mcry_noancilla_uni 7 SX 7
 GATE mcry_noancilla_uni 7 RZ 7 p=3.366592653589793
 GATE mcry_noancilla_uni 7 SX 7
@@ -27048,7 +27048,7 @@ GATE mcry_noancilla_uni 7 CX 6 7
 GATE mcry_noancilla_uni 7 RZ 7 p=-0.39269908169872414
 GATE mcry_noancilla_uni 7 CX 4 7
 GATE mcry_noancilla_uni 7 H 7
-RESULT mcrx_noancilla_uni 7 gates=148 cx=56 t=32 depth=138 qubits=8 ns=100318
+RESULT mcrx_noancilla_uni 7 gates=148 cx=56 t=32 depth=138 qubits=8 ns=193297
 GATE mcrx_noancilla_uni 7 H 7
 GATE mcrx_noancilla_uni 7 RZ 7 p=0.225
 GATE mcrx_noancilla_uni 7 CCX 3 5 7
@@ -27197,7 +27197,7 @@ GATE mcrx_noancilla_uni 7 RZ 7 p=-0.39269908169872414
 GATE mcrx_noancilla_uni 7 CX 4 7
 GATE mcrx_noancilla_uni 7 H 7
 GATE mcrx_noancilla_uni 7 H 7
-RESULT mcu_noancilla_uni 7 gates=675 cx=260 t=96 depth=562 qubits=8 ns=273543
+RESULT mcu_noancilla_uni 7 gates=675 cx=260 t=96 depth=562 qubits=8 ns=560745
 GATE mcu_noancilla_uni 7 RZ 6 p=0.1375
 GATE mcu_noancilla_uni 7 H 6
 GATE mcu_noancilla_uni 7 RZ 0 p=0.39269908169872414
@@ -27873,7 +27873,7 @@ GATE mcu_noancilla_uni 7 CX 6 7
 GATE mcu_noancilla_uni 7 RZ 7 p=-0.39269908169872414
 GATE mcu_noancilla_uni 7 CX 4 7
 GATE mcu_noancilla_uni 7 H 7
-RESULT mcmt_x2_noancilla_uni 7 gates=182 cx=56 t=72 depth=139 qubits=9 ns=81813
+RESULT mcmt_x2_noancilla_uni 7 gates=182 cx=56 t=72 depth=139 qubits=9 ns=68501
 GATE mcmt_x2_noancilla_uni 7 CX 7 8
 GATE mcmt_x2_noancilla_uni 7 H 8
 GATE mcmt_x2_noancilla_uni 7 T 8
@@ -28056,7 +28056,7 @@ GATE mcmt_x2_noancilla_uni 7 CX 3 1
 GATE mcmt_x2_noancilla_uni 7 TDG 1
 GATE mcmt_x2_noancilla_uni 7 H 1
 GATE mcmt_x2_noancilla_uni 7 CX 7 8
-RESULT mcmt_y2_noancilla_uni 7 gates=750 cx=296 t=64 depth=557 qubits=9 ns=876486
+RESULT mcmt_y2_noancilla_uni 7 gates=750 cx=296 t=64 depth=557 qubits=9 ns=692926
 GATE mcmt_y2_noancilla_uni 7 RZ 7 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 7 H 7
 GATE mcmt_y2_noancilla_uni 7 RZ 7 p=0.7853981633974483
@@ -28807,7 +28807,7 @@ GATE mcmt_y2_noancilla_uni 7 CX 0 1
 GATE mcmt_y2_noancilla_uni 7 RZ 0 p=0.02454369260617026
 GATE mcmt_y2_noancilla_uni 7 H 8
 GATE mcmt_y2_noancilla_uni 7 S 8
-RESULT mcmt_z2_noancilla_uni 7 gates=742 cx=296 t=64 depth=555 qubits=9 ns=954600
+RESULT mcmt_z2_noancilla_uni 7 gates=742 cx=296 t=64 depth=555 qubits=9 ns=730647
 GATE mcmt_z2_noancilla_uni 7 RZ 7 p=0.7853981633974483
 GATE mcmt_z2_noancilla_uni 7 CCX 3 5 7
 GATE mcmt_z2_noancilla_uni 7 H 5
@@ -29550,7 +29550,7 @@ GATE mcmt_z2_noancilla_uni 7 CX 0 1
 GATE mcmt_z2_noancilla_uni 7 RZ 1 p=-0.02454369260617026
 GATE mcmt_z2_noancilla_uni 7 CX 0 1
 GATE mcmt_z2_noancilla_uni 7 RZ 0 p=0.02454369260617026
-RESULT mcmt_h2_noancilla_uni 7 gates=1058 cx=408 t=128 depth=841 qubits=9 ns=979786
+RESULT mcmt_h2_noancilla_uni 7 gates=1058 cx=408 t=128 depth=841 qubits=9 ns=880255
 GATE mcmt_h2_noancilla_uni 7 RZ 6 p=0.39269908169872414
 GATE mcmt_h2_noancilla_uni 7 H 6
 GATE mcmt_h2_noancilla_uni 7 RZ 0 p=0.39269908169872414
@@ -30609,16 +30609,16 @@ GATE mcmt_h2_noancilla_uni 7 CX 6 8
 GATE mcmt_h2_noancilla_uni 7 RZ 8 p=-0.39269908169872414
 GATE mcmt_h2_noancilla_uni 7 CX 4 8
 GATE mcmt_h2_noancilla_uni 7 H 8
-RESULT mcphase_vchain_uni 7 gates=17 cx=2 t=0 depth=16 qubits=14 ns=102555
-RESULT mcrz_vchain_uni 7 gates=16 cx=2 t=0 depth=15 qubits=14 ns=79492
-RESULT mcry_vchain_uni 7 gates=22 cx=2 t=0 depth=18 qubits=14 ns=48967
-RESULT mcrx_vchain_uni 7 gates=24 cx=2 t=0 depth=18 qubits=14 ns=112844
-RESULT mcu_vchain_uni 7 gates=26 cx=2 t=0 depth=20 qubits=14 ns=126673
-RESULT mcmt_x2_vchain_uni 7 gates=14 cx=2 t=0 depth=14 qubits=15 ns=120320
-RESULT mcmt_y2_vchain_uni 7 gates=18 cx=2 t=0 depth=14 qubits=15 ns=103958
-RESULT mcmt_z2_vchain_uni 7 gates=18 cx=2 t=0 depth=14 qubits=15 ns=89238
-RESULT mcmt_h2_vchain_uni 7 gates=40 cx=4 t=0 depth=28 qubits=15 ns=228364
-RESULT mcphase_noancilla_ibm 8 gates=1023 cx=324 t=0 depth=729 qubits=9 ns=988631
+RESULT mcphase_vchain_uni 7 gates=17 cx=2 t=0 depth=16 qubits=14 ns=59042
+RESULT mcrz_vchain_uni 7 gates=16 cx=2 t=0 depth=15 qubits=14 ns=111299
+RESULT mcry_vchain_uni 7 gates=22 cx=2 t=0 depth=18 qubits=14 ns=82337
+RESULT mcrx_vchain_uni 7 gates=24 cx=2 t=0 depth=18 qubits=14 ns=97732
+RESULT mcu_vchain_uni 7 gates=26 cx=2 t=0 depth=20 qubits=14 ns=81448
+RESULT mcmt_x2_vchain_uni 7 gates=14 cx=2 t=0 depth=14 qubits=15 ns=105732
+RESULT mcmt_y2_vchain_uni 7 gates=18 cx=2 t=0 depth=14 qubits=15 ns=109126
+RESULT mcmt_z2_vchain_uni 7 gates=18 cx=2 t=0 depth=14 qubits=15 ns=48485
+RESULT mcmt_h2_vchain_uni 7 gates=40 cx=4 t=0 depth=28 qubits=15 ns=127020
+RESULT mcphase_noancilla_ibm 8 gates=1023 cx=324 t=0 depth=729 qubits=9 ns=571808
 GATE mcphase_noancilla_ibm 8 RZ 8 p=0.175
 GATE mcphase_noancilla_ibm 8 RZ 8 p=1.5707963267948966
 GATE mcphase_noancilla_ibm 8 SX 8
@@ -31642,7 +31642,7 @@ GATE mcphase_noancilla_ibm 8 CX 0 1
 GATE mcphase_noancilla_ibm 8 RZ 1 p=-0.002734375
 GATE mcphase_noancilla_ibm 8 CX 0 1
 GATE mcphase_noancilla_ibm 8 RZ 0 p=0.002734375
-RESULT mcrz_noancilla_ibm 8 gates=372 cx=104 t=0 depth=267 qubits=9 ns=219581
+RESULT mcrz_noancilla_ibm 8 gates=372 cx=104 t=0 depth=267 qubits=9 ns=196664
 GATE mcrz_noancilla_ibm 8 RZ 8 p=0.225
 GATE mcrz_noancilla_ibm 8 RZ 8 p=1.5707963267948966
 GATE mcrz_noancilla_ibm 8 SX 8
@@ -32015,7 +32015,7 @@ GATE mcrz_noancilla_ibm 8 RZ 1 p=-0.7853981633974483
 GATE mcrz_noancilla_ibm 8 RZ 1 p=1.5707963267948966
 GATE mcrz_noancilla_ibm 8 SX 1
 GATE mcrz_noancilla_ibm 8 RZ 1 p=1.5707963267948966
-RESULT mcry_noancilla_ibm 8 gates=384 cx=104 t=0 depth=270 qubits=9 ns=251393
+RESULT mcry_noancilla_ibm 8 gates=384 cx=104 t=0 depth=270 qubits=9 ns=140994
 GATE mcry_noancilla_ibm 8 SX 8
 GATE mcry_noancilla_ibm 8 RZ 8 p=3.366592653589793
 GATE mcry_noancilla_ibm 8 SX 8
@@ -32400,7 +32400,7 @@ GATE mcry_noancilla_ibm 8 RZ 1 p=-0.7853981633974483
 GATE mcry_noancilla_ibm 8 RZ 1 p=1.5707963267948966
 GATE mcry_noancilla_ibm 8 SX 1
 GATE mcry_noancilla_ibm 8 RZ 1 p=1.5707963267948966
-RESULT mcrx_noancilla_ibm 8 gates=378 cx=104 t=0 depth=270 qubits=9 ns=252819
+RESULT mcrx_noancilla_ibm 8 gates=378 cx=104 t=0 depth=270 qubits=9 ns=162910
 GATE mcrx_noancilla_ibm 8 RZ 8 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 8 SX 8
 GATE mcrx_noancilla_ibm 8 RZ 8 p=1.5707963267948966
@@ -32779,7 +32779,7 @@ GATE mcrx_noancilla_ibm 8 RZ 1 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 8 RZ 8 p=1.5707963267948966
 GATE mcrx_noancilla_ibm 8 SX 8
 GATE mcrx_noancilla_ibm 8 RZ 8 p=1.5707963267948966
-RESULT mcu_noancilla_ibm 8 gates=1779 cx=532 t=0 depth=1229 qubits=9 ns=687084
+RESULT mcu_noancilla_ibm 8 gates=1779 cx=532 t=0 depth=1229 qubits=9 ns=639018
 GATE mcu_noancilla_ibm 8 RZ 7 p=0.1375
 GATE mcu_noancilla_ibm 8 RZ 7 p=1.5707963267948966
 GATE mcu_noancilla_ibm 8 SX 7
@@ -34559,7 +34559,7 @@ GATE mcu_noancilla_ibm 8 RZ 1 p=-0.7853981633974483
 GATE mcu_noancilla_ibm 8 RZ 1 p=1.5707963267948966
 GATE mcu_noancilla_ibm 8 SX 1
 GATE mcu_noancilla_ibm 8 RZ 1 p=1.5707963267948966
-RESULT mcmt_x2_noancilla_ibm 8 gates=346 cx=80 t=0 depth=243 qubits=10 ns=163272
+RESULT mcmt_x2_noancilla_ibm 8 gates=346 cx=80 t=0 depth=243 qubits=10 ns=254529
 GATE mcmt_x2_noancilla_ibm 8 CX 8 9
 GATE mcmt_x2_noancilla_ibm 8 RZ 9 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 8 SX 9
@@ -34906,7 +34906,7 @@ GATE mcmt_x2_noancilla_ibm 8 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 8 SX 1
 GATE mcmt_x2_noancilla_ibm 8 RZ 1 p=1.5707963267948966
 GATE mcmt_x2_noancilla_ibm 8 CX 8 9
-RESULT mcmt_y2_noancilla_ibm 8 gates=2062 cx=648 t=0 depth=1443 qubits=10 ns=2150108
+RESULT mcmt_y2_noancilla_ibm 8 gates=2062 cx=648 t=0 depth=1443 qubits=10 ns=1351676
 GATE mcmt_y2_noancilla_ibm 8 RZ 8 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 8 RZ 8 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 8 SX 8
@@ -36969,7 +36969,7 @@ GATE mcmt_y2_noancilla_ibm 8 RZ 9 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 8 SX 9
 GATE mcmt_y2_noancilla_ibm 8 RZ 9 p=1.5707963267948966
 GATE mcmt_y2_noancilla_ibm 8 RZ 9 p=1.5707963267948966
-RESULT mcmt_z2_noancilla_ibm 8 gates=2046 cx=648 t=0 depth=1439 qubits=10 ns=1842659
+RESULT mcmt_z2_noancilla_ibm 8 gates=2046 cx=648 t=0 depth=1439 qubits=10 ns=1367033
 GATE mcmt_z2_noancilla_ibm 8 RZ 8 p=0.7853981633974483
 GATE mcmt_z2_noancilla_ibm 8 RZ 8 p=1.5707963267948966
 GATE mcmt_z2_noancilla_ibm 8 SX 8
@@ -39016,7 +39016,7 @@ GATE mcmt_z2_noancilla_ibm 8 CX 0 1
 GATE mcmt_z2_noancilla_ibm 8 RZ 1 p=-0.01227184630308513
 GATE mcmt_z2_noancilla_ibm 8 CX 0 1
 GATE mcmt_z2_noancilla_ibm 8 RZ 0 p=0.01227184630308513
-RESULT mcmt_h2_noancilla_ibm 8 gates=2814 cx=856 t=0 depth=1939 qubits=10 ns=2300698
+RESULT mcmt_h2_noancilla_ibm 8 gates=2814 cx=856 t=0 depth=1939 qubits=10 ns=1728372
 GATE mcmt_h2_noancilla_ibm 8 RZ 7 p=0.39269908169872414
 GATE mcmt_h2_noancilla_ibm 8 RZ 7 p=1.5707963267948966
 GATE mcmt_h2_noancilla_ibm 8 SX 7
@@ -41831,16 +41831,16 @@ GATE mcmt_h2_noancilla_ibm 8 RZ 1 p=-0.7853981633974483
 GATE mcmt_h2_noancilla_ibm 8 RZ 1 p=1.5707963267948966
 GATE mcmt_h2_noancilla_ibm 8 SX 1
 GATE mcmt_h2_noancilla_ibm 8 RZ 1 p=1.5707963267948966
-RESULT mcphase_vchain_ibm 8 gates=187 cx=44 t=0 depth=138 qubits=16 ns=138743
-RESULT mcrz_vchain_ibm 8 gates=186 cx=44 t=0 depth=137 qubits=16 ns=131253
-RESULT mcry_vchain_ibm 8 gates=192 cx=44 t=0 depth=140 qubits=16 ns=116473
-RESULT mcrx_vchain_ibm 8 gates=194 cx=44 t=0 depth=140 qubits=16 ns=94562
-RESULT mcu_vchain_ibm 8 gates=196 cx=44 t=0 depth=142 qubits=16 ns=125136
-RESULT mcmt_x2_vchain_ibm 8 gates=184 cx=44 t=0 depth=136 qubits=17 ns=150514
-RESULT mcmt_y2_vchain_ibm 8 gates=188 cx=44 t=0 depth=136 qubits=17 ns=136214
-RESULT mcmt_z2_vchain_ibm 8 gates=196 cx=44 t=0 depth=136 qubits=17 ns=99749
-RESULT mcmt_h2_vchain_ibm 8 gates=210 cx=46 t=0 depth=150 qubits=17 ns=110466
-RESULT mcphase_noancilla_uni 8 gates=535 cx=204 t=96 depth=414 qubits=9 ns=376050
+RESULT mcphase_vchain_ibm 8 gates=187 cx=44 t=0 depth=138 qubits=16 ns=135456
+RESULT mcrz_vchain_ibm 8 gates=186 cx=44 t=0 depth=137 qubits=16 ns=234746
+RESULT mcry_vchain_ibm 8 gates=192 cx=44 t=0 depth=140 qubits=16 ns=229751
+RESULT mcrx_vchain_ibm 8 gates=194 cx=44 t=0 depth=140 qubits=16 ns=231483
+RESULT mcu_vchain_ibm 8 gates=196 cx=44 t=0 depth=142 qubits=16 ns=234742
+RESULT mcmt_x2_vchain_ibm 8 gates=184 cx=44 t=0 depth=136 qubits=17 ns=233963
+RESULT mcmt_y2_vchain_ibm 8 gates=188 cx=44 t=0 depth=136 qubits=17 ns=144167
+RESULT mcmt_z2_vchain_ibm 8 gates=196 cx=44 t=0 depth=136 qubits=17 ns=184103
+RESULT mcmt_h2_vchain_ibm 8 gates=210 cx=46 t=0 depth=150 qubits=17 ns=262128
+RESULT mcphase_noancilla_uni 8 gates=535 cx=204 t=96 depth=414 qubits=9 ns=299973
 GATE mcphase_noancilla_uni 8 RZ 8 p=0.175
 GATE mcphase_noancilla_uni 8 CCX 3 5 8
 GATE mcphase_noancilla_uni 8 H 5
@@ -42376,7 +42376,7 @@ GATE mcphase_noancilla_uni 8 CX 0 1
 GATE mcphase_noancilla_uni 8 RZ 1 p=-0.002734375
 GATE mcphase_noancilla_uni 8 CX 0 1
 GATE mcphase_noancilla_uni 8 RZ 0 p=0.002734375
-RESULT mcrz_noancilla_uni 8 gates=164 cx=56 t=64 depth=140 qubits=9 ns=121750
+RESULT mcrz_noancilla_uni 8 gates=164 cx=56 t=64 depth=140 qubits=9 ns=90425
 GATE mcrz_noancilla_uni 8 RZ 8 p=0.225
 GATE mcrz_noancilla_uni 8 CCX 3 5 8
 GATE mcrz_noancilla_uni 8 H 5
@@ -42541,7 +42541,7 @@ GATE mcrz_noancilla_uni 8 T 1
 GATE mcrz_noancilla_uni 8 CX 6 1
 GATE mcrz_noancilla_uni 8 TDG 1
 GATE mcrz_noancilla_uni 8 H 1
-RESULT mcry_noancilla_uni 8 gates=176 cx=56 t=64 depth=143 qubits=9 ns=79120
+RESULT mcry_noancilla_uni 8 gates=176 cx=56 t=64 depth=143 qubits=9 ns=67535
 GATE mcry_noancilla_uni 8 SX 8
 GATE mcry_noancilla_uni 8 RZ 8 p=3.366592653589793
 GATE mcry_noancilla_uni 8 SX 8
@@ -42718,7 +42718,7 @@ GATE mcry_noancilla_uni 8 T 1
 GATE mcry_noancilla_uni 8 CX 6 1
 GATE mcry_noancilla_uni 8 TDG 1
 GATE mcry_noancilla_uni 8 H 1
-RESULT mcrx_noancilla_uni 8 gates=166 cx=56 t=64 depth=141 qubits=9 ns=97660
+RESULT mcrx_noancilla_uni 8 gates=166 cx=56 t=64 depth=141 qubits=9 ns=70237
 GATE mcrx_noancilla_uni 8 H 8
 GATE mcrx_noancilla_uni 8 RZ 8 p=0.225
 GATE mcrx_noancilla_uni 8 CCX 3 5 8
@@ -42885,7 +42885,7 @@ GATE mcrx_noancilla_uni 8 CX 6 1
 GATE mcrx_noancilla_uni 8 TDG 1
 GATE mcrx_noancilla_uni 8 H 1
 GATE mcrx_noancilla_uni 8 H 8
-RESULT mcu_noancilla_uni 8 gates=875 cx=316 t=224 depth=677 qubits=9 ns=305180
+RESULT mcu_noancilla_uni 8 gates=875 cx=316 t=224 depth=677 qubits=9 ns=681876
 GATE mcu_noancilla_uni 8 RZ 7 p=0.1375
 GATE mcu_noancilla_uni 8 CCX 3 5 7
 GATE mcu_noancilla_uni 8 H 5
@@ -43761,7 +43761,7 @@ GATE mcu_noancilla_uni 8 T 1
 GATE mcu_noancilla_uni 8 CX 6 1
 GATE mcu_noancilla_uni 8 TDG 1
 GATE mcu_noancilla_uni 8 H 1
-RESULT mcmt_x2_noancilla_uni 8 gates=222 cx=68 t=88 depth=175 qubits=10 ns=84231
+RESULT mcmt_x2_noancilla_uni 8 gates=222 cx=68 t=88 depth=175 qubits=10 ns=92057
 GATE mcmt_x2_noancilla_uni 8 CX 8 9
 GATE mcmt_x2_noancilla_uni 8 H 9
 GATE mcmt_x2_noancilla_uni 8 T 9
@@ -43984,7 +43984,7 @@ GATE mcmt_x2_noancilla_uni 8 CX 3 1
 GATE mcmt_x2_noancilla_uni 8 TDG 1
 GATE mcmt_x2_noancilla_uni 8 H 1
 GATE mcmt_x2_noancilla_uni 8 CX 8 9
-RESULT mcmt_y2_noancilla_uni 8 gates=1078 cx=408 t=192 depth=821 qubits=10 ns=505667
+RESULT mcmt_y2_noancilla_uni 8 gates=1078 cx=408 t=192 depth=821 qubits=10 ns=988599
 GATE mcmt_y2_noancilla_uni 8 RZ 8 p=-1.5707963267948966
 GATE mcmt_y2_noancilla_uni 8 H 8
 GATE mcmt_y2_noancilla_uni 8 RZ 8 p=0.7853981633974483
@@ -45063,7 +45063,7 @@ GATE mcmt_y2_noancilla_uni 8 CX 0 1
 GATE mcmt_y2_noancilla_uni 8 RZ 0 p=0.01227184630308513
 GATE mcmt_y2_noancilla_uni 8 H 9
 GATE mcmt_y2_noancilla_uni 8 S 9
-RESULT mcmt_z2_noancilla_uni 8 gates=1070 cx=408 t=192 depth=819 qubits=10 ns=349811
+RESULT mcmt_z2_noancilla_uni 8 gates=1070 cx=408 t=192 depth=819 qubits=10 ns=445621
 GATE mcmt_z2_noancilla_uni 8 RZ 8 p=0.7853981633974483
 GATE mcmt_z2_noancilla_uni 8 CCX 3 5 8
 GATE mcmt_z2_noancilla_uni 8 H 5
@@ -46134,7 +46134,7 @@ GATE mcmt_z2_noancilla_uni 8 CX 0 1
 GATE mcmt_z2_noancilla_uni 8 RZ 1 p=-0.01227184630308513
 GATE mcmt_z2_noancilla_uni 8 CX 0 1
 GATE mcmt_z2_noancilla_uni 8 RZ 0 p=0.01227184630308513
-RESULT mcmt_h2_noancilla_uni 8 gates=1422 cx=520 t=320 depth=1082 qubits=10 ns=567806
+RESULT mcmt_h2_noancilla_uni 8 gates=1422 cx=520 t=320 depth=1082 qubits=10 ns=449160
 GATE mcmt_h2_noancilla_uni 8 RZ 7 p=0.39269908169872414
 GATE mcmt_h2_noancilla_uni 8 CCX 3 5 7
 GATE mcmt_h2_noancilla_uni 8 H 5
@@ -47557,49 +47557,49 @@ GATE mcmt_h2_noancilla_uni 8 T 1
 GATE mcmt_h2_noancilla_uni 8 CX 6 1
 GATE mcmt_h2_noancilla_uni 8 TDG 1
 GATE mcmt_h2_noancilla_uni 8 H 1
-RESULT mcphase_vchain_uni 8 gates=19 cx=2 t=0 depth=18 qubits=16 ns=128585
-RESULT mcrz_vchain_uni 8 gates=18 cx=2 t=0 depth=17 qubits=16 ns=139638
-RESULT mcry_vchain_uni 8 gates=24 cx=2 t=0 depth=20 qubits=16 ns=240132
-RESULT mcrx_vchain_uni 8 gates=26 cx=2 t=0 depth=20 qubits=16 ns=119756
-RESULT mcu_vchain_uni 8 gates=28 cx=2 t=0 depth=22 qubits=16 ns=88504
-RESULT mcmt_x2_vchain_uni 8 gates=16 cx=2 t=0 depth=16 qubits=17 ns=62703
-RESULT mcmt_y2_vchain_uni 8 gates=20 cx=2 t=0 depth=16 qubits=17 ns=76599
-RESULT mcmt_z2_vchain_uni 8 gates=20 cx=2 t=0 depth=16 qubits=17 ns=77179
-RESULT mcmt_h2_vchain_uni 8 gates=42 cx=4 t=0 depth=30 qubits=17 ns=67593
-RESULT mcphase_noancilla_ibm 10 gates=1935 cx=580 t=0 depth=1400 qubits=11 ns=1092597
-RESULT mcrz_noancilla_ibm 10 gates=484 cx=136 t=0 depth=379 qubits=11 ns=244886
-RESULT mcry_noancilla_ibm 10 gates=496 cx=136 t=0 depth=382 qubits=11 ns=226828
-RESULT mcrx_noancilla_ibm 10 gates=490 cx=136 t=0 depth=382 qubits=11 ns=284293
-RESULT mcu_noancilla_ibm 10 gates=2915 cx=852 t=0 depth=2113 qubits=11 ns=2110394
-RESULT mcmt_x2_noancilla_ibm 10 gates=458 cx=104 t=0 depth=319 qubits=12 ns=169837
-RESULT mcmt_y2_noancilla_ibm 10 gates=3886 cx=1160 t=0 depth=2774 qubits=12 ns=3222018
-RESULT mcmt_z2_noancilla_ibm 10 gates=3870 cx=1160 t=0 depth=2770 qubits=12 ns=1835818
-RESULT mcmt_h2_noancilla_ibm 10 gates=4862 cx=1432 t=0 depth=3483 qubits=12 ns=2942252
-RESULT mcphase_vchain_ibm 10 gates=239 cx=56 t=0 depth=174 qubits=20 ns=133709
-RESULT mcrz_vchain_ibm 10 gates=238 cx=56 t=0 depth=173 qubits=20 ns=109371
-RESULT mcry_vchain_ibm 10 gates=244 cx=56 t=0 depth=176 qubits=20 ns=190662
-RESULT mcrx_vchain_ibm 10 gates=246 cx=56 t=0 depth=176 qubits=20 ns=231303
-RESULT mcu_vchain_ibm 10 gates=248 cx=56 t=0 depth=178 qubits=20 ns=329558
-RESULT mcmt_x2_vchain_ibm 10 gates=236 cx=56 t=0 depth=172 qubits=21 ns=367855
-RESULT mcmt_y2_vchain_ibm 10 gates=240 cx=56 t=0 depth=172 qubits=21 ns=291844
-RESULT mcmt_z2_vchain_ibm 10 gates=248 cx=56 t=0 depth=172 qubits=21 ns=306375
-RESULT mcmt_h2_vchain_ibm 10 gates=262 cx=58 t=0 depth=186 qubits=21 ns=309566
-RESULT mcphase_noancilla_uni 10 gates=983 cx=364 t=272 depth=810 qubits=11 ns=538078
-RESULT mcrz_noancilla_uni 10 gates=244 cx=88 t=96 depth=220 qubits=11 ns=79409
-RESULT mcry_noancilla_uni 10 gates=256 cx=88 t=96 depth=223 qubits=11 ns=109598
-RESULT mcrx_noancilla_uni 10 gates=246 cx=88 t=96 depth=221 qubits=11 ns=89939
-RESULT mcu_noancilla_uni 10 gates=1483 cx=540 t=464 depth=1228 qubits=11 ns=634774
-RESULT mcmt_x2_noancilla_uni 10 gates=302 cx=92 t=120 depth=235 qubits=12 ns=120775
-RESULT mcmt_y2_noancilla_uni 10 gates=1974 cx=728 t=544 depth=1608 qubits=12 ns=1564765
-RESULT mcmt_z2_noancilla_uni 10 gates=1966 cx=728 t=544 depth=1606 qubits=12 ns=1243249
-RESULT mcmt_h2_noancilla_uni 10 gates=2478 cx=904 t=736 depth=2024 qubits=12 ns=1158602
-RESULT mcphase_vchain_uni 10 gates=23 cx=2 t=0 depth=22 qubits=20 ns=45838
-RESULT mcrz_vchain_uni 10 gates=22 cx=2 t=0 depth=21 qubits=20 ns=71640
-RESULT mcry_vchain_uni 10 gates=28 cx=2 t=0 depth=24 qubits=20 ns=78909
-RESULT mcrx_vchain_uni 10 gates=30 cx=2 t=0 depth=24 qubits=20 ns=77373
-RESULT mcu_vchain_uni 10 gates=32 cx=2 t=0 depth=26 qubits=20 ns=63460
-RESULT mcmt_x2_vchain_uni 10 gates=20 cx=2 t=0 depth=20 qubits=21 ns=63690
-RESULT mcmt_y2_vchain_uni 10 gates=24 cx=2 t=0 depth=20 qubits=21 ns=71807
-RESULT mcmt_z2_vchain_uni 10 gates=24 cx=2 t=0 depth=20 qubits=21 ns=78270
-RESULT mcmt_h2_vchain_uni 10 gates=46 cx=4 t=0 depth=34 qubits=21 ns=71396
+RESULT mcphase_vchain_uni 8 gates=19 cx=2 t=0 depth=18 qubits=16 ns=43867
+RESULT mcrz_vchain_uni 8 gates=18 cx=2 t=0 depth=17 qubits=16 ns=37891
+RESULT mcry_vchain_uni 8 gates=24 cx=2 t=0 depth=20 qubits=16 ns=48853
+RESULT mcrx_vchain_uni 8 gates=26 cx=2 t=0 depth=20 qubits=16 ns=43639
+RESULT mcu_vchain_uni 8 gates=28 cx=2 t=0 depth=22 qubits=16 ns=52996
+RESULT mcmt_x2_vchain_uni 8 gates=16 cx=2 t=0 depth=16 qubits=17 ns=50573
+RESULT mcmt_y2_vchain_uni 8 gates=20 cx=2 t=0 depth=16 qubits=17 ns=52817
+RESULT mcmt_z2_vchain_uni 8 gates=20 cx=2 t=0 depth=16 qubits=17 ns=51631
+RESULT mcmt_h2_vchain_uni 8 gates=42 cx=4 t=0 depth=30 qubits=17 ns=77819
+RESULT mcphase_noancilla_ibm 10 gates=1935 cx=580 t=0 depth=1400 qubits=11 ns=586773
+RESULT mcrz_noancilla_ibm 10 gates=484 cx=136 t=0 depth=379 qubits=11 ns=180079
+RESULT mcry_noancilla_ibm 10 gates=496 cx=136 t=0 depth=382 qubits=11 ns=183784
+RESULT mcrx_noancilla_ibm 10 gates=490 cx=136 t=0 depth=382 qubits=11 ns=181555
+RESULT mcu_noancilla_ibm 10 gates=2915 cx=852 t=0 depth=2113 qubits=11 ns=933045
+RESULT mcmt_x2_noancilla_ibm 10 gates=458 cx=104 t=0 depth=319 qubits=12 ns=169385
+RESULT mcmt_y2_noancilla_ibm 10 gates=3886 cx=1160 t=0 depth=2774 qubits=12 ns=1566609
+RESULT mcmt_z2_noancilla_ibm 10 gates=3870 cx=1160 t=0 depth=2770 qubits=12 ns=2706603
+RESULT mcmt_h2_noancilla_ibm 10 gates=4862 cx=1432 t=0 depth=3483 qubits=12 ns=1627762
+RESULT mcphase_vchain_ibm 10 gates=239 cx=56 t=0 depth=174 qubits=20 ns=100484
+RESULT mcrz_vchain_ibm 10 gates=238 cx=56 t=0 depth=173 qubits=20 ns=108218
+RESULT mcry_vchain_ibm 10 gates=244 cx=56 t=0 depth=176 qubits=20 ns=111990
+RESULT mcrx_vchain_ibm 10 gates=246 cx=56 t=0 depth=176 qubits=20 ns=117016
+RESULT mcu_vchain_ibm 10 gates=248 cx=56 t=0 depth=178 qubits=20 ns=95718
+RESULT mcmt_x2_vchain_ibm 10 gates=236 cx=56 t=0 depth=172 qubits=21 ns=107476
+RESULT mcmt_y2_vchain_ibm 10 gates=240 cx=56 t=0 depth=172 qubits=21 ns=98705
+RESULT mcmt_z2_vchain_ibm 10 gates=248 cx=56 t=0 depth=172 qubits=21 ns=260892
+RESULT mcmt_h2_vchain_ibm 10 gates=262 cx=58 t=0 depth=186 qubits=21 ns=118415
+RESULT mcphase_noancilla_uni 10 gates=983 cx=364 t=272 depth=810 qubits=11 ns=517770
+RESULT mcrz_noancilla_uni 10 gates=244 cx=88 t=96 depth=220 qubits=11 ns=119091
+RESULT mcry_noancilla_uni 10 gates=256 cx=88 t=96 depth=223 qubits=11 ns=137308
+RESULT mcrx_noancilla_uni 10 gates=246 cx=88 t=96 depth=221 qubits=11 ns=102147
+RESULT mcu_noancilla_uni 10 gates=1483 cx=540 t=464 depth=1228 qubits=11 ns=411502
+RESULT mcmt_x2_noancilla_uni 10 gates=302 cx=92 t=120 depth=235 qubits=12 ns=199914
+RESULT mcmt_y2_noancilla_uni 10 gates=1974 cx=728 t=544 depth=1608 qubits=12 ns=949866
+RESULT mcmt_z2_noancilla_uni 10 gates=1966 cx=728 t=544 depth=1606 qubits=12 ns=527414
+RESULT mcmt_h2_noancilla_uni 10 gates=2478 cx=904 t=736 depth=2024 qubits=12 ns=1057227
+RESULT mcphase_vchain_uni 10 gates=23 cx=2 t=0 depth=22 qubits=20 ns=50596
+RESULT mcrz_vchain_uni 10 gates=22 cx=2 t=0 depth=21 qubits=20 ns=51226
+RESULT mcry_vchain_uni 10 gates=28 cx=2 t=0 depth=24 qubits=20 ns=54066
+RESULT mcrx_vchain_uni 10 gates=30 cx=2 t=0 depth=24 qubits=20 ns=51380
+RESULT mcu_vchain_uni 10 gates=32 cx=2 t=0 depth=26 qubits=20 ns=49677
+RESULT mcmt_x2_vchain_uni 10 gates=20 cx=2 t=0 depth=20 qubits=21 ns=50109
+RESULT mcmt_y2_vchain_uni 10 gates=24 cx=2 t=0 depth=20 qubits=21 ns=64369
+RESULT mcmt_z2_vchain_uni 10 gates=24 cx=2 t=0 depth=20 qubits=21 ns=53974
+RESULT mcmt_h2_vchain_uni 10 gates=46 cx=4 t=0 depth=34 qubits=21 ns=55136
 # DONE

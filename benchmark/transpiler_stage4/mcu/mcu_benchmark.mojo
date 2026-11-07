@@ -122,7 +122,7 @@ def main() raises:
     var uni = List[String]()
     for g in ["CX", "CCX", "RZ", "SX", "X", "H", "T", "TDG", "S", "SWAP", "MEASURE"]:
         uni.append(g)
-    var tgt_uni = target_custom(30, cm, uni)     # trùng uni_basis bên Qiskit
+    var tgt_uni = target_custom(30, cm, uni)
     for n in [1, 2, 3, 4, 5, 6, 7, 8, 10]:
         run_all(n, tgt_ibm, "ibm")
         run_all(n, tgt_uni, "uni")
