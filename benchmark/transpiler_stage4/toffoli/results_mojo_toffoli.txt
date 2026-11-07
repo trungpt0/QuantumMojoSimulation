@@ -1,0 +1,153 @@
+# Mojo Toffoli Synthesis Benchmark
+# Timing: warm=5 reps=200 median
+RESULT standard_ibm 2 gates=19 cx=6 t=0 tdepth=0 depth=14 qubits=3 ns=51711
+GATE standard_ibm 2 RZ 2 p=1.5707963267948966
+GATE standard_ibm 2 SX 2
+GATE standard_ibm 2 RZ 2 p=1.5707963267948966
+GATE standard_ibm 2 CX 1 2
+GATE standard_ibm 2 RZ 2 p=-0.7853981633974483
+GATE standard_ibm 2 CX 0 2
+GATE standard_ibm 2 RZ 2 p=0.7853981633974483
+GATE standard_ibm 2 CX 1 2
+GATE standard_ibm 2 RZ 2 p=-0.7853981633974483
+GATE standard_ibm 2 CX 0 2
+GATE standard_ibm 2 RZ 1 p=0.7853981633974483
+GATE standard_ibm 2 RZ 2 p=0.7853981633974483
+GATE standard_ibm 2 RZ 2 p=1.5707963267948966
+GATE standard_ibm 2 SX 2
+GATE standard_ibm 2 RZ 2 p=1.5707963267948966
+GATE standard_ibm 2 CX 0 1
+GATE standard_ibm 2 RZ 0 p=0.7853981633974483
+GATE standard_ibm 2 RZ 1 p=-0.7853981633974483
+GATE standard_ibm 2 CX 0 1
+RESULT standard_ft 2 gates=15 cx=6 t=7 tdepth=4 depth=11 qubits=3 ns=38206
+GATE standard_ft 2 H 2
+GATE standard_ft 2 CX 1 2
+GATE standard_ft 2 TDG 2
+GATE standard_ft 2 CX 0 2
+GATE standard_ft 2 T 2
+GATE standard_ft 2 CX 1 2
+GATE standard_ft 2 TDG 2
+GATE standard_ft 2 CX 0 2
+GATE standard_ft 2 T 1
+GATE standard_ft 2 T 2
+GATE standard_ft 2 H 2
+GATE standard_ft 2 CX 0 1
+GATE standard_ft 2 T 0
+GATE standard_ft 2 TDG 1
+GATE standard_ft 2 CX 0 1
+RESULT standard_uni 2 gates=15 cx=6 t=7 tdepth=4 depth=11 qubits=3 ns=39293
+GATE standard_uni 2 H 2
+GATE standard_uni 2 CX 1 2
+GATE standard_uni 2 TDG 2
+GATE standard_uni 2 CX 0 2
+GATE standard_uni 2 T 2
+GATE standard_uni 2 CX 1 2
+GATE standard_uni 2 TDG 2
+GATE standard_uni 2 CX 0 2
+GATE standard_uni 2 T 1
+GATE standard_uni 2 T 2
+GATE standard_uni 2 H 2
+GATE standard_uni 2 CX 0 1
+GATE standard_uni 2 T 0
+GATE standard_uni 2 TDG 1
+GATE standard_uni 2 CX 0 1
+RESULT relative_phase_ibm 2 gates=13 cx=3 t=0 tdepth=0 depth=13 qubits=3 ns=119874
+GATE relative_phase_ibm 2 RZ 2 p=1.5707963267948966
+GATE relative_phase_ibm 2 SX 2
+GATE relative_phase_ibm 2 RZ 2 p=1.5707963267948966
+GATE relative_phase_ibm 2 RZ 2 p=0.7853981633974483
+GATE relative_phase_ibm 2 CX 1 2
+GATE relative_phase_ibm 2 RZ 2 p=-0.7853981633974483
+GATE relative_phase_ibm 2 CX 0 2
+GATE relative_phase_ibm 2 RZ 2 p=0.7853981633974483
+GATE relative_phase_ibm 2 CX 1 2
+GATE relative_phase_ibm 2 RZ 2 p=-0.7853981633974483
+GATE relative_phase_ibm 2 RZ 2 p=1.5707963267948966
+GATE relative_phase_ibm 2 SX 2
+GATE relative_phase_ibm 2 RZ 2 p=1.5707963267948966
+RESULT relative_phase_ft 2 gates=9 cx=3 t=4 tdepth=4 depth=9 qubits=3 ns=37848
+GATE relative_phase_ft 2 H 2
+GATE relative_phase_ft 2 T 2
+GATE relative_phase_ft 2 CX 1 2
+GATE relative_phase_ft 2 TDG 2
+GATE relative_phase_ft 2 CX 0 2
+GATE relative_phase_ft 2 T 2
+GATE relative_phase_ft 2 CX 1 2
+GATE relative_phase_ft 2 TDG 2
+GATE relative_phase_ft 2 H 2
+RESULT relative_phase_uni 2 gates=9 cx=3 t=4 tdepth=4 depth=9 qubits=3 ns=39714
+GATE relative_phase_uni 2 H 2
+GATE relative_phase_uni 2 T 2
+GATE relative_phase_uni 2 CX 1 2
+GATE relative_phase_uni 2 TDG 2
+GATE relative_phase_uni 2 CX 0 2
+GATE relative_phase_uni 2 T 2
+GATE relative_phase_uni 2 CX 1 2
+GATE relative_phase_uni 2 TDG 2
+GATE relative_phase_uni 2 H 2
+RESULT t_depth_ibm 2 gates=23 cx=10 t=0 tdepth=0 depth=17 qubits=3 ns=50544
+GATE t_depth_ibm 2 RZ 2 p=1.5707963267948966
+GATE t_depth_ibm 2 SX 2
+GATE t_depth_ibm 2 RZ 2 p=1.5707963267948966
+GATE t_depth_ibm 2 RZ 0 p=0.7853981633974483
+GATE t_depth_ibm 2 RZ 1 p=0.7853981633974483
+GATE t_depth_ibm 2 RZ 2 p=0.7853981633974483
+GATE t_depth_ibm 2 CX 0 1
+GATE t_depth_ibm 2 CX 0 2
+GATE t_depth_ibm 2 CX 1 0
+GATE t_depth_ibm 2 CX 2 0
+GATE t_depth_ibm 2 RZ 0 p=0.7853981633974483
+GATE t_depth_ibm 2 RZ 1 p=-0.7853981633974483
+GATE t_depth_ibm 2 RZ 2 p=-0.7853981633974483
+GATE t_depth_ibm 2 CX 1 2
+GATE t_depth_ibm 2 RZ 2 p=-0.7853981633974483
+GATE t_depth_ibm 2 CX 1 2
+GATE t_depth_ibm 2 CX 2 0
+GATE t_depth_ibm 2 CX 1 0
+GATE t_depth_ibm 2 CX 0 2
+GATE t_depth_ibm 2 CX 0 1
+GATE t_depth_ibm 2 RZ 2 p=1.5707963267948966
+GATE t_depth_ibm 2 SX 2
+GATE t_depth_ibm 2 RZ 2 p=1.5707963267948966
+RESULT t_depth_ft 2 gates=19 cx=10 t=7 tdepth=3 depth=13 qubits=3 ns=39241
+GATE t_depth_ft 2 H 2
+GATE t_depth_ft 2 T 0
+GATE t_depth_ft 2 T 1
+GATE t_depth_ft 2 T 2
+GATE t_depth_ft 2 CX 0 1
+GATE t_depth_ft 2 CX 0 2
+GATE t_depth_ft 2 CX 1 0
+GATE t_depth_ft 2 CX 2 0
+GATE t_depth_ft 2 T 0
+GATE t_depth_ft 2 TDG 1
+GATE t_depth_ft 2 TDG 2
+GATE t_depth_ft 2 CX 1 2
+GATE t_depth_ft 2 TDG 2
+GATE t_depth_ft 2 CX 1 2
+GATE t_depth_ft 2 CX 2 0
+GATE t_depth_ft 2 CX 1 0
+GATE t_depth_ft 2 CX 0 2
+GATE t_depth_ft 2 CX 0 1
+GATE t_depth_ft 2 H 2
+RESULT t_depth_uni 2 gates=19 cx=10 t=7 tdepth=3 depth=13 qubits=3 ns=39988
+GATE t_depth_uni 2 H 2
+GATE t_depth_uni 2 T 0
+GATE t_depth_uni 2 T 1
+GATE t_depth_uni 2 T 2
+GATE t_depth_uni 2 CX 0 1
+GATE t_depth_uni 2 CX 0 2
+GATE t_depth_uni 2 CX 1 0
+GATE t_depth_uni 2 CX 2 0
+GATE t_depth_uni 2 T 0
+GATE t_depth_uni 2 TDG 1
+GATE t_depth_uni 2 TDG 2
+GATE t_depth_uni 2 CX 1 2
+GATE t_depth_uni 2 TDG 2
+GATE t_depth_uni 2 CX 1 2
+GATE t_depth_uni 2 CX 2 0
+GATE t_depth_uni 2 CX 1 0
+GATE t_depth_uni 2 CX 0 2
+GATE t_depth_uni 2 CX 0 1
+GATE t_depth_uni 2 H 2
+# DONE
