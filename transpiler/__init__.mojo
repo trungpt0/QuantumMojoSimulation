@@ -15,6 +15,11 @@ from .passes import ccz_definition
 from .passes import mcx_noancilla, mcx_vchain, mcx_recursion, mcx_gray_code, mcx_synthesize
 from .passes import mcmt_synthesize
 from .passes import toffoli_standard, toffoli_relative_phase, toffoli_t_depth_optimal, toffoli_rz_based, toffoli_synthesize
+from .passes import gauss_ops
+from .passes import pmh_ops, pmh_auto_section
+from .passes import lnn_ops, lnn_ops_order
+from .passes import kms_ops, kms_ops_order
+from .passes import linear_ops
 from .passes import BasisTranslator, _apply_basis_translator
 from .coupling import CouplingMap
 from .target import GateProperties, Target

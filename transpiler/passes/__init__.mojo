@@ -16,3 +16,8 @@ from .translation import BasisTranslator, _apply_basis_translator
 from .synthesis import mcx_noancilla, mcx_vchain, mcx_recursion, mcx_gray_code, mcx_synthesize
 from .synthesis import mcmt_synthesize
 from .synthesis import toffoli_standard, toffoli_relative_phase, toffoli_t_depth_optimal, toffoli_rz_based, toffoli_synthesize
+from .synthesis import gauss_ops
+from .synthesis import pmh_ops, pmh_auto_section
+from .synthesis import lnn_ops, lnn_ops_order
+from .synthesis import kms_ops, kms_ops_order
+from .synthesis import linear_ops
