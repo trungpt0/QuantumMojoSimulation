@@ -20,6 +20,7 @@ from .passes import pmh_ops, pmh_auto_section
 from .passes import lnn_ops, lnn_ops_order
 from .passes import kms_ops, kms_ops_order
 from .passes import linear_ops
+from .passes import OneQubitDecomposer, Gate1Q
 from .passes import BasisTranslator, _apply_basis_translator
 from .coupling import CouplingMap
 from .target import GateProperties, Target

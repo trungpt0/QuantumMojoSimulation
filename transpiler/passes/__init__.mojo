@@ -21,3 +21,4 @@ from .synthesis import pmh_ops, pmh_auto_section
 from .synthesis import lnn_ops, lnn_ops_order
 from .synthesis import kms_ops, kms_ops_order
 from .synthesis import linear_ops
+from .synthesis import OneQubitDecomposer, Gate1Q
