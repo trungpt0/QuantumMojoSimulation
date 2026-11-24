@@ -1,6 +1,6 @@
 from gates import GateOp
 from qmath import CMatrix, phase_error
-from transpiler import OneQubitDecomposer, Gate1Q
+from transpiler import EulerDecomposer, Gate1Q
 from std.time import monotonic
 from std.math import cos, sin
 
@@ -115,9 +115,9 @@ def count(g: List[GateOp], name: String) -> Int:
 def run_case(case_: String, u: CMatrix, basis: String) raises:
     var label = case_ + "_" + basis
     try:
-        var dec = OneQubitDecomposer(basis)
+        var dec = EulerDecomposer(basis)
         var g = dec.gates(u, 0)
-        var err = phase_error(u, OneQubitDecomposer.matrix(g, 0))
+        var err = phase_error(u, EulerDecomposer.matrix(g, 0))
         var t0 = monotonic()
         for _ in range(REPS):
             var w = dec.gates(u, 0)
@@ -141,7 +141,7 @@ def run_case(case_: String, u: CMatrix, basis: String) raises:
         print("# ERROR", label, ":", e)
 
 def main() raises:
-    print("# Mojo OneQubitDecomposer benchmark")
+    print("# Mojo EulerDecomposer benchmark")
     var bases = ["ZYZ", "ZXZ", "ZSX", "U"]
     var specials = ["id", "phase", "x", "y", "z", "h", "s", "t", "sx", "rztiny", "rytiny", "rypieps", "rypi", "rxhalf", "u3"]
     for ci in range(len(specials)):

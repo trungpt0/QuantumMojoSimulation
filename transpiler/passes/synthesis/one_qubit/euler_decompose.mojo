@@ -92,13 +92,13 @@ struct Gate1Q:
             return Gate1Q.u(g.theta[0], g.theta[1], g.theta[2])
         raise Error("Gate1Q.of: not support " + nm)
 
-struct OneQubitDecomposer(Copyable, Movable):
+struct EulerDecomposer(Copyable, Movable):
     var basis: String
     var eps: Float64
 
     def __init__(out self, basis: String = "ZYZ", eps: Float64 = ANG_EPS) raises:
         if basis != "ZYZ" and basis != "ZXZ" and basis != "ZSX" and basis != "U":
-            raise Error("OneQubitDecomposer: not support " + basis)
+            raise Error("EulerDecomposer: not support " + basis)
         self.basis = basis
         self.eps = eps
 
@@ -161,8 +161,8 @@ struct OneQubitDecomposer(Copyable, Movable):
     
     def gates(self, u: CMatrix, q: Int) raises -> List[GateOp]:
         if u.n != 2:
-            raise Error("OneQubitDecomposer: just decompose one-qubit gate")
-        var t = OneQubitDecomposer.angles(u)
+            raise Error("EulerDecomposer: just decompose one-qubit gate")
+        var t = EulerDecomposer.angles(u)
         var theta = wrap_angle(t[0])
         var phi = t[1]
         var lam = t[2]
@@ -216,7 +216,7 @@ struct OneQubitDecomposer(Copyable, Movable):
         return m^
 
     def verify(self, u: CMatrix) raises -> Float64:
-        return phase_error(u, OneQubitDecomposer.matrix(self.gates(u, 0), 0))
+        return phase_error(u, EulerDecomposer.matrix(self.gates(u, 0), 0))
 
 def mat_rz(a: Float64) -> CMatrix:
     return Gate1Q.rz(a)
@@ -237,10 +237,10 @@ def mat_u(theta: Float64, phi: Float64, lam: Float64) -> CMatrix:
     return Gate1Q.u(theta, phi, lam)
 
 def zyz_angles(u: CMatrix) -> Tuple[Float64, Float64, Float64]:
-    return OneQubitDecomposer.angles(u)
+    return EulerDecomposer.angles(u)
 
 def one_qubit_gates(u: CMatrix, q: Int, basis: String = "ZYZ") raises -> List[GateOp]:
-    return OneQubitDecomposer(basis).gates(u, q)
+    return EulerDecomposer(basis).gates(u, q)
 
 def one_qubit_matrix(gates: List[GateOp], q: Int) raises -> CMatrix:
-    return OneQubitDecomposer.matrix(gates, q)
+    return EulerDecomposer.matrix(gates, q)

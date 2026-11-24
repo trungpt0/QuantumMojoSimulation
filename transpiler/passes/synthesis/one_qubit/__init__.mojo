@@ -1,1 +1,1 @@
-from .one_qubit_decompose import OneQubitDecomposer, Gate1Q
+from .euler_decompose import EulerDecomposer, Gate1Q
