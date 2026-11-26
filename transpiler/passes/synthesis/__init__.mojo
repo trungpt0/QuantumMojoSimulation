@@ -8,3 +8,4 @@ from .linear import kms_ops, kms_ops_order
 from .linear_synthesis import linear_ops
 from .one_qubit import EulerDecomposer, Gate1Q
 from .two_qubit import KAKDecomposer
+from .three_plus_qubit import QSDDecomposer

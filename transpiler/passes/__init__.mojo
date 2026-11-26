@@ -23,3 +23,4 @@ from .synthesis import kms_ops, kms_ops_order
 from .synthesis import linear_ops
 from .synthesis import EulerDecomposer, Gate1Q
 from .synthesis import KAKDecomposer
+from .synthesis import QSDDecomposer

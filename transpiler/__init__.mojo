@@ -22,6 +22,7 @@ from .passes import kms_ops, kms_ops_order
 from .passes import linear_ops
 from .passes import EulerDecomposer, Gate1Q
 from .passes import KAKDecomposer
+from .passes import QSDDecomposer
 from .passes import BasisTranslator, _apply_basis_translator
 from .coupling import CouplingMap
 from .target import GateProperties, Target

@@ -183,6 +183,14 @@ struct EulerDecomposer(Copyable, Movable):
                 delta = -lam
             phi += delta
             lam += delta
+        if self.basis == "ZYZ" and abs(wrap_angle(phi + lam)) <= self.eps:
+            var p = wrap_angle(phi)
+            if abs(p) <= self.eps:
+                self._push(g, q, "RY", theta)
+                return g^
+            if abs(abs(p) - PI) <= self.eps:
+                self._push(g, q, "RY", -theta)
+                return g^
         if self.basis == "ZSX" and abs(theta - 0.5 * PI) <= self.eps:
             self._push(g, q, "RZ", lam - 0.5 * PI)
             g.append(_SX(q))
